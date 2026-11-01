@@ -1,0 +1,56 @@
+{
+  "id": "script_message_send",
+  "source": "src/script/message_send.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.9.3",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/game-containers",
+    "include/stlport-runtime",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f76e8",
+      "size": 968
+    }
+  ],
+  "functions": [
+    {
+      "name": "BSSendMessage__FUsP8BSObjectP13TriggerObjectT1Pv",
+      "address": "0x800f76e8",
+      "size": 968,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_message_to_event_map": "0x8031d150",
+    "BSMessageAreInSameGroup__FP8BSObjectT0": "0x800f7ff4",
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "_M_increment__Q24_STLt10_Rb_global1ZbPQ24_STL18_Rb_tree_node_base": "0x8027a1dc",
+    "g_MessageRegistrationArray": "0x80326164",
+    "BSGetObjectByIndex__Fs": "0x800f6fa0",
+    "GetID__C13TriggerObject": "0x80122fd8",
+    "BSMessageIsGroupMember__FP13TriggerObjectUi": "0x800f7f68",
+    "BSMessageIsGroupCategoryMember__FP13TriggerObjectT0Ui": "0x800f80c8",
+    "BSMessageQueueMessage__FP8BSObjectT0P13TriggerObjectP28BSMessageRegistration_structPv": "0x800f7ce8",
+    "BSGetMessageHandlerByIndex__Fs": "0x800f8224"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsmessage.cpp",
+  "original_file_index": 1124,
+  "local_externals": [
+    "g_MessageRegistrationArray"
+  ]
+}

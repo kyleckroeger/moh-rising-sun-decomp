@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 751672,
+    "matching_code_bytes": 752916,
     "total_executable_code_bytes": 2492032,
-    "percent": 30.16301556320304,
+    "percent": 30.212934665365452,
     "categories": {
-      "reconstructed_game": 359456,
+      "reconstructed_game": 360700,
       "restored_library": 392216
     },
-    "matching_functions": 3095
+    "matching_functions": 3101
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -644,7 +644,7 @@
     "config/GR8E69/player_path_controls.json": "a5a585ed38c40cd299ab995320748f8e6777003f8cc885f5376c7e440dc2b3b7",
     "config/GR8E69/player_spline_position.json": "5b4aa80de0af602d8d0cde27f43b24848fd3a5ad92b1972f1900f8f256617888",
     "config/GR8E69/player_spline_tangent.json": "36eccc91b26a0f0558ee6f02c6e52398927527bf754f986e8d6db6404022d9b8",
-    "config/GR8E69/project.json": "ff97504db5575f4d6f640dd4fc4cced1c133ef7d69e5a4c174604e8cc40ce3d3",
+    "config/GR8E69/project.json": "41aee9b911a6b8b43f6ccdf5ab5701cc12d6e0ec5e41359ba62c6542eeb39595",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
     "config/GR8E69/projectile_exclusion_pair.json": "99afd0db09aa6eccc73fda17bb9ac1d24a6fe107780f8cf54fb758360cd20ef0",
@@ -796,6 +796,7 @@
     "config/GR8E69/script_file_database.json": "a7d33be55cb45488f2453a5ab503da9dbaa288eeef0e60e8395b56cd864a6f53",
     "config/GR8E69/script_file_delete_class.json": "b290c0d99c078e48ebe615813046055094994fe3528d4a55953f3122aba03aab",
     "config/GR8E69/script_file_get_class.json": "94c64d3b583ac0ddfd7e63bbecfc1be06b6a957eeda0d37791ab14a68a201df2",
+    "config/GR8E69/script_file_lifecycle.json": "4b018c9d2b4c58d944759f5aadff93fe2620ec363a03c69312807b64a63fccc8",
     "config/GR8E69/script_file_load_class.json": "ae339c1f85adcb3890c4a16f4b4ccaa71a3b752c5fe6c4edf3935cb4fed665af",
     "config/GR8E69/script_finished_investigation.json": "9f89e52865363294460a7720a1e137149d444e03c48a8bee98b4f298f54545e0",
     "config/GR8E69/script_fog_blue.json": "b33ade2e715062afd31f481497ca5a58ccb3582e462170a0ca95ec5c0f10c151",
@@ -884,6 +885,7 @@
     "config/GR8E69/script_message_queue.json": "dee98c7f1aeeac561e79d375115b13275691842d8c1b1c90058095c8b3ee024d",
     "config/GR8E69/script_message_register.json": "759343678fafffb9b04c179de9c5247b3e89b278d1de3e5699d59ea3a6c18da7",
     "config/GR8E69/script_message_remove.json": "5bfe377a63951d0864552b2eb7e65ad705c68c2c5116e8e88ecc44fd7f80c290",
+    "config/GR8E69/script_message_send.json": "8710ac12563c18f2461dc43a00c89adaa7cb7106db2d46d2a6dc157a10c1a373",
     "config/GR8E69/script_message_storage.json": "0c796a93f35580cf6c793ce4f0e5ad6b765a3d58e664985651d86a7512894a78",
     "config/GR8E69/script_modify_motion_data.json": "6bbe0ac4b9dcbe437de0f13d73054fb5d688a8b7e03b3a07aeab1a6335085d6e",
     "config/GR8E69/script_moving_mech_force_update_trigger.json": "d35f02965111567bdf371ef905277b9f34a59d06a03f37c9630155745267c04e",
@@ -1044,7 +1046,9 @@
     "config/GR8E69/script_suspend_aiming.json": "750b10715dd3e4925621fb0bf7cf575c1792d41826ac9221bee35ff3e62f172f",
     "config/GR8E69/script_swap_hier_object.json": "9ab53cfed808f40865797b0b29f356abc5fb4eb86ce85eebe605fad3b1782ddc",
     "config/GR8E69/script_sword_drawn.json": "46a222ad56814e801f1aee5708b1c0e84680762e847c663255dcca4849143ef7",
+    "config/GR8E69/script_system_shutdown.json": "34b167095cfc563cd312078def20f92d4fcfe3229c7e2aa90c2bf073b764ccd1",
     "config/GR8E69/script_system_state.json": "290d4f564bda16313105446800c9c8ea324b8d7af06be930f6ba6bc1aae30e09",
+    "config/GR8E69/script_system_update.json": "9a403a5cdf94dcc687ca2812e986c6be9213aa25e1f4e44100f806ecf9bba403",
     "config/GR8E69/script_texture_fade.json": "5dd307bbaebeb4ede1b2c30d733347e1f1326c24ba0664711eefb873f1ee9550",
     "config/GR8E69/script_thread_create.json": "f2bb988e8c870af989d091669b2cfc3432022b633ecf93008c11c087c30467f1",
     "config/GR8E69/script_thread_destroy.json": "f813fe9420f1f613e2fe25d87ad40eb66d66e8def70935a84c7b3d1c4b3e21aa",
@@ -2571,6 +2575,7 @@
     "src/script/file_database.cpp": "e77739b4dc252186ebe180901710513cb578e7de51636ef275c676fb558b27d8",
     "src/script/file_delete_class.cpp": "70c676d1b120ce39b753c56eb96c4f16b5acfaf13d312713a3be705ed6f80b77",
     "src/script/file_get_class.cpp": "0b59c9c32d8dde79f4df60393da5067a26444a1e720119cd5146854f490cf310",
+    "src/script/file_lifecycle.cpp": "bef1de9ad914205d663d75b68738193536dcfb6b66532907a2a0a1f5f46288a2",
     "src/script/file_load_class.cpp": "227c02a09b0e7e265b7817e4482336d73c344ce7526812c1cd5e2d29b69057a1",
     "src/script/finished_investigation.cpp": "b280da65cae3dbb33d9f910410102d8f091a6f858c267afe5c8379ed39f77eb5",
     "src/script/fog_blue.cpp": "54c43572f7624878f3e6c8c2e978c7d33bce92e5070547d8ffcdd5fcca1cb585",
@@ -2661,6 +2666,7 @@
     "src/script/message_queue.cpp": "2e6255c3aea4364bd2fdf75e50852da964a6f389cc6be86d96c0354db0e93420",
     "src/script/message_register.cpp": "fcaab46386450b3b19d0a216222a0cd7a4ae8ed1136e59958fea071722c0f55c",
     "src/script/message_remove.cpp": "c8fa9b7631942071ad6d83b9cac603c34ec0e56571e3f8f788b802c6d9d05df3",
+    "src/script/message_send.cpp": "e081f9a435f16fad2d505295b6ba17a00e93a35f586f4ee137b148bf468334be",
     "src/script/message_storage.cpp": "5c6c1b46a7a0081c2976d292e3e7d2e244e4c1bc55dce60cde0e69cf74fa546d",
     "src/script/modify_motion_data.cpp": "923d6e26a2bcd52a7a9c1e64832bfa137f13590383763c82f6fc50d19cec7aad",
     "src/script/moving_mech_force_update_trigger.cpp": "5c183644b217c9548ee716dcef942076a4c6dfb6eb8a9eb8391d5cb3b8dc6e20",
@@ -2821,7 +2827,9 @@
     "src/script/suspend_aiming.cpp": "5bf029bce03582b29fd9ad561fdcd4f99a0c013d1e0bc135d025239a86d3663d",
     "src/script/swap_hier_object.cpp": "d0b01f0b10c1421dfbcb8e17b48d7f2ece0c710658f90e1e8c699a66008d34a7",
     "src/script/sword_drawn.cpp": "71b19a029756d9a4c3f6086423ef4d4214e0d45776fd8e37baf54955f2e0d4f5",
+    "src/script/system_shutdown.cpp": "3c4e1c0e91c7a4ea081a3d12d7c396252501b5ae89df5929ea226b2f0c6553fd",
     "src/script/system_state.cpp": "073ceccd995ee73915e9314c73c26cb6293fb905807c8c9e1973ebf72b83d8a8",
+    "src/script/system_update.cpp": "3274d30cdd0b28c618f34539fb62b046bd1f66bf48bd50da85e5d480e1180b66",
     "src/script/texture_fade.cpp": "da0393813de30a7f7d861b2eac4d1c73f1ac3b5d56b1564a9bce8509d8ad0909",
     "src/script/thread_create.cpp": "412707d927875d7fd3e858beaddf4ccfcb1dcfea9e11469519b74d827143c7c7",
     "src/script/thread_destroy.cpp": "a2473723eddd9c51d87d29dc50fbc39c5ae76b365746d9ffba2582b4bfd3fa73",
@@ -29662,6 +29670,78 @@
       "discarded_functions": [],
       "object_sha256": "728f80b1e805956d6997ce17c808ba35539800292522002a32acb4e52d9dd9ec",
       "linked_sha256": "972eebb6a64cc459787f4d1c7866ec940dcd64cdc42e6822149b0be4f08d3b9b"
+    },
+    {
+      "id": "script_message_send",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 968,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.9.3",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "f11ec44e676f444225b3435ed95479f2a5f35673616d20a5ba8c16caff6f46f4",
+      "linked_sha256": "71247af3c893bf72025b26594db4774f933e456cb70d01ecdc8e44c3c7826eeb"
+    },
+    {
+      "id": "script_system_shutdown",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 140,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.9.3",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "4422755f4e1cb4a60762e334990df54aee5b073be12e93c95cb449a86770db1e",
+      "linked_sha256": "77fc7d14eb2f657710afdd121af6b5b8ef5b3ef6a85bd0fed060365e485b727a"
+    },
+    {
+      "id": "script_system_update",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 100,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.9.3",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "677e73c689fed6885eef30aa79ec812c5f85f4947b4068d77d8332a92791423f",
+      "linked_sha256": "09a99917e9394a299169865393eb2b057f10e8da437d10e9413dcc907386fabd"
+    },
+    {
+      "id": "script_file_lifecycle",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 36,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.9.3",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "cf1bdd0c15673b7eca15a8ba2a2831a5d6335d2c2097b6c8db95a5f840c02ffb",
+      "linked_sha256": "48e349bdef3dc8c7726a68b315f880468a4a602896b18d0b77a52096fb2d39f1"
     }
   ],
   "code_map": {
@@ -51576,27 +51656,6 @@
         "file_name": "bsfile.cpp",
         "ranges": [
           {
-            "address": "0x800f44bc",
-            "size": 8,
-            "kind": "function",
-            "name": "BSFileGetMemoryRequirements__Fv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f44c4",
-            "size": 8,
-            "kind": "function",
-            "name": "BSInitFile__Fv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f44cc",
-            "size": 20,
-            "kind": "function",
-            "name": "BSEndFile__Fv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800f46e8",
             "size": 1700,
             "kind": "function",
@@ -51653,17 +51712,10 @@
         ]
       },
       {
-        "name": "Unmatched files/bsmessage.cpp [inferred file group]",
+        "name": "Unmatched files/bsmessage.cpp [local symbols only]",
         "file_record": 195,
         "file_name": "bsmessage.cpp",
         "ranges": [
-          {
-            "address": "0x800f76e8",
-            "size": 968,
-            "kind": "function",
-            "name": "BSSendMessage__FUsP8BSObjectP13TriggerObjectT1Pv",
-            "evidence": "adjacent-compiler-markers"
-          },
           {
             "address": "0x800f8270",
             "size": 112,
@@ -51694,20 +51746,6 @@
             "size": 1136,
             "kind": "function",
             "name": "BSUtilInitScriptingSystem__Fb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f89a0",
-            "size": 140,
-            "kind": "function",
-            "name": "BSUtilShutdownScriptingSystem__Fv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f8a2c",
-            "size": 100,
-            "kind": "function",
-            "name": "BSUtilUpdate__Ff",
             "evidence": "adjacent-compiler-markers"
           },
           {

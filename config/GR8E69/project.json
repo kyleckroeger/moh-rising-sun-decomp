@@ -1280,7 +1280,11 @@
     "script_message_init.json",
     "script_message_storage.json",
     "script_message_dispatch.json",
-    "script_message_event.json"
+    "script_message_event.json",
+    "script_message_send.json",
+    "script_system_shutdown.json",
+    "script_system_update.json",
+    "script_file_lifecycle.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

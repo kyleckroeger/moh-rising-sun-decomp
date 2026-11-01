@@ -8,7 +8,7 @@ without checking the GameCube instructions and symbols.
 
 ## Accepted scope
 
-412 fragments in `src/script/` reconstruct **676 functions and 114,936
+416 fragments in `src/script/` reconstruct **682 functions and 116,180
 executable bytes**: all **33 opcode handlers** (5,596 bytes), ten message-registration and index
 helpers (964 bytes), nine thread/message-delivery and group-filter routines (1,700
 bytes), event lookup (220 bytes), three music built-ins (372 bytes), all twelve named
@@ -31,7 +31,9 @@ class-sizing functions (1,300 bytes; [see below](#script-object-management)), an
 and queue-processing functions (1,832 bytes; [see below](#event-dispatch-and-queue-processing)), and eight machine-startup and class-database functions
 (1,020 bytes; [see below](#machine-startup-and-class-database)), and seven message-storage,
 dispatch and event-mapping functions (1,064 bytes;
-[see below](#message-storage-dispatch-and-event-mapping)).
+[see below](#message-storage-dispatch-and-event-mapping)), and six message-send,
+system-update/shutdown and file-lifecycle functions (1,244 bytes;
+[see below](#message-send-filtering-and-system-coordination)).
 Their exact symbols, ranges and dependencies are in
 `config/GR8E69/script_*.json` and `config/GR8E69/bsgo_*.json`. Original file markers
 support the `bsmachin.cpp`,
@@ -213,7 +215,7 @@ The shared runtime header now establishes these additional accesses:
 
 | View | Established fields and extents |
 | --- | --- |
-| Message entry | Code word at `+0`; a 32-bit comparison value at `+4`; message ID at `+8`; a comparison byte at `+0x0a`; flags at `+0x0b`. The descriptive names `matchValue` and `matchKind` do not establish the underlying enum or split the comparison word into PS2 halfword meanings. |
+| Message entry | Code word at `+0`; a 32-bit comparison value at `+4`; message ID at `+8`; a comparison byte at `+0x0a`; flags at `+0x0b`. Names are descriptive and enum names remain unknown. [GameCube dispatch](#message-send-filtering-and-system-coordination) independently establishes low-halfword selectors for comparison kinds 1 and 4. |
 | Registration | Signed object index at `+0`, next index at `+2`, previous index at `+4`, state ID at `+6`, message pointer at `+8`, thread index at `+0x0c`, and flags at `+0x0d`. The stride is 16 bytes; the final two bytes remain opaque. |
 | Script object | Thread-array pointer at `+4`. The class level count bounds the linear thread search. |
 
@@ -223,8 +225,8 @@ If the code word also matches, it returns the existing registration without upda
 its state ID. Otherwise it sets bit 1 of that registration's flags, returns it through
 the associated-registration output, and allocates a new registration. The search
 stops at this first compatible entry. The output is initialized to null on all paths.
-The original `BSSendMessage` body tests this registration bit at `0x800f7838` and skips
-the entry when set; that dispatch body is inspected evidence, not accepted source.
+The reconstructed [`BSSendMessage`](#message-send-filtering-and-system-coordination)
+tests this registration bit at `0x800f7838` and skips the entry when set.
 `NEXTSTATE` clears the bit when it removes the replacing state's list node.
 
 A new registration stores the object index, thread index, state ID and message
@@ -1325,7 +1327,7 @@ emulator behavior remain untested.
 
 ## Verification and next work
 
-The opcode and thread/message/group fragments, all fourteen `bsmessage.cpp`
+The opcode and thread/message/group fragments, all fifteen `bsmessage.cpp`
 fragments and twelve `bstimer.cpp` fragments use ProDG **3.9.3** with
 `-O2 -G0 -fno-exceptions -fno-implicit-templates`. This profile reproduces all 33
 interpreter handlers, the nineteen thread/message/group helpers, all twelve timer
@@ -1349,8 +1351,8 @@ The complete rebuilt 2,860,576-byte analysis image also matches the original,
 including its header, allocated ELF bytes, entry point and BSS extent. Follow the
 [build, test and snapshot process](Progress.md) for future changes. Runtime and
 emulator behaviour remain untested. The opcode-handler set is complete, but the
-interpreter as a whole is not: interpreter execution, class-file parsing,
-message-send filtering and music internals remain future work. Event dispatch
+interpreter as a whole is not: interpreter execution, class-file parsing
+and music internals remain future work. Event dispatch
 is reconstructed [below](#event-dispatch-and-queue-processing). The
 [script](research/ps2/script-opcodes.md), [class-description](research/ps2/sin-class-descriptions.md)
 and [music](research/ps2/pathfinder-music.md) research retains broader hypotheses and
@@ -1976,3 +1978,106 @@ wrap, zero/negative/capped limits, callback appends and the exact per-message ca
 order. Heap allocation/deletion and the queue-consumption/immediate-event
 callbacks are stubbed. These are isolated behavior checks, not game or Dolphin
 runtime validation.
+
+## Message-send filtering and system coordination
+
+Four further fragments reconstruct **six functions and 1,244 executable bytes**.
+They reuse the recovered message map, registration records, queue, group helpers,
+AI-target views and script arena interfaces without adding object layouts.
+
+| Function | Address | Bytes |
+| --- | --- | ---: |
+| `BSFileGetMemoryRequirements` | `0x800f44bc` | 8 |
+| `BSInitFile` | `0x800f44c4` | 8 |
+| `BSEndFile` | `0x800f44cc` | 20 |
+| `BSSendMessage` | `0x800f76e8` | 968 |
+| `BSUtilShutdownScriptingSystem` | `0x800f89a0` | 140 |
+| `BSUtilUpdate` | `0x800f8a2c` | 100 |
+
+`BSSendMessage` first walks the message-to-event map's equal-key range. Mappings
+whose objects share a group with the sender trigger their stored event, with the
+provided context, sender and `false` immediate flag. As in map removal, the scan
+checks `end()` only before entering and can read the header's value area after
+the final matching key. The original iterator boundary behavior is retained.
+
+Next, the source native object is the sender's native object when the sender is
+nonnull, otherwise the explicit native-object argument. The dispatcher walks the
+message-indexed registration list, skipping entries with registration flag bit 1
+set or a receiver identity of `0xffffffff`. For the remaining entries, the
+comparison byte is interpreted as signed, with these numeric cases:
+
+| Kind | Match behavior |
+| --- | --- |
+| `-1` or an unhandled value | No delivery. |
+| `0` | Deliver without an additional comparison. |
+| `1` | Compare sender relationships using the low 16 bits of the comparison word; see below. |
+| `2` | Call `BSMessageIsGroupMember(sourceNative, matchValue)`. |
+| `3` | Call `BSMessageIsGroupCategoryMember(sourceNative, receiverNative, matchValue)`. |
+| `4` | Compare explicit-target relationships using the low 16 bits. Selector 1 requires receiver equal to target; selector 2 never matches; selector 3 requires a nonnull target whose native object's script pointer equals the receiver. Other selectors do not match. |
+
+Kind 1 uses selector 1 for receiver equal to sender, selector 2 for the receiver's
+native object's script pointer equal to sender, and selector 3 for a nonnull
+source native object whose script pointer equals the receiver while receiver and
+sender differ. Selector 4 queries the receiver's scene node and AI object, then
+accepts either a stored script target equal to sender or a nonnull stored AI target
+whose script pointer equals sender. It does not test the target value's `nonAI`
+selector, and does not use `CAITarget::GetScriptObject()`'s tagged interpretation.
+The three observed target-value copies are preserved by the existing by-value
+accessor. Selector 5 requires both native objects, equal IDs, and a nonzero ID.
+The original numeric enum names remain unknown.
+
+Accepted registrations call the real queue interface with sender, target,
+resolved source native object, registration and context, in list order. Queue
+errors, including the full-ring status, are ignored and `BSSendMessage` returns
+zero. The map phase precedes the registration phase. There is no message-ID
+bounds check for the 444-head table. Registration indices, receiver pointers,
+required native objects and virtual-query results must satisfy the original
+caller contracts. In particular, the sender-native-ID branch does not first
+check the sender itself, and the AI branch adds no null checks. These are
+preserved runtime contracts, not safe behavior for arbitrary inputs.
+
+`BSUtilUpdate` caps its input at **6.0**, then calls, in order:
+`BSEventProcessEvents(256)`, `BSProcessMessages(1024)`, `BSUpdateBIFuncs()`,
+`BSUpdateTimer(cappedInput)`, `UpdateProximityTriggerStatus()` and
+`UpdateObjectCreation()`. The comparison preserves values less than or equal to
+six, including negative values and signed zero, and selects six for unordered
+NaN inputs as well as larger values. No time unit is inferred from this body.
+The complete four-byte literal at `0x802a54b4`, addressed by this function's
+original load, matches and earns no code credit. Phase return values are ignored.
+
+System shutdown frees script objects, shuts down object creators, cleans up
+built-ins, and ends the timer, schedule, message, event, machine and file systems
+in that order. It then frees property memory and the script arena, clears the
+arena pointer/offset/size, deletes a nonnull script `MemStack`, and nulls the stack
+pointer. The existing MemStack destructor and deletion operators provide the
+buffer/object deletion path; the system-state global is not changed here.
+`BSFileGetMemoryRequirements` and `BSInitFile` return zero without side effects.
+`BSEndFile` only clears the class-list head and returns zero. The preceding
+machine shutdown traverses that list through the currently empty
+`BSFileDeleteClass`; neither accepted helper releases class storage.
+
+The four fragments use ProDG **3.9.3** with
+`-O2 -G0 -fno-exceptions -fno-implicit-templates`. Every complete function and
+allocated section matches without stripping, patching instructions or supplying
+assembly bodies. File-record scopes remain `bsfile.cpp` 1099, `bsmessage.cpp` 1124
+and `bsutil.cpp` 1136. The sole newly generated data is the verified float literal;
+all global storage and unimplemented callees remain original context. The message
+file's two compiler-initialization functions remain unmatched; finishing the send
+body does not establish a complete original translation unit.
+
+Isolated Unicorn PowerPC fixtures execute all six production-linked functions.
+Message fixtures use the accepted object/registration/thread index helpers, real
+queue writes, group filters and STLport tree traversal. They cover all selector
+families, negative/unhandled kinds, superseded and stale entries, explicit/native
+sender selection, linked delivery order, full/wrapped queues, duplicate map keys,
+group-filtered events and event-before-queue ordering. Synthetic virtual calls
+exercise nonzero signed `this` adjustments and both AI/script target forms. A
+controlled terminal-key fixture observes the retained end-sentinel read without
+claiming general safety. Native property/ID queries and event dispatch are stubbed.
+
+Coordinator fixtures verify phase order and budgets, the float cap with finite
+values, signed zeros, infinities and NaN, null/live stack shutdown and unchanged
+system state. They execute the real file cleanup, MemStack destructor and deletion
+wrappers; subsystem callbacks and heap operations are stubbed. These checks do
+not validate game/Dolphin runtime. Complete-image rebuilding, repository tests
+and the refreshed public snapshot provide separate byte-verification evidence.
