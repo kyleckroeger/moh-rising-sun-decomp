@@ -1,0 +1,61 @@
+{
+  "id": "script_system_shutdown",
+  "source": "src/script/system_shutdown.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.9.3",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f89a0",
+      "size": 140
+    }
+  ],
+  "functions": [
+    {
+      "name": "BSUtilShutdownScriptingSystem__Fv",
+      "address": "0x800f89a0",
+      "size": 140,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSFreeAllBSObject__Fv": "0x800f6ad4",
+    "g_pScriptMemory": "0x802c3514",
+    "ShutdownObjectCreators__Fv": "0x80127224",
+    "g_pScriptMemStack": "0x802c3510",
+    "BSCleanUpBIFuncs__Fv": "0x800f947c",
+    "BSEndTimer__Fv": "0x8011dec8",
+    "BSEndSchedule__Fv": "0x8011e660",
+    "BSEndMessage__Fv": "0x800f7328",
+    "BSEndEvent__Fv": "0x8011d5c0",
+    "BSEndMachine__Fv": "0x800f5004",
+    "BSEndFile__Fv": "0x800f44cc",
+    "FreePropertyMemory__Fv": "0x80121f30",
+    "DWI_free": "0x801a8894",
+    "g_memOffset": "0x802c3518",
+    "g_memSize": "0x802c351c",
+    "_._8MemStack": "0x801acc38"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsutil.cpp",
+  "original_file_index": 1136,
+  "local_externals": [
+    "g_pScriptMemory",
+    "g_pScriptMemStack",
+    "g_memOffset",
+    "g_memSize"
+  ]
+}
