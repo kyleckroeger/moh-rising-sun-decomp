@@ -1,0 +1,54 @@
+{
+  "id": "ea_fontinit",
+  "source": "src/ea/fontinit.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80206324",
+      "size": 132
+    }
+  ],
+  "functions": [
+    {
+      "name": "FONT_restore",
+      "address": "0x80206324",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "FONT_init",
+      "address": "0x80206364",
+      "size": 68,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FONT_create": "0x802060b8",
+    "FONT_destroy": "0x802060fc",
+    "FONTstand": "0x80451224",
+    "FONTstandfile": "0x802d3360",
+    "REAL_addexit": "0x802176d4",
+    "REAL_removeexit": "0x80217744"
+  },
+  "sda_externals": [
+    "FONTstand"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "fontinit.cpp",
+  "original_file_index": 2778
+}

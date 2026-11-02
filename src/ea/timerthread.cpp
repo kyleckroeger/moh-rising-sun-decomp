@@ -5,7 +5,7 @@ struct OSMessageQueue {
 };
 
 struct OSThread {
-    unsigned char unknown00[784];
+    unsigned char unknown00[792];
 };
 
 typedef void* OSMessage;

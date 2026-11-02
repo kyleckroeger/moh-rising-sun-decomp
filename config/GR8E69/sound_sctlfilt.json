@@ -1,0 +1,41 @@
+{
+  "id": "sound_sctlfilt",
+  "source": "src/sound/ea/sctlfilt.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8021aa40",
+      "size": 104
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDCTRL_filteradd",
+      "address": "0x8021aa40",
+      "size": 104,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDPLATFORM_filteradd__FiP12SNDFILTERDEF": "0x8021e0a0",
+    "SNDVOICEI_get__Fi": "0x8021945c",
+    "iSNDpatchkey__FiPi": "0x8021e878"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

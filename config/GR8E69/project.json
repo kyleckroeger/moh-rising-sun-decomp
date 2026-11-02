@@ -1337,7 +1337,11 @@
     "cdbobject_test_generic.json",
     "cdbobject_test_csg.json",
     "cdbobject_test_zero.json",
-    "ea_hlsfile.json"
+    "ea_hlsfile.json",
+    "ea_timerthread.json",
+    "ea_fontinit.json",
+    "ea_fontcreate.json",
+    "sound_sctlfilt.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
