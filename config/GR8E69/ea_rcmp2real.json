@@ -1,0 +1,43 @@
+{
+  "id": "ea_rcmp2real",
+  "source": "src/ea/rcmp2real.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801b1254",
+      "size": 36
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetREALDefaults__Q24RCMP11RCMP_SYSTEM",
+      "address": "0x801b1254",
+      "size": 36,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "MEM_allocalign": "0x8020d224",
+    "MEM_free": "0x8020d2a8"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "rcmp2real.cpp",
+  "original_file_index": 2330
+}

@@ -1,0 +1,42 @@
+{
+  "id": "sound_salloc",
+  "source": "src/sound/ea/salloc.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8021945c",
+      "size": 84
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDVOICEI_get__Fi",
+      "address": "0x8021945c",
+      "size": 84,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "sndgs": "0x804108fc"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "salloc.c",
+  "original_file_index": 3026
+}

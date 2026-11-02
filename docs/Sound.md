@@ -62,3 +62,18 @@ is evidence for the name only.
 Frontline's: the bank slot table is at `+0x1f4`, the memory pool at `+0x220` and the
 abort-message hook at `+0xc8`. The sound system's public calls are partly C++ in this
 build (`Snd::System::Restore`, `Snd::CODASetNew`), where Frontline uses C names.
+
+These libraries match with `-O2 -G8 -fno-strength-reduce`: a `lwz rX,N(r13)` is small
+data, and a kept `mulli` or indexed `lfsx` in a loop is the absence of strength
+reduction, not a code-shape puzzle. New EA units use those flags. Earlier units keep
+the flags they landed with for now.
+
+Other layouts that differ from Frontline: a voice record is 140 bytes rather than 128,
+and the voice table sits at `sndgs+0x1f0` with the voice count at `sndgs+0x17e`.
+`sndmix` holds a pointer to its 96-byte channel records at `+0x1d8`. The stream record's
+members above about `+0xd0` sit 40 bytes further along than Frontline's.
+
+`hlafile`'s `numrequests`, `freequeue` and `requestidcounter` are small statics of that
+file. The original symbol table gives `.sbss` statics a size of 0, so the unit declares
+them `extern` as original context instead of defining them. Their ownership is
+therefore not verified by the build.

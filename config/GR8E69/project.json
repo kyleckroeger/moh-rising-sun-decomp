@@ -1457,7 +1457,18 @@
     "collisionvolume_ctor.json",
     "collisionvolume.json",
     "capsule_create.json",
-    "cdbgeom_triangle_animated.json"
+    "cdbgeom_triangle_animated.json",
+    "sound_supf.json",
+    "sound_suplf.json",
+    "sound_suppf.json",
+    "sound_sfft24.json",
+    "sound_sfir8.json",
+    "sound_sinit16.json",
+    "sound_sinitxa.json",
+    "sound_sfrsf_init.json",
+    "ea_rcmp2real.json",
+    "sound_salloc.json",
+    "sound_sbvalid.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

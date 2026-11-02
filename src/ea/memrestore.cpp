@@ -1,3 +1,4 @@
+// This file group has no name in the original symbols; the file name is Frontline's.
 // MEM_restore (registered by MEM_init as an exit handler): clear duplicate
 // memclass entries, then remove every class from 62 down to 0 and give the
 // OS-heap block behind it back. MEMCLASS is named by the mangled symbols; only
