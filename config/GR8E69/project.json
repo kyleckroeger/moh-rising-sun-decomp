@@ -1539,7 +1539,13 @@
     "sound_s3dlow.json",
     "sound_sautovol.json",
     "thrown_collide.json",
-    "thrown_update.json"
+    "thrown_update.json",
+    "fiber_set.json",
+    "fiber_test_plane.json",
+    "fiber_visibility.json",
+    "compartment_init.json",
+    "compartment_draw_enabled.json",
+    "compartment_world_volume.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
