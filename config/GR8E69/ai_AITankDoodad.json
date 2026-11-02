@@ -1,0 +1,85 @@
+{
+  "id": "ai_AITankDoodad",
+  "source": "src/ai/AITankDoodad.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d78e4",
+      "size": 432
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.13CAITankDoodad",
+      "address": "0x802e7828",
+      "size": 40,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "__13CAITankDoodad",
+      "address": "0x800d78e4",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "_._13CAITankDoodad",
+      "address": "0x800d7920",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "Init__13CAITankDoodadP11CTankObject",
+      "address": "0x800d798c",
+      "size": 156,
+      "binding": 1
+    },
+    {
+      "name": "CleanUp__13CAITankDoodad",
+      "address": "0x800d7a28",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "GetAIObject__C13CAITankDoodad",
+      "address": "0x800d7a80",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "GetSceneNode__C13CAITankDoodad",
+      "address": "0x800d7a8c",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetAIObject__C19CAIFilterTankObject": "0x800d987c",
+    "Init__13CAITankObject": "0x800de600",
+    "Init__9CAIDoodad": "0x800d7448",
+    "LinkGameObject__15CAIFilterObjectPv": "0x800d8e9c",
+    "SetOneTimeVars__19CAIFilterTankObject": "0x800d9350",
+    "UpdateManualUpdateVars__19CAIFilterTankObject": "0x800d95c8",
+    "_._9CAIDoodad": "0x800d7414",
+    "__19CAIFilterTankObjectP8BSObject": "0x800d9264",
+    "__9CAIDoodad": "0x800d73f8",
+    "__nw__19CAIFilterTankObjectUiPv": "0x800d9344"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AITankDoodad.cpp",
+  "original_file_index": 962
+}

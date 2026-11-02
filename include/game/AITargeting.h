@@ -102,11 +102,29 @@ public:
 };
 // Original enum tag; selector names are descriptive.
 enum aistatus_var { aistatus_var_team = 4 };
-// Method-only view of the embedded AI status block.
+// Original enum tag; its members are unknown.
+enum aistatus_comparison { aistatus_comparison_equal = 0 };
+struct aistatus_match {
+    aistatus_var var;
+    int value;
+    aistatus_comparison comparison;
+};
+// The embedded AI status block. Variables 0-4, 6 and 11 read the array directly;
+// the rest are computed between s_paioAttacker and s_pTarget.
+class CAIObject;
+class CAITarget;
 class CAIStatus {
 public:
+    CAIStatus();
+    ~CAIStatus();
     int GetVarValue(aistatus_var) const;
     void SetVarValue(aistatus_var, int);
+    int MatchStatus(aistatus_var, int, aistatus_comparison);
+    int MatchStatus(aistatus_match *);
+    int MatchStatusList(aistatus_match *, int);
+    int values[12];
+    static CAIObject *s_paioAttacker;
+    static CAITarget *s_pTarget;
 };
 // Observed script-object, position and forward-vector prefix and the embedded
 // AI modules through the spline-path module at +0x2f0. Module offsets come from
@@ -138,7 +156,7 @@ public:
     unsigned char unknown5e4[4];
     unsigned int statusFlags;  // +0x5e8; set and cleared by BIFunc_AISendFlag.
     CAIStatus status;    // +0x5ec
-    unsigned char unknown5ed[0x624 - 0x5ed];
+    unsigned char unknown61c[0x624 - 0x61c];
     float accuracyNear;  // +0x624; set per accuracy level by BIFunc_SetAccuracy.
     unsigned char unknown628[4];
     float accuracyFar;   // +0x62c
@@ -162,6 +180,11 @@ public:
     float GetDistanceSquaredXYReal(CAITarget);
     // Original nested enum tag; its members are unknown.
     enum ECollisionTestStyle { CollisionTestStyleDefault = 0 };
+    int ComputeStatusDistance(CAITarget *);
+    int ComputeStatusExponentialDistance(CAITarget *);
+    int ComputeStatusThreatValue(CAITarget *);
+    int ComputeStatusLOSValue(CAITarget *);
+    int ComputeStatusIsEnemy(CAITarget *);
     float PerformCollisionTest(ECollisionTestDirection, float, ECollisionTestStyle);
     void SetupFieldOfViewModeList(aistatus_match *, int, float, float);
     void SetupLineOfSightModeList(aistatus_match *, int, float);
@@ -186,13 +209,23 @@ public:
 };
 // Doodad and filter prefixes reached by the script built-ins: the doodad's first
 // word is its filter, and the filter's second word is the AI object.
+// The filter's table pointer follows its leading members; +0x08 and +0x0c are not
+// yet identified.
 class CAIFilterObject {
 public:
-    unsigned char unknown00[4];
-    CAIObject *object;
+    virtual ~CAIFilterObject();
+    void LinkGameObject(void *);
+    void *gameObject;   // +0x00; the owning doodad, stored by LinkGameObject.
+    CAIObject *object;  // +0x04
+    unsigned char unknown08[8];
 };
 class CAIDoodad {
 public:
+    CAIDoodad();
+    virtual ~CAIDoodad();
+    virtual ISceneNode *GetSceneNode() const;
+    virtual CAIObject *GetAIObject() const = 0;
+    void Init();
     CAIFilterObject *filter;
 };
 // Member view of the soldier AI object returned by CAIObject slot 2.
@@ -203,6 +236,7 @@ public:
 };
 class CAISoldierObject {
 public:
+    void Init();
     unsigned char unknown_0[0x7b0];
     CAIThreatEvaluation threatEvaluation; // +0x7b0
 };

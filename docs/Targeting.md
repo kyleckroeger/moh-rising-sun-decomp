@@ -245,3 +245,15 @@ forward-vector offsets. These are leads for recovering a shared native virtual
 interface; the constructor, table and crouching queries earn no new credit here.
 Concrete BSGO accessors offer further evidence for derived prefixes, but their
 complete storage and ownership still need investigation.
+
+## AI doodads
+
+`AIDoodad.cpp`, `AIPlayerDoodad.cpp`, `AISoldierDoodad.cpp` and `AITankDoodad.cpp`
+are complete files between the `gcc2_compiled.` symbols, with their native virtual
+tables; the player filter's allocation label names the original path
+`source/ai_core/Engine_side/AIPlayerDoodad.cpp`. `CAIDoodad` keeps the filter at `+0`
+before its table pointer at `+4`, and the derived classes keep their game object at
+`+8`. Soldier, bot and tank filters are placement-constructed inside the game object at
+`+0x1610`, `+8000` and `+0xbf0`. Medal of Honor: Frontline's versions of these files
+were the semantic reference. `CAIFilterObject` keeps its table pointer at `+0x10`; its
+members at `+8` and `+0xc` are not named here.

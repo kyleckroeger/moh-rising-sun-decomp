@@ -136,6 +136,7 @@ class CAITankObject {
     unsigned char unknown00[0x0c];
     BSObject *scriptObject;
     static CAITankObject *FindTank();
+    void Init();
 };
 
 #endif

@@ -1341,7 +1341,11 @@
     "ea_timerthread.json",
     "ea_fontinit.json",
     "ea_fontcreate.json",
-    "sound_sctlfilt.json"
+    "sound_sctlfilt.json",
+    "ai_AIDoodad.json",
+    "ai_AIPlayerDoodad.json",
+    "ai_AISoldierDoodad.json",
+    "ai_AITankDoodad.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

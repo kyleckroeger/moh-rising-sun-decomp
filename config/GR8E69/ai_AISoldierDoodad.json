@@ -1,0 +1,118 @@
+{
+  "id": "ai_AISoldierDoodad",
+  "source": "src/ai/AISoldierDoodad.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d7620",
+      "size": 708
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.16CAISoldierDoodad",
+      "address": "0x802e7800",
+      "size": 40,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "__16CAISoldierDoodad",
+      "address": "0x800d7620",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "_._16CAISoldierDoodad",
+      "address": "0x800d765c",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "Init__16CAISoldierDoodadP10CBotObject",
+      "address": "0x800d76c8",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "Init__16CAISoldierDoodadP14CSoldierObject",
+      "address": "0x800d7744",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "Init__16CAISoldierDoodad",
+      "address": "0x800d77c0",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "CleanUp__16CAISoldierDoodad",
+      "address": "0x800d780c",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "GetAIObject__C16CAISoldierDoodad",
+      "address": "0x800d7864",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "GetSceneNode__C16CAISoldierDoodad",
+      "address": "0x800d7870",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SetUpperTranslation__16CAISoldierDoodadRC8CVector3",
+      "address": "0x800d7878",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "SetUpperXAngleDifference__16CAISoldierDoodadff",
+      "address": "0x800d789c",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "SetUpperZAngleDifference__16CAISoldierDoodadff",
+      "address": "0x800d78c0",
+      "size": 36,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetAIObject__C22CAIFilterSoldierObject": "0x800d9874",
+    "Init__16CAISoldierObject": "0x800dd8f8",
+    "Init__9CAIDoodad": "0x800d7448",
+    "LinkGameObject__15CAIFilterObjectPv": "0x800d8e9c",
+    "SetOneTimeVars__22CAIFilterSoldierObject": "0x800d8f90",
+    "SetUpperTranslation__14CSoldierObjectRC8CVector3": "0x800c2ea8",
+    "SetUpperXAngleDifference__14CSoldierObjectff": "0x800c2ef4",
+    "SetUpperZAngleDifference__14CSoldierObjectff": "0x800c2f00",
+    "UpdateManualUpdateVars__22CAIFilterSoldierObject": "0x800d91e0",
+    "_._9CAIDoodad": "0x800d7414",
+    "__22CAIFilterSoldierObjectP8BSObject": "0x800d8ea4",
+    "__9CAIDoodad": "0x800d73f8",
+    "__nw__22CAIFilterSoldierObjectUiPv": "0x800d8f84"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AISoldierDoodad.cpp",
+  "original_file_index": 960
+}

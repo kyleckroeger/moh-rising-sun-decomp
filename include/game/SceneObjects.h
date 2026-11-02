@@ -135,6 +135,9 @@ class CSoldierObject {
     unsigned char unknown_15ec[0x1c54 - 0x15ec];
     float reloadTimer;      // +0x1c54; reset to -1 by BIFunc_BotDoneReloading.
     void SetHeadTrans(bool);
+    void SetUpperTranslation(const CVector3 &);
+    void SetUpperXAngleDifference(float, float);
+    void SetUpperZAngleDifference(float, float);
     void SetFaceAnimationState(unsigned short, int);
     void SetHeadTrackPlayer(bool);
     void EnableSkeletalPartition(Partition);

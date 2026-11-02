@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 765700,
+    "matching_code_bytes": 767392,
     "total_executable_code_bytes": 2492032,
-    "percent": 30.72592968308593,
+    "percent": 30.793826082490114,
     "categories": {
-      "reconstructed_game": 373484,
+      "reconstructed_game": 375176,
       "restored_library": 392216
     },
-    "matching_functions": 3257
+    "matching_functions": 3284
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -109,6 +109,10 @@
     "config/GR8E69/TCPUser.json": "aa0a4446ec56243061f0ffc64225cf58dd06106ce25d02dbb4a60f850990a132",
     "config/GR8E69/UDPTransport.json": "2c2b2e2ed43cd5a432f9ba61b70b14c627ec3416e9a439b78e980b9aeb584f5c",
     "config/GR8E69/ai.json": "7b00f17f4fb56ada896ab693b54981297a779945d629d8e0920f1bffedda5893",
+    "config/GR8E69/ai_AIDoodad.json": "e2609f553306a674aa8981751ce3c5b61ec5d9aa5c3a1a0509aae786409aebf4",
+    "config/GR8E69/ai_AIPlayerDoodad.json": "8976209d5d59b86a5d929fac29a9e3ea68a001d594b16260e83a1360eec3227b",
+    "config/GR8E69/ai_AISoldierDoodad.json": "0eaebe52e58074f6eb5b7dd04ee0e4f40b1e85f8209f2dd8b1c1925244a85baf",
+    "config/GR8E69/ai_AITankDoodad.json": "724066023ce56095ce6bae2111e66550d73385166788fc69569925fe4764e476",
     "config/GR8E69/ai_filter_clock.json": "f2034db8752a041debc3e5f86662b062dae08812cf71d3c95f66f339dbd705b1",
     "config/GR8E69/ai_filter_splines.json": "26b024e231fa1eb564b501c3108a8fb71d50e76cdc7ad97470e83b7b39b7fbde",
     "config/GR8E69/ai_locomotion_access.json": "a561dbd2e9dc1e3932ea24b9e503dd28adac5b45f786bacaa0dd26e3f5cc6154",
@@ -675,7 +679,7 @@
     "config/GR8E69/player_path_controls.json": "a5a585ed38c40cd299ab995320748f8e6777003f8cc885f5376c7e440dc2b3b7",
     "config/GR8E69/player_spline_position.json": "5b4aa80de0af602d8d0cde27f43b24848fd3a5ad92b1972f1900f8f256617888",
     "config/GR8E69/player_spline_tangent.json": "36eccc91b26a0f0558ee6f02c6e52398927527bf754f986e8d6db6404022d9b8",
-    "config/GR8E69/project.json": "3505811562af6b8849b808ff402a496736364be8bca6a2b0b7ed0cca7d91a773",
+    "config/GR8E69/project.json": "5c7f9b30176e042589ce04db2bd10a5ffc974564f748010d82cf11abb8f6c203",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
     "config/GR8E69/projectile_exclusion_pair.json": "99afd0db09aa6eccc73fda17bb9ac1d24a6fe107780f8cf54fb758360cd20ef0",
@@ -1525,11 +1529,12 @@
     "include/dolphin-sdk/libc/wchar.h": "eb9359b3f8c80e980c291b31b08b913739a9fda753a2a5007f8bf2bf3c646439",
     "include/dolphin-sdk/macros.inc": "4e92f656bb511fbb45d66081291371c47ceba7bce9c55f86871116203cf38a46",
     "include/dolphin-sn/dolphin/types.h": "ca31e0bbb97e93ca4713654367df29578f6392f3acaf40ca68bc1de1c913af93",
-    "include/game/AIBehavior.h": "c991902faf57079d523fc7825a6689a2706e9c1c798553ca15a204b0f4b5c36d",
+    "include/game/AIBehavior.h": "3233cf759bb7082eeb230feedc7eada06c46d1166ad39af8f459079a1c851ccc",
+    "include/game/AIDoodad.h": "c25ecbbc3291c82bac84a9e0120fa10d89f761da3ae9ccfac3d3b59bd7c9fe74",
     "include/game/AIFilterGlobal.h": "26368f15313dbd6390bee4c45582bcdfc36d8d433aaec5b0241541e52b9d677a",
     "include/game/AIMovement.h": "b9d723fd2bfeb66871a55f57dad2d3bfad33a56530d2826600e86d36598d6342",
     "include/game/AISplinePath.h": "a44a68ad726dfcaa439461afba93bb1c66f6425b174c21eca29c478d28820187",
-    "include/game/AITargeting.h": "0bed64c3008b82bce4ebbd3d6d07f5a0aeb243b82867e318acb1a24c43f6052c",
+    "include/game/AITargeting.h": "cb9dfe9afd990840f8b6bef944fa0d0709959fd989c9310ec050e6eda2b83afb",
     "include/game/AnimatedVolume.h": "0f9fc422079babc5f7cbb7bfa1fd5e2dab2727ee36007e4aca27d29757455946",
     "include/game/BPD.h": "ec4a3aceb83f181db2c6adf8ac87137ede2cd6a0e643548159c73a827aadd19e",
     "include/game/BSGameObject.h": "0251918a776754b0d6b3d30b69e61b0d0c8f919721dbd147dbecf710b180a45a",
@@ -1616,7 +1621,7 @@
     "include/game/ParticleRecipe.h": "04bba33839dcdae3132d1316e831585288f74ef842a5b01c6f6d6c37929ee61d",
     "include/game/PropertyData.h": "952ae5ac78dc17e43053a7b905a8e58499a1faa3c7d0721269329f639095b22a",
     "include/game/SceneNode.h": "1a6f0b01e88bda21ecb5b0ae8f4f3ad50df6422427adb3f5f52ea1c648a50fe4",
-    "include/game/SceneObjects.h": "8c7c5a727def624ecb5b5dace4bdb0ff8670274e27e74d23e69639c733f735fa",
+    "include/game/SceneObjects.h": "e008d65c1e70aeb394082cc588fc08ff9b10fe505044eaf27d3193ff03ba5bc4",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
     "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
     "include/game/ScriptMachine.h": "ca23b124331e6be9f43fc9e17237cbdb7851ff2941192e76b4aa3f8086db44bb",
@@ -1787,6 +1792,10 @@
     "include/target/stdlib.h": "74302825988fd3229c983eb14e318b3ac7b461b757bba166c734743e0a073de0",
     "include/target/string.h": "b73138d3d89c4db3ea017939b94e7a8ed7b59d4f090f7e4df068a1fe854d0297",
     "src/MathFun.cpp": "62fdc1c10ab2ff80ae713d40d1fa1efc22748836588999759447f0350ca8bc91",
+    "src/ai/AIDoodad.cpp": "b1c2db4af88214d62076c115bafd3ac149b189a45dd90abb2b37bb5250211b12",
+    "src/ai/AIPlayerDoodad.cpp": "aae454c7afa224f419a698b5e35635415fb9bcd40ff3c5a7ae4c3cc88feaa9bb",
+    "src/ai/AISoldierDoodad.cpp": "69e8bc90a49fd028f5f23d1791ce17c60cc433862d36a8dedd339caa3017b9ac",
+    "src/ai/AITankDoodad.cpp": "05e46e5f362ff308fbae636cc5210ca203a135e4cdb7ba2fe1d05b0683ea063f",
     "src/ai/filter_clock.cpp": "15b68a3c4487c496821009dc2ab90f971b7036cdd0a2fbcd54527ca71978bb58",
     "src/ai/filter_splines.cpp": "58cc98352a9799c6cb33d6bb8c2cc23892071c78418aa670ce0283f29fc5a5f3",
     "src/ai/locomotion_access.cpp": "b1d0b54e757064f8d4f6d747b4b7a48592465e918a044177e2a51f1df07fd08e",
@@ -30890,6 +30899,78 @@
       "discarded_functions": [],
       "object_sha256": "eb878c21364f897ba7b8ace7a5b7bbaf2df54cbfefae6db09ad82a2b71916b76",
       "linked_sha256": "496c1fbf31c7e56d60a36f086915dc5d02441f12d121d05eae2f39f665332be1"
+    },
+    {
+      "id": "ai_AIDoodad",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 92,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "98fb00dadee118f26c5bc9c20051721f5822589a23436423fcb42bc5cc4d76ed",
+      "linked_sha256": "c79e4f268eb1303a17a9bad9dd3de0e270b52437c43a447fcc4c0ac2607f2d86"
+    },
+    {
+      "id": "ai_AIPlayerDoodad",
+      "category": "reconstructed_game",
+      "functions": 6,
+      "code_bytes": 460,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "dbef5edf4798dd11ac450bd5cda6b9217e9f144bc89e2e13b2d475cc77214d08",
+      "linked_sha256": "1e33b68d6cf7332e699f3db66cfb5442fa39f140657a27162dfb4e22dc37b161"
+    },
+    {
+      "id": "ai_AISoldierDoodad",
+      "category": "reconstructed_game",
+      "functions": 11,
+      "code_bytes": 708,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "5f2bf7ecec50b3e03829df4cfb86251babdf59495f0a552ea9dc2840c4bdf461",
+      "linked_sha256": "e8864be0c98ff7f88d78c30ee3f41d8d480acae692affb44be6237dee3c86a52"
+    },
+    {
+      "id": "ai_AITankDoodad",
+      "category": "reconstructed_game",
+      "functions": 6,
+      "code_bytes": 432,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "dd7e54290cc881ad63379776db4aba9d82fa745c95b72ce3d503fda6eea75c16",
+      "linked_sha256": "d4c5c4726a40858afb3d7962710af436988621852c07ba229e5c3bd6caf36fb7"
     }
   ],
   "code_map": {
@@ -47729,239 +47810,6 @@
         "marker_interval": [
           "0x800d6870",
           "0x800d73f8"
-        ]
-      },
-      {
-        "name": "Unmatched files/AIDoodad.cpp [inferred file group]",
-        "file_record": 151,
-        "file_name": "AIDoodad.cpp",
-        "ranges": [
-          {
-            "address": "0x800d73f8",
-            "size": 28,
-            "kind": "function",
-            "name": "__9CAIDoodad",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d7414",
-            "size": 52,
-            "kind": "function",
-            "name": "_._9CAIDoodad",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d7448",
-            "size": 4,
-            "kind": "function",
-            "name": "Init__9CAIDoodad",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d744c",
-            "size": 8,
-            "kind": "function",
-            "name": "GetSceneNode__C9CAIDoodad",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x800d73f8",
-          "0x800d7454"
-        ]
-      },
-      {
-        "name": "Unmatched files/AIPlayerDoodad.cpp [inferred file group]",
-        "file_record": 152,
-        "file_name": "AIPlayerDoodad.cpp",
-        "ranges": [
-          {
-            "address": "0x800d7454",
-            "size": 68,
-            "kind": "function",
-            "name": "__15CAIPlayerDoodad",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d7498",
-            "size": 108,
-            "kind": "function",
-            "name": "_._15CAIPlayerDoodad",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d7504",
-            "size": 176,
-            "kind": "function",
-            "name": "Init__15CAIPlayerDoodadP13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d75b4",
-            "size": 88,
-            "kind": "function",
-            "name": "CleanUp__15CAIPlayerDoodad",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d760c",
-            "size": 12,
-            "kind": "function",
-            "name": "GetAIObject__C15CAIPlayerDoodad",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d7618",
-            "size": 8,
-            "kind": "function",
-            "name": "GetSceneNode__C15CAIPlayerDoodad",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x800d7454",
-          "0x800d7620"
-        ]
-      },
-      {
-        "name": "Unmatched files/AISoldierDoodad.cpp [inferred file group]",
-        "file_record": 153,
-        "file_name": "AISoldierDoodad.cpp",
-        "ranges": [
-          {
-            "address": "0x800d7620",
-            "size": 60,
-            "kind": "function",
-            "name": "__16CAISoldierDoodad",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d765c",
-            "size": 108,
-            "kind": "function",
-            "name": "_._16CAISoldierDoodad",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d76c8",
-            "size": 124,
-            "kind": "function",
-            "name": "Init__16CAISoldierDoodadP10CBotObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d7744",
-            "size": 124,
-            "kind": "function",
-            "name": "Init__16CAISoldierDoodadP14CSoldierObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d77c0",
-            "size": 76,
-            "kind": "function",
-            "name": "Init__16CAISoldierDoodad",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d780c",
-            "size": 88,
-            "kind": "function",
-            "name": "CleanUp__16CAISoldierDoodad",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d7864",
-            "size": 12,
-            "kind": "function",
-            "name": "GetAIObject__C16CAISoldierDoodad",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d7870",
-            "size": 8,
-            "kind": "function",
-            "name": "GetSceneNode__C16CAISoldierDoodad",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d7878",
-            "size": 36,
-            "kind": "function",
-            "name": "SetUpperTranslation__16CAISoldierDoodadRC8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d789c",
-            "size": 36,
-            "kind": "function",
-            "name": "SetUpperXAngleDifference__16CAISoldierDoodadff",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d78c0",
-            "size": 36,
-            "kind": "function",
-            "name": "SetUpperZAngleDifference__16CAISoldierDoodadff",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x800d7620",
-          "0x800d78e4"
-        ]
-      },
-      {
-        "name": "Unmatched files/AITankDoodad.cpp [inferred file group]",
-        "file_record": 154,
-        "file_name": "AITankDoodad.cpp",
-        "ranges": [
-          {
-            "address": "0x800d78e4",
-            "size": 60,
-            "kind": "function",
-            "name": "__13CAITankDoodad",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d7920",
-            "size": 108,
-            "kind": "function",
-            "name": "_._13CAITankDoodad",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d798c",
-            "size": 156,
-            "kind": "function",
-            "name": "Init__13CAITankDoodadP11CTankObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d7a28",
-            "size": 88,
-            "kind": "function",
-            "name": "CleanUp__13CAITankDoodad",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d7a80",
-            "size": 12,
-            "kind": "function",
-            "name": "GetAIObject__C13CAITankDoodad",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d7a8c",
-            "size": 8,
-            "kind": "function",
-            "name": "GetSceneNode__C13CAITankDoodad",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x800d78e4",
-          "0x800d7a94"
         ]
       },
       {
