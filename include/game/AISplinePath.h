@@ -67,6 +67,7 @@ public:
     unsigned char unknown00[0x20];
     CAILocomotion *locomotion;
     void StopAStarPathWalk();
+    void UpdateOffAStarPosition();
     int StartAStarPathWalk(BSObject *, EAStarDestinationInfo);
     int StartAStarPathWalk(EAStarDestinationInfo);
     void EnterAStarVolume(int);
@@ -78,10 +79,10 @@ public:
     bool SetupAStarPathWalkForPatrol(const CVector3 &);
 };
 // Static navigation-mesh query.
-class AIPathFinding {
-public:
-    static int IsPointOnNetwork(const CVector3 &);
-};
+namespace AIPathFinding {
+    int IsPointOnNetwork(const CVector3 &);
+    void UpdateAStarNodesOutOfArea();
+}
 // Prefix through the next-point vector at +0x20. The untouched bytes at
 // +0x18 and the complete allocation size remain unestablished.
 class CAISplinePathTraversal {

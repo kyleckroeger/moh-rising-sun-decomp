@@ -1,0 +1,122 @@
+{
+  "id": "ai_AIPlayerObject",
+  "source": "src/ai/AIPlayerObject.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800dcfa4",
+      "size": 1000
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a29b0",
+      "size": 40
+    }
+  ],
+  "functions": [
+    {
+      "name": "UpdateFromGameObject__15CAIPlayerObjectP16IMovingSceneNode",
+      "address": "0x800dcfa4",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "PreUpdate__15CAIPlayerObject",
+      "address": "0x800dcfe0",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "Update__15CAIPlayerObjectf",
+      "address": "0x800dd048",
+      "size": 308,
+      "binding": 1
+    },
+    {
+      "name": "Init__15CAIPlayerObject",
+      "address": "0x800dd17c",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "SetInitialStatus__15CAIPlayerObject",
+      "address": "0x800dd1b0",
+      "size": 176,
+      "binding": 1
+    },
+    {
+      "name": "UpdateStatus__15CAIPlayerObject",
+      "address": "0x800dd260",
+      "size": 128,
+      "binding": 1
+    },
+    {
+      "name": "IsCrouching__C15CAIPlayerObject",
+      "address": "0x800dd2e0",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "GetSceneNode__15CAIPlayerObject",
+      "address": "0x800dd310",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetLookDirection__15CAIPlayerObjectR8CVector3T1",
+      "address": "0x800dd318",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "AsAIPlayerObject__15CAIPlayerObject",
+      "address": "0x800dd380",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "IsPlayer__C15CAIPlayerObject",
+      "address": "0x800dd384",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "GetGlobalListStart__9CAIObject": "0x800d9e48",
+    "GetPlayer__C6CScenei": "0x8014ac08",
+    "GetTargetScript__C12CAITargeting": "0x800edb18",
+    "Init__9CAIObject": "0x800d9fc4",
+    "IsObjectInFieldOfView__9CAIObjectR9CAIObjectff": "0x800dcd0c",
+    "IsPlayerCrouching__C13CPlayerObject": "0x800b7640",
+    "PreUpdate__9CAIObject": "0x800d9e6c",
+    "SetAIStatusVar__9CAIObject12aistatus_vari": "0x800dcc8c",
+    "UpdateAStarNodesOutOfArea__13AIPathFindingv": "0x800e769c",
+    "UpdateCoverpointsOutOfArea__19CCoverpointBehaviorPC10ISceneNode": "0x800f28e8",
+    "UpdateFromGameObject__9CAIObjectP16IMovingSceneNode": "0x800d9ec0",
+    "UpdateOffAStarPosition__18CAIAreaPathFinding": "0x800ebc7c",
+    "Update__9CAIObjectf": "0x800d9e70",
+    "g_aigAIFilterGlobalObject": "0x80309bfc",
+    "g_bCoopMultiplayer": "0x802c1b2c",
+    "g_bInMultiplayerMode": "0x802c1b30",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIPlayerObject.cpp",
+  "original_file_index": 980
+}

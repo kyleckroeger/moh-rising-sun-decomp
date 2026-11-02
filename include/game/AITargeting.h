@@ -57,6 +57,7 @@ public:
     int blindFireMode; // +0xfc; observed selectors 0, 1 and 2.
     int weapon; // +0x100; passed to AdjustAimPosition.
     AIFILTER_WEAPON_AIM_MODE aimMode; // +0x104.
+    float inverseBulletSpeed; // +0x108; written by the soldier filter.
     CAITarget GetTarget() const { return target; }
     void GetLastSeenTargetPosition(CVector3 &);
     void GetModifiedTargetPosition(CVector3 &);
@@ -83,7 +84,7 @@ public:
     bool HasValidTarget() const;
     bool GetTargetGuessPosition(CVector3 &);
 };
-typedef char AITargetingPrefixCheck[sizeof(CAITargeting) == 0x108 ? 1 : -1];
+typedef char AITargetingPrefixCheck[sizeof(CAITargeting) == 0x10c ? 1 : -1];
 // Original enum tags. Behavior selectors match each behavior class's GetType
 // return; all member names are descriptive.
 enum EBehaviorType {
@@ -130,9 +131,14 @@ public:
 // AI modules through the spline-path module at +0x2f0. Module offsets come from
 // the built-ins that pass their addresses; the gaps between them stay opaque.
 // This is not a complete allocation, inheritance model or virtual interface.
+class CAIFilterObject;
+class CAITankObject;
+class IMovingSceneNode;
 class CAIObject {
 public:
-    unsigned char unknown00[0x0c];
+    CAIObject *nextGlobal;   // +0x00; the global AI object list.
+    CAIFilterObject *filter; // +0x04; the owning filter.
+    unsigned char unknown08[4];
     BSObject *scriptObject;
     unsigned char unknown10[0x20];
     CVector3 position;
@@ -151,14 +157,17 @@ public:
     unsigned char unknown378[0x594 - 0x378];
     int cookie;          // +0x594; script-owned value (BIFunc_GetCookie/SetCookie).
     unsigned char team;  // +0x598; set by BIFunc_AISetTeam.
-    unsigned char unknown599[0x5e0 - 0x599];
+    unsigned char unknown599; // +0x599; 4 for soldiers, 7 for tanks and 5 for players.
+    short id;            // +0x59a; the trigger's "ID".
+    unsigned char unknown59c[0x5e0 - 0x59c];
     unsigned int statusFlags2; // +0x5e0; bit 0 cleared with flag 2.
     unsigned char unknown5e4[4];
     unsigned int statusFlags;  // +0x5e8; set and cleared by BIFunc_AISendFlag.
     CAIStatus status;    // +0x5ec
-    unsigned char unknown61c[0x624 - 0x61c];
+    unsigned char unknown61c[0x620 - 0x61c];
+    float reactionDelay; // +0x620; the trigger's "ReactionDelay" times 0.1.
     float accuracyNear;  // +0x624; set per accuracy level by BIFunc_SetAccuracy.
-    unsigned char unknown628[4];
+    float trackingDelay; // +0x628; from the trigger's "TrackingDelay" selector.
     float accuracyFar;   // +0x62c
     unsigned char unknown630[0x638 - 0x630];
     float hearingRadius; // +0x638; set by BIFunc_AISetHearingRadius.
@@ -166,7 +175,10 @@ public:
     int inShadow;        // +0x6e4
     float shadowAmount;  // +0x6e8
     int matchList;       // +0x6ec; first word of the soldier match list returned by address.
-    unsigned char unknown6f0[0x770 - 0x6f0];
+    unsigned char unknown6f0[0x730 - 0x6f0];
+    float hitPoints;     // +0x730; the trigger's "HitPoints".
+    float maxHitPoints;  // +0x734; set with hitPoints, meaning inferred.
+    unsigned char unknown738[0x770 - 0x738];
     struct SnapState {
         unsigned char unknown00[0x10];
         CVector3 position; // +0x10
@@ -176,6 +188,13 @@ public:
     } snap;              // +0x770; set by BIFunc_AISnapToMovePoint*.
     unsigned char unknown79c[0x7a0 - 0x79c];
     CAITactics tactics;  // +0x7a0
+    static CAIObject *GetGlobalListStart();
+    void PreUpdate();
+    void Update(float);
+    void UpdateFromGameObject(IMovingSceneNode *);
+    void Init();
+    void SetAIStatusVar(aistatus_var, int);
+    int IsObjectInFieldOfView(CAIObject &, float, float);
     CAIBehavior *FindMatchingBehavior(EBehaviorType);
     CAIBehavior *FindMatchingBehaviorByCRC(int);
     float GetDistanceSquaredXYReal(CAITarget);
@@ -216,9 +235,14 @@ class CAIFilterObject {
 public:
     virtual ~CAIFilterObject();
     void LinkGameObject(void *);
+    CAIFilterObject(BSObject *);
+    BSObject *GetScriptObject() const;
+    void *GetBSGO() const;
+    virtual void SetMoveTarget(const CVector3 &);
     void *gameObject;   // +0x00; the owning doodad, stored by LinkGameObject.
     CAIObject *object;  // +0x04
-    unsigned char unknown08[8];
+    BSObject *scriptObject; // +0x08
+    void *bsgo;         // +0x0c; the script object's word at +0x20.
 };
 class CAIDoodad {
 public:
@@ -237,9 +261,12 @@ public:
 };
 class CAISoldierObject {
 public:
+    CAISoldierObject(void *);
+    void *operator new(unsigned int, void *);
     void Init();
     unsigned char unknown_0[0x7b0];
     CAIThreatEvaluation threatEvaluation; // +0x7b0
+    unsigned char unknown_7b1[3536 - 0x7b1]; // The allocation is 3536 bytes.
 };
 class IMovingSceneNode;
 // Virtual-interface view of CAIObject: its table pointer follows the data at
@@ -250,7 +277,7 @@ public:
     virtual ~CAIObjectInterface();
     virtual CAISoldierObject *AsAISoldierObject();
     virtual void *AsAIPlayerObject();
-    virtual void *AsAITankObject();
+    virtual CAITankObject *AsAITankObject();
     virtual void PreUpdate();
     virtual void Update(float);
     virtual void UpdateFromGameObject(IMovingSceneNode *);
@@ -258,6 +285,12 @@ public:
     virtual void OnDeath();
     virtual void SetupTargetMatchList(aistatus_match *, int);
     virtual int ChooseTarget(float);
+    virtual int IsCrouching() const;
+    virtual int IsPlayer() const;
+    virtual void GetLookDirection(CVector3 &, CVector3 &);
+    virtual int GetAIValueByName(const char *);
+    virtual int IsObjectInLineOfSight(const CVector3 &, float, bool, const ISceneNode *);
+    virtual ISceneNode *GetSceneNode();
 };
 enum EGrenadeThrow { GrenadeThrowUnknown = 0 };
 int SetUpGrenadeShot(EGrenadeThrow, ISceneNode *);

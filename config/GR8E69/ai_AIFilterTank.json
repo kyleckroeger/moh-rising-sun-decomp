@@ -1,0 +1,68 @@
+{
+  "id": "ai_AIFilterTank",
+  "source": "src/ai/AIFilterTank.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d9264",
+      "size": 236
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.19CAIFilterTankObject",
+      "address": "0x802e7890",
+      "size": 32,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "__19CAIFilterTankObjectP8BSObject",
+      "address": "0x800d9264",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "_._19CAIFilterTankObject",
+      "address": "0x800d92c8",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "__nw__19CAIFilterTankObjectUiPv",
+      "address": "0x800d9344",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "__dl__19CAIFilterTankObjectPv",
+      "address": "0x800d934c",
+      "size": 4,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SetMoveTarget__15CAIFilterObjectRC8CVector3": "0x800d981c",
+    "_._15CAIFilterObject": "0x800d8e68",
+    "__13CAITankObjectPv": "0x800de340",
+    "__15CAIFilterObjectP8BSObject": "0x800d8e54",
+    "__nw__13CAITankObjectUiPv": "0x800de400"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIFilter.cpp",
+  "original_file_index": 970
+}

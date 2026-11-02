@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 783832,
+    "matching_code_bytes": 786600,
     "total_executable_code_bytes": 2492032,
-    "percent": 31.453528686630026,
+    "percent": 31.56460270173096,
     "categories": {
-      "reconstructed_game": 391616,
+      "reconstructed_game": 394384,
       "restored_library": 392216
     },
-    "matching_functions": 3412
+    "matching_functions": 3464
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -110,10 +110,19 @@
     "config/GR8E69/UDPTransport.json": "2c2b2e2ed43cd5a432f9ba61b70b14c627ec3416e9a439b78e980b9aeb584f5c",
     "config/GR8E69/ai.json": "7b00f17f4fb56ada896ab693b54981297a779945d629d8e0920f1bffedda5893",
     "config/GR8E69/ai_AIDoodad.json": "e2609f553306a674aa8981751ce3c5b61ec5d9aa5c3a1a0509aae786409aebf4",
+    "config/GR8E69/ai_AIFilterAccess.json": "b4aa6ccd0d536390a2fbe233696b27bd15914ebf90759dbde576445a54bfca1c",
+    "config/GR8E69/ai_AIFilterHead.json": "eeb196fcc1a0c3511cbfa7d74a41e589b841bf8863e4b5b4584d1b719583012f",
+    "config/GR8E69/ai_AIFilterPlayer.json": "67444c297f0b80cdf43d542d5a628e1aa019ff4928c07c1103ce186178a0a2a8",
+    "config/GR8E69/ai_AIFilterTank.json": "f00434e8d19008765bb603dcb4b91d0e0bae489665acd87a55a70735e4a6e63e",
     "config/GR8E69/ai_AIPlayerDoodad.json": "8976209d5d59b86a5d929fac29a9e3ea68a001d594b16260e83a1360eec3227b",
+    "config/GR8E69/ai_AIPlayerObject.json": "8ba7399ad3e067573248c2a983cc6db12e45969ae604d079c827a9e9e59961b2",
     "config/GR8E69/ai_AISoldierDoodad.json": "0eaebe52e58074f6eb5b7dd04ee0e4f40b1e85f8209f2dd8b1c1925244a85baf",
     "config/GR8E69/ai_AIStatus.json": "116def6205f392b48bd2b8f9da5a552a5b7bf91e1c59f412687470a618ace22b",
     "config/GR8E69/ai_AITankDoodad.json": "724066023ce56095ce6bae2111e66550d73385166788fc69569925fe4764e476",
+    "config/GR8E69/ai_AITankObjectA.json": "e5f1aa27d7958a89c6734c8d8179b3b20c7965ce4474e8ee9372d4609ac9fd04",
+    "config/GR8E69/ai_AITankObjectB.json": "86ca57c24e19d4f2de9f1b998906e699515aaa5d74e42714215d84ecd5613dda",
+    "config/GR8E69/ai_AITankObjectC.json": "833fd5caca4fc8577ab77c8f11b76950b04942162058f6d56392b08423370865",
+    "config/GR8E69/ai_AITankObjectD.json": "5c92c1ea302426601af352e931c5823c744898a4032b45f381ca6666d5d12a70",
     "config/GR8E69/ai_filter_clock.json": "f2034db8752a041debc3e5f86662b062dae08812cf71d3c95f66f339dbd705b1",
     "config/GR8E69/ai_filter_splines.json": "26b024e231fa1eb564b501c3108a8fb71d50e76cdc7ad97470e83b7b39b7fbde",
     "config/GR8E69/ai_locomotion_access.json": "a561dbd2e9dc1e3932ea24b9e503dd28adac5b45f786bacaa0dd26e3f5cc6154",
@@ -693,7 +702,7 @@
     "config/GR8E69/player_path_controls.json": "a5a585ed38c40cd299ab995320748f8e6777003f8cc885f5376c7e440dc2b3b7",
     "config/GR8E69/player_spline_position.json": "5b4aa80de0af602d8d0cde27f43b24848fd3a5ad92b1972f1900f8f256617888",
     "config/GR8E69/player_spline_tangent.json": "36eccc91b26a0f0558ee6f02c6e52398927527bf754f986e8d6db6404022d9b8",
-    "config/GR8E69/project.json": "44455f838fe3f13a7897ebf925a70d73fd3350b96a2236c0573280dfea56cf7c",
+    "config/GR8E69/project.json": "227a30f66460b7d7c525be9520a8f0749f86ec1611f59a99c49dc9e12f204d7d",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
     "config/GR8E69/projectile_exclusion_pair.json": "99afd0db09aa6eccc73fda17bb9ac1d24a6fe107780f8cf54fb758360cd20ef0",
@@ -702,6 +711,9 @@
     "config/GR8E69/quaternion_get_matrix.json": "c63fc72dbed2a9d3c604effaada46ecb10afde2020eaadd56e4e7f8ccf114e82",
     "config/GR8E69/quaternion_normalize.json": "d78a8760467d1cff8299eecd55985b34b9908086e277c7814083cb4c65a64fc4",
     "config/GR8E69/quaternion_slerp.json": "1a0f13b162d329331ef995f603d989e695af05bdda0fce3a52b322131c771a16",
+    "config/GR8E69/scene_AttachableObjectA.json": "c3e2b9a32e7040c1deeb440a9c3123b41398d074fe7a93c4f5fb897de385b2c1",
+    "config/GR8E69/scene_AttachableObjectB.json": "06c8e5cb4b989be36b3bc118de23ce315684abe48f28b0a7168d76747810489f",
+    "config/GR8E69/scene_AttachableObjectC.json": "921a6e2635ca182465002db6373bc5f1ef5c82fb774db5befb51de4171c030f3",
     "config/GR8E69/scene_node_axis_defaults.json": "092b0d540e402069c588985246b692817db1af99a9d9c2cde0f3b1bfac31d590",
     "config/GR8E69/scene_node_centroid.json": "417789c5857125f62e4595e59f3e52ed74ac434de058b0123549164ceef3cd8b",
     "config/GR8E69/scene_node_destructor.json": "2421437a4581f16904fb69d4f06b23754bc5d337e70bdec86806d8f9f3f370a5",
@@ -1549,12 +1561,12 @@
     "include/dolphin-sdk/libc/wchar.h": "eb9359b3f8c80e980c291b31b08b913739a9fda753a2a5007f8bf2bf3c646439",
     "include/dolphin-sdk/macros.inc": "4e92f656bb511fbb45d66081291371c47ceba7bce9c55f86871116203cf38a46",
     "include/dolphin-sn/dolphin/types.h": "ca31e0bbb97e93ca4713654367df29578f6392f3acaf40ca68bc1de1c913af93",
-    "include/game/AIBehavior.h": "fd6a7c2e44bb7212a57e989bdb8a573c4c19ba3a63de85306cacee24ab6496d5",
-    "include/game/AIDoodad.h": "c25ecbbc3291c82bac84a9e0120fa10d89f761da3ae9ccfac3d3b59bd7c9fe74",
+    "include/game/AIBehavior.h": "3784409536266ef1f5f5422bc7336b85c46355bdb27d358b0df9e710c94638b6",
+    "include/game/AIDoodad.h": "475c1f3e895b4e8117d541e3aae395b56c03ac17d59b2a5e7cba2063ab4a5c4c",
     "include/game/AIFilterGlobal.h": "26368f15313dbd6390bee4c45582bcdfc36d8d433aaec5b0241541e52b9d677a",
     "include/game/AIMovement.h": "b9d723fd2bfeb66871a55f57dad2d3bfad33a56530d2826600e86d36598d6342",
-    "include/game/AISplinePath.h": "a44a68ad726dfcaa439461afba93bb1c66f6425b174c21eca29c478d28820187",
-    "include/game/AITargeting.h": "9b0f0c1f77eb96c8d4445fa3a6ae8e6c4deda13557a0aeb70fb59b075ac55655",
+    "include/game/AISplinePath.h": "f354973dd31e8d4c187ea57b5fb3fc59ec819aee412a39dab100424da55768d2",
+    "include/game/AITargeting.h": "83d777d4b4bc924bdcd62e2be9d2ec29a81c1d5b213e88e123b25fde8b2441ed",
     "include/game/AnimatedVolume.h": "0f9fc422079babc5f7cbb7bfa1fd5e2dab2727ee36007e4aca27d29757455946",
     "include/game/BPD.h": "ec4a3aceb83f181db2c6adf8ac87137ede2cd6a0e643548159c73a827aadd19e",
     "include/game/BSGameObject.h": "0251918a776754b0d6b3d30b69e61b0d0c8f919721dbd147dbecf710b180a45a",
@@ -1642,7 +1654,7 @@
     "include/game/ParticleRecipe.h": "04bba33839dcdae3132d1316e831585288f74ef842a5b01c6f6d6c37929ee61d",
     "include/game/PropertyData.h": "952ae5ac78dc17e43053a7b905a8e58499a1faa3c7d0721269329f639095b22a",
     "include/game/SceneNode.h": "1a6f0b01e88bda21ecb5b0ae8f4f3ad50df6422427adb3f5f52ea1c648a50fe4",
-    "include/game/SceneObjects.h": "e4bf3db1ac4318764e23920742c0213cf23d144e2a28518db53f31545cb1de26",
+    "include/game/SceneObjects.h": "e64f4af9947b817a60d3693022d0858a28e435c330de7c1b74bfabdb9e5f714b",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
     "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
     "include/game/ScriptMachine.h": "ca23b124331e6be9f43fc9e17237cbdb7851ff2941192e76b4aa3f8086db44bb",
@@ -1814,10 +1826,19 @@
     "include/target/string.h": "b73138d3d89c4db3ea017939b94e7a8ed7b59d4f090f7e4df068a1fe854d0297",
     "src/MathFun.cpp": "62fdc1c10ab2ff80ae713d40d1fa1efc22748836588999759447f0350ca8bc91",
     "src/ai/AIDoodad.cpp": "b1c2db4af88214d62076c115bafd3ac149b189a45dd90abb2b37bb5250211b12",
+    "src/ai/AIFilterAccess.cpp": "4f3b357c06ed7897c863b68d866e79ec0082d93b562058846b08d25ddd5cedb2",
+    "src/ai/AIFilterHead.cpp": "3a9e84d66eb2a48fef0b10e1a1121aa157fb1fb1f885252e2b2ee22364de421f",
+    "src/ai/AIFilterPlayer.cpp": "268af5a1c74b71c56da493f82103f3746c29f16b06478d3d37d8dc518df976a9",
+    "src/ai/AIFilterTank.cpp": "977bd9bbf589e74e00e7b09aaf9f31164ded18b3ab9804b593ebe96cd4edae65",
     "src/ai/AIPlayerDoodad.cpp": "aae454c7afa224f419a698b5e35635415fb9bcd40ff3c5a7ae4c3cc88feaa9bb",
+    "src/ai/AIPlayerObject.cpp": "3506b4d0b490edd6c95f9aa0dea8e51974bee0049b65cc3a65b2d2034dd991fb",
     "src/ai/AISoldierDoodad.cpp": "69e8bc90a49fd028f5f23d1791ce17c60cc433862d36a8dedd339caa3017b9ac",
     "src/ai/AIStatus.cpp": "587c305fbf140fffa82832a2e326dc5a471e22b83420f9b84357630b97047455",
     "src/ai/AITankDoodad.cpp": "05e46e5f362ff308fbae636cc5210ca203a135e4cdb7ba2fe1d05b0683ea063f",
+    "src/ai/AITankObjectA.cpp": "3655309735e03831209c98ad5772e2d9e7cfb737d543f277c274391276a79b95",
+    "src/ai/AITankObjectB.cpp": "49e0d1c0c80d2c4002097438ad0d77c84a73790d821490d7e49698bbe55dedfe",
+    "src/ai/AITankObjectC.cpp": "3a017317124cc3af0802c29a7344830e4110956dd30c48cf6b55a6ea99c37ea2",
+    "src/ai/AITankObjectD.cpp": "1d48f7210ac6083554bb04559b38da035c0101862b0202ce9e65b5ef7df36f7f",
     "src/ai/filter_clock.cpp": "15b68a3c4487c496821009dc2ab90f971b7036cdd0a2fbcd54527ca71978bb58",
     "src/ai/filter_splines.cpp": "58cc98352a9799c6cb33d6bb8c2cc23892071c78418aa670ce0283f29fc5a5f3",
     "src/ai/locomotion_access.cpp": "b1d0b54e757064f8d4f6d747b4b7a48592465e918a044177e2a51f1df07fd08e",
@@ -2571,6 +2592,9 @@
     "src/quaternion/get_matrix.cpp": "833c4f1e128f98fd799af7974b65805cd409a2be36d0537e5915f5e23a9b65c2",
     "src/quaternion/normalize.cpp": "6a6d8d3dc0aec56da5bc7e6deea018e478cff41b6aa3ce416ae918e002dcd69b",
     "src/quaternion/slerp.cpp": "5d23dc039a6a7d8246e63aee872ffea35f85911f9e34b3017c97d647bc091bfd",
+    "src/scene/AttachableObjectA.cpp": "72deef8d7c8dd87b1804ecf6d4d562606b86f6f612e61869d74fd1448aea66d4",
+    "src/scene/AttachableObjectB.cpp": "96f9d0b60a7cbe2777084971aa74470168d825cde7723184d83d4960d7176d39",
+    "src/scene/AttachableObjectC.cpp": "4ba057f86eeeead5950370eb21bf7605d1bde0ff73ccc6b263b2d597cd40ea3f",
     "src/scene/MovingNodeLightDefaults.cpp": "d865f9d5d5a5a9193a6b79954821ae5c73dd4161daef037e9d5fe56d20ddb9fd",
     "src/scene/MovingNodeReset.cpp": "c2b3fc485ff5c1b562488b665e62ed8ec41130b5ac54daf2974e3835f16e9244",
     "src/scene/MovingNodeTransformDefaults.cpp": "7e49f15e9c0263e1a12315dff548c7981996f00128da21a72fba8727db90bc15",
@@ -31381,6 +31405,222 @@
       "discarded_functions": [],
       "object_sha256": "b9bc143ecec14cfe00724fb4b2842ec20944830fdf036360d7a14b502e05ea3a",
       "linked_sha256": "2501afdf6e3555a5629c43190a5ab1aff2abd06ef07f37331279cc561fe9e589"
+    },
+    {
+      "id": "ai_AIFilterHead",
+      "category": "reconstructed_game",
+      "functions": 7,
+      "code_bytes": 316,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "fdb9f8a8550e85db0c2f1539092e98fe413437c66a4a5cfed2e5edc4041cc9e0",
+      "linked_sha256": "aca6d7e6a396a4cb97a84a7c58e35856f0110eedb46294b6c6f94a109f45dafa"
+    },
+    {
+      "id": "ai_AIFilterTank",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 236,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "aa10039be9a35361c59f70726b95e0d0d1ca74b9f4e5a6356a48a90423129c13",
+      "linked_sha256": "61350c2f6cd84f440ebe061e05b41942af9149a6931e87a7924a8233ad2e4382"
+    },
+    {
+      "id": "ai_AIFilterPlayer",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 108,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "9bc6ed6ab23ca49500e0d392d5b5c5c502cd68272050bece4ea2d80c90403d06",
+      "linked_sha256": "8a11aeb589611300c1ff3858cf74719d5dad93f64aa24a146b04ea7dd91fd089"
+    },
+    {
+      "id": "ai_AIFilterAccess",
+      "category": "reconstructed_game",
+      "functions": 8,
+      "code_bytes": 128,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "278193c2e066769874f21526556f96a1083ec7a933201dcac14ca1b7d6952c3b",
+      "linked_sha256": "215dc38fd7ff191ba2f528393547528419c8da24b43c89c5b439821ea72b993c"
+    },
+    {
+      "id": "ai_AIPlayerObject",
+      "category": "reconstructed_game",
+      "functions": 11,
+      "code_bytes": 1000,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "9cfaecd5ddfd578557317299bbb47addb093003d30b89e43e9d051b955679e8e",
+      "linked_sha256": "91c64326a89a6391a188ec955658564a6e83826fb4abfc63c619b243ecf17e1d"
+    },
+    {
+      "id": "ai_AITankObjectA",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 176,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "3b9c4e6d633889bd19d6cb4b3ac04387c5f31b26941f85f3172d935d1ba9158c",
+      "linked_sha256": "94ac0f5f77d1cfdd85699c30465afddf05e7392556fc0e18a26eee7319a3b06b"
+    },
+    {
+      "id": "ai_AITankObjectB",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 60,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "1749048fd27e5ffe317e79483ec7fb19c969526492e92c8cd0f610565e66bcfd",
+      "linked_sha256": "8d13bdb94a92f456005c1f85b0b1aa520e55f31cbb2a9ae8b2ce45ff5a81569d"
+    },
+    {
+      "id": "ai_AITankObjectC",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 128,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "9f7a37066a067a21534c0c4e17f448fd5dc7f91c2d0a619ef06a6bc5253471db",
+      "linked_sha256": "cc7414620f9f81115e95d21d916efd53a4674148527124ba127ed1b6b01fa515"
+    },
+    {
+      "id": "scene_AttachableObjectA",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 224,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "49ea2c2731b065a0e838b4a325a64d6fc7fe07e19e45ade325496d431396582a",
+      "linked_sha256": "680e7f88f98722ec98be6f4a58edc83addd73815b2878a5d434e75baa3f8bde2"
+    },
+    {
+      "id": "scene_AttachableObjectB",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 64,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "46a76baa1b38191ed2e23c58b8c9fbd3453b6e29a3c60f257d069771d02e8f73",
+      "linked_sha256": "1e3899a45a1c4743cdf00f18adf2edabdf16f7f35d20ea4a7d6282b5bb0b355b"
+    },
+    {
+      "id": "scene_AttachableObjectC",
+      "category": "reconstructed_game",
+      "functions": 7,
+      "code_bytes": 272,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "b4e4d588135c75365717449a6b8e7eceeac064cc4be08ece59232147ae005997",
+      "linked_sha256": "c06de78bc23698df6b4c997c434dd681ef414c8bbd9216b61aaf7f83f8859659"
+    },
+    {
+      "id": "ai_AITankObjectD",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 56,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "1f5fc280e4fb1508d0845a0439489fa2d9ac64510094c3abb4b6e10af4115fd2",
+      "linked_sha256": "c52ee1a82aba04e9a6c520c9a853b4176889cbdf8c7a7386be4db708f771ec26"
     }
   ],
   "code_map": {
@@ -44624,34 +44864,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800ba308",
-            "size": 56,
-            "kind": "function",
-            "name": "GetFreeAttachSlot__17CAttachableObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ba340",
-            "size": 56,
-            "kind": "function",
-            "name": "GetFirstChildHandle__17CAttachableObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ba378",
-            "size": 80,
-            "kind": "function",
-            "name": "GetNextChildHandle__17CAttachableObjecti",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ba3c8",
-            "size": 32,
-            "kind": "function",
-            "name": "GetChild__17CAttachableObjecti",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800ba3e8",
             "size": 224,
             "kind": "function",
@@ -44694,20 +44906,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800baa60",
-            "size": 32,
-            "kind": "function",
-            "name": "Draw__17CAttachableObjectR12CDrawContext",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800baa80",
-            "size": 32,
-            "kind": "function",
-            "name": "IsVisible__C17CAttachableObjectR12CDrawContext",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800baaa0",
             "size": 88,
             "kind": "function",
@@ -44719,55 +44917,6 @@
             "size": 1276,
             "kind": "function",
             "name": "UpdateSingleAttachedObject__17CAttachableObjecti",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800baff4",
-            "size": 32,
-            "kind": "function",
-            "name": "BeginUpdate__17CAttachableObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800bb014",
-            "size": 4,
-            "kind": "function",
-            "name": "UpdateAI__17CAttachableObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800bb018",
-            "size": 4,
-            "kind": "function",
-            "name": "CommitAI__17CAttachableObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800bb01c",
-            "size": 84,
-            "kind": "function",
-            "name": "AttemptUpdate__17CAttachableObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800bb070",
-            "size": 32,
-            "kind": "function",
-            "name": "CommitUpdate__17CAttachableObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800bb090",
-            "size": 108,
-            "kind": "function",
-            "name": "FindAttachNode__17CAttachableObjectiP7CMatrix",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800bb0fc",
-            "size": 8,
-            "kind": "function",
-            "name": "GetObjectType__C17CAttachableObject",
             "evidence": "adjacent-compiler-markers"
           }
         ],
@@ -48111,55 +48260,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800d8e54",
-            "size": 20,
-            "kind": "function",
-            "name": "__15CAIFilterObjectP8BSObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d8e68",
-            "size": 52,
-            "kind": "function",
-            "name": "_._15CAIFilterObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d8e9c",
-            "size": 8,
-            "kind": "function",
-            "name": "LinkGameObject__15CAIFilterObjectPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d8ea4",
-            "size": 100,
-            "kind": "function",
-            "name": "__22CAIFilterSoldierObjectP8BSObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d8f08",
-            "size": 124,
-            "kind": "function",
-            "name": "_._22CAIFilterSoldierObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d8f84",
-            "size": 8,
-            "kind": "function",
-            "name": "__nw__22CAIFilterSoldierObjectUiPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d8f8c",
-            "size": 4,
-            "kind": "function",
-            "name": "__dl__22CAIFilterSoldierObjectPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800d8f90",
             "size": 592,
             "kind": "function",
@@ -48171,34 +48271,6 @@
             "size": 132,
             "kind": "function",
             "name": "UpdateManualUpdateVars__22CAIFilterSoldierObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d9264",
-            "size": 100,
-            "kind": "function",
-            "name": "__19CAIFilterTankObjectP8BSObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d92c8",
-            "size": 124,
-            "kind": "function",
-            "name": "_._19CAIFilterTankObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d9344",
-            "size": 8,
-            "kind": "function",
-            "name": "__nw__19CAIFilterTankObjectUiPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d934c",
-            "size": 4,
-            "kind": "function",
-            "name": "__dl__19CAIFilterTankObjectPv",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -48223,13 +48295,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800d9628",
-            "size": 108,
-            "kind": "function",
-            "name": "_._21CAIFilterPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800d9694",
             "size": 308,
             "kind": "function",
@@ -48249,62 +48314,6 @@
             "kind": "function",
             "name": "__static_initialization_and_destruction_0",
             "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x800d980c",
-            "size": 8,
-            "kind": "function",
-            "name": "GetScriptObject__C15CAIFilterObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d9814",
-            "size": 8,
-            "kind": "function",
-            "name": "GetBSGO__C15CAIFilterObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d981c",
-            "size": 4,
-            "kind": "function",
-            "name": "SetMoveTarget__15CAIFilterObjectRC8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d9820",
-            "size": 76,
-            "kind": "function",
-            "name": "SetMoveTarget__22CAIFilterSoldierObjectRC8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d986c",
-            "size": 8,
-            "kind": "function",
-            "name": "GetAIDoodad__C22CAIFilterSoldierObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d9874",
-            "size": 8,
-            "kind": "function",
-            "name": "GetAIObject__C22CAIFilterSoldierObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d987c",
-            "size": 8,
-            "kind": "function",
-            "name": "GetAIObject__C19CAIFilterTankObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d9884",
-            "size": 8,
-            "kind": "function",
-            "name": "GetAIObject__C21CAIFilterPlayerObject",
-            "evidence": "adjacent-compiler-markers"
           },
           {
             "address": "0x800d988c",
@@ -48968,83 +48977,6 @@
             "kind": "function",
             "name": "_._15CAIPlayerObject",
             "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800dcfa4",
-            "size": 60,
-            "kind": "function",
-            "name": "UpdateFromGameObject__15CAIPlayerObjectP16IMovingSceneNode",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800dcfe0",
-            "size": 104,
-            "kind": "function",
-            "name": "PreUpdate__15CAIPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800dd048",
-            "size": 308,
-            "kind": "function",
-            "name": "Update__15CAIPlayerObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800dd17c",
-            "size": 52,
-            "kind": "function",
-            "name": "Init__15CAIPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800dd1b0",
-            "size": 176,
-            "kind": "function",
-            "name": "SetInitialStatus__15CAIPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800dd260",
-            "size": 128,
-            "kind": "function",
-            "name": "UpdateStatus__15CAIPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800dd2e0",
-            "size": 48,
-            "kind": "function",
-            "name": "IsCrouching__C15CAIPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800dd310",
-            "size": 8,
-            "kind": "function",
-            "name": "GetSceneNode__15CAIPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800dd318",
-            "size": 104,
-            "kind": "function",
-            "name": "GetLookDirection__15CAIPlayerObjectR8CVector3T1",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800dd380",
-            "size": 4,
-            "kind": "function",
-            "name": "AsAIPlayerObject__15CAIPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800dd384",
-            "size": 8,
-            "kind": "function",
-            "name": "IsPlayer__C15CAIPlayerObject",
-            "evidence": "adjacent-compiler-markers"
           }
         ],
         "marker_interval": [
@@ -49251,45 +49183,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800de400",
-            "size": 8,
-            "kind": "function",
-            "name": "__nw__13CAITankObjectUiPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800de408",
-            "size": 4,
-            "kind": "function",
-            "name": "__dl__13CAITankObjectPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800de40c",
-            "size": 60,
-            "kind": "function",
-            "name": "UpdateFromGameObject__13CAITankObjectP16IMovingSceneNode",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800de448",
-            "size": 104,
-            "kind": "function",
-            "name": "PreUpdate__13CAITankObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800de4b0",
             "size": 336,
             "kind": "function",
             "name": "Update__13CAITankObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800de600",
-            "size": 60,
-            "kind": "function",
-            "name": "Init__13CAITankObject",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -49304,13 +49201,6 @@
             "size": 128,
             "kind": "function",
             "name": "UpdateStatus__13CAITankObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800de76c",
-            "size": 56,
-            "kind": "function",
-            "name": "SetupTargetMatchList__13CAITankObjectP14aistatus_matchi",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -49332,20 +49222,6 @@
             "size": 212,
             "kind": "function",
             "name": "GetLookDirection__13CAITankObjectR8CVector3T1",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800de928",
-            "size": 124,
-            "kind": "function",
-            "name": "FindTank__13CAITankObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800de9a4",
-            "size": 4,
-            "kind": "function",
-            "name": "AsAITankObject__13CAITankObject",
             "evidence": "adjacent-compiler-markers"
           }
         ],

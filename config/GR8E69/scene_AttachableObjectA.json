@@ -1,0 +1,56 @@
+{
+  "id": "scene_AttachableObjectA",
+  "source": "src/scene/AttachableObjectA.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800ba308",
+      "size": 224
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetFreeAttachSlot__17CAttachableObject",
+      "address": "0x800ba308",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "GetFirstChildHandle__17CAttachableObject",
+      "address": "0x800ba340",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "GetNextChildHandle__17CAttachableObjecti",
+      "address": "0x800ba378",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "GetChild__17CAttachableObjecti",
+      "address": "0x800ba3c8",
+      "size": 32,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "attachobject.cpp",
+  "original_file_index": 873
+}

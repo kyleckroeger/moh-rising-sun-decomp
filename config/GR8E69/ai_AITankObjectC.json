@@ -1,0 +1,46 @@
+{
+  "id": "ai_AITankObjectC",
+  "source": "src/ai/AITankObjectC.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800de928",
+      "size": 128
+    }
+  ],
+  "functions": [
+    {
+      "name": "FindTank__13CAITankObject",
+      "address": "0x800de928",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "AsAITankObject__13CAITankObject",
+      "address": "0x800de9a4",
+      "size": 4,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetGlobalListStart__9CAIObject": "0x800d9e48"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AITankObject.cpp",
+  "original_file_index": 984
+}

@@ -5,37 +5,63 @@
 #define GAME_AI_DOODAD_H
 #include "AIBehavior.h"
 extern "C" void *DWI_alloc(const char *, int, int);
+#include "SceneNode.h"
+inline void *operator new(unsigned int size, const char *label) { return DWI_alloc(label, size, 1024); }
 struct BSObject;
 class CPlayerObject;
 class CBotObject;
 class CSoldierObject;
 class CTankObject;
-class CAIPlayerObject {
+class CAISoldierDoodad;
+// The player's AI object: table pointer at +0x72c through CAIObjectInterface. The
+// original base is CAIObject; its constructor and destructor are not modelled here.
+class CAIPlayerObject : public CAIObjectInterface {
 public:
+    CAIPlayerObject(void *);
+    virtual ~CAIPlayerObject();
     void Init();
+    void SetInitialStatus();
+    void UpdateStatus();
+    virtual void *AsAIPlayerObject();
+    virtual void PreUpdate();
+    virtual void Update(float);
+    virtual void UpdateFromGameObject(IMovingSceneNode *);
+    virtual int IsCrouching() const;
+    virtual int IsPlayer() const;
+    virtual void GetLookDirection(CVector3 &, CVector3 &);
+    virtual ISceneNode *GetSceneNode();
+    float health;        // +0x730
+    float maxHealth;     // +0x734
+    ISceneNode *sceneNode; // +0x738
+    float nextFieldOfViewCheck; // +0x73c
 };
 class CAIFilterPlayerObject : public CAIFilterObject {
 public:
     CAIFilterPlayerObject(BSObject *);
+    virtual ~CAIFilterPlayerObject();
     void SetOneTimeVars();
     void UpdateManualUpdateVars();
     CAIPlayerObject *GetAIObject() const;
-    static void *operator new(unsigned int size, const char *label) {
-        return DWI_alloc(label, size, 1024);
-    }
 };
+// The AI object is placement-constructed in the aligned storage that follows the filter.
 class CAIFilterSoldierObject : public CAIFilterObject {
 public:
     CAIFilterSoldierObject(BSObject *);
+    virtual ~CAIFilterSoldierObject();
     void *operator new(unsigned int, void *);
+    void operator delete(void *);
     void SetOneTimeVars();
     void UpdateManualUpdateVars();
+    virtual void SetMoveTarget(const CVector3 &);
+    CAISoldierDoodad *GetAIDoodad() const;
     CAISoldierObject *GetAIObject() const;
 };
 class CAIFilterTankObject : public CAIFilterObject {
 public:
     CAIFilterTankObject(BSObject *);
+    virtual ~CAIFilterTankObject();
     void *operator new(unsigned int, void *);
+    void operator delete(void *);
     void SetOneTimeVars();
     void UpdateManualUpdateVars();
     CAITankObject *GetAIObject() const;

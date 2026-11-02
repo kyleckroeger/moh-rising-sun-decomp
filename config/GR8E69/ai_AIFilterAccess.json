@@ -1,0 +1,80 @@
+{
+  "id": "ai_AIFilterAccess",
+  "source": "src/ai/AIFilterAccess.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d980c",
+      "size": 128
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetScriptObject__C15CAIFilterObject",
+      "address": "0x800d980c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetBSGO__C15CAIFilterObject",
+      "address": "0x800d9814",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SetMoveTarget__15CAIFilterObjectRC8CVector3",
+      "address": "0x800d981c",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "SetMoveTarget__22CAIFilterSoldierObjectRC8CVector3",
+      "address": "0x800d9820",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "GetAIDoodad__C22CAIFilterSoldierObject",
+      "address": "0x800d986c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetAIObject__C22CAIFilterSoldierObject",
+      "address": "0x800d9874",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetAIObject__C19CAIFilterTankObject",
+      "address": "0x800d987c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetAIObject__C21CAIFilterPlayerObject",
+      "address": "0x800d9884",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIFilter.cpp",
+  "original_file_index": 970
+}

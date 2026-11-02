@@ -255,5 +255,19 @@ tables; the player filter's allocation label names the original path
 before its table pointer at `+4`, and the derived classes keep their game object at
 `+8`. Soldier, bot and tank filters are placement-constructed inside the game object at
 `+0x1610`, `+8000` and `+0xbf0`. Medal of Honor: Frontline's versions of these files
-were the semantic reference. `CAIFilterObject` keeps its table pointer at `+0x10`; its
-members at `+8` and `+0xc` are not named here.
+were the semantic reference. `CAIFilterObject` keeps its table pointer at `+0x10`.
+
+Parts of `source/ai_core/Filter/AIFilter.cpp` match as four separate units around
+functions that are still original: the soldier and tank `SetOneTimeVars`, the soldier
+`UpdateManualUpdateVars`, the player filter constructor and `SetOneTimeVars`, and the
+tank `UpdateManualUpdateVars`. The trigger-field names are shared literals owned by the
+soldier function. `SetOneTimeVars` reads the trigger's `ReactionDelay`,
+`TrackingDelay`, `Accuracy`, `Team`, `ID` and `HitPoints` into the AI object; `+0x599`
+holds 5 for players. Field names are descriptive.
+
+`AIPlayerObject.cpp` and `AITankObject.cpp` methods match except the constructors and
+destructors, which need a modelled `CAIObject` base (its table pointer sits at `+0x72c`
+with fields after it), and tank `Update`, `ChooseTarget`, `GetSceneNode`,
+`GetLookDirection`, `SetInitialStatus` and `UpdateStatus` (the last two share a double
+literal aligned by earlier pool entries). Calls into `CAIObject` convert the pointer unadjusted; this reflects
+the scoped views, not the original inheritance declarations.

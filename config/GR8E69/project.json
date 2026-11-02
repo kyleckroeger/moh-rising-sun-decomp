@@ -1365,7 +1365,19 @@
     "sound_sfamplf.json",
     "ea_memrestore.json",
     "sound_sx87d16.json",
-    "sound_isnd64.json"
+    "sound_isnd64.json",
+    "ai_AIFilterHead.json",
+    "ai_AIFilterTank.json",
+    "ai_AIFilterPlayer.json",
+    "ai_AIFilterAccess.json",
+    "ai_AIPlayerObject.json",
+    "ai_AITankObjectA.json",
+    "ai_AITankObjectB.json",
+    "ai_AITankObjectC.json",
+    "scene_AttachableObjectA.json",
+    "scene_AttachableObjectB.json",
+    "scene_AttachableObjectC.json",
+    "ai_AITankObjectD.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

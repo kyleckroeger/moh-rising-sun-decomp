@@ -3,6 +3,7 @@
 #define GAME_SCENE_OBJECTS_H
 #include "SceneNode.h"
 #include "AITargeting.h"
+#include "CMatrix.h"
 struct BSObject;
 class CWeapon;
 // Original enum tag; its members are unknown.
@@ -53,6 +54,9 @@ class CStaticObject {
   public:
     void Draw(CDrawContext &);
     void BeginUpdate(float);
+    int IsVisible(CDrawContext &) const;
+    void AttemptUpdate(float);
+    void CommitUpdate();
     void StopMotionPlayback();
     void ModifyMotionData(MotionData *);
     void SetMovementPath(int, bool, bool, float, float, float, float, BSObject *, float, bool);
@@ -141,6 +145,7 @@ class CSoldierObject {
     unsigned char unknown_15ec[0x1c54 - 0x15ec];
     float reloadTimer;      // +0x1c54; reset to -1 by BIFunc_BotDoneReloading.
     void SetHeadTrans(bool);
+    CWeapon *GetCurrentWeapon() const;
     void SetUpperTranslation(const CVector3 &);
     void SetUpperXAngleDifference(float, float);
     void SetUpperZAngleDifference(float, float);
@@ -282,8 +287,36 @@ class CAnimObjectInterface : public IMovingSceneNode {
 // placeholders. Callers convert the scene-node pointers they already hold.
 class CPlayerObject;
 class CAnimObject;
+class CDrawContext;
 class CAttachableObject {
   public:
+    unsigned char unknown_0[0x4c];
+    // The static mesh record is reached through a pointer at +0x4c; +0x30 holds the
+    // attach-node count and +0x50 the first 80-byte node, with its id at +0x40.
+    struct AttachMesh {
+        struct Node {
+            CMatrix matrix;
+            int id;
+            unsigned char unknown_44[12];
+        };
+        unsigned char unknown_0[0x30];
+        int nodeCount;
+        unsigned char unknown_34[0x50 - 0x34];
+        Node nodes[1];
+    } **mesh;
+    unsigned char unknown_50[0x300 - 0x50];
+    ISceneNode *children[20]; // +0x300
+    int GetFreeAttachSlot();
+    void Draw(CDrawContext &);
+    int IsVisible(CDrawContext &) const;
+    void BeginUpdate(float);
+    void UpdateAI(float);
+    void CommitAI();
+    void AttemptUpdate(float);
+    void CommitUpdate();
+    int FindAttachNode(int, CMatrix *);
+    int GetObjectType() const;
+    void UpdateAttachedObjects();
     int AttachObject(CPlayerObject *, int, bool);
     int AttachObject(CAnimObject *, int);
     int AttachObject(CStaticObject *, int);
