@@ -1,0 +1,48 @@
+{
+  "id": "bullet_sprites_load",
+  "source": "src/bullets/BulletSpritesLoad.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801505b0",
+      "size": 484
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a91e0",
+      "size": 80
+    }
+  ],
+  "functions": [
+    {
+      "name": "LoadBulletGUISprites__14CBulletFactory",
+      "address": "0x801505b0",
+      "size": 484,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "_._7CSprite": "0x8005d1f4",
+    "__7CSpritePCcQ27CSprite15ESpriteLoadType": "0x8005d140",
+    "strcmp": "0x802669b4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bulletfactory.cpp",
+  "original_file_index": 1366
+}

@@ -130,3 +130,7 @@ fixes it. `CommitUpdate` itself is parked at
 line. Projectile sprite names sit at +0x27 of each 96-byte record and thrown ones at +0x27
 of each 104-byte record. `DeleteBulletGUISprites` is parked at
 `scratch/par/player/BulletSpritesDelete_parked.cpp`: only two loop registers are swapped.
+
+`CWeaponFactory::LoadWeaponGUISprites` builds `data\<name>` in a stack buffer and then
+loads the sprite from the bare name, so the built path goes unused in this build. The
+source keeps that as it stands; the icon field names at +0x38 and +0x58 are inferred.

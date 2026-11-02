@@ -1,0 +1,51 @@
+{
+  "id": "weapon_sprites_load",
+  "source": "src/weapons/WeaponSpritesLoad.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/stlport-runtime",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8014f738",
+      "size": 324
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a902c",
+      "size": 48
+    }
+  ],
+  "functions": [
+    {
+      "name": "LoadWeaponGUISprites__14CWeaponFactory",
+      "address": "0x8014f738",
+      "size": 324,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "_M_increment__Q24_STLt10_Rb_global1ZbPQ24_STL18_Rb_tree_node_base": "0x8027a1dc",
+    "__7CSpritePCcQ27CSprite15ESpriteLoadType": "0x8005d140",
+    "strcmp": "0x802669b4",
+    "strcpy": "0x80266a7c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "weaponfactory.cpp",
+  "original_file_index": 1364
+}

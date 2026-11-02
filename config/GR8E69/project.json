@@ -1661,7 +1661,10 @@
     "weapon_factory_props.json",
     "capsule_test_capsule.json",
     "capsule_test_line.json",
-    "fiber_test_line.json"
+    "fiber_test_line.json",
+    "bullet_sprites_load.json",
+    "weapon_sprites_load.json",
+    "weapon_sprites_delete.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

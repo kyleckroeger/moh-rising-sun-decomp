@@ -7,6 +7,7 @@
 // Member-only view of CWeapon for the reload built-ins. This does not establish
 // the complete allocation, base classes or virtual interface.
 // Observed fields of the weapon's property record; not a complete layout.
+class CSprite;
 struct WeaponProperties_struct {
     int crc;          // +0x00; passed to CreateDumpObject by DropMPDumpObject.
     short clipSize;   // +0x04; compared by BIFunc_PlayerWeaponInfo selector 4.
@@ -18,7 +19,9 @@ struct WeaponProperties_struct {
     short infoValue1; // +0x12; returned for EWeaponInfo 1; caps the reserve in AddAmo.
     unsigned char unknown_14[0x34 - 0x14];
     void *model;      // +0x34; copied to the static object by Init.
-    unsigned char unknown_38[0x60 - 0x38];
+    char iconName[0x58 - 0x38]; // +0x38; loaded by LoadWeaponGUISprites.
+    CSprite *icon;    // +0x58
+    unsigned char unknown_5c[0x60 - 0x5c];
     short soundType;  // +0x60; returned by GetWeaponSoundType.
     unsigned char unknown_62[0x68 - 0x62];
     short weaponType; // +0x68; returned by the weapon-type built-ins.
