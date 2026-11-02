@@ -1509,7 +1509,16 @@
     "sound_sststat.json",
     "sound_snddrv.json",
     "world_volume_head.json",
-    "world_volume_extents.json"
+    "world_volume_extents.json",
+    "sound_smixer_destroy.json",
+    "sound_smixer_stop.json",
+    "sound_smixhip.json",
+    "sound_smixlowp.json",
+    "sound_smixptch.json",
+    "sound_smixer_dry.json",
+    "sound_sdrv_frame.json",
+    "sound_sdrv_timemult.json",
+    "sound_snddrv_frame.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

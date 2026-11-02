@@ -1,0 +1,55 @@
+{
+  "id": "sound_sdrv_timemult",
+  "source": "src/sound/ea/sdrv_timemult.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8021dc90",
+      "size": 380
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bf840",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDPLATFORM_timemult__Fii",
+      "address": "0x8021dc90",
+      "size": 140,
+      "binding": 1
+    },
+    {
+      "name": "SNDPLATFORM_lowpass__Fii",
+      "address": "0x8021dd1c",
+      "size": 240,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "MIX_setlowpass": "0x802267c0",
+    "MIX_settimemult": "0x802269c8",
+    "sndgs": "0x804108fc"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "snddrv.c",
+  "original_file_index": 3064
+}

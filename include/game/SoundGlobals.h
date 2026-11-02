@@ -62,7 +62,8 @@ struct SNDGSVIEW {
     unsigned char critical;
     char pad177[2];
     unsigned char userdataclients;
-    char pad17a[4];
+    unsigned char voicequality;
+    char pad17b[3];
     short voicecount;
     char pad180[112];
     struct SNDVOICEVIEW* voices;

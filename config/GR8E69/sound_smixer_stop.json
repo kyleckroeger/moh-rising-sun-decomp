@@ -1,0 +1,43 @@
+{
+  "id": "sound_smixer_stop",
+  "source": "src/sound/ea/smixer_stop.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80226180",
+      "size": 228
+    }
+  ],
+  "functions": [
+    {
+      "name": "MIX_stop",
+      "address": "0x80226180",
+      "size": 228,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDMEMI_free__FPv": "0x8021b034",
+    "sndmix": "0x8041ec1c"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "smixer.c",
+  "original_file_index": 3186
+}

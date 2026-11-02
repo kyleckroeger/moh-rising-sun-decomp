@@ -1,0 +1,54 @@
+{
+  "id": "sound_smixlowp",
+  "source": "src/sound/ea/smixlowp.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802267c0",
+      "size": 332
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bfb48",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "MIX_setlowpass",
+      "address": "0x802267c0",
+      "size": 332,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SFILTER_add": "0x80227e6c",
+    "SFILTER_createLPFRC__FP10LPFRCSTATE": "0x80228554",
+    "SFILTER_modifyLPFRC__FP10LPFRCSTATEPi": "0x80228594",
+    "SFILTER_remove": "0x80227ed4",
+    "SNDMEMI_allocz__Fi": "0x8021ae30",
+    "SNDMEMI_free__FPv": "0x8021b034",
+    "sndgs": "0x804108fc",
+    "sndmix": "0x8041ec1c"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "smixlowp.c",
+  "original_file_index": 3194
+}

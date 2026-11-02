@@ -1,0 +1,49 @@
+{
+  "id": "sound_smixhip",
+  "source": "src/sound/ea/smixhip.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802266f0",
+      "size": 208
+    }
+  ],
+  "functions": [
+    {
+      "name": "MIX_sethighpass",
+      "address": "0x802266f0",
+      "size": 208,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SFILTER_add": "0x80227e6c",
+    "SFILTER_createHPFFIR8__FP8HPFSTATE": "0x80227d94",
+    "SFILTER_modifyHPFFIR8__FP8HPFSTATEPi": "0x80227de8",
+    "SFILTER_remove": "0x80227ed4",
+    "SNDMEMI_allocz__Fi": "0x8021ae30",
+    "SNDMEMI_free__FPv": "0x8021b034",
+    "sndgs": "0x804108fc",
+    "sndmix": "0x8041ec1c"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "smixhip.c",
+  "original_file_index": 3192
+}
