@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 752916,
+    "matching_code_bytes": 753296,
     "total_executable_code_bytes": 2492032,
-    "percent": 30.212934665365452,
+    "percent": 30.228183265704452,
     "categories": {
-      "reconstructed_game": 360700,
+      "reconstructed_game": 361080,
       "restored_library": 392216
     },
-    "matching_functions": 3101
+    "matching_functions": 3104
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -644,7 +644,7 @@
     "config/GR8E69/player_path_controls.json": "a5a585ed38c40cd299ab995320748f8e6777003f8cc885f5376c7e440dc2b3b7",
     "config/GR8E69/player_spline_position.json": "5b4aa80de0af602d8d0cde27f43b24848fd3a5ad92b1972f1900f8f256617888",
     "config/GR8E69/player_spline_tangent.json": "36eccc91b26a0f0558ee6f02c6e52398927527bf754f986e8d6db6404022d9b8",
-    "config/GR8E69/project.json": "41aee9b911a6b8b43f6ccdf5ab5701cc12d6e0ec5e41359ba62c6542eeb39595",
+    "config/GR8E69/project.json": "6f1edfde31c76763b7461570eb65fd23f0d15d87a33dc4ef398c0d9ced2e4160",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
     "config/GR8E69/projectile_exclusion_pair.json": "99afd0db09aa6eccc73fda17bb9ac1d24a6fe107780f8cf54fb758360cd20ef0",
@@ -1075,6 +1075,7 @@
     "config/GR8E69/script_validation_build.json": "f86d06f3557678d265e7072de1bb03bae84b12db5bf72c6e1f40f8af9e8f0c25",
     "config/GR8E69/sn-library-source.json": "606ef80cd17599d3b7c2833a01c483622529485e2455c15ac76c975ba20507dc",
     "config/GR8E69/sound_getters.json": "8383c1475babb703fa21c8d7d0af5c5f4d30a34856a855c40c8d91557df51c51",
+    "config/GR8E69/sound_sfsplit.json": "e0cf7bbdaaf71479c70dcf56932e5f20d43014e7b74d080f3c4cf796506e3341",
     "config/GR8E69/stl_80278d64.json": "04dc314cda8644a93aa797638a2f5a3e946a7bc954506e9bb2be731800b7646a",
     "config/GR8E69/stl_80278ea0.json": "784844808dbfcbe4c0b2a360cdd8a5cd6c1115260192d1fa5e52d4a7ae8c4ebf",
     "config/GR8E69/stl_80278eec.json": "e32e4cdf075141acad3a5566b3d28a9cdd34b5cdb5c67b8da65fb91eb6effd05",
@@ -2857,6 +2858,7 @@
     "src/sound/AmbientTrack.cpp": "806bc651699acac158151883251a45c29078a06e4fd195081a3d1d7443a56e52",
     "src/sound/AmbientTrackLocation.cpp": "933b8b3e8cf005a72f8374effa77b8128854c80a1ad55a34b724e440a079ee4e",
     "src/sound/SoundGetters.cpp": "e45a78805eeb00887fc9f92e3208fc185d1fce6f4b9bf8f763955e7161b1ecf3",
+    "src/sound/ea/sfsplit.cpp": "c646089a4b40c6be760e9f276a65a43aa37c75b467b1fcc77fcdea8095e653df",
     "src/stlport/CONTAINERS_NOTICE": "7c59267a930cdf87e1af44873547a8275a61b1329833c74ae5f821a5e507a22e",
     "src/stlport/COPYING.GCC": "dcc100d4161cc0b7177545ab6e47216f84857cda3843847c792a25289852dcaa",
     "src/stlport/containers/stl_80278d64.cpp": "e75a070f28a3c316c4e6064da2c7c710838c54dd1b2297c5d808bb5037c33590",
@@ -29742,6 +29744,24 @@
       "discarded_functions": [],
       "object_sha256": "cf1bdd0c15673b7eca15a8ba2a2831a5d6335d2c2097b6c8db95a5f840c02ffb",
       "linked_sha256": "48e349bdef3dc8c7726a68b315f880468a4a602896b18d0b77a52096fb2d39f1"
+    },
+    {
+      "id": "sound_sfsplit",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 380,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "158e9a621b6ed92fdd258f99f1468e8733914f43c0ead904fa028d5e7a9c408c",
+      "linked_sha256": "91d3195fdb11ed4865a591e8fe7adeef02ea2259cbc0fd09eb6a3d14243aec53"
     }
   ],
   "code_map": {
@@ -77590,38 +77610,6 @@
         "marker_interval": [
           "0x80228c68",
           "0x80228fa4"
-        ]
-      },
-      {
-        "name": "Unmatched files/sfsplit.c [inferred file group]",
-        "file_record": 651,
-        "file_name": "sfsplit.c",
-        "ranges": [
-          {
-            "address": "0x80228fa4",
-            "size": 256,
-            "kind": "function",
-            "name": "SFILTER_splitter__FPviT0T0i",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x802290a4",
-            "size": 44,
-            "kind": "function",
-            "name": "SFILTER_splitrestore__FPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x802290d0",
-            "size": 80,
-            "kind": "function",
-            "name": "SFILTER_createSPLIT__FP10SPLITSTATE",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x80228fa4",
-          "0x80229120"
         ]
       },
       {
