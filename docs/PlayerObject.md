@@ -47,3 +47,11 @@ the shared virtual declaration and the original returns nothing meaningful.
 - `GetCurrentBulletSprite`: the wielded-weapon selection loads into `r3` in the original
   and through `r9` in every tried source (12 instructions differ).
 - `Yaw` and `SetTMLocalToWorld`: see above.
+
+## Death sequence
+
+`StartDeathSequence` and `UpdateDeathSequence` are reconstructed from the disc; Frontline
+supplied the shape. The timer starts at 180 and counts down at +0xdc0. The multiplayer
+branch of `UpdateDeathSequence` reads a default-constructed matrix that nothing fills in
+this build: Frontline's `GetLookMatrix` call on the killer is gone from Rising Sun, so the
+original reads uninitialized stack here, and the source reproduces that as it stands.

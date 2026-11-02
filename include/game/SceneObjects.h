@@ -576,6 +576,7 @@ class CFader {
     static void Flash(CColor, float, float);
     static void FadeIn(CColor, float);
     static void FadeOut(CColor, float);
+    static CColor BLACK;
 };
 
 // Static motion-blur control.

@@ -1,0 +1,62 @@
+{
+  "id": "player_death",
+  "source": "src/player/PlayerDeath.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800b6498",
+      "size": 752
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029f36c",
+      "size": 48
+    }
+  ],
+  "functions": [
+    {
+      "name": "StartDeathSequence__13CPlayerObject",
+      "address": "0x800b6498",
+      "size": 272,
+      "binding": 1
+    },
+    {
+      "name": "UpdateDeathSequence__13CPlayerObjectf",
+      "address": "0x800b65a8",
+      "size": 480,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BeginCrouch__13CPlayerObject": "0x800b6bbc",
+    "FadeOut__6CFaderG6CColorf": "0x80068848",
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "SetDrawDelay__19CPlayerWeaponObjecti": "0x800c9cf8",
+    "Shoot__19CPlayerWeaponObject16EWeaponShootTypei": "0x800c8e3c",
+    "SoundSetMasterVolume__Fi": "0x8015695c",
+    "_6CFader.BLACK": "0x802fb200",
+    "_7CMatrix.s_ClassInit": "0x802c2100",
+    "atan2f": "0x8026fa5c",
+    "cosf": "0x80270840",
+    "g_bCoopMultiplayer": "0x802c1b2c",
+    "g_bInMultiplayerMode": "0x802c1b30"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}

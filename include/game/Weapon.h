@@ -8,7 +8,7 @@
 // the complete allocation, base classes or virtual interface.
 // Observed fields of the weapon's property record; not a complete layout.
 struct WeaponProperties_struct {
-    unsigned char unknown_0[4];
+    int crc;          // +0x00; passed to CreateDumpObject by DropMPDumpObject.
     short clipSize;   // +0x04; compared by BIFunc_PlayerWeaponInfo selector 4.
     short refireRate; // +0x06
     float bulletSpeedScale; // +0x08; scales the bullet weight in GetBulletSpeed.

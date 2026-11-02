@@ -7,6 +7,7 @@ class CInputManager {
   public:
     void SetBlockVibrations(bool, unsigned char);
     void SetFeedback(unsigned char, unsigned char, unsigned char, float, float);
+    int GetValue(unsigned char, unsigned short) const;
 };
 extern CInputManager g_inputMgr;
 

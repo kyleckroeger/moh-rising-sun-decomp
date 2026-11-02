@@ -102,7 +102,9 @@ class CPlayerWeaponObject {
   public:
     unsigned char unknown_0[0x38];
     WeaponAnimOwner animOwner; // +0x38; the animated-object subobject whose slot 2 returns the skeleton.
-    unsigned char unknown_3c[0x2e8 - 0x3c];
+    unsigned char unknown_3c[0x2e0 - 0x3c];
+    CPlayerWeaponObject *previous; // +0x2e0
+    CPlayerWeaponObject *next; // +0x2e4
     CPlayerObject *player; // +0x2e8
     CWeapon *weapon; // +0x2ec
     CSprite *aimOverlay;   // +0x2f0
@@ -117,7 +119,14 @@ class CPlayerWeaponObject {
     int state;       // +0x3b0; set to 3 by BIFunc_AddPlayerAmmo, stored by SetDrawDelay.
     char weaponName[0x3d2 - 0x3b4]; // +0x3b4; set by SetWeaponName (extent unknown).
     char name[0x3f0 - 0x3d2]; // +0x3d2; animation folder name (extent unknown).
-    unsigned int flags; // +0x3f0; bit 29 set by BIFunc_AddPlayerAmmo before DoneReloading.
+    union {
+        unsigned int flags; // +0x3f0; bit 29 set by BIFunc_AddPlayerAmmo before DoneReloading.
+        struct {
+            unsigned int flag31 : 1;
+            unsigned int visible : 1; // Bit 30; cleared when the player dies. Name inferred.
+            unsigned int enabled : 1; // Bit 29; SetWeaponEnable. Name inferred.
+        };
+    };
     // Original nested enum tag; member names are descriptive.
     enum Partition { PartitionDefault = 0, PartitionAlternate = 1 };
     static CPlayerWeaponObject *m_pPlayerWeaponFirst;
@@ -197,6 +206,7 @@ class CPlayerObject {
         float duration;    // 100000 means no automatic stop.
         float elapsed;
         float rate;        // Intensity change per update step; 0 when settled.
+        bool IsActive() const { return rate != 0.0f || current != 0.0f; } // Name inferred.
         CCameraShake();
         virtual ~CCameraShake();
         void SetShake(float, float, float, float);
@@ -223,14 +233,19 @@ class CPlayerObject {
         unsigned int unknown_low : 11;
     };
     struct PathFlagBits {
-        unsigned int unknown_31_25 : 7;
+        unsigned int unknown_31 : 1;
+        unsigned int peekAllowed : 1;   // Bit 30; names from Frontline.
+        unsigned int unknown_29_25 : 5;
         unsigned int binoculars : 1;    // Bit 24: BIFunc_UseBinoculars.
         unsigned int climbing : 1;      // Bit 23: SetClimbingState.
-        unsigned int unknown_22_17 : 6;
+        unsigned int unknown_22_21 : 2;
+        unsigned int peeking : 1;       // Bit 20.
+        unsigned int unknown_19_17 : 3;
         unsigned int climbCleared : 1;  // Bit 16: cleared when climbing starts.
         unsigned int meleeImmune : 1;   // Bit 15: BIFunc_CanMeleeTarget returns 0.
         unsigned int noShells : 1;      // Bit 14: suppresses BIFunc_PlayerEjectShell.
-        unsigned int unknown_13_10 : 4;
+        unsigned int peekStarted : 1;   // Bit 13.
+        unsigned int unknown_12_10 : 3;
         unsigned int mmgBlocked : 1;    // Bit 9: skips BIFunc_AttachPlayerToMountedMachineGun in multiplayer.
         unsigned int unknown_8_0 : 9;
     };
@@ -282,7 +297,9 @@ class CPlayerObject {
     unsigned char unknown_dac[4];
     CVector3 cameraOffset;   // +0xdb0; SetTMLocalToWorld builds the camera matrix from it.
     float field_dc0;         // +0xdc0
-    unsigned char unknown_dc4[0xe00 - 0xdc4];
+    unsigned char unknown_dc4[0xde0 - 0xdc4];
+    CVector3 peekBase;       // +0xde0; names from Frontline.
+    CVector3 peekRight;      // +0xdf0
     CAISplinePath *movePath, *lookPath; // +0xe00, +0xe04
     float pathParameter, pathRate; // +0xe08, +0xe0c
     unsigned char unknown_e10[0xe30 - 0xe10];
@@ -295,10 +312,11 @@ class CPlayerObject {
     CSprite *binocularOverlay; // +0xe48; set by BIFunc_UseBinoculars.
     float recoilYaw;         // +0xe4c; accumulated by FireMyWeapon.
     float recoilPitch;       // +0xe50
-    unsigned char unknown_e54[0xe60 - 0xe54];
+    float peekYaw;           // +0xe54; the yaw kept by PeekLeftRight.
+    unsigned char unknown_e58[0xe60 - 0xe58];
     unsigned char weaponMap[0x10]; // +0xe60; a map<int, CPlayerWeaponObject *> in the original.
     CPlayerWeaponObject *currentWeapon; // +0xe70
-    unsigned char unknown_e74[0xe78 - 0xe74];
+    CPlayerWeaponObject *weaponList; // +0xe74; the first of a ring linked through CPlayerWeaponObject::next.
     CWeapon *thrownWeapon; // +0xe78; checked by BIFunc_PlayerWeaponInfo when no weapon object matches.
     unsigned char unknown_e7c[0xe80 - 0xe7c];
     CStaticObject *mmgBase; // +0xe80; set by BIFunc_AttachHierBaseToMMG.
@@ -333,8 +351,12 @@ class CPlayerObject {
     char name[0x1c83 - 0x1c72]; // +0x1c72; returned by GetName (extent inferred).
     unsigned char team;      // +0x1c83
     unsigned char unknown_1c84[0x1c8c - 0x1c84];
-    float mountedHeading;    // +0x1c8c; GetHeading's answer while bit 29 of the flags is set.
-    unsigned char unknown_1c90[0x1ca0 - 0x1c90];
+    union {
+        float mountedHeading; // +0x1c8c; GetHeading's answer while bit 29 of the flags is set.
+        float deathYaw;       // The yaw when the death sequence started (same word).
+    };
+    float deathPitch;        // +0x1c90
+    unsigned char unknown_1c94[0x1ca0 - 0x1c94];
     TargetFind targetFind;   // +0x1ca0
     LookAtTarget lookAt; // +0x1cf0
     void GetTMLocalToWorld(CMatrix &) const;
@@ -377,6 +399,9 @@ class CPlayerObject {
     static void InitClass(CScreen *, CCamera *);
     void BeginStand();
     void BeginCrouch();
+    void UpdateDeathSequence(float);
+    void PeekLeftRight();
+    void ShakeCamera(float &, float &, float);
     void PeekUp(float);
     void DuckDown(float);
     float GetHeading();
