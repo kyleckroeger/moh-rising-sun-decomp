@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 870884,
+    "matching_code_bytes": 871308,
     "total_executable_code_bytes": 2492032,
-    "percent": 34.94674225692126,
+    "percent": 34.96375648466793,
     "categories": {
-      "reconstructed_game": 478668,
+      "reconstructed_game": 479092,
       "restored_library": 392216
     },
-    "matching_functions": 4187
+    "matching_functions": 4189
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -792,7 +792,7 @@
     "config/GR8E69/player_weapon_overlays.json": "172965adf4a7a763b5932a9744ff75bbf384ef314e25785dee9d7617044a8d5b",
     "config/GR8E69/player_weapon_selectable.json": "c7e3f09ad1510713bfd88ee468db0fcb4c6ef18b3b89bdb414b32ea863b25668",
     "config/GR8E69/player_weapon_shutdown.json": "f90a42342572d125630e7ac3647193288c13301a5309bcdc49cc350364bc2b60",
-    "config/GR8E69/project.json": "20a7ab7871be453000b35c207996d74b8daf928159193f036f5c419785383204",
+    "config/GR8E69/project.json": "59c02ec8e8c206d2b441f9db3e689681e50dba54a1f1e4aca1f0d71693ce252d",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -1614,9 +1614,11 @@
     "config/GR8E69/thrown_bullet_constrain.json": "058fe0cbc463bc1f2c1e7bae2f42cb1bf5ee2f05c0f9962f744f8a9e8720d4db",
     "config/GR8E69/thrown_bullet_destroy.json": "d1c0ca806ccb00ed6867057b337b43ace6c4518ab74bd04aeb61921a849addbb",
     "config/GR8E69/thrown_bullet_effect.json": "195e61b5eee3843a501c614ebf7d673df4abc41ad9ec82a8eff3e657ac1c653a",
+    "config/GR8E69/thrown_bullet_mark.json": "76ce0be1ea21179983ec260c032185400496d07d3e005ac401d754192c46fa38",
     "config/GR8E69/thrown_bullet_shutdown.json": "c3d43abb73c1422956b35ff77e75515ad8240947f756ab8cace0b64b629d9947",
     "config/GR8E69/thrown_bullet_tail.json": "6e908afa80b8de6275d1d0a34cab023d646c7021f785c26ced75aad24c73cb98",
     "config/GR8E69/thrown_bullet_transition.json": "e44fe702d77971389ceeda6f2de90bfaca152c0afe1ca8b831ed6497259af274",
+    "config/GR8E69/thrown_bullet_type.json": "78025135633965a7b8e20017d8b80eada1fb3bd403c823d136901b295ba87c91",
     "config/GR8E69/thrown_bullet_update.json": "065e302fbcad0a6c625e3d4f4ebe2b158f5886270a8e06bcaaaea25a4f664867",
     "config/GR8E69/thrown_bullet_velocity.json": "d8b34eb18acec2515aee0ebd1767e42a0737599d4142ec573ceb745b067e9fdf",
     "config/GR8E69/thrown_bullet_visible.json": "8eaab3ea578d5e2826ce936e1b251fda3116750dd151e0bd038daafb865d24d7",
@@ -1836,7 +1838,7 @@
     "include/game/BPD.h": "ec4a3aceb83f181db2c6adf8ac87137ede2cd6a0e643548159c73a827aadd19e",
     "include/game/BSGameObject.h": "0251918a776754b0d6b3d30b69e61b0d0c8f919721dbd147dbecf710b180a45a",
     "include/game/Box.h": "1ca75384ae72647eb0261d1eb602a5f57af613ac56916df8c83939e3161230af",
-    "include/game/Bullet.h": "8900b75ce39fe8e08cd7d0a3339d69478167df79fc72f7a35eb3aaed6613b3e8",
+    "include/game/Bullet.h": "2b6eb04fae62515dd778281448c822a1b566df60040abf4cc22202d83dd2f226",
     "include/game/CDBGeom.h": "52cc6684854d7d274db12c9e545f56e9add679d6133fc2f612c5d9c3f822d29b",
     "include/game/CDBObject.h": "e7e31e8514ea7b42e4d797289f1f68a55eb5cb92c56080f858fad4c09ace3823",
     "include/game/CDBTriangle.h": "b120a08def55e03c97792f0169f7d1b86cad8ae5a71592392f08ccfebab66975",
@@ -1848,7 +1850,7 @@
     "include/game/CSGVolume.h": "4e1b74888a25e46d47449afbc3081c2474e8104e59cfd1ee11c1e5e6b440cb23",
     "include/game/CVector3.h": "0c436c62dba8e3a7f44ca5e6eea6de50ff97e88e4e53545873d5ecca9d648aae",
     "include/game/Camera.h": "c044f907aca20f15af89cc5ba3657b51664d7f19a9b75c1d9b0fd185b7ee0900",
-    "include/game/CameraShake.h": "2b06bf4381e0c61d735f3ef948825c9ab7dee959799b6d399d585f3f68b69d7d",
+    "include/game/CameraShake.h": "62e2da7e0d2c78ddc1896b9ace84c9ec13ecac83c26019a8b6198493bd9a1276",
     "include/game/Capsule.h": "332dd06329ac7dc3ac5fc01793549a41e2defbe70298018accd2ce79c9e3ce3b",
     "include/game/CollisionVolume.h": "26ba5d9a9865a0185f0e87db21b13faf3214b7e213201e825181412f0f9a5b7c",
     "include/game/Compartment.h": "6151cb25cd8d2ffd0602c5f8395651b07373c5a89256d2b981795fe180e07c34",
@@ -2196,15 +2198,17 @@
     "src/bullets/ThrownBulletConstrain.cpp": "6f550d54346ae0c08763f7d877a22469f732603de26d8a43bc466605df843005",
     "src/bullets/ThrownBulletDestroy.cpp": "e5de8c2c5c794bca8f5f289ee97f2eac6c0aed5df771f8a9479a7dc2e75de95f",
     "src/bullets/ThrownBulletEffect.cpp": "4fa8ccdead657142a555a43be1175e9228bcc4d06c3c1a85ab5c7c9c13651308",
+    "src/bullets/ThrownBulletMisc.cpp": "a7a9a96311ab3f8c1bdc10cce16bfa3925a2d7d9cc25efb26b6714aecb9b45ba",
     "src/bullets/ThrownBulletShutdown.cpp": "1d03e3d10c32e963e9225767a4ea6af01d2fd214f575ee92118aff2cf7fb8d6a",
     "src/bullets/ThrownBulletTail.cpp": "bcbfded10fcbc2a7b1ae061d4c631b45ced03ac57989406e8ceb353ef027335d",
     "src/bullets/ThrownBulletTransition.cpp": "7ca6ac9464f2deab560e133cf2f735971e98b1eacdaf4d5c2574bdebdcc4acd4",
+    "src/bullets/ThrownBulletType.cpp": "0370985cd21445be222ffc92088a1bef61a85e036fdd36306f0de386a2bca1b0",
     "src/bullets/ThrownBulletUpdate.cpp": "603caee36c8760fb1cd5d38272eb133d3bcc9b545e3e7c47960d8be45315a286",
     "src/bullets/ThrownBulletVelocity.cpp": "e24d39aed5d6d46a24ff4ab5ac976903c85067ff9ded571c6f16a4f87bfae672",
     "src/bullets/ThrownBulletVisible.cpp": "ebdb6bd8da731794cc4b5e205167082fe32fcf6993de7e906eb2426f426f37b0",
     "src/bullets/ThrownCollide.cpp": "583930b608bc9cc214d0211b995d2917319500ccc5a7d66d7149f71217b77b41",
     "src/bullets/ThrownCollisionId.cpp": "c110604bd231f02c32524d8569fa009c16e50951be9c301d6e5a54059414f480",
-    "src/bullets/ThrownCollisionLight.cpp": "314d6cd1f9842eeb8830bc485928cc68f776a5bc2166290fb7760e9aa114ddd2",
+    "src/bullets/ThrownCollisionLight.cpp": "41ddb7a3e016dbb189da2b1eecbb8c85e27ab08d0b90e104d9f31a1d2bb77b0e",
     "src/bullets/ThrownSetters.cpp": "53bd8f3d5543f02d514a21a46422d909dc36d86b9f9058bef0b5e99b6b703dd4",
     "src/bullets/ThrownUpdate.cpp": "aff8c3d144bdda27777aaa768f13c97ff87c9afb4e194eb191ab3bd942839a4c",
     "src/camera/axes.cpp": "5f01c8b680d40e8507f99181b64e824f3fd5f74911193154807716a91603286a",
@@ -37033,6 +37037,42 @@
       "discarded_functions": [],
       "object_sha256": "9e0df226419e7f4c9aa370d424d0f1f3939976fa9ffcecc24f40f38c7d71b490",
       "linked_sha256": "cdd2d6fc4d3519966cd2c1d9b88556825436f68369aa0dfa1982196eb0e67b13"
+    },
+    {
+      "id": "thrown_bullet_mark",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 276,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "4c86fc21352e56e856b21bf49414d600fec67a1883d32cf3d6ea16512d76324c",
+      "linked_sha256": "368cfd70276ea79f66acfca6be07e7f50320f72ae72ca0b710c5f9e71df42b14"
+    },
+    {
+      "id": "thrown_bullet_type",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 148,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "0b64577468348617584a7399131e65a957e7f5fed3fe652dddc7ee0ddbf8c850",
+      "linked_sha256": "ad806c7f66221d1f40928404318caeb0e6e2ca56fb718ac31890273412de08d5"
     }
   ],
   "code_map": {
@@ -58796,13 +58836,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80151a9c",
-            "size": 276,
-            "kind": "function",
-            "name": "MarkForDestruction__13CThrownBulleti",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80151e18",
             "size": 396,
             "kind": "function",
@@ -58821,13 +58854,6 @@
             "size": 1696,
             "kind": "function",
             "name": "Draw__13CThrownBulletR12CDrawContext",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80153a84",
-            "size": 148,
-            "kind": "function",
-            "name": "GetScriptBulletType__C13CThrownBullet",
             "evidence": "adjacent-compiler-markers"
           }
         ],

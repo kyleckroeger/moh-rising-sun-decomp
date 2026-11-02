@@ -238,7 +238,8 @@ class CPlayerObject {
         unsigned int unknown_29_25 : 5;
         unsigned int binoculars : 1;    // Bit 24: BIFunc_UseBinoculars.
         unsigned int climbing : 1;      // Bit 23: SetClimbingState.
-        unsigned int unknown_22_21 : 2;
+        unsigned int crouched : 1;      // Bit 22; names from Frontline.
+        unsigned int crouching : 1;     // Bit 21.
         unsigned int peeking : 1;       // Bit 20.
         unsigned int unknown_19_17 : 3;
         unsigned int climbCleared : 1;  // Bit 16: cleared when climbing starts.
@@ -402,6 +403,7 @@ class CPlayerObject {
     void UpdateDeathSequence(float);
     void PeekLeftRight();
     void ShakeCamera(float &, float &, float);
+    void StartPlayerCrouched();
     void PeekUp(float);
     void DuckDown(float);
     float GetHeading();

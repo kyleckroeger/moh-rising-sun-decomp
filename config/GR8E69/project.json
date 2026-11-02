@@ -1642,7 +1642,9 @@
     "scene_TankObjectBullet.json",
     "scene_AnimObjFactoryReset.json",
     "scene_AnimObjFactoryRelease.json",
-    "ea_stream_kill.json"
+    "ea_stream_kill.json",
+    "thrown_bullet_mark.json",
+    "thrown_bullet_type.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

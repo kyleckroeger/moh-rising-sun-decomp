@@ -150,6 +150,8 @@ class CProjectileBullet : public CBullet {
 class CThrownBullet : public CBullet {
   public:
     void SomebodyCaughtYou();
+    void MarkForDestruction(int);
+    int GetScriptBulletType() const;
     void AttemptUpdate(float);
     void CreateExplosionEffect(const CMatrix &, bool);
     void CommitUpdate();
@@ -172,7 +174,7 @@ class CThrownBullet : public CBullet {
     unsigned char localVolume[0x1f0 - 0x1a0];       // +0x1a0
     unsigned char worldVolume[0x240 - 0x1f0];       // +0x1f0; a CVolFiber.
     WeakPtr<CLight, 8> light;                       // +0x240; the pointer is at +0x254.
-    unsigned char unknown_258[0x25c - 0x258];
+    IParticleSystem *trail;                         // +0x258
     unsigned int bit31 : 1;
     unsigned int bit30 : 1;
     unsigned int bit29 : 1;       // Bit 29; AttemptUpdate applies gravity while set.
