@@ -69,3 +69,21 @@ independent GR8E69 verification used Codex.
 ProDG 3.8.1 with `-O2 -G0 -fno-exceptions -fno-implicit-templates` reproduces both
 fragments, including their constants. The complete rebuilt analysis image is
 identical. Runtime behavior has not been tested.
+
+## Factory and later accessors
+
+`CBulletFactory` holds the projectile and thrown property tables (96 and 104 bytes per
+row, from the indexing) and three `CBulletFactoryHelper<T, P, E>` members, each 64 bytes:
+projectiles, projectiles with collision id 3, and thrown bullets. The helper instantiations
+are external here. `include/game/Bullet.h` names the row's CRC `+0x00`, weight `+0x04`,
+sprite `+0x48`. Names not in a symbol, such as `mountedProjectiles`, are inferred.
+
+`CProjectileBullet::OnCollision` sets `hitPending`, forwards to the other node's
+`HandleBulletCollision`, and takes the collision time only if the handler cleared the bit.
+`CThrownBullet::ApplyForceTo` scales the direction by the force, 1/512 and the row's
+weight, and mirrors the result to `+0x150`. `Explode` writes the inverse of bit 27 to bit
+28 of `+0x25c`. `IsVisible` calls `CVolFiber::TestVisibility` directly in both classes.
+
+`CThrownObject` in `include/game/Thrown.h` is a scoped view with `CStaticObject` as its
+base; `LimitSpeed` caps the speed at twice the world volume's radius while `+0x20c` is not
+-1. Its source lives in `src/weapons/`.

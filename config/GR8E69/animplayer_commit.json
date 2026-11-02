@@ -1,0 +1,40 @@
+{
+  "id": "animplayer_commit",
+  "source": "src/player/AnimPlayerCommit.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d5074",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "CommitUpdate__15CAnimatedPlayer",
+      "address": "0x800d5074",
+      "size": 32,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CommitUpdate__11CAnimObject": "0x800a4b64"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "animplayer.cpp",
+  "original_file_index": 942
+}

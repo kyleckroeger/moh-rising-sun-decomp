@@ -1,0 +1,73 @@
+{
+  "id": "player_weapon_ammo",
+  "source": "src/weapons/PlayerWeaponAmmo.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800c8e8c",
+      "size": 276
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a09dc",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "DoneReloading__19CPlayerWeaponObject",
+      "address": "0x800c8e8c",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "AddAmo__19CPlayerWeaponObjecti",
+      "address": "0x800c8eb0",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "SetAmmo__19CPlayerWeaponObjectUiUi",
+      "address": "0x800c8ed8",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "IsDrawEnabled__C19CPlayerWeaponObject",
+      "address": "0x800c8efc",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "GetBulletEmitterMatrix__19CPlayerWeaponObject",
+      "address": "0x800c8f28",
+      "size": 120,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddAmo__7CWeapons": "0x8014ba40",
+    "DoneReloading__7CWeapon": "0x8014bb1c",
+    "FindJoint__CQ34EALA9Character8SkeletonPCc": "0x800826a4",
+    "SetAmmo__7CWeaponUiUi": "0x8014bab4",
+    "g_pStaticObjectMuzzleFlashPlayer": "0x802c4d6c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player_weapon_object.cpp",
+  "original_file_index": 912
+}

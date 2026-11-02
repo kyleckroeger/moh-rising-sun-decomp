@@ -132,6 +132,7 @@ public:
 // the built-ins that pass their addresses; the gaps between them stay opaque.
 // This is not a complete allocation, inheritance model or virtual interface.
 class CAIFilterObject;
+class CPlayerObject;
 class CAITankObject;
 class IMovingSceneNode;
 class CAIObject {
@@ -178,7 +179,8 @@ public:
     unsigned char unknown6f0[0x730 - 0x6f0];
     float hitPoints;     // +0x730; the trigger's "HitPoints".
     float maxHitPoints;  // +0x734; set with hitPoints, meaning inferred.
-    unsigned char unknown738[0x770 - 0x738];
+    CPlayerObject *owner; // +0x738; set by CPlayerObject::InitAI.
+    unsigned char unknown73c[0x770 - 0x73c];
     struct SnapState {
         unsigned char unknown00[0x10];
         CVector3 position; // +0x10

@@ -4,7 +4,9 @@
 #include "SceneNode.h"
 #include "AITargeting.h"
 #include "CMatrix.h"
+#include "CVector3.h"
 struct BSObject;
+class IVolume;
 class CWeapon;
 // Original enum tag; its members are unknown.
 enum EBSEventEnum { BSEventUnknown = 0 };
@@ -52,6 +54,7 @@ struct MotionData;
 MotionData *InitMotionData(const char *);
 class CStaticObject {
   public:
+    void MarkForDestruction(int);
     void Draw(CDrawContext &);
     void BeginUpdate(float);
     int IsVisible(CDrawContext &) const;
@@ -74,9 +77,16 @@ class CStaticObject {
     void *model;          // +0x4c; drawing is skipped while it is null.
     unsigned char unknown_50[0x110 - 0x50];
     float pathScale;      // +0x110; BIFunc_MechSetPathFlag stores value / 100.
-    unsigned char unknown_114[0x140 - 0x114];
+    unsigned char unknown_114[0x134 - 0x114];
+    IVolume *worldVolume; // +0x134; freed by CThrownObject::CleanUp, queried for GetRadius.
+    unsigned char unknown_138[0x13c - 0x138];
+    int field_13c;        // +0x13c; cleared by CThrownObject::CleanUp.
     BSObject *script;     // +0x140
-    unsigned char unknown_144[0x214 - 0x144];
+    unsigned char unknown_144[0x190 - 0x144];
+    CVector3 velocity;    // +0x190; CThrownObject limits its speed.
+    unsigned char unknown_1a0[0x20c - 0x1a0];
+    int field_20c;        // +0x20c; CThrownObject::LimitSpeed does nothing while -1.
+    unsigned char unknown_210[0x214 - 0x210];
     int maxLightPriority; // +0x214
     Flags flags;          // +0x218
     unsigned int mechFlags; // +0x21c; bits set and cleared by BIFunc_MechSetFlag.
@@ -84,6 +94,9 @@ class CStaticObject {
 
 class CAnimObject {
   public:
+    void Init();
+    void CommitUpdate();
+    void UpdateAnimation(float);
     unsigned char unknown_0[0x234];
     int allowAnimationTranslation; // +0x234; set by BIFunc_SetAllowAnimationTranslation.
     unsigned char unknown_238[0x294 - 0x238];
@@ -95,6 +108,8 @@ class CAnimObject {
 
 class CSoldierObject {
   public:
+    void Draw(CDrawContext &);
+    void RemoveWeapons();
     // Original nested enum tag; members are descriptive.
     enum Partition { PartitionNone = 0, Partition1 = 1, Partition2 = 2, Partition3 = 3 };
     unsigned char unknown_0[0x120];

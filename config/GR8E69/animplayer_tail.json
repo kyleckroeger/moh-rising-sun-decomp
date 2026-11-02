@@ -1,0 +1,70 @@
+{
+  "id": "animplayer_tail",
+  "source": "src/player/AnimPlayerB.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d57d8",
+      "size": 60
+    }
+  ],
+  "functions": [
+    {
+      "name": "EnableAimModifier__15CAnimatedPlayerb",
+      "address": "0x800d57d8",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "LineAlmostCollided__C15CAnimatedPlayerP7CBullet",
+      "address": "0x800d57fc",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "UpdateAI__15CAnimatedPlayerf",
+      "address": "0x800d5800",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "AsAnimatedPlayerObject__15CAnimatedPlayer",
+      "address": "0x800d5804",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "AsAnimatedPlayerObject__C15CAnimatedPlayer",
+      "address": "0x800d5808",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "SetScript__15CAnimatedPlayerP8BSObject",
+      "address": "0x800d580c",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SetEnabled__Q34EALA9Character11AimModifierb": "0x8007d560"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "animplayer.cpp",
+  "original_file_index": 942
+}

@@ -1,0 +1,59 @@
+{
+  "id": "player_stance",
+  "source": "src/player/PlayerStance.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800b6b4c",
+      "size": 152
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029f39c",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "ResetGrenadeCount__13CPlayerObjecti",
+      "address": "0x800b6b4c",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "BeginStand__13CPlayerObject",
+      "address": "0x800b6b9c",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "BeginCrouch__13CPlayerObject",
+      "address": "0x800b6bbc",
+      "size": 40,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddAmo__7CWeapons": "0x8014ba40",
+    "DoneReloading__7CWeapon": "0x8014bb1c",
+    "Empty__7CWeapon": "0x8014bac0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}

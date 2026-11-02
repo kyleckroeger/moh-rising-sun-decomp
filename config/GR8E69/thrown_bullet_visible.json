@@ -1,0 +1,40 @@
+{
+  "id": "thrown_bullet_visible",
+  "source": "src/bullets/ThrownBulletVisible.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80153a60",
+      "size": 36
+    }
+  ],
+  "functions": [
+    {
+      "name": "IsVisible__C13CThrownBulletR12CDrawContext",
+      "address": "0x80153a60",
+      "size": 36,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "TestVisibility__C9CVolFiberR12CDrawContext": "0x80142004"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "thrownbullet.cpp",
+  "original_file_index": 1370
+}

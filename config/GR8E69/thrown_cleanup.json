@@ -1,0 +1,40 @@
+{
+  "id": "thrown_cleanup",
+  "source": "src/weapons/ThrownCleanUp.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800cf0e8",
+      "size": 144
+    }
+  ],
+  "functions": [
+    {
+      "name": "CleanUp__13CThrownObject",
+      "address": "0x800cf0e8",
+      "size": 144,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FreeSphereVolume__FPv": "0x8012b698"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "thrown_obj.cpp",
+  "original_file_index": 933
+}

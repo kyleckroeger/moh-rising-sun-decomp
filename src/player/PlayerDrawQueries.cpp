@@ -8,7 +8,7 @@ class CDrawContext {
 };
 void CPlayerObject::GetTMLocalToWorld(CMatrix &m) const { m = localToWorld; }
 int CPlayerObject::IsVisible(CDrawContext &context) const {
-    if (drawData) drawView->Submit(drawData, localToWorld);
+    if (localBox) worldBox->Submit(localBox, localToWorld);
     context.field_100 = 63;
     return 1;
 }

@@ -1,0 +1,40 @@
+{
+  "id": "player_invincible",
+  "source": "src/player/PlayerInvincible.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800ba068",
+      "size": 40
+    }
+  ],
+  "functions": [
+    {
+      "name": "IsInvincible__C13CPlayerObject",
+      "address": "0x800ba068",
+      "size": 40,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_cheats": "0x802f98e4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}

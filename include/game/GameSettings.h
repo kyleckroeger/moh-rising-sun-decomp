@@ -45,7 +45,8 @@ extern CGameSettings g_GameSettings;
 
 // Scoped view of the cheat state; only the replay-item unlock at +0x34 is named.
 struct CheatsView {
-    unsigned char unknown_0[0x34];
+    int invincible; // Tested by CPlayerObject::IsInvincible; name inferred.
+    unsigned char unknown_4[0x34 - 4];
     int allReplayItems;
 };
 extern CheatsView g_cheats;

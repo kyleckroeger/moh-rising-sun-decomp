@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 786600,
+    "matching_code_bytes": 794580,
     "total_executable_code_bytes": 2492032,
-    "percent": 31.56460270173096,
+    "percent": 31.884823308849967,
     "categories": {
-      "reconstructed_game": 394384,
+      "reconstructed_game": 402364,
       "restored_library": 392216
     },
-    "matching_functions": 3464
+    "matching_functions": 3595
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -171,6 +171,11 @@
     "config/GR8E69/anim_light.json": "9ffbd37f12a017d9299881ad77528bd7b94bc35a5e4970c59fb96ce107610dfb",
     "config/GR8E69/anim_light_pools.json": "54a79d91ca35237884367a52d2b3a0995cb51ab3ad5909b62585b24c2efe1205",
     "config/GR8E69/animated_volume_tests.json": "ee01f7c1a60d94bb85fa24f014e5809dc218f104d236dfaf5141b8dd9f876023",
+    "config/GR8E69/animplayer_commit.json": "bf4d6a5bcf9a669b101fc11ec6bb76a3ca8829402e6959b962f767d114a40e54",
+    "config/GR8E69/animplayer_draw.json": "77537d7c06a4ebad546de695d7f87afbf138069559997142700868f075f32b86",
+    "config/GR8E69/animplayer_init_ai.json": "c01608b4c1a750f7930065991e578a1dcc7a10d8f205494bab105bc69ec1f164",
+    "config/GR8E69/animplayer_slot.json": "aa2f11f37bf837141f99daa9e9dee9a0e08ee95a5f56cc4e0187bbf71ae1ebd3",
+    "config/GR8E69/animplayer_tail.json": "3366813c15f06af405df159af9b8f86049d3871539af85b8b8ab09ab7e1f1a15",
     "config/GR8E69/ar.json": "d8da1ec6cb2ac6c8f83ac2a4b995898cbb723d38d41c84a1d25a8d7a863b1908",
     "config/GR8E69/arq.json": "b79b6daec16d9806b4df0388a3f927cb06d48ce10fdb9fa35772dcecce291de7",
     "config/GR8E69/base64.json": "e88ebd5740a86b7f43b5b6812b6c4e81114d43dfae07a3e7429abb7c6a1bfec7",
@@ -191,6 +196,9 @@
     "config/GR8E69/bsgo_object_list.json": "b608b9988da9b3a53fe7c5d0ade83ca73ad65941e03c7ba78811400af64cab58",
     "config/GR8E69/bullet_base.json": "d8ad4b0b2ecf97d51aea4435cd18856d706c669ebf8a50c3091accaab524bc15",
     "config/GR8E69/bullet_defaults.json": "9afaed1670e7097d3e6ca0bdaeb6cb1f737a23e4bcead4d865fa070882d62d14",
+    "config/GR8E69/bullet_factory.json": "de158c916e5a842175be118f9f46ea9f3a7e5f6a58c283c3c0fc2037f86d2b6b",
+    "config/GR8E69/bullet_init.json": "bf9f537106149fe36a192a3325a02f4c23f021aa546ce2e1e8e0d575f49bd138",
+    "config/GR8E69/bullet_weight.json": "8e9dc78b617a4a1a87d96c2fad4d56ca589721c92b9db77836a23509d599c05c",
     "config/GR8E69/camera_axes.json": "28db4af00ca57a333100571e7bdfb74c71c39d8c090ffdd46b5b38e2fb2e4ea2",
     "config/GR8E69/camera_get_transform.json": "e718b74015c98fc9aa58fe5d2c6de29f40aac11d0ae8d291ca3afe1964bb03b4",
     "config/GR8E69/camera_projection.json": "40155878dbb04c59b1fe9f848d4f00f68d57b05e4d6d50c2213504b4358ab7be",
@@ -694,19 +702,46 @@
     "config/GR8E69/particle_terminate.json": "a86b85ccc5b1c04cc5f96524f3f4aee0e0605b48bdb06a2997185d7dad795f87",
     "config/GR8E69/particle_tm_local_to_world.json": "8857f22743da7deaf073d151e725db0f9a853e07de836188155d521797832301",
     "config/GR8E69/particle_velocity.json": "0e01a076771a973ea3070d16303239017aecb9fe38ed3185d094fff6f62a21b9",
+    "config/GR8E69/player_accessors.json": "78bc1825debdcabaf5a9ab0a70fe1641cc05093cd95668a51e9153c9d0478c40",
+    "config/GR8E69/player_actions.json": "f8b21144b77884abcbd744111a4da60e5e48c0be3ea095252c97245100ec9f61",
+    "config/GR8E69/player_ammo_counts.json": "a257652b0c26775b4bd139ee3e2ce70525ac451a83048ae2ac4ed4d307b1f9a6",
     "config/GR8E69/player_axes.json": "72bcde7af411244adbde7a5c16a0c663dd22a3b863f1f0852c2e1f5fc9e00fb2",
+    "config/GR8E69/player_bounds.json": "70dc7b62efee43f84fb6ccae0b2d01e7b9eceb0155e1d8d597901f62b51da7ec",
     "config/GR8E69/player_camera_shake.json": "e84e47bc3d83583f390ee37b3c7f560dc41557b2caf040164d989361cfe04d2c",
+    "config/GR8E69/player_crouching.json": "58465afc8d8d1004030e0c2a901eb037eb8e0571fc14890c67dbcf0272da6e8f",
+    "config/GR8E69/player_current_weapon.json": "dd1df7993ac72c755c280d17815911d57706938f980db23efa64392c3d42b4ff",
     "config/GR8E69/player_draw_queries.json": "21f29c5190aeec78c857f6a0da2e51d7a411eabb97b4743608c76e45f6b77c31",
+    "config/GR8E69/player_fov.json": "c6c391a0f4f6b1290f88a001188b92c896cbe58534f664f8b35c5fdf952f0eb5",
     "config/GR8E69/player_halt.json": "5f1704e7ceb0a9c0f5bcd2501cd12414c2b4f6874cfb838b7425324904953633",
+    "config/GR8E69/player_heading.json": "2daab909d013db0cf8f7e97c484675d203c2933b8b4e2a96704469c27d9f733e",
+    "config/GR8E69/player_hide_weapon.json": "9302e34cf09ff8b686e6d1025ec3c0d8b3c33f9f722924ada54470615a0c2e26",
+    "config/GR8E69/player_hitpoints.json": "a9f8dec5a34916c07c5f5e4910e85559f12ea45175268c20757529128a15b546",
+    "config/GR8E69/player_invincible.json": "2649803bf3a642fbc50bf3489b2a257ddb9f6ce7c2048ccc27ee07dcaf277b22",
+    "config/GR8E69/player_light_volumes.json": "2e4a0d277da90d9dc4f4298aef3cff91d794bc0a26d7070e7457a7625eda2004",
     "config/GR8E69/player_move.json": "bfef674e38cfb7a3b88021bc7f173228c8813e2db9d9a4548ba18f99ca91885e",
     "config/GR8E69/player_path_controls.json": "a5a585ed38c40cd299ab995320748f8e6777003f8cc885f5376c7e440dc2b3b7",
+    "config/GR8E69/player_peek.json": "9acf67c6525c8d9ac013bdc309a350721a02242e8ab4825f43c1e6759f3279a3",
+    "config/GR8E69/player_reset.json": "98ce522d1c6ddf672815d631a3bc7bb395f6296366620e6e5dba5d34329e3d0c",
+    "config/GR8E69/player_setup.json": "46923c6470403a7c41f0baf845aa9538af6eac1d1c7e8d588022d568c97c4dbf",
     "config/GR8E69/player_spline_position.json": "5b4aa80de0af602d8d0cde27f43b24848fd3a5ad92b1972f1900f8f256617888",
     "config/GR8E69/player_spline_tangent.json": "36eccc91b26a0f0558ee6f02c6e52398927527bf754f986e8d6db6404022d9b8",
-    "config/GR8E69/project.json": "227a30f66460b7d7c525be9520a8f0749f86ec1611f59a99c49dc9e12f204d7d",
+    "config/GR8E69/player_stance.json": "4dec96aa675f29f3e7aec20b1913ca307c1def2c48dca18339637759f674676e",
+    "config/GR8E69/player_update_ai.json": "debc86667f78158cfff65688b826cc949b75c6dadde210fbb141a380eb2422e9",
+    "config/GR8E69/player_weapon_ammo.json": "8f93213fbd88361a58a1a8eb8b444df1f5ef0bfbf80c472109998f7475936cf4",
+    "config/GR8E69/player_weapon_casts.json": "39e282131aafedd5e587028cbabb3c8599f4efd672d4ad645cf1bdd43b382809",
+    "config/GR8E69/player_weapon_names.json": "0d6115a428f3b386f43dd5c55cfb774497a7411b8de7339bef65016cf0cc7270",
+    "config/GR8E69/player_weapon_overlays.json": "172965adf4a7a763b5932a9744ff75bbf384ef314e25785dee9d7617044a8d5b",
+    "config/GR8E69/player_weapon_selectable.json": "c7e3f09ad1510713bfd88ee468db0fcb4c6ef18b3b89bdb414b32ea863b25668",
+    "config/GR8E69/player_weapon_shutdown.json": "f90a42342572d125630e7ac3647193288c13301a5309bcdc49cc350364bc2b60",
+    "config/GR8E69/project.json": "cf09d33e7f7e3710dba850914ca75f0baff15971c20c149f08a670600ba4420a",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
+    "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
     "config/GR8E69/projectile_exclusion_pair.json": "99afd0db09aa6eccc73fda17bb9ac1d24a6fe107780f8cf54fb758360cd20ef0",
+    "config/GR8E69/projectile_life.json": "ce2aa48e7c67e5faf83f8476c50617b6ae2c32849c0c9e5d55eed89cc74efb73",
     "config/GR8E69/projectile_set_damage.json": "0e47f354edcbd0b55242d939011e514111aa1f9b87d67194f2a9326b50dccd92",
+    "config/GR8E69/projectile_velocity.json": "aa97709a23b824bb14d79d2abd4113496a63adf01342a7fb953abc88b5c3d07d",
+    "config/GR8E69/projectile_visible.json": "99237c2dae9ba9a71b438102dc50bdf75221e485d2a845fae66053de9d8bcb74",
     "config/GR8E69/quaternion_from_euler.json": "c14a8e54acd40bafb64c605330a4512bf75fe0128faa82534f684094359457c1",
     "config/GR8E69/quaternion_get_matrix.json": "c63fc72dbed2a9d3c604effaada46ecb10afde2020eaadd56e4e7f8ccf114e82",
     "config/GR8E69/quaternion_normalize.json": "d78a8760467d1cff8299eecd55985b34b9908086e277c7814083cb4c65a64fc4",
@@ -1365,8 +1400,17 @@
     "config/GR8E69/sys_memory_operators.json": "593181060ad84668f2fdb91654d17a410ae9aaaceec9493f698e682fe683b96b",
     "config/GR8E69/target.json": "48fb9548419f5549d49ebba1794d3193398e58c37c0d15569e6ed1810d8adb8f",
     "config/GR8E69/thrown_accessors.json": "6b256ab3fbe4b068539a2e125fee54b0d77a57f5580e2c54d92df8ccbddfb6ba",
+    "config/GR8E69/thrown_bullet_bounds.json": "dc581b821c584b8e2741553d516bee3f52463f8d4666128867764bf382de9882",
+    "config/GR8E69/thrown_bullet_destroy.json": "d1c0ca806ccb00ed6867057b337b43ace6c4518ab74bd04aeb61921a849addbb",
+    "config/GR8E69/thrown_bullet_shutdown.json": "c3d43abb73c1422956b35ff77e75515ad8240947f756ab8cace0b64b629d9947",
+    "config/GR8E69/thrown_bullet_tail.json": "6e908afa80b8de6275d1d0a34cab023d646c7021f785c26ced75aad24c73cb98",
+    "config/GR8E69/thrown_bullet_transition.json": "e44fe702d77971389ceeda6f2de90bfaca152c0afe1ca8b831ed6497259af274",
+    "config/GR8E69/thrown_bullet_velocity.json": "d8b34eb18acec2515aee0ebd1767e42a0737599d4142ec573ceb745b067e9fdf",
+    "config/GR8E69/thrown_bullet_visible.json": "8eaab3ea578d5e2826ce936e1b251fda3116750dd151e0bd038daafb865d24d7",
+    "config/GR8E69/thrown_cleanup.json": "eb57fe3dfce629c3cb075ffed5f2b4b21f1775da89e033ffefa981a1d27a8f12",
     "config/GR8E69/thrown_collision_id.json": "04d24660bd9119a8a1e1f3ab63098d321f48395eaf774e07e78d90c255f397ef",
     "config/GR8E69/thrown_collision_light.json": "fdfd6732347b431c2ac9a3fd1a931f21fe5eb21c21321383bbbac597cb6dcd27",
+    "config/GR8E69/thrown_motion.json": "cb835c548c368c989af05ec994db7eace9f0655b7404e8409b27c4e929a58774",
     "config/GR8E69/thrown_setters.json": "02e1ce7099126fe919d35532bd92037630cdd0509363f68024c8d97863480977",
     "config/GR8E69/trigger_base_name.json": "720744b136f7bb7ac5c28e8625176cd5bcbf30d91d1d9b25b98d52aaf8a14bb9",
     "config/GR8E69/trigger_class_queries.json": "04f920434d465df34440d49bc465c126e67d17658789ebd75ad202457be41b17",
@@ -1401,6 +1445,8 @@
     "config/GR8E69/weak_8028a620.json": "689fffe222540a8684d4d54b01746da86de6d0da8ed467f7a5144d1282062cff",
     "config/GR8E69/weapon_accessors.json": "dff426d92aaa43c5e8740f63f85f38c364ea4dad756f0926cf4e80502b34d441",
     "config/GR8E69/weapon_ammo.json": "152b758a8ee15c36a9513544a50e3d93f58ec581f4427f675d63c17d1b2ccd84",
+    "config/GR8E69/weapon_factory_destroy.json": "79209dbc73a644e07394fb644af27756f95a215c1a497f4524b47a36af1b5f95",
+    "config/GR8E69/weapon_factory_reset.json": "3251413545d68060cacea13cc336c063cbe1b4acdd89201e409dda38b5a07341",
     "config/GR8E69/world_volume_tests.json": "406a71b9072ae025d14ae013dc10c33665fee6d4b9cae31e52289ac4df7b4135",
     "include/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "include/dolphin-ethernet/dolphin/eth/eth.h": "2bbc2d1a029b6bb132891614bf09c6784a631ec88517a01042b3b7e429a237a2",
@@ -1566,12 +1612,12 @@
     "include/game/AIFilterGlobal.h": "26368f15313dbd6390bee4c45582bcdfc36d8d433aaec5b0241541e52b9d677a",
     "include/game/AIMovement.h": "b9d723fd2bfeb66871a55f57dad2d3bfad33a56530d2826600e86d36598d6342",
     "include/game/AISplinePath.h": "f354973dd31e8d4c187ea57b5fb3fc59ec819aee412a39dab100424da55768d2",
-    "include/game/AITargeting.h": "83d777d4b4bc924bdcd62e2be9d2ec29a81c1d5b213e88e123b25fde8b2441ed",
+    "include/game/AITargeting.h": "69b7c9ba2ec91530e0ec3fe0a7df627e08d6cafeb05f66d1ec4301ca7554a0c5",
     "include/game/AnimatedVolume.h": "0f9fc422079babc5f7cbb7bfa1fd5e2dab2727ee36007e4aca27d29757455946",
     "include/game/BPD.h": "ec4a3aceb83f181db2c6adf8ac87137ede2cd6a0e643548159c73a827aadd19e",
     "include/game/BSGameObject.h": "0251918a776754b0d6b3d30b69e61b0d0c8f919721dbd147dbecf710b180a45a",
     "include/game/Box.h": "21a63c41b9569dc5b5d55d09029dffbdfbed66aa7d2927ecd97a10fa444ade7c",
-    "include/game/Bullet.h": "3303eada13421d59aaea6a4187fc16731e94960198642c22366d9fca1eb9cb01",
+    "include/game/Bullet.h": "03d9d9fd462e53df22711498a8b455c8312479b1bef05a77ff2bf8962d2929a4",
     "include/game/CDBGeom.h": "e324ca8b2d6ee8207bde0fe7864523dc18ccf5f93b7bd89d82139ca625107ec0",
     "include/game/CDBObject.h": "b2932d9508f142bc64131924796150413f1fd72c2d3f6874d78ecbe316344893",
     "include/game/CLine2.h": "e92fdbfd47ed264651ab9bbb90557a0461c3f6469267837079a5d514eb583f2c",
@@ -1582,7 +1628,7 @@
     "include/game/CSGVolume.h": "4e1b74888a25e46d47449afbc3081c2474e8104e59cfd1ee11c1e5e6b440cb23",
     "include/game/CVector3.h": "0c436c62dba8e3a7f44ca5e6eea6de50ff97e88e4e53545873d5ecca9d648aae",
     "include/game/Camera.h": "c044f907aca20f15af89cc5ba3657b51664d7f19a9b75c1d9b0fd185b7ee0900",
-    "include/game/CameraShake.h": "dc66ac361d11caa9e0fe90153a520012f5870c81a31f020552b278a061848204",
+    "include/game/CameraShake.h": "cb0635b55f17c32192bef99c7e5139bfd7ab3f395a33dc05b4cd2f044b3e268c",
     "include/game/Capsule.h": "c87b2fa51e0060ff9b72f3d9b1551a950a0ddf5e3819d4f263afe33cdc275b34",
     "include/game/DestructorQueue.h": "434ec17ba96007c8368db0dc62c9454d1650bc2c4d5615a13aad40969412bda8",
     "include/game/EAGLAnim/AnimAllocation.h": "8e2480f7003eca4c8a99d7bc1189b4f00ee9e31bacd9192d6b1bb0bfbc2b38f8",
@@ -1638,7 +1684,7 @@
     "include/game/FlexPropDatabase.h": "e3bb33faf5cff3877d051efc3335ff33c373c9d228a7afcb8b2c16f4ee97c767",
     "include/game/Fog.h": "30a37f01f3f665d1f9b3b0a5ef81ea098194595159c5ff794797541c6bf325c0",
     "include/game/Frustum.h": "517f595d8940b305a44b055a26e31588a43151816c24e27381a86ae90cfc6062",
-    "include/game/GameSettings.h": "c7165131b00f5b517b2950f9154e869382c8f8b27c05ea0c4e3febb6d7fb26eb",
+    "include/game/GameSettings.h": "0142b5eaff6f7df208853b110f4f49bd3de650f6273dddf73217fde5db0b9925",
     "include/game/IDestructible.h": "1427a08ba92fefc7fdc63c4ba8fc7aab3ec64bc8d2d1cfb7fe035346b685379f",
     "include/game/LegacyField.h": "95883bc2693fd14b7014d3f1e6a6e514ed5126af239699aa46d05f565bce5afe",
     "include/game/LegacyFieldInfo.h": "bb18c3680e0a67e1a775b5bc35547c3ceb0fa3a880ca2530dfeee4568a2ba52b",
@@ -1654,7 +1700,7 @@
     "include/game/ParticleRecipe.h": "04bba33839dcdae3132d1316e831585288f74ef842a5b01c6f6d6c37929ee61d",
     "include/game/PropertyData.h": "952ae5ac78dc17e43053a7b905a8e58499a1faa3c7d0721269329f639095b22a",
     "include/game/SceneNode.h": "1a6f0b01e88bda21ecb5b0ae8f4f3ad50df6422427adb3f5f52ea1c648a50fe4",
-    "include/game/SceneObjects.h": "e64f4af9947b817a60d3693022d0858a28e435c330de7c1b74bfabdb9e5f714b",
+    "include/game/SceneObjects.h": "327a0a36191dc8e360306acd7f37c46790048a775cf92ea71d08fa759681056b",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
     "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
     "include/game/ScriptMachine.h": "ca23b124331e6be9f43fc9e17237cbdb7851ff2941192e76b4aa3f8086db44bb",
@@ -1673,6 +1719,7 @@
     "include/game/TARExtension.h": "cf1f48aa0be63a29babdba7f53c58439facb94141d7e04d0d32fcc878bad2cb3",
     "include/game/TevStage.h": "47aaf3de5425dace0c30e2852896a9494f78ab4a4dcaad6be03d4aa4204d7466",
     "include/game/TevStageInlines.h": "03b19716c4d88b4eb2f3c74cdf2040ca0bb6c43e842d1eefc2c8bd148a278645",
+    "include/game/Thrown.h": "63eb682e6b59ea741b057fa2cb8aea622a9d6232e9ea8b36371fab17c85077ef",
     "include/game/TriggerObject.h": "73e70d537a184c92ad5f8f0e10b773f5efe3306ce871a82852a3c41398f7418b",
     "include/game/Volume.h": "b3bc1d3f5dc8d071dd5263e51bf6a517dc455b5c108d336966032b4ecdba8df1",
     "include/game/Weapon.h": "10352146eb3a849351ba2c0d18eec2b99fc283acdbf1e74bd37b6d65e71d2df3",
@@ -1894,11 +1941,25 @@
     "src/bpd/patch_records.cpp": "77bf36745231abe23bcb4d7f58e3cfd3ecca5ac1b35883c7169f3e813d12d670",
     "src/bullets/BulletBase.cpp": "de919c365b4a23044f2996c4fa3f3f082f72d669bd28abd699741a58af15b38a",
     "src/bullets/BulletDefaults.cpp": "4a4f7513a432cccdf3ef03fa86ea740e75f99397054dde976b3e6e3050c8a678",
+    "src/bullets/BulletFactory.cpp": "c245dc7f436befed84c9c9ee3f285585914ffc266e3fc537ef3c0d50f7b92fe5",
+    "src/bullets/BulletInit.cpp": "511e941347722371a72fcba542f0e0a53d835e8e9fb9371acc6b3ac5b95844fe",
+    "src/bullets/BulletWeight.cpp": "9c74f0697e36d9ef28480ed1e200d46083a53d3bc317f77498ea1ad0a0f27899",
     "src/bullets/ProjectileAccessors.cpp": "60d0d7620bf7c3723851e848fc6e154349f9edb6ad3aea9938ab416083d9b51a",
+    "src/bullets/ProjectileBounds.cpp": "7a041b1292e5f30f1a52199b04587762d202e4cdeff249dc1426e229a4c8064a",
     "src/bullets/ProjectileCollisionId.cpp": "e2099b55d071eaa139984b86c61c2178f76c457820b99e203450a3d7590f5e93",
     "src/bullets/ProjectileExclusionPair.cpp": "3d23978cd6f335ab1d307a83b977fbed2e333144d506ab9b0a770908d82438aa",
+    "src/bullets/ProjectileLife.cpp": "46e3d34c27242f69c733ee0df9233b5c9b8cff6eb4e7f6b90a52ce7566dc77fb",
     "src/bullets/ProjectileSetDamage.cpp": "b5f0ffb726f4b76751273f7129ac8221202e7852782d26ad8bf335c4ea8cbd0a",
+    "src/bullets/ProjectileVelocity.cpp": "5a9195d1f4e2d3e9086dab3ad3703ccee5853d34a71400f787f782e4a9cce7a7",
+    "src/bullets/ProjectileVisible.cpp": "1703f29a250afd99828aae409bd9b520223ebea1b1ba6fa075edb9ef5717917b",
     "src/bullets/ThrownAccessors.cpp": "75f15567da1e4cd07646edd4c9661481a1e24c371089b7de4ee4e29c48f683cf",
+    "src/bullets/ThrownBulletBounds.cpp": "2e2935a983aea60c104ba3d37bc5620f62c2314771911a2d62d8acaeef4af859",
+    "src/bullets/ThrownBulletDestroy.cpp": "e5de8c2c5c794bca8f5f289ee97f2eac6c0aed5df771f8a9479a7dc2e75de95f",
+    "src/bullets/ThrownBulletShutdown.cpp": "1d03e3d10c32e963e9225767a4ea6af01d2fd214f575ee92118aff2cf7fb8d6a",
+    "src/bullets/ThrownBulletTail.cpp": "bcbfded10fcbc2a7b1ae061d4c631b45ced03ac57989406e8ceb353ef027335d",
+    "src/bullets/ThrownBulletTransition.cpp": "7ca6ac9464f2deab560e133cf2f735971e98b1eacdaf4d5c2574bdebdcc4acd4",
+    "src/bullets/ThrownBulletVelocity.cpp": "e24d39aed5d6d46a24ff4ab5ac976903c85067ff9ded571c6f16a4f87bfae672",
+    "src/bullets/ThrownBulletVisible.cpp": "ebdb6bd8da731794cc4b5e205167082fe32fcf6993de7e906eb2426f426f37b0",
     "src/bullets/ThrownCollisionId.cpp": "c110604bd231f02c32524d8569fa009c16e50951be9c301d6e5a54059414f480",
     "src/bullets/ThrownCollisionLight.cpp": "773de461b874b6bb1b3a066e0ac5a8124c5df3a0ac5595a58ebb984375882d56",
     "src/bullets/ThrownSetters.cpp": "53bd8f3d5543f02d514a21a46422d909dc36d86b9f9058bef0b5e99b6b703dd4",
@@ -2578,13 +2639,35 @@
     "src/particles/ParticleTerminate.cpp": "914c27ab4643765eb14a64408684a0cccd29b62d947e8746829c4f5077447da3",
     "src/particles/ParticleVelocity.cpp": "ea620216e51ba6219de1500b4a0f6db91dee7a87a57af227afba091f8f8b910c",
     "src/pathfinding/PathFindingNetwork.cpp": "babf331f9fbf19dbc75fdda20d7a1011f6cf9f465f02285a89b6b572098e6b95",
+    "src/player/AnimPlayerA.cpp": "ac9bb376d7ac85733a1012066c00544be99c6730cfb6d1a18b50d138341f4f82",
+    "src/player/AnimPlayerB.cpp": "cfe6d8664aecc45591728644a5f138883d230b0093781308c8f8f96a04918ba1",
+    "src/player/AnimPlayerC.cpp": "45f89796ccbe0e35ffa633374d24cb94addc0f5e9c9abd250d4e796256ce0eff",
+    "src/player/AnimPlayerCommit.cpp": "3ce7160879f82532a578585892ae2d18cd56586017299f251b1744a626beb6bf",
+    "src/player/AnimPlayerInitAI.cpp": "3ccf64e36c5cf4cc81f215b7e8935f64aacd3dd8015404784880e289ae60e214",
     "src/player/CameraShakeEvaluate.cpp": "e95f72c0c199549a3107c5461b9e59473f3adbd524bd4921581d1603595eff1e",
     "src/player/CameraShakeInit.cpp": "c9ad4b5454c6f8413d1736380841195c7059fe9a6704e86141493afc382b2fe9",
+    "src/player/PlayerAccessors.cpp": "5d54934f6b0e4095111c85d579eebcfc1e1e11df47891c70e8678d8363592b0a",
+    "src/player/PlayerActions.cpp": "3fd44978113787e34f3c7fe59e4649d2b84e8f8ff85159fddc9dd17f7ac0b43f",
+    "src/player/PlayerAmmoCounts.cpp": "c2b881a01b860b99bbcb3a3e08d41fd208a524426093e86b414ff884781c8741",
     "src/player/PlayerAxes.cpp": "ab935de6f53f1944e03d689f1d70172f689691ed062aa8593437bcc8c68bfa5e",
+    "src/player/PlayerBounds.cpp": "709a78df73517398a553c2a2417de2fa457bd9d8b030505ded28e83bae738891",
     "src/player/PlayerCameraShake.cpp": "1e90a17ff0d32649637c1c582ae97fff2153c64a64ce706c2f3d674703fdd5ca",
-    "src/player/PlayerDrawQueries.cpp": "0d9fe4dfe825103853ae9231bd70ba5c6fe09de8b7e9b200f84f77e3ebb3257b",
+    "src/player/PlayerCrouching.cpp": "62177fae471a8194ddf157b43b8aa38fdc6001b73fc36c49602da22113eff2ad",
+    "src/player/PlayerCurrentWeapon.cpp": "eb865726a7431fb66c63c4ac016d67b70e692927490e94f6d00c5c2e547f3150",
+    "src/player/PlayerDrawQueries.cpp": "9b4551f2ec24787a53f6fdae4635a26b8855974d1f2fdb96b608945a1de27231",
+    "src/player/PlayerFov.cpp": "0f3c28caf296589bdfa9273b16213675a6ca4aef33fa7410c5a59786b33bbf17",
     "src/player/PlayerHalt.cpp": "56f665d9b7c570bc42f430867a13264f4d7e4c7cfefdae27b8c439b29af81011",
+    "src/player/PlayerHeading.cpp": "68fda1d3d2aa23c9df056e05cddd0ac67e3a816465a9ab603722711a29c291dc",
+    "src/player/PlayerHideWeapon.cpp": "3e30da0e5f897a9ba94963d0b91836a7f717288e8a4c216dfaeb24271a67b0a9",
+    "src/player/PlayerHitpoints.cpp": "1d2300ea2ad5df79ac7a71ef6d54aa0520a0ccc1ccf18d5f9f6464232e077f84",
+    "src/player/PlayerInvincible.cpp": "1b10beb6d82e55702cef051c47c065f66680ebf6d47fa04c5ec0caccbf2e8ac9",
+    "src/player/PlayerLightVolumes.cpp": "b177252dcb2353bdf55571e9aca0efb57e5f98c83c8431a0b8d526fb2063be1b",
     "src/player/PlayerMove.cpp": "399f77d94f7facf7b30a9385c45156225b29abd69c052f976fbf4d4cd93937fd",
+    "src/player/PlayerPeek.cpp": "f377a3d2ccd4c0d13b7a9b43b3adb961a142e226eec0fdc4831c38a091c71c63",
+    "src/player/PlayerReset.cpp": "f48f770c419891d8881abb511527e00a073fc30aae440043f26d9b083a685526",
+    "src/player/PlayerSetup.cpp": "01b15fb8e2db7f96791125729271d72d3dd08816f0e1578f95ea413ab071e1ee",
+    "src/player/PlayerStance.cpp": "e501eff7d897c36e0e4e2ea30a67c334ff4817bde96a99ebcb102b5cca4c68cb",
+    "src/player/PlayerUpdateAI.cpp": "31a76f5f0caf8fdfbaff231f579ca497e338b4b1075e6169ea940df8e95070c5",
     "src/player/path_controls.cpp": "2c0c17b029350994e9676cf7cefcfd8bfafce1a2c6ad97260f2de4bd2c94dc23",
     "src/player/spline_position.cpp": "07496d19c1bad0fdd00feef4600c82d86841c26da33d42d2f76bb6b7f314c7bd",
     "src/player/spline_tangent.cpp": "a20fee957b0178d23a1f239522e2367549122a08d43baee193c8761188d83879",
@@ -3272,8 +3355,18 @@
     "src/triggers/TriggerTransforms.cpp": "f8b57f4feb0820442db55ae6292803c0643f053bb06d6e63bdaf48b6a46c1421",
     "src/triggers/TriggerTypedFields.cpp": "9e5921a0f7a2b61330423d544c4090fc188546cc61c1c4cf7d08f8705a10e7c3",
     "src/triggers/mg_entries.h": "03bdf8ceaf0fe020483f29832a9ca98a9632d686dbc075985efa1f3e42aa6da4",
+    "src/weapons/PlayerWeaponAmmo.cpp": "ad5d369823171058b27260819154ba7a21124b38543274a35027a0cd3d2ec9e2",
+    "src/weapons/PlayerWeaponCasts.cpp": "4c8daf2aa4f793bb32fe5de55287990caf7992b382372f8973489e2e62d330b5",
+    "src/weapons/PlayerWeaponNames.cpp": "8207ab2bd69ef2c825f1b722c1db186e3799a5caa0f40d3d85deea53e37926fd",
+    "src/weapons/PlayerWeaponOverlays.cpp": "26423e2f03dd5398aed5a6bf1d2ef47baa53f77093708a4b88007c1df261a2d9",
+    "src/weapons/PlayerWeaponSelectable.cpp": "061e18f3451f5b0c79672ade03e661d8980aaaa99644b065cafa9ae9693636e1",
+    "src/weapons/PlayerWeaponShutdown.cpp": "cee32f8a8cfc8efb3f061b4546566b8c050d4ea485ecabda4d983015346f5c1f",
+    "src/weapons/ThrownCleanUp.cpp": "b49b4a4a35c1a052308b07dc8594fbd27c9a5762303918fe5119cafd26492333",
+    "src/weapons/ThrownMotion.cpp": "b06aa879f26f5fa7be63bcb7ffdc6c0f83bd850a6b0263449ed83a5ad8604d95",
     "src/weapons/WeaponAccessors.cpp": "e76e4dd25e13db388266ca0617cdc5b1b743db308480430a3f61450775c8f4ec",
     "src/weapons/WeaponAmmo.cpp": "f5d191daf71c30021c99f4842df3978ad0e5d33543a4e3a6d9808fdfac9ffec8",
+    "src/weapons/WeaponFactoryDestroy.cpp": "8a2d2063531792d31dab47336f2b5f6eba49de46b3b22c2a1e32f0e532fc603b",
+    "src/weapons/WeaponFactoryReset.cpp": "4a9c74a2aff946f1ca34c1144f559f61be3aae82c7f5265ffa1d0f29f5070687",
     "tools/audit.py": "42f9dd301ef76d300f0cad2f791ddbcac862418b6532e252fc38c02d1a222245",
     "tools/baseline.py": "9705053a0b99d969062f336b609a5ea4e0e5bc354d5619ecb9be6698530b314c",
     "tools/code_map.py": "1bb7545aef44792f54bfe21539f3e1ca2a61f14c57b8ddb81c342cf44a525901",
@@ -31621,6 +31714,834 @@
       "discarded_functions": [],
       "object_sha256": "1f5fc280e4fb1508d0845a0439489fa2d9ac64510094c3abb4b6e10af4115fd2",
       "linked_sha256": "c52ee1a82aba04e9a6c520c9a853b4176889cbdf8c7a7386be4db708f771ec26"
+    },
+    {
+      "id": "player_setup",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 248,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "06258b8c0f4763177cd06deb4c6c598e73ace44dbef84dff26c1aac040d871f9",
+      "linked_sha256": "6ba654ce6cfd4c549255427914d881957c79b4fe2da29a6d8a0dc600c2e3103d"
+    },
+    {
+      "id": "player_update_ai",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 56,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "7d6b1da1efd4bf3a838c62375921af5c19283d3558fa681ad534b70ebe1a83c6",
+      "linked_sha256": "2f0afa1418fdddd58d5605a9433b08394113b20f96b373fb57e761f30160aa0a"
+    },
+    {
+      "id": "player_bounds",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 136,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "10e3980cfdd131ef3443c699b63fc8406c82895059e29a299e0b94f5fdf01082",
+      "linked_sha256": "c319f1826cc995def07fc0d5986315446a0b427f2aaae21a80c7324f38b985ae"
+    },
+    {
+      "id": "player_reset",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 456,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "94b73c197998f2399351d05d0928682af4fb5bf3d285647b43dcbe188e65d7fa",
+      "linked_sha256": "67cc155a792a5663bb54ae49044f60e46aa1e3a2e84107b1040336bda33794b9"
+    },
+    {
+      "id": "player_current_weapon",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 284,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "d70c2b635e4b661b6b18b478fb71fcd867ae99b845732732989e836eb7bb90e7",
+      "linked_sha256": "de83df8ebeea4257522457ff522301310676faace2abd10f713e40aa82d695fd"
+    },
+    {
+      "id": "player_ammo_counts",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 112,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "a4805a956d5c398d92a20cd76cacc6b10c73545bafb9ff2ff398cd7d048cb060",
+      "linked_sha256": "488fe9c0e9d88dc69eb624f15de38c309f999f1539f603293d8f0221dd266db7"
+    },
+    {
+      "id": "player_actions",
+      "category": "reconstructed_game",
+      "functions": 8,
+      "code_bytes": 660,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "1459765dde6cf4d6acc6ee9ee71078cd43f77553e0183f1026755633ed0f1bd1",
+      "linked_sha256": "7487c53fc707a5ca08913529a72fc2b56863d33d9f217365bfd4be841f8abc49"
+    },
+    {
+      "id": "player_light_volumes",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 584,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "c9e447aad865c45279df673b62f5f2ac78652869b118e4bbd1081f43402426b3",
+      "linked_sha256": "0b897210809647be1c8c633ebff7f54622d3d99cf2de36e5a2ec6abbef0f6dd8"
+    },
+    {
+      "id": "player_fov",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 48,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "bc6e9637c9bc06044d4cc61b32fee95f58cc85fd90a4501f4ee1b344757c4a3e",
+      "linked_sha256": "16495ea634fc41ea1be50c08961b57eb687631fef1c92642ff87e091e3b26387"
+    },
+    {
+      "id": "player_stance",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 152,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "1c4a2837bf4175e31a9f26e39e5676824aa1eb7868811df5bf59cbc471b9a128",
+      "linked_sha256": "70d9217197d7b231ecde4add95710a5fbb012fb26309e6cafededeab7b75c97a"
+    },
+    {
+      "id": "player_peek",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 96,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "84c89276f4b4322cb138fd2635c0d66a9735119540155b3ddfd459e8b02349e3",
+      "linked_sha256": "ced4c4f4fc425cb67f0f30ef0ba2151026f726f73e398284bef118c2124105bc"
+    },
+    {
+      "id": "player_crouching",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 52,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e056de0aab01bf89cac191ec10c470fc4acf055a1bffc74e5b00ad6a5e513588",
+      "linked_sha256": "2793b9ff99eaea27f862a3b21d46538cf8dbef87297928c0e45fb78013f40248"
+    },
+    {
+      "id": "player_hide_weapon",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 160,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "0406786c65e47e68d6fac9c128ccb63a8f16859fb24c775848a16345e9ccb2a7",
+      "linked_sha256": "8f4dd34e095cc06dc2d0e7e720b37a10385fb9a253a91fabad319dc79b9edecb"
+    },
+    {
+      "id": "player_heading",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 28,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "80219187484d0a3485de51aecb508272fc9da4f3ec3d5c80bc1e383aa2271811",
+      "linked_sha256": "4e3f2c0a041dd2ce6aaa57f0bd67a1c4417c63a9ef141c4295dafb877d0b5b34"
+    },
+    {
+      "id": "player_invincible",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 40,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "687b0af9fe90c9be4337b37d70f2b27b9748c8e11ed57b78c1070054ddaba242",
+      "linked_sha256": "16000ad1547e9442a60f3b2505a28a6052b7aebcd05cba837f9803e88ca0c036"
+    },
+    {
+      "id": "player_accessors",
+      "category": "reconstructed_game",
+      "functions": 11,
+      "code_bytes": 176,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "6615ec42c9070d8ccc3419b0cbed1045770893eaf33d76598c5bbc866eed994d",
+      "linked_sha256": "3e7246ba24f66dda26c54b378d02ac766ae0faaf9913d496ea1f57b7064775d2"
+    },
+    {
+      "id": "animplayer_draw",
+      "category": "reconstructed_game",
+      "functions": 8,
+      "code_bytes": 316,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "b99451e26316476fcff79e8f5ab8cec0fc0eae7a8ce9c3d138b134bcd43ca516",
+      "linked_sha256": "09bfd970102640954d891a3d467b3d7e79c4fa41ab52113951f11097b3f66a1b"
+    },
+    {
+      "id": "animplayer_tail",
+      "category": "reconstructed_game",
+      "functions": 6,
+      "code_bytes": 60,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "da8f582cfd71644827a9a508df6231bd736d7f4a174bf43ef5b506cc5bc3eb13",
+      "linked_sha256": "9ff3bb4e2e84b0cd6853a30fd910da06d15a1823064802d22ff84c4039898051"
+    },
+    {
+      "id": "animplayer_slot",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 64,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "49f811037692e3fd6accbe7242e96486f8d774aa4d89f3bfd0e11afe218ccf98",
+      "linked_sha256": "1bbf09da7238a29e4940535ae5fcc4208762eea486dd4ba67015d2db1585e46f"
+    },
+    {
+      "id": "animplayer_commit",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 32,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "fcc354ac43bc34b1b6bb49e0aadada5ea7c3a6bf0197e33260ecab11f3ce74de",
+      "linked_sha256": "f6ddf205d03f0792dd1c72adfea36bdc27f3f3c4ed8d9da1898ab74de249343f"
+    },
+    {
+      "id": "animplayer_init_ai",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 4,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "fc03fbc807f3d66e15f3ee893cb185c508b37f9b0d8e132c0b4369fe559aa4f5",
+      "linked_sha256": "8eb30b8afcf651e32c5ac1641a006a6e9a06e9bbe6763cf0e2f79b951532357a"
+    },
+    {
+      "id": "player_weapon_overlays",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 136,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "267cb5aff1e1fd293f4fb81ad900d036db8405bf510fbfe90acdcd5934fb6a59",
+      "linked_sha256": "61704b0524fd6b289d967293e659c3211edbbce2c4ee4d244c8a1f7e29bf7239"
+    },
+    {
+      "id": "player_weapon_shutdown",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 80,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "aa3ab152c0095708b6529ae6efcd7fb9a29e1a349ee2e45d847d0ee996a23a52",
+      "linked_sha256": "fa9216f6f08e17c4e21f73cfd648465158c1e2b3e243f7f241efe5fe105d85ab"
+    },
+    {
+      "id": "player_weapon_ammo",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 276,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "871e197c78d6eade6a8f14633f05bc58eece690ae1a1ed1d0da1d67d6cb64d7a",
+      "linked_sha256": "f57eb7ddde04061e761fe81862e84fa5f051b901c987c682ee5dcd2ace78c195"
+    },
+    {
+      "id": "player_weapon_names",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 188,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "349f2dd52c68cfb5632e0a04820020988acad9f36ec7dfa1723b2d509231ae8c",
+      "linked_sha256": "85664663ea7b184d69bbb4269f6f2b150c6296cf2dea9224f80bee38ea29380d"
+    },
+    {
+      "id": "player_weapon_casts",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 48,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "52aeecf06a0d42f6be1ab7b6750f610e087b3c0beeb5af01202a6785ea0ea807",
+      "linked_sha256": "b1a12def3a9116ba7079cef871ba40b71a52506c3dbb2d86ebfa992d4e97c5a0"
+    },
+    {
+      "id": "weapon_factory_reset",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 92,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "0cdf54dc4970166b2d79d5c3c41f636ddc1efc0cbbca61e00d45eeaf08ae42c3",
+      "linked_sha256": "704c4fe29900df9904e79b8db9986b76b08f146a74717c61c99863833ed7d3f6"
+    },
+    {
+      "id": "weapon_factory_destroy",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 76,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "48b46e53caae8c4cb922bead9c7c5341bec17a7687b3e1292a03524a486921a3",
+      "linked_sha256": "ea1c59bc257ed1b3bc4396f5f6dbe0e9018218266348e6e31b6424a3b934aee7"
+    },
+    {
+      "id": "bullet_factory",
+      "category": "reconstructed_game",
+      "functions": 8,
+      "code_bytes": 744,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "a13f18a4479095544549eb5fba05449e63e350cd90448dfe990fbd2487bfab68",
+      "linked_sha256": "8a51cd75f30669c5eaab9ccbfdfa35632173bc261cbf0dda6c5e88452125a139"
+    },
+    {
+      "id": "bullet_weight",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 48,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "2de0ebef866878b0516c5b3a9f795d88dfacd2456ac1c32e5b73ed12d7e9f81a",
+      "linked_sha256": "ff9e463d041df2d7dd6c47aefb748cf7655fe343b5567fc308abd8dc39293eb6"
+    },
+    {
+      "id": "bullet_init",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 104,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "89603d2209f09bcd80aa33e8894e49d0eeba83a5d5b07539924e1233e973d6bc",
+      "linked_sha256": "80fdb9bf93285386a945bc657e0fd7afbb0f0b284d5203046c10881c9615e183"
+    },
+    {
+      "id": "thrown_bullet_tail",
+      "category": "reconstructed_game",
+      "functions": 9,
+      "code_bytes": 704,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "c3f20e567a576f82827082e6fbe13ed06b5f0ea0ec22271fa9f7c8059a7ed3a9",
+      "linked_sha256": "0f4ec9264d5408bb9ca4368bc4ae7e331de4ba5def2ea1fc3a505e43a6a21b98"
+    },
+    {
+      "id": "thrown_bullet_bounds",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 16,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "8d99a35e679162c4bcf3d204a94b34fde1d34045ba0f4e51cc05343c7ab66d0c",
+      "linked_sha256": "d41fd297a7f8033e2e64897bbe0abc65f931958bc06ac24ce1c0a2f90612d77b"
+    },
+    {
+      "id": "thrown_bullet_transition",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 8,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "88a667e91070132c0746bdeea6331ceacf00a6c17cd26d1fa1053093af6bb076",
+      "linked_sha256": "bbf23b045e04fd9caa05d20422bdb24be390397dc871df4297a60b3510f12883"
+    },
+    {
+      "id": "thrown_bullet_velocity",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 64,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "fb7cc1633f4a307dccc3bf01ebdcc58fd65f5a975b2be9a4a4e6a6b99c259f04",
+      "linked_sha256": "2fdd00ab47690865f707e09a0496e3e121989c040d1b70409e0f9236d0f7e07e"
+    },
+    {
+      "id": "thrown_bullet_visible",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 36,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "184604cf09954f1ad41769c59780823f43244fbf827c9e7ac560c5e2e056887c",
+      "linked_sha256": "d557991c1a37dd1966b37bd4006c681a7c471aeef18c75e820e5f9f2cad1e561"
+    },
+    {
+      "id": "thrown_bullet_shutdown",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 52,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "370727483338e518b29464d0888b5e72c52e46253e0ef571f53eb25383c330f3",
+      "linked_sha256": "5c6c3652f719545d0de630751b43d94e014fdec05f483ad57f681e03cb245db0"
+    },
+    {
+      "id": "thrown_bullet_destroy",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 44,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "d0cdcb0bb828818da9d3050789da5026df3abd494ebf7cce18d4c37ee8c8897b",
+      "linked_sha256": "c35c53bdcc70089b5b8020eb77a699f3cc8db151f5ec7bd59ab5e2ec4155bba9"
+    },
+    {
+      "id": "projectile_life",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 360,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "020a6ec1a97ab511b54d211a270519fbb0bf2ec2b96205f6794334313314b5d2",
+      "linked_sha256": "44b474c6b589747ffa63cfc6dc07a2d25d0acc13670eb03bd1bbb437f41ab355"
+    },
+    {
+      "id": "projectile_visible",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 36,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "251739f2f4c15dff64b69ac422e99f2e3fef7204b570c9c5379d33070db631e4",
+      "linked_sha256": "9cdd44243d406ac0ba1da29f5514be560447ff9fdbd893a49b14a738aa09cc03"
+    },
+    {
+      "id": "projectile_velocity",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 92,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "0abce2196ffcde234403ccffdb3b85f123c5921193b048bfc407d6a53e79d7d2",
+      "linked_sha256": "7c5f1d272d18243bc82fa55e5599d567e4fbf31a4a797e238768b9b7b9d0c8d7"
+    },
+    {
+      "id": "projectile_bounds",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 16,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "f90c1ef983a82b029c5ef88871615d064d357482bf9cbfea56f16f567b78911d",
+      "linked_sha256": "9af4edfed07b0ecc1c584a3f3f12d3d6c07bd19d7a353144d619f496044e8e9f"
+    },
+    {
+      "id": "thrown_motion",
+      "category": "reconstructed_game",
+      "functions": 11,
+      "code_bytes": 708,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "67225e6e36f55370ff55f1bec18edbeea1bb839f23a736be483a621c49f68cce",
+      "linked_sha256": "a02a6787f6c057b8e79ae65791701a6a5deb4db00767ceff18559b670ba7270a"
+    },
+    {
+      "id": "thrown_cleanup",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 144,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "7e54bf4a8ebd65bb8360f563a9cdc9c424a965e526bd6857f82a566e3c5a174a",
+      "linked_sha256": "109c7a8c6270376a5d4e9dfc6f58b7251df302c5854d2f15d454f7edbb162618"
+    },
+    {
+      "id": "player_hitpoints",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 84,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "00b586a7f5aaa304025f6f1126f1bdd277946b6a5ef0c48fbdae39f6ed2bc54b",
+      "linked_sha256": "e13298c527706cfe252ec3e3588285f372a78429d0262ae071a003260e7f5705"
+    },
+    {
+      "id": "player_weapon_selectable",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 60,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "6c8a8567fd65c03e8262cbc9620fca3f27f5cbb16de4e6fde1f2c9577b67dd1d",
+      "linked_sha256": "a537d4e6f4d98740bad241e58a8e3279f936b05f55c4aaa59db3b401d58674d1"
     }
   ],
   "code_map": {
@@ -44153,41 +45074,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800ac958",
-            "size": 112,
-            "kind": "function",
-            "name": "ReInit__13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ac9c8",
-            "size": 72,
-            "kind": "function",
-            "name": "InitAI__13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800aca10",
-            "size": 8,
-            "kind": "function",
-            "name": "GetAIObject__13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800aca18",
-            "size": 36,
-            "kind": "function",
-            "name": "CleanUp__13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800aca3c",
-            "size": 20,
-            "kind": "function",
-            "name": "InitClass__13CPlayerObjectP7CScreenP7CCamera",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800aca50",
             "size": 592,
             "kind": "function",
@@ -44199,20 +45085,6 @@
             "size": 1264,
             "kind": "function",
             "name": "Draw__13CPlayerObjectR12CDrawContext",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ad190",
-            "size": 68,
-            "kind": "function",
-            "name": "GetLocalBoundingVolume__C13CPlayerObjectQ210ISceneNode11EVolumeType",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ad1d4",
-            "size": 68,
-            "kind": "function",
-            "name": "GetWorldBoundingVolume__C13CPlayerObjectQ210ISceneNode11EVolumeType",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -44234,13 +45106,6 @@
             "size": 12736,
             "kind": "function",
             "name": "BeginUpdate__13CPlayerObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b0990",
-            "size": 56,
-            "kind": "function",
-            "name": "UpdateAI__13CPlayerObjectf",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -44321,13 +45186,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800b3690",
-            "size": 456,
-            "kind": "function",
-            "name": "Reset__13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800b3920",
             "size": 412,
             "kind": "function",
@@ -44349,52 +45207,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800b418c",
-            "size": 28,
-            "kind": "function",
-            "name": "GetCurrentPlayerWeapon__C13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b41a8",
-            "size": 48,
-            "kind": "function",
-            "name": "GetCurrentWeapon__C13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b41d8",
-            "size": 140,
-            "kind": "function",
-            "name": "GetWeaponByCRC__C13CPlayerObjecti",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b4264",
-            "size": 68,
-            "kind": "function",
-            "name": "FreeBinocularOverlay__13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800b42a8",
             "size": 76,
             "kind": "function",
             "name": "GetCurrentBulletSprite__C13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b42f4",
-            "size": 56,
-            "kind": "function",
-            "name": "GetCurrentWeaponClipAmoCount__C13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b432c",
-            "size": 56,
-            "kind": "function",
-            "name": "GetCurrentWeaponReserveAmoCount__C13CPlayerObject",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -44412,94 +45228,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800b4ca8",
-            "size": 156,
-            "kind": "function",
-            "name": "SetScript__13CPlayerObjectP8BSObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b4d44",
-            "size": 56,
-            "kind": "function",
-            "name": "TriggerScriptEvent__13CPlayerObjectiPvb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b4d7c",
-            "size": 32,
-            "kind": "function",
-            "name": "SetClimbingState__13CPlayerObjectb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b4d9c",
-            "size": 16,
-            "kind": "function",
-            "name": "SetFallingDamageState__13CPlayerObjectb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b4dac",
-            "size": 132,
-            "kind": "function",
-            "name": "FireMyWeapon__13CPlayerObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b4e30",
-            "size": 180,
-            "kind": "function",
-            "name": "SetZoom__13CPlayerObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b4ee4",
-            "size": 40,
-            "kind": "function",
-            "name": "GetNumGrenades__C13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b4f0c",
-            "size": 48,
-            "kind": "function",
-            "name": "ThrowGrenade__13CPlayerObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800b4f3c",
             "size": 4884,
             "kind": "function",
             "name": "SetUsingMountedMachineGun__13CPlayerObjectbP13CStaticObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b6250",
-            "size": 12,
-            "kind": "function",
-            "name": "SetDetonationTimeForPlayerTurret__13CPlayerObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b625c",
-            "size": 188,
-            "kind": "function",
-            "name": "EnterLightVolume__13CPlayerObjectP14BPDLightVolume",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b6318",
-            "size": 188,
-            "kind": "function",
-            "name": "ExitLightVolume__13CPlayerObjectP14BPDLightVolume",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b63d4",
-            "size": 196,
-            "kind": "function",
-            "name": "SetLightVolumeTransitionDuration__13CPlayerObjectf",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -44514,13 +45246,6 @@
             "size": 480,
             "kind": "function",
             "name": "UpdateDeathSequence__13CPlayerObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b6788",
-            "size": 48,
-            "kind": "function",
-            "name": "TransitionFOV__13CPlayerObjectff",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -44545,45 +45270,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800b6b4c",
-            "size": 80,
-            "kind": "function",
-            "name": "ResetGrenadeCount__13CPlayerObjecti",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b6b9c",
-            "size": 32,
-            "kind": "function",
-            "name": "BeginStand__13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b6bbc",
-            "size": 40,
-            "kind": "function",
-            "name": "BeginCrouch__13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800b6be4",
             "size": 808,
             "kind": "function",
             "name": "PeekLeftRight__13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b6f0c",
-            "size": 36,
-            "kind": "function",
-            "name": "PeekUp__13CPlayerObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b6f30",
-            "size": 60,
-            "kind": "function",
-            "name": "DuckDown__13CPlayerObjectf",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -44594,24 +45284,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800b7640",
-            "size": 52,
-            "kind": "function",
-            "name": "IsPlayerCrouching__C13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800b7674",
             "size": 1080,
             "kind": "function",
             "name": "EjectMountedMGShell__13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b7aac",
-            "size": 160,
-            "kind": "function",
-            "name": "SetHideWeapon__13CPlayerObjectb",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -44678,24 +45354,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800b9038",
-            "size": 84,
-            "kind": "function",
-            "name": "GetHitpoints__C13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800b908c",
             "size": 148,
             "kind": "function",
             "name": "SetMPShotLocation__13CPlayerObjectP32BS_STRUCT_HitByBulletInfo_struct",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b9120",
-            "size": 28,
-            "kind": "function",
-            "name": "GetHeading__13CPlayerObject",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -44748,95 +45410,11 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800ba068",
-            "size": 40,
-            "kind": "function",
-            "name": "IsInvincible__C13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800ba090",
             "size": 256,
             "kind": "function",
             "name": "__static_initialization_and_destruction_0",
             "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x800ba190",
-            "size": 8,
-            "kind": "function",
-            "name": "GetScriptObject__C13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ba198",
-            "size": 8,
-            "kind": "function",
-            "name": "GetAIDoodad__13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ba1a0",
-            "size": 8,
-            "kind": "function",
-            "name": "GetAIDoodad__C13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ba1a8",
-            "size": 4,
-            "kind": "function",
-            "name": "AsPlayerObject__13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ba1ac",
-            "size": 4,
-            "kind": "function",
-            "name": "AsPlayerObject__C13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ba1b0",
-            "size": 8,
-            "kind": "function",
-            "name": "SetCollisionId__13CPlayerObject7EClsnId",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ba1b8",
-            "size": 48,
-            "kind": "function",
-            "name": "GetWorldLinearVelocity__C13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ba1e8",
-            "size": 8,
-            "kind": "function",
-            "name": "GetName__13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ba1f0",
-            "size": 8,
-            "kind": "function",
-            "name": "GetPlayerIndex__13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ba1f8",
-            "size": 8,
-            "kind": "function",
-            "name": "GetTeam__13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ba200",
-            "size": 64,
-            "kind": "function",
-            "name": "Destroy__13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
           },
           {
             "address": "0x800ba240",
@@ -46260,31 +46838,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800c7d40",
-            "size": 68,
-            "kind": "function",
-            "name": "FreeAimOverlay__19CPlayerWeaponObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c7d84",
-            "size": 68,
-            "kind": "function",
-            "name": "FreeCrosshair__19CPlayerWeaponObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800c7dc8",
             "size": 240,
             "kind": "function",
             "name": "Init__19CPlayerWeaponObjectiiP13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c7eb8",
-            "size": 80,
-            "kind": "function",
-            "name": "Shutdown__19CPlayerWeaponObject",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -46337,13 +46894,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800c8e00",
-            "size": 60,
-            "kind": "function",
-            "name": "IsSelectable__C19CPlayerWeaponObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800c8e3c",
             "size": 80,
             "kind": "function",
@@ -46351,73 +46901,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800c8e8c",
-            "size": 36,
-            "kind": "function",
-            "name": "DoneReloading__19CPlayerWeaponObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c8eb0",
-            "size": 40,
-            "kind": "function",
-            "name": "AddAmo__19CPlayerWeaponObjecti",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c8ed8",
-            "size": 36,
-            "kind": "function",
-            "name": "SetAmmo__19CPlayerWeaponObjectUiUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c8efc",
-            "size": 44,
-            "kind": "function",
-            "name": "IsDrawEnabled__C19CPlayerWeaponObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c8f28",
-            "size": 120,
-            "kind": "function",
-            "name": "GetBulletEmitterMatrix__19CPlayerWeaponObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800c8fa0",
             "size": 1728,
             "kind": "function",
             "name": "CreateEjectedShell__19CPlayerWeaponObjecti",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c9660",
-            "size": 36,
-            "kind": "function",
-            "name": "SetAnimFolder__19CPlayerWeaponObjectPCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c9684",
-            "size": 52,
-            "kind": "function",
-            "name": "SetWeaponName__19CPlayerWeaponObjectPCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c96b8",
-            "size": 56,
-            "kind": "function",
-            "name": "SetMuzzleStatusForPlayer__Fbi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c96f0",
-            "size": 44,
-            "kind": "function",
-            "name": "Destroy__19CPlayerWeaponObject",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -46454,34 +46941,6 @@
             "kind": "function",
             "name": "__static_initialization_and_destruction_0",
             "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x800c9cd8",
-            "size": 32,
-            "kind": "function",
-            "name": "Init__19CPlayerWeaponObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c9cf8",
-            "size": 8,
-            "kind": "function",
-            "name": "SetDrawDelay__19CPlayerWeaponObjecti",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c9d00",
-            "size": 4,
-            "kind": "function",
-            "name": "AsPlayerWeaponObject__19CPlayerWeaponObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c9d04",
-            "size": 4,
-            "kind": "function",
-            "name": "AsPlayerWeaponObject__C19CPlayerWeaponObject",
-            "evidence": "adjacent-compiler-markers"
           },
           {
             "address": "0x800c9d08",
@@ -47029,13 +47488,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800cf0e8",
-            "size": 144,
-            "kind": "function",
-            "name": "CleanUp__13CThrownObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800cf178",
             "size": 1040,
             "kind": "function",
@@ -47089,83 +47541,6 @@
             "size": 236,
             "kind": "function",
             "name": "HandleBulletCollision__13CThrownObjectP7CBulletRC10CCollision",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d017c",
-            "size": 172,
-            "kind": "function",
-            "name": "SetVelocity__13CThrownObjectR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d0228",
-            "size": 160,
-            "kind": "function",
-            "name": "AddVelocity__13CThrownObjectR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d02c8",
-            "size": 180,
-            "kind": "function",
-            "name": "LimitSpeed__13CThrownObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d037c",
-            "size": 68,
-            "kind": "function",
-            "name": "MarkForDestruction__13CThrownObjecti",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d03c0",
-            "size": 48,
-            "kind": "function",
-            "name": "Destroy__13CThrownObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d03f0",
-            "size": 56,
-            "kind": "function",
-            "name": "IGO_Recycle__13CThrownObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d0428",
-            "size": 8,
-            "kind": "function",
-            "name": "GetObjectType__C13CThrownObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d0430",
-            "size": 4,
-            "kind": "function",
-            "name": "AsThrownObject__13CThrownObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d0434",
-            "size": 4,
-            "kind": "function",
-            "name": "TranslateFromScript__13CThrownObjectRC8CVector3T112EBSEventEnum",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d0438",
-            "size": 4,
-            "kind": "function",
-            "name": "RotateFromScript__13CThrownObjectRC8CVector3T112EBSEventEnum",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d043c",
-            "size": 4,
-            "kind": "function",
-            "name": "ScaleFromScript__13CThrownObjectff12EBSEventEnum",
             "evidence": "adjacent-compiler-markers"
           }
         ],
@@ -47669,73 +48044,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800d4628",
-            "size": 4,
-            "kind": "function",
-            "name": "InitAI__15CAnimatedPlayer",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800d462c",
             "size": 1000,
             "kind": "function",
             "name": "HandleBulletCollision__15CAnimatedPlayerP7CBulletRC10CCollision",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d4a14",
-            "size": 56,
-            "kind": "function",
-            "name": "Draw__15CAnimatedPlayerR12CDrawContext",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d4a4c",
-            "size": 32,
-            "kind": "function",
-            "name": "UpdateAnimation__15CAnimatedPlayerf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d4a6c",
-            "size": 8,
-            "kind": "function",
-            "name": "SetPlayer__15CAnimatedPlayerP13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d4a74",
-            "size": 12,
-            "kind": "function",
-            "name": "SetFlocoParams__15CAnimatedPlayerfi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d4a80",
-            "size": 20,
-            "kind": "function",
-            "name": "GetFlocoParams__15CAnimatedPlayerRfRi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d4a94",
-            "size": 68,
-            "kind": "function",
-            "name": "GetLocalBoundingVolume__C15CAnimatedPlayerQ210ISceneNode11EVolumeType",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d4ad8",
-            "size": 68,
-            "kind": "function",
-            "name": "GetWorldBoundingVolume__C15CAnimatedPlayerQ210ISceneNode11EVolumeType",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d4b1c",
-            "size": 52,
-            "kind": "function",
-            "name": "UpdateLocalBoundingVolume__15CAnimatedPlayerQ210ISceneNode11EVolumeTypeRC8CVector3T2",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -47753,13 +48065,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800d5074",
-            "size": 32,
-            "kind": "function",
-            "name": "CommitUpdate__15CAnimatedPlayer",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800d5094",
             "size": 564,
             "kind": "function",
@@ -47774,59 +48079,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800d5508",
-            "size": 64,
-            "kind": "function",
-            "name": "GetWeaponSlot__15CAnimatedPlayerP7CWeapon",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800d5548",
             "size": 656,
             "kind": "function",
             "name": "GetAimTarget__C15CAnimatedPlayerR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d57d8",
-            "size": 36,
-            "kind": "function",
-            "name": "EnableAimModifier__15CAnimatedPlayerb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d57fc",
-            "size": 4,
-            "kind": "function",
-            "name": "LineAlmostCollided__C15CAnimatedPlayerP7CBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d5800",
-            "size": 4,
-            "kind": "function",
-            "name": "UpdateAI__15CAnimatedPlayerf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d5804",
-            "size": 4,
-            "kind": "function",
-            "name": "AsAnimatedPlayerObject__15CAnimatedPlayer",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d5808",
-            "size": 4,
-            "kind": "function",
-            "name": "AsAnimatedPlayerObject__C15CAnimatedPlayer",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d580c",
-            "size": 8,
-            "kind": "function",
-            "name": "SetScript__15CAnimatedPlayerP8BSObject",
             "evidence": "adjacent-compiler-markers"
           }
         ],
@@ -56355,13 +56611,6 @@
             "kind": "function",
             "name": "_._7CBullet",
             "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014d0ac",
-            "size": 104,
-            "kind": "function",
-            "name": "Init__7CBulletb",
-            "evidence": "adjacent-compiler-markers"
           }
         ],
         "marker_interval": [
@@ -56417,34 +56666,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8014dc9c",
-            "size": 116,
-            "kind": "function",
-            "name": "MarkForDestruction__17CProjectileBulleti",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014dd10",
-            "size": 44,
-            "kind": "function",
-            "name": "Destroy__17CProjectileBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014dd3c",
-            "size": 48,
-            "kind": "function",
-            "name": "Shutdown__17CProjectileBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014dd6c",
-            "size": 152,
-            "kind": "function",
-            "name": "OnCollision__17CProjectileBulletRC10CCollision",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8014de04",
             "size": 276,
             "kind": "function",
@@ -56487,24 +56708,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8014eb48",
-            "size": 36,
-            "kind": "function",
-            "name": "IsVisible__C17CProjectileBulletR12CDrawContext",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8014eb6c",
             "size": 368,
             "kind": "function",
             "name": "GetScriptBulletType__C17CProjectileBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014ece0",
-            "size": 92,
-            "kind": "function",
-            "name": "GetVelocity__17CProjectileBulletR8CVector3",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -56513,20 +56720,6 @@
             "kind": "function",
             "name": "__static_initialization_and_destruction_0",
             "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x8014ed70",
-            "size": 8,
-            "kind": "function",
-            "name": "GetLocalBoundingVolume__C17CProjectileBulletQ210ISceneNode11EVolumeType",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014ed78",
-            "size": 8,
-            "kind": "function",
-            "name": "GetWorldBoundingVolume__C17CProjectileBulletQ210ISceneNode11EVolumeType",
-            "evidence": "adjacent-compiler-markers"
           },
           {
             "address": "0x8014eda8",
@@ -56561,13 +56754,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8014eed0",
-            "size": 92,
-            "kind": "function",
-            "name": "Reset__14CWeaponFactory",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8014ef2c",
             "size": 260,
             "kind": "function",
@@ -56593,13 +56779,6 @@
             "size": 444,
             "kind": "function",
             "name": "CreateWeaponByCRC__14CWeaponFactoryiP10ISceneNodei",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014f470",
-            "size": 76,
-            "kind": "function",
-            "name": "DestroyWeapon__14CWeaponFactoryP7CWeapon",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -56649,62 +56828,6 @@
         "file_name": "bulletfactory.cpp",
         "ranges": [
           {
-            "address": "0x8014ffec",
-            "size": 84,
-            "kind": "function",
-            "name": "__14CBulletFactory",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80150040",
-            "size": 96,
-            "kind": "function",
-            "name": "Init__14CBulletFactory",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801500a0",
-            "size": 64,
-            "kind": "function",
-            "name": "Reset__14CBulletFactory",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801500e0",
-            "size": 116,
-            "kind": "function",
-            "name": "Shutdown__14CBulletFactory",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80150154",
-            "size": 116,
-            "kind": "function",
-            "name": "CreateBullet__14CBulletFactoryibRC8CVector3T3f7EClsnIdfP10ISceneNode",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801501c8",
-            "size": 124,
-            "kind": "function",
-            "name": "DestroyBullet__14CBulletFactoryP7CBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80150244",
-            "size": 96,
-            "kind": "function",
-            "name": "GetBulletByCRC__14CBulletFactoryUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801502a4",
-            "size": 48,
-            "kind": "function",
-            "name": "GetBulletSprite__14CBulletFactorybi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x801502d4",
             "size": 68,
             "kind": "function",
@@ -56730,13 +56853,6 @@
             "size": 352,
             "kind": "function",
             "name": "DeleteBulletGUISprites__14CBulletFactory",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801508f4",
-            "size": 48,
-            "kind": "function",
-            "name": "GetBulletWeight__14CBulletFactorybi",
             "evidence": "adjacent-compiler-markers"
           }
         ],
@@ -56772,24 +56888,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80151a68",
-            "size": 52,
-            "kind": "function",
-            "name": "Shutdown__13CThrownBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80151a9c",
             "size": 276,
             "kind": "function",
             "name": "MarkForDestruction__13CThrownBulleti",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80151bb0",
-            "size": 44,
-            "kind": "function",
-            "name": "Destroy__13CThrownBullet",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -56849,108 +56951,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80153a60",
-            "size": 36,
-            "kind": "function",
-            "name": "IsVisible__C13CThrownBulletR12CDrawContext",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80153a84",
             "size": 148,
             "kind": "function",
             "name": "GetScriptBulletType__C13CThrownBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80153b18",
-            "size": 24,
-            "kind": "function",
-            "name": "Explode__13CThrownBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80153b30",
-            "size": 40,
-            "kind": "function",
-            "name": "SetDetonationTime__13CThrownBulletf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80153b58",
-            "size": 80,
-            "kind": "function",
-            "name": "HandleBulletCollision__13CThrownBulletP7CBulletRC10CCollision",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80153ba8",
-            "size": 44,
-            "kind": "function",
-            "name": "Halt__13CThrownBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80153bd4",
-            "size": 316,
-            "kind": "function",
-            "name": "ApplyForceTo__13CThrownBulletRC8CVector3f",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80153d10",
-            "size": 92,
-            "kind": "function",
-            "name": "SomebodyCaughtYou__13CThrownBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80153d6c",
-            "size": 36,
-            "kind": "function",
-            "name": "EnterLightVolume__13CThrownBulletP14BPDLightVolume",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80153d90",
-            "size": 36,
-            "kind": "function",
-            "name": "ExitLightVolume__13CThrownBulletP14BPDLightVolume",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80153db4",
-            "size": 36,
-            "kind": "function",
-            "name": "GetLightVolume__13CThrownBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80153e00",
-            "size": 8,
-            "kind": "function",
-            "name": "GetLocalBoundingVolume__C13CThrownBulletQ210ISceneNode11EVolumeType",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80153e08",
-            "size": 8,
-            "kind": "function",
-            "name": "GetWorldBoundingVolume__C13CThrownBulletQ210ISceneNode11EVolumeType",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80153e20",
-            "size": 8,
-            "kind": "function",
-            "name": "SetLightVolumeTransitionDuration__13CThrownBulletf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80153e40",
-            "size": 64,
-            "kind": "function",
-            "name": "GetVelocity__13CThrownBulletR8CVector3",
             "evidence": "adjacent-compiler-markers"
           }
         ],

@@ -1,0 +1,43 @@
+{
+  "id": "thrown_bullet_velocity",
+  "source": "src/bullets/ThrownBulletVelocity.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80153e40",
+      "size": 64
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a96c4",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetVelocity__13CThrownBulletR8CVector3",
+      "address": "0x80153e40",
+      "size": 64,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "thrownbullet.cpp",
+  "original_file_index": 1370
+}

@@ -5,6 +5,9 @@
 #include "CMatrix.h"
 #include "SceneNode.h"
 
+#include "ParticleRecipe.h"
+#include "LightVolumeManager.h"
+#include "Volume.h"
 class CCollision;
 class CProjectileBullet;
 class CThrownBullet;
@@ -19,9 +22,11 @@ class CBullet : public IMovingSceneNode {
   public:
     enum EXPLOSION_PARTICLE_TYPE { ExplosionParticleTypeUnknown = 0 };
 
-    unsigned char unknown_18[0x40 - 0x18];
+    int field_18, field_1c;  // Cleared by Init unless its argument is set.
+    unsigned char unknown_20[0x40 - 0x20];
     EClsnId collisionId;
-    unsigned char unknown_44[0x70 - 0x44];
+    int bulletKind; // +0x44; 1 for projectile bullets, tested by CBulletFactory::DestroyBullet.
+    unsigned char unknown_48[0x70 - 0x48];
     CMatrix localToWorld;
     float field_b0, field_b4;
 
@@ -52,18 +57,32 @@ class CBullet : public IMovingSceneNode {
 
 // Scoped record views: only the fields the accessors read are named.
 struct ProjectileBulletProperties_struct {
-    unsigned char unknown_00[76];
-    float damage;
+    unsigned int crc;      // +0x00; searched by CBulletFactory::GetBulletByCRC.
+    float weight;          // +0x04; returned by CBulletFactory::GetBulletWeight.
+    unsigned char unknown_08[72 - 8];
+    void *sprite;          // +0x48
+    float damage;          // +0x4c
+    unsigned char unknown_50[96 - 80]; // The factory indexes the table in 96-byte steps.
 };
 struct ThrownBulletProperties_struct {
-    unsigned char unknown_00[92];
-    float damage;
-    float blastRadius;
+    unsigned int crc;      // +0x00
+    float weight;          // +0x04
+    unsigned char unknown_08[72 - 8];
+    void *sprite;          // +0x48
+    unsigned char unknown_4c[92 - 76];
+    float damage;          // +0x5c
+    float blastRadius;     // +0x60
+    unsigned char unknown_64[2];
+    unsigned char timed;   // +0x66; SetDetonationTime is ignored unless set.
+    bool IsTimed() const { return timed != 0; }
+    unsigned char unknown_67; // The factory indexes the table in 104-byte steps.
 };
 
 // Bit 28 (counting from the least significant bit) of the word at +0x10c.
 struct ProjectileBulletFlags {
-    unsigned int unknown_31_29 : 3;
+    unsigned int hitPending : 1; // Bit 31: set around HandleBulletCollision; names descriptive.
+    unsigned int hit : 1;        // Bit 30
+    unsigned int shutDown : 1;   // Bit 29
     unsigned int drawForward : 1;
     unsigned int unknown_low : 28;
 };
@@ -74,9 +93,23 @@ class CProjectileBullet : public CBullet {
     ProjectileBulletProperties_struct *properties; // Stored by Init.
     unsigned char unknown_cc[0xe0 - 0xcc];
     ISceneNode *firedBy;                            // Returned by GetFiredBy.
-    unsigned char unknown_e4[0x10c - 0xe4];
+    unsigned char unknown_e4[0xfc - 0xe4];
+    float speed;                                    // +0xfc; scales the direction in GetVelocity.
+    unsigned char unknown_100[0x108 - 0x100];
+    float collisionTime;                            // +0x108; taken from a collision.
     ProjectileBulletFlags flags;
+    unsigned char localVolume[0x160 - 0x110];       // +0x110
+    unsigned char worldVolume[0x1b0 - 0x160];       // +0x160; a CVolFiber (extent inferred).
+    IParticleSystem *trail;                         // +0x1b0; deactivated by MarkForDestruction.
 
+    void MarkForDestruction(int);
+    void Destroy();
+    void Shutdown();
+    void OnCollision(const CCollision &);
+    int IsVisible(CDrawContext &) const;
+    void GetVelocity(CVector3 &);
+    int GetLocalBoundingVolume(ISceneNode::EVolumeType) const;
+    int GetWorldBoundingVolume(ISceneNode::EVolumeType) const;
     EClsnId GetCollisionId() const;
     float GetDamage() const;
     ISceneNode *GetFiredBy() const;
@@ -93,9 +126,23 @@ class CThrownBullet : public CBullet {
     ThrownBulletProperties_struct *properties;     // Stored by Init.
     unsigned char unknown_cc[0xe0 - 0xcc];
     ISceneNode *firedBy;                            // Returned by GetFiredBy.
-    unsigned char unknown_e4[0x254 - 0xe4];
+    unsigned char unknown_e4[0x120 - 0xe4];
+    CLightVolumeManager lightVolumes;               // +0x120
+    unsigned char unknown_13c[0x140 - 0x13c];
+    CVector3 velocity;                              // +0x140
+    CVector3 spin;                                  // +0x150; cleared with the velocity by Halt.
+    unsigned char unknown_160[0x1a0 - 0x160];
+    unsigned char localVolume[0x1f0 - 0x1a0];       // +0x1a0
+    unsigned char worldVolume[0x254 - 0x1f0];       // +0x1f0; a CVolFiber (extent inferred).
     CLight *attachedLight;
-    unsigned char unknown_258[0x264 - 0x258];
+    unsigned char unknown_258[0x25c - 0x258];
+    unsigned int unknown_31_29 : 3;
+    unsigned int explodeNow : 1;  // Bit 28; Explode sets it to the inverse of bit 27.
+    unsigned int caught : 1;      // Bit 27; set by SomebodyCaughtYou.
+    unsigned int unknown_26_25 : 2;
+    unsigned int noCatch : 1;     // Bit 24; SomebodyCaughtYou does nothing while set.
+    unsigned int unknown_low : 24;
+    unsigned char unknown_260[0x264 - 0x260];
     // Four observed slots at +0x264..+0x270, initialized by CThrownBullet::Init.
     // This remains a scoped view, not a complete object allocation.
     unsigned long explosionParticleSystems[4];
@@ -109,6 +156,20 @@ class CThrownBullet : public CBullet {
     void SetExplosionParticleSystem(unsigned long, EXPLOSION_PARTICLE_TYPE);
     CLight *GetAttachedLight() const;
     void SetDetonationTime(float);
+    void Explode();
+    void HandleBulletCollision(CBullet *, const CCollision &);
+    void Halt();
+    void ApplyForceTo(const CVector3 &, float);
+    void EnterLightVolume(BPDLightVolume *);
+    void ExitLightVolume(BPDLightVolume *);
+    BPDLightVolume *GetLightVolume();
+    int GetLocalBoundingVolume(ISceneNode::EVolumeType) const;
+    int GetWorldBoundingVolume(ISceneNode::EVolumeType) const;
+    void SetLightVolumeTransitionDuration(float);
+    void GetVelocity(CVector3 &);
+    int IsVisible(CDrawContext &) const;
+    void Destroy();
+    void Shutdown();
     virtual unsigned int IsCollisionEnabled() const;
 };
 

@@ -1,0 +1,60 @@
+{
+  "id": "player_current_weapon",
+  "source": "src/player/PlayerCurrentWeapon.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/stlport-runtime",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800b418c",
+      "size": 284
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetCurrentPlayerWeapon__C13CPlayerObject",
+      "address": "0x800b418c",
+      "size": 28,
+      "binding": 1
+    },
+    {
+      "name": "GetCurrentWeapon__C13CPlayerObject",
+      "address": "0x800b41a8",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "GetWeaponByCRC__C13CPlayerObjecti",
+      "address": "0x800b41d8",
+      "size": 140,
+      "binding": 1
+    },
+    {
+      "name": "FreeBinocularOverlay__13CPlayerObject",
+      "address": "0x800b4264",
+      "size": 68,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_._7CSprite": "0x8005d1f4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}

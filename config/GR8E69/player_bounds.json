@@ -1,0 +1,44 @@
+{
+  "id": "player_bounds",
+  "source": "src/player/PlayerBounds.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800ad190",
+      "size": 136
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetLocalBoundingVolume__C13CPlayerObjectQ210ISceneNode11EVolumeType",
+      "address": "0x800ad190",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "GetWorldBoundingVolume__C13CPlayerObjectQ210ISceneNode11EVolumeType",
+      "address": "0x800ad1d4",
+      "size": 68,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}

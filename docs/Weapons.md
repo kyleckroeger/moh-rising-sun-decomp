@@ -32,3 +32,15 @@ scoped views of the chain `RegisterWithAI` walks, and their names are not origin
 ## Not reconstructed
 
 `__7CWeapon`, `_._7CWeapon`, `Init`, `Update` and `FireBullet` remain original context.
+
+## Player weapon objects and factory
+
+`CPlayerWeaponObject` forwards ammunition calls to the `CWeapon` at `+0x2ec`. `IsSelectable`
+answers whether weapon class 7 has rounds left, otherwise bit 29 of the flags at `+0x3f0`.
+`GetBulletEmitterMatrix` finds the joint `jo_fire` through the skeleton returned by slot 2
+of the subobject at `+0x38` and uses `g_pStaticObjectMuzzleFlashPlayer`.
+`CWeaponFactory::DestroyWeapon` calls `Shutdown` and then `MarkForDestruction(1)`.
+`CWeaponFactory::Init` differs from its original by the scheduling of three argument
+registers around the factory's `Init` call and remains original context.
+`CPlayerWeaponObject::Shoot` matches but stays context: its double and float literals start
+an 8-byte aligned `.rodata` section that ngcas pads past the string the next function owns.

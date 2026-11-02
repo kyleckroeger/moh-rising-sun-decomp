@@ -1,0 +1,97 @@
+{
+  "id": "bullet_factory",
+  "source": "src/bullets/BulletFactory.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8014ffec",
+      "size": 744
+    }
+  ],
+  "functions": [
+    {
+      "name": "__14CBulletFactory",
+      "address": "0x8014ffec",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "Init__14CBulletFactory",
+      "address": "0x80150040",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "Reset__14CBulletFactory",
+      "address": "0x801500a0",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "Shutdown__14CBulletFactory",
+      "address": "0x801500e0",
+      "size": 116,
+      "binding": 1
+    },
+    {
+      "name": "CreateBullet__14CBulletFactoryibRC8CVector3T3f7EClsnIdfP10ISceneNode",
+      "address": "0x80150154",
+      "size": 116,
+      "binding": 1
+    },
+    {
+      "name": "DestroyBullet__14CBulletFactoryP7CBullet",
+      "address": "0x801501c8",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "GetBulletByCRC__14CBulletFactoryUi",
+      "address": "0x80150244",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "GetBulletSprite__14CBulletFactorybi",
+      "address": "0x801502a4",
+      "size": 48,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CreateBullet__t20CBulletFactoryHelper3Z13CThrownBulletZ29ThrownBulletProperties_structZ18EThrownBulletTypes18EThrownBulletTypesRC8CVector3T2f7EClsnIdfP10ISceneNode": "0x8028b5f0",
+    "CreateBullet__t20CBulletFactoryHelper3Z17CProjectileBulletZ33ProjectileBulletProperties_structZ22EProjectileBulletTypes22EProjectileBulletTypesRC8CVector3T2f7EClsnIdfP10ISceneNode": "0x8028b418",
+    "DeleteBulletGUISprites__14CBulletFactory": "0x80150794",
+    "DestroyBullet__t20CBulletFactoryHelper3Z13CThrownBulletZ29ThrownBulletProperties_structZ18EThrownBulletTypesP13CThrownBullet": "0x8028b838",
+    "DestroyBullet__t20CBulletFactoryHelper3Z17CProjectileBulletZ33ProjectileBulletProperties_structZ22EProjectileBulletTypesP17CProjectileBullet": "0x8028b7c8",
+    "Init__t20CBulletFactoryHelper3Z13CThrownBulletZ29ThrownBulletProperties_structZ18EThrownBulletTypesP29ThrownBulletProperties_struct": "0x8028b2f4",
+    "Init__t20CBulletFactoryHelper3Z17CProjectileBulletZ33ProjectileBulletProperties_structZ22EProjectileBulletTypesP33ProjectileBulletProperties_struct": "0x8028b2a0",
+    "LoadBulletGUISprites__14CBulletFactory": "0x801505b0",
+    "LoadBulletParameters__14CBulletFactory": "0x80150318",
+    "Reset__t20CBulletFactoryHelper3Z13CThrownBulletZ29ThrownBulletProperties_structZ18EThrownBulletTypes": "0x8028b374",
+    "Reset__t20CBulletFactoryHelper3Z17CProjectileBulletZ33ProjectileBulletProperties_structZ22EProjectileBulletTypes": "0x8028b348",
+    "Shutdown__t20CBulletFactoryHelper3Z13CThrownBulletZ29ThrownBulletProperties_structZ18EThrownBulletTypes": "0x8028b3dc",
+    "Shutdown__t20CBulletFactoryHelper3Z17CProjectileBulletZ33ProjectileBulletProperties_structZ22EProjectileBulletTypes": "0x8028b3a0",
+    "__builtin_vec_delete": "0x801a89b0",
+    "__t20CBulletFactoryHelper3Z13CThrownBulletZ29ThrownBulletProperties_structZ18EThrownBulletTypes": "0x8028b25c",
+    "__t20CBulletFactoryHelper3Z17CProjectileBulletZ33ProjectileBulletProperties_structZ22EProjectileBulletTypes": "0x8028b218"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bulletfactory.cpp",
+  "original_file_index": 1366
+}

@@ -1,0 +1,41 @@
+{
+  "id": "thrown_bullet_shutdown",
+  "source": "src/bullets/ThrownBulletShutdown.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80151a68",
+      "size": 52
+    }
+  ],
+  "functions": [
+    {
+      "name": "Shutdown__13CThrownBullet",
+      "address": "0x80151a68",
+      "size": 52,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Reset__19CLightVolumeManager": "0x801317c8",
+    "Shutdown__7CBullet": "0x8014d114"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "thrownbullet.cpp",
+  "original_file_index": 1370
+}

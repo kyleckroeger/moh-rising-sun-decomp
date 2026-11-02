@@ -1,0 +1,96 @@
+{
+  "id": "thrown_bullet_tail",
+  "source": "src/bullets/ThrownBulletTail.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80153b18",
+      "size": 704
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a96a4",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "Explode__13CThrownBullet",
+      "address": "0x80153b18",
+      "size": 24,
+      "binding": 1
+    },
+    {
+      "name": "SetDetonationTime__13CThrownBulletf",
+      "address": "0x80153b30",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "HandleBulletCollision__13CThrownBulletP7CBulletRC10CCollision",
+      "address": "0x80153b58",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "Halt__13CThrownBullet",
+      "address": "0x80153ba8",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "ApplyForceTo__13CThrownBulletRC8CVector3f",
+      "address": "0x80153bd4",
+      "size": 316,
+      "binding": 1
+    },
+    {
+      "name": "SomebodyCaughtYou__13CThrownBullet",
+      "address": "0x80153d10",
+      "size": 92,
+      "binding": 1
+    },
+    {
+      "name": "EnterLightVolume__13CThrownBulletP14BPDLightVolume",
+      "address": "0x80153d6c",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "ExitLightVolume__13CThrownBulletP14BPDLightVolume",
+      "address": "0x80153d90",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "GetLightVolume__13CThrownBullet",
+      "address": "0x80153db4",
+      "size": 36,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddVolume__19CLightVolumeManagerP14BPDLightVolume": "0x8013183c",
+    "GetVolume__C19CLightVolumeManager": "0x801319c0",
+    "RemoveVolume__19CLightVolumeManagerP14BPDLightVolume": "0x80131908",
+    "sqrtf": "0x80270538"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "thrownbullet.cpp",
+  "original_file_index": 1370
+}
