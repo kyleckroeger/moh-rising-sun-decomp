@@ -1,0 +1,249 @@
+{
+  "id": "ea_filesys_main",
+  "source": "src/ea/filesys_main.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8020701c",
+      "size": 5536
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bf2f4",
+      "size": 184
+    },
+    {
+      "name": ".bss",
+      "address": "0x803ff440",
+      "size": 64,
+      "type": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "OPVALID__Fi",
+      "address": "0x8020701c",
+      "size": 64,
+      "binding": 0
+    },
+    {
+      "name": "DefaultFILE_malloc__FPCcii",
+      "address": "0x8020705c",
+      "size": 48,
+      "binding": 0
+    },
+    {
+      "name": "DefaultFILE_mfree__FPv",
+      "address": "0x8020708c",
+      "size": 48,
+      "binding": 0
+    },
+    {
+      "name": "FILESYS_init",
+      "address": "0x802070bc",
+      "size": 176,
+      "binding": 1
+    },
+    {
+      "name": "FILESYS_initadr",
+      "address": "0x8020716c",
+      "size": 248,
+      "binding": 1
+    },
+    {
+      "name": "FILESYS_overhead",
+      "address": "0x80207264",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "FILESYS_restore",
+      "address": "0x8020728c",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "FILESYS_opstatus",
+      "address": "0x802072e4",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "FILESYS_callbackop",
+      "address": "0x80207330",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "FILESYS_priorityop",
+      "address": "0x802073ac",
+      "size": 332,
+      "binding": 1
+    },
+    {
+      "name": "FILESYS_cancelop",
+      "address": "0x802074f8",
+      "size": 356,
+      "binding": 1
+    },
+    {
+      "name": "FILESYS_waitop",
+      "address": "0x8020765c",
+      "size": 152,
+      "binding": 1
+    },
+    {
+      "name": "FILESYS_completeop",
+      "address": "0x802076f4",
+      "size": 328,
+      "binding": 1
+    },
+    {
+      "name": "FILESYS_exists",
+      "address": "0x8020783c",
+      "size": 144,
+      "binding": 1
+    },
+    {
+      "name": "FILESYS_open",
+      "address": "0x802078cc",
+      "size": 144,
+      "binding": 1
+    },
+    {
+      "name": "FILESYS_close",
+      "address": "0x8020795c",
+      "size": 140,
+      "binding": 1
+    },
+    {
+      "name": "FILESYS_read",
+      "address": "0x802079e8",
+      "size": 152,
+      "binding": 1
+    },
+    {
+      "name": "FILESYS_write",
+      "address": "0x80207a80",
+      "size": 132,
+      "binding": 1
+    },
+    {
+      "name": "FILESYS_size",
+      "address": "0x80207b04",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "iFILE_addbigreadcallback__FiiPv",
+      "address": "0x80207b70",
+      "size": 364,
+      "binding": 1
+    },
+    {
+      "name": "iFILE_addbigopencallback__FiiPv",
+      "address": "0x80207cdc",
+      "size": 152,
+      "binding": 1
+    },
+    {
+      "name": "FILESYS_addbig",
+      "address": "0x80207d74",
+      "size": 276,
+      "binding": 1
+    },
+    {
+      "name": "iFILE_delbigclosecallback__FiiPv",
+      "address": "0x80207e88",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "FILESYS_delbig",
+      "address": "0x80207ebc",
+      "size": 364,
+      "binding": 1
+    },
+    {
+      "name": "FILESYS_atomic",
+      "address": "0x80208028",
+      "size": 92,
+      "binding": 1
+    },
+    {
+      "name": "iFILE_ExecCommand__FP17FILEOPERATION_def",
+      "address": "0x80208084",
+      "size": 1140,
+      "binding": 0
+    },
+    {
+      "name": "iFILE_CommandCompleteCallback__Fi",
+      "address": "0x802084f8",
+      "size": 192,
+      "binding": 1
+    },
+    {
+      "name": "iFILE_perror__FP17FILEOPERATION_def",
+      "address": "0x802085b8",
+      "size": 4,
+      "binding": 0
+    }
+  ],
+  "externals": {
+    "BIG_locateentryz": "0x8020bb00",
+    "BIG_sizeofheader": "0x8020b974",
+    "BIG_typeofheader": "0x8020b8f0",
+    "MEM_copy": "0x802187b0",
+    "MEM_fill": "0x8021866c",
+    "OSInitMutex": "0x80258504",
+    "OSLockMutex": "0x8025853c",
+    "OSUnlockMutex": "0x80258618",
+    "REAL_abortmessage": "0x80218268",
+    "SYNCTASK_run": "0x8021811c",
+    "THREAD_iscurrent": "0x80217d70",
+    "THREAD_yield": "0x80217ce8",
+    "closefile__FP10HANDLE_def": "0x8020c460",
+    "deletefile__FPCc": "0x8020caec",
+    "freehandle__FP10HANDLE_def": "0x80208788",
+    "freeop__FP17FILEOPERATION_def": "0x802086a4",
+    "gFileSysOpts": "0x803ff480",
+    "getfilesize__FP10HANDLE_def": "0x8020ca68",
+    "initfiledev__Fv": "0x8020c0e8",
+    "killfiledev__Fv": "0x8020c160",
+    "openfile__FPCcUiP10HANDLE_def": "0x8020c2f8",
+    "readfile__FP10HANDLE_defPvii": "0x8020c9b8",
+    "reservehandle__Fv": "0x802086f0",
+    "reserveop__Fv": "0x802085bc",
+    "strchr": "0x80266918",
+    "strcmp": "0x802669b4",
+    "strcpy": "0x80266a7c",
+    "strncmp": "0x80266cf4",
+    "strncpy": "0x80266dd4",
+    "writefile__FP10HANDLE_defPvii": "0x8020ca04"
+  },
+  "local_externals": [
+    "freehandle__FP10HANDLE_def",
+    "freeop__FP17FILEOPERATION_def",
+    "reservehandle__Fv",
+    "reserveop__Fv"
+  ],
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "filesys.cpp",
+  "original_file_index": 2815
+}

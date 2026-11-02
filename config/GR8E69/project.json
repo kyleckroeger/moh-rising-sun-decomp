@@ -1351,7 +1351,8 @@
     "player_draw_queries.json",
     "player_halt.json",
     "player_move.json",
-    "player_axes.json"
+    "player_axes.json",
+    "ea_filesys_main.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

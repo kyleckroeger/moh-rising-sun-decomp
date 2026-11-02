@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 775220,
+    "matching_code_bytes": 780756,
     "total_executable_code_bytes": 2492032,
-    "percent": 31.107947249473522,
+    "percent": 31.33009527967538,
     "categories": {
-      "reconstructed_game": 383004,
+      "reconstructed_game": 388540,
       "restored_library": 392216
     },
-    "matching_functions": 3347
+    "matching_functions": 3375
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -211,6 +211,7 @@
     "config/GR8E69/dvdidutils.json": "146c4fe18f3d3e8eef2b1cd674155ffd5696c80b23ada1f47cbf175b43d2e1ea",
     "config/GR8E69/dvdlow.json": "e7c3f8c921d458b9f0a4c9c1b60d76522a25bbcc6eff2994cf01b304525c2630",
     "config/GR8E69/dvdqueue.json": "50714e893a617523e6e28eff930b1d91d1a5eaa8a00c9cce217acf50c4337821",
+    "config/GR8E69/ea_filesys_main.json": "db18336b99112a7b7455d94af16f025823e77e227c3cf9c4597e36e73f475454",
     "config/GR8E69/ea_fontchar.json": "1e52ab7673f6e190e13a35e0fe6fd63489a5cf38806f041eb69bb3cb4a9a1769",
     "config/GR8E69/ea_fontcreate.json": "8bde187429767df88e9c261b790b4a86fbe3edced2e17abfb412777116b78049",
     "config/GR8E69/ea_fontinit.json": "d2ffe41e40449cc9c2c8ed941a7be52d60c8ae6c300145da58cb9a3be2db4b14",
@@ -683,7 +684,7 @@
     "config/GR8E69/player_path_controls.json": "a5a585ed38c40cd299ab995320748f8e6777003f8cc885f5376c7e440dc2b3b7",
     "config/GR8E69/player_spline_position.json": "5b4aa80de0af602d8d0cde27f43b24848fd3a5ad92b1972f1900f8f256617888",
     "config/GR8E69/player_spline_tangent.json": "36eccc91b26a0f0558ee6f02c6e52398927527bf754f986e8d6db6404022d9b8",
-    "config/GR8E69/project.json": "af25939164bcf5c44625e5e372b87e3f289df86a96688f0e7c97d19f93803b5c",
+    "config/GR8E69/project.json": "92aea1f316fa4e2178d1f0871cd1f99affcae2a75c87f0bea162d061bcf3dd7e",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
     "config/GR8E69/projectile_exclusion_pair.json": "99afd0db09aa6eccc73fda17bb9ac1d24a6fe107780f8cf54fb758360cd20ef0",
@@ -2002,6 +2003,7 @@
     "src/dolphin/syn/__syn.h": "08b05a8b8e04e272305efa50936912ac395d76d937bd73a403065601e469f8ee",
     "src/dolphin/vi/__vi.h": "22201b234d317ca8d2724210a124ac6ceb9708df13c1b73eae87afab8e625b7b",
     "src/dolphin/vi/vi.c": "a39c975336daa3c42a5a186d68d0c9c39e91aa0df0003b1b052eb767cdf4beed",
+    "src/ea/filesys_main.cpp": "d26d4cb1d7f15112298b1fbd5a0d64203689683321d4490fad940ec1ee5dd7d6",
     "src/ea/fontchar.cpp": "2980d56dfbdbbeb46cba293f7c2397b7518079ba32d510118510c9301ee15a47",
     "src/ea/fontcreate.cpp": "fb846d119db1a373f03387cc09f0db8bf0c80ede2c1efb305914580be2630def",
     "src/ea/fontinit.cpp": "23ee3e1e4457de8dba71c1b08e1355e02844f0753acb1b2cdf4d8bc9ab7e7fa3",
@@ -31091,6 +31093,24 @@
       "discarded_functions": [],
       "object_sha256": "ed3a39f7c2f320a5cb3baa57fe69d05e073e5933e2fa4bf9bceceabe197ee33a",
       "linked_sha256": "d730642f2bb546d2949dd42e5d51a807e19eaf47b0d982de35ed0adc06b483d0"
+    },
+    {
+      "id": "ea_filesys_main",
+      "category": "reconstructed_game",
+      "functions": 28,
+      "code_bytes": 5536,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "2c1fa8307dffdb6a820357ae2bc4ed78bdc699529738e80711d7c18b5008c60c",
+      "linked_sha256": "e97aaf5cdd400e570887a0ffdb996f031cc089246db1512207ae0fa0d4c4cd2b"
     }
   ],
   "code_map": {
@@ -71443,202 +71463,6 @@
         "file_record": 479,
         "file_name": "filesys.cpp",
         "ranges": [
-          {
-            "address": "0x8020701c",
-            "size": 64,
-            "kind": "function",
-            "name": "OPVALID__Fi",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x8020705c",
-            "size": 48,
-            "kind": "function",
-            "name": "DefaultFILE_malloc__FPCcii",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x8020708c",
-            "size": 48,
-            "kind": "function",
-            "name": "DefaultFILE_mfree__FPv",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x802070bc",
-            "size": 176,
-            "kind": "function",
-            "name": "FILESYS_init",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020716c",
-            "size": 248,
-            "kind": "function",
-            "name": "FILESYS_initadr",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80207264",
-            "size": 40,
-            "kind": "function",
-            "name": "FILESYS_overhead",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020728c",
-            "size": 88,
-            "kind": "function",
-            "name": "FILESYS_restore",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x802072e4",
-            "size": 76,
-            "kind": "function",
-            "name": "FILESYS_opstatus",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80207330",
-            "size": 124,
-            "kind": "function",
-            "name": "FILESYS_callbackop",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x802073ac",
-            "size": 332,
-            "kind": "function",
-            "name": "FILESYS_priorityop",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x802074f8",
-            "size": 356,
-            "kind": "function",
-            "name": "FILESYS_cancelop",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020765c",
-            "size": 152,
-            "kind": "function",
-            "name": "FILESYS_waitop",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x802076f4",
-            "size": 328,
-            "kind": "function",
-            "name": "FILESYS_completeop",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020783c",
-            "size": 144,
-            "kind": "function",
-            "name": "FILESYS_exists",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x802078cc",
-            "size": 144,
-            "kind": "function",
-            "name": "FILESYS_open",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020795c",
-            "size": 140,
-            "kind": "function",
-            "name": "FILESYS_close",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x802079e8",
-            "size": 152,
-            "kind": "function",
-            "name": "FILESYS_read",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80207a80",
-            "size": 132,
-            "kind": "function",
-            "name": "FILESYS_write",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80207b04",
-            "size": 108,
-            "kind": "function",
-            "name": "FILESYS_size",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80207b70",
-            "size": 364,
-            "kind": "function",
-            "name": "iFILE_addbigreadcallback__FiiPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80207cdc",
-            "size": 152,
-            "kind": "function",
-            "name": "iFILE_addbigopencallback__FiiPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80207d74",
-            "size": 276,
-            "kind": "function",
-            "name": "FILESYS_addbig",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80207e88",
-            "size": 52,
-            "kind": "function",
-            "name": "iFILE_delbigclosecallback__FiiPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80207ebc",
-            "size": 364,
-            "kind": "function",
-            "name": "FILESYS_delbig",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80208028",
-            "size": 92,
-            "kind": "function",
-            "name": "FILESYS_atomic",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80208084",
-            "size": 1140,
-            "kind": "function",
-            "name": "iFILE_ExecCommand__FP17FILEOPERATION_def",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x802084f8",
-            "size": 192,
-            "kind": "function",
-            "name": "iFILE_CommandCompleteCallback__Fi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x802085b8",
-            "size": 4,
-            "kind": "function",
-            "name": "iFILE_perror__FP17FILEOPERATION_def",
-            "evidence": "local-file-symbol"
-          },
           {
             "address": "0x802085bc",
             "size": 232,
