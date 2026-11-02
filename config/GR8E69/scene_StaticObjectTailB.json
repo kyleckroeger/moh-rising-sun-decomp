@@ -1,0 +1,121 @@
+{
+  "id": "scene_StaticObjectTailB",
+  "source": "src/scene/StaticObjectTailB.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800aabd0",
+      "size": 156
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029ed20",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetScript__13CStaticObjectP8BSObject",
+      "address": "0x800aabd0",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SetCollisionId__13CStaticObject7EClsnId",
+      "address": "0x800aabd8",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SetDrawEnabled__13CStaticObjectb",
+      "address": "0x800aabe0",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "GetObjectType__C13CStaticObject",
+      "address": "0x800aabf0",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetWorldLinearVelocity__C13CStaticObject",
+      "address": "0x800aabf8",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "AsStaticObject__13CStaticObject",
+      "address": "0x800aac28",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "AsStaticObject__C13CStaticObject",
+      "address": "0x800aac2c",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "GetScriptObject__C13CStaticObject",
+      "address": "0x800aac30",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "IsDrawEnabled__C13CStaticObject",
+      "address": "0x800aac38",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "SetLightVolumeTransitionDuration__13CStaticObjectf",
+      "address": "0x800aac44",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "AsThrownObject__13CStaticObject",
+      "address": "0x800aac4c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "AsWeaponObject__13CStaticObject",
+      "address": "0x800aac54",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetAttachedLight__C13CStaticObject",
+      "address": "0x800aac5c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "AsHierTankObject__13CStaticObject",
+      "address": "0x800aac64",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "static_obj.cpp",
+  "original_file_index": 833
+}

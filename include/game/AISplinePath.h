@@ -78,7 +78,10 @@ public:
     void UpdateAStarPathWalk();
     bool SetupAStarPathWalkForPatrol(const CVector3 &);
 };
-// Static navigation-mesh query.
+// Static navigation-mesh query. A namespace, not a class: ProDG mangles a no-argument
+// function in a namespace with a trailing `v` (`ResetAreaPathNodes__13AIPathFindingv`) and a
+// no-argument class static without one (`f__1A`), and `_13AIPathFinding.g_iLastPathNodeUpdatedOutOfArea`
+// has local binding, which a class static data member cannot have.
 namespace AIPathFinding {
     int IsPointOnNetwork(const CVector3 &);
     void UpdateAStarNodesOutOfArea();

@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 808072,
+    "matching_code_bytes": 810144,
     "total_executable_code_bytes": 2492032,
-    "percent": 32.426228876675744,
+    "percent": 32.50937387641892,
     "categories": {
-      "reconstructed_game": 415856,
+      "reconstructed_game": 417928,
       "restored_library": 392216
     },
-    "matching_functions": 3747
+    "matching_functions": 3779
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -749,7 +749,7 @@
     "config/GR8E69/player_weapon_overlays.json": "172965adf4a7a763b5932a9744ff75bbf384ef314e25785dee9d7617044a8d5b",
     "config/GR8E69/player_weapon_selectable.json": "c7e3f09ad1510713bfd88ee468db0fcb4c6ef18b3b89bdb414b32ea863b25668",
     "config/GR8E69/player_weapon_shutdown.json": "f90a42342572d125630e7ac3647193288c13301a5309bcdc49cc350364bc2b60",
-    "config/GR8E69/project.json": "50c585b76a8124491c6c0a35d21175beaed75acd1be5f7054ae3eaee1066826e",
+    "config/GR8E69/project.json": "76b39c87f7a2ad3992d9cf77cb10b839abb04af48da91532f575069cd73ed206",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -766,7 +766,14 @@
     "config/GR8E69/scene_AttachableObjectB.json": "06c8e5cb4b989be36b3bc118de23ce315684abe48f28b0a7168d76747810489f",
     "config/GR8E69/scene_AttachableObjectC.json": "921a6e2635ca182465002db6373bc5f1ef5c82fb774db5befb51de4171c030f3",
     "config/GR8E69/scene_StaticObjectAccess.json": "18b4299dfbcd360de3492e1e678113d6a340ac80c2b52111cac031fae788a90a",
+    "config/GR8E69/scene_StaticObjectCommit.json": "6e6e445663a0d40cc640f4df2e17647be616b876da71f4469131d75aee7b19bc",
+    "config/GR8E69/scene_StaticObjectHead.json": "87f74bca2deaa0b057ba2556d04761151b49b597c28bf84afd1c404f2a8bf10f",
     "config/GR8E69/scene_StaticObjectMotionFlags.json": "116d77e8139aef5a900c688f0864eea3c07d32756546d5330ced0f33f0d86cac",
+    "config/GR8E69/scene_StaticObjectPlayAnimation.json": "22d5b212b78e08ed55ebe676d8b885e04ad1faf2176ec6103367b1b76186caa8",
+    "config/GR8E69/scene_StaticObjectScale.json": "82ec550e4b3649995987aa5b88a3d81015f9bedd8795d71a463d1a484ea8185a",
+    "config/GR8E69/scene_StaticObjectTailA.json": "d8517122b1997cb4653461f72bedb11db3be32e62c4dc48a9617583549904a8b",
+    "config/GR8E69/scene_StaticObjectTailB.json": "79046450c2f3d0d538f24822fda00b822b5de0a7f001af42433b14e560aab545",
+    "config/GR8E69/scene_StaticObjectVisible.json": "68004f40a8c82d0b730a505e0032677d9c9ae6c92e016e8162be82ea2b705129",
     "config/GR8E69/scene_node_axis_defaults.json": "092b0d540e402069c588985246b692817db1af99a9d9c2cde0f3b1bfac31d590",
     "config/GR8E69/scene_node_centroid.json": "417789c5857125f62e4595e59f3e52ed74ac434de058b0123549164ceef3cd8b",
     "config/GR8E69/scene_node_destructor.json": "2421437a4581f16904fb69d4f06b23754bc5d337e70bdec86806d8f9f3f370a5",
@@ -1657,7 +1664,7 @@
     "include/game/AIDoodad.h": "475c1f3e895b4e8117d541e3aae395b56c03ac17d59b2a5e7cba2063ab4a5c4c",
     "include/game/AIFilterGlobal.h": "26368f15313dbd6390bee4c45582bcdfc36d8d433aaec5b0241541e52b9d677a",
     "include/game/AIMovement.h": "b9d723fd2bfeb66871a55f57dad2d3bfad33a56530d2826600e86d36598d6342",
-    "include/game/AISplinePath.h": "f354973dd31e8d4c187ea57b5fb3fc59ec819aee412a39dab100424da55768d2",
+    "include/game/AISplinePath.h": "31e431b6ba5e56c5ac4c2d1a6421a402973dce786b76db8acc4a9813786f1083",
     "include/game/AITargeting.h": "d1dd070344ab5a158eb6327d210d45628204f17871f87fa431a229a9b4c1d005",
     "include/game/AnimatedVolume.h": "527918576e64cf9296cbb9164eefaf3fc8b7a0f96894e342d2da9e847df4cf25",
     "include/game/BPD.h": "ec4a3aceb83f181db2c6adf8ac87137ede2cd6a0e643548159c73a827aadd19e",
@@ -1731,7 +1738,7 @@
     "include/game/FlexPropDatabase.h": "e3bb33faf5cff3877d051efc3335ff33c373c9d228a7afcb8b2c16f4ee97c767",
     "include/game/Fog.h": "30a37f01f3f665d1f9b3b0a5ef81ea098194595159c5ff794797541c6bf325c0",
     "include/game/Frustum.h": "517f595d8940b305a44b055a26e31588a43151816c24e27381a86ae90cfc6062",
-    "include/game/GameSettings.h": "0142b5eaff6f7df208853b110f4f49bd3de650f6273dddf73217fde5db0b9925",
+    "include/game/GameSettings.h": "fe90e79a4b1e0979054de944d84d31d5f7dfa956e6d9e6be565252aca436c443",
     "include/game/IDestructible.h": "1427a08ba92fefc7fdc63c4ba8fc7aab3ec64bc8d2d1cfb7fe035346b685379f",
     "include/game/IVolume.h": "95911ba145df993a5c74b9b441c050754f2084de085a7d62b324f66e4479f2bc",
     "include/game/LegacyField.h": "95883bc2693fd14b7014d3f1e6a6e514ed5126af239699aa46d05f565bce5afe",
@@ -1749,7 +1756,7 @@
     "include/game/PlacementNew.h": "49819284bb2cc2ffb2039d459ce855bd5a233bcfff0a6412ffe0bda02cd616c5",
     "include/game/PropertyData.h": "952ae5ac78dc17e43053a7b905a8e58499a1faa3c7d0721269329f639095b22a",
     "include/game/SceneNode.h": "1a6f0b01e88bda21ecb5b0ae8f4f3ad50df6422427adb3f5f52ea1c648a50fe4",
-    "include/game/SceneObjects.h": "9c4e13ddefa4c0e65af4615831bf059b0f291710e73c69446002e03a208845d7",
+    "include/game/SceneObjects.h": "b1263a83b8ecc09de7f39543c643bd3b53185a224b6310c5da49dd93cdef03ba",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
     "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
     "include/game/ScriptMachine.h": "ca23b124331e6be9f43fc9e17237cbdb7851ff2941192e76b4aa3f8086db44bb",
@@ -1987,7 +1994,7 @@
     "src/bpd/light_volume.cpp": "c22922ba3e285d879080bb5c45ebb5030b1db234219d2f12b920c79b8aaaf1bd",
     "src/bpd/load_bsp.cpp": "4809d680c3c3e1d721ab6487b6d889a56ca0d6106b030b24033d383033ace191",
     "src/bpd/load_properties.cpp": "8d92e35ddc629f49265b54ee0d7c81ef58dc49390e13a387df51d28f5539e3d6",
-    "src/bpd/loaders_internal.h": "3efac5736f5b44d5a06e746ae3a85574a97799188451393e4ec4a6dfefbcd62e",
+    "src/bpd/loaders_internal.h": "5878c87043b7ac6ba8fd4dec23d18f36eefaf41ae90e7e4970fe31e93c6bf326",
     "src/bpd/offset_pointer_table.cpp": "d9e5f1038f2923fa5af968234ca1f0f7700f3d2c60fd3b1ffaa7b72b43c4be86",
     "src/bpd/offset_property_pointers.cpp": "0d79ba65148b6ec629d4603df8851155dca9f17be28ec96ab4d6b3ed6a87dc5a",
     "src/bpd/offset_ptr_impl.h": "db4acef03417529731388feaf56f8930c81c8934eaed672d7c9f08cbc2bc7586",
@@ -2756,7 +2763,14 @@
     "src/scene/SceneNodeUpdateDefaults.cpp": "dbc4517c08451859242aaec81c54d0980a5f2039682b77e90ca2ea83c51d202c",
     "src/scene/SceneNodeVectorDefaults.cpp": "00c35ece5cdc03ab1058d2e860f2872c6a2e02be28683c8922a55c89ecc0e28b",
     "src/scene/StaticObjectAccess.cpp": "4226693d4a5aa5a32cce548b3f45086dcf07cf59dcbbdfab749188794913d0fb",
+    "src/scene/StaticObjectCommit.cpp": "1b237129911759fe08e8d56a27b37e6c19b35b1e5e395e560ac32a29caf5baec",
+    "src/scene/StaticObjectHead.cpp": "c0fb66a3a1ff6f5aa09d75a84266915a1350f99a57e71b0543bc3e7e034b0398",
     "src/scene/StaticObjectMotionFlags.cpp": "f8eb79d96fb7f062de179fae0b006790a50c5ff4f81497c6f40767b0e67b5b9e",
+    "src/scene/StaticObjectPlayAnimation.cpp": "775ab2a935dd26c9c5630f9de852e447c0df21783b918e499ba187986445f48f",
+    "src/scene/StaticObjectScale.cpp": "7f01471eba39bdaf0a87c5fd431722d6174ea0ddfe3a412f0a35bfde718f1abe",
+    "src/scene/StaticObjectTailA.cpp": "8b79016df3f8b62725ec3ffd33b6ed603e264b3b9c05ebf7de8c8012454660c2",
+    "src/scene/StaticObjectTailB.cpp": "8b33e760ab3bb94a43ceda48d97fcacdc5836e07604e67735321e589bcad105b",
+    "src/scene/StaticObjectVisible.cpp": "4b5d2486ae9be4d6f821c785a71dcca9f94cf3c66fa5d2d8198465d32fe33603",
     "src/scene/jaw_controller_ctor.cpp": "d925c4b536ea558fe6c261c9a3f83d4dc65bb6cd3e396224e2ef8e3ef23b2920",
     "src/scene/jaw_controller_motiontype.cpp": "509a33964954db2b09fd38a2c55eecd16285fed2fc2e66d5383ad2b7f9aa71ee",
     "src/script/activate_aiming.cpp": "9c303dafaa80279d2f04fa9ee1a17a4b43905a8e80ba5b4e959f7b3fd68972c2",
@@ -33498,6 +33512,132 @@
       "discarded_functions": [],
       "object_sha256": "370d15a4315fc01b1c6fd9bac55cc2cc5a39cde400387b8c676dab3603ed9d8a",
       "linked_sha256": "d2c8babda7a71938c80f216681427f9b633dac61cccd42a92ef7db1d4081f4ff"
+    },
+    {
+      "id": "scene_StaticObjectHead",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 540,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "436c641847fc064ae06a863d3a4189f50c032318f0ea94388c4a32ebf642569f",
+      "linked_sha256": "96777dc3a4cf9e03df3b0d35b1d5b48b76c291b645d219f65c1df7b46a060287"
+    },
+    {
+      "id": "scene_StaticObjectVisible",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 72,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "8b2a3d290b5b653b38b8ab30447706c2bfa3952bc6d28dd9b5220f04daaf21c5",
+      "linked_sha256": "8d4ee638f59c80ff2550d128e91f7d727ccc7cda3c7f68141e1cae856a660676"
+    },
+    {
+      "id": "scene_StaticObjectPlayAnimation",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 132,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "28ef502316a1c56646b794ff900449e1a51c8081933657732325a77c21d2ba0d",
+      "linked_sha256": "333c6d9b171c7397c7e83c27dd87fc26598ec39b338c163f78117e8c3b70ac0c"
+    },
+    {
+      "id": "scene_StaticObjectScale",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 32,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "2a84a8d0c299396efd24ed2b0f3b5d11845bc82169346023e591bf74e2f34d23",
+      "linked_sha256": "a20f1fda9deb3d2dd02ec5ac68d8e9173c752477d9856e81a3ce61517b540d2d"
+    },
+    {
+      "id": "scene_StaticObjectCommit",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 348,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "db164e0bb80c2613de01f413d0d8e157709de15081c880ff8d756437e8c59242",
+      "linked_sha256": "94137d60c9309d92f86a82103aeedb8f75ecea79d1e11855bc419f6a10eaf539"
+    },
+    {
+      "id": "scene_StaticObjectTailA",
+      "category": "reconstructed_game",
+      "functions": 8,
+      "code_bytes": 792,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "a0d0c3abccfdc007328e34c83839b52a627ec2d1b7a0d423ff2da6e139ecc46f",
+      "linked_sha256": "0ad09ad39c0936694a391bebcd3b052c7a2f26dd82c7f280daf7be1dcbeff14b"
+    },
+    {
+      "id": "scene_StaticObjectTailB",
+      "category": "reconstructed_game",
+      "functions": 14,
+      "code_bytes": 156,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "f54a7e65dfd74fc53fe1f1c115c6c071e1bad9ef2234a5b8da52468673a4d8b4",
+      "linked_sha256": "f1661a3e1f047fe6e43cbbaf3138768fbfd62166bdfa5d69af23979ce12b7604"
     }
   ],
   "code_map": {
@@ -45438,41 +45578,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800a612c",
-            "size": 112,
-            "kind": "function",
-            "name": "InitMotionProperties__13CStaticObjectP11CStaticMeshiiiiiP11MotionFrame",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a619c",
-            "size": 52,
-            "kind": "function",
-            "name": "SetLocalBoundingVolume__13CStaticObjectQ210ISceneNode11EVolumeTypeP7IVolume",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a61d0",
-            "size": 240,
-            "kind": "function",
-            "name": "SetWorldBoundingVolume__13CStaticObjectQ210ISceneNode11EVolumeTypeP7IVolume",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a62c0",
-            "size": 68,
-            "kind": "function",
-            "name": "GetLocalBoundingVolume__C13CStaticObjectQ210ISceneNode11EVolumeType",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a6304",
-            "size": 68,
-            "kind": "function",
-            "name": "GetWorldBoundingVolume__C13CStaticObjectQ210ISceneNode11EVolumeType",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800a6348",
             "size": 144,
             "kind": "function",
@@ -45543,20 +45648,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800a7ff4",
-            "size": 216,
-            "kind": "function",
-            "name": "CommitAnimMotionUpdate__13CStaticObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a80cc",
-            "size": 132,
-            "kind": "function",
-            "name": "CommitPathMotionUpdate__13CStaticObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800a8150",
             "size": 332,
             "kind": "function",
@@ -45592,24 +45683,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800a8cf0",
-            "size": 72,
-            "kind": "function",
-            "name": "IsVisible__C13CStaticObjectR12CDrawContext",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800a900c",
             "size": 224,
             "kind": "function",
             "name": "CalculateMovementTime__13CStaticObjectRC8CVector3T1",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a90ec",
-            "size": 132,
-            "kind": "function",
-            "name": "PlayAnimation__13CStaticObjectiii12EBSEventEnum",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -45638,13 +45715,6 @@
             "size": 708,
             "kind": "function",
             "name": "RotateFromScript__13CStaticObjectRC8CVector3T112EBSEventEnum",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a9950",
-            "size": 32,
-            "kind": "function",
-            "name": "ScaleFromScript__13CStaticObjectff12EBSEventEnum",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -45687,160 +45757,6 @@
             "size": 736,
             "kind": "function",
             "name": "AttemptCollisionDamage__13CStaticObjectRC10CCollision",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800aa8b8",
-            "size": 80,
-            "kind": "function",
-            "name": "MarkForDestruction__13CStaticObjecti",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800aa908",
-            "size": 132,
-            "kind": "function",
-            "name": "Destroy__13CStaticObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800aa98c",
-            "size": 44,
-            "kind": "function",
-            "name": "TriggerScriptEvent__13CStaticObjectUsPvb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800aa9b8",
-            "size": 20,
-            "kind": "function",
-            "name": "InitAim__13CStaticObjectbf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800aa9cc",
-            "size": 44,
-            "kind": "function",
-            "name": "FadeOut__13CStaticObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800aa9f8",
-            "size": 44,
-            "kind": "function",
-            "name": "FadeIn__13CStaticObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800aaa24",
-            "size": 36,
-            "kind": "function",
-            "name": "FadeValue__C13CStaticObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800aaa48",
-            "size": 392,
-            "kind": "function",
-            "name": "SerializeSaveData__13CStaticObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800aabd0",
-            "size": 8,
-            "kind": "function",
-            "name": "SetScript__13CStaticObjectP8BSObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800aabd8",
-            "size": 8,
-            "kind": "function",
-            "name": "SetCollisionId__13CStaticObject7EClsnId",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800aabe0",
-            "size": 16,
-            "kind": "function",
-            "name": "SetDrawEnabled__13CStaticObjectb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800aabf0",
-            "size": 8,
-            "kind": "function",
-            "name": "GetObjectType__C13CStaticObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800aabf8",
-            "size": 48,
-            "kind": "function",
-            "name": "GetWorldLinearVelocity__C13CStaticObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800aac28",
-            "size": 4,
-            "kind": "function",
-            "name": "AsStaticObject__13CStaticObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800aac2c",
-            "size": 4,
-            "kind": "function",
-            "name": "AsStaticObject__C13CStaticObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800aac30",
-            "size": 8,
-            "kind": "function",
-            "name": "GetScriptObject__C13CStaticObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800aac38",
-            "size": 12,
-            "kind": "function",
-            "name": "IsDrawEnabled__C13CStaticObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800aac44",
-            "size": 8,
-            "kind": "function",
-            "name": "SetLightVolumeTransitionDuration__13CStaticObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800aac4c",
-            "size": 8,
-            "kind": "function",
-            "name": "AsThrownObject__13CStaticObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800aac54",
-            "size": 8,
-            "kind": "function",
-            "name": "AsWeaponObject__13CStaticObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800aac5c",
-            "size": 8,
-            "kind": "function",
-            "name": "GetAttachedLight__C13CStaticObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800aac64",
-            "size": 8,
-            "kind": "function",
-            "name": "AsHierTankObject__13CStaticObject",
             "evidence": "adjacent-compiler-markers"
           }
         ],

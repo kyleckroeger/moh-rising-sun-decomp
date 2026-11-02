@@ -1469,7 +1469,14 @@
     "ea_rcmp2real.json",
     "sound_salloc.json",
     "sound_sbvalid.json",
-    "volume_defaults.json"
+    "volume_defaults.json",
+    "scene_StaticObjectHead.json",
+    "scene_StaticObjectVisible.json",
+    "scene_StaticObjectPlayAnimation.json",
+    "scene_StaticObjectScale.json",
+    "scene_StaticObjectCommit.json",
+    "scene_StaticObjectTailA.json",
+    "scene_StaticObjectTailB.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

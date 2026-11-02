@@ -54,8 +54,51 @@ class CJawController {
 
 struct MotionData;
 MotionData *InitMotionData(const char *);
+class CBullet;
+class CLight;
+class CCollision;
+class CStaticMesh;
+class CTankObject;
+struct MotionFrame;
+// Method-only view; the storage it occupies in an object is not established.
+class CObjectFadeManager {
+  public:
+    void StartFadeOut(float, float);
+    void StartFadeIn(float, float);
+    float FadeValue() const;
+};
 class CStaticObject {
   public:
+    void SetLocalBoundingVolume(ISceneNode::EVolumeType, IVolume *);
+    void SetWorldBoundingVolume(ISceneNode::EVolumeType, IVolume *);
+    IVolume *GetLocalBoundingVolume(ISceneNode::EVolumeType) const;
+    IVolume *GetWorldBoundingVolume(ISceneNode::EVolumeType) const;
+    void InitMotionProperties(CStaticMesh *, int, int, int, int, int, MotionFrame *);
+    void Init();
+    float CalculateMovementTime(const CVector3 &, const CVector3 &);
+    void ScaleFromScript(float, float, EBSEventEnum);
+    void CommitAnimMotionUpdate();
+    void CommitPathMotionUpdate();
+    void UpdatePathMotionDestAndSpeed();
+    void Destroy();
+    void TriggerScriptEvent(unsigned short, void *, bool);
+    void InitAim(bool, float);
+    float FadeValue() const;
+    void SerializeSaveData();
+    void SetScript(BSObject *);
+    void SetCollisionId(EClsnId);
+    void SetDrawEnabled(bool);
+    int GetObjectType() const;
+    CVector3 GetWorldLinearVelocity() const;
+    CStaticObject *AsStaticObject();
+    const CStaticObject *AsStaticObject() const;
+    BSObject *GetScriptObject() const;
+    unsigned int IsDrawEnabled() const;
+    void SetLightVolumeTransitionDuration(float);
+    void *AsThrownObject();
+    void *AsWeaponObject();
+    CLight *GetAttachedLight() const;
+    CTankObject *AsHierTankObject();
     EClsnId GetCollisionId() const;
     void GetTMLocalToWorld(CMatrix &) const;
     void GetPosition(CVector3 &) const;
@@ -82,35 +125,89 @@ class CStaticObject {
     void FadeIn(float);
     void FadeOut(float);
     struct Flags {
-        unsigned int unknown_31_27 : 5;
+        unsigned int drawEnabled : 1;   // Bit 31.
+        unsigned int scriptMoving : 1;  // Bit 30; descriptive, Frontline's reading.
+        unsigned int scriptRotating : 1; // Bit 29; descriptive.
+        unsigned int scriptScaling : 1; // Bit 28; set by ScaleFromScript.
+        unsigned int hasMotion : 1;     // Bit 27; descriptive.
         unsigned int motionPlaying : 1; // Bit 26: cleared by StopMotionPlayback.
-        unsigned int unknown_25 : 1;
+        unsigned int playReverse : 1;   // Bit 25; set by PlayAnimation on a backward range.
         unsigned int allowCollisionDamage : 1; // Bit 24.
         unsigned int pathFlag1 : 1;            // Bit 23: BIFunc_MechSetPathFlag selector 1.
-        unsigned int unknown_low : 23;
+        unsigned int dumpObject : 1;    // Bit 22; Destroy hands the object to DestroyDumpObject.
+        unsigned int attached : 1;      // Bit 21; AttemptUpdate skips script motion. Descriptive.
+        unsigned int unknown_20 : 1;
+        unsigned int aimEnabled : 1;    // Bit 19; InitAim. Descriptive.
+        unsigned int unknown_low : 19;
     };
-    unsigned char unknown_0[0x4c];
+    // The four sort-list nodes at +0x20; each keeps a bound as a float at +8. Names descriptive.
+    struct SortNode {
+        unsigned char unknown_0[8];
+        float value;
+    };
+    unsigned char unknown_0[0x20];
+    SortNode *sortMinX, *sortMaxX, *sortMinY, *sortMaxY; // +0x20
+    unsigned char unknown_30[0x4c - 0x30];
     void *model;          // +0x4c; drawing is skipped while it is null.
     CMatrix transform;    // +0x50
-    unsigned char unknown_90[0x110 - 0x90];
+    unsigned char unknown_90[0x100 - 0x90];
+    float pathDistance;   // +0x100; descriptive, copied to +0x230 on commit.
+    unsigned char unknown_104[0x110 - 0x104];
     float pathScale;      // +0x110; BIFunc_MechSetPathFlag stores value / 100.
-    unsigned char unknown_114[0x134 - 0x114];
+    unsigned char unknown_114[0x12c - 0x114];
+    unsigned int pathState; // +0x12c; cleared by Init. Descriptive.
+    IVolume *localVolumeType3; // +0x130; returned for volume type 3.
+    // +0x134: GetLocalBoundingVolume's type-0 volume, despite the older field name.
     IVolume *worldVolume; // +0x134; freed by CThrownObject::CleanUp, queried for GetRadius.
-    unsigned char unknown_138[0x13c - 0x138];
+    IVolume *worldVolumeType3; // +0x138
+    // +0x13c: GetWorldBoundingVolume's type-0 volume; typed int by earlier code.
     int field_13c;        // +0x13c; cleared by CThrownObject::CleanUp.
     BSObject *script;     // +0x140
-    unsigned char unknown_144[0x190 - 0x144];
+    unsigned char unknown_144[0x150 - 0x144];
+    CVector3 animPosition; // +0x150
+    unsigned char unknown_160[0x180 - 0x160];
+    CQuaternion animOrientation; // +0x180
     CVector3 velocity;    // +0x190; CThrownObject limits its speed.
-    unsigned char unknown_1a0[0x1b0 - 0x1a0];
+    CVector3 pathPosition; // +0x1a0
     CQuaternion orientation; // +0x1b0; kept in step with the transform.
-    unsigned char unknown_1c0[0x20c - 0x1c0];
-    int field_20c;        // +0x20c; CThrownObject::LimitSpeed does nothing while -1.
-    unsigned char unknown_210[0x214 - 0x210];
+    unsigned char unknown_1c0[0x1e0 - 0x1c0];
+    float scriptScaleTarget; // +0x1e0
+    float scriptScaleBase; // +0x1e4; starts at 1 in Init.
+    unsigned char unknown_1e8[0x1f0 - 0x1e8];
+    float scriptScaleRate; // +0x1f0
+    unsigned char unknown_1f4[0x1fc - 0x1f4];
+    int scriptScaleEvent; // +0x1fc
+    unsigned char unknown_200[0x20c - 0x200];
+    int field_20c;        // +0x20c; the collision id. CThrownObject::LimitSpeed does nothing while -1.
+    float aimValue;       // +0x210; InitAim. Descriptive.
     int maxLightPriority; // +0x214
     Flags flags;          // +0x218
     unsigned int mechFlags; // +0x21c; bits set and cleared by BIFunc_MechSetFlag.
-    unsigned char unknown_220[0x2c0 - 0x220];
+    unsigned char unknown_220[0x230 - 0x220];
+    float pathAngle;      // +0x230
+    int motionEvent;      // +0x234; PlayAnimation's event.
+    int motionFrame;      // +0x238
+    int motionEnd;        // +0x23c
+    int motionFrameCount; // +0x240
+    unsigned char unknown_244[4];
+    int motionSpeed;      // +0x248
+    int motionStart;      // +0x24c
+    unsigned char unknown_250[0x258 - 0x250];
+    int motionKey;        // +0x258
+    int motionLoop;       // +0x25c
+    unsigned char unknown_260[4];
+    float motionRate;     // +0x264
+    int motionTimer;      // +0x268
+    float motionSampleRate; // +0x26c
+    float motionRemaining; // +0x270
+    float motionStep;     // +0x274
+    unsigned char unknown_278[0x290 - 0x278];
+    MotionFrame *motionFrames; // +0x290
+    unsigned char unknown_294[0x2a8 - 0x294];
+    CLight *attachedLight; // +0x2a8
+    unsigned char unknown_2ac[0x2c0 - 0x2ac];
     CLightVolumeManager lightVolumes; // +0x2c0
+    CObjectFadeManager fade; // +0x2dc; extent unknown.
 };
 
 class CAnimObject {

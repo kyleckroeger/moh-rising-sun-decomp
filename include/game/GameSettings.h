@@ -24,12 +24,14 @@ struct GameProfile {
 // Original enum tag; members are descriptive.
 enum EShotLocations { ShotLocation0 = 0 };
 
+class CMatrix;
 // Member view of the game-settings singleton; only the profile pointer is named.
 class CGameSettings {
   public:
     GameProfile *profile;
     int SerializingIn() const;
     int SerializingOut() const;
+    void SerializeDelta(const CMatrix &, CMatrix &);
     void SerializeValue(unsigned int &, unsigned int);
     void AddCheat(int);
     void RegisterSavePoint(int, bool);
