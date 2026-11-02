@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 845252,
+    "matching_code_bytes": 846144,
     "total_executable_code_bytes": 2492032,
-    "percent": 33.91818403616005,
+    "percent": 33.95397811906107,
     "categories": {
-      "reconstructed_game": 453036,
+      "reconstructed_game": 453928,
       "restored_library": 392216
     },
-    "matching_functions": 4061
+    "matching_functions": 4070
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -777,7 +777,7 @@
     "config/GR8E69/player_weapon_overlays.json": "172965adf4a7a763b5932a9744ff75bbf384ef314e25785dee9d7617044a8d5b",
     "config/GR8E69/player_weapon_selectable.json": "c7e3f09ad1510713bfd88ee468db0fcb4c6ef18b3b89bdb414b32ea863b25668",
     "config/GR8E69/player_weapon_shutdown.json": "f90a42342572d125630e7ac3647193288c13301a5309bcdc49cc350364bc2b60",
-    "config/GR8E69/project.json": "3c7952e9d6d18afbcbe9375781b975246c499b2b767456a5af2c81076c83cdba",
+    "config/GR8E69/project.json": "801578d78945e78b91b435f1f6216bc43df7246bff4cb76055aaee1701182025",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -1273,6 +1273,9 @@
     "config/GR8E69/sound_sclnt100.json": "a31805d83129674135581149cc9781ba4b6fa865c7fed5d5c16e6a5886985aee",
     "config/GR8E69/sound_sctlfilt.json": "d18858912ebc56192ec7b7c27363539d52720cf122af007c68f262ca7f6d341f",
     "config/GR8E69/sound_sdrv_frame.json": "1d1623525ff825e5460d4bd38f775558d9b05befbe2669830586fd014b39bbb4",
+    "config/GR8E69/sound_sdrv_mem.json": "228615afdf049df9d974d895ca1a641183e9dc991e78f84883d110da2f811ad9",
+    "config/GR8E69/sound_sdrv_pkt.json": "4661192ed351dc6d8248168b49667e09d6fc90cbdfa70b31945f77e2f0cf9af1",
+    "config/GR8E69/sound_sdrv_pktdestroy.json": "88b749804783e115d84d32243518ee4db30375c347076a6421ebed3dec19c1d0",
     "config/GR8E69/sound_sdrv_range.json": "172d7d9bd2d4f086aaed38cf0f2cddd373e6aa944ce763f2707f342c3dc3d8b0",
     "config/GR8E69/sound_sdrv_timemult.json": "3181118142a52590ba5cef7ee9aa4b65fcdfb337c426ae6ae29a578d87ccd957",
     "config/GR8E69/sound_sfamplf.json": "1239395bd0bcf74a5f6fdeba51c475d4c17d002c949dea4e0a2e8674fa159574",
@@ -3376,6 +3379,9 @@
     "src/sound/ea/sclnt100.cpp": "a7a6aa1a54c2d7ec09fd22b15c7215bede243ff7397e1675fbb6b76ddf96ffe0",
     "src/sound/ea/sctlfilt.cpp": "cafad9ca9254a7586944ce20d81372d50773236e5260f7487d40f84e58a13054",
     "src/sound/ea/sdrv_frame.cpp": "bc8db4a813c492bc128ca7c01726643127925b7c56624de3297f83a603c58c4d",
+    "src/sound/ea/sdrv_mem.cpp": "33891c727cbb58ede9e9232dc02f899a5dbea2c5acfa193761c2537c0fc4c5b1",
+    "src/sound/ea/sdrv_pkt.cpp": "6d50b5b24e745d479d0c8cbcba4fd2a015fadc989e42d4616531104d7dc07d63",
+    "src/sound/ea/sdrv_pktdestroy.cpp": "f30279489af4b29cb5a552829e32b7f8939a3e84ab7efd26bb507365f12aee52",
     "src/sound/ea/sdrv_range.cpp": "f93e271293e94674979342d0e30992e3568e18a3b7107e849bee4ebd1a3f96db",
     "src/sound/ea/sdrv_timemult.cpp": "bd45aac4d1ed9c92aa8d818bbfd267d6cf11585ffdde5ad240fef327c4e88963",
     "src/sound/ea/sfamplf.cpp": "b5e0e1378b6b933600349577efcd46e525d10547f4a340f22efb78ac6441dde6",
@@ -35612,6 +35618,63 @@
       "discarded_functions": [],
       "object_sha256": "729dd4d295ad16836b090dc7f4818763b4cb8fed444f019bd5d26defea35cb74",
       "linked_sha256": "46e602cdc92f986ff702805803752441183af92ec6499c1210d5425639b3b0e5"
+    },
+    {
+      "id": "sound_sdrv_pkt",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 204,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "2f2f90a72b2c3edff834f6e8fad16acdd5155e62b4f9c2a45c6ed1c404b7e68f",
+      "linked_sha256": "16e62766eac1682a117ad311fabd6611e342485de2f13dfce4a44fa432c87f0d"
+    },
+    {
+      "id": "sound_sdrv_mem",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 548,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "079dde1c763748bcd2a88a3a142366799842d264bde876c8cbb6d1659b68ab1e",
+      "linked_sha256": "0a4fa9c951f5ddf0a38bab84927938fdbc462697a6803f6579039af0adb4b422"
+    },
+    {
+      "id": "sound_sdrv_pktdestroy",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 140,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "ec577e79d14539733b1d950b2ccbb08c2e01d606fbbe9efa5eca875827f39682",
+      "linked_sha256": "cc638b4361768bd3ac12d0ba37eda3fc6780c1f661c13fea07716ad6dea151b7"
     }
   ],
   "code_map": {
@@ -74632,38 +74695,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8021cf08",
-            "size": 8,
-            "kind": "function",
-            "name": "SNDPLATFORM_packetoverhead__Fv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8021cf10",
-            "size": 196,
-            "kind": "function",
-            "name": "SNDPLATFORM_packetplaycreate__FiPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8021cfd4",
             "size": 716,
             "kind": "function",
             "name": "SNDPLATFORM_packetplay__FiiiiiiP15SNDSAMPLEFORMATP13SNDSAMPLEATTR",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8021d2a0",
-            "size": 132,
-            "kind": "function",
-            "name": "SNDPLATFORM_packetplaydestroy__Fi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8021d324",
-            "size": 8,
-            "kind": "function",
-            "name": "SNDPLATFORM_outputlatency__Fv",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -74692,41 +74727,6 @@
             "size": 348,
             "kind": "function",
             "name": "SNDPLATFORM_stop__Fi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8021e0a0",
-            "size": 152,
-            "kind": "function",
-            "name": "SNDPLATFORM_filteradd__FiP12SNDFILTERDEF",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8021e138",
-            "size": 68,
-            "kind": "function",
-            "name": "SNDPLATFORM_memalloc__Fii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8021e17c",
-            "size": 76,
-            "kind": "function",
-            "name": "SNDPLATFORM_memfree__FiUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8021e1c8",
-            "size": 84,
-            "kind": "function",
-            "name": "SNDPLATFORM_download__FiPvT1i",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8021e21c",
-            "size": 168,
-            "kind": "function",
-            "name": "SNDPLATFORM_downloadcomplete__Fi",
             "evidence": "adjacent-compiler-markers"
           }
         ],

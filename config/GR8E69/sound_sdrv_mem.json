@@ -1,0 +1,75 @@
+{
+  "id": "sound_sdrv_mem",
+  "source": "src/sound/ea/sdrv_mem.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8021e0a0",
+      "size": 548
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDPLATFORM_filteradd__FiP12SNDFILTERDEF",
+      "address": "0x8021e0a0",
+      "size": 152,
+      "binding": 1
+    },
+    {
+      "name": "SNDPLATFORM_memalloc__Fii",
+      "address": "0x8021e138",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "SNDPLATFORM_memfree__FiUi",
+      "address": "0x8021e17c",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "SNDPLATFORM_download__FiPvT1i",
+      "address": "0x8021e1c8",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "SNDPLATFORM_downloadcomplete__Fi",
+      "address": "0x8021e21c",
+      "size": 168,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DCFlushRange": "0x802545d4",
+    "MIX_filteradd": "0x80226620",
+    "OSDisableInterrupts": "0x80257798",
+    "OSRestoreInterrupts": "0x802577c0",
+    "SNDARAM_alloc__Fi": "0x80222a00",
+    "SNDARAM_free__FUi": "0x80222bc4",
+    "SNDDRV_dmapost__FUlPvT1Uli": "0x8021b734",
+    "SNDDRV_restoredma__Fi": "0x8021b854",
+    "snddrv": "0x80410c40",
+    "sndgs": "0x804108fc"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "snddrv.c",
+  "original_file_index": 3064
+}

@@ -1,0 +1,50 @@
+{
+  "id": "sound_sdrv_pkt",
+  "source": "src/sound/ea/sdrv_pkt.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8021cf08",
+      "size": 204
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDPLATFORM_packetoverhead__Fv",
+      "address": "0x8021cf08",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SNDPLATFORM_packetplaycreate__FiPv",
+      "address": "0x8021cf10",
+      "size": 196,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDPLATFORM_memalloc__Fii": "0x8021e138",
+    "memset": "0x80266778",
+    "snddrv": "0x80410c40"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "snddrv.c",
+  "original_file_index": 3064
+}

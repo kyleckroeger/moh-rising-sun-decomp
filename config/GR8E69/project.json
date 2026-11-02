@@ -1572,7 +1572,10 @@
     "scene_ObjCreateBSGO.json",
     "ai_AIFilterPlayerVars.json",
     "ea_stream_cancel.json",
-    "ea_stream_tail.json"
+    "ea_stream_tail.json",
+    "sound_sdrv_pkt.json",
+    "sound_sdrv_mem.json",
+    "sound_sdrv_pktdestroy.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
