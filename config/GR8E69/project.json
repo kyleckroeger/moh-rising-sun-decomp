@@ -1641,7 +1641,8 @@
     "scene_TankObjectLook.json",
     "scene_TankObjectBullet.json",
     "scene_AnimObjFactoryReset.json",
-    "scene_AnimObjFactoryRelease.json"
+    "scene_AnimObjFactoryRelease.json",
+    "ea_stream_kill.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

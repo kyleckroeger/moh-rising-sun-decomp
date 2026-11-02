@@ -1,0 +1,50 @@
+{
+  "id": "ea_stream_kill",
+  "source": "src/ea/stream_kill.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8020ae94",
+      "size": 580
+    }
+  ],
+  "functions": [
+    {
+      "name": "STREAM_kill",
+      "address": "0x8020ae94",
+      "size": 580,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "STREAM_cancelrequest": "0x8020abd0",
+    "decbufferusage__FP15STREAMHEADERtagi": "0x802097ec",
+    "freerequest__FP15STREAMHEADERtagP16REQUESTSTRUCTtag": "0x802099bc",
+    "validatehandle__FiPP15STREAMHEADERtagPP12TAPSTRUCTtag": "0x8020976c"
+  },
+  "local_externals": [
+    "decbufferusage__FP15STREAMHEADERtagi",
+    "freerequest__FP15STREAMHEADERtagP16REQUESTSTRUCTtag",
+    "validatehandle__FiPP15STREAMHEADERtagPP12TAPSTRUCTtag"
+  ],
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "stream.cpp",
+  "original_file_index": 2853
+}
