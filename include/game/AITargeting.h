@@ -96,6 +96,26 @@ enum EAIHighLevelState { AIHighLevelStateUnknown = 0 };
 enum ECapability { CapabilityUnknown = 0 };
 enum ECollisionTestDirection { CollisionTestDirectionUnknown = 0 };
 class CAIBehavior;
+// The behavior base class: enable word at +8, then its table pointer at +0xc. Slot
+// names come from the original table where it names them; the pure slots are descriptive.
+class CBehavior {
+public:
+    unsigned char unknown00[8];
+    int enabled; // +0x08
+    virtual ~CBehavior();
+    virtual void PureSlot2() = 0;
+    virtual void PureSlot3() = 0;
+    virtual void PureSlot4() = 0;
+    virtual int Start() = 0;
+    virtual void Stop(bool) = 0;
+    virtual void ReleaseResources();
+    virtual int GetCapability(ECapability) = 0;
+    virtual int GetType();
+    virtual int GetCRC();
+    virtual void Enable();
+    virtual void Disable();
+    virtual int GetScriptObject();
+};
 // Method-only view of the embedded tactics module.
 class CAITactics {
 public:
@@ -153,9 +173,12 @@ public:
     CAIAreaPathFinding areaPathFinding; // +0x230
     unsigned char unknown254[0x2f0 - 0x230 - sizeof(CAIAreaPathFinding)];
     CAISplinePathModule splinePath; // +0x2f0
-    unsigned char unknown310[0x374 - 0x2f0 - sizeof(CAISplinePathModule)];
+    unsigned char unknown310[0x370 - 0x2f0 - sizeof(CAISplinePathModule)];
+    CBehavior *previousBehavior;      // +0x370
     BSObject *previousBehaviorScript; // +0x374
-    unsigned char unknown378[0x594 - 0x378];
+    CBehavior *currentBehavior;       // +0x378
+    CBehavior *nextBehavior;          // +0x37c
+    unsigned char unknown380[0x594 - 0x380];
     int cookie;          // +0x594; script-owned value (BIFunc_GetCookie/SetCookie).
     unsigned char team;  // +0x598; set by BIFunc_AISetTeam.
     unsigned char unknown599; // +0x599; 4 for soldiers, 7 for tanks and 5 for players.
@@ -221,6 +244,24 @@ public:
     void StopBehavior(bool);
     void ClearBehavior();
     int GetBehaviorCapability(ECapability);
+    CBehavior *FindBestBehavior();
+    void GetLocation(float *, float *, float *);
+    void GetLocation(CVector3 *);
+    float GetDistanceXYZReal(CAIObject *);
+    float GetDistanceXYReal(CAIObject *);
+    void *AsAISoldierObject();
+    void *AsAIPlayerObject();
+    void *AsAITankObject();
+    void OnStateChange(EAIHighLevelState, EAIHighLevelState);
+    void OnDeath();
+    void SetupTargetMatchList(aistatus_match *, int);
+    int IsCrouching() const;
+    int IsPlayer() const;
+    int CheckIncomingFlagAll(unsigned int) const;
+    int GetAIStatusVar(aistatus_var) const;
+    void AddToGlobalList();
+    void RemoveFromGlobalList();
+    void RemovePointersTo(CAIObject *);
     int GetPreviousBehaviorType();
     int GetNextBehaviorType();
     int GetNextBehaviorScript();

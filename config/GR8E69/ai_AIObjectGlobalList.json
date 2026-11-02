@@ -1,0 +1,51 @@
+{
+  "id": "ai_AIObjectGlobalList",
+  "source": "src/ai/AIObjectGlobalList.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d9c94",
+      "size": 204
+    }
+  ],
+  "functions": [
+    {
+      "name": "AddToGlobalList__9CAIObject",
+      "address": "0x800d9c94",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "RemoveFromGlobalList__9CAIObject",
+      "address": "0x800d9cb8",
+      "size": 168,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "RemovePointersTo__9CAIObjectP9CAIObject": "0x800d9d60",
+    "g_iAIObjectCount": "0x802c3448",
+    "g_paioAIObjectListStart": "0x802c344c"
+  },
+  "local_externals": [
+    "g_paioAIObjectListStart"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIObject.cpp",
+  "original_file_index": 977
+}

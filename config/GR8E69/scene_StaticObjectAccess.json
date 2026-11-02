@@ -1,0 +1,119 @@
+{
+  "id": "scene_StaticObjectAccess",
+  "source": "src/scene/StaticObjectAccess.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800a8d38",
+      "size": 724
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029ec34",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetCollisionId__C13CStaticObject",
+      "address": "0x800a8d38",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetTMLocalToWorld__C13CStaticObjectR7CMatrix",
+      "address": "0x800a8d40",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "GetPosition__C13CStaticObjectR8CVector3",
+      "address": "0x800a8d6c",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "GetRightward__C13CStaticObjectR8CVector3",
+      "address": "0x800a8dbc",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "GetForward__C13CStaticObjectR8CVector3",
+      "address": "0x800a8e0c",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "GetUpward__C13CStaticObjectR8CVector3",
+      "address": "0x800a8e5c",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "SetTMLocalToWorld__13CStaticObjectRC7CMatrix",
+      "address": "0x800a8eac",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "SetPosition__13CStaticObjectRC8CVector3",
+      "address": "0x800a8eec",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "SetBasis__13CStaticObjectRC8CVector3N21",
+      "address": "0x800a8f10",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "EnterLightVolume__13CStaticObjectP14BPDLightVolume",
+      "address": "0x800a8f70",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "ExitLightVolume__13CStaticObjectP14BPDLightVolume",
+      "address": "0x800a8fac",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "GetLightVolume__13CStaticObject",
+      "address": "0x800a8fe8",
+      "size": 36,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddVolume__19CLightVolumeManagerP14BPDLightVolume": "0x8013183c",
+    "GetVolume__C19CLightVolumeManager": "0x801319c0",
+    "RemoveVolume__19CLightVolumeManagerP14BPDLightVolume": "0x80131908",
+    "SetFromMatrix__11CQuaternionRC7CMatrix": "0x8007ce2c",
+    "SetFront__7CMatrixRC8CVector3": "0x8007ae44",
+    "SetPos__7CMatrixRC8CVector3": "0x8007ae7c",
+    "SetRight__7CMatrixRC8CVector3": "0x8007ae28",
+    "SetUp__7CMatrixRC8CVector3": "0x8007ae60",
+    "__as__7CMatrixRC7CMatrix": "0x8007aa38"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "static_obj.cpp",
+  "original_file_index": 833
+}

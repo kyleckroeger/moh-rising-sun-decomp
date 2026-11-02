@@ -1,0 +1,101 @@
+{
+  "id": "ai_AIObjectStatus",
+  "source": "src/ai/AIObjectStatus.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800dcc1c",
+      "size": 240
+    }
+  ],
+  "functions": [
+    {
+      "name": "AsAISoldierObject__9CAIObject",
+      "address": "0x800dcc1c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "AsAIPlayerObject__9CAIObject",
+      "address": "0x800dcc24",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "AsAITankObject__9CAIObject",
+      "address": "0x800dcc2c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "OnStateChange__9CAIObject17EAIHighLevelStateT1",
+      "address": "0x800dcc34",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "OnDeath__9CAIObject",
+      "address": "0x800dcc38",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "SetupTargetMatchList__9CAIObjectP14aistatus_matchi",
+      "address": "0x800dcc3c",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "IsCrouching__C9CAIObject",
+      "address": "0x800dcc40",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "IsPlayer__C9CAIObject",
+      "address": "0x800dcc48",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "CheckIncomingFlagAll__C9CAIObjectUi",
+      "address": "0x800dcc50",
+      "size": 24,
+      "binding": 1
+    },
+    {
+      "name": "GetAIStatusVar__C9CAIObject12aistatus_var",
+      "address": "0x800dcc68",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "SetAIStatusVar__9CAIObject12aistatus_vari",
+      "address": "0x800dcc8c",
+      "size": 128,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetVarValue__C9CAIStatus12aistatus_var": "0x8028399c",
+    "SetVarValue__9CAIStatus12aistatus_vari": "0x80283a80"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIObject.cpp",
+  "original_file_index": 977
+}

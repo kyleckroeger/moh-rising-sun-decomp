@@ -4,6 +4,8 @@
 #include "SceneNode.h"
 #include "AITargeting.h"
 #include "CMatrix.h"
+#include "CQuaternion.h"
+#include "LightVolumeManager.h"
 #include "CVector3.h"
 struct BSObject;
 class IVolume;
@@ -54,6 +56,18 @@ struct MotionData;
 MotionData *InitMotionData(const char *);
 class CStaticObject {
   public:
+    EClsnId GetCollisionId() const;
+    void GetTMLocalToWorld(CMatrix &) const;
+    void GetPosition(CVector3 &) const;
+    void GetRightward(CVector3 &) const;
+    void GetForward(CVector3 &) const;
+    void GetUpward(CVector3 &) const;
+    void SetTMLocalToWorld(const CMatrix &);
+    void SetPosition(const CVector3 &);
+    void SetBasis(const CVector3 &, const CVector3 &, const CVector3 &);
+    void EnterLightVolume(BPDLightVolume *);
+    void ExitLightVolume(BPDLightVolume *);
+    BPDLightVolume *GetLightVolume();
     void MarkForDestruction(int);
     void Draw(CDrawContext &);
     void BeginUpdate(float);
@@ -68,14 +82,17 @@ class CStaticObject {
     void FadeIn(float);
     void FadeOut(float);
     struct Flags {
-        unsigned int unknown_31_25 : 7;
+        unsigned int unknown_31_27 : 5;
+        unsigned int motionPlaying : 1; // Bit 26: cleared by StopMotionPlayback.
+        unsigned int unknown_25 : 1;
         unsigned int allowCollisionDamage : 1; // Bit 24.
         unsigned int pathFlag1 : 1;            // Bit 23: BIFunc_MechSetPathFlag selector 1.
         unsigned int unknown_low : 23;
     };
     unsigned char unknown_0[0x4c];
     void *model;          // +0x4c; drawing is skipped while it is null.
-    unsigned char unknown_50[0x110 - 0x50];
+    CMatrix transform;    // +0x50
+    unsigned char unknown_90[0x110 - 0x90];
     float pathScale;      // +0x110; BIFunc_MechSetPathFlag stores value / 100.
     unsigned char unknown_114[0x134 - 0x114];
     IVolume *worldVolume; // +0x134; freed by CThrownObject::CleanUp, queried for GetRadius.
@@ -84,12 +101,16 @@ class CStaticObject {
     BSObject *script;     // +0x140
     unsigned char unknown_144[0x190 - 0x144];
     CVector3 velocity;    // +0x190; CThrownObject limits its speed.
-    unsigned char unknown_1a0[0x20c - 0x1a0];
+    unsigned char unknown_1a0[0x1b0 - 0x1a0];
+    CQuaternion orientation; // +0x1b0; kept in step with the transform.
+    unsigned char unknown_1c0[0x20c - 0x1c0];
     int field_20c;        // +0x20c; CThrownObject::LimitSpeed does nothing while -1.
     unsigned char unknown_210[0x214 - 0x210];
     int maxLightPriority; // +0x214
     Flags flags;          // +0x218
     unsigned int mechFlags; // +0x21c; bits set and cleared by BIFunc_MechSetFlag.
+    unsigned char unknown_220[0x2c0 - 0x220];
+    CLightVolumeManager lightVolumes; // +0x2c0
 };
 
 class CAnimObject {

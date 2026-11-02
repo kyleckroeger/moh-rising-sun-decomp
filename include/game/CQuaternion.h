@@ -4,8 +4,10 @@
 // AI-assisted reconstruction; see docs/Geometry.md. Storage names are descriptive.
 #include "CMatrix.h"
 
+class CMatrix;
 class CQuaternion {
 public:
+    void SetFromMatrix(const CMatrix &);
     float w, x, y, z;
 
     void Set(float x, float y, float z, float w);
