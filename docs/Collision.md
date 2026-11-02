@@ -43,6 +43,15 @@ strips it, but its literal stays: the word at `0x802a8490` between the fiber lin
 constructor's and `Create`'s literals belongs to the fiber's. The fiber manifest records
 it as a discarded function, as `strip_unused` documents in [Lua.md](Lua.md).
 
+These discarded inline constructors are inferred from layout (the orphan literal and the
+order of the fiber and capsule files), not proven by any symbol.
+
+`IVolume`'s virtuals are all inline: they sit in table order in the linker's weak-code
+region at `0x8027982c`, away from any file's own methods. `IVolume.h` keeps its
+`#pragma interface`, as the other volume headers do so that a fragment does not emit
+them, and `volume_defaults.cpp` emits them with `#pragma implementation`. That pragma
+pair and the file are project arrangements: the original's file for these is unknown.
+
 ## Contacts and the test driver
 
 `CCollision` is 36 bytes. Contacts come from `CCollision::ms_contactPool`, over the 300
@@ -50,7 +59,8 @@ it as a discarded function, as `strip_unused` documents in [Lua.md](Lua.md).
 the word at `+20` to the separation; copying and merging set that word to zero first so
 the stored values are not adjusted twice. `Test` pads both volumes' radii by
 `LARGEST_MOVE_PER_TICK`, runs the test and restores them, and sets the function-local
-`isCSFWarningEnabled.6234` after a checked test. `SClsnContactPool` and its inline
+`isCSFWarningEnabled.6234` after a checked test. The source names that local with an `__asm__` label, so the
+compiler's own number is kept. `SClsnContactPool` and its inline
 helpers are project names: no symbol records the pool's type.
 
 ## Not reconstructed
@@ -59,3 +69,10 @@ helpers are project names: no symbol records the pool's type.
 `SceneNode.h` declares out of line, and stays original context. The sphere and box
 tests with long vector arithmetic, the sphere's `TestVisibility` and line test, and
 the CDB object and triangle tests also remain.
+
+## File attributions
+
+`cdbobject_head`'s `original_file` and its index 533 were chosen from the file symbol's
+name (`cdbobject.cpp`), not from the code map, which gives that address range no file.
+`csg_volume` and `animated_volume_tests` carry the file symbols 1336 and 1325 in the same
+way.

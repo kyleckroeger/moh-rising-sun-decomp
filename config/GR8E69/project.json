@@ -1468,7 +1468,8 @@
     "sound_sfrsf_init.json",
     "ea_rcmp2real.json",
     "sound_salloc.json",
-    "sound_sbvalid.json"
+    "sound_sbvalid.json",
+    "volume_defaults.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

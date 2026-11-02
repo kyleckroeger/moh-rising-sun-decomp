@@ -1,6 +1,7 @@
 #ifndef GAME_EAGL_TAR_H
 #define GAME_EAGL_TAR_H
 #include "EAGLMemory.h"
+#include "PlacementNew.h"
 #include "EAGLDynamicLoader.h"
 #include <dolphin/gx/GXTexture.h>
 class SHAPE;
@@ -85,7 +86,6 @@ class TAR {
 };
 int PrintMessage(int, const char *, ...);
 } // namespace EAGL
-inline void *operator new(unsigned int, void *p) { return p; }
 namespace EAGLInternal {
 extern unsigned char failed_shape[16464];
 static inline const SHAPE *GetFailedShape() {

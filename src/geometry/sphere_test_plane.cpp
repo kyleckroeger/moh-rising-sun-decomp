@@ -24,7 +24,7 @@ EClsnState CVolSphere::TestCollision(const CPlane &plane, CCollision &collision,
             contact.position.y = plane.normal.y * depth;
             contact.position.z = plane.normal.z * depth;
             contact.position += center;
-            CVector3 &normal = contact.normal;
+            CVector3 &normal = contact.normal; // Plain reference: reproduces the code shape.
             normal.x = -plane.normal.x;
             normal.y = -plane.normal.y;
             normal.z = -plane.normal.z;

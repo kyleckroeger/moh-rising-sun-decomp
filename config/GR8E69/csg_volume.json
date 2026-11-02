@@ -170,5 +170,7 @@
     "_vt.7IVolume": "0x802e1c38"
   },
   "discarded_functions": [],
-  "undefined_in_discarded_code": []
+  "undefined_in_discarded_code": [],
+  "original_file": "csg_volume.cpp",
+  "original_file_index": 1336
 }

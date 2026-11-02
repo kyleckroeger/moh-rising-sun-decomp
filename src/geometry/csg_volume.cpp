@@ -275,7 +275,7 @@ void CCSGVolume::GetExtents(CVector3 &low, CVector3 &high) const {
         if (volume) {
             volume->GetExtents(subLow, subHigh);
             // A named reference reproduces the saved address register the original keeps.
-            CVector3 &lowRef = subLow;
+            CVector3 &lowRef = subLow; // Plain reference: reproduces the code shape.
             if (!(subLow.x >= low.x))
                 low.x = subLow.x;
             if (!(subLow.y >= low.y))

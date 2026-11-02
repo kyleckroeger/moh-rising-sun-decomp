@@ -69,7 +69,7 @@ void CCollisionVolume::HandleBulletCollision(CBullet *bullet, const CCollision &
     else
         event->shooter = 0;
     CVector3 hitDirection;
-    CVector3 &direction = hitDirection;
+    CVector3 &direction = hitDirection; // Plain reference: reproduces the code shape.
     CVector3 forward;
     CVector3 right;
     bullet->GetForward(direction);

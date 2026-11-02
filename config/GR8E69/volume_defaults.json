@@ -1,0 +1,157 @@
+{
+  "id": "volume_defaults",
+  "source": "src/geometry/volume_defaults.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8027982c",
+      "size": 188
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80299d5c",
+      "size": 4
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.7IVolume",
+      "address": "0x802e1c38",
+      "size": 168,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "_._7IVolume",
+      "address": "0x8027982c",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "Create__C7IVolume",
+      "address": "0x80279860",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "TransformedCopy__7IVolumeRC7IVolumeRC7CMatrix",
+      "address": "0x80279868",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C7IVolumeRC7IVolumeR10CCollisionb",
+      "address": "0x8027986c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C7IVolumeRC7CVolBoxR10CCollisionb",
+      "address": "0x80279874",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C7IVolumeRC10CVolSphereR10CCollisionb",
+      "address": "0x8027987c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C7IVolumeRC11CVolCapsuleR10CCollisionb",
+      "address": "0x80279884",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C7IVolumeRC10CCDBObjectR10CCollisionb",
+      "address": "0x8027988c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C7IVolumeRC9CVolFiberR10CCollisionb",
+      "address": "0x80279894",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C7IVolumeRC15CAnimatedVolumeR10CCollisionb",
+      "address": "0x8027989c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C7IVolumeRC12CWorldVolumeR10CCollisionb",
+      "address": "0x802798a4",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C7IVolumeRC8CVector3R10CCollisionb",
+      "address": "0x802798ac",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C7IVolumeRC6CLine3R10CCollisionb",
+      "address": "0x802798b4",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C7IVolumeRC6CPlaneR10CCollisionb",
+      "address": "0x802798bc",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C7IVolumeRC9CTriangleR10CCollisionb",
+      "address": "0x802798c4",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "TestVisibility__C7IVolumeR12CDrawContext",
+      "address": "0x802798cc",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetExtents__C7IVolumeR8CVector3T1",
+      "address": "0x802798d4",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "GetRadius__C7IVolume",
+      "address": "0x802798d8",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "SetRadius__7IVolumef",
+      "address": "0x802798e4",
+      "size": 4,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__builtin_delete": "0x801a8990"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

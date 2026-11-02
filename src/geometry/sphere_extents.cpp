@@ -5,8 +5,8 @@
 void CVolSphere::GetExtents(CVector3 &low, CVector3 &high) const {
     const float r = radius;
     CVector3 extent(r, r, r);
-    CVector3 &e = extent;
-    const CVector3 &c = center;
+    CVector3 &e = extent; // Plain reference: reproduces the code shape.
+    const CVector3 &c = center; // Plain reference: reproduces the code shape.
     low.x = center.x - e.x;
     low.y = c.y - e.y;
     low.z = c.z - e.z;
