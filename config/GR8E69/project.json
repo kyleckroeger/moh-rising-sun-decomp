@@ -1325,8 +1325,6 @@
     "box_test_triangle.json",
     "animated_volume_tests.json",
     "world_volume_tests.json",
-    "fiber_destructor.json",
-    "fiber_test_dispatch.json",
     "fiber_test_triangle.json",
     "capsule_destructor.json",
     "capsule_test_generic.json",
@@ -1352,7 +1350,16 @@
     "player_halt.json",
     "player_move.json",
     "player_axes.json",
-    "ea_filesys_main.json"
+    "ea_filesys_main.json",
+    "fiber_destructor.json",
+    "fiber_test_dispatch.json",
+    "fiber_test_fiber.json",
+    "capsule_radius.json",
+    "cdbobject_head.json",
+    "cdbobject_extents.json",
+    "cdbgeom_box_tests.json",
+    "cdbgeom_box_fiber.json",
+    "cdbgeom_box_forward.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

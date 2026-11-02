@@ -1,0 +1,55 @@
+{
+  "id": "cdbobject_head",
+  "source": "src/geometry/cdbobject_head.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80073030",
+      "size": 52
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029ae44",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "__10CCDBObjectP3CDB",
+      "address": "0x80073030",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "DisablePassThru__10CCDBObjectb",
+      "address": "0x80073058",
+      "size": 12,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_vt.10CCDBObject": "0x802e2d20",
+    "g_bDisablePassThru": "0x802c1cf0"
+  },
+  "local_externals": [
+    "g_bDisablePassThru"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "cdbobject.cpp",
+  "original_file_index": 533
+}

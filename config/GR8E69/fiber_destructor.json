@@ -14,12 +14,17 @@
     "include/newlib-compiler",
     "include/newlib"
   ],
-  "strip_unused": false,
+  "strip_unused": true,
   "sections": [
     {
       "name": ".text",
       "address": "0x80140e54",
       "size": 52
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a8490",
+      "size": 4
     },
     {
       "name": ".gnu.linkonce.d._vt.9CVolFiber",
@@ -59,6 +64,8 @@
     "__builtin_delete": "0x801a8990",
     "_vt.7IVolume": "0x802e1c38"
   },
-  "discarded_functions": [],
+  "discarded_functions": [
+    "__9CVolFiber"
+  ],
   "undefined_in_discarded_code": []
 }

@@ -6,6 +6,8 @@
 
 class CCDBObject : public IVolume {
   public:
+    CCDBObject(CDB *);
+    static void DisablePassThru(bool);
     virtual ~CCDBObject();
     virtual EClsnState TestCollision(const IVolume &, CCollision &, bool) const;
     virtual EClsnState TestCollision(const CVolBox &, CCollision &, bool) const;
@@ -21,6 +23,10 @@ class CCDBObject : public IVolume {
     virtual EClsnState TestCollision(const CTriangle &, CCollision &, bool) const;
     virtual void GetExtents(CVector3 &, CVector3 &) const;
     virtual EClsnState TestCollision(const CCSGVolume &, CCollision &, bool) const;
+    CDB *database;
+    unsigned char unknown_08[8];
+    CVector3 extentLow;
+    CVector3 extentHigh;
 };
 
 #endif

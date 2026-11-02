@@ -1,0 +1,49 @@
+{
+  "id": "cdbobject_extents",
+  "source": "src/geometry/cdbobject_extents.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80073aac",
+      "size": 244
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029ae5c",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetExtents__C10CCDBObjectR8CVector3T1",
+      "address": "0x80073aac",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C10CCDBObjectRC9CVolFiberR10CCollisionb",
+      "address": "0x80073b18",
+      "size": 136,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetLine__C9CVolFiber": "0x801412f0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

@@ -18,11 +18,28 @@
   "sections": [
     {
       "name": ".text",
-      "address": "0x801412f0",
-      "size": 860
+      "address": "0x8014128c",
+      "size": 960
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a84a0",
+      "size": 8
     }
   ],
   "functions": [
+    {
+      "name": "GetStart__C9CVolFiber",
+      "address": "0x8014128c",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "GetEnd__C9CVolFiber",
+      "address": "0x801412bc",
+      "size": 52,
+      "binding": 1
+    },
     {
       "name": "GetLine__C9CVolFiber",
       "address": "0x801412f0",

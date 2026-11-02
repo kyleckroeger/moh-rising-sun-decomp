@@ -7,6 +7,13 @@
 
 class CVolFiber : public IVolume {
   public:
+    CVolFiber();
+    CVolFiber(const CVolFiber &other);
+    CVolFiber(const CVector3 &, const CVector3 &);
+    CVolFiber(const CLine3 &);
+    void Set(const CVector3 &, const CVector3 &);
+    CVector3 GetStart() const;
+    CVector3 GetEnd() const;
     virtual ~CVolFiber();
     virtual IVolume *Create() const;
     virtual void TransformedCopy(const IVolume &, const CMatrix &);
@@ -29,5 +36,7 @@ class CVolFiber : public IVolume {
     unsigned char unknown_04[12];
     CLine3 line;
 };
+
+inline CVolFiber::CVolFiber() {}
 
 #endif

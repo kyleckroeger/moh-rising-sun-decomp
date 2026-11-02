@@ -1,0 +1,38 @@
+{
+  "id": "fiber_test_fiber",
+  "source": "src/geometry/fiber_test_fiber.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8014196c",
+      "size": 112
+    }
+  ],
+  "functions": [
+    {
+      "name": "TestCollision__C9CVolFiberRC9CVolFiberR10CCollisionb",
+      "address": "0x8014196c",
+      "size": 112,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetLine__C9CVolFiber": "0x801412f0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

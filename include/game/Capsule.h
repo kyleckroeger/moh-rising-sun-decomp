@@ -3,6 +3,7 @@
 #ifndef GAME_CAPSULE_H
 #define GAME_CAPSULE_H
 #include "Volume.h"
+#include "CLine3.h"
 
 class CVolCapsule : public IVolume {
   public:
@@ -26,6 +27,9 @@ class CVolCapsule : public IVolume {
     virtual float GetRadius() const;
     virtual void SetRadius(float);
     virtual EClsnState TestCollision(const CCSGVolume &, CCollision &, bool) const;
+    unsigned char unknown_04[8];
+    float radius;
+    CLine3 line;
 };
 
 #endif

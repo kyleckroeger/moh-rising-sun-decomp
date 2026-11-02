@@ -6,7 +6,7 @@
 
 class CVolBox : public IVolume {
   public:
-    virtual ~CVolBox();
+    virtual ~CVolBox() {}
     virtual IVolume *Create() const;
     virtual void TransformedCopy(const IVolume &, const CMatrix &);
     virtual EClsnState TestCollision(const IVolume &, CCollision &, bool) const;
