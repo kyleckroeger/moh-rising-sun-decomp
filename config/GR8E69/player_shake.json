@@ -1,0 +1,50 @@
+{
+  "id": "player_shake",
+  "source": "src/player/PlayerShake.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800b4470",
+      "size": 700
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029f204",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "ShakeCamera__13CPlayerObjectRfT1f",
+      "address": "0x800b4470",
+      "size": 700,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Evaluate__Q213CPlayerObject12CCameraShakeRfT1": "0x800b8e18",
+    "MP_SPEED_SCALE": "0x802c25d4",
+    "MathFunRandomReal__Fff": "0x80133a54",
+    "PHYS_RUNSPEED": "0x802c25dc",
+    "Update__Q213CPlayerObject12CCameraShakef": "0x800b8ed8",
+    "g_bInMultiplayerMode": "0x802c1b30"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}

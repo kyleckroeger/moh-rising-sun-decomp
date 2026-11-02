@@ -1598,7 +1598,12 @@
     "cdbobject_line_tri_group.json",
     "box_create.json",
     "capsule_test_plane.json",
-    "player_death.json"
+    "player_death.json",
+    "player_switch.json",
+    "player_dump.json",
+    "player_shake.json",
+    "player_cycle.json",
+    "player_enable.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
