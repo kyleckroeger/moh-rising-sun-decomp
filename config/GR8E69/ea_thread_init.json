@@ -1,0 +1,46 @@
+{
+  "id": "ea_thread_init",
+  "source": "src/ea/thread_init.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80217b1c",
+      "size": 40
+    }
+  ],
+  "functions": [
+    {
+      "name": "THREAD_init",
+      "address": "0x80217b1c",
+      "size": 40,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "InitAlarm__Fv": "0x802177e4",
+    "OSGetCurrentThread": "0x80259d90",
+    "g_thMain": "0x80451f40"
+  },
+  "sda_externals": [
+    "g_thMain"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "threads.cpp",
+  "original_file_index": 2984
+}

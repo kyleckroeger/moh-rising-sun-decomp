@@ -1651,7 +1651,11 @@
     "sphere_test_point.json",
     "capsule_test_sphere.json",
     "capsule_test_point.json",
-    "fiber_test_point.json"
+    "fiber_test_point.json",
+    "ea_memtail.json",
+    "ea_inittmr_a.json",
+    "ea_inittmr_b.json",
+    "ea_thread_init.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
