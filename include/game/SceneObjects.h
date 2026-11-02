@@ -429,6 +429,7 @@ class CSoldierObject {
     void EnableAimModifier(bool);
     float GetLipsynchBlendWeight();
     void SetCurrentGag(int, int);
+    void OnLocomotionEnd();
     void Destroy();
     CAIDoodad *GetAIDoodad();
     const CAIDoodad *GetAIDoodad() const;

@@ -72,19 +72,26 @@ views and does not assert the original class layouts or inheritance order.
 
 ## Parked
 
-`Init` (2 diffs: the `+0x214` and `+0x110` stores swap), `CalculateMovementTime` (27:
-register allocation of the three times) and `AttemptUpdate` (29: the three script-flag
-tests stay separate in the original, with a register copy of the flags; merged or
-cross-jumped forms do not reproduce it). `CHierObject::AttemptUpdateFromMotion` shares the
-flag-test problem, `CHierObject::GetWorldLinearVelocity` has 19 diffs,
-`CTankObject::AddWeapon` 5 (register choice for the bullet class), and `AllocateBoxVolume`
-would need `CVolBox` data members that `Box.h` does not declare. `CStaticObject::AnimUpdate`
-is one `fmr` away (the period and its conversion share a register in my build),
-`AttemptAnimMotionUpdate` differs by one scheduled load (3 diffs), and
-`CAnimObject::BeginUpdate` keeps its local matrix address in a saved register where the
-original rematerializes it. `CSoldierObject::CleanUp`, `DetachObject` and
-`GetBulletEmitterMatrix` compute attach-slot addresses as `(this + i * 112) + offset`, which
-no array or pointer form tried so far reproduces.
+These still differ, with instruction differences in brackets; drafts are kept outside the
+tree and a later reader should expect them to be close rather than solved.
+
+- `CStaticObject::Init` (2): the `+0x214` and `+0x110` stores swap.
+- `CStaticObject::CalculateMovementTime` (27): register allocation of the three times.
+- `CStaticObject::AnimUpdate`: one missing `fmr`, which shifts the rest; the period and its
+  conversion share a register in this build.
+- `CStaticObject::AttemptAnimMotionUpdate` (3): one scheduled load.
+- `CStaticObject::StartMotionPlayback` (60): the key-frame temporaries.
+- `CAnimObject::BeginUpdate`, `DetectGround` and `Yaw`: a local's address stays in a saved
+  register where the original rematerializes it.
+- `CHierObject::GetWorldLinearVelocity` (19) and `CTankObject::AddWeapon` (5): register choice.
+- `AllocateBoxVolume`: needs `CVolBox` data members that `Box.h` does not declare.
+- `CSoldierObject::CleanUp`, `DetachObject` and `GetBulletEmitterMatrix`: the original
+  computes attach-slot addresses as `(this + i * 112) + offset`; no array or pointer form
+  tried reproduces it.
+- `CAITankObject::SetInitialStatus` and `UpdateStatus`: a 15.0 literal sits at a 4-byte
+  boundary before the double. A `static const float` in a `.rodata.*` section is folded back
+  into the pool, so the subsection mapping cannot place it.
+- `NullDeallocateArchiveBuffer` has local binding and no caller in a matched unit.
 
 The script-motion bits in `CStaticObject` are tested through inline accessors that each return
 one bit; without them `||` merges the tests into one mask. The accessor names are descriptive.

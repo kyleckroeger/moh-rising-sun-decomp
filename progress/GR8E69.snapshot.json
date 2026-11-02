@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 871308,
+    "matching_code_bytes": 871312,
     "total_executable_code_bytes": 2492032,
-    "percent": 34.96375648466793,
+    "percent": 34.96391699625045,
     "categories": {
-      "reconstructed_game": 479092,
+      "reconstructed_game": 479096,
       "restored_library": 392216
     },
-    "matching_functions": 4189
+    "matching_functions": 4190
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -792,7 +792,7 @@
     "config/GR8E69/player_weapon_overlays.json": "172965adf4a7a763b5932a9744ff75bbf384ef314e25785dee9d7617044a8d5b",
     "config/GR8E69/player_weapon_selectable.json": "c7e3f09ad1510713bfd88ee468db0fcb4c6ef18b3b89bdb414b32ea863b25668",
     "config/GR8E69/player_weapon_shutdown.json": "f90a42342572d125630e7ac3647193288c13301a5309bcdc49cc350364bc2b60",
-    "config/GR8E69/project.json": "59c02ec8e8c206d2b441f9db3e689681e50dba54a1f1e4aca1f0d71693ce252d",
+    "config/GR8E69/project.json": "c295ada6738c55a1814d5e857c83efbfabe2d92f53b2fcfe5b378d5d00127432",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -857,6 +857,7 @@
     "config/GR8E69/scene_SoldierFade.json": "c03a22c5ea1bdfcad3b3d869daa003bf2da46506885175e2112d756ed26a61e9",
     "config/GR8E69/scene_SoldierGag.json": "f0e1d4e256060d1d9192900896d1aa42f9f1b436ecfb5605d0b8c0c968d3266f",
     "config/GR8E69/scene_SoldierLipsync.json": "52fe3dea9826e84b29b295ff891c63b49c4b2d370edb3d65a8b78643ff5bc7c2",
+    "config/GR8E69/scene_SoldierLocomotion.json": "e0066b3b23ae3d04b4448083f393012f9deb139ee4b706b0832dfb4e0cc7f20b",
     "config/GR8E69/scene_SoldierLook.json": "164942c73d8902c36d17047ad0128c21f7b72185178213d491072ea10782392f",
     "config/GR8E69/scene_SoldierUpdate.json": "7d602a1bb517faecae052fdb34db658100aefc12bdd24d8b82a19cd790a5399b",
     "config/GR8E69/scene_SoldierWeapons.json": "7bba8922322199afa0f9c92dffdde7994fd91c628390517e110ed4f4993fab79",
@@ -1927,7 +1928,7 @@
     "include/game/PlacementNew.h": "49819284bb2cc2ffb2039d459ce855bd5a233bcfff0a6412ffe0bda02cd616c5",
     "include/game/PropertyData.h": "952ae5ac78dc17e43053a7b905a8e58499a1faa3c7d0721269329f639095b22a",
     "include/game/SceneNode.h": "a444643b4e6baf38b7ca6c33445362b716947571d440a21f13c7b0917d60f57f",
-    "include/game/SceneObjects.h": "6e91a39df78a22adc9d0bfc32a6d04824ed6647601893e184bea81dc04cb13ce",
+    "include/game/SceneObjects.h": "e8afe9c9f467cc3d85cb6741869e232884b3aa9a6264d2a60b1094d3c15c51ca",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
     "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
     "include/game/ScriptMachine.h": "ca23b124331e6be9f43fc9e17237cbdb7851ff2941192e76b4aa3f8086db44bb",
@@ -3038,6 +3039,7 @@
     "src/scene/SoldierFade.cpp": "86ee08176d76986c82f7a597f69139f89a25ecce907744c1569bfa79eb1a608f",
     "src/scene/SoldierGag.cpp": "56f9895ace50b4581882e46c99ff281ea33e6cb5bc9c2d5fec8f5ca8994c6708",
     "src/scene/SoldierLipsync.cpp": "d6b2233028a4f8452cf2ad494fd5406e75442149dd6cb1f6d20b0351eea3b418",
+    "src/scene/SoldierLocomotion.cpp": "d0dfb05a2a6301e7ecfab1531d45b276ade8a014d0553a3f1ad2c821906cd017",
     "src/scene/SoldierLook.cpp": "320943220c3a79dbfde30ec40d4db5694fe50e80a21160be6ed155a494b433d9",
     "src/scene/SoldierUpdate.cpp": "72cfdecf336d90cd1fec4414a8b869dbe014ecf74e9b5a5f8217f4cf6c28e399",
     "src/scene/SoldierWeapons.cpp": "97cca0c9c31f68256d98a373b12353076d64d16f2ab03012c8c47a706c0895af",
@@ -37073,6 +37075,24 @@
       "discarded_functions": [],
       "object_sha256": "0b64577468348617584a7399131e65a957e7f5fed3fe652dddc7ee0ddbf8c850",
       "linked_sha256": "ad806c7f66221d1f40928404318caeb0e6e2ca56fb718ac31890273412de08d5"
+    },
+    {
+      "id": "scene_SoldierLocomotion",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 4,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "0a8e5110ae3c9e0136cb5f6757ec52e3e5afd113c3fb22e017ffd6f4eb77982c",
+      "linked_sha256": "bfd59a1864f20248c6c2ee5402523bdd0a09c358bb63ad5b0a68530a552fe53a"
     }
   ],
   "code_map": {
@@ -49262,13 +49282,6 @@
             "size": 2184,
             "kind": "function",
             "name": "GetValue__14CSoldierObjectPCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c1c28",
-            "size": 4,
-            "kind": "function",
-            "name": "OnLocomotionEnd__14CSoldierObject",
             "evidence": "adjacent-compiler-markers"
           },
           {

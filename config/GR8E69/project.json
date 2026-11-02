@@ -1644,7 +1644,8 @@
     "scene_AnimObjFactoryRelease.json",
     "ea_stream_kill.json",
     "thrown_bullet_mark.json",
-    "thrown_bullet_type.json"
+    "thrown_bullet_type.json",
+    "scene_SoldierLocomotion.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
