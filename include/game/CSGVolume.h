@@ -25,6 +25,7 @@ class CCSGVolume : public IVolume {
     virtual void GetExtents(CVector3 &, CVector3 &) const;
     virtual EClsnState TestCollision(const CCSGVolume &, CCollision &, bool) const;
     void Init(int, CHierObject *);
+    EClsnState CheckContacts(int *, float *, CCollision *, int, CCollision &, bool) const;
     CHierObject *object;
     int index;
 };

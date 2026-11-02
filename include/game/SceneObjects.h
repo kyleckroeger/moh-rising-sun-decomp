@@ -160,8 +160,10 @@ class CSoldierObject {
 // Inline in the original: the soldier's current weapon slot as a scene node.
 inline ISceneNode *CurrentWeaponNode(CSoldierObject *soldier) { return (ISceneNode *)soldier->weapons[soldier->currentWeaponSlot]; }
 
+class IVolume;
 class CHierObject {
   public:
+    IVolume *GetSubVolume(int) const;
     void RegisterBulletDamage(int, int, int, float);
     float GetBulletDamageMultiplierByClass(int, int);
     CStaticObject *GetSubObject(int);

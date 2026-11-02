@@ -20,25 +20,54 @@ class CWorldVolume;
 class CCSGVolume;
 class CHierObject;
 class CDB;
-class SClsnContact;
 
 // The name is a return type recorded in the template symbols
 // TestCollisionWithSubVolumes__H1Z...; its values are not recovered by name: the
 // sphere tests return 1 when apart and 2 on contact.
 enum EClsnState {};
 
-// The bit at +16 and the result word at +24 are established by the volume tests;
-// their names are descriptive and the other storage is unknown.
+// 44 bytes as stored by AddContact, plus the link it fills at +44. The field
+// names are descriptive; the separation is adjusted by CCollision's word at +20.
+struct SClsnContact {
+    CVector3 normal;
+    CVector3 position;
+    float separation;
+    int feature;
+    int subVolume;
+    SClsnContact *next;
+};
+
+// 36 bytes (CCSGVolume strides by 36). Field names are descriptive; the two words
+// at +0 are what SwapOrder exchanges, and the contacts form a list through +44.
 class CCollision {
   public:
+    CCollision();
+    CCollision(const CCollision &);
+    ~CCollision();
+    CCollision &operator=(const CCollision &);
     void SwapOrder();
     void AddContact(const SClsnContact &);
+    void ClearContacts();
+    // Descriptive inline; the volume tests raise the result in this shape.
+    void RaiseResult(int value) {
+        if (value > result)
+            result = value;
+    }
 
-    unsigned char unknown_00[16];
+    void *first;
+    void *second;
+    float unknown_08;
+    float depth;
     unsigned int lineTest : 1;
-    unsigned int unknown_10 : 31;
-    unsigned char unknown_14[4];
+    unsigned int unknown_10a : 1;
+    unsigned int unknown_10b : 2;
+    unsigned int unknown_10c : 1;
+    unsigned int unknown_10d : 1;
+    unsigned int unknown_10e : 26;
+    float separationOffset;
     int result;
+    SClsnContact *contacts;
+    int contactCount;
 };
 
 // The virtual functions are declared in the order of _vt.7IVolume, whose entries

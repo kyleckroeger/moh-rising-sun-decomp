@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 767936,
+    "matching_code_bytes": 772644,
     "total_executable_code_bytes": 2492032,
-    "percent": 30.81565565771226,
+    "percent": 31.00457779033335,
     "categories": {
-      "reconstructed_game": 375720,
+      "reconstructed_game": 380428,
       "restored_library": 392216
     },
-    "matching_functions": 3289
+    "matching_functions": 3305
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -199,8 +199,7 @@
     "config/GR8E69/cdbobject_test_generic.json": "ace4e2c8df0ca873cf8df71e0172a6346161af8147b510af2466d288153c76c2",
     "config/GR8E69/cdbobject_test_zero.json": "27704aea532cd93d02d9709d0ba44efe94e5f4f096b8f8212eeec073739782b0",
     "config/GR8E69/crc.json": "d29c0ef0d8149a361db85a37711abcf340764c87356e4ddb75ed5bb24c982792",
-    "config/GR8E69/csg_volume_init.json": "da69d77cef6ed690c9e6aa7688a50c9b73808bf9b0f567bcf794347ac87e58b5",
-    "config/GR8E69/csg_volume_test_generic.json": "98249088b95f8ed74ce9d0fa203ee7910a8e1fd5aa979c9e4ff10e8473eae2fc",
+    "config/GR8E69/csg_volume.json": "f1af5427760c20e9a0173de6de17dcd235184c9829d94292eeca3241b3cc5724",
     "config/GR8E69/dolphin-network-source.json": "6b039c8ef3fc502a7441ab8f55160567fd2facec6c12d818739c3bc7fd741b82",
     "config/GR8E69/dolphin-source.json": "00e4890e3bb570018abbacc62a7beee8052c2ef4f115363b1716785b62884cf1",
     "config/GR8E69/dsp.json": "bcc4a05a8ec25869e7675234c297eb8243e9a2e03983f64bf5e7040c7a897cd7",
@@ -680,7 +679,7 @@
     "config/GR8E69/player_path_controls.json": "a5a585ed38c40cd299ab995320748f8e6777003f8cc885f5376c7e440dc2b3b7",
     "config/GR8E69/player_spline_position.json": "5b4aa80de0af602d8d0cde27f43b24848fd3a5ad92b1972f1900f8f256617888",
     "config/GR8E69/player_spline_tangent.json": "36eccc91b26a0f0558ee6f02c6e52398927527bf754f986e8d6db6404022d9b8",
-    "config/GR8E69/project.json": "15301aaa1a8602fc0a802532c0e8a7bc909c5173fcb41ef8f69116ba45bf60eb",
+    "config/GR8E69/project.json": "e6bc92c2f8e0e8ce9130ad4578bc4b97c09b6c2fb7063ddbafc5daf561c79f21",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
     "config/GR8E69/projectile_exclusion_pair.json": "99afd0db09aa6eccc73fda17bb9ac1d24a6fe107780f8cf54fb758360cd20ef0",
@@ -1547,7 +1546,7 @@
     "include/game/CMatrix.h": "0a1cd7c02e0d72a241d00c861f92cf720b93960f3e96da8dea1f370ee8be27f9",
     "include/game/CQuaternion.h": "ac6e158f9aec2448a2f5bbbc84f1e7f4337ff3fc49491b37d809374c550d8457",
     "include/game/CRC.h": "bcd5ed5667f902cc07c69d8d1b40e2e45f1f90b7d665c1ad3063fa61aadebbb6",
-    "include/game/CSGVolume.h": "c546d3d34fd12275bfb0c9bf9daa4b57e304e931c8a9eaeb502b550bb0eb0615",
+    "include/game/CSGVolume.h": "4e1b74888a25e46d47449afbc3081c2474e8104e59cfd1ee11c1e5e6b440cb23",
     "include/game/CVector3.h": "3ccdc2cecbae1dbd45758a8709336f7fc728a43f35dd60f664f329075db5af09",
     "include/game/Camera.h": "c044f907aca20f15af89cc5ba3657b51664d7f19a9b75c1d9b0fd185b7ee0900",
     "include/game/CameraShake.h": "02e614df140f650699fa467addceb6db92e065ba6fbedfeb65fdab5023470ffb",
@@ -1622,7 +1621,7 @@
     "include/game/ParticleRecipe.h": "04bba33839dcdae3132d1316e831585288f74ef842a5b01c6f6d6c37929ee61d",
     "include/game/PropertyData.h": "952ae5ac78dc17e43053a7b905a8e58499a1faa3c7d0721269329f639095b22a",
     "include/game/SceneNode.h": "1a6f0b01e88bda21ecb5b0ae8f4f3ad50df6422427adb3f5f52ea1c648a50fe4",
-    "include/game/SceneObjects.h": "e008d65c1e70aeb394082cc588fc08ff9b10fe505044eaf27d3193ff03ba5bc4",
+    "include/game/SceneObjects.h": "93082393ae913cd3a16b2e0c3b7a1a25a6a3fb472b0b996b971062464f296e5f",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
     "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
     "include/game/ScriptMachine.h": "ca23b124331e6be9f43fc9e17237cbdb7851ff2941192e76b4aa3f8086db44bb",
@@ -1642,7 +1641,7 @@
     "include/game/TevStage.h": "47aaf3de5425dace0c30e2852896a9494f78ab4a4dcaad6be03d4aa4204d7466",
     "include/game/TevStageInlines.h": "03b19716c4d88b4eb2f3c74cdf2040ca0bb6c43e842d1eefc2c8bd148a278645",
     "include/game/TriggerObject.h": "73e70d537a184c92ad5f8f0e10b773f5efe3306ce871a82852a3c41398f7418b",
-    "include/game/Volume.h": "acf56247de89263e82e431a1e06e581ba33251bb436be8229ea4d57e94eac64d",
+    "include/game/Volume.h": "b3bc1d3f5dc8d071dd5263e51bf6a517dc455b5c108d336966032b4ecdba8df1",
     "include/game/Weapon.h": "d8d9930cfad9bab9e7430ac7dd79ddfd55c7507ee0af7c7203e5d348a1b72c42",
     "include/game/WorldObject.h": "42b3aea62c8f901dc28efdec6da40b0c2a9ff8a32e667ddb2d8d53cbefa87c16",
     "include/game/WorldVolume.h": "d07bc9c7bb52a28e93b95f9be3f31fce0189789f1d62b671f0fca917c26d24d0",
@@ -2236,7 +2235,7 @@
     "src/frontend/uppercase.cpp": "58d80513a4f76209e1895c6943d7e05837625be3bd2687efe32159afd23f70dd",
     "src/game/string_80277f18.cpp": "b6c79191f3a19d54855216cdbc6cf512f4fa474cc60d95837b45a4acec64016c",
     "src/geometry/animated_volume_tests.cpp": "404f5dd5c9abe93b7d9b92de168bd1c4b7abab3b0a1c1692b917363dde70ff8d",
-    "src/geometry/box_test_dispatch.cpp": "151bbbfe6ca4f7e7931e54091c8e0110f798fa16bbb0226958ba36cf5c4620b6",
+    "src/geometry/box_test_dispatch.cpp": "624e77fe5ee294e5bc2c364225cad880fa6a1b0e5c6566d85150cf467dafd0ed",
     "src/geometry/box_test_generic.cpp": "12f0577f0bffce624b57e5b34d9d4974105eedb024a3ac17a25a75899ee34ff1",
     "src/geometry/box_test_triangle.cpp": "5fa4d842664919c70dc070ac2ff121d2d7d90d6d987558b915f7a7f517d8dcae",
     "src/geometry/capsule_destructor.cpp": "59487ab6fc8dbad68b2dfc403913d5cb765a450548f57422c33aef7cf1e85595",
@@ -2246,8 +2245,7 @@
     "src/geometry/cdbobject_test_csg.cpp": "084c1a8d2d8fa914a12646fdc82a49376a6f505c68aa392e11dfe1e59575d1b2",
     "src/geometry/cdbobject_test_generic.cpp": "2c1bea16fc427fea2f7c61fd9851fb9cd89b33e436e9c96f14be0522ddad9a59",
     "src/geometry/cdbobject_test_zero.cpp": "4f546c7480c99ddd5c36a26aba00bdbbfd448e7d71266bd114c3a1f341f86aa7",
-    "src/geometry/csg_volume_init.cpp": "59d33f82d1f61049bad4e8b49771da66acca9faf635f5de72d833479bf148756",
-    "src/geometry/csg_volume_test_generic.cpp": "ad0056003474eeeaf25478f8534969bf79e3430963e88eac80e3fb70a72b2c0b",
+    "src/geometry/csg_volume.cpp": "d112dacf1a160a1c6744aa08352c7ec09c9a74b7cccb20dc1bc26ff42295bebf",
     "src/geometry/fiber_destructor.cpp": "a75a7ed42b005c88ba08471e84ff0d6cf5f7bcbe47067e0e4e4f33f40b3dcfa2",
     "src/geometry/fiber_test_dispatch.cpp": "cee622b4d6c2499faaa78129e0dd57a24d84dfd3e347e2899b532ee787348068",
     "src/geometry/fiber_test_triangle.cpp": "369f325d99dcb1976d4f1da49c2f18e03f7db57ed4aed4a6a74b434584e3e41e",
@@ -30723,42 +30721,6 @@
       "linked_sha256": "f62507ea18b0afec050e22b0eb1a62cd20482cd73bb63efeae64bb0d0cec3d91"
     },
     {
-      "id": "csg_volume_init",
-      "category": "reconstructed_game",
-      "functions": 3,
-      "code_bytes": 96,
-      "compiler_family": "ProDG",
-      "compiler_version": "3.8.1",
-      "compiler_flags": [
-        "-O2",
-        "-G0",
-        "-fno-exceptions",
-        "-fno-implicit-templates"
-      ],
-      "strip_unused": false,
-      "discarded_functions": [],
-      "object_sha256": "bddfdc1db6002b5d034797b86c86b0ae174937baf27c1fc97f7d9e03ab3caf61",
-      "linked_sha256": "a0e9027d3e8c381bd5d66eda7e5659074f1019e3bcf6bdfe816ce3ac52946afe"
-    },
-    {
-      "id": "csg_volume_test_generic",
-      "category": "reconstructed_game",
-      "functions": 1,
-      "code_bytes": 96,
-      "compiler_family": "ProDG",
-      "compiler_version": "3.8.1",
-      "compiler_flags": [
-        "-O2",
-        "-G0",
-        "-fno-exceptions",
-        "-fno-implicit-templates"
-      ],
-      "strip_unused": false,
-      "discarded_functions": [],
-      "object_sha256": "2536e3f02a7ece2f5f2e4bd6b25eefa0a0f8e848c380407e458e1f72a5165a59",
-      "linked_sha256": "bd0eb846e64b427592af044ec6a4f59ce6cd982412ea23911db452649151dd53"
-    },
-    {
       "id": "cdbobject_test_generic",
       "category": "reconstructed_game",
       "functions": 2,
@@ -30991,6 +30953,24 @@
       "discarded_functions": [],
       "object_sha256": "0f454bd0ef620f46ac6386bbe76c0cff970ac0dda6200f421398fd08a27d6ab0",
       "linked_sha256": "32b13d9240cb8e25891752097792f2ab182b970264015e39b5373e2277139c9b"
+    },
+    {
+      "id": "csg_volume",
+      "category": "reconstructed_game",
+      "functions": 20,
+      "code_bytes": 4900,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e70517cf6a4e57603d9f93480baf1d85ad26bda37efb178072a7d1d36fa28075",
+      "linked_sha256": "79cbdae551be4c73bbdf337aa4d1b7fa874145baf8e0f4d8f864342a2694d3f5"
     }
   ],
   "code_map": {
@@ -55984,129 +55964,6 @@
             "name": "GetRadius__C11CVolCapsule",
             "evidence": "unknown-file"
           }
-        ]
-      },
-      {
-        "name": "Unmatched files/csg_volume.cpp [inferred file group]",
-        "file_record": 221,
-        "file_name": "csg_volume.cpp",
-        "ranges": [
-          {
-            "address": "0x80144b30",
-            "size": 320,
-            "kind": "function",
-            "name": "TestCollision__C10CCSGVolumeRC6CLine3R10CCollisionb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80144c70",
-            "size": 484,
-            "kind": "function",
-            "name": "CheckContacts__C10CCSGVolumePiPfP10CCollisioniR10CCollisionb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80144eb4",
-            "size": 320,
-            "kind": "function",
-            "name": "TestCollision__C10CCSGVolumeRC7CVolBoxR10CCollisionb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80144ff4",
-            "size": 320,
-            "kind": "function",
-            "name": "TestCollision__C10CCSGVolumeRC10CVolSphereR10CCollisionb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80145134",
-            "size": 320,
-            "kind": "function",
-            "name": "TestCollision__C10CCSGVolumeRC11CVolCapsuleR10CCollisionb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80145274",
-            "size": 320,
-            "kind": "function",
-            "name": "TestCollision__C10CCSGVolumeRC10CCDBObjectR10CCollisionb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801453b4",
-            "size": 320,
-            "kind": "function",
-            "name": "TestCollision__C10CCSGVolumeRC8CVector3R10CCollisionb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801454f4",
-            "size": 320,
-            "kind": "function",
-            "name": "TestCollision__C10CCSGVolumeRC6CPlaneR10CCollisionb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80145634",
-            "size": 320,
-            "kind": "function",
-            "name": "TestCollision__C10CCSGVolumeRC9CTriangleR10CCollisionb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80145774",
-            "size": 320,
-            "kind": "function",
-            "name": "TestCollision__C10CCSGVolumeRC9CVolFiberR10CCollisionb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801458b4",
-            "size": 320,
-            "kind": "function",
-            "name": "TestCollision__C10CCSGVolumeRC12CWorldVolumeR10CCollisionb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801459f4",
-            "size": 320,
-            "kind": "function",
-            "name": "TestCollision__C10CCSGVolumeRC15CAnimatedVolumeR10CCollisionb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80145b34",
-            "size": 320,
-            "kind": "function",
-            "name": "TestCollision__C10CCSGVolumeRC10CCSGVolumeR10CCollisionb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80145c74",
-            "size": 40,
-            "kind": "function",
-            "name": "Create__C10CCSGVolume",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80145c9c",
-            "size": 340,
-            "kind": "function",
-            "name": "GetExtents__C10CCSGVolumeR8CVector3T1",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80145df0",
-            "size": 4,
-            "kind": "function",
-            "name": "TransformedCopy__10CCSGVolumeRC7IVolumeRC7CMatrix",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x80144ad0",
-          "0x80145df4"
         ]
       },
       {

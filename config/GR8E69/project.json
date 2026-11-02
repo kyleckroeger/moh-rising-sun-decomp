@@ -1332,8 +1332,6 @@
     "capsule_test_generic.json",
     "capsule_test_dispatch.json",
     "capsule_test_triangle.json",
-    "csg_volume_init.json",
-    "csg_volume_test_generic.json",
     "cdbobject_test_generic.json",
     "cdbobject_test_csg.json",
     "cdbobject_test_zero.json",
@@ -1346,7 +1344,8 @@
     "ai_AIPlayerDoodad.json",
     "ai_AISoldierDoodad.json",
     "ai_AITankDoodad.json",
-    "ai_AIStatus.json"
+    "ai_AIStatus.json",
+    "csg_volume.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

@@ -1,5 +1,5 @@
-// Fragment of box.cpp: a box's double-dispatch tests. A point is tested as a zero-radius
-// sphere and a fiber as its line.
+// Fragment of box.cpp: a box's double-dispatch tests. A point is tested as a sphere of
+// radius 0.005 and a fiber as its line.
 #include "Box.h"
 #include "AnimatedVolume.h"
 #include "CDBObject.h"
