@@ -1,0 +1,43 @@
+{
+  "id": "sound_sstgetpv",
+  "source": "src/sound/ea/sstgetpv.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80220940",
+      "size": 76
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDSTRM_getprogvol",
+      "address": "0x80220940",
+      "size": 76,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDCTRL_getprogvol": "0x8021aaa8",
+    "SNDSTRMI_getstreamptr__Fi": "0x8021fb14"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sstgetpv.c",
+  "original_file_index": 3097
+}

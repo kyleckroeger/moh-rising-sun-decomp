@@ -1,0 +1,41 @@
+{
+  "id": "sound_smixtmul",
+  "source": "src/sound/ea/smixtmul.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802269c8",
+      "size": 60
+    }
+  ],
+  "functions": [
+    {
+      "name": "MIX_settimemult",
+      "address": "0x802269c8",
+      "size": 60,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SFILTER_timestretchsetratio__FP16TIMESTRETCHSTATEi": "0x8022745c",
+    "sndmix": "0x8041ec1c"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

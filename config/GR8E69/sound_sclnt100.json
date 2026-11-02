@@ -1,0 +1,50 @@
+{
+  "id": "sound_sclnt100",
+  "source": "src/sound/ea/sclnt100.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8021a934",
+      "size": 268
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDSYS_add100hzclient",
+      "address": "0x8021a934",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "SNDSYS_remove100hzclient",
+      "address": "0x8021a96c",
+      "size": 212,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDSYS_entercritical": "0x8021f948",
+    "SNDSYS_leavecritical": "0x8021f988",
+    "sndgs": "0x804108fc"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sclnt100.c",
+  "original_file_index": 3051
+}

@@ -1,0 +1,45 @@
+{
+  "id": "sound_svol",
+  "source": "src/sound/ea/svol.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80222804",
+      "size": 184
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDvol",
+      "address": "0x80222804",
+      "size": 184,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDPLATFORM_setfxlevel__Fii": "0x80223538",
+    "SNDPLATFORM_setvol__Fi": "0x8021d32c",
+    "SNDVOICEI_get__Fi": "0x8021945c",
+    "iSNDcalcvol__Fi": "0x802251e4",
+    "iSNDpatchkey__FiPi": "0x8021e878",
+    "sndgs": "0x804108fc"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

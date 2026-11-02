@@ -1,0 +1,43 @@
+{
+  "id": "sound_sgetpvol",
+  "source": "src/sound/ea/sgetpvol.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8021aaa8",
+      "size": 68
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDCTRL_getprogvol",
+      "address": "0x8021aaa8",
+      "size": 68,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDVOICEI_get__Fi": "0x8021945c",
+    "sndgs": "0x804108fc"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sgetpvol.c",
+  "original_file_index": 3056
+}

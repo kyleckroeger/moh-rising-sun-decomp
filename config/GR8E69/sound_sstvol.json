@@ -1,0 +1,43 @@
+{
+  "id": "sound_sstvol",
+  "source": "src/sound/ea/sstvol.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80220e64",
+      "size": 80
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDSTRM_vol",
+      "address": "0x80220e64",
+      "size": 80,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDSTRMI_getstreamptr__Fi": "0x8021fb14",
+    "SNDvol": "0x80222804"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sstvol.c",
+  "original_file_index": 3119
+}
