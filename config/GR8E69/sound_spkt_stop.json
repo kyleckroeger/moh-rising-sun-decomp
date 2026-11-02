@@ -1,0 +1,93 @@
+{
+  "id": "sound_spkt_stop",
+  "source": "src/sound/ea/spkt_stop.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8021ee58",
+      "size": 1524
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDPKTPLAY_submit",
+      "address": "0x8021ee58",
+      "size": 296,
+      "binding": 1
+    },
+    {
+      "name": "SNDPKTPLAY_submitspace",
+      "address": "0x8021ef80",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "SNDPKTPLAY_framesoutstanding",
+      "address": "0x8021efe0",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "SNDPKTPLAY_purge",
+      "address": "0x8021f004",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SNDPKTPLAY_stop",
+      "address": "0x8021f00c",
+      "size": 160,
+      "binding": 1
+    },
+    {
+      "name": "SNDPKTPLAY_destroy",
+      "address": "0x8021f0ac",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "SNDPKTPLAYI_get__FiiPiT2",
+      "address": "0x8021f0f4",
+      "size": 572,
+      "binding": 1
+    },
+    {
+      "name": "SNDPKTPLAYI_freeframes__Fiii",
+      "address": "0x8021f330",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "SNDPKTPLAYI_flushcallbackdata__Fv",
+      "address": "0x8021f39c",
+      "size": 176,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDMEMI_free__FPv": "0x8021b034",
+    "SNDPLATFORM_packetplaydestroy__Fi": "0x8021d2a0",
+    "SNDstop": "0x80220a5c",
+    "sndpps": "0x8041cd00"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "spktplay.c",
+  "original_file_index": 3076
+}

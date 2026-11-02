@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 871312,
+    "matching_code_bytes": 872836,
     "total_executable_code_bytes": 2492032,
-    "percent": 34.96391699625045,
+    "percent": 35.025071909188966,
     "categories": {
-      "reconstructed_game": 479096,
+      "reconstructed_game": 480620,
       "restored_library": 392216
     },
-    "matching_functions": 4190
+    "matching_functions": 4199
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -792,7 +792,7 @@
     "config/GR8E69/player_weapon_overlays.json": "172965adf4a7a763b5932a9744ff75bbf384ef314e25785dee9d7617044a8d5b",
     "config/GR8E69/player_weapon_selectable.json": "c7e3f09ad1510713bfd88ee468db0fcb4c6ef18b3b89bdb414b32ea863b25668",
     "config/GR8E69/player_weapon_shutdown.json": "f90a42342572d125630e7ac3647193288c13301a5309bcdc49cc350364bc2b60",
-    "config/GR8E69/project.json": "c295ada6738c55a1814d5e857c83efbfabe2d92f53b2fcfe5b378d5d00127432",
+    "config/GR8E69/project.json": "5814e5dba443c91afc60a6db2fc698b7b8bfef4c70f1b04d9532d99b197b9f85",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -1375,6 +1375,7 @@
     "config/GR8E69/sound_sover.json": "40372662f8c8b76722be3ff310f57e6831651a564acf28e2f84c20696372bc9e",
     "config/GR8E69/sound_spantoaz.json": "086f5ab3d417c4c0843199a6c9e77468cf59709d7a73b6e2de2bccdb7be2177b",
     "config/GR8E69/sound_spitch.json": "a7c1cafbb2720d87b5207e2b01ca3c40510967828725bee4c96dd8d22f4cd740",
+    "config/GR8E69/sound_spkt_stop.json": "ba0b8df8a89e3c767845c45d6a248201146e0979a0af38c5f77d7181c8f3e6d4",
     "config/GR8E69/sound_spktctoh.json": "36a491f9dba12d7773b7dbf9e9c21599fcc16eac3a636528f4807bad4fcaf37d",
     "config/GR8E69/sound_splysdef.json": "30cae48055bf11dbf00bb0f12a9944b3ac9da15ecd5eb9a900a7e9170cd977f7",
     "config/GR8E69/sound_spoutlat.json": "357ccca270bed600fcdd9df97fcf97854eeb090dca06ed5ee7853262c0083320",
@@ -3556,6 +3557,7 @@
     "src/sound/ea/sover.cpp": "195a5eb257fd99eb0337c24b3f263591fc147eb5c4d343a039faaf66c2cbd950",
     "src/sound/ea/spantoaz.cpp": "e31c00ca71938e75d62f7465384c809d31a6bd0daa4b46f9d2576df1cbe2775c",
     "src/sound/ea/spitch.cpp": "f466e02dbb1d4be3efd364e7dd099e4e6320b42a2f86464a2f184115f09bc3da",
+    "src/sound/ea/spkt_stop.cpp": "df2a5c7ec4c8460b165d5f3194ddb75c45c221f5ec77f99df2820a420a8443d2",
     "src/sound/ea/spktctoh.cpp": "9e4aa446ca2e84806f98cb9ca4255b4f9dce837a85210cad82358cbd172a0379",
     "src/sound/ea/splysdef.cpp": "a9c0c6934ca3223c106baf17159de83aaa7db16687efecd10df82ded2b1d5a28",
     "src/sound/ea/spoutlat.cpp": "b56905666372578e57f53b82b85a96d8270e7b6659ffb0e2ed45613a6ec1c1b1",
@@ -37093,6 +37095,25 @@
       "discarded_functions": [],
       "object_sha256": "0a8e5110ae3c9e0136cb5f6757ec52e3e5afd113c3fb22e017ffd6f4eb77982c",
       "linked_sha256": "bfd59a1864f20248c6c2ee5402523bdd0a09c358bb63ad5b0a68530a552fe53a"
+    },
+    {
+      "id": "sound_spkt_stop",
+      "category": "reconstructed_game",
+      "functions": 9,
+      "code_bytes": 1524,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "bd22495dcf60be7362662d3f623525f569df7950276d0ee50921f74a89cc64af",
+      "linked_sha256": "5f04970f0c369ab2764b4d1f3c6b7624031c4aae93f99fbce5c8e01a4c2c96a8"
     }
   ],
   "code_map": {
@@ -75550,69 +75571,6 @@
             "size": 792,
             "kind": "function",
             "name": "SNDPKTPLAY_start",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8021ee58",
-            "size": 296,
-            "kind": "function",
-            "name": "SNDPKTPLAY_submit",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8021ef80",
-            "size": 96,
-            "kind": "function",
-            "name": "SNDPKTPLAY_submitspace",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8021efe0",
-            "size": 36,
-            "kind": "function",
-            "name": "SNDPKTPLAY_framesoutstanding",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8021f004",
-            "size": 8,
-            "kind": "function",
-            "name": "SNDPKTPLAY_purge",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8021f00c",
-            "size": 160,
-            "kind": "function",
-            "name": "SNDPKTPLAY_stop",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8021f0ac",
-            "size": 72,
-            "kind": "function",
-            "name": "SNDPKTPLAY_destroy",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8021f0f4",
-            "size": 572,
-            "kind": "function",
-            "name": "SNDPKTPLAYI_get__FiiPiT2",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8021f330",
-            "size": 108,
-            "kind": "function",
-            "name": "SNDPKTPLAYI_freeframes__Fiii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8021f39c",
-            "size": 176,
-            "kind": "function",
-            "name": "SNDPKTPLAYI_flushcallbackdata__Fv",
             "evidence": "adjacent-compiler-markers"
           }
         ],
