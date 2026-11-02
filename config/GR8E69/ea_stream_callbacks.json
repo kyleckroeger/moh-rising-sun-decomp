@@ -1,0 +1,73 @@
+{
+  "id": "ea_stream_callbacks",
+  "source": "src/ea/stream_callbacks.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80209d98",
+      "size": 768
+    }
+  ],
+  "functions": [
+    {
+      "name": "opencallback__FiiPv",
+      "address": "0x80209d98",
+      "size": 72,
+      "binding": 0
+    },
+    {
+      "name": "closecallback__FiiPv",
+      "address": "0x80209de0",
+      "size": 92,
+      "binding": 0
+    },
+    {
+      "name": "readcallback__FiiPv",
+      "address": "0x80209e3c",
+      "size": 248,
+      "binding": 0
+    },
+    {
+      "name": "startnextrequest__FP15STREAMHEADERtagi",
+      "address": "0x80209f34",
+      "size": 356,
+      "binding": 0
+    }
+  ],
+  "externals": {
+    "FILESYS_callbackop": "0x80207330",
+    "FILESYS_close": "0x8020795c",
+    "FILESYS_completeop": "0x802076f4",
+    "FILESYS_open": "0x802078cc",
+    "MUTEX_lock": "0x80217f7c",
+    "MUTEX_unlock": "0x80217fa0",
+    "parsechunks__FP15STREAMHEADERtag": "0x80209ab4",
+    "restartstream__FP15STREAMHEADERtagi": "0x8020a098",
+    "strcmp": "0x802669b4",
+    "strcpy": "0x80266a7c"
+  },
+  "local_externals": [
+    "parsechunks__FP15STREAMHEADERtag",
+    "restartstream__FP15STREAMHEADERtagi"
+  ],
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "stream.cpp",
+  "original_file_index": 2853
+}

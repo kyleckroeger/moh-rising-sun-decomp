@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 836372,
+    "matching_code_bytes": 838940,
     "total_executable_code_bytes": 2492032,
-    "percent": 33.56184832297499,
+    "percent": 33.66489675895013,
     "categories": {
-      "reconstructed_game": 444156,
+      "reconstructed_game": 446724,
       "restored_library": 392216
     },
-    "matching_functions": 3967
+    "matching_functions": 3983
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -279,6 +279,9 @@
     "config/GR8E69/ea_printn3.json": "b7f6439bf63ccceeef282f8204d6d17143f87fa8d35cb9de43da82bc53016a7f",
     "config/GR8E69/ea_rcmp2real.json": "a05bdac5ae33f2e95a709a737a622fde986db04f4f0337a63ebdcc644614a5da",
     "config/GR8E69/ea_signals.json": "739f8d08688ad92e47b40d2b21ecf7e58f5aecc8da4c57e7b0b8b15e058e419c",
+    "config/GR8E69/ea_stream_api.json": "17e2889fd580d40eca6710dc81e67c6309b6fc9b86173247e901a6d1518090bd",
+    "config/GR8E69/ea_stream_callbacks.json": "299933972665906c4da534fa417f2fe0cf703a1bf0497d8e4e4876b3ed466fb1",
+    "config/GR8E69/ea_stream_requests.json": "a88bc79bf7b71880ac560f5bbbbd9303de73d63f7d3b0fb602dc7e09cb0a55db",
     "config/GR8E69/ea_syncfile.json": "5ad7e6a48ddd491ff43841235023597f0e85b8175ab705de2379f78c7ea3b886",
     "config/GR8E69/ea_systask.json": "141ec34b15f33585ca8126e62d8155683f6b747bb061d43d88ac144d23f18663",
     "config/GR8E69/ea_timerthread.json": "bfa69e1a4f9067764b5ab1a8149fa69fcedac577e7971798acc0c9564c317163",
@@ -771,7 +774,7 @@
     "config/GR8E69/player_weapon_overlays.json": "172965adf4a7a763b5932a9744ff75bbf384ef314e25785dee9d7617044a8d5b",
     "config/GR8E69/player_weapon_selectable.json": "c7e3f09ad1510713bfd88ee468db0fcb4c6ef18b3b89bdb414b32ea863b25668",
     "config/GR8E69/player_weapon_shutdown.json": "f90a42342572d125630e7ac3647193288c13301a5309bcdc49cc350364bc2b60",
-    "config/GR8E69/project.json": "051e708771d0ede138d1f2d32085bd48b6da0e97cfc6079b67a4fbe41f6cc20c",
+    "config/GR8E69/project.json": "8096db9e4ca17aeed43d3d6abd8c05d2771134862ad26e6c756fc25aef985d11",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -2274,6 +2277,9 @@
     "src/ea/printn3.cpp": "e260e8f11be93a4af6246aa0777791744bb479c223f80e9e78618811d1780c4b",
     "src/ea/rcmp2real.cpp": "cd31e2670f3b27a4a91c8962b8b4ba680f21e773e9023525cf718f699131d8ff",
     "src/ea/signals.cpp": "bbbc0bffb36932f5eb6cf92dc7b48e2c4b20623375a214da115ef76eacd1fcee",
+    "src/ea/stream_api.cpp": "1cdab91f1472f2ca89dfcd8d610ef7a2be24cbfe12d0f552503bb14441360159",
+    "src/ea/stream_callbacks.cpp": "7f0a1eb3730017e27f33511faa95a212967270fb5cee71896327994cbbe8f623",
+    "src/ea/stream_requests.cpp": "30e5e3a4e140a958d603ea7e92848f8cf209b315da72eeefdbdfee2c08f04a51",
     "src/ea/syncfile.cpp": "3df57d815e9d7e8ef396fdcf881e8e89ed7b7e77c762f80a3a18c0bf42ed09ba",
     "src/ea/systask.cpp": "064e88a22a3eb4ce2abeccd180f0df17d49e86028b44b3fc0a54e8cf7365d4bb",
     "src/ea/timerthread.cpp": "20cae02efd81691bf08a6c1e883b2df0059457929220cab81bb80a2b605cb50a",
@@ -35147,6 +35153,63 @@
       "discarded_functions": [],
       "object_sha256": "3c7753610883758ebfdf609c4814dc27504505e06d2620375f8833df67fcdf4b",
       "linked_sha256": "11c5c33563d10c0b7de2a46ff539d457dc96155eba9f7e6b54831b797f23792d"
+    },
+    {
+      "id": "ea_stream_requests",
+      "category": "reconstructed_game",
+      "functions": 8,
+      "code_bytes": 840,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "1b564a0fe3dde63daae5c6400739c30f8d62ffce746aa1c2a42cd25c48a9e4b9",
+      "linked_sha256": "ba64a38f9545a76884e2e0a74de1607f95ea7b04085728e0a6d20a98e3b214b4"
+    },
+    {
+      "id": "ea_stream_callbacks",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 768,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "b0a86315e9036cb8827b96ade70be5828371f764ece47639b9c7d7b2b141490d",
+      "linked_sha256": "39e20b05f99bcb0ccb2dbf033f55956dcfb9541583ab07ec0ef2794975a5fac6"
+    },
+    {
+      "id": "ea_stream_api",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 960,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "816e04e497354c75aaf9f00028d4314da341c2263a7553dcd7afd69cd7e21a73",
+      "linked_sha256": "3ee90b5fb7f10535b4f8df0531537f82cdd5f5690beb434b954471cf7080ef29"
     }
   ],
   "code_map": {
@@ -72487,94 +72550,10 @@
         "file_name": "stream.cpp",
         "ranges": [
           {
-            "address": "0x8020976c",
-            "size": 64,
-            "kind": "function",
-            "name": "validatehandle__FiPP15STREAMHEADERtagPP12TAPSTRUCTtag",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x802097ac",
-            "size": 64,
-            "kind": "function",
-            "name": "inbetween__FPcN20",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x802097ec",
-            "size": 128,
-            "kind": "function",
-            "name": "decbufferusage__FP15STREAMHEADERtagi",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x8020986c",
-            "size": 132,
-            "kind": "function",
-            "name": "getfreerequest__FP15STREAMHEADERtag",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x802098f0",
-            "size": 124,
-            "kind": "function",
-            "name": "queuerequest__FP15STREAMHEADERtagP16REQUESTSTRUCTtag",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x8020996c",
-            "size": 80,
-            "kind": "function",
-            "name": "locaterequest__FP15STREAMHEADERtagi",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x802099bc",
-            "size": 128,
-            "kind": "function",
-            "name": "freerequest__FP15STREAMHEADERtagP16REQUESTSTRUCTtag",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x80209a3c",
-            "size": 120,
-            "kind": "function",
-            "name": "filterchunk__FP15STREAMHEADERtagP14STREAMCHUNKHDR",
-            "evidence": "local-file-symbol"
-          },
-          {
             "address": "0x80209ab4",
             "size": 740,
             "kind": "function",
             "name": "parsechunks__FP15STREAMHEADERtag",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x80209d98",
-            "size": 72,
-            "kind": "function",
-            "name": "opencallback__FiiPv",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x80209de0",
-            "size": 92,
-            "kind": "function",
-            "name": "closecallback__FiiPv",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x80209e3c",
-            "size": 248,
-            "kind": "function",
-            "name": "readcallback__FiiPv",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x80209f34",
-            "size": 356,
-            "kind": "function",
-            "name": "startnextrequest__FP15STREAMHEADERtagi",
             "evidence": "local-file-symbol"
           },
           {
@@ -72583,34 +72562,6 @@
             "kind": "function",
             "name": "restartstream__FP15STREAMHEADERtagi",
             "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x8020a3e4",
-            "size": 32,
-            "kind": "function",
-            "name": "STREAM_overhead",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020a404",
-            "size": 572,
-            "kind": "function",
-            "name": "STREAM_create",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020a640",
-            "size": 188,
-            "kind": "function",
-            "name": "STREAM_setfilter",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020a6fc",
-            "size": 168,
-            "kind": "function",
-            "name": "STREAM_destroy",
-            "evidence": "adjacent-compiler-markers"
           },
           {
             "address": "0x8020a7a4",

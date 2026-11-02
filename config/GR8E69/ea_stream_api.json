@@ -1,0 +1,71 @@
+{
+  "id": "ea_stream_api",
+  "source": "src/ea/stream_api.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8020a3e4",
+      "size": 960
+    }
+  ],
+  "functions": [
+    {
+      "name": "STREAM_overhead",
+      "address": "0x8020a3e4",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "STREAM_create",
+      "address": "0x8020a404",
+      "size": 572,
+      "binding": 1
+    },
+    {
+      "name": "STREAM_setfilter",
+      "address": "0x8020a640",
+      "size": 188,
+      "binding": 1
+    },
+    {
+      "name": "STREAM_destroy",
+      "address": "0x8020a6fc",
+      "size": 168,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FILESYS_closesync": "0x80208b7c",
+    "MEM_clear": "0x802184a4",
+    "MUTEX_create": "0x80217f28",
+    "MUTEX_destroy": "0x80217f50",
+    "STREAM_kill": "0x8020ae94",
+    "SYNCTASK_run": "0x8021811c",
+    "THREAD_iscurrent": "0x80217d70",
+    "THREAD_yield": "0x80217ce8",
+    "validatehandle__FiPP15STREAMHEADERtagPP12TAPSTRUCTtag": "0x8020976c"
+  },
+  "local_externals": [
+    "validatehandle__FiPP15STREAMHEADERtagPP12TAPSTRUCTtag"
+  ],
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "stream.cpp",
+  "original_file_index": 2853
+}

@@ -1549,7 +1549,10 @@
     "thrown_bullet_collide.json",
     "thrown_bullet_update.json",
     "projectile_draw.json",
-    "projectile_script_type.json"
+    "projectile_script_type.json",
+    "ea_stream_requests.json",
+    "ea_stream_callbacks.json",
+    "ea_stream_api.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
