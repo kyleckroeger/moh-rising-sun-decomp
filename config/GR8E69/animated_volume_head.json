@@ -1,0 +1,89 @@
+{
+  "id": "animated_volume_head",
+  "source": "src/geometry/animated_volume_head.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": true,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8013e24c",
+      "size": 252
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a81bc",
+      "size": 4
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.15CAnimatedVolume",
+      "address": "0x802e9680",
+      "size": 176,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "__15CAnimatedVolume",
+      "address": "0x8013e24c",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "_._15CAnimatedVolume",
+      "address": "0x8013e290",
+      "size": 168,
+      "binding": 1
+    },
+    {
+      "name": "Set__15CAnimatedVolumePQ34EALA9Character13CollisionData",
+      "address": "0x8013e338",
+      "size": 16,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AllocateAnimatedVolume__Fv": "0x8012b574",
+    "Create__C15CAnimatedVolume": "0x8013ec20",
+    "FreeAnimatedVolume__FPv": "0x8012b5a0",
+    "GetExtents__C10CVolSphereR8CVector3T1": "0x80137cf4",
+    "GetRadius__C10CVolSphere": "0x80137dac",
+    "SetRadius__10CVolSpheref": "0x80137da4",
+    "TestCollision__C15CAnimatedVolumeRC10CCDBObjectR10CCollisionb": "0x8013ea10",
+    "TestCollision__C15CAnimatedVolumeRC10CCSGVolumeR10CCollisionb": "0x8013eba0",
+    "TestCollision__C15CAnimatedVolumeRC10CVolSphereR10CCollisionb": "0x8013e9d0",
+    "TestCollision__C15CAnimatedVolumeRC11CVolCapsuleR10CCollisionb": "0x8013e9f0",
+    "TestCollision__C15CAnimatedVolumeRC12CWorldVolumeR10CCollisionb": "0x8013eb40",
+    "TestCollision__C15CAnimatedVolumeRC15CAnimatedVolumeR10CCollisionb": "0x8013ec00",
+    "TestCollision__C15CAnimatedVolumeRC6CLine3R10CCollisionb": "0x8013e570",
+    "TestCollision__C15CAnimatedVolumeRC6CPlaneR10CCollisionb": "0x8013ea90",
+    "TestCollision__C15CAnimatedVolumeRC7CVolBoxR10CCollisionb": "0x8013e9b0",
+    "TestCollision__C15CAnimatedVolumeRC7IVolumeR10CCollisionb": "0x8013e950",
+    "TestCollision__C15CAnimatedVolumeRC8CVector3R10CCollisionb": "0x8013ea70",
+    "TestCollision__C15CAnimatedVolumeRC9CTriangleR10CCollisionb": "0x8013eab0",
+    "TestCollision__C15CAnimatedVolumeRC9CVolFiberR10CCollisionb": "0x8013ead0",
+    "TestVisibility__C10CVolSphereR12CDrawContext": "0x801377f0",
+    "TransformedCopy__15CAnimatedVolumeRC7IVolumeRC7CMatrix": "0x8013ec44",
+    "__builtin_vec_delete": "0x801a89b0",
+    "_vt.10CVolSphere": "0x802e9520",
+    "_vt.7IVolume": "0x802e1c38"
+  },
+  "discarded_functions": [
+    "__nw__15CAnimatedVolumeUi",
+    "__dl__15CAnimatedVolumePv"
+  ],
+  "undefined_in_discarded_code": [],
+  "original_file": "animated_volume.cpp",
+  "original_file_index": 1325
+}

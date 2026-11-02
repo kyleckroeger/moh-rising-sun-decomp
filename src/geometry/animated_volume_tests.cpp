@@ -1,5 +1,5 @@
 // Fragment of animated_volume.cpp: tests that run as a sphere or swap the order, then
-// Create and TransformedCopy. Members at +0x20, +0x24 and +0x30 are unnamed.
+// Create and TransformedCopy.
 #include "AnimatedVolume.h"
 #include "CDBObject.h"
 #include "CSGVolume.h"
@@ -62,15 +62,12 @@ EClsnState CAnimatedVolume::TestCollision(const CAnimatedVolume &other, CCollisi
     return CVolSphere::TestCollision((const CVolSphere &)other, collision, flag);
 }
 
-void *AllocateAnimatedVolume();
-inline void *operator new(unsigned int, void *p) { return p; }
-
-IVolume *CAnimatedVolume::Create() const { return new (AllocateAnimatedVolume()) CAnimatedVolume; }
+IVolume *CAnimatedVolume::Create() const { return new CAnimatedVolume; }
 
 void CAnimatedVolume::TransformedCopy(const IVolume &other, const CMatrix &matrix) {
     CVolSphere::TransformedCopy(other, matrix);
     const CAnimatedVolume &volume = (const CAnimatedVolume &)other;
-    unknown_24 = volume.unknown_24;
-    unknown_20 = 0;
+    data = volume.data;
+    collisionFlag = 0;
     unknown_30 = volume.unknown_30;
 }

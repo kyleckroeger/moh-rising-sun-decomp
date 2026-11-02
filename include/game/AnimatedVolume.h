@@ -7,6 +7,16 @@
 #define GAME_ANIMATEDVOLUME_H
 #include "Sphere.h"
 
+namespace EALA {
+namespace Character {
+struct CollisionData;
+}
+}
+
+void *AllocateAnimatedVolume();
+void FreeAnimatedVolume(void *);
+class CVolCapsule;
+
 class CAnimatedVolume : public CVolSphere {
   public:
     CAnimatedVolume();
@@ -26,9 +36,13 @@ class CAnimatedVolume : public CVolSphere {
     virtual EClsnState TestCollision(const CPlane &, CCollision &, bool) const;
     virtual EClsnState TestCollision(const CTriangle &, CCollision &, bool) const;
     virtual EClsnState TestCollision(const CCSGVolume &, CCollision &, bool) const;
-    int unknown_20;
-    int unknown_24;
-    unsigned char unknown_28[8];
+    void *operator new(unsigned int) { return AllocateAnimatedVolume(); }
+    void operator delete(void *p) { FreeAnimatedVolume(p); }
+    void Set(EALA::Character::CollisionData *);
+    int collisionFlag;
+    EALA::Character::CollisionData *data;
+    CVolCapsule *subVolumes;
+    int unknown_2c;
     int unknown_30;
 };
 

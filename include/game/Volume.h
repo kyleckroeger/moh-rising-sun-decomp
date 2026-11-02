@@ -5,6 +5,8 @@
 #pragma interface
 #include "CVector3.h"
 
+inline void *operator new(unsigned int, void *p) { return p; }
+
 class CDrawContext;
 class CMatrix;
 class CLine3;
@@ -37,6 +39,34 @@ struct SClsnContact {
     SClsnContact *next;
 };
 
+// Contact pool at CCollision::ms_contactPool; the words at +4 (free list), +8
+// (capacity) and +12 (used count) are established by AddContact and ClearContacts.
+struct SClsnContactPool {
+    int unknown_00;
+    SClsnContact *freeList;
+    int capacity;
+    int used;
+    int unknown_10;
+
+    SClsnContact *Allocate() {
+        if (used < capacity) {
+            SClsnContact *contact = freeList;
+            SClsnContact *next = *(SClsnContact **)contact;
+            if (contact)
+                new (contact) SClsnContact;
+            used++;
+            freeList = next;
+            return contact;
+        }
+        return 0;
+    }
+    void Free(SClsnContact *contact) {
+        used--;
+        *(SClsnContact **)contact = freeList;
+        freeList = contact;
+    }
+};
+
 // 36 bytes (CCSGVolume strides by 36). Field names are descriptive; the two words
 // at +0 are what SwapOrder exchanges, and the contacts form a list through +44.
 class CCollision {
@@ -45,6 +75,8 @@ class CCollision {
     CCollision(const CCollision &);
     ~CCollision();
     CCollision &operator=(const CCollision &);
+    CCollision &operator+=(const CCollision &);
+    EClsnState Test();
     void SwapOrder();
     void AddContact(const SClsnContact &);
     void ClearContacts();
@@ -53,6 +85,8 @@ class CCollision {
         if (value > result)
             result = value;
     }
+
+    static SClsnContactPool ms_contactPool;
 
     void *first;
     void *second;

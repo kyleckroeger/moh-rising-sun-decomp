@@ -1,0 +1,99 @@
+{
+  "id": "collision",
+  "source": "src/geometry/collision.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80133bd4",
+      "size": 1992
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a7e20",
+      "size": 44
+    }
+  ],
+  "functions": [
+    {
+      "name": "__10CCollision",
+      "address": "0x80133bd4",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "__10CCollisionRC10CCollision",
+      "address": "0x80133c24",
+      "size": 236,
+      "binding": 1
+    },
+    {
+      "name": "_._10CCollision",
+      "address": "0x80133d10",
+      "size": 116,
+      "binding": 1
+    },
+    {
+      "name": "__as__10CCollisionRC10CCollision",
+      "address": "0x80133d84",
+      "size": 308,
+      "binding": 1
+    },
+    {
+      "name": "__apl__10CCollisionRC10CCollision",
+      "address": "0x80133eb8",
+      "size": 164,
+      "binding": 1
+    },
+    {
+      "name": "AddContact__10CCollisionRC12SClsnContact",
+      "address": "0x80133f5c",
+      "size": 276,
+      "binding": 1
+    },
+    {
+      "name": "SwapOrder__10CCollision",
+      "address": "0x80134070",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "Test__10CCollision",
+      "address": "0x80134084",
+      "size": 712,
+      "binding": 1
+    },
+    {
+      "name": "ClearContacts__10CCollision",
+      "address": "0x8013434c",
+      "size": 80,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "LARGEST_MOVE_PER_TICK": "0x802c4d48",
+    "_10CCollision.ms_contactPool": "0x80330b00",
+    "__builtin_delete": "0x801a8990",
+    "isCSFWarningEnabled.6234": "0x802c4d4c"
+  },
+  "local_externals": [
+    "isCSFWarningEnabled.6234"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "collision.cpp",
+  "original_file_index": 1307
+}

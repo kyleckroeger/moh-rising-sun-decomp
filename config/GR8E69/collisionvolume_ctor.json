@@ -1,0 +1,43 @@
+{
+  "id": "collisionvolume_ctor",
+  "source": "src/geometry/collisionvolume_ctor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800c9d34",
+      "size": 152
+    }
+  ],
+  "functions": [
+    {
+      "name": "__16CCollisionVolume",
+      "address": "0x800c9d34",
+      "size": 152,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "_7CMatrix.s_ClassInit": "0x802c2100",
+    "_vt.16CCollisionVolume": "0x802e6648",
+    "_vt.9IObserver": "0x802e9aa0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "collisionvolume.cpp",
+  "original_file_index": 916
+}

@@ -122,7 +122,5 @@
     "__15CAnimatedVolume": "0x8013e24c"
   },
   "discarded_functions": [],
-  "undefined_in_discarded_code": [],
-  "original_file": "animated_volume.cpp",
-  "original_file_index": 1325
+  "undefined_in_discarded_code": []
 }
