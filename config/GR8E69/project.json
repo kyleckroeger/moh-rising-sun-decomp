@@ -1583,7 +1583,11 @@
     "sound_snddrv_dma1.json",
     "sound_snddrv_dma2.json",
     "ea_ipad_vbl.json",
-    "ea_ipad.json"
+    "ea_ipad.json",
+    "sound_sst_stream.json",
+    "sound_sst_service.json",
+    "sound_sst_queue.json",
+    "sound_sflpf_rc.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

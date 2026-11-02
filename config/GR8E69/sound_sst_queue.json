@@ -1,0 +1,76 @@
+{
+  "id": "sound_sst_queue",
+  "source": "src/sound/ea/sst_queue_q.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80220554",
+      "size": 520
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDSTRMI_queue__FiiPcii",
+      "address": "0x80220554",
+      "size": 288,
+      "binding": 1
+    },
+    {
+      "name": "SNDSTRM_create",
+      "address": "0x80220674",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "SNDSTRM_destroy",
+      "address": "0x8022069c",
+      "size": 156,
+      "binding": 1
+    },
+    {
+      "name": "SNDSTRM_queuefile",
+      "address": "0x80220738",
+      "size": 36,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDLINKI_pop__FP11SNDLINKLIST": "0x802253ec",
+    "SNDLINKI_pushtail__FP11SNDLINKLISTP11SNDLINKNODE": "0x802253b0",
+    "SNDPKTPLAY_destroy": "0x8021f0ac",
+    "SNDSTRMI_create__FP11SNDPLAYOPTSiiPviii": "0x80220304",
+    "SNDSTRMI_getstreamptr__Fi": "0x8021fb14",
+    "SNDSTRMI_numcreated__Fv": "0x802202bc",
+    "SNDSTRMI_service__Fv": "0x8022013c",
+    "SNDSTRM_purge": "0x8022075c",
+    "SNDSYS_entercritical": "0x8021f948",
+    "SNDSYS_leavecritical": "0x8021f988",
+    "STREAM_destroy": "0x8020a6fc",
+    "STREAM_queuefile": "0x8020a93c",
+    "STREAM_queuemem": "0x8020aa30",
+    "iSNDserverremoveclient__FPFv_v": "0x8022173c",
+    "memset": "0x80266778",
+    "sndgs": "0x804108fc",
+    "sndss": "0x8041d084"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sst.c",
+  "original_file_index": 3091
+}

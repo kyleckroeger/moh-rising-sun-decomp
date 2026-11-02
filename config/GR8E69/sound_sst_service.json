@@ -1,0 +1,73 @@
+{
+  "id": "sound_sst_service",
+  "source": "src/sound/ea/sst_service.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8021ffe8",
+      "size": 796
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDSTRMI_parsechunk__FiP14STREAMCHUNKHDR",
+      "address": "0x8021ffe8",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "SNDSTRMI_isheld__FP16SNDSTREAMCHANNEL",
+      "address": "0x80220060",
+      "size": 220,
+      "binding": 1
+    },
+    {
+      "name": "SNDSTRMI_service__Fv",
+      "address": "0x8022013c",
+      "size": 384,
+      "binding": 1
+    },
+    {
+      "name": "SNDSTRMI_numcreated__Fv",
+      "address": "0x802202bc",
+      "size": 72,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDPKTPLAY_framesoutstanding": "0x8021efe0",
+    "SNDPKTPLAY_stop": "0x8021f00c",
+    "SNDPKTPLAY_submitspace": "0x8021ef80",
+    "SNDSTRMI_parsedata__FP16SNDSTREAMCHANNELP14STREAMCHUNKHDR": "0x8021fed0",
+    "SNDSTRMI_parseheader__FiP14STREAMCHUNKHDR": "0x8021fc94",
+    "SNDSTRMI_startstream__FP16SNDSTREAMCHANNEL": "0x8021f9c8",
+    "SNDSYS_entercritical": "0x8021f948",
+    "SNDSYS_leavecritical": "0x8021f988",
+    "STREAM_get": "0x8020b0d8",
+    "STREAM_gettable": "0x8020b38c",
+    "STREAM_release": "0x8020b258",
+    "STREAM_state": "0x8020b3cc",
+    "sndgs": "0x804108fc",
+    "sndss": "0x8041d084"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sst.c",
+  "original_file_index": 3091
+}
