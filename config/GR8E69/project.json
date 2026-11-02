@@ -1345,7 +1345,13 @@
     "ai_AISoldierDoodad.json",
     "ai_AITankDoodad.json",
     "ai_AIStatus.json",
-    "csg_volume.json"
+    "csg_volume.json",
+    "weapon_ammo.json",
+    "weapon_accessors.json",
+    "player_draw_queries.json",
+    "player_halt.json",
+    "player_move.json",
+    "player_axes.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

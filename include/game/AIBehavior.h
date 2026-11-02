@@ -53,6 +53,7 @@ class CPistolBehavior { // Type 6.
     virtual void Enable();
     virtual void Disable();
     virtual BSObject *GetScriptObject();
+    virtual void SetWeaponScript(BSObject *);
 };
 
 class CMountedMachineGunBehavior { // Type 3.

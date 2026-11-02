@@ -177,6 +177,7 @@ public:
     unsigned char unknown79c[0x7a0 - 0x79c];
     CAITactics tactics;  // +0x7a0
     CAIBehavior *FindMatchingBehavior(EBehaviorType);
+    CAIBehavior *FindMatchingBehaviorByCRC(int);
     float GetDistanceSquaredXYReal(CAITarget);
     // Original nested enum tag; its members are unknown.
     enum ECollisionTestStyle { CollisionTestStyleDefault = 0 };

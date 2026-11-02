@@ -1,0 +1,90 @@
+{
+  "id": "weapon_accessors",
+  "source": "src/weapons/WeaponAccessors.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8014ce7c",
+      "size": 320
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a8bdc",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetBulletSpeed__C7CWeapon",
+      "address": "0x8014ce7c",
+      "size": 92,
+      "binding": 1
+    },
+    {
+      "name": "GetWeaponSoundType__C7CWeapon",
+      "address": "0x8014ced8",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "SetInfiniteAmo__7CWeaponb",
+      "address": "0x8014cee4",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "ConfigMuzzleFlash__7CWeapon",
+      "address": "0x8014cef4",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "GetMuzzleFlashStatus__7CWeapon",
+      "address": "0x8014cf04",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "CreateMuzzlePuff__7CWeaponiRC7CMatrix",
+      "address": "0x8014cf10",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "AsWeaponObject__7CWeapon",
+      "address": "0x8014cf78",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "GetPosition__C7CWeaponR8CVector3",
+      "address": "0x8014cf7c",
+      "size": 64,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Create__10CPSManagerUib15eParticleSystem": "0x80066a70",
+    "GetBulletWeight__14CBulletFactorybi": "0x801508f4",
+    "g_pBulletFactory": "0x803e7568",
+    "g_pStaticObjectMuzzleFlashNPC": "0x802c4d68"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "weapon.cpp",
+  "original_file_index": 1347
+}

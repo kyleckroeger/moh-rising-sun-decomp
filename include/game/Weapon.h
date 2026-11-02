@@ -1,6 +1,8 @@
 // AI-assisted scoped reconstruction from GR8E69; see docs/Script.md.
 #ifndef GAME_WEAPON_H
 #define GAME_WEAPON_H
+#include "CVector3.h"
+#include "SceneObjects.h"
 
 // Member-only view of CWeapon for the reload built-ins. This does not establish
 // the complete allocation, base classes or virtual interface.
@@ -9,11 +11,14 @@ struct WeaponProperties {
     unsigned char unknown_0[4];
     short clipSize;   // +0x04; compared by BIFunc_PlayerWeaponInfo selector 4.
     short refireRate; // +0x06
-    unsigned char unknown_8[6];
+    float bulletSpeedScale; // +0x08; scales the bullet weight in GetBulletSpeed.
+    short bulletIndex; // +0x0c; index into the bullet factory's tables.
     short projectile; // +0x0e; nonzero for projectile weapons.
     unsigned char unknown_10[2];
-    short infoValue1; // +0x12; returned for EWeaponInfo 1.
-    unsigned char unknown_14[0x68 - 0x14];
+    short infoValue1; // +0x12; returned for EWeaponInfo 1; caps the reserve in AddAmo.
+    unsigned char unknown_14[0x60 - 0x14];
+    short soundType;  // +0x60; returned by GetWeaponSoundType.
+    unsigned char unknown_62[0x68 - 0x62];
     short weaponType; // +0x68; returned by the weapon-type built-ins.
 };
 
@@ -23,20 +28,55 @@ enum EWeaponShootType { WeaponShootTypeUnknown = 0 };
 // Original enum tag; selector names are descriptive.
 enum EWeaponInfo { WeaponInfo0 = 0, WeaponInfo1 = 1, WeaponInfo2 = 2 };
 
-class CWeapon {
+// Direct base call targets establish CStaticObject as the base; further bases and
+// the virtual interface are not declared.
+class CWeapon : public CStaticObject {
   public:
-    unsigned char unknown_0[0x300];
+    unsigned char unknown_220[0x300 - sizeof(CStaticObject)];
     WeaponProperties *properties; // +0x300
     unsigned char unknown_304[0x308 - 0x304];
     int crc;          // +0x308; weapon name CRC.
     short reserveAmmo; // +0x30c
-    short infoValue0; // +0x30e; returned for EWeaponInfo 0.
-    unsigned char unknown_310[0x320 - 0x310];
+    short loadedAmmo; // +0x30e; rounds in the clip, returned for EWeaponInfo 0.
+    unsigned char unknown_310[4];
+    EWeaponShootType shootType; // +0x314
+    float shootValue;           // +0x318
+    unsigned char unknown_31c[0x320 - 0x31c];
     int weaponClass; // +0x320; returned by BIFunc_PlayerGetWeaponClass.
-    unsigned char unknown_324[0x350 - 0x324];
+    float shootValue2;          // +0x324; Shoot keeps it when passed -1.
+    unsigned char unknown_328[0x340 - 0x328];
+    CVector3 position;          // +0x340; returned by GetPosition.
     unsigned int reloading : 1; // +0x350, bit 31: cleared by BIFunc_PlayerClearReloading.
-    unsigned int unknown_350 : 31;
+    unsigned int unknown_30 : 1;
+    unsigned int forceProximityUpdate : 1; // Bit 29; tested by BeginUpdate.
+    unsigned int infiniteAmmo : 1;         // Bit 28; a reload fills the clip without using the reserve.
+    unsigned int unknown_27 : 1;
+    unsigned int muzzleFlashStatus : 1;    // Bit 26; returned by GetMuzzleFlashStatus.
+    unsigned int muzzlePuff : 1;           // Bit 25; CreateMuzzlePuff does nothing while clear.
+    unsigned int unknown_low : 25;
+    unsigned char unknown_354[0x360 - 0x354];
+    void *muzzleFlash; // +0x360
+    unsigned char unknown_364[0x370 - 0x364];
+    ISceneNode *holder; // +0x370
+    int trigger;        // +0x374; proximity-trigger subobject, only its address is taken here.
+    void RegisterWithAI();
+    int SupportsCoverpointBehavior();
+    int SupportsGrenadeResponseBehavior();
+    void Shutdown();
+    void *GetBulletSprite() const;
     void AddAmo(short);
+    void SetAmmo(unsigned int, unsigned int);
+    void Empty();
+    void BeginUpdate(float);
+    void Draw(CDrawContext &);
+    float GetBulletSpeed() const;
+    int GetWeaponSoundType() const;
+    void SetInfiniteAmo(bool);
+    void ConfigMuzzleFlash();
+    unsigned int GetMuzzleFlashStatus();
+    void CreateMuzzlePuff(int, const CMatrix &);
+    CWeapon *AsWeaponObject();
+    void GetPosition(CVector3 &) const;
     void StartReloading();
     void ReloadSingle();
     void DoneReloading();

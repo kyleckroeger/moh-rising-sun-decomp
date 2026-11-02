@@ -1,0 +1,130 @@
+{
+  "id": "weapon_ammo",
+  "source": "src/weapons/WeaponAmmo.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8014b8b0",
+      "size": 932
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a8b7c",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "RegisterWithAI__7CWeapon",
+      "address": "0x8014b8b0",
+      "size": 172,
+      "binding": 1
+    },
+    {
+      "name": "SupportsCoverpointBehavior__7CWeapon",
+      "address": "0x8014b95c",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "SupportsGrenadeResponseBehavior__7CWeapon",
+      "address": "0x8014b97c",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "Shutdown__7CWeapon",
+      "address": "0x8014b99c",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "GetBulletSprite__C7CWeapon",
+      "address": "0x8014b9dc",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "Shoot__7CWeapon16EWeaponShootTypeff",
+      "address": "0x8014ba20",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "AddAmo__7CWeapons",
+      "address": "0x8014ba40",
+      "size": 116,
+      "binding": 1
+    },
+    {
+      "name": "SetAmmo__7CWeaponUiUi",
+      "address": "0x8014bab4",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "Empty__7CWeapon",
+      "address": "0x8014bac0",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "StartReloading__7CWeapon",
+      "address": "0x8014bad0",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "ReloadSingle__7CWeapon",
+      "address": "0x8014bae0",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "DoneReloading__7CWeapon",
+      "address": "0x8014bb1c",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "BeginUpdate__7CWeaponf",
+      "address": "0x8014bb94",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "Draw__7CWeaponR12CDrawContext",
+      "address": "0x8014bbec",
+      "size": 104,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BeginUpdate__13CStaticObjectf": "0x800a6c88",
+    "DestroyBSObject__FP8BSObject": "0x800f6cec",
+    "Draw__13CStaticObjectR12CDrawContext": "0x800a829c",
+    "FindMatchingBehaviorByCRC__9CAIObjecti": "0x800dc944",
+    "ForceUpdateProximityTriggerStatus__FP10BSGO_Basicb": "0x80123bf8",
+    "GetBulletSprite__14CBulletFactorybi": "0x801502a4",
+    "TLT_FindNextResourceByTypeAndVal__F13TLTResourceIDiiP24LevelFileContentsStruct_": "0x801a96fc",
+    "g_pBulletFactory": "0x803e7568"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "weapon.cpp",
+  "original_file_index": 1347
+}

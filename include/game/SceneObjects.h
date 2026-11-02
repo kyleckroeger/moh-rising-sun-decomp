@@ -51,6 +51,8 @@ struct MotionData;
 MotionData *InitMotionData(const char *);
 class CStaticObject {
   public:
+    void Draw(CDrawContext &);
+    void BeginUpdate(float);
     void StopMotionPlayback();
     void ModifyMotionData(MotionData *);
     void SetMovementPath(int, bool, bool, float, float, float, float, BSObject *, float, bool);
@@ -64,9 +66,13 @@ class CStaticObject {
         unsigned int pathFlag1 : 1;            // Bit 23: BIFunc_MechSetPathFlag selector 1.
         unsigned int unknown_low : 23;
     };
-    unsigned char unknown_0[0x110];
+    unsigned char unknown_0[0x4c];
+    void *model;          // +0x4c; drawing is skipped while it is null.
+    unsigned char unknown_50[0x110 - 0x50];
     float pathScale;      // +0x110; BIFunc_MechSetPathFlag stores value / 100.
-    unsigned char unknown_114[0x214 - 0x114];
+    unsigned char unknown_114[0x140 - 0x114];
+    BSObject *script;     // +0x140
+    unsigned char unknown_144[0x214 - 0x144];
     int maxLightPriority; // +0x214
     Flags flags;          // +0x218
     unsigned int mechFlags; // +0x21c; bits set and cleared by BIFunc_MechSetFlag.

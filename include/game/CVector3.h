@@ -42,6 +42,8 @@ class CVector3 {
         y = ay;
         z = az;
     }
+    // Member name descriptive; the chained assignment gives the original store order.
+    void Zero() { x = y = z = 0.0f; }
     float LengthSquared() const { return x * x + y * y + z * z; }
     float LengthSquaredXY() const { return x * x + y * y; }
 
