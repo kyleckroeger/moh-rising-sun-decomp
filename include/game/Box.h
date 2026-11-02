@@ -24,6 +24,13 @@ class CVolBox : public IVolume {
     virtual int TestVisibility(CDrawContext &) const;
     virtual void GetExtents(CVector3 &, CVector3 &) const;
     virtual EClsnState TestCollision(const CCSGVolume &, CCollision &, bool) const;
+    // The half sizes and the frame, as CCDBVolBox's constructor fills them; names descriptive.
+    CVolBox() {}
+    float halfSize[3];
+    CVector3 axisX;
+    CVector3 axisY;
+    CVector3 axisZ;
+    CVector3 center;
 };
 
 #endif

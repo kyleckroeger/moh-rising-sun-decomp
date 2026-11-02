@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 823076,
+    "matching_code_bytes": 825488,
     "total_executable_code_bytes": 2492032,
-    "percent": 33.02830782269248,
+    "percent": 33.12509630694951,
     "categories": {
-      "reconstructed_game": 430860,
+      "reconstructed_game": 433272,
       "restored_library": 392216
     },
-    "matching_functions": 3911
+    "matching_functions": 3920
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -226,9 +226,12 @@
     "config/GR8E69/cdbgeom_triangle_animated.json": "a6878f7559f88f891f023275b83760cf97992e31fbaaadf5e0e28433c4d3fddc",
     "config/GR8E69/cdbobject_extents.json": "b890d2488f59133cd1e9720d1c1da60df1024d6eb8726a9be931f325c3b4169b",
     "config/GR8E69/cdbobject_head.json": "adc46e41a7d4aca4ecead7f0d8a1bfef31bf5c3a14021a5507361543f3f8f8db",
+    "config/GR8E69/cdbobject_leaf_tests.json": "ca411ae4d2e63972a6cf3e336aba964fbf2cb802f0f8ed9f80a77a33997995b4",
     "config/GR8E69/cdbobject_test_csg.json": "4d127861c85433d16ffbc9a3af8021e44d272783706e34de7e3a98090c56f166",
     "config/GR8E69/cdbobject_test_generic.json": "ace4e2c8df0ca873cf8df71e0172a6346161af8147b510af2466d288153c76c2",
     "config/GR8E69/cdbobject_test_zero.json": "27704aea532cd93d02d9709d0ba44efe94e5f4f096b8f8212eeec073739782b0",
+    "config/GR8E69/cdbobject_volume_tests.json": "cd69b3449a419ddfd4ab9b86bd8a79f6b756d62ec55e7837299a8bc66d0fe0a9",
+    "config/GR8E69/cdbvolbox_destructor.json": "09f5635ea67b9a14ae39f825281f580a8edc97496b69bc8d2fae2e9b60cb8354",
     "config/GR8E69/collision.json": "1b0c1c5fcf9df49be4f7e94045811de208a33a442beaf2225667d05a837a0c9c",
     "config/GR8E69/collisionvolume.json": "a360590b9e54eb2830ee70b8ccb7bd1ab64783469d91bd35518a796bb4d4ff7f",
     "config/GR8E69/collisionvolume_ctor.json": "1cd7798c387aced98950eda6770d628d8e632260c24bad508e72302c54580be7",
@@ -758,7 +761,7 @@
     "config/GR8E69/player_weapon_overlays.json": "172965adf4a7a763b5932a9744ff75bbf384ef314e25785dee9d7617044a8d5b",
     "config/GR8E69/player_weapon_selectable.json": "c7e3f09ad1510713bfd88ee468db0fcb4c6ef18b3b89bdb414b32ea863b25668",
     "config/GR8E69/player_weapon_shutdown.json": "f90a42342572d125630e7ac3647193288c13301a5309bcdc49cc350364bc2b60",
-    "config/GR8E69/project.json": "9c00ec08dafe59012624cdcd23244e34f62d723d395533282684b5fdf412dfae",
+    "config/GR8E69/project.json": "69bb80747508c433ba5da933dac9ac194bf7e94cf2e7b7ea37e5315394a752bc",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -1711,10 +1714,11 @@
     "include/game/AnimatedVolume.h": "527918576e64cf9296cbb9164eefaf3fc8b7a0f96894e342d2da9e847df4cf25",
     "include/game/BPD.h": "ec4a3aceb83f181db2c6adf8ac87137ede2cd6a0e643548159c73a827aadd19e",
     "include/game/BSGameObject.h": "0251918a776754b0d6b3d30b69e61b0d0c8f919721dbd147dbecf710b180a45a",
-    "include/game/Box.h": "21a63c41b9569dc5b5d55d09029dffbdfbed66aa7d2927ecd97a10fa444ade7c",
+    "include/game/Box.h": "7dc5f283dbd5d87bd4a8092b24e1b4258d0db77f909d89990c18757f3025d499",
     "include/game/Bullet.h": "3531c61d696f473ff38bb98c496fb8484cd98c743a940386642717290c6c4c67",
-    "include/game/CDBGeom.h": "a1e9ce9ae6c281742b53474c4a9c1da1d8832fc1ca699db37598b998f29e7e2d",
-    "include/game/CDBObject.h": "b2932d9508f142bc64131924796150413f1fd72c2d3f6874d78ecbe316344893",
+    "include/game/CDBGeom.h": "52cc6684854d7d274db12c9e545f56e9add679d6133fc2f612c5d9c3f822d29b",
+    "include/game/CDBObject.h": "e7e31e8514ea7b42e4d797289f1f68a55eb5cb92c56080f858fad4c09ace3823",
+    "include/game/CDBTriangle.h": "35e4a11e314b05883f7524f67caa0ee7c8e8a675ba3dff005134eb43adfa8d44",
     "include/game/CLine2.h": "e92fdbfd47ed264651ab9bbb90557a0461c3f6469267837079a5d514eb583f2c",
     "include/game/CLine3.h": "c243c3a0e44c43450743a627896dc7789079c2685ef3dac3f7be341d9bd52484",
     "include/game/CMatrix.h": "0a1cd7c02e0d72a241d00c861f92cf720b93960f3e96da8dea1f370ee8be27f9",
@@ -1727,7 +1731,7 @@
     "include/game/Capsule.h": "332dd06329ac7dc3ac5fc01793549a41e2defbe70298018accd2ce79c9e3ce3b",
     "include/game/CollisionVolume.h": "26ba5d9a9865a0185f0e87db21b13faf3214b7e213201e825181412f0f9a5b7c",
     "include/game/DestructorQueue.h": "434ec17ba96007c8368db0dc62c9454d1650bc2c4d5615a13aad40969412bda8",
-    "include/game/DwiList.h": "ae566cdb85e563d31167473712e8d63a90d19120ae5fdbbc519bad67b4b34518",
+    "include/game/DwiList.h": "e9b2984e2c25f07de0ab383075c4dc77e732d073dbe49d1f667ecef166d4c59b",
     "include/game/EAGLAnim/AnimAllocation.h": "8e2480f7003eca4c8a99d7bc1189b4f00ee9e31bacd9192d6b1bb0bfbc2b38f8",
     "include/game/EAGLAnim/AnimBank.h": "1909b5d1278c6dd4499ea046c279628048e486ca444f53ee161169cab63a8d1a",
     "include/game/EAGLAnim/AnimCore.h": "59862f217935fe0b3e6b2f61623713a23554bbf789ad4274f6cc1e6ebf2a02a1",
@@ -2476,9 +2480,12 @@
     "src/geometry/cdbgeom_triangle_animated.cpp": "dd98d27b5a4ddf11817ab49307e40d96f84bb249231e5f78ca5f867f6760a7f8",
     "src/geometry/cdbobject_extents.cpp": "1e1461c986d1bacc27764c55ffc3a85cea8d2c8b18fa4758ae84a9077f4d8532",
     "src/geometry/cdbobject_head.cpp": "8f0e77c8e1d62fa797873d6ec14a917f3bf4abdddf8218c61ff5c625c535f2d8",
+    "src/geometry/cdbobject_leaf_tests.cpp": "42990ab762c41a469c6907e9927e31fad8e621d1165bad475c7f139e81764b64",
     "src/geometry/cdbobject_test_csg.cpp": "084c1a8d2d8fa914a12646fdc82a49376a6f505c68aa392e11dfe1e59575d1b2",
     "src/geometry/cdbobject_test_generic.cpp": "2c1bea16fc427fea2f7c61fd9851fb9cd89b33e436e9c96f14be0522ddad9a59",
     "src/geometry/cdbobject_test_zero.cpp": "4f546c7480c99ddd5c36a26aba00bdbbfd448e7d71266bd114c3a1f341f86aa7",
+    "src/geometry/cdbobject_volume_tests.cpp": "c15c9c93c40f3caad218650b15f91f68345d6f95f0d5171ff189e6d7d61a6cd5",
+    "src/geometry/cdbvolbox_destructor.cpp": "fbf4473d0a4488b44c3ce59eb95f7c9bafac381edda07972474800830be4fce5",
     "src/geometry/collision.cpp": "0bf608643eb8f98f801626263baa3427fb1c8a57c15e35a049d6703195a53918",
     "src/geometry/collisionvolume.cpp": "9916be8478b9bfe23685b14eb65720610e2d22b67081a90bda396f80fb78fda4",
     "src/geometry/collisionvolume_ctor.cpp": "4ab70a7c5ad8f859389e3c0173d0261031e5de57257c00ee243c7820e26ff2b4",
@@ -34509,6 +34516,60 @@
       "discarded_functions": [],
       "object_sha256": "faa11b3d4aa357ef2e77a2b88c06092d195350f8c95a1fda18c006f1f3f59134",
       "linked_sha256": "f5934eb2f6e5d4e6d3f6ab0f3d3d2640e65c61e1b8523a4e10c746263f6e195f"
+    },
+    {
+      "id": "cdbobject_volume_tests",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 1592,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "eab1575f67140c55a82f57b3ce81a859a7803ad669fd72858d00b1c59970e96e",
+      "linked_sha256": "9a2f93ef6989a7eeaa8c5184466da3f0ae6e11955b723895e958e418e2fca793"
+    },
+    {
+      "id": "cdbobject_leaf_tests",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 768,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "045e8f6dd71840f767e95a6c79615c05f5dc02f368f5cd272b67906ec0c083fd",
+      "linked_sha256": "c5be3d17eb17f26350c5bc3c2a1048189b126eb6c23098bdec693c0a3afec8fd"
+    },
+    {
+      "id": "cdbvolbox_destructor",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 52,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "fb444a9c723986362bd42491f9b766ef1330760669ffd5b7f5a2dc3ed41ba377",
+      "linked_sha256": "f7a5abbd97d70bb2fcb3806cdf9bff1246efd96445f829ff5ec3a6554a35d1ee"
     }
   ],
   "code_map": {
@@ -40795,39 +40856,6 @@
         ]
       },
       {
-        "name": "Unknown file/.text @ 80073414",
-        "ranges": [
-          {
-            "address": "0x80073414",
-            "size": 304,
-            "kind": "function",
-            "name": "TestCollision__C10CCDBObjectRC7CVolBoxR10CCollisionb",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80073544",
-            "size": 680,
-            "kind": "function",
-            "name": "TestCollision__C10CCDBObjectRC10CVolSphereR10CCollisionb",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800737ec",
-            "size": 304,
-            "kind": "function",
-            "name": "TestCollision__C10CCDBObjectRC11CVolCapsuleR10CCollisionb",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8007391c",
-            "size": 304,
-            "kind": "function",
-            "name": "TestCollision__C10CCDBObjectRC15CAnimatedVolumeR10CCollisionb",
-            "evidence": "unknown-file"
-          }
-        ]
-      },
-      {
         "name": "Unknown file/.text @ 80073ba0",
         "ranges": [
           {
@@ -40840,36 +40868,8 @@
         ]
       },
       {
-        "name": "Unknown file/.text @ 80074484",
+        "name": "Unknown file/.text @ 80074784",
         "ranges": [
-          {
-            "address": "0x80074484",
-            "size": 192,
-            "kind": "function",
-            "name": "TestCDBLeafNodeCollision__C10CCDBObjectRC11CDBLeafNodeRC7CVolBoxR10CCollisionbRQ23dwit8fast_vec1ZP11CDBTriGroup",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80074544",
-            "size": 192,
-            "kind": "function",
-            "name": "TestCDBLeafNodeCollision__C10CCDBObjectRC11CDBLeafNodeRC10CVolSphereR10CCollisionbRQ23dwit8fast_vec1ZP11CDBTriGroup",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80074604",
-            "size": 192,
-            "kind": "function",
-            "name": "TestCDBLeafNodeCollision__C10CCDBObjectRC11CDBLeafNodeRC11CVolCapsuleR10CCollisionbRQ23dwit8fast_vec1ZP11CDBTriGroup",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800746c4",
-            "size": 192,
-            "kind": "function",
-            "name": "TestCDBLeafNodeCollision__C10CCDBObjectRC11CDBLeafNodeRC15CAnimatedVolumeR10CCollisionbRQ23dwit8fast_vec1ZP11CDBTriGroup",
-            "evidence": "unknown-file"
-          },
           {
             "address": "0x80074784",
             "size": 948,
@@ -79959,13 +79959,6 @@
             "size": 448,
             "kind": "function",
             "name": "TestCollisionWithTriGroups__H1Z15CAnimatedVolume_RCQ23dwit8fast_vec1ZP11CDBTriGroupRCX01R10CCollisionb_10EClsnState",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8027c844",
-            "size": 52,
-            "kind": "function",
-            "name": "_._10CCDBVolBox",
             "evidence": "unknown-file"
           }
         ]

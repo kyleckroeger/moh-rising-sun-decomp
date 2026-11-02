@@ -174,5 +174,28 @@ template <class T> class list {
     int owned;
 };
 
+// A vector over caller storage; the destructor frees the storage only when owned.
+template <class T> class fast_vec {
+  public:
+    fast_vec(T *storage, int size, int grow = 12) : data(storage), unknown_04(0), count(0), capacity(size), owned(0), growth(grow) {}
+    ~fast_vec() {
+        if (owned && data)
+            DWI_free(data);
+    }
+
+    void push_back(const T &value) { data[count++] = value; }
+    T &back() { return data[count - 1]; }
+    void pop_back() { count--; }
+    T *begin() const { return data; }
+    T *end() const { return data + count; }
+
+    T *data;
+    int unknown_04;
+    int count;
+    int capacity;
+    int owned;
+    int growth;
+};
+
 } // namespace dwi
 #endif

@@ -1,0 +1,63 @@
+{
+  "id": "cdbobject_leaf_tests",
+  "source": "src/geometry/cdbobject_leaf_tests.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80074484",
+      "size": 768
+    }
+  ],
+  "functions": [
+    {
+      "name": "TestCDBLeafNodeCollision__C10CCDBObjectRC11CDBLeafNodeRC7CVolBoxR10CCollisionbRQ23dwit8fast_vec1ZP11CDBTriGroup",
+      "address": "0x80074484",
+      "size": 192,
+      "binding": 1
+    },
+    {
+      "name": "TestCDBLeafNodeCollision__C10CCDBObjectRC11CDBLeafNodeRC10CVolSphereR10CCollisionbRQ23dwit8fast_vec1ZP11CDBTriGroup",
+      "address": "0x80074544",
+      "size": 192,
+      "binding": 1
+    },
+    {
+      "name": "TestCDBLeafNodeCollision__C10CCDBObjectRC11CDBLeafNodeRC11CVolCapsuleR10CCollisionbRQ23dwit8fast_vec1ZP11CDBTriGroup",
+      "address": "0x80074604",
+      "size": 192,
+      "binding": 1
+    },
+    {
+      "name": "TestCDBLeafNodeCollision__C10CCDBObjectRC11CDBLeafNodeRC15CAnimatedVolumeR10CCollisionbRQ23dwit8fast_vec1ZP11CDBTriGroup",
+      "address": "0x800746c4",
+      "size": 192,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "TestCollision__C10CCDBVolBoxRC10CVolSphereR10CCollisionb": "0x80075860",
+    "TestCollision__C10CCDBVolBoxRC11CVolCapsuleR10CCollisionb": "0x800759ec",
+    "TestCollision__C10CCDBVolBoxRC15CAnimatedVolumeR10CCollisionb": "0x800759b0",
+    "TestCollision__C7CVolBoxRC7CVolBoxR10CCollisionb": "0x80138510",
+    "__10CCDBVolBoxRC6CDBBox": "0x8007576c",
+    "_vt.7IVolume": "0x802e1c38"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "cdbobject.cpp",
+  "original_file_index": 533
+}

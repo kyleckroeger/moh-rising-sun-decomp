@@ -1,0 +1,80 @@
+{
+  "id": "cdbobject_volume_tests",
+  "source": "src/geometry/cdbobject_volume_tests.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80073414",
+      "size": 1592
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029ae58",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "TestCollision__C10CCDBObjectRC7CVolBoxR10CCollisionb",
+      "address": "0x80073414",
+      "size": 304,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C10CCDBObjectRC10CVolSphereR10CCollisionb",
+      "address": "0x80073544",
+      "size": 680,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C10CCDBObjectRC11CVolCapsuleR10CCollisionb",
+      "address": "0x800737ec",
+      "size": 304,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C10CCDBObjectRC15CAnimatedVolumeR10CCollisionb",
+      "address": "0x8007391c",
+      "size": 304,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_free": "0x801a8894",
+    "IsPassThru__12CSurfaceTypeUsb": "0x8005cdd8",
+    "TestCDBBranchNodeCollision__C10CCDBObjectRC13CDBBranchNodeRC10CVolSphereR10CCollisionbRQ23dwit8fast_vec1ZP11CDBTriGroup": "0x80074b38",
+    "TestCDBBranchNodeCollision__C10CCDBObjectRC13CDBBranchNodeRC11CVolCapsuleR10CCollisionbRQ23dwit8fast_vec1ZP11CDBTriGroup": "0x80074e34",
+    "TestCDBBranchNodeCollision__C10CCDBObjectRC13CDBBranchNodeRC15CAnimatedVolumeR10CCollisionbRQ23dwit8fast_vec1ZP11CDBTriGroup": "0x800751f0",
+    "TestCDBBranchNodeCollision__C10CCDBObjectRC13CDBBranchNodeRC7CVolBoxR10CCollisionbRQ23dwit8fast_vec1ZP11CDBTriGroup": "0x80074784",
+    "TestCDBLeafNodeCollision__C10CCDBObjectRC11CDBLeafNodeRC10CVolSphereR10CCollisionbRQ23dwit8fast_vec1ZP11CDBTriGroup": "0x80074544",
+    "TestCDBLeafNodeCollision__C10CCDBObjectRC11CDBLeafNodeRC11CVolCapsuleR10CCollisionbRQ23dwit8fast_vec1ZP11CDBTriGroup": "0x80074604",
+    "TestCDBLeafNodeCollision__C10CCDBObjectRC11CDBLeafNodeRC15CAnimatedVolumeR10CCollisionbRQ23dwit8fast_vec1ZP11CDBTriGroup": "0x800746c4",
+    "TestCDBLeafNodeCollision__C10CCDBObjectRC11CDBLeafNodeRC7CVolBoxR10CCollisionbRQ23dwit8fast_vec1ZP11CDBTriGroup": "0x80074484",
+    "TestCollisionWithTriGroups__H1Z11CVolCapsule_RCQ23dwit8fast_vec1ZP11CDBTriGroupRCX01R10CCollisionb_10EClsnState": "0x8027c4c4",
+    "TestCollisionWithTriGroups__H1Z15CAnimatedVolume_RCQ23dwit8fast_vec1ZP11CDBTriGroupRCX01R10CCollisionb_10EClsnState": "0x8027c684",
+    "TestCollisionWithTriGroups__H1Z7CVolBox_RCQ23dwit8fast_vec1ZP11CDBTriGroupRCX01R10CCollisionb_10EClsnState": "0x8027c304",
+    "TestCollision__C12CCDBTriangleRC10CVolSphereR10CCollisionPC6CDBTrib": "0x80078198",
+    "g_bDisablePassThru": "0x802c1cf0"
+  },
+  "local_externals": [
+    "g_bDisablePassThru"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "cdbobject.cpp",
+  "original_file_index": 533
+}

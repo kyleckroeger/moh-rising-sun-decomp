@@ -66,6 +66,18 @@ Two `1.0f` words at `0x802a83c4` and `0x802a83c8` sit between the constructor's 
 and `UpdateExtents`'s. No retained function reads them, so the world volume's text is
 split at `UpdateExtents` to leave them out; what emitted them is unknown.
 
+## CDB objects
+
+`CCDBObject`'s box, sphere, capsule and animated tests gather tri groups into a
+`dwi::fast_vec` over 2048 stack words, starting at the database's root branch or, with no
+branches, its root leaf (`branchCount` at `+28`). The sphere's test inlines its own plane
+test instead of calling `TestCollisionWithTriGroups<CVolSphere>`, which is why no such
+instance exists. The leaf test for a box calls `CVolBox::TestCollision`, not the override
+`CCDBVolBox` also has. Field names, `CDBTri`'s words and `CDBVector` are descriptive.
+
+`_._10CCDBVolBox` sits in the weak-code region like `IVolume`'s virtuals; a small file with
+`#pragma implementation` emits it with the class table, again as a project arrangement.
+
 ## Contacts and the test driver
 
 `CCollision` is 36 bytes. Contacts come from `CCollision::ms_contactPool`, over the 300

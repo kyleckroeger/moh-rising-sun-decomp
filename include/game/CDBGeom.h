@@ -6,9 +6,9 @@
 #define GAME_CDBGEOM_H
 #pragma interface
 #include "Box.h"
+#include "CDBObject.h"
+#include "CDBTriangle.h"
 
-class CDBBox;
-struct CDBTri;
 
 class CCDBVolBox : public CVolBox {
   public:
@@ -27,12 +27,6 @@ class CCDBVolBox : public CVolBox {
     virtual EClsnState TestCollision(const CPlane &, CCollision &, bool) const;
     virtual EClsnState TestCollision(const CTriangle &, CCollision &, bool) const;
     virtual EClsnState TestCollision(const CCSGVolume &, CCollision &, bool) const;
-};
-
-class CCDBTriangle {
-  public:
-    EClsnState TestCollision(const CVolSphere &, CCollision &, const CDBTri *, bool) const;
-    EClsnState TestCollision(const CAnimatedVolume &, CCollision &, const CDBTri *, bool) const;
 };
 
 #endif

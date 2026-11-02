@@ -1,0 +1,64 @@
+{
+  "id": "cdbvolbox_destructor",
+  "source": "src/geometry/cdbvolbox_destructor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8027c844",
+      "size": 52
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.10CCDBVolBox",
+      "address": "0x802e2dd0",
+      "size": 176,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "_._10CCDBVolBox",
+      "address": "0x8027c844",
+      "size": 52,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Create__C7CVolBox": "0x80137e34",
+    "GetExtents__C7CVolBoxR8CVector3T1": "0x8013cbc0",
+    "GetRadius__C7IVolume": "0x802798d8",
+    "SetRadius__7IVolumef": "0x802798e4",
+    "TestCollision__C10CCDBVolBoxRC10CCDBObjectR10CCollisionb": "0x8007a908",
+    "TestCollision__C10CCDBVolBoxRC10CCSGVolumeR10CCollisionb": "0x800759e4",
+    "TestCollision__C10CCDBVolBoxRC10CVolSphereR10CCollisionb": "0x80075860",
+    "TestCollision__C10CCDBVolBoxRC11CVolCapsuleR10CCollisionb": "0x800759ec",
+    "TestCollision__C10CCDBVolBoxRC12CWorldVolumeR10CCollisionb": "0x8007a948",
+    "TestCollision__C10CCDBVolBoxRC15CAnimatedVolumeR10CCollisionb": "0x800759b0",
+    "TestCollision__C10CCDBVolBoxRC6CLine3R10CCollisionb": "0x80075ba0",
+    "TestCollision__C10CCDBVolBoxRC6CPlaneR10CCollisionb": "0x80075a0c",
+    "TestCollision__C10CCDBVolBoxRC7CVolBoxR10CCollisionb": "0x8007a8e8",
+    "TestCollision__C10CCDBVolBoxRC7IVolumeR10CCollisionb": "0x8007a8c8",
+    "TestCollision__C10CCDBVolBoxRC8CVector3R10CCollisionb": "0x8007a928",
+    "TestCollision__C10CCDBVolBoxRC9CTriangleR10CCollisionb": "0x80075cd4",
+    "TestCollision__C10CCDBVolBoxRC9CVolFiberR10CCollisionb": "0x80075b30",
+    "TestVisibility__C7CVolBoxR12CDrawContext": "0x8013ca78",
+    "TransformedCopy__7CVolBoxRC7IVolumeRC7CMatrix": "0x80137e80",
+    "__builtin_delete": "0x801a8990",
+    "_vt.7IVolume": "0x802e1c38"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}
