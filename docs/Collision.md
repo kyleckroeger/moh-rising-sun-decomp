@@ -112,7 +112,7 @@ helpers are project names: no symbol records the pool's type.
 is made. `CVolSphere::Create` waits on its file's header strings, above, and with it any
 whole `sphere.cpp`. The long vector tests that remain are listed by
 `config/GR8E69` by omission: the box tests, the sphere line test and visibility, the capsule
-line and capsule tests, the fiber line test and extents, `CCDBObject`'s line test and branch
+transformed copy and visibility, the fiber's transformed copy and extents, `CCDBObject`'s line test and branch
 node tests, the CDB box and triangle tests, `CCompartment`'s constructor and loading, `CPlane`
 and the segment distance.
 
@@ -130,6 +130,12 @@ are marked in the source: they reproduce the code shape and carry no other evide
 sit in the weak-code region, with their literals right after `cdbobject.cpp`'s. Their
 manifest names `cdbobject.cpp` on that basis: they read the local `g_bDisablePassThru`, which
 needs a file, and the literals' position supports this one. No file symbol proves it.
+
+`FindIntersection` is `capsule.cpp`'s local function, named by its own symbol. Its arithmetic is
+the usual quadratic for a line against a capsule: an orthonormal basis along the axis, the
+infinite cylinder, then each hemisphere. Its locals are declared at function scope because
+that is what reproduces their register assignment; their names are descriptive. Frontline's
+reconstruction of the caller has no source for it.
 
 ## File attributions
 

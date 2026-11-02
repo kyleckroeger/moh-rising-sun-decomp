@@ -62,6 +62,7 @@ public:
     int IsDegenerate() const;
     void Set(const CVector3&, const CVector3&);
     void GetProjection(const CVector3&, CVector3&, float&) const;
+    float GetSquaredDistanceBetweenSegments(const CLine3 &, float &, float &, float *) const;
 };
 
 #endif

@@ -1658,7 +1658,10 @@
     "ea_thread_init.json",
     "weapon_factory_ctor.json",
     "weapon_factory_shutdown.json",
-    "weapon_factory_props.json"
+    "weapon_factory_props.json",
+    "capsule_test_capsule.json",
+    "capsule_test_line.json",
+    "fiber_test_line.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
