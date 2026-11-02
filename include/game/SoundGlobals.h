@@ -11,7 +11,9 @@ struct SNDVOICEVIEW {
     short channels[6];
     char pad10[4];
     unsigned int length;
-    char pad18[8];
+    char pad18[4];
+    short azimuth;
+    short distance;
     unsigned short rate;
     unsigned char type;
     unsigned char count;
@@ -27,7 +29,8 @@ struct SNDVOICEVIEW {
     short attrvolume;
     char pad42[6];
     float outvolume;
-    char pad4c[20];
+    unsigned short baseazimuth;
+    char pad4e[18];
     signed char send[1];
     signed char level[1];
     short fxlevel[1];

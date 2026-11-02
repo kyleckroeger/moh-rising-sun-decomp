@@ -1,0 +1,54 @@
+{
+  "id": "sound_sbadd",
+  "source": "src/sound/ea/sbadd.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80219548",
+      "size": 600
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDBANKI_userdatacallback__FP15SNDIPATCHHEADERi",
+      "address": "0x80219548",
+      "size": 200,
+      "binding": 1
+    },
+    {
+      "name": "SNDbankadd",
+      "address": "0x80219610",
+      "size": 400,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDBANKI_alloc__Fv": "0x802197a0",
+    "SNDBANKI_asyncresolvepatch__FiP11TAGGEDPATCHPcPi": "0x8021f5bc",
+    "SNDPLATFORM_download__FiPvT1i": "0x8021e1c8",
+    "SNDPLATFORM_downloadcomplete__Fi": "0x8021e21c",
+    "SNDPLATFORM_memalloc__Fii": "0x8021e138",
+    "SNDbankremove": "0x8021a748",
+    "sndgs": "0x804108fc"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sbadd.c",
+  "original_file_index": 3031
+}

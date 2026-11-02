@@ -1,0 +1,50 @@
+{
+  "id": "sound_sbremove",
+  "source": "src/sound/ea/sbremove.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8021a748",
+      "size": 400
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDbankremove",
+      "address": "0x8021a748",
+      "size": 400,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDBANKI_getppatch__FP8BANKVER5i": "0x802197e4",
+    "SNDBANKI_userdatacallback__FP15SNDIPATCHHEADERi": "0x80219548",
+    "SNDBANKI_valid__Fi": "0x8021a8d8",
+    "SNDI_parsetimbre__FPPvP15SNDIPATCHHEADER": "0x80222044",
+    "SNDPLATFORM_memfree__FiUi": "0x8021e17c",
+    "SNDSYS_entercritical": "0x8021f948",
+    "SNDSYS_leavecritical": "0x8021f988",
+    "SNDstop": "0x80220a5c",
+    "sndgs": "0x804108fc"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sbremove.c",
+  "original_file_index": 3047
+}

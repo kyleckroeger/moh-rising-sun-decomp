@@ -1,0 +1,64 @@
+{
+  "id": "ea_memlist",
+  "source": "src/ea/memlist.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8020d5c8",
+      "size": 508
+    }
+  ],
+  "functions": [
+    {
+      "name": "FREE_find__FP8MEMCLASSii",
+      "address": "0x8020d5c8",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "FREE_findlargest__FP8MEMCLASSii",
+      "address": "0x8020d60c",
+      "size": 160,
+      "binding": 1
+    },
+    {
+      "name": "FREE_gettotalfree__FP8MEMCLASSi",
+      "address": "0x8020d6ac",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "FREE_add__FP8MEMCLASSP8MEMBLOCK",
+      "address": "0x8020d718",
+      "size": 132,
+      "binding": 1
+    },
+    {
+      "name": "FREE_remove__FP8MEMBLOCK",
+      "address": "0x8020d79c",
+      "size": 40,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "memlist.cpp",
+  "original_file_index": 2909
+}

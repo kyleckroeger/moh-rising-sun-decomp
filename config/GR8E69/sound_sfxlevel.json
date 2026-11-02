@@ -1,0 +1,46 @@
+{
+  "id": "sound_sfxlevel",
+  "source": "src/sound/ea/sfxlevel.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802242e4",
+      "size": 148
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDfxlevel",
+      "address": "0x802242e4",
+      "size": 148,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDI_calcfxlevel__Fii": "0x802232b8",
+    "SNDPLATFORM_setfxlevel__Fii": "0x80223538",
+    "SNDVOICEI_get__Fi": "0x8021945c",
+    "iSNDpatchkey__FiPi": "0x8021e878",
+    "sndgs": "0x804108fc"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sfxlevel.c",
+  "original_file_index": 3164
+}
