@@ -1345,7 +1345,8 @@
     "ai_AIDoodad.json",
     "ai_AIPlayerDoodad.json",
     "ai_AISoldierDoodad.json",
-    "ai_AITankDoodad.json"
+    "ai_AITankDoodad.json",
+    "ai_AIStatus.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

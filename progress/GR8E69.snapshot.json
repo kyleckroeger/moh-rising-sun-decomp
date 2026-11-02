@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 767392,
+    "matching_code_bytes": 767936,
     "total_executable_code_bytes": 2492032,
-    "percent": 30.793826082490114,
+    "percent": 30.81565565771226,
     "categories": {
-      "reconstructed_game": 375176,
+      "reconstructed_game": 375720,
       "restored_library": 392216
     },
-    "matching_functions": 3284
+    "matching_functions": 3289
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -112,6 +112,7 @@
     "config/GR8E69/ai_AIDoodad.json": "e2609f553306a674aa8981751ce3c5b61ec5d9aa5c3a1a0509aae786409aebf4",
     "config/GR8E69/ai_AIPlayerDoodad.json": "8976209d5d59b86a5d929fac29a9e3ea68a001d594b16260e83a1360eec3227b",
     "config/GR8E69/ai_AISoldierDoodad.json": "0eaebe52e58074f6eb5b7dd04ee0e4f40b1e85f8209f2dd8b1c1925244a85baf",
+    "config/GR8E69/ai_AIStatus.json": "116def6205f392b48bd2b8f9da5a552a5b7bf91e1c59f412687470a618ace22b",
     "config/GR8E69/ai_AITankDoodad.json": "724066023ce56095ce6bae2111e66550d73385166788fc69569925fe4764e476",
     "config/GR8E69/ai_filter_clock.json": "f2034db8752a041debc3e5f86662b062dae08812cf71d3c95f66f339dbd705b1",
     "config/GR8E69/ai_filter_splines.json": "26b024e231fa1eb564b501c3108a8fb71d50e76cdc7ad97470e83b7b39b7fbde",
@@ -679,7 +680,7 @@
     "config/GR8E69/player_path_controls.json": "a5a585ed38c40cd299ab995320748f8e6777003f8cc885f5376c7e440dc2b3b7",
     "config/GR8E69/player_spline_position.json": "5b4aa80de0af602d8d0cde27f43b24848fd3a5ad92b1972f1900f8f256617888",
     "config/GR8E69/player_spline_tangent.json": "36eccc91b26a0f0558ee6f02c6e52398927527bf754f986e8d6db6404022d9b8",
-    "config/GR8E69/project.json": "5c7f9b30176e042589ce04db2bd10a5ffc974564f748010d82cf11abb8f6c203",
+    "config/GR8E69/project.json": "15301aaa1a8602fc0a802532c0e8a7bc909c5173fcb41ef8f69116ba45bf60eb",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
     "config/GR8E69/projectile_exclusion_pair.json": "99afd0db09aa6eccc73fda17bb9ac1d24a6fe107780f8cf54fb758360cd20ef0",
@@ -1795,6 +1796,7 @@
     "src/ai/AIDoodad.cpp": "b1c2db4af88214d62076c115bafd3ac149b189a45dd90abb2b37bb5250211b12",
     "src/ai/AIPlayerDoodad.cpp": "aae454c7afa224f419a698b5e35635415fb9bcd40ff3c5a7ae4c3cc88feaa9bb",
     "src/ai/AISoldierDoodad.cpp": "69e8bc90a49fd028f5f23d1791ce17c60cc433862d36a8dedd339caa3017b9ac",
+    "src/ai/AIStatus.cpp": "587c305fbf140fffa82832a2e326dc5a471e22b83420f9b84357630b97047455",
     "src/ai/AITankDoodad.cpp": "05e46e5f362ff308fbae636cc5210ca203a135e4cdb7ba2fe1d05b0683ea063f",
     "src/ai/filter_clock.cpp": "15b68a3c4487c496821009dc2ab90f971b7036cdd0a2fbcd54527ca71978bb58",
     "src/ai/filter_splines.cpp": "58cc98352a9799c6cb33d6bb8c2cc23892071c78418aa670ce0283f29fc5a5f3",
@@ -30971,6 +30973,24 @@
       "discarded_functions": [],
       "object_sha256": "dd7e54290cc881ad63379776db4aba9d82fa745c95b72ce3d503fda6eea75c16",
       "linked_sha256": "d4c5c4726a40858afb3d7962710af436988621852c07ba229e5c3bd6caf36fb7"
+    },
+    {
+      "id": "ai_AIStatus",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 544,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "0f454bd0ef620f46ac6386bbe76c0cff970ac0dda6200f421398fd08a27d6ab0",
+      "linked_sha256": "32b13d9240cb8e25891752097792f2ab182b970264015e39b5373e2277139c9b"
     }
   ],
   "code_map": {
@@ -49168,52 +49188,6 @@
         "marker_interval": [
           "0x800de340",
           "0x800de9a8"
-        ]
-      },
-      {
-        "name": "Unmatched files/AIStatus.cpp [inferred file group]",
-        "file_record": 162,
-        "file_name": "AIStatus.cpp",
-        "ranges": [
-          {
-            "address": "0x800de9a8",
-            "size": 4,
-            "kind": "function",
-            "name": "__9CAIStatus",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800de9ac",
-            "size": 40,
-            "kind": "function",
-            "name": "_._9CAIStatus",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800de9d4",
-            "size": 356,
-            "kind": "function",
-            "name": "MatchStatus__9CAIStatus12aistatus_vari19aistatus_comparison",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800deb38",
-            "size": 48,
-            "kind": "function",
-            "name": "MatchStatus__9CAIStatusP14aistatus_match",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800deb68",
-            "size": 96,
-            "kind": "function",
-            "name": "MatchStatusList__9CAIStatusP14aistatus_matchi",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x800de9a8",
-          "0x800debc8"
         ]
       },
       {

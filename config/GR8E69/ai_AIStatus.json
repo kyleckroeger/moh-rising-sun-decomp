@@ -1,0 +1,71 @@
+{
+  "id": "ai_AIStatus",
+  "source": "src/ai/AIStatus.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800de9a8",
+      "size": 544
+    }
+  ],
+  "functions": [
+    {
+      "name": "__9CAIStatus",
+      "address": "0x800de9a8",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "_._9CAIStatus",
+      "address": "0x800de9ac",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "MatchStatus__9CAIStatus12aistatus_vari19aistatus_comparison",
+      "address": "0x800de9d4",
+      "size": 356,
+      "binding": 1
+    },
+    {
+      "name": "MatchStatus__9CAIStatusP14aistatus_match",
+      "address": "0x800deb38",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "MatchStatusList__9CAIStatusP14aistatus_matchi",
+      "address": "0x800deb68",
+      "size": 96,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "ComputeStatusDistance__9CAIObjectP9CAITarget": "0x800dac10",
+    "ComputeStatusExponentialDistance__9CAIObjectP9CAITarget": "0x800dac80",
+    "ComputeStatusIsEnemy__9CAIObjectP9CAITarget": "0x800dafb0",
+    "ComputeStatusLOSValue__9CAIObjectP9CAITarget": "0x800daebc",
+    "ComputeStatusThreatValue__9CAIObjectP9CAITarget": "0x800dae20",
+    "_9CAIStatus.s_pTarget": "0x802c3454",
+    "_9CAIStatus.s_paioAttacker": "0x802c3450",
+    "__builtin_delete": "0x801a8990"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIStatus.cpp",
+  "original_file_index": 986
+}
