@@ -1587,7 +1587,10 @@
     "sound_sst_stream.json",
     "sound_sst_service.json",
     "sound_sst_queue.json",
-    "sound_sflpf_rc.json"
+    "sound_sflpf_rc.json",
+    "sound_sfreson.json",
+    "sound_sfilter_add.json",
+    "sound_sfilter_connect.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

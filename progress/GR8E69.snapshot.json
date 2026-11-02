@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 854696,
+    "matching_code_bytes": 855848,
     "total_executable_code_bytes": 2492032,
-    "percent": 34.29715188247984,
+    "percent": 34.34337921824439,
     "categories": {
-      "reconstructed_game": 462480,
+      "reconstructed_game": 463632,
       "restored_library": 392216
     },
-    "matching_functions": 4096
+    "matching_functions": 4102
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -779,7 +779,7 @@
     "config/GR8E69/player_weapon_overlays.json": "172965adf4a7a763b5932a9744ff75bbf384ef314e25785dee9d7617044a8d5b",
     "config/GR8E69/player_weapon_selectable.json": "c7e3f09ad1510713bfd88ee468db0fcb4c6ef18b3b89bdb414b32ea863b25668",
     "config/GR8E69/player_weapon_shutdown.json": "f90a42342572d125630e7ac3647193288c13301a5309bcdc49cc350364bc2b60",
-    "config/GR8E69/project.json": "2e745895404d9ed2c827b3ab33596db326edf5fb1e472b336fbec63daf848141",
+    "config/GR8E69/project.json": "e1fa7abaf7b69df7e11e2420bb27ae205c214e00bf15c7f236eeca21bc740bda",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -1285,11 +1285,14 @@
     "config/GR8E69/sound_sfbpffir8.json": "f6e32d076bca1588b697a8312fa03a499880c490d7ef0250cce9db67fece0bf6",
     "config/GR8E69/sound_sfft24.json": "f44f567398dbb0e30c386baa169c1af0c1251a5c32582eb4a7ab627cfbe5652c",
     "config/GR8E69/sound_sfhpffir8.json": "1925af25d0ce525e8cbc3a94cccfce994cfe3ddea3eb3886b40c07fe0c1f48da",
+    "config/GR8E69/sound_sfilter_add.json": "9191523066bc5cf2ee2e216368b99853409b47d0bf3c5da3a1422fa058ed0aa2",
+    "config/GR8E69/sound_sfilter_connect.json": "d6f8999b8e324d045d9cf2c9cef1ea141c2ac7df85507d2ca40738b64440fd20",
     "config/GR8E69/sound_sfir8.json": "746035aebf4238f8dab7286e49ef184d02cb52efa97a25203264e0b0e3b29223",
     "config/GR8E69/sound_sflpf.json": "7dcf11540b54b524793cf413d4430fb9b1e4f351a9ae02868564ac08420ff36d",
     "config/GR8E69/sound_sflpf_rc.json": "8f6dd174f7eccc79965e2dd6e4463c673a35e77cb2277aa42e75b1e769b1d218",
     "config/GR8E69/sound_sflpffir8.json": "1bf9e2be859aeace9e8973672a27569c44bc083e566d7ee110503934cfa0e039",
     "config/GR8E69/sound_sfmixer.json": "a6117967774b504456c87012df67b54d9c975a4298adfc5ec8a33976a01ddf5f",
+    "config/GR8E69/sound_sfreson.json": "6427588769064b9f27100720abad9c209eedebaf79274fa354b1ffb083e2861f",
     "config/GR8E69/sound_sfrsf.json": "52717df634587803c7fe297734e5dd0f81c730690292dfc9b7db8a025352bea8",
     "config/GR8E69/sound_sfrsf_init.json": "aa1c7236325850bb9cc1f509793616b0a49d6c9c814add8c16dbbeebcaa68af7",
     "config/GR8E69/sound_sfsplit.json": "e0cf7bbdaaf71479c70dcf56932e5f20d43014e7b74d080f3c4cf796506e3341",
@@ -3405,11 +3408,14 @@
     "src/sound/ea/sfbpffir8.cpp": "a4457cb5938c1c4e76a760d9b00756685d20a9ca3deedba3b0888b403e21d137",
     "src/sound/ea/sfft24.cpp": "6395be08508693129a6eb642f0bf4857956bb2d7bc36829f5ffa7f2f742b24c9",
     "src/sound/ea/sfhpffir8.cpp": "253d942492a6d7fd4c680a08d9c929ad43e5d9bb03c0397f0308ec3d3789ccef",
+    "src/sound/ea/sfilter_add.cpp": "6b2729f958d273df5fc4357e6b7bfa15c9855a611b91beeedd16171e4f1386a4",
+    "src/sound/ea/sfilter_connect.cpp": "9b70f5dd005d0f616108ca7b27586a79a844e49ad133ce0debe29ff5f3a37d24",
     "src/sound/ea/sfir8.cpp": "51617cd94c136fe7ab9c92bdc0266b56482ff2d0031535816a026b0d85245bd1",
     "src/sound/ea/sflpf.cpp": "8cd569911dcb06ff22da61690d5a2bd31afd8e695d31421de8f67162be172b7d",
     "src/sound/ea/sflpf_rc.cpp": "83a29a63890ae0480352bb9068d8f77a6f44600530ada911e8abd6e9628287ed",
     "src/sound/ea/sflpffir8.cpp": "66da37d2d522d216ce36f088a120823f4758713896b7f1a29b96d0c106767080",
     "src/sound/ea/sfmixer.cpp": "14b17cb1759d7c475ceaaa51442e10f1d44c3c0eb6de4f88e507757f95d9ae67",
+    "src/sound/ea/sfreson.cpp": "b47b8eca8034fc7720378a82263b1e46e802fed284e1c501ad7d746b82950e1e",
     "src/sound/ea/sfrsf.cpp": "a06aa4b543be5ded606dc7599c0c9004059b7a0610dc0f40c141ea752e800f89",
     "src/sound/ea/sfrsf_init.cpp": "af9b375ab1c25298b998e5560c980284ecd0e154e6f83cf0bd7bd97eb5ca4238",
     "src/sound/ea/sfsplit.cpp": "c646089a4b40c6be760e9f276a65a43aa37c75b467b1fcc77fcdea8095e653df",
@@ -35923,6 +35929,63 @@
       "discarded_functions": [],
       "object_sha256": "7bae48dc51a5eb4f680a9aa5e4a2051570925e97f8181ef8fd7207f40a41c5bf",
       "linked_sha256": "a5d83b7b769f85dadce4fb15f4ceb1503cdeaea0ce208698df4b0d7b53b28466"
+    },
+    {
+      "id": "sound_sfreson",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 848,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "74055772ae8eceaa73ae139994d7128408b34151c3e3539def42c4f3b121dcad",
+      "linked_sha256": "5762bd5eca09eae60da1ab190084fba7ae4aa9faacdb2dac31edd8f384588ed3"
+    },
+    {
+      "id": "sound_sfilter_add",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 104,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "699db9d2b99608a5b93c93cdc672d07492a72ea0df24ab307ce82f9fa88a153e",
+      "linked_sha256": "7dea8fb229889379b55dddc187e59dcb153cfd232235284e4ee2126fec63b560"
+    },
+    {
+      "id": "sound_sfilter_connect",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 200,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "b54b00e4dd115a721bf7c2ed8b172ad5c09f921f79aa3a3b93c5b259dd5a90ac",
+      "linked_sha256": "0c9f4cf7bfebef84570df512a35f16d9cf52936f57225986e69e01af6be9ea8f"
     }
   ],
   "code_map": {
@@ -76092,24 +76155,10 @@
         "file_name": "sfilter.c",
         "ranges": [
           {
-            "address": "0x80227e6c",
-            "size": 104,
-            "kind": "function",
-            "name": "SFILTER_add",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80227ed4",
             "size": 124,
             "kind": "function",
             "name": "SFILTER_remove",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80227f50",
-            "size": 200,
-            "kind": "function",
-            "name": "SFILTER_connect",
             "evidence": "adjacent-compiler-markers"
           }
         ],
@@ -76152,45 +76201,6 @@
         "marker_interval": [
           "0x802284ac",
           "0x80228664"
-        ]
-      },
-      {
-        "name": "Unmatched files/sfreson.c [inferred file group]",
-        "file_record": 649,
-        "file_name": "sfreson.c",
-        "ranges": [
-          {
-            "address": "0x80228918",
-            "size": 304,
-            "kind": "function",
-            "name": "resonx87__FP10RESONSTATEiPvT2",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80228a48",
-            "size": 128,
-            "kind": "function",
-            "name": "SFILTER_reson__FPviT0T0i",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80228ac8",
-            "size": 72,
-            "kind": "function",
-            "name": "SFILTER_createRESON__FP10RESONSTATE",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80228b10",
-            "size": 344,
-            "kind": "function",
-            "name": "SFILTER_modifyRESON__FP10RESONSTATEPi",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x80228918",
-          "0x80228c68"
         ]
       },
       {

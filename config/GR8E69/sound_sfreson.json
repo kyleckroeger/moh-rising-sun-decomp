@@ -1,0 +1,66 @@
+{
+  "id": "sound_sfreson",
+  "source": "src/sound/ea/sfreson.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80228918",
+      "size": 848
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bfca0",
+      "size": 48
+    }
+  ],
+  "functions": [
+    {
+      "name": "resonx87__FP10RESONSTATEiPvT2",
+      "address": "0x80228918",
+      "size": 304,
+      "binding": 1
+    },
+    {
+      "name": "SFILTER_reson__FPviT0T0i",
+      "address": "0x80228a48",
+      "size": 128,
+      "binding": 1
+    },
+    {
+      "name": "SFILTER_createRESON__FP10RESONSTATE",
+      "address": "0x80228ac8",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "SFILTER_modifyRESON__FP10RESONSTATEPi",
+      "address": "0x80228b10",
+      "size": 344,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDI_cos__Ff": "0x80226a04",
+    "SNDI_rootof1plusx__Ff": "0x80229308"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sfreson.c",
+  "original_file_index": 3250
+}
