@@ -1,0 +1,64 @@
+{
+  "id": "projectile_init",
+  "source": "src/bullets/ProjectileInit.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8014d604",
+      "size": 1688
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a8da0",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "Init__17CProjectileBullet22EProjectileBulletTypesP33ProjectileBulletProperties_structRC8CVector3T3f7EClsnIdfP10ISceneNodeb",
+      "address": "0x8014d604",
+      "size": 1688,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddObserver__8ISubjectP9IObserver": "0x8014ae44",
+    "Add__6CSceneR10ISceneNodeP10ISceneNode": "0x80146e08",
+    "BuildTrans__7CMatrixRC8CVector3": "0x8007ade8",
+    "ExcludeCollision__6CSceneRC10ISceneNodeT1i": "0x801476b0",
+    "GetPlayer__C6CScenei": "0x8014ac08",
+    "IncludeCollision__6CSceneRC10ISceneNodeT1": "0x8014792c",
+    "Init__7CBulletb": "0x8014d0ac",
+    "MathFunRandomReal__Fff": "0x80133a54",
+    "SetFront__7CMatrixRC8CVector3": "0x8007ae44",
+    "SetRight__7CMatrixRC8CVector3": "0x8007ae28",
+    "SetUp__7CMatrixRC8CVector3": "0x8007ae60",
+    "Set__9CVolFiberRC8CVector3T1": "0x801411c8",
+    "TransformedCopy__9CVolFiberRC7IVolumeRC7CMatrix": "0x80140ed4",
+    "_._10CCollision": "0x80133d10",
+    "__10CCollision": "0x80133bd4",
+    "g_NumPlayers": "0x802c1b3c",
+    "g_bCoopMultiplayer": "0x802c1b2c",
+    "g_bInMultiplayerMode": "0x802c1b30",
+    "g_scene": "0x803e6d90",
+    "sqrtf": "0x80270538"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "projectilebullet.cpp",
+  "original_file_index": 1351
+}

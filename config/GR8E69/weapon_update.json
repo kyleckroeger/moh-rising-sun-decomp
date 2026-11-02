@@ -1,0 +1,62 @@
+{
+  "id": "weapon_update",
+  "source": "src/weapons/WeaponUpdate.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8014bc54",
+      "size": 1564
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a8b80",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "Update__7CWeaponfb",
+      "address": "0x8014bc54",
+      "size": 1564,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddAmo__7CWeapons": "0x8014ba40",
+    "DisablePassThru__10CCDBObjectb": "0x80073058",
+    "DoneReloading__7CWeapon": "0x8014bb1c",
+    "FireBullet__7CWeapon": "0x8014c270",
+    "MathFunRandomReal__Fff": "0x80133a54",
+    "SetFront__7CMatrixRC8CVector3": "0x8007ae44",
+    "SetRight__7CMatrixRC8CVector3": "0x8007ae28",
+    "SetUp__7CMatrixRC8CVector3": "0x8007ae60",
+    "Set__6CLine3RC8CVector3T1": "0x80281690",
+    "StartReloading__7CWeapon": "0x8014bad0",
+    "Translate__7CMatrixRC8CVector3": "0x8007af2c",
+    "_._10CCollision": "0x80133d10",
+    "_._9CVolFiber": "0x80140e54",
+    "__10CCollision": "0x80133bd4",
+    "__9CVolFiberRC6CLine3": "0x80140db0",
+    "g_cheats": "0x802f98e4",
+    "g_scene": "0x803e6d90",
+    "sqrtf": "0x80270538"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "weapon.cpp",
+  "original_file_index": 1347
+}
