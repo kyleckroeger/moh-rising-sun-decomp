@@ -1336,7 +1336,8 @@
     "csg_volume_test_generic.json",
     "cdbobject_test_generic.json",
     "cdbobject_test_csg.json",
-    "cdbobject_test_zero.json"
+    "cdbobject_test_zero.json",
+    "ea_hlsfile.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
