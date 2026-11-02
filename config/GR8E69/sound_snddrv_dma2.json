@@ -1,0 +1,46 @@
+{
+  "id": "sound_snddrv_dma2",
+  "source": "src/sound/ea/snddrv_dma2.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8021b854",
+      "size": 152
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDDRV_restoredma__Fi",
+      "address": "0x8021b854",
+      "size": 152,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "ARQRemoveRequest": "0x8022e72c",
+    "OSDisableInterrupts": "0x80257798",
+    "OSRestoreInterrupts": "0x802577c0",
+    "SNDDRV_dmapost__FUlPvT1Uli": "0x8021b734",
+    "snddrv": "0x80410c40"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "snddrv.c",
+  "original_file_index": 3064
+}

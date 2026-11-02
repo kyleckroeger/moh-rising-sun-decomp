@@ -1579,7 +1579,9 @@
     "thrown_bullet_constrain.json",
     "thrown_bullet_effect.json",
     "weapon_update.json",
-    "projectile_init.json"
+    "projectile_init.json",
+    "sound_snddrv_dma1.json",
+    "sound_snddrv_dma2.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

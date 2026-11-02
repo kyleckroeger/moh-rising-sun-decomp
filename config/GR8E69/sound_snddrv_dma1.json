@@ -1,0 +1,60 @@
+{
+  "id": "sound_snddrv_dma1",
+  "source": "src/sound/ea/snddrv_dma1.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8021b548",
+      "size": 492
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDDRV_freeaxvoice__Fii",
+      "address": "0x8021b548",
+      "size": 276,
+      "binding": 1
+    },
+    {
+      "name": "SNDDRV_dmaslotenter__Fi",
+      "address": "0x8021b65c",
+      "size": 140,
+      "binding": 1
+    },
+    {
+      "name": "SNDDRV_dmcallback__FUl",
+      "address": "0x8021b6e8",
+      "size": 76,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AXFreeVoice": "0x8022eb8c",
+    "OSDisableInterrupts": "0x80257798",
+    "OSRestoreInterrupts": "0x802577c0",
+    "SNDDRV_DSPMixerReleaseChannel__FP6_AXVPB": "0x80223c78",
+    "SNDVOICEI_free__Fi": "0x802192bc",
+    "snddrv": "0x80410c40",
+    "sndgs": "0x804108fc"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "snddrv.c",
+  "original_file_index": 3064
+}
