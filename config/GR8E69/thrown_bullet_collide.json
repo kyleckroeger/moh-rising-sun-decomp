@@ -1,0 +1,48 @@
+{
+  "id": "thrown_bullet_collide",
+  "source": "src/bullets/ThrownBulletCollide.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80151bdc",
+      "size": 572
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a94c8",
+      "size": 72
+    }
+  ],
+  "functions": [
+    {
+      "name": "OnCollision__13CThrownBulletRC10CCollision",
+      "address": "0x80151bdc",
+      "size": 572,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DebugMsg__FPCce": "0x80279094",
+    "ExcludeCollision__6CSceneRC10ISceneNodeT1i": "0x801476b0",
+    "Explode__13CThrownBullet": "0x80153b18",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "thrownbullet.cpp",
+  "original_file_index": 1370
+}

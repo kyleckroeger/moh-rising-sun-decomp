@@ -1545,7 +1545,11 @@
     "fiber_visibility.json",
     "compartment_init.json",
     "compartment_draw_enabled.json",
-    "compartment_world_volume.json"
+    "compartment_world_volume.json",
+    "thrown_bullet_collide.json",
+    "thrown_bullet_update.json",
+    "projectile_draw.json",
+    "projectile_script_type.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

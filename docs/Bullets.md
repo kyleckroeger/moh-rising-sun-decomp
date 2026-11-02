@@ -107,3 +107,14 @@ swapped), `ShouldHeightCheckBeFlipped` (one load-immediate position), `TestRay` 
 `SetScaled` and `SetSum` in `ProjectileUpdate.cpp` are descriptive inline helpers; the
 original store and reload order requires a by-reference result, but their names and
 their existence as functions are inferred.
+
+## Thrown object updates
+
+`CThrownObject::OnCollision`, `UpdateCollisionVolumes`, `Draw`, `BeginUpdate`,
+`AttemptUpdate`, `CommitUpdate` and `HandleBulletCollision` are reconstructed. The field
+names at +0x300 to +0x3a0 and the bit names in the flags word at +0x394 are Frontline's
+readings or inferred. Scene node slots are checked against the disc: where Frontline
+tests `AsWorldObject`/`AsSoldierObject` for script state 1, Rising Sun tests
+`AsAnimObject`/`AsPlayerObject`. Events are 224 and 225, against Frontline's 231 and 232.
+`Constrain` stays parked at `scratch/par/player/ThrownConstrain_parked.cpp` (reload of the
+reflected normal differs, 176 of 204 instructions aligned).

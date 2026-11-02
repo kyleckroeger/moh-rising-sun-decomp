@@ -72,14 +72,18 @@ struct ProjectileBulletProperties_struct {
     unsigned char unknown_08[72 - 8];
     void *sprite;          // +0x48
     float damage;          // +0x4c
-    unsigned char unknown_50[96 - 80]; // The factory indexes the table in 96-byte steps.
+    unsigned char unknown_50[84 - 80];
+    float width;           // +0x54; Draw does nothing while it is zero. Name from Frontline.
+    unsigned char unknown_58[96 - 88]; // The factory indexes the table in 96-byte steps.
 };
 struct ThrownBulletProperties_struct {
     unsigned int crc;      // +0x00
     float weight;          // +0x04
     unsigned char unknown_08[72 - 8];
     void *sprite;          // +0x48
-    unsigned char unknown_4c[92 - 76];
+    unsigned char unknown_4c[84 - 76];
+    float friction;        // +0x54; names from Frontline.
+    float bounce;          // +0x58
     float damage;          // +0x5c
     float blastRadius;     // +0x60
     unsigned char unknown_64[2];
@@ -99,7 +103,8 @@ struct ProjectileBulletFlags {
 
 class CProjectileBullet : public CBullet {
   public:
-    unsigned char unknown_b8[0xc8 - 0xb8];
+    unsigned char unknown_b8[0xc4 - 0xb8];
+    int type;                                       // +0xc4
     ProjectileBulletProperties_struct *properties; // Stored by Init.
     unsigned char unknown_cc[0xe0 - 0xcc];
     ISceneNode *firedBy;                            // Returned by GetFiredBy.
@@ -118,6 +123,7 @@ class CProjectileBullet : public CBullet {
     void CommitUpdate();
     void Penetrate(const CCollision &);
     void Draw(CDrawContext &);
+    static void ExecuteDraw(CDrawContext &, void **);
     int GetScriptBulletType() const;
     void MarkForDestruction(int);
     void Destroy();
@@ -139,21 +145,30 @@ class CProjectileBullet : public CBullet {
 class CThrownBullet : public CBullet {
   public:
     void SomebodyCaughtYou();
-    unsigned char unknown_b8[0xc8 - 0xb8];
+    void AttemptUpdate(float);
+    int Constrain(float);
+    void BeginUpdate(float);
+    void OnCollision(const CCollision &);
+    void Penetrate(const CCollision &);
+    unsigned char unknown_b8[0xc4 - 0xb8];
+    int type;                                       // +0xc4
     ThrownBulletProperties_struct *properties;     // Stored by Init.
     unsigned char unknown_cc[0xe0 - 0xcc];
     ISceneNode *firedBy;                            // Returned by GetFiredBy.
-    unsigned char unknown_e4[0x120 - 0xe4];
+    unsigned char scriptNode[0x120 - 0xe4];         // +0xe4; a BSGO_Basic.
     CLightVolumeManager lightVolumes;               // +0x120
     unsigned char unknown_13c[0x140 - 0x13c];
     CVector3 velocity;                              // +0x140
     CVector3 spin;                                  // +0x150; cleared with the velocity by Halt.
-    unsigned char unknown_160[0x1a0 - 0x160];
+    CVector3 field_160;                             // +0x160; Penetrate's surface normal.
+    CVector3 field_170, field_180, field_190;       // +0x170: field_190 times the distance moved, plus field_180.
     unsigned char localVolume[0x1f0 - 0x1a0];       // +0x1a0
     unsigned char worldVolume[0x254 - 0x1f0];       // +0x1f0; a CVolFiber (extent inferred).
     CLight *attachedLight;
     unsigned char unknown_258[0x25c - 0x258];
-    unsigned int unknown_31_29 : 3;
+    unsigned int bit31 : 1;
+    unsigned int bit30 : 1;
+    unsigned int bit29 : 1;       // Bit 29; AttemptUpdate applies gravity while set.
     unsigned int explodeNow : 1;  // Bit 28; Explode sets it to the inverse of bit 27.
     unsigned int caught : 1;      // Bit 27; set by SomebodyCaughtYou.
     unsigned int unknown_26_25 : 2;
