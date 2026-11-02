@@ -15,6 +15,9 @@ class CCDBTriangle {
     CVector3 a;
     CVector3 b;
     CVector3 c;
+    EClsnState TestCollision(const CVolBox &, CCollision &, const CDBTri *, bool) const;
+    EClsnState TestCollision(const CVolCapsule &, CCollision &, const CDBTri *, bool) const;
+    EClsnState TestCollision(const CLine3 &, CCollision &, const CDBTri *, bool) const;
     EClsnState TestCollision(const CVolSphere &, CCollision &, const CDBTri *, bool) const;
     EClsnState TestCollision(const CAnimatedVolume &, CCollision &, const CDBTri *, bool) const;
 };

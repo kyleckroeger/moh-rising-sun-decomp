@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 856492,
+    "matching_code_bytes": 858812,
     "total_executable_code_bytes": 2492032,
-    "percent": 34.36922158302943,
+    "percent": 34.46231830088859,
     "categories": {
-      "reconstructed_game": 464276,
+      "reconstructed_game": 466596,
       "restored_library": 392216
     },
-    "matching_functions": 4109
+    "matching_functions": 4115
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -187,6 +187,7 @@
     "config/GR8E69/arq.json": "b79b6daec16d9806b4df0388a3f927cb06d48ce10fdb9fa35772dcecce291de7",
     "config/GR8E69/base64.json": "e88ebd5740a86b7f43b5b6812b6c4e81114d43dfae07a3e7429abb7c6a1bfec7",
     "config/GR8E69/baseline.json": "9ebff32fd809e72fdf889ab49760be2aa1172768f855af86d0251c1fc4da2ef7",
+    "config/GR8E69/box_create.json": "08b81afd8e39210b2713de6d2c883d05afc7baaac67b5ec7dc4567f59ce7c7bf",
     "config/GR8E69/box_tail.json": "93c8bd3f6a93ecf815426857be9e45c636f0c921b4294170f52fd857d8cbaeb3",
     "config/GR8E69/box_test_dispatch.json": "7a70d85d5875938059c2e4354c237ed3d4eb74c8421cf8d0040321c09ea239b0",
     "config/GR8E69/box_test_generic.json": "12b963776c05004668d26beed846112f3ba2cb017ddb92f0c78b7f3d6618592e",
@@ -221,6 +222,7 @@
     "config/GR8E69/capsule_radius.json": "bb6a1153cd4f67a2e7d496ae1582bd1d879781b003a5321fe77713a8da338da4",
     "config/GR8E69/capsule_test_dispatch.json": "2936ea02ff0dcf9f7190e5df3d145d073f06dc93cb049367417d0783cdfbbcff",
     "config/GR8E69/capsule_test_generic.json": "17f3b2616108ddeff4b83dda87cf1b1b897ea31a9fb83eabb17458c57b0c6ded",
+    "config/GR8E69/capsule_test_plane.json": "368aae6df06a2d9f393e851aff799b1710a4c06a46d6a1aaa3bd0f3ae1947044",
     "config/GR8E69/capsule_test_triangle.json": "5baaa3cf4ae64a36084efac699bbf1e015999a6d4f2295ecc6d66f89677b0bae",
     "config/GR8E69/cdbgeom_box_fiber.json": "aa49c630e3c17ad5f334c863b7b0f43bae04eadf323947bb202034784bc5e3ce",
     "config/GR8E69/cdbgeom_box_forward.json": "9e588124762913284b6ae4f8703312ef9c6c37a2595e7f5740d36cd41ab9e231",
@@ -230,9 +232,11 @@
     "config/GR8E69/cdbobject_extents.json": "b890d2488f59133cd1e9720d1c1da60df1024d6eb8726a9be931f325c3b4169b",
     "config/GR8E69/cdbobject_head.json": "adc46e41a7d4aca4ecead7f0d8a1bfef31bf5c3a14021a5507361543f3f8f8db",
     "config/GR8E69/cdbobject_leaf_tests.json": "ca411ae4d2e63972a6cf3e336aba964fbf2cb802f0f8ed9f80a77a33997995b4",
+    "config/GR8E69/cdbobject_line_tri_group.json": "fe14752be93417c32ff566dc2d8c0eff0b6812768d527641614102288c92e524",
     "config/GR8E69/cdbobject_test_csg.json": "4d127861c85433d16ffbc9a3af8021e44d272783706e34de7e3a98090c56f166",
     "config/GR8E69/cdbobject_test_generic.json": "ace4e2c8df0ca873cf8df71e0172a6346161af8147b510af2466d288153c76c2",
     "config/GR8E69/cdbobject_test_zero.json": "27704aea532cd93d02d9709d0ba44efe94e5f4f096b8f8212eeec073739782b0",
+    "config/GR8E69/cdbobject_tri_groups.json": "1568f707ed410f07659e7f09468115b1c8219770a78473e812d70417bb0bc4b6",
     "config/GR8E69/cdbobject_volume_tests.json": "cd69b3449a419ddfd4ab9b86bd8a79f6b756d62ec55e7837299a8bc66d0fe0a9",
     "config/GR8E69/cdbvolbox_destructor.json": "09f5635ea67b9a14ae39f825281f580a8edc97496b69bc8d2fae2e9b60cb8354",
     "config/GR8E69/collision.json": "1b0c1c5fcf9df49be4f7e94045811de208a33a442beaf2225667d05a837a0c9c",
@@ -781,7 +785,7 @@
     "config/GR8E69/player_weapon_overlays.json": "172965adf4a7a763b5932a9744ff75bbf384ef314e25785dee9d7617044a8d5b",
     "config/GR8E69/player_weapon_selectable.json": "c7e3f09ad1510713bfd88ee468db0fcb4c6ef18b3b89bdb414b32ea863b25668",
     "config/GR8E69/player_weapon_shutdown.json": "f90a42342572d125630e7ac3647193288c13301a5309bcdc49cc350364bc2b60",
-    "config/GR8E69/project.json": "f429ccd7c077d7390a44e5a0943ccc64f98d4a239cdadedc8b498eb5194ebc66",
+    "config/GR8E69/project.json": "31d61f3efdc8b10b284322573429d7d0829de6399ca06a8e85da6fbf50a69859",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -1790,7 +1794,7 @@
     "include/game/Bullet.h": "8900b75ce39fe8e08cd7d0a3339d69478167df79fc72f7a35eb3aaed6613b3e8",
     "include/game/CDBGeom.h": "52cc6684854d7d274db12c9e545f56e9add679d6133fc2f612c5d9c3f822d29b",
     "include/game/CDBObject.h": "e7e31e8514ea7b42e4d797289f1f68a55eb5cb92c56080f858fad4c09ace3823",
-    "include/game/CDBTriangle.h": "35e4a11e314b05883f7524f67caa0ee7c8e8a675ba3dff005134eb43adfa8d44",
+    "include/game/CDBTriangle.h": "b120a08def55e03c97792f0169f7d1b86cad8ae5a71592392f08ccfebab66975",
     "include/game/CLine2.h": "e92fdbfd47ed264651ab9bbb90557a0461c3f6469267837079a5d514eb583f2c",
     "include/game/CLine3.h": "fa7c0029679942ba7a4d32bcb6eb0f6cf85a8802b2172700d61893b6ad6622e7",
     "include/game/CMatrix.h": "0a1cd7c02e0d72a241d00c861f92cf720b93960f3e96da8dea1f370ee8be27f9",
@@ -1857,7 +1861,7 @@
     "include/game/FlexProp.h": "d4b492f690451a27c03371aa71637f8b6a4109c07ed8ba55de69ae5f256414ff",
     "include/game/FlexPropDatabase.h": "e3bb33faf5cff3877d051efc3335ff33c373c9d228a7afcb8b2c16f4ee97c767",
     "include/game/Fog.h": "30a37f01f3f665d1f9b3b0a5ef81ea098194595159c5ff794797541c6bf325c0",
-    "include/game/Frustum.h": "08163678da2f577eb9780b1ddb9612c086d315ade7a94d092f390eee1e97be3f",
+    "include/game/Frustum.h": "8b459091729087e5119c39887634fd28825b36e40b7a0efdf9a40c2cf58741fe",
     "include/game/GameSettings.h": "052e40f725ee630fb3c8846350d0e293350e792fa814b52ce3f616a590038a01",
     "include/game/IDestructible.h": "1427a08ba92fefc7fdc63c4ba8fc7aab3ec64bc8d2d1cfb7fe035346b685379f",
     "include/game/IVolume.h": "95911ba145df993a5c74b9b441c050754f2084de085a7d62b324f66e4479f2bc",
@@ -2559,6 +2563,7 @@
     "src/game/string_80277f18.cpp": "b6c79191f3a19d54855216cdbc6cf512f4fa474cc60d95837b45a4acec64016c",
     "src/geometry/animated_volume_head.cpp": "23df314f9ced954f09dc466dd40c5733f234b699a9f5fb655a3c2e12ae551ba4",
     "src/geometry/animated_volume_tests.cpp": "f840db7fa1a281f301e273992e262605cdd17e463498259772e58a6746b88724",
+    "src/geometry/box_create.cpp": "b33c7f1f47ad817c4982521c7165fd593c63b2c086e50fd8ea64814426a42c51",
     "src/geometry/box_tail.cpp": "f03563f12a9c677d103f2ab4073f7a8b6168693bf317eeccdb750837dea6746a",
     "src/geometry/box_test_dispatch.cpp": "624e77fe5ee294e5bc2c364225cad880fa6a1b0e5c6566d85150cf467dafd0ed",
     "src/geometry/box_test_generic.cpp": "12f0577f0bffce624b57e5b34d9d4974105eedb024a3ac17a25a75899ee34ff1",
@@ -2568,6 +2573,7 @@
     "src/geometry/capsule_radius.cpp": "3cf781e54433336033eba2f9c93859fd758620910521346860b53f2a4792a1e0",
     "src/geometry/capsule_test_dispatch.cpp": "be9dea3e1dd7735a78dbefb8e8a616639df31eb7e05a3c6da8c0d71d509149fd",
     "src/geometry/capsule_test_generic.cpp": "b69fef471c5adebc49e0df5471bef4904f07fa8b596669cf6b2b44997bf5ac85",
+    "src/geometry/capsule_test_plane.cpp": "bb6c330b09f50f2ea9fdb86f3687b14afb33819025f08e2eb2a7aea06d09206b",
     "src/geometry/capsule_test_triangle.cpp": "27bfc2ce10e795fd1806f01c35add2ce90df492bde1c463d6bf9cb676b1bd660",
     "src/geometry/cdbgeom_box_fiber.cpp": "0306dc4fa1233e7c84307b2255175aa31a2a1841a9cf0db8f039102c8a891802",
     "src/geometry/cdbgeom_box_forward.cpp": "7232b33f2d3eb7129ccb1ec1e78ee93d0ef4431ec9f6dfa1e14760c9e9a5d866",
@@ -2577,9 +2583,11 @@
     "src/geometry/cdbobject_extents.cpp": "1e1461c986d1bacc27764c55ffc3a85cea8d2c8b18fa4758ae84a9077f4d8532",
     "src/geometry/cdbobject_head.cpp": "8f0e77c8e1d62fa797873d6ec14a917f3bf4abdddf8218c61ff5c625c535f2d8",
     "src/geometry/cdbobject_leaf_tests.cpp": "42990ab762c41a469c6907e9927e31fad8e621d1165bad475c7f139e81764b64",
+    "src/geometry/cdbobject_line_tri_group.cpp": "9ad28131a56583446fd4dcb3d8fc5615c2db2518f10b0e40ac1d5e83018a138b",
     "src/geometry/cdbobject_test_csg.cpp": "084c1a8d2d8fa914a12646fdc82a49376a6f505c68aa392e11dfe1e59575d1b2",
     "src/geometry/cdbobject_test_generic.cpp": "2c1bea16fc427fea2f7c61fd9851fb9cd89b33e436e9c96f14be0522ddad9a59",
     "src/geometry/cdbobject_test_zero.cpp": "4f546c7480c99ddd5c36a26aba00bdbbfd448e7d71266bd114c3a1f341f86aa7",
+    "src/geometry/cdbobject_tri_groups.cpp": "8f033747880096089abedd50d5ab0d979f4d2c8acaca576f03e3bc85c7f68f9a",
     "src/geometry/cdbobject_volume_tests.cpp": "c15c9c93c40f3caad218650b15f91f68345d6f95f0d5171ff189e6d7d61a6cd5",
     "src/geometry/cdbvolbox_destructor.cpp": "fbf4473d0a4488b44c3ce59eb95f7c9bafac381edda07972474800830be4fce5",
     "src/geometry/collision.cpp": "0bf608643eb8f98f801626263baa3427fb1c8a57c15e35a049d6703195a53918",
@@ -36052,6 +36060,78 @@
       "discarded_functions": [],
       "object_sha256": "ad2a2aa873265cdbc18b660b572aa7907344fede531eca32e816666467c6c3a3",
       "linked_sha256": "cbbde071c4dbae233a8e585b2f5e234e7ba0f6554bcb736beac3021bc90961c9"
+    },
+    {
+      "id": "cdbobject_tri_groups",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 1344,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "69039ba2da97fbe7aafbaf75bf2e474eb6933db34883cb1d1ae5d207887575b9",
+      "linked_sha256": "55eb55e6d2710fc74d67dfef9e4b5994a001c6e1301227c48ac40c90f72404f8"
+    },
+    {
+      "id": "cdbobject_line_tri_group",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 548,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "57319e50d828f3be9579dd0941f56be498a3934388d5a4b70706cae9a1098372",
+      "linked_sha256": "0858e0c5950e8edb491787dfe80ccb655d4a2bed67a48e30b3d6d0b8d1e009cf"
+    },
+    {
+      "id": "box_create",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 76,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "5bb0da0a2f85afd731ada960d5f63ae31046a138f30a1af23add94dd8e24960e",
+      "linked_sha256": "1e2ecfa60c5d55dd4edb511d3cec16c13d2e9977e62a91dce7b21ed20595ddd1"
+    },
+    {
+      "id": "capsule_test_plane",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 352,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "8522702f6f42eb7ced8b9092edff1b173a873936f019fd3e4b288d4a18d6e6c4",
+      "linked_sha256": "20cbc79db2b9181032a2bdbd95212d437c0b74a0a45ef60e314b3d39f84a4fdb"
     }
   ],
   "code_map": {
@@ -42279,18 +42359,6 @@
             "size": 592,
             "kind": "function",
             "name": "BuildSymbolLookup__12CCompartment",
-            "evidence": "unknown-file"
-          }
-        ]
-      },
-      {
-        "name": "Unknown file/.text @ 80072e0c",
-        "ranges": [
-          {
-            "address": "0x80072e0c",
-            "size": 548,
-            "kind": "function",
-            "name": "TestCollisionWithTriGroup__FRC11CDBTriGroupRC6CLine3R10CCollisionb",
             "evidence": "unknown-file"
           }
         ]
@@ -57280,13 +57348,6 @@
             "evidence": "local-file-symbol"
           },
           {
-            "address": "0x80137e34",
-            "size": 76,
-            "kind": "function",
-            "name": "Create__C7CVolBox",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80137e80",
             "size": 1020,
             "kind": "function",
@@ -57728,13 +57789,6 @@
             "size": 1144,
             "kind": "function",
             "name": "TestCollision__C11CVolCapsuleRC6CLine3R10CCollisionb",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80143ec4",
-            "size": 352,
-            "kind": "function",
-            "name": "TestCollision__C11CVolCapsuleRC6CPlaneR10CCollisionb",
             "evidence": "unknown-file"
           }
         ]
@@ -79986,27 +80040,6 @@
             "size": 24,
             "kind": "function",
             "name": "offsetPtr__H1Z7CDBNode_RPX01i_v",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8027c304",
-            "size": 448,
-            "kind": "function",
-            "name": "TestCollisionWithTriGroups__H1Z7CVolBox_RCQ23dwit8fast_vec1ZP11CDBTriGroupRCX01R10CCollisionb_10EClsnState",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8027c4c4",
-            "size": 448,
-            "kind": "function",
-            "name": "TestCollisionWithTriGroups__H1Z11CVolCapsule_RCQ23dwit8fast_vec1ZP11CDBTriGroupRCX01R10CCollisionb_10EClsnState",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8027c684",
-            "size": 448,
-            "kind": "function",
-            "name": "TestCollisionWithTriGroups__H1Z15CAnimatedVolume_RCQ23dwit8fast_vec1ZP11CDBTriGroupRCX01R10CCollisionb_10EClsnState",
             "evidence": "unknown-file"
           }
         ]

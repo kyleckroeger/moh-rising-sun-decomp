@@ -108,9 +108,16 @@ helpers are project names: no symbol records the pool's type.
 ## Not reconstructed
 
 `CCollisionVolume::~CCollisionVolume` inlines the `ISceneNode` destructor, which
-`SceneNode.h` declares out of line, and stays original context. The sphere and box
-tests with long vector arithmetic, the sphere's `TestVisibility` and line test, and
-the CDB object and triangle tests also remain.
+`SceneNode.h` declares out of line, and stays original context until that header decision
+is made. `CVolSphere::Create` waits on its file's header strings, above. Most long vector tests also remain: the sphere's sphere, point and line tests and
+visibility, the box tests, the capsule tests other than `Create`, the fiber's point and
+line tests and extents, `CCDBObject`'s line test and branch node tests, the CDB box and
+triangle tests, `CCompartment`'s constructor and loading, `CPlane` and the segment distance.
+Their reference-versus-local shape is the common obstacle.
+
+`CCDBObject`'s `TestCollisionWithTriGroups` instances for box, capsule and animated volumes
+sit in the weak-code region, with their literals right after `cdbobject.cpp`'s. Their
+manifest names that file because they read its local `g_bDisablePassThru`.
 
 ## File attributions
 
