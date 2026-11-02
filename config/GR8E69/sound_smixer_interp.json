@@ -1,0 +1,51 @@
+{
+  "id": "sound_smixer_interp",
+  "source": "src/sound/ea/smixer_interp.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802255fc",
+      "size": 872
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bfab8",
+      "size": 128
+    }
+  ],
+  "functions": [
+    {
+      "name": "MIXI_interpolateto0__FPfT0",
+      "address": "0x802255fc",
+      "size": 416,
+      "binding": 1
+    },
+    {
+      "name": "MIXI_interpolatemix__FffPfT2",
+      "address": "0x8022579c",
+      "size": 456,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "smixer.c",
+  "original_file_index": 3186
+}

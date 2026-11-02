@@ -1,0 +1,44 @@
+{
+  "id": "sound_spktctoh",
+  "source": "src/sound/ea/spktctoh.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80229398",
+      "size": 136
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDPKTPLAYI_voicetopackethandle__Fi",
+      "address": "0x80229398",
+      "size": 136,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDVOICEI_get__Fi": "0x8021945c",
+    "sndgs": "0x804108fc",
+    "sndpps": "0x8041cd00"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "spktctoh.c",
+  "original_file_index": 3270
+}

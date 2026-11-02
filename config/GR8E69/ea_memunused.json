@@ -1,0 +1,46 @@
+{
+  "id": "ea_memunused",
+  "source": "src/ea/memunused.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8020ce94",
+      "size": 64
+    }
+  ],
+  "functions": [
+    {
+      "name": "MEM_totalunused",
+      "address": "0x8020ce94",
+      "size": 64,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FREE_gettotalfree__FP8MEMCLASSi": "0x8020d6ac",
+    "mb_default": "0x80451254",
+    "memclass": "0x804098e0"
+  },
+  "sda_externals": [
+    "mb_default"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "memunused.cpp",
+  "original_file_index": 2895
+}

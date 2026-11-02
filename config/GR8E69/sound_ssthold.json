@@ -1,0 +1,44 @@
+{
+  "id": "sound_ssthold",
+  "source": "src/sound/ea/ssthold.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80220a04",
+      "size": 88
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDSTRM_modifyhold",
+      "address": "0x80220a04",
+      "size": 88,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDSTRMI_getrequestptr__Fi": "0x8022098c",
+    "SNDSYS_entercritical": "0x8021f948",
+    "SNDSYS_leavecritical": "0x8021f988"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "ssthold.c",
+  "original_file_index": 3101
+}

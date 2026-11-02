@@ -1,0 +1,43 @@
+{
+  "id": "ea_initvblt",
+  "source": "src/ea/initvblt.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80218d8c",
+      "size": 96
+    }
+  ],
+  "functions": [
+    {
+      "name": "ttDoVTimerMsg__Fv",
+      "address": "0x80218d8c",
+      "size": 96,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "vblticks": "0x804512c0",
+    "vbltmrsub": "0x802d51e0"
+  },
+  "sda_externals": [
+    "vblticks"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}
