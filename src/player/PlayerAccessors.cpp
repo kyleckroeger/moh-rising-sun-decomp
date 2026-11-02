@@ -8,6 +8,6 @@ const CPlayerObject *CPlayerObject::AsPlayerObject() const { return this; }
 void CPlayerObject::SetCollisionId(EClsnId id) { collisionId = id; }
 CVector3 CPlayerObject::GetWorldLinearVelocity() const { return velocity; }
 const char *CPlayerObject::GetName() { return name; }
-int CPlayerObject::GetPlayerIndex() { return playerIndex; }
+unsigned char CPlayerObject::GetPlayerIndex() { return playerIndex; }
 int CPlayerObject::GetTeam() { return team; }
 void CPlayerObject::Destroy() { delete (ISceneNode *)this; }

@@ -3,6 +3,7 @@
 #define GAME_WORLD_OBJECT_H
 
 // Method-only view of the world (compartment) object held by CScene at +0x18.
+class CExplosion;
 class CWorldObject {
   public:
     // Sixteen-byte compartment request; the four entries are sign-extended shorts.
@@ -10,6 +11,7 @@ class CWorldObject {
         int compartments[4];
     };
     void Acquire(const SAcquireSet &, bool, bool);
+    void HandleExplosion(const CExplosion &);
 };
 
 #endif

@@ -1,0 +1,69 @@
+{
+  "id": "explosion_visit",
+  "source": "src/bullets/ExplosionVisit.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80153f64",
+      "size": 2060
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a97f4",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "_._10CExplosion",
+      "address": "0x80153f64",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "Visit__10CExplosionR10ISceneNode",
+      "address": "0x80153fa4",
+      "size": 1996,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddHitDirection__15CHeadsUpDisplayUi": "0x80177cf0",
+    "BSEventGetEventMemoryBlock__FUi": "0x8011dba8",
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "CheckForObstructions__10CExplosionR10ISceneNode": "0x801549bc",
+    "Explode__13CThrownBullet": "0x80153b18",
+    "IsInvincible__C13CPlayerObject": "0x800ba068",
+    "SetCameraShake__13CPlayerObjectffff": "0x800b4364",
+    "SetFeedback__13CInputManagerUcUcUcff": "0x800d704c",
+    "SetMPShotLocation__13CPlayerObjectP32BS_STRUCT_HitByBulletInfo_struct": "0x800b908c",
+    "__builtin_delete": "0x801a8990",
+    "_vt.7IVolume": "0x802e1c38",
+    "_vt.Q23dwit8IVisitor1Z10ISceneNode": "0x802e18a8",
+    "g_bCoopMultiplayer": "0x802c1b2c",
+    "g_bInMultiplayerMode": "0x802c1b30",
+    "g_cheats": "0x802f98e4",
+    "g_inputMgr": "0x803077c4",
+    "g_pDirectHitNode": "0x802c4d88",
+    "rand": "0x80265c98",
+    "sqrtf": "0x80270538"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "explosion.cpp",
+  "original_file_index": 1374
+}

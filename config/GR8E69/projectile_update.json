@@ -1,0 +1,66 @@
+{
+  "id": "projectile_update",
+  "source": "src/bullets/ProjectileUpdate.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8014de04",
+      "size": 1288
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a8db8",
+      "size": 52
+    }
+  ],
+  "functions": [
+    {
+      "name": "BeginUpdate__17CProjectileBulletf",
+      "address": "0x8014de04",
+      "size": 276,
+      "binding": 1
+    },
+    {
+      "name": "AttemptUpdate__17CProjectileBulletf",
+      "address": "0x8014df18",
+      "size": 400,
+      "binding": 1
+    },
+    {
+      "name": "CommitUpdate__17CProjectileBullet",
+      "address": "0x8014e0a8",
+      "size": 220,
+      "binding": 1
+    },
+    {
+      "name": "Penetrate__17CProjectileBulletRC10CCollision",
+      "address": "0x8014e184",
+      "size": 392,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetExtents__C9CVolFiberR8CVector3T1": "0x80142150",
+    "SetPos__7CMatrixRC8CVector3": "0x8007ae7c",
+    "Set__9CVolFiberRC8CVector3T1": "0x801411c8",
+    "TransformedCopy__9CVolFiberRC7IVolumeRC7CMatrix": "0x80140ed4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "projectilebullet.cpp",
+  "original_file_index": 1351
+}

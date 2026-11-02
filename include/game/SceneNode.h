@@ -128,9 +128,19 @@ class IMovingSceneNode : public ISceneNode {
     virtual void SetLightVolumeTransitionDuration(float);
     virtual const char *GetName();
     virtual int GetTeam();
-    virtual int GetPlayerIndex();
+    virtual unsigned char GetPlayerIndex();
 };
 
+namespace dwi {
+template <class T> class IVisitor {
+  public:
+    virtual ~IVisitor() {}
+    virtual bool Visit(T &) = 0;
+};
+}
+// The instantiation (and its table) belongs elsewhere in the original image.
+extern template class dwi::IVisitor<ISceneNode>;
+class IVolume;
 // Member-only view of the scene container; only the world pointer at +0x18 is named.
 class CScene {
   public:
@@ -141,6 +151,7 @@ class CScene {
     int IsNodeInScene(const ISceneNode *) const;
     CPlayerObject *GetPlayer(int) const;
     CPlayerObject *FindClosestPlayer(const CVector3 &);
+    void VisitAllNodesInVolume(dwi::IVisitor<ISceneNode> &, const IVolume &, ISceneNode::EVolumeType, bool);
 };
 extern CScene g_scene;
 

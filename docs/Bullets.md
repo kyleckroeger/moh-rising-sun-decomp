@@ -87,3 +87,23 @@ weight, and mirrors the result to `+0x150`. `Explode` writes the inverse of bit 
 `CThrownObject` in `include/game/Thrown.h` is a scoped view with `CStaticObject` as its
 base; `LimitSpeed` caps the speed at twice the world volume's radius while `+0x20c` is not
 -1. Its source lives in `src/weapons/`.
+
+## Explosions and projectile updates
+
+`CExplosion` derives from `dwi::IVisitor<ISceneNode>` (symbols); its sphere is at
++0x10, then strength, damage, the script bullet type, the source node and two flags
+(+0x30 to +0x44). `Visit` matches at 1,996 bytes. It skips animated players and player
+weapon objects, scales damage by a falloff of `1 - (distance - 1) / radius` clamped to
+0.5, gives a direct-hit node full damage in multiplayer (`g_pDirectHitNode`), and sends
+events 178 and 40 with an eight-word `BS_STRUCT_HitByBulletInfo_struct`. Only the field
+meanings are inferred; event numbers and constants are read from the code. Unlike
+Frontline, Rising Sun applies no explosion push here: the original still calls
+`AsPlayerObject` and discards the result at that point.
+
+Parked in `scratch/par/player/Explosion.cpp`: the constructor (two argument moves
+swapped), `ShouldHeightCheckBeFlipped` (one load-immediate position), `TestRay` and
+`CheckForObstructions`.
+
+`SetScaled` and `SetSum` in `ProjectileUpdate.cpp` are descriptive inline helpers; the
+original store and reload order requires a by-reference result, but their names and
+their existence as functions are inferred.

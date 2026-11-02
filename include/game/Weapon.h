@@ -7,7 +7,7 @@
 // Member-only view of CWeapon for the reload built-ins. This does not establish
 // the complete allocation, base classes or virtual interface.
 // Observed fields of the weapon's property record; not a complete layout.
-struct WeaponProperties {
+struct WeaponProperties_struct {
     unsigned char unknown_0[4];
     short clipSize;   // +0x04; compared by BIFunc_PlayerWeaponInfo selector 4.
     short refireRate; // +0x06
@@ -16,11 +16,15 @@ struct WeaponProperties {
     short projectile; // +0x0e; nonzero for projectile weapons.
     unsigned char unknown_10[2];
     short infoValue1; // +0x12; returned for EWeaponInfo 1; caps the reserve in AddAmo.
-    unsigned char unknown_14[0x60 - 0x14];
+    unsigned char unknown_14[0x34 - 0x14];
+    void *model;      // +0x34; copied to the static object by Init.
+    unsigned char unknown_38[0x60 - 0x38];
     short soundType;  // +0x60; returned by GetWeaponSoundType.
     unsigned char unknown_62[0x68 - 0x62];
     short weaponType; // +0x68; returned by the weapon-type built-ins.
 };
+
+typedef WeaponProperties_struct WeaponProperties;
 
 // Original enum tag; its members are unknown.
 enum EWeaponShootType { WeaponShootTypeUnknown = 0 };
@@ -34,31 +38,37 @@ class CWeapon : public CStaticObject {
   public:
     unsigned char unknown_220[0x300 - sizeof(CStaticObject)];
     WeaponProperties *properties; // +0x300
-    unsigned char unknown_304[0x308 - 0x304];
+    void *state;      // +0x304; a Resource::Pointer<EALA::Character::State>.
     int crc;          // +0x308; weapon name CRC.
     short reserveAmmo; // +0x30c
     short loadedAmmo; // +0x30e; rounds in the clip, returned for EWeaponInfo 0.
-    unsigned char unknown_310[4];
+    float field_310;            // +0x310
     EWeaponShootType shootType; // +0x314
     float shootValue;           // +0x318
-    unsigned char unknown_31c[0x320 - 0x31c];
+    int bulletClass;            // +0x31c; chosen from the holder's collision id.
     int weaponClass; // +0x320; returned by BIFunc_PlayerGetWeaponClass.
     float shootValue2;          // +0x324; Shoot keeps it when passed -1.
     unsigned char unknown_328[0x340 - 0x328];
     CVector3 position;          // +0x340; returned by GetPosition.
     unsigned int reloading : 1; // +0x350, bit 31: cleared by BIFunc_PlayerClearReloading.
-    unsigned int unknown_30 : 1;
+    unsigned int field_30 : 1;
     unsigned int forceProximityUpdate : 1; // Bit 29; tested by BeginUpdate.
     unsigned int infiniteAmmo : 1;         // Bit 28; a reload fills the clip without using the reserve.
-    unsigned int unknown_27 : 1;
+    unsigned int field_27 : 1;
     unsigned int muzzleFlashStatus : 1;    // Bit 26; returned by GetMuzzleFlashStatus.
     unsigned int muzzlePuff : 1;           // Bit 25; CreateMuzzlePuff does nothing while clear.
-    unsigned int unknown_low : 25;
-    unsigned char unknown_354[0x360 - 0x354];
+    unsigned int field_24 : 1;
+    unsigned int unknown_low : 24;
+    float field_354;            // +0x354
+    float field_358;            // +0x358
+    unsigned char unknown_35c[0x360 - 0x35c];
     void *muzzleFlash; // +0x360
-    unsigned char unknown_364[0x370 - 0x364];
+    float field_364;            // +0x364; from the level resource record.
+    int field_368;              // +0x368; from the level resource record.
+    float field_36c;            // +0x36c
     ISceneNode *holder; // +0x370
     int trigger;        // +0x374; proximity-trigger subobject, only its address is taken here.
+    void Init(int, WeaponProperties_struct *, ISceneNode *, short);
     void RegisterWithAI();
     int SupportsCoverpointBehavior();
     int SupportsGrenadeResponseBehavior();

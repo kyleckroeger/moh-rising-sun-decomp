@@ -8,6 +8,7 @@
 #include "ParticleRecipe.h"
 #include "LightVolumeManager.h"
 #include "Volume.h"
+#include "Sphere.h"
 class CCollision;
 class CProjectileBullet;
 class CThrownBullet;
@@ -16,6 +17,12 @@ class CThrownBullet;
 enum EScriptBulletType { ScriptBulletTypeUnknown = 0 };
 int GetClassFromBulletType(EScriptBulletType);
 
+// A collision-sort axis entry; only its value at +8 is written here.
+struct BulletExtentEntry {
+    unsigned char unknown_0[8];
+    float value;
+};
+
 // CBullet's table (0x802e9eb0) follows the IMovingSceneNode slot map and adds slots
 // 89-102 in this order. Field names are descriptive; unlisted storage is unknown.
 class CBullet : public IMovingSceneNode {
@@ -23,10 +30,13 @@ class CBullet : public IMovingSceneNode {
     enum EXPLOSION_PARTICLE_TYPE { ExplosionParticleTypeUnknown = 0 };
 
     int field_18, field_1c;  // Cleared by Init unless its argument is set.
-    unsigned char unknown_20[0x40 - 0x20];
+    BulletExtentEntry *extentMinX, *extentMaxX, *extentMinY, *extentMaxY; // +0x20; set from the fiber's extents. Names from Frontline.
+    unsigned char unknown_30[0x40 - 0x30];
     EClsnId collisionId;
     int bulletKind; // +0x44; 1 for projectile bullets, tested by CBulletFactory::DestroyBullet.
-    unsigned char unknown_48[0x70 - 0x48];
+    unsigned char unknown_48[0x50 - 0x48];
+    CVector3 position;     // +0x50
+    CVector3 prevPosition; // +0x60
     CMatrix localToWorld;
     float field_b0, field_b4;
 
@@ -95,13 +105,20 @@ class CProjectileBullet : public CBullet {
     ISceneNode *firedBy;                            // Returned by GetFiredBy.
     unsigned char unknown_e4[0xfc - 0xe4];
     float speed;                                    // +0xfc; scales the direction in GetVelocity.
-    unsigned char unknown_100[0x108 - 0x100];
+    unsigned char unknown_100[0x104 - 0x100];
+    float life;                                     // +0x104
     float collisionTime;                            // +0x108; taken from a collision.
     ProjectileBulletFlags flags;
     unsigned char localVolume[0x160 - 0x110];       // +0x110
     unsigned char worldVolume[0x1b0 - 0x160];       // +0x160; a CVolFiber (extent inferred).
     IParticleSystem *trail;                         // +0x1b0; deactivated by MarkForDestruction.
 
+    void BeginUpdate(float);
+    void AttemptUpdate(float);
+    void CommitUpdate();
+    void Penetrate(const CCollision &);
+    void Draw(CDrawContext &);
+    int GetScriptBulletType() const;
     void MarkForDestruction(int);
     void Destroy();
     void Shutdown();
@@ -186,10 +203,23 @@ class ISceneNode;
 class CVector3;
 // Stack-constructed blast; its constructor writes through +0x44. The script
 // built-ins fix its frame at 0x4c or 0x50 bytes; 0x4c is used here.
-class CExplosion {
+class CExplosion;
+class CExplosion : public dwi::IVisitor<ISceneNode> {
   public:
-    unsigned char unknown_0[0x4c];
+    unsigned char unknown_4[0x10 - 4];
+    CVolSphere sphere;           // +0x10
+    float strength;              // +0x30; scales the noise. Name inferred.
+    float damage;                // +0x34
+    EScriptBulletType bulletType; // +0x38
+    ISceneNode *source;          // +0x3c
+    bool heightCheck;            // +0x40; name inferred.
+    bool field_44;               // +0x44
+    unsigned char unknown_48[4];
     CExplosion(CScene &, const CVector3 &, float, float, float, EScriptBulletType, ISceneNode *, bool, bool);
-    ~CExplosion();
+    virtual ~CExplosion();
+    virtual bool Visit(ISceneNode &);
+    bool TestRay(const CVector3 &, const CVector3 &, const CVector3 &, const CMatrix &);
+    bool CheckForObstructions(ISceneNode &);
+    bool ShouldHeightCheckBeFlipped(ISceneNode &);
 };
 #endif

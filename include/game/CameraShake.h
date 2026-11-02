@@ -155,6 +155,7 @@ class PlayerDrawView {
     virtual void unknown2();
     virtual void Submit(void *, const CMatrix &);
 };
+struct BS_STRUCT_HitByBulletInfo_struct;
 class CPlayerObject {
   public:
     // Member-only view of the target search at +0x1ca0; the class name is original,
@@ -271,7 +272,8 @@ class CPlayerObject {
     };
     int field_d48;           // +0xd48
     Flags flags;
-    unsigned char unknown_d50[0xd58 - 0xd50];
+    unsigned char unknown_d50[0xd54 - 0xd50];
+    float field_d54;         // +0xd54; positive blocks explosion damage in coop and multiplayer.
     CCameraShake cameraShake;
     CCameraShake backgroundShake;
     float motionShakeAmount, motionShakeRate, motionShakeTime;
@@ -385,7 +387,7 @@ class CPlayerObject {
     void SetCollisionId(EClsnId);
     CVector3 GetWorldLinearVelocity() const;
     const char *GetName();
-    int GetPlayerIndex();
+    unsigned char GetPlayerIndex();
     int GetTeam();
     void Destroy();
     void SetClimbingState(bool);
@@ -414,6 +416,7 @@ class CPlayerObject {
     int CanPlayerSwitchWeapon();
     int IsPlayerCrouching() const;
     int IsInvincible() const;
+    void SetMPShotLocation(BS_STRUCT_HitByBulletInfo_struct *);
     void StartDeathSequence();
     void DropMPDumpObject();
     int CycleWeapon(int, int);

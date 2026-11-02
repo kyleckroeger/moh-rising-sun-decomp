@@ -32,6 +32,7 @@ class CVolSphere : public IVolume {
     float radius;
     CVector3 center;
     CVolSphere() {}
+    CVector3 GetCenter() const { return center; }
     CVolSphere(float r, const CVector3 &c) : radius(r), center(c) {}
 };
 

@@ -1476,7 +1476,9 @@
     "scene_StaticObjectScale.json",
     "scene_StaticObjectCommit.json",
     "scene_StaticObjectTailA.json",
-    "scene_StaticObjectTailB.json"
+    "scene_StaticObjectTailB.json",
+    "explosion_visit.json",
+    "projectile_update.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
