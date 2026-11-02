@@ -49,7 +49,8 @@ class CSprite {
     }
     CSprite(const char *, ESpriteLoadType);
     ~CSprite();
-    unsigned char unknown_0[0x1c];
+    int loaded;  // +0x00; zero when the load failed. Name inferred.
+    unsigned char unknown_4[0x1c - 4];
     int field_1c; // Cleared by BIFunc_UseBinoculars.
     int field_20; // Cleared by BIFunc_UseBinoculars.
 };
@@ -234,8 +235,9 @@ class CPlayerObject {
     };
     struct PathFlagBits {
         unsigned int unknown_31 : 1;
-        unsigned int peekAllowed : 1;   // Bit 30; names from Frontline.
-        unsigned int unknown_29_25 : 5;
+        unsigned int peekAllowed : 1;   // Bit 30; set for a floor contact too.
+        unsigned int bit29 : 1;         // Bit 29; a shallower contact.
+        unsigned int unknown_28_25 : 4;
         unsigned int binoculars : 1;    // Bit 24: BIFunc_UseBinoculars.
         unsigned int climbing : 1;      // Bit 23: SetClimbingState.
         unsigned int crouched : 1;      // Bit 22; names from Frontline.
@@ -281,7 +283,7 @@ class CPlayerObject {
     float field_284;         // +0x284
     float field_288;         // +0x288
     float field_28c;         // +0x28c; cleared by Halt.
-    unsigned char unknown_290[0xd40 - 0x290];
+    unsigned char constraints[0xd40 - 0x290]; // +0x290; a CClsnConstraintsBase first (extent inferred).
     float field_d40;         // +0xd40
     union {
         unsigned int pathFlags; // +0xd44; bit 19 enables path movement, bit 27 is set while aiming.
@@ -333,7 +335,9 @@ class CPlayerObject {
     CVector3 field_10a0;     // +0x10a0
     unsigned char unknown_10b0[0x10bc - 0x10b0];
     int cameraPitchUnhinged; // +0x10bc
-    unsigned char unknown_10c0[0x10cc - 0x10c0];
+    unsigned short surfaceSound; // +0x10c0; name from Frontline.
+    unsigned char unknown_10c2[0x10c8 - 0x10c2];
+    float field_10c8;        // +0x10c8; the height OnCollision passes to UpdateHeight.
     float field_10cc;        // +0x10cc
     unsigned char unknown_10d0[0x10d8 - 0x10d0];
     short viewWordHigh;      // +0x10d8; the word here compares to a draw view's owner in CAnimatedPlayer::Draw.
@@ -403,6 +407,9 @@ class CPlayerObject {
     void UpdateDeathSequence(float);
     void PeekLeftRight();
     void ShakeCamera(float &, float &, float);
+    void OnCollision(const CCollision &);
+    void HitPickup(CStaticObject *);
+    void UpdateHeight(float);
     void StartPlayerCrouched();
     void PeekUp(float);
     void DuckDown(float);

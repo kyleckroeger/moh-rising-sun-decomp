@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 876164,
+    "matching_code_bytes": 876680,
     "total_executable_code_bytes": 2492032,
-    "percent": 35.158617545842105,
+    "percent": 35.17932353998665,
     "categories": {
-      "reconstructed_game": 483948,
+      "reconstructed_game": 484464,
       "restored_library": 392216
     },
-    "matching_functions": 4209
+    "matching_functions": 4212
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -799,7 +799,7 @@
     "config/GR8E69/player_weapon_overlays.json": "172965adf4a7a763b5932a9744ff75bbf384ef314e25785dee9d7617044a8d5b",
     "config/GR8E69/player_weapon_selectable.json": "c7e3f09ad1510713bfd88ee468db0fcb4c6ef18b3b89bdb414b32ea863b25668",
     "config/GR8E69/player_weapon_shutdown.json": "f90a42342572d125630e7ac3647193288c13301a5309bcdc49cc350364bc2b60",
-    "config/GR8E69/project.json": "fff29fa268448c4afc3cf53c2eac538c4b23b00700c78c546f27eeba5d1f96de",
+    "config/GR8E69/project.json": "90745cf52e2d1194ed79dc3a1bad34893e50e841a084ef5817253a71d95d1f1b",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -1674,8 +1674,11 @@
     "config/GR8E69/weak_8028a620.json": "689fffe222540a8684d4d54b01746da86de6d0da8ed467f7a5144d1282062cff",
     "config/GR8E69/weapon_accessors.json": "dff426d92aaa43c5e8740f63f85f38c364ea4dad756f0926cf4e80502b34d441",
     "config/GR8E69/weapon_ammo.json": "152b758a8ee15c36a9513544a50e3d93f58ec581f4427f675d63c17d1b2ccd84",
+    "config/GR8E69/weapon_factory_ctor.json": "75575e3815c1721e30eb29d6e36e05385dcf9958b5bb39a8197bbca9a3b949f8",
     "config/GR8E69/weapon_factory_destroy.json": "79209dbc73a644e07394fb644af27756f95a215c1a497f4524b47a36af1b5f95",
+    "config/GR8E69/weapon_factory_props.json": "f3d7add694719da2670a2d4827cf820d8e44e2ab8ca195c32c3101dc71a4a784",
     "config/GR8E69/weapon_factory_reset.json": "3251413545d68060cacea13cc336c063cbe1b4acdd89201e409dda38b5a07341",
+    "config/GR8E69/weapon_factory_shutdown.json": "af597dad6faf743c92d8f0daf91e1147eec28b948db0f3e3012a4d041c7dc128",
     "config/GR8E69/weapon_update.json": "338222143ddd57215072fef4d333c907c3543c2b707e0e771d014c41cc59d789",
     "config/GR8E69/world_volume_extents.json": "074cd313ba1c477b265c62196c1fc1c24dcd321fd19a1a6ca6e1e5d6990eee0a",
     "config/GR8E69/world_volume_head.json": "440caf16d108cb5fab347ca9b31bedf6ec2b6a47a187df1d627f2b51c7b0beb8",
@@ -1849,7 +1852,7 @@
     "include/game/BPD.h": "ec4a3aceb83f181db2c6adf8ac87137ede2cd6a0e643548159c73a827aadd19e",
     "include/game/BSGameObject.h": "0251918a776754b0d6b3d30b69e61b0d0c8f919721dbd147dbecf710b180a45a",
     "include/game/Box.h": "1ca75384ae72647eb0261d1eb602a5f57af613ac56916df8c83939e3161230af",
-    "include/game/Bullet.h": "2b6eb04fae62515dd778281448c822a1b566df60040abf4cc22202d83dd2f226",
+    "include/game/Bullet.h": "f442f70befe8400ed4895392882d6fc6fbbc1959751890ec0c462afbe9283a7a",
     "include/game/CDBGeom.h": "52cc6684854d7d274db12c9e545f56e9add679d6133fc2f612c5d9c3f822d29b",
     "include/game/CDBObject.h": "e7e31e8514ea7b42e4d797289f1f68a55eb5cb92c56080f858fad4c09ace3823",
     "include/game/CDBTriangle.h": "b120a08def55e03c97792f0169f7d1b86cad8ae5a71592392f08ccfebab66975",
@@ -1861,7 +1864,7 @@
     "include/game/CSGVolume.h": "4e1b74888a25e46d47449afbc3081c2474e8104e59cfd1ee11c1e5e6b440cb23",
     "include/game/CVector3.h": "0c436c62dba8e3a7f44ca5e6eea6de50ff97e88e4e53545873d5ecca9d648aae",
     "include/game/Camera.h": "c044f907aca20f15af89cc5ba3657b51664d7f19a9b75c1d9b0fd185b7ee0900",
-    "include/game/CameraShake.h": "62e2da7e0d2c78ddc1896b9ace84c9ec13ecac83c26019a8b6198493bd9a1276",
+    "include/game/CameraShake.h": "e8db417e20fa458e8718d6e2cada41df5bd9f6850d2af33bc54a9c80b72a8f99",
     "include/game/Capsule.h": "332dd06329ac7dc3ac5fc01793549a41e2defbe70298018accd2ce79c9e3ce3b",
     "include/game/CollisionVolume.h": "26ba5d9a9865a0185f0e87db21b13faf3214b7e213201e825181412f0f9a5b7c",
     "include/game/Compartment.h": "6151cb25cd8d2ffd0602c5f8395651b07373c5a89256d2b981795fe180e07c34",
@@ -2219,7 +2222,7 @@
     "src/bullets/ThrownBulletVisible.cpp": "ebdb6bd8da731794cc4b5e205167082fe32fcf6993de7e906eb2426f426f37b0",
     "src/bullets/ThrownCollide.cpp": "583930b608bc9cc214d0211b995d2917319500ccc5a7d66d7149f71217b77b41",
     "src/bullets/ThrownCollisionId.cpp": "c110604bd231f02c32524d8569fa009c16e50951be9c301d6e5a54059414f480",
-    "src/bullets/ThrownCollisionLight.cpp": "41ddb7a3e016dbb189da2b1eecbb8c85e27ab08d0b90e104d9f31a1d2bb77b0e",
+    "src/bullets/ThrownCollisionLight.cpp": "3239ea198c6301ade07499b61f43966a0e583e850c2c623a6b1b1368e1a3e9a7",
     "src/bullets/ThrownSetters.cpp": "53bd8f3d5543f02d514a21a46422d909dc36d86b9f9058bef0b5e99b6b703dd4",
     "src/bullets/ThrownUpdate.cpp": "aff8c3d144bdda27777aaa768f13c97ff87c9afb4e194eb191ab3bd942839a4c",
     "src/camera/axes.cpp": "5f01c8b680d40e8507f99181b64e824f3fd5f74911193154807716a91603286a",
@@ -3836,8 +3839,11 @@
     "src/weapons/ThrownMotion.cpp": "b06aa879f26f5fa7be63bcb7ffdc6c0f83bd850a6b0263449ed83a5ad8604d95",
     "src/weapons/WeaponAccessors.cpp": "e76e4dd25e13db388266ca0617cdc5b1b743db308480430a3f61450775c8f4ec",
     "src/weapons/WeaponAmmo.cpp": "f5d191daf71c30021c99f4842df3978ad0e5d33543a4e3a6d9808fdfac9ffec8",
+    "src/weapons/WeaponFactoryCtor.cpp": "5de5cfa7c00fd54d85f3e567575a26734a5e6e771610a972cfc5955c5487505e",
     "src/weapons/WeaponFactoryDestroy.cpp": "8a2d2063531792d31dab47336f2b5f6eba49de46b3b22c2a1e32f0e532fc603b",
+    "src/weapons/WeaponFactoryProps.cpp": "e13c01e19f81264ebb06d168663ba904dba2d1119451820e8429c5bc469f4b7f",
     "src/weapons/WeaponFactoryReset.cpp": "4a9c74a2aff946f1ca34c1144f559f61be3aae82c7f5265ffa1d0f29f5070687",
+    "src/weapons/WeaponFactoryShutdown.cpp": "00e8222b6dca46b4ac273ee1c83a3c42c25104be9c4a67abddc8a4364cf69a30",
     "src/weapons/WeaponUpdate.cpp": "687b9bbfe5fc4ea0a47ab694d948e3f030955f11e29ef29996b162d3ee5215ef",
     "tools/audit.py": "42f9dd301ef76d300f0cad2f791ddbcac862418b6532e252fc38c02d1a222245",
     "tools/baseline.py": "9705053a0b99d969062f336b609a5ea4e0e5bc354d5619ecb9be6698530b314c",
@@ -37298,6 +37304,60 @@
       "discarded_functions": [],
       "object_sha256": "ce9e30f17d518cc3d8827fd13d6d35c9c8989224a2ad4044c3e1a859d227171d",
       "linked_sha256": "abb6bfdb1033b36dd95d8e17f93edc18382f99743f21c70a4db44ac4d53f51a9"
+    },
+    {
+      "id": "weapon_factory_ctor",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 104,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "57ff4ef1b2dd6243398d6178b7126cfc0b73cbd9ce8ed4bfd6d06fee07be92eb",
+      "linked_sha256": "ba94e7029b4d95f55ee4b8c8f5d5dd7b9b84da2491e0c1d71fc2e97f288d1130"
+    },
+    {
+      "id": "weapon_factory_shutdown",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 260,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "15e87c4cd27cbf80d25a9a003cd56b2e5a62612501d1aab823af102ad8d43528",
+      "linked_sha256": "cb2297c6da04a5757805595e4573c65f4eb34c50490bbfa83923f07fbdb2351c"
+    },
+    {
+      "id": "weapon_factory_props",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 152,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "b7fd43ae08085a27159567106c39c4f5acd09254b6347a9e1f825b6f86fef58a",
+      "linked_sha256": "9a99b75324049650db9122d6685bb150821f7efe02a3849a31d37de3bd6002bd"
     }
   ],
   "code_map": {
@@ -58861,13 +58921,6 @@
         "file_name": "weaponfactory.cpp",
         "ranges": [
           {
-            "address": "0x8014edd4",
-            "size": 104,
-            "kind": "function",
-            "name": "__14CWeaponFactory",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8014ee3c",
             "size": 148,
             "kind": "function",
@@ -58875,24 +58928,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8014ef2c",
-            "size": 260,
-            "kind": "function",
-            "name": "Shutdown__14CWeaponFactory",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8014f030",
             "size": 492,
             "kind": "function",
             "name": "CreateWeapon__14CWeaponFactoryiP10ISceneNodei",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014f21c",
-            "size": 152,
-            "kind": "function",
-            "name": "GetWeaponPropertiesByCRC__14CWeaponFactoryiPi",
             "evidence": "adjacent-compiler-markers"
           },
           {

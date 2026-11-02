@@ -124,3 +124,9 @@ reflected normal differs, 176 of 204 instructions aligned).
 reconstructed. `CExplosion` is 0x50 bytes: slot reuse across `CThrownBullet::CommitUpdate`
 fixes it. `CommitUpdate` itself is parked at
 `scratch/par/player/ThrownBulletCommit_parked.cpp`, one instruction out of position.
+
+`CBulletFactory::LoadBulletGUISprites` allocates through `DWI_alloc` with the labels
+`source/weapons/bulletfactory.cpp:567` and `:603`, which record the original path and
+line. Projectile sprite names sit at +0x27 of each 96-byte record and thrown ones at +0x27
+of each 104-byte record. `DeleteBulletGUISprites` is parked at
+`scratch/par/player/BulletSpritesDelete_parked.cpp`: only two loop registers are swapped.

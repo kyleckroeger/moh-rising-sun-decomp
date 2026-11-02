@@ -70,7 +70,8 @@ class CBullet : public IMovingSceneNode {
 struct ProjectileBulletProperties_struct {
     unsigned int crc;      // +0x00; searched by CBulletFactory::GetBulletByCRC.
     float weight;          // +0x04; returned by CBulletFactory::GetBulletWeight; the speed scale in Init.
-    unsigned char unknown_08[72 - 8];
+    unsigned char unknown_08[39 - 8];
+    char name[72 - 39];    // +0x27; the sprite name loaded by LoadBulletGUISprites.
     void *sprite;          // +0x48
     float damage;          // +0x4c
     short lifeFrames;      // +0x50; name from Frontline.
@@ -82,7 +83,8 @@ struct ProjectileBulletProperties_struct {
 struct ThrownBulletProperties_struct {
     unsigned int crc;      // +0x00
     float weight;          // +0x04
-    unsigned char unknown_08[72 - 8];
+    unsigned char unknown_08[39 - 8];
+    char name[72 - 39];    // +0x27; the sprite name.
     void *sprite;          // +0x48
     unsigned char unknown_4c[84 - 76];
     float friction;        // +0x54; names from Frontline.
