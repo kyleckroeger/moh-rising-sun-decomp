@@ -1,0 +1,44 @@
+{
+  "id": "sound_isnd64",
+  "source": "src/sound/ea/isnd64.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80225510",
+      "size": 204
+    }
+  ],
+  "functions": [
+    {
+      "name": "iSNDmulu64__FUiUi",
+      "address": "0x80225510",
+      "size": 132,
+      "binding": 1
+    },
+    {
+      "name": "iSNDdivu64__FG6SINT64i",
+      "address": "0x80225594",
+      "size": 72,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

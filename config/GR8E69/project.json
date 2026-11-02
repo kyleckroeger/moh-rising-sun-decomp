@@ -1350,7 +1350,6 @@
     "player_halt.json",
     "player_move.json",
     "player_axes.json",
-    "ea_filesys_main.json",
     "fiber_destructor.json",
     "fiber_test_dispatch.json",
     "fiber_test_fiber.json",
@@ -1359,7 +1358,14 @@
     "cdbobject_extents.json",
     "cdbgeom_box_tests.json",
     "cdbgeom_box_fiber.json",
-    "cdbgeom_box_forward.json"
+    "cdbgeom_box_forward.json",
+    "ea_filesys.json",
+    "ea_systask.json",
+    "sound_sfmixer.json",
+    "sound_sfamplf.json",
+    "ea_memrestore.json",
+    "sound_sx87d16.json",
+    "sound_isnd64.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

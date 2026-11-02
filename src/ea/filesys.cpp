@@ -4,9 +4,7 @@
 // carry a serial in the high half, the kind in the next byte and the record slot
 // in the low byte. FILEOPERATION_def and HANDLE_def are named by the mangled
 // helper symbols; their members and the option, big-file and device views are
-// inferred from offsets and calls. This unit stops before reserveop, whose loop
-// the compiler's strength reduction does not reproduce here; the record helpers
-// after it (freeop, reservehandle, freehandle) remain original context.
+// inferred from offsets and calls.
 struct OSMutex {
     unsigned char unknown00[24];
 };
@@ -49,11 +47,11 @@ struct HANDLE_def {
 struct FILEOPERATION_def;
 
 void initfiledev();
-void freehandle(HANDLE_def*);
-void freeop(FILEOPERATION_def*);
+static void freehandle(HANDLE_def*);
+static void freeop(FILEOPERATION_def*);
 void iFILE_addbigreadcallback(int, int, void*);
-FILEOPERATION_def* reserveop();
-HANDLE_def* reservehandle();
+static FILEOPERATION_def* reserveop();
+static HANDLE_def* reservehandle();
 static void iFILE_perror(FILEOPERATION_def*);
 static void iFILE_ExecCommand(FILEOPERATION_def*);
 void iFILE_CommandCompleteCallback(int);
@@ -758,3 +756,58 @@ void iFILE_CommandCompleteCallback(int ok) {
 static void iFILE_perror(FILEOPERATION_def*) {
 }
 
+static FILEOPERATION_def* reserveop() {
+    static unsigned short opcount = 0;
+    int i;
+
+    OSLockMutex(&FileMutex);
+    for (i = 0; i < gFileDevice.operations; i++) {
+        if (gFileDevice.ops[i].id.parts.unknown2 == 0) {
+            gFileDevice.ops[i].id.parts.unknown2 = 1;
+            gFileDevice.ops[i].id.parts.slot = i;
+            if (++opcount == 0)
+                opcount = 1;
+            gFileDevice.ops[i].id.parts.serial = opcount;
+            break;
+        }
+    }
+    OSUnlockMutex(&FileMutex);
+    if (i == gFileDevice.operations)
+        for (;;)
+            ;
+    return &gFileDevice.ops[i];
+}
+
+static void freeop(FILEOPERATION_def* op) {
+    OSLockMutex(&FileMutex);
+    MEM_fill(op, 0, sizeof(FILEOPERATION_def));
+    OSUnlockMutex(&FileMutex);
+}
+
+static HANDLE_def* reservehandle() {
+    int i;
+
+    OSLockMutex(&FileMutex);
+    for (i = 0; i < gFileDevice.handles; i++) {
+        if (gFileDevice.handleList[i].unknown004 == 0) {
+            gFileDevice.handleList[i].unknown004 = 1;
+            break;
+        }
+    }
+    OSUnlockMutex(&FileMutex);
+    if (i == gFileDevice.handles)
+        for (;;)
+            ;
+    return &gFileDevice.handleList[i];
+}
+
+static void freehandle(HANDLE_def* handle) {
+    OSLockMutex(&FileMutex);
+    MEM_fill(handle, 0, sizeof(HANDLE_def));
+    OSUnlockMutex(&FileMutex);
+}
+
+extern "C" void FILESYS_setmemcallbacks(void* (*malloc)(const char*, int, int), int (*mfree)(void*)) {
+    gFileSysOpts.malloc = malloc;
+    gFileSysOpts.mfree = mfree;
+}

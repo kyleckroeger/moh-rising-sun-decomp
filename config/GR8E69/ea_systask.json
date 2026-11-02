@@ -1,0 +1,74 @@
+{
+  "id": "ea_systask",
+  "source": "src/ea/systask.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80217fc4",
+      "size": 532
+    },
+    {
+      "name": ".bss",
+      "address": "0x8040f438",
+      "size": 256,
+      "type": 8
+    },
+    {
+      "name": ".sdata",
+      "address": "0x804512e8",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "SYNCTASK_init",
+      "address": "0x80217fc4",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "SYNCTASK_add",
+      "address": "0x80217ff4",
+      "size": 196,
+      "binding": 1
+    },
+    {
+      "name": "SYNCTASK_del",
+      "address": "0x802180b8",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "SYNCTASK_run",
+      "address": "0x8021811c",
+      "size": 188,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "MEM_fill": "0x8021866c",
+    "libticks": "0x804512d0"
+  },
+  "sda_externals": [
+    "libticks"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "systask.cpp",
+  "original_file_index": 2992
+}

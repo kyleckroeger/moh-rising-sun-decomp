@@ -1,0 +1,45 @@
+{
+  "id": "ea_memrestore",
+  "source": "src/ea/memrestore.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8020d4d8",
+      "size": 204
+    }
+  ],
+  "functions": [
+    {
+      "name": "MEM_restore",
+      "address": "0x8020d4d8",
+      "size": 204,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "MEMCLASS_remove": "0x8020cd90",
+    "OSFreeToHeap": "0x80254238",
+    "__OSCurrHeap": "0x80451690",
+    "memclass": "0x804098e0"
+  },
+  "sda_externals": [
+    "__OSCurrHeap"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

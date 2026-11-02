@@ -1,0 +1,55 @@
+{
+  "id": "sound_sfmixer",
+  "source": "src/sound/ea/sfmixer.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802287bc",
+      "size": 348
+    }
+  ],
+  "functions": [
+    {
+      "name": "SFILTER_mixer__FPviT0T0i",
+      "address": "0x802287bc",
+      "size": 236,
+      "binding": 1
+    },
+    {
+      "name": "SFILTER_mixerrestore__FPv",
+      "address": "0x802288a8",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "SFILTER_createMIX__FP10MIXERSTATE",
+      "address": "0x802288d4",
+      "size": 68,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDMEMI_allocz__Fi": "0x8021ae30",
+    "SNDMEMI_free__FPv": "0x8021b034"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sfmixer.c",
+  "original_file_index": 3248
+}

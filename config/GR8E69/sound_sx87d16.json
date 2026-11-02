@@ -1,0 +1,45 @@
+{
+  "id": "sound_sx87d16",
+  "source": "src/sound/ea/sx87d16.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80227658",
+      "size": 88
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bfc00",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "decode16x87",
+      "address": "0x80227658",
+      "size": 88,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sx87d16.c",
+  "original_file_index": 3222
+}
