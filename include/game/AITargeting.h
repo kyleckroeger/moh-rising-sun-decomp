@@ -302,12 +302,16 @@ public:
     void FinishedInvestigation();
     void AddCorpseThreat(BSObject *);
 };
+class CSoldierObject;
 class CAISoldierObject {
 public:
     CAISoldierObject(void *);
     void *operator new(unsigned int, void *);
     void Init();
-    unsigned char unknown_0[0x7b0];
+    void SetSoldierObject(CSoldierObject *);
+    unsigned char unknown_0[0x190];
+    int aimDirty; // +0x190; set when an aim modifier changes. Descriptive.
+    unsigned char unknown_194[0x7b0 - 0x194];
     CAIThreatEvaluation threatEvaluation; // +0x7b0
     unsigned char unknown_7b1[3536 - 0x7b1]; // The allocation is 3536 bytes.
 };

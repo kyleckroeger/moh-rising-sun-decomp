@@ -7,6 +7,7 @@
 
 class CVolBox : public IVolume {
   public:
+    void SetCorners(const CVector3 &, const CVector3 &);
     virtual ~CVolBox() {}
     virtual IVolume *Create() const;
     virtual void TransformedCopy(const IVolume &, const CMatrix &);

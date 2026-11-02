@@ -1,0 +1,74 @@
+{
+  "id": "scene_SoldierUpdate",
+  "source": "src/scene/SoldierUpdate.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800be0d8",
+      "size": 560
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029fb08",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "AttemptUpdate__14CSoldierObjectf",
+      "address": "0x800be0d8",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "CommitUpdate__14CSoldierObject",
+      "address": "0x800be148",
+      "size": 196,
+      "binding": 1
+    },
+    {
+      "name": "UpdateLocalBoundingVolume__14CSoldierObjectQ210ISceneNode11EVolumeTypeRC8CVector3T2",
+      "address": "0x800be20c",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "GetLocalBoundingVolume__C14CSoldierObjectQ210ISceneNode11EVolumeType",
+      "address": "0x800be240",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "GetWorldBoundingVolume__C14CSoldierObjectQ210ISceneNode11EVolumeType",
+      "address": "0x800be2a4",
+      "size": 100,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AreFading__18CObjectFadeManager": "0x8006c26c",
+    "AttemptUpdate__11CAnimObjectf": "0x800a45dc",
+    "CommitUpdate__11CAnimObject": "0x800a4b64",
+    "HalfDone__18CObjectFadeManager": "0x8006c2a0",
+    "RemoveWeapons__14CSoldierObject": "0x800bc814",
+    "SetCorners__7CVolBoxRC8CVector3T1": "0x8013827c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Soldier_object.cpp",
+  "original_file_index": 875
+}

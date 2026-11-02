@@ -1,0 +1,62 @@
+{
+  "id": "scene_WorldObjectAccess",
+  "source": "src/scene/WorldObjectAccess.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800c6b08",
+      "size": 40
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetLocalBoundingVolume__C12CWorldObjectQ210ISceneNode11EVolumeType",
+      "address": "0x800c6b08",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetWorldBoundingVolume__C12CWorldObjectQ210ISceneNode11EVolumeType",
+      "address": "0x800c6b10",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "IsVisible__C12CWorldObjectR12CDrawContext",
+      "address": "0x800c6b18",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "IsDrawEnabled__C12CWorldObject",
+      "address": "0x800c6b20",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetCollisionId__C12CWorldObject",
+      "address": "0x800c6b28",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "world_object.cpp",
+  "original_file_index": 896
+}

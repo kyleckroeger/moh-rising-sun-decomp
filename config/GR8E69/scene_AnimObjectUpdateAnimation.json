@@ -1,0 +1,46 @@
+{
+  "id": "scene_AnimObjectUpdateAnimation",
+  "source": "src/scene/AnimObjectUpdateAnimation.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800a3428",
+      "size": 480
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029e8c4",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "UpdateAnimation__11CAnimObjectf",
+      "address": "0x800a3428",
+      "size": 480,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "EvalPose__Q34EALA9Character13Choreographerf": "0x8007fef0",
+    "GetBoundingVolume__CQ34EALA9Character8SkeletonR6COORD3T1": "0x800827a4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "anim_obj.cpp",
+  "original_file_index": 831
+}

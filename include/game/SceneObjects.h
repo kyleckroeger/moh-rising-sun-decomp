@@ -66,9 +66,16 @@ class CObjectFadeManager {
     void StartFadeOut(float, float);
     void StartFadeIn(float, float);
     float FadeValue() const;
+    int AreFading();
+    void Update(float);
+    int HalfDone();
 };
 class CStaticObject {
   public:
+    // Descriptive inline tests of the script-motion bits.
+    int ScriptMoving() const { return flags.scriptMoving; }
+    int ScriptRotating() const { return flags.scriptRotating; }
+    int ScriptScaling() const { return flags.scriptScaling; }
     void SetLocalBoundingVolume(ISceneNode::EVolumeType, IVolume *);
     void SetWorldBoundingVolume(ISceneNode::EVolumeType, IVolume *);
     IVolume *GetLocalBoundingVolume(ISceneNode::EVolumeType) const;
@@ -78,6 +85,15 @@ class CStaticObject {
     float CalculateMovementTime(const CVector3 &, const CVector3 &);
     void ScaleFromScript(float, float, EBSEventEnum);
     void CommitAnimMotionUpdate();
+    void CommitScriptMotionUpdate();
+    void AnimUpdate(float);
+    void SetAttachedLight(CLight *, const CVector3 &);
+    void HandleBulletCollision(CBullet *, const CCollision &);
+    void TranslateFromScript(const CVector3 &, const CVector3 &, EBSEventEnum);
+    void BeginScriptMotionUpdate(float);
+    void BeginAnimMotionUpdate(float);
+    void AttemptAnimMotionUpdate(float);
+    void BeginPathMotionUpdate(float);
     void CommitPathMotionUpdate();
     void UpdatePathMotionDestAndSpeed();
     void Destroy();
@@ -171,14 +187,19 @@ class CStaticObject {
     CVector3 velocity;    // +0x190; CThrownObject limits its speed.
     CVector3 pathPosition; // +0x1a0
     CQuaternion orientation; // +0x1b0; kept in step with the transform.
-    unsigned char unknown_1c0[0x1e0 - 0x1c0];
+    CQuaternion scriptRotationDelta; // +0x1c0
+    CQuaternion scriptTargetOrientation; // +0x1d0
     float scriptScaleTarget; // +0x1e0
     float scriptScaleBase; // +0x1e4; starts at 1 in Init.
-    unsigned char unknown_1e8[0x1f0 - 0x1e8];
+    float scriptMoveTime; // +0x1e8
+    float scriptRotateTime; // +0x1ec
     float scriptScaleRate; // +0x1f0
-    unsigned char unknown_1f4[0x1fc - 0x1f4];
+    int scriptMoveEvent;  // +0x1f4; only the low half reaches TriggerScriptEvent.
+    int scriptRotateEvent; // +0x1f8
     int scriptScaleEvent; // +0x1fc
-    unsigned char unknown_200[0x20c - 0x200];
+    float scriptMoveStep; // +0x200
+    float scriptRotateStep; // +0x204
+    float scriptScaleStep; // +0x208
     int field_20c;        // +0x20c; the collision id. CThrownObject::LimitSpeed does nothing while -1.
     float aimValue;       // +0x210; InitAim. Descriptive.
     int maxLightPriority; // +0x214
@@ -190,7 +211,7 @@ class CStaticObject {
     int motionFrame;      // +0x238
     int motionEnd;        // +0x23c
     int motionFrameCount; // +0x240
-    unsigned char unknown_244[4];
+    float motionElapsed;  // +0x244
     int motionSpeed;      // +0x248
     int motionStart;      // +0x24c
     int motionPlayEvent;  // +0x250
@@ -203,13 +224,18 @@ class CStaticObject {
     float motionSampleRate; // +0x26c
     float motionRemaining; // +0x270
     float motionStep;     // +0x274
-    unsigned char unknown_278[0x290 - 0x278];
+    CQuaternion motionResetOrientation; // +0x278
+    float dumpAge;        // +0x288; advances while the object is a dump object. Descriptive.
+    unsigned char unknown_28c[0x290 - 0x28c];
     MotionFrame *motionFrames; // +0x290
     unsigned char unknown_294[0x2a8 - 0x294];
-    CLight *attachedLight; // +0x2a8
-    unsigned char unknown_2ac[0x2c0 - 0x2ac];
+    CLight *attachedLight; // +0x2a8; the subject of the weak reference starting at +0x294.
+    unsigned char unknown_2ac[0x2b0 - 0x2ac];
+    CVector3 attachedLightOffset; // +0x2b0
     CLightVolumeManager lightVolumes; // +0x2c0
-    CObjectFadeManager fade; // +0x2dc; extent unknown.
+    CObjectFadeManager fade; // +0x2dc; sixteen bytes up to the next member.
+    unsigned char unknown_2dd[0x2ec - 0x2dd];
+    float destructionTimer; // +0x2ec; meaning inferred from the MarkForDestruction call.
 };
 
 struct COORD3;
@@ -225,6 +251,9 @@ class CAnimObject {
     void Init();
     void CommitUpdate();
     void UpdateAnimation(float);
+    void DetectGround();
+    void BeginUpdate(float);
+    void Yaw(float);
     void SetLocalBoundingVolume(ISceneNode::EVolumeType, IVolume *);
     void SetWorldBoundingVolume(ISceneNode::EVolumeType, IVolume *);
     IVolume *GetLocalBoundingVolume(ISceneNode::EVolumeType) const;
@@ -247,6 +276,7 @@ class CAnimObject {
     BPDLightVolume *GetLightVolume();
     void SetTMLocalToWorld(const CMatrix &);
     void GetTMLocalToWorld(CMatrix &) const;
+    void AttemptUpdate(float);
     void AttachToLocation(const CMatrix &, float);
     COORD3 GetPosition();
     float GetRotation();
@@ -301,7 +331,9 @@ class CAnimObject {
     void Pitch(float);
     void Roll(float);
     void SetBasis(const CVector3 &, const CVector3 &, const CVector3 &);
-    unsigned char unknown_0[0x54];
+    unsigned char unknown_0[0x4c];
+    float scale;         // +0x4c; multiplies the animation's motion and bounds. Descriptive.
+    unsigned char unknown_50[4];
     unsigned char choreographer[0x88 - 0x54]; // +0x54; EALA::Character::Choreographer methods run on it. Extent unknown.
     unsigned char skeleton[0xd0 - 0x88]; // +0x88; GetSkeleton returns this address. Extent unknown.
     CMatrix transform;   // +0xd0
@@ -318,18 +350,31 @@ class CAnimObject {
     int pendingCallback; // +0x160
     float callbackStart; // +0x164
     float callbackLast;  // +0x168
-    unsigned char unknown_16c[0x18c - 0x16c];
+    unsigned char unknown_16c[0x170 - 0x16c];
+    CVector3 adjustTarget; // +0x170
+    float adjustValue;   // +0x180; descriptive.
+    int adjustBlend;     // +0x184
+    unsigned char unknown_188[4];
     const char *stateName; // +0x18c
-    unsigned char unknown_190[0x1a0 - 0x190];
+    CVector3 previousPosition; // +0x190; soldier CommitUpdate copies the position here.
     CVector3 velocity;   // +0x1a0
-    unsigned char unknown_1b0[0x1d0 - 0x1b0];
+    CVector3 animMove;   // +0x1b0
+    float animRemaining; // +0x1c0
+    float animStep;      // +0x1c4
+    float animRate;      // +0x1c8
+    float animMoveScale; // +0x1cc
     float yawCopy;       // +0x1d0; SetYaw keeps it equal to yaw.
     float yawRate;       // +0x1d4; cleared by Halt. Descriptive.
-    unsigned char unknown_1d8[0x220 - 0x1d8];
+    unsigned char unknown_1d8[0x1e0 - 0x1d8];
+    CVector3 committedOffset; // +0x1e0
+    CQuaternion committedRotation; // +0x1f0
+    CVector3 pendingOffset; // +0x200
+    CQuaternion pendingRotation; // +0x210
     int hurtling;        // +0x220; meaning inferred.
-    unsigned char unknown_224[0x228 - 0x224];
+    int fallStarted;     // +0x224; set by BeginUpdate while gravity applies. Descriptive.
     int hurtlingState;   // +0x228; meaning inferred.
-    unsigned char unknown_22c[0x234 - 0x22c];
+    int animTurned;      // +0x22c; cleared by UpdateAnimation. Descriptive.
+    unsigned char unknown_230[0x234 - 0x230];
     int allowAnimationTranslation; // +0x234; set by BIFunc_SetAllowAnimationTranslation.
     int attached;        // +0x238
     int attachedToLocation; // +0x23c
@@ -339,19 +384,56 @@ class CAnimObject {
     unsigned char unknown_290[0x294 - 0x290];
     int gravity;    // +0x294
     int groundCheck; // +0x298
-    unsigned char unknown_29c[0x2a0 - 0x29c];
+    int animMoved;   // +0x29c
     int hurtlingBlocked; // +0x2a0; BeginHurtling does nothing while set. Descriptive.
     CLightVolumeManager lightVolumes; // +0x2a4
     unsigned char unknown_2c0[0x2c4 - 0x2c0];
     int stateTask;       // +0x2c4; passed to SetState by address. Type unknown.
     int stateValue;      // +0x2c8
     CAnimObject *stateOwner; // +0x2cc
+    unsigned char unknown_2d0[0x2d8 - 0x2d0];
+    int poseEvaluated;   // +0x2d8; descriptive.
     void SetAttached(bool);
     void StartAnimAdjust(const CVector3 &, float, bool);
 };
 
+class CAISoldierObject;
 class CSoldierObject {
   public:
+    // A short list reset by clearing the count at +8; the name is descriptive.
+    struct VolumeList {
+        unsigned char unknown_0[8];
+        int count;
+        unsigned char unknown_c[0x18 - 0xc];
+        void Clear() { count = 0; }
+    };
+    void InitAI();
+    void InitAI2();
+    CAIObject *GetAIObject();
+    void AttemptUpdate(float);
+    void CommitUpdate();
+    void UpdateLocalBoundingVolume(ISceneNode::EVolumeType, const CVector3 &, const CVector3 &);
+    IVolume *GetLocalBoundingVolume(ISceneNode::EVolumeType) const;
+    IVolume *GetWorldBoundingVolume(ISceneNode::EVolumeType) const;
+    void SetAttachedLight(CLight *, const CVector3 &);
+    void TranslateFromScript(const CVector3 &, const CVector3 &, EBSEventEnum);
+    int AddWeapon(int, int, int);
+    void GetLookMatrix(CMatrix &);
+    void CleanUp();
+    CStaticObject *DetachObject(char *);
+    void GetBulletEmitterMatrix(CMatrix &);
+    int GetAttachPoint(const char *);
+    int GetAttachPointMatrix(char *, CMatrix *);
+    void FadeOut(float);
+    float FadeValue() const;
+    void EnableAimModifier(bool);
+    float GetLipsynchBlendWeight();
+    void SetCurrentGag(int, int);
+    void Destroy();
+    CAIDoodad *GetAIDoodad();
+    const CAIDoodad *GetAIDoodad() const;
+    CSoldierObject *AsSoldierObject();
+    const CSoldierObject *AsSoldierObject() const;
     void Draw(CDrawContext &);
     void RemoveWeapons();
     // Original nested enum tag; members are descriptive.
@@ -362,17 +444,40 @@ class CSoldierObject {
     int groundCheckPending; // +0x220
     unsigned char unknown_224[4];
     int groundCheckState;   // +0x228; cleared before the ground-check event.
-    unsigned char unknown_22c[0x2ec - 0x22c];
+    unsigned char unknown_22c[0x2e0 - 0x22c];
+    unsigned char aiDoodad[0x2ec - 0x2e0]; // +0x2e0; a CAISoldierDoodad.
     int locomotionInfo;     // +0x2ec; returned by address.
     unsigned char unknown_2f0[0x334 - 0x2f0];
     int nonVisDestructDisabled; // +0x334; the inverse of BIFunc_EnableNonVisDestruct's flag.
-    unsigned char unknown_338[0xb14 - 0x338];
+    unsigned char unknown_338[0x344 - 0x338];
+    VolumeList volumeLists[3]; // +0x344
+    unsigned char unknown_38c[0xb10 - 0x38c];
+    int collidedThisFrame;  // +0xb10; descriptive.
     int canBePushed;        // +0xb14
-    unsigned char unknown_b18[0xb84 - 0xb18];
+    unsigned char unknown_b18[8];
+    CMatrix defaultEmitterMatrix; // +0xb20
+    unsigned char unknown_b60[0xb80 - 0xb60];
+    float moveBlend;        // +0xb80; descriptive.
     CWeapon *weapons[1];    // +0xb84; slot table, indexed by slot number (extent unknown).
-    unsigned char unknown_b88[0xf20 - 0xb88];
+    unsigned char unknown_b88[0xba0 - 0xb88];
+    // Eight 112-byte attach slots, up to the next member; field names are descriptive.
+    struct AttachSlot {
+        CStaticObject *object;
+        const CMatrix *matrix;
+        unsigned char unknown_8[0x58 - 8];
+        int active;      // +0x58
+        int keepObject;  // +0x5c
+        unsigned char unknown_60[4];
+        int addToScene;  // +0x64
+        int owned;       // +0x68
+        unsigned char unknown_6c[4];
+    } attachSlots[8];       // +0xba0
     int currentWeaponSlot;  // +0xf20
-    unsigned char unknown_f24[0xf7c - 0xf24];
+    int emitterActive;      // +0xf24
+    int emitterSlot;        // +0xf28
+    unsigned char unknown_f2c[4];
+    CMatrix emitterMatrix;  // +0xf30
+    unsigned char unknown_f70[0xf7c - 0xf70];
     // Facial-expression blend state written by BIFunc_SetExpression; names are descriptive.
     struct ExpressionState {
         int current;        // +0xf7c
@@ -391,15 +496,45 @@ class CSoldierObject {
     float blinkCloseTime;   // +0xfa8
     float blinkHoldTime;    // +0xfac
     float blinkOpenTime;    // +0xfb0
-    unsigned char unknown_fb4[0x1050 - 0xfb4];
+    unsigned char unknown_fb4[0xfc4 - 0xfb4];
+    int faceAnimationPending; // +0xfc4
+    unsigned short faceAnimationState; // +0xfc8
+    unsigned char unknown_fca[0xfd0 - 0xfca];
+    unsigned char localVolumeType1[0xff0 - 0xfd0]; // +0xfd0; a volume returned by address.
+    unsigned char worldVolumeType1[0x1010 - 0xff0]; // +0xff0
+    unsigned char localVolumeType2[0x1030 - 0x1010]; // +0x1010
+    unsigned char worldVolumeType2[0x1050 - 0x1030]; // +0x1030
     int voiceHandle;        // +0x1050; -12 when no voice is playing.
-    unsigned char unknown_1054[0x10a8 - 0x1054];
+    unsigned char unknown_1054[0x1060 - 0x1054];
+    unsigned char fadeStorage[0x1070 - 0x1060]; // +0x1060; a CObjectFadeManager. Extent bounded.
+    int weaponsRemoved;     // +0x1070; descriptive.
+    int headTrackPlayer;    // +0x1074
+    unsigned char unknown_1078[0x1080 - 0x1078];
+    unsigned char shadowStorage[0x10a8 - 0x1080]; // +0x1080; CCharacterShadow methods run on it. Extent bounded.
     CJawController jaw;     // +0x10a8
-    unsigned char unknown_10e8[0x1148 - 0x10e8];
+    unsigned char unknown_10e8[0x10f4 - 0x10e8];
+    CWeapon *otherWeapon;   // +0x10f4; destroyed apart from the slot table.
+    unsigned char unknown_10f8[0x1100 - 0x10f8];
+    signed char headTransState; // +0x1100
+    unsigned char unknown_1101[0x1138 - 0x1101];
+    unsigned char aimModifier[0x1148 - 0x1138]; // +0x1138; EALA::Character::AimModifier methods run on it.
     int aimSuspended;       // +0x1148; set by BIFunc_SuspendAiming.
-    unsigned char unknown_114c[0x12b4 - 0x114c];
+    unsigned char unknown_114c[0x12a4 - 0x114c];
+    unsigned char propAimModifier[0x12b4 - 0x12a4]; // +0x12a4
     int propAimSuspended;   // +0x12b4; set by BIFunc_SuspendPropAiming.
-    unsigned char unknown_12b8[0x15e8 - 0x12b8];
+    unsigned char unknown_12b8[0x1410 - 0x12b8];
+    unsigned char headTrackModifier[0x157c - 0x1410]; // +0x1410; first bytes an AimModifier. Extent bounded.
+    int turnAnglePending;   // +0x157c
+    float turnAngle;        // +0x1580
+    unsigned char unknown_1584[0x1594 - 0x1584];
+    int currentGag;         // +0x1594
+    int currentGagType;     // +0x1598
+    unsigned char unknown_159c[0x15a8 - 0x159c];
+    CAISoldierObject *aiObject; // +0x15a8
+    unsigned char unknown_15ac[0x15c4 - 0x15ac];
+    unsigned char lipsyncMutex[0x15e0 - 0x15c4]; // +0x15c4; passed to MUTEX_lock.
+    float lipsyncBlendWeight; // +0x15e0
+    unsigned char unknown_15e4[0x15e8 - 0x15e4];
     int japanese;           // +0x15e8; set by BIFunc_SetJapanese.
     unsigned char unknown_15ec[0x1c54 - 0x15ec];
     float reloadTimer;      // +0x1c54; reset to -1 by BIFunc_BotDoneReloading.
@@ -408,7 +543,8 @@ class CSoldierObject {
     void SetUpperTranslation(const CVector3 &);
     void SetUpperXAngleDifference(float, float);
     void SetUpperZAngleDifference(float, float);
-    void SetFaceAnimationState(unsigned short, int);
+    int SetFaceAnimationState(unsigned short, int);
+    static unsigned char m_partitionLower[0x30], m_partitionUpper[0x30];
     void SetHeadTrackPlayer(bool);
     void EnableSkeletalPartition(Partition);
     void DisableSkeletalPartition(Partition);
@@ -441,19 +577,13 @@ class CHierObject : public CStaticObject {
     float GetBulletDamageMultiplierByClass(int, int);
     CStaticObject *GetSubObject(int);
     void ModifyMotionData(MotionData *);
-    // Descriptive inline: the original tests the three bits separately.
-    int HasScriptMotion() const {
-        if (flags.scriptMoving)
-            return 1;
-        if (flags.scriptRotating)
-            return 1;
-        if (flags.scriptScaling)
-            return 1;
-        return 0;
-    }
     void Init(CHierObject *, int, int, int, CVector3 &);
     void OnCollision(const CCollision &);
     void CommitUpdate();
+    void CommitScriptMotionUpdate();
+    void CommitAnimMotionUpdate();
+    void BeginScriptMotionUpdate(float);
+    void CollisionResetMovement();
     void SetRotation(CQuaternion &);
     void GetRotation(CQuaternion &);
     int GetAttachPointMatrix(int, CMatrix &);
@@ -491,7 +621,7 @@ class CHierObject : public CStaticObject {
         int minClass, maxClass;
         float multiplier;
     };
-    unsigned char unknown_2e0[0x980 - 0x2e0];
+    unsigned char unknown_2f0[0x980 - sizeof(CStaticObject)];
     CHierObject *firstChild;  // +0x980
     CHierObject *nextSibling; // +0x984
     HierFlags hierFlags;      // +0x988
@@ -502,7 +632,8 @@ class CHierObject : public CStaticObject {
     CMatrix inheritedMatrix;  // +0x9f0
     CMatrix attachPointMatrix; // +0xa30
     CVector3 attachOffset;    // +0xa70
-    unsigned char unknown_a80[0xb28 - 0xa80];
+    CVector3 attachDelta;     // +0xa80; added to attachOffset on commit.
+    unsigned char unknown_a90[0xb28 - 0xa90];
     BulletDamage bulletDamage[2]; // +0xb28; class ranges, unused entries hold -1.
 };
 
@@ -662,6 +793,7 @@ class CAttachableObject {
     int AttachObject(CStaticObject *, int);
     int DetachObject(ISceneNode *);
     void DetachAllObjects();
+    void UpdateSingleAttachedObject(int);
     int AttachAndAlignObject(CAnimObject *, int);
     int GetFirstChildHandle();
     int GetNextChildHandle(int);
@@ -674,6 +806,9 @@ class CTankObject : public CHierObject {
     void InitAI();
     void CleanUp();
     void BeginUpdate(float);
+    void UpdateAI(float);
+    void GetLookMatrix(CMatrix &);
+    void HandleBulletCollision(CBullet *, const CCollision &);
     void AttemptUpdate(float);
     void CommitUpdate();
     int AddWeapon(int, int);
@@ -686,7 +821,7 @@ class CTankObject : public CHierObject {
     unsigned char aiDoodad[0xb4c - 0xb40]; // +0xb40; a CAITankDoodad.
     CAITankObject *aiObject; // +0xb4c
     int lookObject;          // +0xb50; set by BIFunc_HierObjectSetLookObject.
-    unsigned char unknown_b54[4];
+    int pathNodeTimer;       // +0xb54; counts down to the next path-node refresh.
     int weaponSlots[8];      // +0xb58; extent bounded by the next member.
     CWeapon *weapons[3];     // +0xb78; loops in CleanUp and BeginUpdate cover three.
 };

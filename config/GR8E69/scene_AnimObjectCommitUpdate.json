@@ -1,0 +1,46 @@
+{
+  "id": "scene_AnimObjectCommitUpdate",
+  "source": "src/scene/AnimObjectCommitUpdate.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800a4b64",
+      "size": 324
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029e9d8",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "CommitUpdate__11CAnimObject",
+      "address": "0x800a4b64",
+      "size": 324,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DetectGround__11CAnimObject": "0x800a4270",
+    "SetPos__7CMatrixRC8CVector3": "0x8007ae7c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "anim_obj.cpp",
+  "original_file_index": 831
+}

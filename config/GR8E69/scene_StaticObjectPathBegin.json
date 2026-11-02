@@ -1,0 +1,45 @@
+{
+  "id": "scene_StaticObjectPathBegin",
+  "source": "src/scene/StaticObjectPathBegin.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800aa548",
+      "size": 144
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029ecd4",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "BeginPathMotionUpdate__13CStaticObjectf",
+      "address": "0x800aa548",
+      "size": 144,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "UpdatePathMotionDestAndSpeed__13CStaticObject": "0x800aa034"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "static_obj.cpp",
+  "original_file_index": 833
+}

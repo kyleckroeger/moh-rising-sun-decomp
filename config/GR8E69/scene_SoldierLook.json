@@ -1,0 +1,67 @@
+{
+  "id": "scene_SoldierLook",
+  "source": "src/scene/SoldierLook.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800beb5c",
+      "size": 432
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029fbd4",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetAttachedLight__14CSoldierObjectP6CLightRC8CVector3",
+      "address": "0x800beb5c",
+      "size": 144,
+      "binding": 1
+    },
+    {
+      "name": "AddWeapon__14CSoldierObjectiii",
+      "address": "0x800bebec",
+      "size": 156,
+      "binding": 1
+    },
+    {
+      "name": "GetLookMatrix__14CSoldierObjectR7CMatrix",
+      "address": "0x800bec88",
+      "size": 132,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CreateWeaponByCRC__14CWeaponFactoryiP10ISceneNodei": "0x8014f2b4",
+    "DestroyWeapon__14CWeaponFactoryP7CWeapon": "0x8014f470",
+    "FindAttachPoint__Q34EALA9Character8SkeletonPCc": "0x80082630",
+    "GetAttachPoint__14CSoldierObjectPCc": "0x800c0584",
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "Multiply__7CMatrixRC7CMatrixT1": "0x802794b8",
+    "PreTranslate__7CMatrixRC8CVector3": "0x8007ae98",
+    "_7CMatrix.s_ClassInit": "0x802c2100",
+    "_7CMatrix.s_TempMat": "0x802fbf00",
+    "__as__7CMatrixRC7CMatrix": "0x8007aa38",
+    "g_WeaponFactory": "0x803e6d40"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Soldier_object.cpp",
+  "original_file_index": 875
+}

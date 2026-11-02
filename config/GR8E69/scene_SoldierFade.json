@@ -1,0 +1,52 @@
+{
+  "id": "scene_SoldierFade",
+  "source": "src/scene/SoldierFade.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800c0d38",
+      "size": 116
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029fd78",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "FadeOut__14CSoldierObjectf",
+      "address": "0x800c0d38",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "FadeValue__C14CSoldierObject",
+      "address": "0x800c0d88",
+      "size": 36,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FadeValue__C18CObjectFadeManager": "0x8006c348",
+    "StartFadeOut__18CObjectFadeManagerff": "0x8006c22c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Soldier_object.cpp",
+  "original_file_index": 875
+}

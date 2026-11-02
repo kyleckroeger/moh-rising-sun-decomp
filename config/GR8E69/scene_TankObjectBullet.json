@@ -1,0 +1,53 @@
+{
+  "id": "scene_TankObjectBullet",
+  "source": "src/scene/TankObjectBullet.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800c3500",
+      "size": 344
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a0110",
+      "size": 52
+    }
+  ],
+  "functions": [
+    {
+      "name": "HandleBulletCollision__11CTankObjectP7CBulletRC10CCollision",
+      "address": "0x800c3500",
+      "size": 344,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Create__10CPSManagerUib15eParticleSystem": "0x80066a70",
+    "GetSlot__7CMatrixUi": "0x802790e0",
+    "GetStringCRC__FPCc": "0x801acb98",
+    "HandleBulletCollision__13CStaticObjectP7CBulletRC10CCollision": "0x800a9b20",
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "MathFunGetRandomPercent__Fv": "0x80133b6c",
+    "MathFunTestPercent__Fxx": "0x80133bb0",
+    "SetPos__7CMatrixRC8CVector3": "0x8007ae7c",
+    "_7CMatrix.s_ClassInit": "0x802c2100"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Tank_object.cpp",
+  "original_file_index": 894
+}

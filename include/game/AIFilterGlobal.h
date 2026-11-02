@@ -5,6 +5,7 @@ class CAISplinePathManager;
 class CAISplinePath;
 // AI-assisted prefix through +0x13. The original singleton has additional
 // storage; this is not an allocation type. See docs/Paths.md.
+class IVolume;
 class CAIFilterGlobal {
 public:
     unsigned int frameCount;
@@ -16,6 +17,7 @@ public:
     void UpdateFromGlobals(float);
     void UpdateToGlobals();
     void EnableAllAStarPathNodes();
+    void DisableCollidingAStarPathNodes(const IVolume *);
     void CreateSplinePathManager(void *, BPDPolyPath *, int);
     void ResetSplinePathManager(void *, BPDPolyPath *, int);
     void ShutdownSplinePathManager();

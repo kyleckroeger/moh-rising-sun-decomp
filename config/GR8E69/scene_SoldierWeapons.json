@@ -1,0 +1,68 @@
+{
+  "id": "scene_SoldierWeapons",
+  "source": "src/scene/SoldierWeapons.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800bc814",
+      "size": 284
+    },
+    {
+      "name": ".rodata.name_lt_hand",
+      "address": "0x8029f954",
+      "size": 8,
+      "target_name": ".rodata"
+    },
+    {
+      "name": ".rodata.name_rt_hand",
+      "address": "0x8029f73c",
+      "size": 8,
+      "target_name": ".rodata"
+    },
+    {
+      "name": ".rodata.name_prop",
+      "address": "0x8029f7bc",
+      "size": 8,
+      "target_name": ".rodata"
+    },
+    {
+      "name": ".rodata.name_gun",
+      "address": "0x8029f7b4",
+      "size": 8,
+      "target_name": ".rodata"
+    }
+  ],
+  "functions": [
+    {
+      "name": "RemoveWeapons__14CSoldierObject",
+      "address": "0x800bc814",
+      "size": 284,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DestroyWeapon__14CWeaponFactoryP7CWeapon": "0x8014f470",
+    "IsNodeInScene__C6CScenePC10ISceneNode": "0x8014ac34",
+    "Remove__6CSceneR10ISceneNode": "0x80146e9c",
+    "g_WeaponFactory": "0x803e6d40",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Soldier_object.cpp",
+  "original_file_index": 875
+}

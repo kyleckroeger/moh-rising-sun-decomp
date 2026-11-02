@@ -1,0 +1,55 @@
+{
+  "id": "scene_SoldierAI",
+  "source": "src/scene/SoldierAI.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800bc3e8",
+      "size": 172
+    }
+  ],
+  "functions": [
+    {
+      "name": "InitAI__14CSoldierObject",
+      "address": "0x800bc3e8",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "InitAI2__14CSoldierObject",
+      "address": "0x800bc424",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "GetAIObject__14CSoldierObject",
+      "address": "0x800bc48c",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetAIObject__C16CAISoldierDoodad": "0x800d7864",
+    "Init__16CAISoldierDoodadP14CSoldierObject": "0x800d7744",
+    "RegisterWithAI__7CWeapon": "0x8014b8b0",
+    "SetSoldierObject__16CAISoldierObjectP14CSoldierObject": "0x800dd6b4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Soldier_object.cpp",
+  "original_file_index": 875
+}

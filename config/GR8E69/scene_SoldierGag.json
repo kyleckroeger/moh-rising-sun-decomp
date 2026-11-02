@@ -1,0 +1,40 @@
+{
+  "id": "scene_SoldierGag",
+  "source": "src/scene/SoldierGag.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800c2758",
+      "size": 48
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetCurrentGag__14CSoldierObjectii",
+      "address": "0x800c2758",
+      "size": 48,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SaveGagState__14CSoldierObject": "0x800c2788"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Soldier_object.cpp",
+  "original_file_index": 875
+}

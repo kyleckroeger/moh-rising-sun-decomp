@@ -1,0 +1,48 @@
+{
+  "id": "scene_StaticObjectAttachedLight",
+  "source": "src/scene/StaticObjectAttachedLight.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800a9ef8",
+      "size": 316
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029eca4",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetAttachedLight__13CStaticObjectP6CLightRC8CVector3",
+      "address": "0x800a9ef8",
+      "size": 316,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddObserver__8ISubjectP9IObserver": "0x8014ae44",
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "PreTranslate__7CMatrixRC8CVector3": "0x8007ae98",
+    "_7CMatrix.s_ClassInit": "0x802c2100"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "static_obj.cpp",
+  "original_file_index": 833
+}

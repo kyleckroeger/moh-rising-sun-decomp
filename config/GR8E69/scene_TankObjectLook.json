@@ -1,0 +1,47 @@
+{
+  "id": "scene_TankObjectLook",
+  "source": "src/scene/TankObjectLook.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800c3990",
+      "size": 208
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a0154",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetLookMatrix__11CTankObjectR7CMatrix",
+      "address": "0x800c3990",
+      "size": 208,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetSubObject__11CHierObjecti": "0x800d078c",
+    "SetPos__7CMatrixRC8CVector3": "0x8007ae7c",
+    "__as__7CMatrixRC7CMatrix": "0x8007aa38"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Tank_object.cpp",
+  "original_file_index": 894
+}

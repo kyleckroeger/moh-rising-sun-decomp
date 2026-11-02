@@ -1,0 +1,51 @@
+{
+  "id": "scene_StaticObjectBeginUpdate",
+  "source": "src/scene/StaticObjectBeginUpdate.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800a6c88",
+      "size": 608
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029ebb4",
+      "size": 20
+    }
+  ],
+  "functions": [
+    {
+      "name": "BeginUpdate__13CStaticObjectf",
+      "address": "0x800a6c88",
+      "size": 608,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AnimUpdate__13CStaticObjectf": "0x800a63d8",
+    "BeginAnimMotionUpdate__13CStaticObjectf": "0x800a6724",
+    "BeginPathMotionUpdate__13CStaticObjectf": "0x800aa548",
+    "BeginScriptMotionUpdate__13CStaticObjectf": "0x800a659c",
+    "Update__18CObjectFadeManagerf": "0x8006c2d8",
+    "Update__19CLightVolumeManagerf": "0x80131808",
+    "g_bInMultiplayerMode": "0x802c1b30"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "static_obj.cpp",
+  "original_file_index": 833
+}
