@@ -3,6 +3,7 @@
 #ifndef GAME_WORLDVOLUME_H
 #define GAME_WORLDVOLUME_H
 #include "Volume.h"
+#include "DwiList.h"
 
 class CWorldVolume : public IVolume {
   public:
@@ -22,10 +23,16 @@ class CWorldVolume : public IVolume {
     virtual EClsnState TestCollision(const CTriangle &, CCollision &, bool) const;
     virtual void GetExtents(CVector3 &, CVector3 &) const;
     virtual EClsnState TestCollision(const CCSGVolume &, CCollision &, bool) const;
+    void AddSubVolume(const CCDBObject &);
+    void RemoveSubVolume(const CCDBObject &);
+    void RemoveSubVolume(dwi::list_iter<const CCDBObject *>);
+    void UpdateExtents();
     template <class T> EClsnState TestCollisionWithSubVolumes(const T &, CCollision &, bool) const;
-    unsigned char unknown_04[44];
+    dwi::list<const CCDBObject *> subVolumes;
+    unsigned char unknown_24[12];
     CVector3 extentLow;
     CVector3 extentHigh;
+    int unknown_50;
 };
 
 #endif

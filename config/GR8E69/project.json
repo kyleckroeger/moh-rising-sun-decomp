@@ -1507,7 +1507,9 @@
     "sound_sstopall.json",
     "sound_sstpmult.json",
     "sound_sststat.json",
-    "sound_snddrv.json"
+    "sound_snddrv.json",
+    "world_volume_head.json",
+    "world_volume_extents.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

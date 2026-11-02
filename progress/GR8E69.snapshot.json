@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 819176,
+    "matching_code_bytes": 820912,
     "total_executable_code_bytes": 2492032,
-    "percent": 32.87180902973959,
+    "percent": 32.94147105655144,
     "categories": {
-      "reconstructed_game": 426960,
+      "reconstructed_game": 428696,
       "restored_library": 392216
     },
-    "matching_functions": 3892
+    "matching_functions": 3898
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -758,7 +758,7 @@
     "config/GR8E69/player_weapon_overlays.json": "172965adf4a7a763b5932a9744ff75bbf384ef314e25785dee9d7617044a8d5b",
     "config/GR8E69/player_weapon_selectable.json": "c7e3f09ad1510713bfd88ee468db0fcb4c6ef18b3b89bdb414b32ea863b25668",
     "config/GR8E69/player_weapon_shutdown.json": "f90a42342572d125630e7ac3647193288c13301a5309bcdc49cc350364bc2b60",
-    "config/GR8E69/project.json": "8ef5f8b315a4655c9f34f10a3668026c694f42585383a75b7823262f459408f3",
+    "config/GR8E69/project.json": "db78381aa8eed6a76f7480c07f003f96acc7500fb93e77439f91df2bf78a7e7d",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -1531,6 +1531,8 @@
     "config/GR8E69/weapon_ammo.json": "152b758a8ee15c36a9513544a50e3d93f58ec581f4427f675d63c17d1b2ccd84",
     "config/GR8E69/weapon_factory_destroy.json": "79209dbc73a644e07394fb644af27756f95a215c1a497f4524b47a36af1b5f95",
     "config/GR8E69/weapon_factory_reset.json": "3251413545d68060cacea13cc336c063cbe1b4acdd89201e409dda38b5a07341",
+    "config/GR8E69/world_volume_extents.json": "074cd313ba1c477b265c62196c1fc1c24dcd321fd19a1a6ca6e1e5d6990eee0a",
+    "config/GR8E69/world_volume_head.json": "440caf16d108cb5fab347ca9b31bedf6ec2b6a47a187df1d627f2b51c7b0beb8",
     "config/GR8E69/world_volume_tests.json": "406a71b9072ae025d14ae013dc10c33665fee6d4b9cae31e52289ac4df7b4135",
     "include/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "include/dolphin-ethernet/dolphin/eth/eth.h": "2bbc2d1a029b6bb132891614bf09c6784a631ec88517a01042b3b7e429a237a2",
@@ -1716,6 +1718,7 @@
     "include/game/Capsule.h": "332dd06329ac7dc3ac5fc01793549a41e2defbe70298018accd2ce79c9e3ce3b",
     "include/game/CollisionVolume.h": "26ba5d9a9865a0185f0e87db21b13faf3214b7e213201e825181412f0f9a5b7c",
     "include/game/DestructorQueue.h": "434ec17ba96007c8368db0dc62c9454d1650bc2c4d5615a13aad40969412bda8",
+    "include/game/DwiList.h": "ae566cdb85e563d31167473712e8d63a90d19120ae5fdbbc519bad67b4b34518",
     "include/game/EAGLAnim/AnimAllocation.h": "8e2480f7003eca4c8a99d7bc1189b4f00ee9e31bacd9192d6b1bb0bfbc2b38f8",
     "include/game/EAGLAnim/AnimBank.h": "1909b5d1278c6dd4499ea046c279628048e486ca444f53ee161169cab63a8d1a",
     "include/game/EAGLAnim/AnimCore.h": "59862f217935fe0b3e6b2f61623713a23554bbf789ad4274f6cc1e6ebf2a02a1",
@@ -1812,7 +1815,7 @@
     "include/game/Volume.h": "cda9e7de972fc28d73bf86418423a8b271c864d60bb53d1eba7d42744622db46",
     "include/game/Weapon.h": "21c434a3e544e323810253b8366c909434870a4e88bd4fbd5f40c679f820b0ed",
     "include/game/WorldObject.h": "33d40de481444cf253796e893094f7f18d404b696b6313740d72fc6d81b021f4",
-    "include/game/WorldVolume.h": "d07bc9c7bb52a28e93b95f9be3f31fce0189789f1d62b671f0fca917c26d24d0",
+    "include/game/WorldVolume.h": "9acfaf28c317912de14baef7ca50a3d80175ddc31dcf83cea18c80725e688318",
     "include/game-containers/AlgorithmTypes.h": "a4959e24b9ab8edd66054b63ed6d53516aebc500f71f821e27babbf931b8d51a",
     "include/game-containers/ContainerTypes.h": "f6b7f0133646a5eb70ccc5df78ced025919dee88dcd81edc3f565d0b71dd407c",
     "include/game-containers/ResourceTypes.h": "6f63038334ba47ea545e0994a455fbd01b1fdb6aa3b6bf155de630e9ede05c68",
@@ -2488,6 +2491,8 @@
     "src/geometry/sphere_test_plane.cpp": "2f2cdb479d8db4a6604c43a39069424116712e3eb1a00e0c891731046ac5a7d2",
     "src/geometry/sphere_test_triangle.cpp": "98c0c91d0b08fa691cfeb1c32ee13fe36f5b24d98704b8f9922f1b98f3941694",
     "src/geometry/volume_defaults.cpp": "7cef4d2d51acfc60b1eb3a64a827289bc999a0b1903e2c4e99d7f54771692f93",
+    "src/geometry/world_volume_extents.cpp": "7ce2eb5ee0754790c540908b017c166a281387f8bbb9e8943b4e7e5023558ba0",
+    "src/geometry/world_volume_head.cpp": "31516a14b19f32aa0282e5c3eb86f780ee2a70387ab2c5e0eb4a3709775c6623",
     "src/geometry/world_volume_tests.cpp": "ce7ec03a9ec3d3e2dc3416c086fc765ebd0b68bbc9eb28a31ff1009127451567",
     "src/libgcc/COPYING": "dcc100d4161cc0b7177545ab6e47216f84857cda3843847c792a25289852dcaa",
     "src/libgcc/NOTICE": "716534e14c0b03a99df81151630430eb7611a3be6c7aef72d163d7755b25e328",
@@ -34278,6 +34283,42 @@
       "discarded_functions": [],
       "object_sha256": "273e4a21e215843b28ffbfd7469cc9e95f19dff0222e7632658cf3e782a36cd4",
       "linked_sha256": "aa89a7b7b344c191dd252be7abc3e3f2aa75dc55e1cc4aea8775c38b8a7f3568"
+    },
+    {
+      "id": "world_volume_head",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 1280,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "7257056af9d25e2de6fa812af3e68cf5b751ed4b8ecebc8faf310afb72ec0fd4",
+      "linked_sha256": "bbb5c02e0f5efba82e818ba9e569c748fc6f76980fcc9109ca1270f8a5bafffe"
+    },
+    {
+      "id": "world_volume_extents",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 456,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "7cd7010aafaa3f45576c533966f38b7eed8d316998ca913204a25ebfb9fd5ead",
+      "linked_sha256": "e80752a4060f831ff77d613fcffdccaa0df7ae24b41dad01e89b5d72872af429"
     }
   ],
   "code_map": {
@@ -56483,59 +56524,6 @@
         "marker_interval": [
           "0x8013ec8c",
           "0x801403c4"
-        ]
-      },
-      {
-        "name": "Unmatched files/world_volume.cpp [inferred file group]",
-        "file_record": 217,
-        "file_name": "world_volume.cpp",
-        "ranges": [
-          {
-            "address": "0x801403c4",
-            "size": 768,
-            "kind": "function",
-            "name": "__12CWorldVolumei",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801406c4",
-            "size": 188,
-            "kind": "function",
-            "name": "_._12CWorldVolume",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80140780",
-            "size": 112,
-            "kind": "function",
-            "name": "AddSubVolume__12CWorldVolumeRC10CCDBObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801407f0",
-            "size": 108,
-            "kind": "function",
-            "name": "RemoveSubVolume__12CWorldVolumeRC10CCDBObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014085c",
-            "size": 104,
-            "kind": "function",
-            "name": "RemoveSubVolume__12CWorldVolumeGQ23dwit9list_iter1ZPC10CCDBObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801408c4",
-            "size": 456,
-            "kind": "function",
-            "name": "UpdateExtents__12CWorldVolume",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x801403c4",
-          "0x80140ca0"
         ]
       },
       {

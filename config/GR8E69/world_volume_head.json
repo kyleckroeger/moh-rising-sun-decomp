@@ -1,0 +1,98 @@
+{
+  "id": "world_volume_head",
+  "source": "src/geometry/world_volume_head.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801403c4",
+      "size": 1280
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a83a4",
+      "size": 32
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.12CWorldVolume",
+      "address": "0x802e97e0",
+      "size": 176,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "__12CWorldVolumei",
+      "address": "0x801403c4",
+      "size": 768,
+      "binding": 1
+    },
+    {
+      "name": "_._12CWorldVolume",
+      "address": "0x801406c4",
+      "size": 188,
+      "binding": 1
+    },
+    {
+      "name": "AddSubVolume__12CWorldVolumeRC10CCDBObject",
+      "address": "0x80140780",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "RemoveSubVolume__12CWorldVolumeRC10CCDBObject",
+      "address": "0x801407f0",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "RemoveSubVolume__12CWorldVolumeGQ23dwit9list_iter1ZPC10CCDBObject",
+      "address": "0x8014085c",
+      "size": 104,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Create__C7IVolume": "0x80279860",
+    "DWI_allocalign": "0x801a8744",
+    "DWI_free": "0x801a8894",
+    "GetExtents__C12CWorldVolumeR8CVector3T1": "0x80140c0c",
+    "GetRadius__C7IVolume": "0x802798d8",
+    "SetRadius__7IVolumef": "0x802798e4",
+    "TestCollision__C12CWorldVolumeRC10CCDBObjectR10CCollisionb": "0x80140c78",
+    "TestCollision__C12CWorldVolumeRC10CCSGVolumeR10CCollisionb": "0x80140bac",
+    "TestCollision__C12CWorldVolumeRC10CVolSphereR10CCollisionb": "0x80140b0c",
+    "TestCollision__C12CWorldVolumeRC11CVolCapsuleR10CCollisionb": "0x80140b2c",
+    "TestCollision__C12CWorldVolumeRC12CWorldVolumeR10CCollisionb": "0x80140c80",
+    "TestCollision__C12CWorldVolumeRC15CAnimatedVolumeR10CCollisionb": "0x80140b8c",
+    "TestCollision__C12CWorldVolumeRC6CLine3R10CCollisionb": "0x80140b4c",
+    "TestCollision__C12CWorldVolumeRC6CPlaneR10CCollisionb": "0x80140c90",
+    "TestCollision__C12CWorldVolumeRC7CVolBoxR10CCollisionb": "0x80140aec",
+    "TestCollision__C12CWorldVolumeRC7IVolumeR10CCollisionb": "0x80140a8c",
+    "TestCollision__C12CWorldVolumeRC8CVector3R10CCollisionb": "0x80140c88",
+    "TestCollision__C12CWorldVolumeRC9CTriangleR10CCollisionb": "0x80140c98",
+    "TestCollision__C12CWorldVolumeRC9CVolFiberR10CCollisionb": "0x80140b6c",
+    "TestVisibility__C7IVolumeR12CDrawContext": "0x802798cc",
+    "TransformedCopy__7IVolumeRC7IVolumeRC7CMatrix": "0x80279868",
+    "UpdateExtents__12CWorldVolume": "0x801408c4",
+    "__builtin_delete": "0x801a8990",
+    "_vt.7IVolume": "0x802e1c38"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "world_volume.cpp",
+  "original_file_index": 1329
+}

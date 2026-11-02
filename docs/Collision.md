@@ -52,6 +52,20 @@ region at `0x8027982c`, away from any file's own methods. `IVolume.h` keeps its
 them, and `volume_defaults.cpp` emits them with `#pragma implementation`. That pragma
 pair and the file are project arrangements: the original's file for these is unknown.
 
+## World volume
+
+`CWorldVolume` holds its sub-volumes in a `dwi::list`, a fixed-pool intrusive list.
+`RemoveSubVolume`'s mangled symbol names `dwi::list_iter`, and the string
+`source/tl/dwi_memory.h:56` is the label of the pool allocation, so the node allocator
+lived at that line of a header the original tree calls `dwi_memory.h`. The list's other
+members, the helpers (`insert`, `erase`, `swap`, `Exchange`) and the `DwiList.h` header
+name are inferred from the inlined code. `operator!=` takes its operand by value because
+the original keeps a copy in the frame each time round the loop.
+
+Two `1.0f` words at `0x802a83c4` and `0x802a83c8` sit between the constructor's literals
+and `UpdateExtents`'s. No retained function reads them, so the world volume's text is
+split at `UpdateExtents` to leave them out; what emitted them is unknown.
+
 ## Contacts and the test driver
 
 `CCollision` is 36 bytes. Contacts come from `CCollision::ms_contactPool`, over the 300
