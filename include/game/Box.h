@@ -2,6 +2,7 @@
 // header name is a project choice.
 #ifndef GAME_BOX_H
 #define GAME_BOX_H
+#pragma interface
 #include "Volume.h"
 
 class CVolBox : public IVolume {

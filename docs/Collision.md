@@ -38,6 +38,22 @@ can only be emitted by a source that also defines `Create`, so they wait for the
 of those files. `CLight::IsVisible` inlines the sphere destructor, confirming that it
 is inline. Fragment files here are project boundaries, not original ones.
 
+`sphere_tail.cpp` and `box_tail.cpp` emit those tail functions and class tables with
+`#pragma implementation`, because the file's other functions are not all reconstructed
+and `CVolSphere::Create` cannot land yet: see below. `CVolBox::Create` uses `__builtin_new`
+and has no label.
+Their inline constructors are recorded as discarded. Their literals are placed by
+inference at `0x802a7f70..78` and `0x802a80e4`, unreferenced `1.0f` words near the end of
+each file's literals; no instruction reads those words, so the position is not proven.
+
+**Why `Create` is parked.** `.rodata` holds strings from inline functions even when no
+code uses them, because ProDG writes them at parse time. 124 files begin with the label
+`source/volume/sphere.h:29`, the class's inline `operator new`, and most follow it with
+`bad_alloc` and `source/system/crc.h:241..268`. `Create` reads that label and a literal
+after those strings, so a source that defines only `Create` has a non-contiguous
+`.rodata`. Matching it means giving the headers the unused inline functions those strings
+came from, and their bodies are unknown.
+
 A class's inline default constructor is emitted with its table too. The original link
 strips it, but its literal stays: the word at `0x802a8490` between the fiber line
 constructor's and `Create`'s literals belongs to the fiber's. The fiber manifest records

@@ -1590,7 +1590,9 @@
     "sound_sflpf_rc.json",
     "sound_sfreson.json",
     "sound_sfilter_add.json",
-    "sound_sfilter_connect.json"
+    "sound_sfilter_connect.json",
+    "sphere_tail.json",
+    "box_tail.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

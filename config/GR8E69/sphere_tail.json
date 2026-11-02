@@ -1,0 +1,85 @@
+{
+  "id": "sphere_tail",
+  "source": "src/geometry/sphere_tail.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": true,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80137d70",
+      "size": 68
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a7f70",
+      "size": 12
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.10CVolSphere",
+      "address": "0x802e9520",
+      "size": 176,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "_._10CVolSphere",
+      "address": "0x80137d70",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "SetRadius__10CVolSpheref",
+      "address": "0x80137da4",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetRadius__C10CVolSphere",
+      "address": "0x80137dac",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Create__C10CVolSphere": "0x80136a0c",
+    "GetExtents__C10CVolSphereR8CVector3T1": "0x80137cf4",
+    "TestCollision__C10CVolSphereRC10CCDBObjectR10CCollisionb": "0x80136fa8",
+    "TestCollision__C10CVolSphereRC10CCSGVolumeR10CCollisionb": "0x80136e18",
+    "TestCollision__C10CVolSphereRC10CVolSphereR10CCollisionb": "0x80136c34",
+    "TestCollision__C10CVolSphereRC11CVolCapsuleR10CCollisionb": "0x80136ed8",
+    "TestCollision__C10CVolSphereRC12CWorldVolumeR10CCollisionb": "0x80136e78",
+    "TestCollision__C10CVolSphereRC15CAnimatedVolumeR10CCollisionb": "0x80136de4",
+    "TestCollision__C10CVolSphereRC6CLine3R10CCollisionb": "0x801371a8",
+    "TestCollision__C10CVolSphereRC6CPlaneR10CCollisionb": "0x801376cc",
+    "TestCollision__C10CVolSphereRC7CVolBoxR10CCollisionb": "0x80136bd4",
+    "TestCollision__C10CVolSphereRC7IVolumeR10CCollisionb": "0x80136b74",
+    "TestCollision__C10CVolSphereRC8CVector3R10CCollisionb": "0x80137008",
+    "TestCollision__C10CVolSphereRC9CTriangleR10CCollisionb": "0x801377e8",
+    "TestCollision__C10CVolSphereRC9CVolFiberR10CCollisionb": "0x80136f38",
+    "TestVisibility__C10CVolSphereR12CDrawContext": "0x801377f0",
+    "TransformedCopy__10CVolSphereRC7IVolumeRC7CMatrix": "0x80136a58",
+    "__builtin_delete": "0x801a8990",
+    "_vt.7IVolume": "0x802e1c38"
+  },
+  "discarded_functions": [
+    "__10CVolSphere",
+    "GetCenter__C10CVolSphere",
+    "__10CVolSpherefRC8CVector3"
+  ],
+  "undefined_in_discarded_code": [],
+  "original_file": "sphere.cpp",
+  "original_file_index": 1314
+}

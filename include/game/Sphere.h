@@ -4,6 +4,7 @@
 // +16 are established by GetRadius/SetRadius and GetExtents; +4 is unknown.
 #ifndef GAME_SPHERE_H
 #define GAME_SPHERE_H
+#pragma interface
 #include "Volume.h"
 
 class CVolSphere : public IVolume {
@@ -25,8 +26,8 @@ class CVolSphere : public IVolume {
     virtual EClsnState TestCollision(const CTriangle &, CCollision &, bool) const;
     virtual int TestVisibility(CDrawContext &) const;
     virtual void GetExtents(CVector3 &, CVector3 &) const;
-    virtual float GetRadius() const { return radius; }
     virtual void SetRadius(float r) { radius = r; }
+    virtual float GetRadius() const { return radius; }
     virtual EClsnState TestCollision(const CCSGVolume &, CCollision &, bool) const;
     unsigned char unknown_04[8];
     float radius;

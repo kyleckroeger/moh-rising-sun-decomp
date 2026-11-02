@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 855848,
+    "matching_code_bytes": 855968,
     "total_executable_code_bytes": 2492032,
-    "percent": 34.34337921824439,
+    "percent": 34.348194565719865,
     "categories": {
-      "reconstructed_game": 463632,
+      "reconstructed_game": 463752,
       "restored_library": 392216
     },
-    "matching_functions": 4102
+    "matching_functions": 4106
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -187,6 +187,7 @@
     "config/GR8E69/arq.json": "b79b6daec16d9806b4df0388a3f927cb06d48ce10fdb9fa35772dcecce291de7",
     "config/GR8E69/base64.json": "e88ebd5740a86b7f43b5b6812b6c4e81114d43dfae07a3e7429abb7c6a1bfec7",
     "config/GR8E69/baseline.json": "9ebff32fd809e72fdf889ab49760be2aa1172768f855af86d0251c1fc4da2ef7",
+    "config/GR8E69/box_tail.json": "93c8bd3f6a93ecf815426857be9e45c636f0c921b4294170f52fd857d8cbaeb3",
     "config/GR8E69/box_test_dispatch.json": "7a70d85d5875938059c2e4354c237ed3d4eb74c8421cf8d0040321c09ea239b0",
     "config/GR8E69/box_test_generic.json": "12b963776c05004668d26beed846112f3ba2cb017ddb92f0c78b7f3d6618592e",
     "config/GR8E69/box_test_triangle.json": "7bd60a2780eed4dfc96a1972aa80337c00b8ccef4c16fcad14ace31d2b1f3c2d",
@@ -779,7 +780,7 @@
     "config/GR8E69/player_weapon_overlays.json": "172965adf4a7a763b5932a9744ff75bbf384ef314e25785dee9d7617044a8d5b",
     "config/GR8E69/player_weapon_selectable.json": "c7e3f09ad1510713bfd88ee468db0fcb4c6ef18b3b89bdb414b32ea863b25668",
     "config/GR8E69/player_weapon_shutdown.json": "f90a42342572d125630e7ac3647193288c13301a5309bcdc49cc350364bc2b60",
-    "config/GR8E69/project.json": "e1fa7abaf7b69df7e11e2420bb27ae205c214e00bf15c7f236eeca21bc740bda",
+    "config/GR8E69/project.json": "d702ab837d63e884bf8af63b7e3c26f08eb863987c972937f857a5b875ef0592",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -1353,6 +1354,7 @@
     "config/GR8E69/sound_svol.json": "047d8bf8296ebcc30fbdcccb75d012613485291e96c36f4f81919a01e30f9b49",
     "config/GR8E69/sound_sx87d16.json": "2ea1eac443694eb894d37757da8b451744160b557eb447140f8f0d8d8fd99ec4",
     "config/GR8E69/sphere_extents.json": "1c89ac4c62d54f2ba7c1f858fe117525e14cf5f3dceb072c59598bedd53b4728",
+    "config/GR8E69/sphere_tail.json": "3a9cfc4972b8059592d50e32e96e3c6bdf1b93bd3daaa39de0c3c4a8c1275c17",
     "config/GR8E69/sphere_test_dispatch.json": "d498bbe27e3ece25853eeafc29dd4c99e04ec4d1338a6c643149fc712699ab41",
     "config/GR8E69/sphere_test_generic.json": "95f769239bcc0e36b232ee05e451af9f1242d638de5d16097d2b7f553e8c97cb",
     "config/GR8E69/sphere_test_plane.json": "c166becacf52bf416d8e3a4f0c67a4764e76cb085b370daaf98f8647bb1bc76f",
@@ -1783,7 +1785,7 @@
     "include/game/AnimatedVolume.h": "527918576e64cf9296cbb9164eefaf3fc8b7a0f96894e342d2da9e847df4cf25",
     "include/game/BPD.h": "ec4a3aceb83f181db2c6adf8ac87137ede2cd6a0e643548159c73a827aadd19e",
     "include/game/BSGameObject.h": "0251918a776754b0d6b3d30b69e61b0d0c8f919721dbd147dbecf710b180a45a",
-    "include/game/Box.h": "7dc5f283dbd5d87bd4a8092b24e1b4258d0db77f909d89990c18757f3025d499",
+    "include/game/Box.h": "97b26643264e5b5bdf30b512d1e9ec235fa4cc77a98933b02242659ec2a04957",
     "include/game/Bullet.h": "8900b75ce39fe8e08cd7d0a3339d69478167df79fc72f7a35eb3aaed6613b3e8",
     "include/game/CDBGeom.h": "52cc6684854d7d274db12c9e545f56e9add679d6133fc2f612c5d9c3f822d29b",
     "include/game/CDBObject.h": "e7e31e8514ea7b42e4d797289f1f68a55eb5cb92c56080f858fad4c09ace3823",
@@ -1888,7 +1890,7 @@
     "include/game/SoundGlobals.h": "559f53eaf8fba266510fba8e2604b5625916764e0f804555f9d098bf4b9beff7",
     "include/game/SoundManager.h": "8aff3f442f2017a377fdb5aefb163df0137b62a91e978796fa06cde849a4084f",
     "include/game/SoundMixerView.h": "787617bfe14ec7a736949ac46528a91cfe30e6899acd0a9e811d83bf9364059c",
-    "include/game/Sphere.h": "48220d28ba4b5e6f74e1a50c1637ca245e6b1f33f792284719f993ac2a0c3e26",
+    "include/game/Sphere.h": "4fb7f91c288e5b711e495765718b14847cbb478030509f25cbb7defcbc4a182f",
     "include/game/StringCRC.h": "3940d0af2ade9e671b10c5bb1ef12705a7322101b231aae92cfd2aab4a07fa31",
     "include/game/StringTable.h": "4249ba9fcf836cdacb806c1fd8e1a93697756e7896c7eb90f222935c6edc2bb4",
     "include/game/TARExtension.h": "895c1de002730e0d0c627a3475a5370287e007f42b34b18a2901ef3465152b59",
@@ -2556,6 +2558,7 @@
     "src/game/string_80277f18.cpp": "b6c79191f3a19d54855216cdbc6cf512f4fa474cc60d95837b45a4acec64016c",
     "src/geometry/animated_volume_head.cpp": "23df314f9ced954f09dc466dd40c5733f234b699a9f5fb655a3c2e12ae551ba4",
     "src/geometry/animated_volume_tests.cpp": "f840db7fa1a281f301e273992e262605cdd17e463498259772e58a6746b88724",
+    "src/geometry/box_tail.cpp": "f03563f12a9c677d103f2ab4073f7a8b6168693bf317eeccdb750837dea6746a",
     "src/geometry/box_test_dispatch.cpp": "624e77fe5ee294e5bc2c364225cad880fa6a1b0e5c6566d85150cf467dafd0ed",
     "src/geometry/box_test_generic.cpp": "12f0577f0bffce624b57e5b34d9d4974105eedb024a3ac17a25a75899ee34ff1",
     "src/geometry/box_test_triangle.cpp": "5fa4d842664919c70dc070ac2ff121d2d7d90d6d987558b915f7a7f517d8dcae",
@@ -2600,6 +2603,7 @@
     "src/geometry/line3_set.cpp": "88fc60109effdd125e1740584a08b53f695786886279e2d26f6ad5cf3156e6f7",
     "src/geometry/math_sin_cos.cpp": "d06cdbb52f13d056e0d9fe63e1adedd616cb39ebba4ab27f9a5c2bd7131116e3",
     "src/geometry/sphere_extents.cpp": "cd4b32318d20f7c79e59e1f6b117bee35c063e55e01141e7b9b478ad925f6ba7",
+    "src/geometry/sphere_tail.cpp": "187f94405632d2d6c5dd0a5add03873e84af30f138df2251fdd5435b1afe9431",
     "src/geometry/sphere_test_dispatch.cpp": "99f0befcd9289a39467644fe130062eb2da9ad28e14d3b96462fee0cfb41c243",
     "src/geometry/sphere_test_generic.cpp": "ebb45981c0f5bfb82f5d439ebbf349e2f5c658bd778466152ad82d4bc737d274",
     "src/geometry/sphere_test_plane.cpp": "2f2cdb479d8db4a6604c43a39069424116712e3eb1a00e0c891731046ac5a7d2",
@@ -35986,6 +35990,48 @@
       "discarded_functions": [],
       "object_sha256": "b54b00e4dd115a721bf7c2ed8b172ad5c09f921f79aa3a3b93c5b259dd5a90ac",
       "linked_sha256": "0c9f4cf7bfebef84570df512a35f16d9cf52936f57225986e69e01af6be9ea8f"
+    },
+    {
+      "id": "sphere_tail",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 68,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": true,
+      "discarded_functions": [
+        "__10CVolSphere",
+        "GetCenter__C10CVolSphere",
+        "__10CVolSpherefRC8CVector3"
+      ],
+      "object_sha256": "39694d732ac5b74ea53a182b14f6e8ccc5049ae69f0db2ee1282f1ca07590963",
+      "linked_sha256": "146eeaf2c25c237e7855e35552eb4eebe21546c35de37caf41afbc42d36b81ad"
+    },
+    {
+      "id": "box_tail",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 52,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": true,
+      "discarded_functions": [
+        "__7CVolBox"
+      ],
+      "object_sha256": "3f617ed695426b86edb79de146a79e458fbeaa21671a39630d4d37d38a6a4afc",
+      "linked_sha256": "259173ad9317410b753a96b31c106e3b116061d1ca283265783efa97a335af2b"
     }
   ],
   "code_map": {
@@ -57201,27 +57247,6 @@
             "kind": "function",
             "name": "TestVisibility__C10CVolSphereR12CDrawContext",
             "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80137d70",
-            "size": 52,
-            "kind": "function",
-            "name": "_._10CVolSphere",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80137da4",
-            "size": 8,
-            "kind": "function",
-            "name": "SetRadius__10CVolSpheref",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80137dac",
-            "size": 8,
-            "kind": "function",
-            "name": "GetRadius__C10CVolSphere",
-            "evidence": "adjacent-compiler-markers"
           }
         ],
         "marker_interval": [
@@ -57372,13 +57397,6 @@
             "size": 316,
             "kind": "function",
             "name": "BoxSegmentSqrDistance__FRC6CLine3RC7CVolBoxPfN32",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8013e218",
-            "size": 52,
-            "kind": "function",
-            "name": "_._7CVolBox",
             "evidence": "adjacent-compiler-markers"
           }
         ],
