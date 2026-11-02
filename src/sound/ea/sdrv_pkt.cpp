@@ -1,4 +1,4 @@
-/* A fragment of the sound driver (snddrv.c, 0x8016b6b0): the packet
+/* A fragment of the sound driver (snddrv.c): the packet
    player's platform overhead and creation (two 3 KB DSP buffers and three
    32-byte aligned staging areas in the caller's memory). snddrv is named by
    its symbol; its view and the packet player's platform record are

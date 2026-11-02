@@ -1,4 +1,4 @@
-/* A fragment of the sound driver (snddrv.c, 0x8016bb50): destroying a
+/* A fragment of the sound driver (snddrv.c): destroying a
    packet player's platform record (freeing its two DSP buffers and
    unregistering it), the fixed output latency, and SNDPLATFORM_setvol, which
    applies a voice's volume (the product of its two volume bytes) to each of
@@ -34,7 +34,7 @@ struct SNDDRVVIEW {
     SNDDRVPACKETVIEW* packets[1];
 };
 
-/* inferred: a voice record (128 bytes), as in ssysreal.c */
+/* inferred: a voice record (140 bytes) */
 struct SNDVOICEVIEW {
     unsigned char unknown00[4];
     short channels[13];

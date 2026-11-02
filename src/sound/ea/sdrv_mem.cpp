@@ -1,4 +1,4 @@
-/* A fragment of the sound driver (snddrv.c, 0x8016c5f8): filter
+/* A fragment of the sound driver (snddrv.c): filter
    installation (unsupported), memory allocation and freeing through the
    installed allocator or ARAM (sizes rounded up to 32 bytes), and
    SNDPLATFORM_download, which flushes the block and posts its transfer to

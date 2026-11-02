@@ -1,4 +1,4 @@
-/* A fragment of the sound driver (snddrv.c, 0x8016c1e8): the time
+/* A fragment of the sound driver (snddrv.c): the time
    multiplier and the low-pass cutoff (the value over half the output rate at
    +42; the constants are entries of the file's .sdata2 pool) of a mixer
    voice's channels. sndgs is named by its symbol; its

@@ -1,4 +1,4 @@
-// A fragment of the software mixer (smixer.c, 0x801604b8): MIX_destroy frees
+// A fragment of the software mixer (smixer.c): MIX_destroy frees
 // the mixer's channel records, its two work buffers and the per-output mix
 // buffers, clearing each pointer. sndmix is named by its symbol; its view is
 // inferred.

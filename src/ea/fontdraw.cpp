@@ -11,8 +11,8 @@
 // weak FONT_drawtextx<unsigned char>, which walks the glyphs the same way
 // between the current driver's begin/end hooks, drawing each glyph through
 // the driver or queuing it for the extended driver's batched draw (128 at a
-// time, with the user data and a first-batch flag when given). The file
-// is compiled with -inline on, -fp_contract off and -use_lmw_stmw off. FONT,
+// time, with the user data and a first-batch flag when given). 
+// FONT,
 // the functions and the template names come from the mangled symbols; the
 // font and glyph record views and the local helper are inferred, as are the
 // result types; the driver views are inferred from the calls. The rest of the

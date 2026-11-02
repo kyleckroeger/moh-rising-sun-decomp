@@ -77,3 +77,15 @@ members above about `+0xd0` sit 40 bytes further along than Frontline's.
 file. The original symbol table gives `.sbss` statics a size of 0, so the unit declares
 them `extern` as original context instead of defining them. Their ownership is
 therefore not verified by the build.
+
+`include/game/SoundGlobals.h` and `SoundMixerView.h` are inferred member views of
+`sndgs` and `sndmix`. Both are single struct objects in the original: their members are
+reached through one base register, which a character-array view does not reproduce.
+
+Small data is not uniform across these libraries. The REAL runtime (`FONT_*`,
+`FILESYS_*`, `MEM_*`, `TIMER_*`, `THREAD_*`, `PRINT_*`) uses `r13`; the `SND*` code from
+`0x80218efc` to `0x8022bed0` has no `r13` reference, and its 4-byte globals such as
+`Snd::gMutexLockFn`, `MIXstopfn` and `everyother` sit outside `.sdata` and are reached
+with `lis`. `SNDSYS_entercritical` and `SNDSYS_leavecritical` match with `-G0
+-fno-strength-reduce`. Units here are built with `-G8` for now, so code touching such
+globals is not yet reconstructed.

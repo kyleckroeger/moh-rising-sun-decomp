@@ -1,4 +1,4 @@
-/* A fragment of the sound driver (snddrv.c, 0x8016ada0): iSNDserve, the
+/* A fragment of the sound driver (snddrv.c): iSNDserve, the
    driver's service pass. For every packet player with a voice it counts down
    the start delay (then sets the voice's pitch, position and volume and
    starts each channel's AX voice as a 16-bit stream over its DSP buffer),

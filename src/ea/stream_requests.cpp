@@ -1,4 +1,4 @@
-/* A fragment of EA's streaming layer (stream.cpp, 0x8014bb68): the request
+/* A fragment of EA's streaming layer (stream.cpp): the request
    list, the chunk parser, the file operation callbacks, the buffer refill
    and STREAM_overhead. freerequest unlinks a request from the queue (moving
    the current request on, or back when it was the last) and puts it on the

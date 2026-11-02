@@ -19,11 +19,23 @@
   "sections": [
     {
       "name": ".text",
-      "address": "0x8020caec",
-      "size": 8
+      "address": "0x8020ca04",
+      "size": 240
     }
   ],
   "functions": [
+    {
+      "name": "writefile__FP10HANDLE_defPvii",
+      "address": "0x8020ca04",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "getfilesize__FP10HANDLE_def",
+      "address": "0x8020ca68",
+      "size": 132,
+      "binding": 1
+    },
     {
       "name": "deletefile__FPCc",
       "address": "0x8020caec",
@@ -31,7 +43,10 @@
       "binding": 1
     }
   ],
-  "externals": {},
+  "externals": {
+    "PClseek": "0x801af400",
+    "PCwrite": "0x801af3f8"
+  },
   "sda_externals": [],
   "discarded_functions": [],
   "undefined_in_discarded_code": [],

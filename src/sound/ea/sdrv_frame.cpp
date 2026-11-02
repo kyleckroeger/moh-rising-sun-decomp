@@ -1,4 +1,4 @@
-/* A fragment of the sound driver (snddrv.c, 0x8016c364): the high-pass
+/* A fragment of the sound driver (snddrv.c): the high-pass
    setting of a mixer voice's channels, and the current frame
    of a voice (for an AX voice, its playback address minus the start, scaled
    by 7/8 for type 18 samples; otherwise the software mixer's frame).

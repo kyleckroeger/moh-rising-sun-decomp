@@ -1,4 +1,4 @@
-// The resampling filter's initialisation (sfrsf.c, 0x801674c4): the state's
+// The resampling filter's initialisation (sfrsf.c): the state's
 // process function is SFILTER_rsf, its input and position words and two
 // halfwords are cleared, the coefficient table is rsflc unless the second
 // argument is set, and the four history samples are cleared. RSFSTATE and

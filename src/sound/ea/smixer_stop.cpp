@@ -1,4 +1,4 @@
-// A fragment of the software mixer (smixer.c, 0x8016085c): MIX_stop adds a
+// A fragment of the software mixer (smixer.c): MIX_stop adds a
 // channel's remaining contribution to the mixer's level totals, runs and
 // frees its pending filter stages, and marks the channel idle. sndmix is
 // named by its symbol; its view and the channel and filter records are

@@ -37,11 +37,33 @@ extern READREQUEST gCurRead;
 
 int readfile(HANDLE_def* handle, void* buffer, int offset, int size);
 
-int writefile(HANDLE_def* handle, void* buffer, int offset, int size);
+extern "C" {
+int PClseek(void*, int, int);
+int PCwrite(void*, void*, int);
+}
 
-int getfilesize(HANDLE_def* handle);
+int writefile(HANDLE_def* handle, void* buffer, int offset, int size) {
+    if (handle->type == 3) {
+        PClseek(handle->file, offset, 0);
+        PCwrite(handle->file, buffer, size);
+        return 1;
+    }
+    return -1;
+}
 
-void stopreadfile(HANDLE_def*);
+int getfilesize(HANDLE_def* handle) {
+    if (handle->type == 3) {
+        int position = PClseek(handle->file, 0, 1);
+        int size = PClseek(handle->file, 0, 2);
+
+        PClseek(handle->file, position, 0);
+        return size;
+    }
+    if (handle->type == 2)
+        return handle->size;
+    return 0;
+}
+
 
 int deletefile(const char*) {
     return -1;

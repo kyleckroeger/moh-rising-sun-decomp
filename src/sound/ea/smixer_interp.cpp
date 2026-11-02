@@ -1,4 +1,4 @@
-// A fragment of the software mixer (smixer.c, 0x8015fd30): the 16-sample
+// A fragment of the software mixer (smixer.c): the 16-sample
 // level ramps. MIXI_interpolateto0 fades a 16-sample block from the given
 // level to zero (sample i gets (16 - i) / 17 of the level) and clears the
 // level; MIXI_interpolatemix mixes a 16-sample block into another while the
