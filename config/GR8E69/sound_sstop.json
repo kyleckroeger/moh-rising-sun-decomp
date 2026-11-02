@@ -1,0 +1,42 @@
+{
+  "id": "sound_sstop",
+  "source": "src/sound/ea/sstop.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80220a5c",
+      "size": 96
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDstop",
+      "address": "0x80220a5c",
+      "size": 96,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDPLATFORM_stop__Fi": "0x8021df44",
+    "SNDVOICEI_get__Fi": "0x8021945c",
+    "iSNDpatchkey__FiPi": "0x8021e878"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sstop.c",
+  "original_file_index": 3103
+}

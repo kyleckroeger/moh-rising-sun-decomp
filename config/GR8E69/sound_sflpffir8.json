@@ -1,0 +1,59 @@
+{
+  "id": "sound_sflpffir8",
+  "source": "src/sound/ea/sflpffir8.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80228664",
+      "size": 344
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bfc98",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "SFILTER_lpfFIR8__FPviT0T0i",
+      "address": "0x80228664",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "SFILTER_createLPFFIR8__FP8LPFSTATE",
+      "address": "0x802286e0",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "SFILTER_modifyLPFFIR8__FP8LPFSTATEPi",
+      "address": "0x80228734",
+      "size": 136,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDI_fir8__FP11SNDFIRSTATEiPvT2": "0x802283ec",
+    "SNDI_fir8init__FP11SNDFIRSTATE": "0x802283c0",
+    "calcFIRCoeffs__FP11SNDFIRSTATEi": "0x80228018"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sflpffir8.c",
+  "original_file_index": 3246
+}

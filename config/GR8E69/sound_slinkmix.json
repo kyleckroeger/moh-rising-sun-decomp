@@ -1,0 +1,53 @@
+{
+  "id": "sound_slinkmix",
+  "source": "src/sound/ea/slinkmix.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8022548c",
+      "size": 132
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDSYS_linkmaincpumixer",
+      "address": "0x8022548c",
+      "size": 132,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "MIX_audioslice": "0x802262cc",
+    "MIX_create": "0x80225b98",
+    "MIX_destroy": "0x80225d9c",
+    "MIX_play": "0x802260b0",
+    "MIX_playinit": "0x80225e9c",
+    "MIX_setpitch": "0x8022690c",
+    "MIX_stop": "0x80226180",
+    "MIXaudioslicefn": "0x8041ee08",
+    "MIXinitfn": "0x8041ee00",
+    "MIXplayfn": "0x8041ee10",
+    "MIXplayinitfn": "0x8041ee0c",
+    "MIXrestorefn": "0x8041ee04",
+    "MIXsetpitchfn": "0x8041ee18",
+    "MIXstopfn": "0x8041ee14"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "slinkmix.c",
+  "original_file_index": 3179
+}

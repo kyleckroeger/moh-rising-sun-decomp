@@ -1,0 +1,40 @@
+{
+  "id": "sound_srrange",
+  "source": "src/sound/ea/srrange.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80226ca4",
+      "size": 92
+    }
+  ],
+  "functions": [
+    {
+      "name": "randrange__Fi",
+      "address": "0x80226ca4",
+      "size": 92,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "iSNDrandom__Fv": "0x80226b9c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "srrange.c",
+  "original_file_index": 3211
+}

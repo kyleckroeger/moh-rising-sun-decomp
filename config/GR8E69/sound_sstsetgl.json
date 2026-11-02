@@ -1,0 +1,41 @@
+{
+  "id": "sound_sstsetgl",
+  "source": "src/sound/ea/sstsetgl.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80220d38",
+      "size": 76
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDSTRM_setgreedylevel",
+      "address": "0x80220d38",
+      "size": 76,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDSTRMI_getstreamptr__Fi": "0x8021fb14",
+    "STREAM_setgreedylevel": "0x8020a7f4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sstsetgl.c",
+  "original_file_index": 3115
+}

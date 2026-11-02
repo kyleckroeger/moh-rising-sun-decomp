@@ -48,3 +48,17 @@ are verified in `src/script/` and counted separately from the sound functions ab
 ProDG 3.8.1 with `-O2 -G0 -fno-exceptions -fno-implicit-templates` reproduces every
 fragment and its strings and constants. The complete rebuilt analysis image is
 identical. Runtime behavior has not been tested.
+
+## EA audio and REAL runtime libraries
+
+`src/sound/ea/` and `src/ea/` hold EA's C-style audio (`SND*`, `SFILTER_*`) and
+runtime (`FILESYS_*`, `MEM_*`, `MUTEX_*`, `SIGNAL_*`, `FONT_*`) units, one per file
+group in the code map. The Frontline reconstruction is their semantic reference;
+every function was compiled with ProDG 3.8.1 and checked against GR8E69. Their
+record layouts and most member names are inferred; a type named in a mangled symbol
+is evidence for the name only.
+
+`sndgs` is 0x324 bytes here and its members sit at different offsets from
+Frontline's: the bank slot table is at `+0x1f4`, the memory pool at `+0x220` and the
+abort-message hook at `+0xc8`. The sound system's public calls are partly C++ in this
+build (`Snd::System::Restore`, `Snd::CODASetNew`), where Frontline uses C names.

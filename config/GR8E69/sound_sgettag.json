@@ -1,0 +1,40 @@
+{
+  "id": "sound_sgettag",
+  "source": "src/sound/ea/sgettag.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80224ef0",
+      "size": 236
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDI_gettag__FP10SNDTAGINFO",
+      "address": "0x80224ef0",
+      "size": 236,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDI_getb__FPvi": "0x80224e70"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sgettag.c",
+  "original_file_index": 3171
+}

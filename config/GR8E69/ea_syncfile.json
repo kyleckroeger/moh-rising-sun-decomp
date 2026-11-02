@@ -1,0 +1,105 @@
+{
+  "id": "ea_syncfile",
+  "source": "src/ea/syncfile.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80208910",
+      "size": 1088
+    }
+  ],
+  "functions": [
+    {
+      "name": "synccallback__FiiPv",
+      "address": "0x80208910",
+      "size": 256,
+      "binding": 0
+    },
+    {
+      "name": "syncblockio__FiiPviiPFiiPviiPv_i",
+      "address": "0x80208a10",
+      "size": 172,
+      "binding": 0
+    },
+    {
+      "name": "FILESYS_opensync",
+      "address": "0x80208abc",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "FILESYS_readsync",
+      "address": "0x80208b2c",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "FILESYS_writesync",
+      "address": "0x80208b54",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "FILESYS_closesync",
+      "address": "0x80208b7c",
+      "size": 92,
+      "binding": 1
+    },
+    {
+      "name": "FILESYS_sizesync",
+      "address": "0x80208bd8",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "FILESYS_addbigsync",
+      "address": "0x80208c28",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "FILESYS_delbigsync",
+      "address": "0x80208c98",
+      "size": 92,
+      "binding": 1
+    },
+    {
+      "name": "FILESYS_existssync",
+      "address": "0x80208cf4",
+      "size": 92,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FILESYS_addbig": "0x80207d74",
+    "FILESYS_callbackop": "0x80207330",
+    "FILESYS_close": "0x8020795c",
+    "FILESYS_completeop": "0x802076f4",
+    "FILESYS_delbig": "0x80207ebc",
+    "FILESYS_exists": "0x8020783c",
+    "FILESYS_open": "0x802078cc",
+    "FILESYS_opstatus": "0x802072e4",
+    "FILESYS_read": "0x802079e8",
+    "FILESYS_size": "0x80207b04",
+    "FILESYS_waitop": "0x8020765c",
+    "FILESYS_write": "0x80207a80"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "syncfile.cpp",
+  "original_file_index": 2832
+}

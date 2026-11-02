@@ -1,0 +1,40 @@
+{
+  "id": "sound_smemhigh",
+  "source": "src/sound/ea/smemhigh.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802255dc",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDMEM_gethighwater",
+      "address": "0x802255dc",
+      "size": 32,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "sndgs": "0x804108fc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "smemhigh.cpp",
+  "original_file_index": 3184
+}
