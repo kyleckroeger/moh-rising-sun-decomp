@@ -1,0 +1,38 @@
+{
+  "id": "sphere_test_triangle",
+  "source": "src/geometry/sphere_test_triangle.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801377e8",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "TestCollision__C10CVolSphereRC9CTriangleR10CCollisionb",
+      "address": "0x801377e8",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sphere.cpp",
+  "original_file_index": 1314
+}

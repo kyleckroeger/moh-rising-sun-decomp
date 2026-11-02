@@ -1,0 +1,71 @@
+{
+  "id": "sphere_test_dispatch",
+  "source": "src/geometry/sphere_test_dispatch.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80136de4",
+      "size": 548
+    }
+  ],
+  "functions": [
+    {
+      "name": "TestCollision__C10CVolSphereRC15CAnimatedVolumeR10CCollisionb",
+      "address": "0x80136de4",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C10CVolSphereRC10CCSGVolumeR10CCollisionb",
+      "address": "0x80136e18",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C10CVolSphereRC12CWorldVolumeR10CCollisionb",
+      "address": "0x80136e78",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C10CVolSphereRC11CVolCapsuleR10CCollisionb",
+      "address": "0x80136ed8",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C10CVolSphereRC9CVolFiberR10CCollisionb",
+      "address": "0x80136f38",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C10CVolSphereRC10CCDBObjectR10CCollisionb",
+      "address": "0x80136fa8",
+      "size": 96,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetLine__C9CVolFiber": "0x801412f0",
+    "SwapOrder__10CCollision": "0x80134070"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sphere.cpp",
+  "original_file_index": 1314
+}

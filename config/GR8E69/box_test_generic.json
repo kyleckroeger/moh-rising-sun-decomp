@@ -1,0 +1,40 @@
+{
+  "id": "box_test_generic",
+  "source": "src/geometry/box_test_generic.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801384b0",
+      "size": 96
+    }
+  ],
+  "functions": [
+    {
+      "name": "TestCollision__C7CVolBoxRC7IVolumeR10CCollisionb",
+      "address": "0x801384b0",
+      "size": 96,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SwapOrder__10CCollision": "0x80134070"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "box.cpp",
+  "original_file_index": 1316
+}

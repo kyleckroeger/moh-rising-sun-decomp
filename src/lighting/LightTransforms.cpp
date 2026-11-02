@@ -1,5 +1,5 @@
 #include "Light.h"
-#include "Volume.h"
+#include "Sphere.h"
 void CLight::AttemptUpdate(float) {}
 void CLight::CommitUpdate() {}
 // Follow node from now on: keep the given offset, or use an identity offset and

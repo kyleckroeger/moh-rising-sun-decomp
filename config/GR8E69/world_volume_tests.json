@@ -1,0 +1,129 @@
+{
+  "id": "world_volume_tests",
+  "source": "src/geometry/world_volume_tests.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80140a8c",
+      "size": 532
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a83d8",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "TestCollision__C12CWorldVolumeRC7IVolumeR10CCollisionb",
+      "address": "0x80140a8c",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C12CWorldVolumeRC7CVolBoxR10CCollisionb",
+      "address": "0x80140aec",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C12CWorldVolumeRC10CVolSphereR10CCollisionb",
+      "address": "0x80140b0c",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C12CWorldVolumeRC11CVolCapsuleR10CCollisionb",
+      "address": "0x80140b2c",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C12CWorldVolumeRC6CLine3R10CCollisionb",
+      "address": "0x80140b4c",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C12CWorldVolumeRC9CVolFiberR10CCollisionb",
+      "address": "0x80140b6c",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C12CWorldVolumeRC15CAnimatedVolumeR10CCollisionb",
+      "address": "0x80140b8c",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C12CWorldVolumeRC10CCSGVolumeR10CCollisionb",
+      "address": "0x80140bac",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "GetExtents__C12CWorldVolumeR8CVector3T1",
+      "address": "0x80140c0c",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C12CWorldVolumeRC10CCDBObjectR10CCollisionb",
+      "address": "0x80140c78",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C12CWorldVolumeRC12CWorldVolumeR10CCollisionb",
+      "address": "0x80140c80",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C12CWorldVolumeRC8CVector3R10CCollisionb",
+      "address": "0x80140c88",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C12CWorldVolumeRC6CPlaneR10CCollisionb",
+      "address": "0x80140c90",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C12CWorldVolumeRC9CTriangleR10CCollisionb",
+      "address": "0x80140c98",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SwapOrder__10CCollision": "0x80134070",
+    "TestCollisionWithSubVolumes__H1Z10CVolSphere_C12CWorldVolumeRCX01R10CCollisionb_10EClsnState": "0x80289810",
+    "TestCollisionWithSubVolumes__H1Z11CVolCapsule_C12CWorldVolumeRCX01R10CCollisionb_10EClsnState": "0x8028994c",
+    "TestCollisionWithSubVolumes__H1Z15CAnimatedVolume_C12CWorldVolumeRCX01R10CCollisionb_10EClsnState": "0x80289d00",
+    "TestCollisionWithSubVolumes__H1Z6CLine3_C12CWorldVolumeRCX01R10CCollisionb_10EClsnState": "0x80289a88",
+    "TestCollisionWithSubVolumes__H1Z7CVolBox_C12CWorldVolumeRCX01R10CCollisionb_10EClsnState": "0x802896d4",
+    "TestCollisionWithSubVolumes__H1Z9CVolFiber_C12CWorldVolumeRCX01R10CCollisionb_10EClsnState": "0x80289bc4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "world_volume.cpp",
+  "original_file_index": 1329
+}
