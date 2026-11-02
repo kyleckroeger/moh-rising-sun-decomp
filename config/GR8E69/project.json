@@ -1592,7 +1592,8 @@
     "sound_sfilter_add.json",
     "sound_sfilter_connect.json",
     "sphere_tail.json",
-    "box_tail.json"
+    "box_tail.json",
+    "cdbgeom_box_plane.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
