@@ -52,7 +52,8 @@ extern CGameSettings g_GameSettings;
 // Scoped view of the cheat state; only the replay-item unlock at +0x34 is named.
 struct CheatsView {
     int invincible; // Tested by CPlayerObject::IsInvincible; name inferred.
-    unsigned char unknown_4[0x1c - 4];
+    int infiniteAmmo; // +4; CWeapon::Update refills an empty reserve. Name from Frontline.
+    unsigned char unknown_8[0x1c - 8];
     int keepGrenadeSpeed; // +0x1c; name from Frontline.
     unsigned char unknown_20[0x28 - 0x20];
     int oneHitKills; // +0x28; damage becomes 1000 in CExplosion::Visit. Name from Frontline.

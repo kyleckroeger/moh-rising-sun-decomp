@@ -9,6 +9,7 @@
 #include "LightVolumeManager.h"
 #include "Volume.h"
 #include "Sphere.h"
+#include "../game-containers/TargetTypes.h"
 class CCollision;
 class CProjectileBullet;
 class CThrownBullet;
@@ -68,13 +69,15 @@ class CBullet : public IMovingSceneNode {
 // Scoped record views: only the fields the accessors read are named.
 struct ProjectileBulletProperties_struct {
     unsigned int crc;      // +0x00; searched by CBulletFactory::GetBulletByCRC.
-    float weight;          // +0x04; returned by CBulletFactory::GetBulletWeight.
+    float weight;          // +0x04; returned by CBulletFactory::GetBulletWeight; the speed scale in Init.
     unsigned char unknown_08[72 - 8];
     void *sprite;          // +0x48
     float damage;          // +0x4c
-    unsigned char unknown_50[84 - 80];
+    short lifeFrames;      // +0x50; name from Frontline.
+    unsigned char unknown_52[84 - 82];
     float width;           // +0x54; Draw does nothing while it is zero. Name from Frontline.
-    unsigned char unknown_58[96 - 88]; // The factory indexes the table in 96-byte steps.
+    float lifeSeconds;     // +0x58
+    unsigned char unknown_5c[96 - 92]; // The factory indexes the table in 96-byte steps.
 };
 struct ThrownBulletProperties_struct {
     unsigned int crc;      // +0x00
@@ -92,6 +95,7 @@ struct ThrownBulletProperties_struct {
     unsigned char unknown_67; // The factory indexes the table in 104-byte steps.
 };
 
+enum EProjectileBulletTypes { ProjectileBulletTypeUnknown = 0 };
 // Bit 28 (counting from the least significant bit) of the word at +0x10c.
 struct ProjectileBulletFlags {
     unsigned int hitPending : 1; // Bit 31: set around HandleBulletCollision; names descriptive.
@@ -106,11 +110,11 @@ class CProjectileBullet : public CBullet {
     unsigned char unknown_b8[0xc4 - 0xb8];
     int type;                                       // +0xc4
     ProjectileBulletProperties_struct *properties; // Stored by Init.
-    unsigned char unknown_cc[0xe0 - 0xcc];
+    unsigned char ownedStorage[0xe0 - 0xcc];        // +0xcc; a WeakPtr<ISceneNode, 8> whose pointer is firedBy.
     ISceneNode *firedBy;                            // Returned by GetFiredBy.
-    unsigned char unknown_e4[0xfc - 0xe4];
+    WeakPtr<ISceneNode, 8> excluded;                // +0xe4
     float speed;                                    // +0xfc; scales the direction in GetVelocity.
-    unsigned char unknown_100[0x104 - 0x100];
+    float field_100;                                // +0x100; a random offset from Init.
     float life;                                     // +0x104
     float collisionTime;                            // +0x108; taken from a collision.
     ProjectileBulletFlags flags;
@@ -118,6 +122,7 @@ class CProjectileBullet : public CBullet {
     unsigned char worldVolume[0x1b0 - 0x160];       // +0x160; a CVolFiber (extent inferred).
     IParticleSystem *trail;                         // +0x1b0; deactivated by MarkForDestruction.
 
+    void Init(EProjectileBulletTypes, ProjectileBulletProperties_struct *, const CVector3 &, const CVector3 &, float, EClsnId, float, ISceneNode *, bool);
     void BeginUpdate(float);
     void AttemptUpdate(float);
     void CommitUpdate();
@@ -146,6 +151,8 @@ class CThrownBullet : public CBullet {
   public:
     void SomebodyCaughtYou();
     void AttemptUpdate(float);
+    void CreateExplosionEffect(const CMatrix &, bool);
+    void CommitUpdate();
     int Constrain(float);
     void BeginUpdate(float);
     void OnCollision(const CCollision &);
@@ -163,8 +170,8 @@ class CThrownBullet : public CBullet {
     CVector3 field_160;                             // +0x160; Penetrate's surface normal.
     CVector3 field_170, field_180, field_190;       // +0x170: field_190 times the distance moved, plus field_180.
     unsigned char localVolume[0x1f0 - 0x1a0];       // +0x1a0
-    unsigned char worldVolume[0x254 - 0x1f0];       // +0x1f0; a CVolFiber (extent inferred).
-    CLight *attachedLight;
+    unsigned char worldVolume[0x240 - 0x1f0];       // +0x1f0; a CVolFiber.
+    WeakPtr<CLight, 8> light;                       // +0x240; the pointer is at +0x254.
     unsigned char unknown_258[0x25c - 0x258];
     unsigned int bit31 : 1;
     unsigned int bit30 : 1;
@@ -229,7 +236,7 @@ class CExplosion : public dwi::IVisitor<ISceneNode> {
     ISceneNode *source;          // +0x3c
     bool heightCheck;            // +0x40; name inferred.
     bool field_44;               // +0x44
-    unsigned char unknown_48[4];
+    unsigned char unknown_48[8];
     CExplosion(CScene &, const CVector3 &, float, float, float, EScriptBulletType, ISceneNode *, bool, bool);
     virtual ~CExplosion();
     virtual bool Visit(ISceneNode &);

@@ -61,7 +61,7 @@ class CWeapon : public CStaticObject {
     unsigned int unknown_low : 24;
     float field_354;            // +0x354
     float field_358;            // +0x358
-    unsigned char unknown_35c[0x360 - 0x35c];
+    float field_35c;            // +0x35c; a random angle while the muzzle flash shows.
     void *muzzleFlash; // +0x360
     float field_364;            // +0x364; from the level resource record.
     int field_368;              // +0x368; from the level resource record.
@@ -75,6 +75,7 @@ class CWeapon : public CStaticObject {
     void Shutdown();
     void *GetBulletSprite() const;
     void AddAmo(short);
+    void FireBullet();
     void SetAmmo(unsigned int, unsigned int);
     void Empty();
     void BeginUpdate(float);

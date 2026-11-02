@@ -118,3 +118,9 @@ tests `AsWorldObject`/`AsSoldierObject` for script state 1, Rising Sun tests
 `AsAnimObject`/`AsPlayerObject`. Events are 224 and 225, against Frontline's 231 and 232.
 `Constrain` stays parked at `scratch/par/player/ThrownConstrain_parked.cpp` (reload of the
 reflected normal differs, 176 of 204 instructions aligned).
+
+`CThrownBullet::Constrain` (bounce, friction and the optional keep-speed cheat word at
+`g_cheats` +0x1c, then a clamped time-of-impact position) and `CreateExplosionEffect` are
+reconstructed. `CExplosion` is 0x50 bytes: slot reuse across `CThrownBullet::CommitUpdate`
+fixes it. `CommitUpdate` itself is parked at
+`scratch/par/player/ThrownBulletCommit_parked.cpp`, one instruction out of position.

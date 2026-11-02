@@ -1,6 +1,5 @@
 // AI-assisted reconstruction from GR8E69; see docs/Bullets.md.
 #include "Bullet.h"
-enum EProjectileBulletTypes { ProjectileBulletTypeUnknown = 0 };
 enum EThrownBulletTypes { ThrownBulletTypeUnknown = 0 };
 // The instantiations live in the original's template section; only the property
 // table and the 64-byte extent (the factory's member spacing) are observed.

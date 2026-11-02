@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 846144,
+    "matching_code_bytes": 847760,
     "total_executable_code_bytes": 2492032,
-    "percent": 33.95397811906107,
+    "percent": 34.01882479839745,
     "categories": {
-      "reconstructed_game": 453928,
+      "reconstructed_game": 455544,
       "restored_library": 392216
     },
-    "matching_functions": 4070
+    "matching_functions": 4072
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -777,7 +777,7 @@
     "config/GR8E69/player_weapon_overlays.json": "172965adf4a7a763b5932a9744ff75bbf384ef314e25785dee9d7617044a8d5b",
     "config/GR8E69/player_weapon_selectable.json": "c7e3f09ad1510713bfd88ee468db0fcb4c6ef18b3b89bdb414b32ea863b25668",
     "config/GR8E69/player_weapon_shutdown.json": "f90a42342572d125630e7ac3647193288c13301a5309bcdc49cc350364bc2b60",
-    "config/GR8E69/project.json": "801578d78945e78b91b435f1f6216bc43df7246bff4cb76055aaee1701182025",
+    "config/GR8E69/project.json": "e72134aea066a4b388d79d673b404469dc95db3f05899e083ff89552105a1397",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -1547,7 +1547,9 @@
     "config/GR8E69/thrown_accessors.json": "6b256ab3fbe4b068539a2e125fee54b0d77a57f5580e2c54d92df8ccbddfb6ba",
     "config/GR8E69/thrown_bullet_bounds.json": "dc581b821c584b8e2741553d516bee3f52463f8d4666128867764bf382de9882",
     "config/GR8E69/thrown_bullet_collide.json": "e580e5f9779d0c7377678c091eb819053e18a60b989abd7605ff7c0adc48929b",
+    "config/GR8E69/thrown_bullet_constrain.json": "058fe0cbc463bc1f2c1e7bae2f42cb1bf5ee2f05c0f9962f744f8a9e8720d4db",
     "config/GR8E69/thrown_bullet_destroy.json": "d1c0ca806ccb00ed6867057b337b43ace6c4518ab74bd04aeb61921a849addbb",
+    "config/GR8E69/thrown_bullet_effect.json": "195e61b5eee3843a501c614ebf7d673df4abc41ad9ec82a8eff3e657ac1c653a",
     "config/GR8E69/thrown_bullet_shutdown.json": "c3d43abb73c1422956b35ff77e75515ad8240947f756ab8cace0b64b629d9947",
     "config/GR8E69/thrown_bullet_tail.json": "6e908afa80b8de6275d1d0a34cab023d646c7021f785c26ced75aad24c73cb98",
     "config/GR8E69/thrown_bullet_transition.json": "e44fe702d77971389ceeda6f2de90bfaca152c0afe1ca8b831ed6497259af274",
@@ -1769,12 +1771,12 @@
     "include/game/BPD.h": "ec4a3aceb83f181db2c6adf8ac87137ede2cd6a0e643548159c73a827aadd19e",
     "include/game/BSGameObject.h": "0251918a776754b0d6b3d30b69e61b0d0c8f919721dbd147dbecf710b180a45a",
     "include/game/Box.h": "7dc5f283dbd5d87bd4a8092b24e1b4258d0db77f909d89990c18757f3025d499",
-    "include/game/Bullet.h": "17ff55e0ec123aba1d9c161427ee71a135b4d966d612185ff98c83e9fd8aea41",
+    "include/game/Bullet.h": "8900b75ce39fe8e08cd7d0a3339d69478167df79fc72f7a35eb3aaed6613b3e8",
     "include/game/CDBGeom.h": "52cc6684854d7d274db12c9e545f56e9add679d6133fc2f612c5d9c3f822d29b",
     "include/game/CDBObject.h": "e7e31e8514ea7b42e4d797289f1f68a55eb5cb92c56080f858fad4c09ace3823",
     "include/game/CDBTriangle.h": "35e4a11e314b05883f7524f67caa0ee7c8e8a675ba3dff005134eb43adfa8d44",
     "include/game/CLine2.h": "e92fdbfd47ed264651ab9bbb90557a0461c3f6469267837079a5d514eb583f2c",
-    "include/game/CLine3.h": "c243c3a0e44c43450743a627896dc7789079c2685ef3dac3f7be341d9bd52484",
+    "include/game/CLine3.h": "fa7c0029679942ba7a4d32bcb6eb0f6cf85a8802b2172700d61893b6ad6622e7",
     "include/game/CMatrix.h": "0a1cd7c02e0d72a241d00c861f92cf720b93960f3e96da8dea1f370ee8be27f9",
     "include/game/CQuaternion.h": "8668ceb13489f3ce37788dda5debaa5a7b0dda54f55e588421d3824b05d15726",
     "include/game/CRC.h": "bcd5ed5667f902cc07c69d8d1b40e2e45f1f90b7d665c1ad3063fa61aadebbb6",
@@ -1840,7 +1842,7 @@
     "include/game/FlexPropDatabase.h": "e3bb33faf5cff3877d051efc3335ff33c373c9d228a7afcb8b2c16f4ee97c767",
     "include/game/Fog.h": "30a37f01f3f665d1f9b3b0a5ef81ea098194595159c5ff794797541c6bf325c0",
     "include/game/Frustum.h": "08163678da2f577eb9780b1ddb9612c086d315ade7a94d092f390eee1e97be3f",
-    "include/game/GameSettings.h": "a5ff7b1e6addbf41b77db9e1d1dc187474e7df17ba5f4e4c7c1cc9c13f3eef1e",
+    "include/game/GameSettings.h": "052e40f725ee630fb3c8846350d0e293350e792fa814b52ce3f616a590038a01",
     "include/game/IDestructible.h": "1427a08ba92fefc7fdc63c4ba8fc7aab3ec64bc8d2d1cfb7fe035346b685379f",
     "include/game/IVolume.h": "95911ba145df993a5c74b9b441c050754f2084de085a7d62b324f66e4479f2bc",
     "include/game/LegacyField.h": "95883bc2693fd14b7014d3f1e6a6e514ed5126af239699aa46d05f565bce5afe",
@@ -1857,7 +1859,7 @@
     "include/game/ParticleRecipe.h": "04bba33839dcdae3132d1316e831585288f74ef842a5b01c6f6d6c37929ee61d",
     "include/game/PlacementNew.h": "49819284bb2cc2ffb2039d459ce855bd5a233bcfff0a6412ffe0bda02cd616c5",
     "include/game/PropertyData.h": "952ae5ac78dc17e43053a7b905a8e58499a1faa3c7d0721269329f639095b22a",
-    "include/game/SceneNode.h": "1c103df7617f87c46e5da78e8fba7fa75f7a5b2a949b90aa9c7612a50ab61412",
+    "include/game/SceneNode.h": "a444643b4e6baf38b7ca6c33445362b716947571d440a21f13c7b0917d60f57f",
     "include/game/SceneObjects.h": "8df4010331a94b4756caff1a22687582fcc2137232ed7f50ea17b17b471f1733",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
     "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
@@ -1882,7 +1884,7 @@
     "include/game/Thrown.h": "62c70dfcb9ad0243eba5bdf633073bb2563d3fe2b4da6bdcae42452c547912db",
     "include/game/TriggerObject.h": "73e70d537a184c92ad5f8f0e10b773f5efe3306ce871a82852a3c41398f7418b",
     "include/game/Volume.h": "cda9e7de972fc28d73bf86418423a8b271c864d60bb53d1eba7d42744622db46",
-    "include/game/Weapon.h": "9fb1921b1f68153a8ea23c29ca41ce3bc6c0ee38dce4e556b6baa4611fbf905c",
+    "include/game/Weapon.h": "786b96d7d054b9566512483aaefea2f407404108d253f901fc5b563e63391c00",
     "include/game/WorldObject.h": "33d40de481444cf253796e893094f7f18d404b696b6313740d72fc6d81b021f4",
     "include/game/WorldVolume.h": "9acfaf28c317912de14baef7ca50a3d80175ddc31dcf83cea18c80725e688318",
     "include/game-containers/AlgorithmTypes.h": "a4959e24b9ab8edd66054b63ed6d53516aebc500f71f821e27babbf931b8d51a",
@@ -2107,7 +2109,7 @@
     "src/bpd/patch_records.cpp": "77bf36745231abe23bcb4d7f58e3cfd3ecca5ac1b35883c7169f3e813d12d670",
     "src/bullets/BulletBase.cpp": "de919c365b4a23044f2996c4fa3f3f082f72d669bd28abd699741a58af15b38a",
     "src/bullets/BulletDefaults.cpp": "4a4f7513a432cccdf3ef03fa86ea740e75f99397054dde976b3e6e3050c8a678",
-    "src/bullets/BulletFactory.cpp": "c245dc7f436befed84c9c9ee3f285585914ffc266e3fc537ef3c0d50f7b92fe5",
+    "src/bullets/BulletFactory.cpp": "2d2569b0698d5de36a0b44275d5634237291cb86a630ebd94632c962af36d840",
     "src/bullets/BulletInit.cpp": "511e941347722371a72fcba542f0e0a53d835e8e9fb9371acc6b3ac5b95844fe",
     "src/bullets/BulletWeight.cpp": "9c74f0697e36d9ef28480ed1e200d46083a53d3bc317f77498ea1ad0a0f27899",
     "src/bullets/ExplosionVisit.cpp": "d885166f86453dd580af30fdbccfdfe8ae7c499722d85a161556aa4b50f8cd59",
@@ -2125,7 +2127,9 @@
     "src/bullets/ThrownAccessors.cpp": "75f15567da1e4cd07646edd4c9661481a1e24c371089b7de4ee4e29c48f683cf",
     "src/bullets/ThrownBulletBounds.cpp": "2e2935a983aea60c104ba3d37bc5620f62c2314771911a2d62d8acaeef4af859",
     "src/bullets/ThrownBulletCollide.cpp": "b07f1dda279ed2090ae951ee48f154a6893ac75d68b572c846f1400c9106fbbd",
+    "src/bullets/ThrownBulletConstrain.cpp": "6f550d54346ae0c08763f7d877a22469f732603de26d8a43bc466605df843005",
     "src/bullets/ThrownBulletDestroy.cpp": "e5de8c2c5c794bca8f5f289ee97f2eac6c0aed5df771f8a9479a7dc2e75de95f",
+    "src/bullets/ThrownBulletEffect.cpp": "4fa8ccdead657142a555a43be1175e9228bcc4d06c3c1a85ab5c7c9c13651308",
     "src/bullets/ThrownBulletShutdown.cpp": "1d03e3d10c32e963e9225767a4ea6af01d2fd214f575ee92118aff2cf7fb8d6a",
     "src/bullets/ThrownBulletTail.cpp": "bcbfded10fcbc2a7b1ae061d4c631b45ced03ac57989406e8ceb353ef027335d",
     "src/bullets/ThrownBulletTransition.cpp": "7ca6ac9464f2deab560e133cf2f735971e98b1eacdaf4d5c2574bdebdcc4acd4",
@@ -2134,7 +2138,7 @@
     "src/bullets/ThrownBulletVisible.cpp": "ebdb6bd8da731794cc4b5e205167082fe32fcf6993de7e906eb2426f426f37b0",
     "src/bullets/ThrownCollide.cpp": "583930b608bc9cc214d0211b995d2917319500ccc5a7d66d7149f71217b77b41",
     "src/bullets/ThrownCollisionId.cpp": "c110604bd231f02c32524d8569fa009c16e50951be9c301d6e5a54059414f480",
-    "src/bullets/ThrownCollisionLight.cpp": "773de461b874b6bb1b3a066e0ac5a8124c5df3a0ac5595a58ebb984375882d56",
+    "src/bullets/ThrownCollisionLight.cpp": "03c37b28f7455ec63da8262142335a8ed0fe34f6ca0308d21a5a6e2b8126c768",
     "src/bullets/ThrownSetters.cpp": "53bd8f3d5543f02d514a21a46422d909dc36d86b9f9058bef0b5e99b6b703dd4",
     "src/bullets/ThrownUpdate.cpp": "aff8c3d144bdda27777aaa768f13c97ff87c9afb4e194eb191ab3bd942839a4c",
     "src/camera/axes.cpp": "5f01c8b680d40e8507f99181b64e824f3fd5f74911193154807716a91603286a",
@@ -35675,6 +35679,42 @@
       "discarded_functions": [],
       "object_sha256": "ec577e79d14539733b1d950b2ccbb08c2e01d606fbbe9efa5eca875827f39682",
       "linked_sha256": "cc638b4361768bd3ac12d0ba37eda3fc6780c1f661c13fea07716ad6dea151b7"
+    },
+    {
+      "id": "thrown_bullet_constrain",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 1208,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e8484b62dca4c33133d0d1358a2b45f8a98d69b07dc2cebe08a016f439c40522",
+      "linked_sha256": "9bf0c00573a556e9a3529cea32471088c0e9e739e56a3bfa0287d587390e10e4"
+    },
+    {
+      "id": "thrown_bullet_effect",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 408,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "a0302272fe47cbce397b11f4b9362ed388c1b149a805a37aa84b7bc76fc456c7",
+      "linked_sha256": "39b91933cc708b1fa4a7f806442048743ba5af17a4eaafea21611158fa425143"
     }
   ],
   "code_map": {
@@ -58021,20 +58061,6 @@
             "size": 396,
             "kind": "function",
             "name": "Penetrate__13CThrownBulletRC10CCollision",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80151fa4",
-            "size": 1208,
-            "kind": "function",
-            "name": "Constrain__13CThrownBulletf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80152a5c",
-            "size": 408,
-            "kind": "function",
-            "name": "CreateExplosionEffect__13CThrownBulletRC7CMatrixb",
             "evidence": "adjacent-compiler-markers"
           },
           {

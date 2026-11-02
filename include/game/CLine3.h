@@ -28,6 +28,7 @@ public:
     }
 
     CLine3() {}
+    CLine3(const CVector3 &a, const CVector3 &b) { Set(a, b); }
     CLine3(const CLine3 &o)
         : start(o.start), end(o.end), direction(o.direction), length(o.length), lengthSquared(o.lengthSquared),
           lengthValid(o.lengthValid), lengthSquaredValid(o.lengthSquaredValid) {}
