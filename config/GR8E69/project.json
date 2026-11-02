@@ -1581,7 +1581,9 @@
     "weapon_update.json",
     "projectile_init.json",
     "sound_snddrv_dma1.json",
-    "sound_snddrv_dma2.json"
+    "sound_snddrv_dma2.json",
+    "ea_ipad_vbl.json",
+    "ea_ipad.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

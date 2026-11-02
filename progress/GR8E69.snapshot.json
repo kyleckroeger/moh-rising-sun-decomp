@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 851656,
+    "matching_code_bytes": 852164,
     "total_executable_code_bytes": 2492032,
-    "percent": 34.175163079767835,
+    "percent": 34.19554805074734,
     "categories": {
-      "reconstructed_game": 459440,
+      "reconstructed_game": 459948,
       "restored_library": 392216
     },
-    "matching_functions": 4078
+    "matching_functions": 4081
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -264,6 +264,8 @@
     "config/GR8E69/ea_hlafile.json": "177245a6451643a6ab519ee15b4c344f4656f8a130434b290787558d78a1eb92",
     "config/GR8E69/ea_hlsfile.json": "8f56cc815378079dd1c69ac409956abf8667e6dcc35eeb73d00901ac143bc56f",
     "config/GR8E69/ea_initvblt.json": "aec27a099f5ce34de68ae4012da6f05d5e60073d1bc463e794becc106d0fcb4a",
+    "config/GR8E69/ea_ipad.json": "4a48bb2cf6c769f01d790b8c023bdbd7b99389261c6276ad475c12175ed8f6f3",
+    "config/GR8E69/ea_ipad_vbl.json": "7d6de802ef682882fd356ed8e55b56cdcb87e3eb6a834680c5b8c5a51a87f7a2",
     "config/GR8E69/ea_memalloc.json": "4030127de92d45cef89b8bcbc97b5dce59122c4f49a385ce0d6cf6f3ae6a25f0",
     "config/GR8E69/ea_memblock.json": "d8bcb16d5b7e3784e63c0f2de83e1e3741b9dc84d3673d81e08b98a95d0117a0",
     "config/GR8E69/ea_memclass.json": "8e117c8b801c31ab4ce641234870dbfe51a29f5cf82036b5e9e215b928bd18d4",
@@ -777,7 +779,7 @@
     "config/GR8E69/player_weapon_overlays.json": "172965adf4a7a763b5932a9744ff75bbf384ef314e25785dee9d7617044a8d5b",
     "config/GR8E69/player_weapon_selectable.json": "c7e3f09ad1510713bfd88ee468db0fcb4c6ef18b3b89bdb414b32ea863b25668",
     "config/GR8E69/player_weapon_shutdown.json": "f90a42342572d125630e7ac3647193288c13301a5309bcdc49cc350364bc2b60",
-    "config/GR8E69/project.json": "03c7e464c55e8149f7c02507d7e98c63eb2794f3007b7d1ad92c75532652c964",
+    "config/GR8E69/project.json": "a38e684c4c1b3150f811a014e2157245cf2021b29fe9a4cc4cc909b41c421f3e",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -2294,6 +2296,8 @@
     "src/ea/hlafile.cpp": "8f8c533e06f84b1d61f779aac275605bd7c40092589c949b39d0e9f15df74c72",
     "src/ea/hlsfile.cpp": "41342545a03c92e31fbf7cf30fb392194f2274d76ba1f85f91cbfa2a2b396b05",
     "src/ea/initvblt.cpp": "0e995f40d8d694cb7b05a068499bd563628ea40041658c6c8a9ec411b17deec3",
+    "src/ea/ipad.cpp": "cebc1f7c71b056b438b54c4f9ce54f851bc81bcc9cdaba558b0628cd60d196aa",
+    "src/ea/ipad_vbl.cpp": "66c3f6f31d5eb828019a9d019df2d806941430558437500d7702bf522559ff84",
     "src/ea/memalloc.cpp": "1fb8d6c6965d9916235e6ee35c94a13b67f5d332f5f5adbf44ff3c8285f12e21",
     "src/ea/memblock.cpp": "9c22c07fb0234fb28e395fc44ebaa5d07b2ae93122bdbfb90b8e1b0da347e3ef",
     "src/ea/memclass.cpp": "488ac4376ea8dbe6b4f8ad5c6bfd5f22b59b9b927a24d66d59e701d4cf5ec0c9",
@@ -35797,6 +35801,44 @@
       "discarded_functions": [],
       "object_sha256": "bc5dfd5eaa8478408f9221cc96504f501f58cc320bc284890ae923ed4b80693c",
       "linked_sha256": "c6867bc8b5e3242b4def2a80ad435002c240fb7b3bb8632fd61df8ab91050349"
+    },
+    {
+      "id": "ea_ipad_vbl",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 288,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "209878f6c8d4d852142d101f4432943fbda80e16c7a89cfcbf35d20f26f3c016",
+      "linked_sha256": "3cf382130504b9c2b10cf07448ee2b9021da4d8d602cd0821ace148c031c8ac2"
+    },
+    {
+      "id": "ea_ipad",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 220,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "895afdd03b9ffd2e04118f981f0f9305059db3e26c9627b4882f4201f3456b9d",
+      "linked_sha256": "cfeb17cf8406abc41683236a0aacb335cd1d682c0169eff91b99ad2bb608a1d9"
     }
   ],
   "code_map": {
@@ -73941,31 +73983,10 @@
         "file_name": "ipad.cpp",
         "ranges": [
           {
-            "address": "0x80216f48",
-            "size": 116,
-            "kind": "function",
-            "name": "iPADVBLUpdate__Fv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80216fbc",
-            "size": 172,
-            "kind": "function",
-            "name": "iPAD_init__Fv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80217068",
             "size": 156,
             "kind": "function",
             "name": "iPAD_restore__Fv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80217104",
-            "size": 220,
-            "kind": "function",
-            "name": "iPAD_update__Fv",
             "evidence": "adjacent-compiler-markers"
           }
         ],
