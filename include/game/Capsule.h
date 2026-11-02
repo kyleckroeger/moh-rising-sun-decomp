@@ -7,6 +7,7 @@
 
 class CVolCapsule : public IVolume {
   public:
+    CVolCapsule();
     virtual ~CVolCapsule();
     virtual IVolume *Create() const;
     virtual void TransformedCopy(const IVolume &, const CMatrix &);
@@ -31,5 +32,7 @@ class CVolCapsule : public IVolume {
     float radius;
     CLine3 line;
 };
+
+inline CVolCapsule::CVolCapsule() {}
 
 #endif

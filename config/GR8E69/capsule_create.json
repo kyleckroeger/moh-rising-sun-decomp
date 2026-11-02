@@ -1,0 +1,44 @@
+{
+  "id": "capsule_create",
+  "source": "src/geometry/capsule_create.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801423d0",
+      "size": 76
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a8590",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "Create__C11CVolCapsule",
+      "address": "0x801423d0",
+      "size": 76,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__builtin_new": "0x801a8910",
+    "_vt.11CVolCapsule": "0x802e9940"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

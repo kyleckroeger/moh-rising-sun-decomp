@@ -1455,7 +1455,9 @@
     "sphere_test_plane.json",
     "sphere_extents.json",
     "collisionvolume_ctor.json",
-    "collisionvolume.json"
+    "collisionvolume.json",
+    "capsule_create.json",
+    "cdbgeom_triangle_animated.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
