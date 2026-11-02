@@ -54,7 +54,7 @@ class CSprite {
     int field_20; // Cleared by BIFunc_UseBinoculars.
 };
 // Method-only view of the multiplayer player body (CPlayerObject +0x1144).
-namespace EALA { class Character { public: class Skeleton { public: int FindJoint(const char *) const; }; class AimModifier { public: void SetEnabled(bool); }; }; }
+namespace EALA { namespace Character { class Skeleton { public: int FindJoint(const char *) const; }; class AimModifier { public: void SetEnabled(bool); }; } }
 class CVolBox;
 class CAnimatedPlayer {
   public:

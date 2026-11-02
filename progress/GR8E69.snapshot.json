@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 813492,
+    "matching_code_bytes": 816260,
     "total_executable_code_bytes": 2492032,
-    "percent": 32.643722070984644,
+    "percent": 32.75479608608557,
     "categories": {
-      "reconstructed_game": 421276,
+      "reconstructed_game": 424044,
       "restored_library": 392216
     },
-    "matching_functions": 3785
+    "matching_functions": 3857
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -750,7 +750,7 @@
     "config/GR8E69/player_weapon_overlays.json": "172965adf4a7a763b5932a9744ff75bbf384ef314e25785dee9d7617044a8d5b",
     "config/GR8E69/player_weapon_selectable.json": "c7e3f09ad1510713bfd88ee468db0fcb4c6ef18b3b89bdb414b32ea863b25668",
     "config/GR8E69/player_weapon_shutdown.json": "f90a42342572d125630e7ac3647193288c13301a5309bcdc49cc350364bc2b60",
-    "config/GR8E69/project.json": "1ecbe18f9c0139305d8ab48a4fc258d5b34e40adfbfcf80d075a8404089cd417",
+    "config/GR8E69/project.json": "491c3d4cb23bebad9bf0a8c14c161fdc4eb11d04a18851cc5fbf74a66958b809",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -764,6 +764,16 @@
     "config/GR8E69/quaternion_get_matrix.json": "c63fc72dbed2a9d3c604effaada46ecb10afde2020eaadd56e4e7f8ccf114e82",
     "config/GR8E69/quaternion_normalize.json": "d78a8760467d1cff8299eecd55985b34b9908086e277c7814083cb4c65a64fc4",
     "config/GR8E69/quaternion_slerp.json": "1a0f13b162d329331ef995f603d989e695af05bdda0fce3a52b322131c771a16",
+    "config/GR8E69/scene_AnimObjectAccess.json": "0f9a1fa701d92f4e3b1396be3b5c06bb6527ee24c437760e2d4da165aded0212",
+    "config/GR8E69/scene_AnimObjectCallback.json": "9bc95f1c9687004bcaead56cac59925917611ae4d4318f079b4d3cef3e7a4f64",
+    "config/GR8E69/scene_AnimObjectCollisionBind.json": "a47c25fd019ffe7a7d0d67c79cc9eebb0a9e1776725b99def2b167777c23a2fb",
+    "config/GR8E69/scene_AnimObjectCycleEnd.json": "de21164234ef41d19ebfd14348ab4ad15dc9c9c6cc2e0fb7ba806289059fafec",
+    "config/GR8E69/scene_AnimObjectDefaultsA.json": "94028fbc5daad08a0de48b867854ff717663b96e45ba13347e46d4b94b577ec9",
+    "config/GR8E69/scene_AnimObjectDefaultsB.json": "77dd0ea010f746fb41d983350dadae89ff819deb6baa1b0edb50cb0871cdc52e",
+    "config/GR8E69/scene_AnimObjectForce.json": "1a9e64ebdc8a1028c15f728a20fb140adf6988066618e311b03759a147d81e3b",
+    "config/GR8E69/scene_AnimObjectReset.json": "24f119712f4cf705df5e73088deeb9da603831cff90ee86502a1f52befcf519b",
+    "config/GR8E69/scene_AnimObjectState.json": "67c136faf4d568c4531a9fe93c4fb4b7d7777ebdfc4b406ba67ba83ac8c38dcb",
+    "config/GR8E69/scene_AnimObjectVolumes.json": "10ad011f639b6f24d962237099036c9fa0f26f0058cb9a11c7e7dcf07ad8b17b",
     "config/GR8E69/scene_AttachableObjectA.json": "c3e2b9a32e7040c1deeb440a9c3123b41398d074fe7a93c4f5fb897de385b2c1",
     "config/GR8E69/scene_AttachableObjectB.json": "06c8e5cb4b989be36b3bc118de23ce315684abe48f28b0a7168d76747810489f",
     "config/GR8E69/scene_AttachableObjectC.json": "921a6e2635ca182465002db6373bc5f1ef5c82fb774db5befb51de4171c030f3",
@@ -1683,7 +1693,7 @@
     "include/game/CSGVolume.h": "4e1b74888a25e46d47449afbc3081c2474e8104e59cfd1ee11c1e5e6b440cb23",
     "include/game/CVector3.h": "0c436c62dba8e3a7f44ca5e6eea6de50ff97e88e4e53545873d5ecca9d648aae",
     "include/game/Camera.h": "c044f907aca20f15af89cc5ba3657b51664d7f19a9b75c1d9b0fd185b7ee0900",
-    "include/game/CameraShake.h": "f2b90aa8b13a124d5cf265608c971b2a6384fe7e518b737dc06eb35b2394481b",
+    "include/game/CameraShake.h": "0865ff6929c0498fd7ac4880ceb823495f777ebf761ebc8154af40a337906d7f",
     "include/game/Capsule.h": "332dd06329ac7dc3ac5fc01793549a41e2defbe70298018accd2ce79c9e3ce3b",
     "include/game/CollisionVolume.h": "26ba5d9a9865a0185f0e87db21b13faf3214b7e213201e825181412f0f9a5b7c",
     "include/game/DestructorQueue.h": "434ec17ba96007c8368db0dc62c9454d1650bc2c4d5615a13aad40969412bda8",
@@ -1758,7 +1768,7 @@
     "include/game/PlacementNew.h": "49819284bb2cc2ffb2039d459ce855bd5a233bcfff0a6412ffe0bda02cd616c5",
     "include/game/PropertyData.h": "952ae5ac78dc17e43053a7b905a8e58499a1faa3c7d0721269329f639095b22a",
     "include/game/SceneNode.h": "cff44a62e5611c6c0ebedc9dc4e29828ee12f057f576adf5be454f791a3bf497",
-    "include/game/SceneObjects.h": "b1263a83b8ecc09de7f39543c643bd3b53185a224b6310c5da49dd93cdef03ba",
+    "include/game/SceneObjects.h": "3c708c47873f43c6923ad493512c656754731c8dee9987d518bece07c644098b",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
     "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
     "include/game/ScriptMachine.h": "ca23b124331e6be9f43fc9e17237cbdb7851ff2941192e76b4aa3f8086db44bb",
@@ -2754,6 +2764,16 @@
     "src/quaternion/get_matrix.cpp": "833c4f1e128f98fd799af7974b65805cd409a2be36d0537e5915f5e23a9b65c2",
     "src/quaternion/normalize.cpp": "6a6d8d3dc0aec56da5bc7e6deea018e478cff41b6aa3ce416ae918e002dcd69b",
     "src/quaternion/slerp.cpp": "5d23dc039a6a7d8246e63aee872ffea35f85911f9e34b3017c97d647bc091bfd",
+    "src/scene/AnimObjectAccess.cpp": "8251933c1dc90e1e9d521d3fd184b7e8ec3817565251a66f32c32086d58eff09",
+    "src/scene/AnimObjectCallback.cpp": "3a3f77205332fe0ede0140110e49cd2a6b7b656b04686d101f71c7d4b2ee3177",
+    "src/scene/AnimObjectCollisionBind.cpp": "fe5a5339d187aacad988f655cd0cf937f586ba767738e11f867d088a23ddfa6d",
+    "src/scene/AnimObjectCycleEnd.cpp": "2fde5ce0cbec9cf661a197567bd0403f1bddfe1b4a467b0d249af85ea2a79947",
+    "src/scene/AnimObjectDefaultsA.cpp": "70b9d9d3116259dc3d8ed15b628adde918916eeba1421b331843bfb44d33da04",
+    "src/scene/AnimObjectDefaultsB.cpp": "aea246305b62cbb2050b679306d2880df0b9a6f7fa8cf8f1693a166adf498b3f",
+    "src/scene/AnimObjectForce.cpp": "aa148e8e2121739e960e79d4fc7e24eaee557051cb2d4e103c9b6f67b868d94e",
+    "src/scene/AnimObjectReset.cpp": "ae277dca9c8fc3123ae671ae8e92df23633c9edcd0316726eac43379e5785c84",
+    "src/scene/AnimObjectState.cpp": "9b9246313e1b7874d5af7bb985e37b0e38a46163bfb74378c643a5e00a3a77d3",
+    "src/scene/AnimObjectVolumes.cpp": "da4b685af96884e598375982a044940b87f663edd6143d787a7beae2fc860d4e",
     "src/scene/AttachableObjectA.cpp": "72deef8d7c8dd87b1804ecf6d4d562606b86f6f612e61869d74fd1448aea66d4",
     "src/scene/AttachableObjectB.cpp": "96f9d0b60a7cbe2777084971aa74470168d825cde7723184d83d4960d7176d39",
     "src/scene/AttachableObjectC.cpp": "4ba057f86eeeead5950370eb21bf7605d1bde0ff73ccc6b263b2d597cd40ea3f",
@@ -33678,6 +33698,186 @@
       "discarded_functions": [],
       "object_sha256": "93157377accd0c680d8cfce44de3d809c291b0605c8ecf71cd8a37296535024c",
       "linked_sha256": "444c6c080d53c1f423b7a0b893f35c4f83a7d5f1f2625b2a1dcedefe405772af"
+    },
+    {
+      "id": "scene_AnimObjectCycleEnd",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 72,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "32dcfbe03a097fd2b1d58342f8596425c11b9d1bc5e9df59253998fbdafad171",
+      "linked_sha256": "8dbbe37974ebeeba1a0040c74adf8290c5dd291b35c9303e8312dfc93b71235f"
+    },
+    {
+      "id": "scene_AnimObjectCallback",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 208,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "ed969fadccd603f5fc777e16bf74020698c11871c05b02662665f530bd0babe8",
+      "linked_sha256": "e6cb9c770f5deb5968110e21856c28a3e1900e119a1c4d027930d012580cddd3"
+    },
+    {
+      "id": "scene_AnimObjectCollisionBind",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 44,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "67a3d00cde2528d09b9ac83c9baa493375d26b2492718d4f45ceb4084838cb89",
+      "linked_sha256": "0ab51fb35595d45b52c5f39fa07bffc392eb9ca79250e452397c8665e288955e"
+    },
+    {
+      "id": "scene_AnimObjectState",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 256,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "60708f0f2db808ca186115ee66bd1835c6a4a3742f55880e8bc4ff102fe29177",
+      "linked_sha256": "c481877b95b72b44b24590346efab1603dfe22c829254df977abd27ac7e88f7d"
+    },
+    {
+      "id": "scene_AnimObjectVolumes",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 296,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e78a638817308c0e1b5702ab5414e8d3a3e4fe908d7db608f0b0349aae7bdc4b",
+      "linked_sha256": "1125435f5b178152a23d0d2f4e8c16eba22ea963cdb62f299a36a046306e83e9"
+    },
+    {
+      "id": "scene_AnimObjectForce",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 508,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "43d7a700831fb42c1f2a98359c2abbbb8666b58fb1237526453ffb0abb8c1637",
+      "linked_sha256": "012fdea67e4a472e81dbbd13f9a84c62cb7dd309063386197eea448762a8cc93"
+    },
+    {
+      "id": "scene_AnimObjectReset",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 160,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "ae22fe42eb79672ccbd06f397d1c7a3c544d624cd8bf7f8a82f6a63f59eefab7",
+      "linked_sha256": "655e3b7ccdab7080d97865bcc07949d8ac34a7c85f8046c4bb573fe55e052c54"
+    },
+    {
+      "id": "scene_AnimObjectAccess",
+      "category": "reconstructed_game",
+      "functions": 19,
+      "code_bytes": 1012,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "829e48eee08114898861e6643f85fa420959eca37db5eaed66dab27e53808037",
+      "linked_sha256": "e47e7c74f37688e220544e4501898bfdbb4eda60fc3784314ca8569b9f2fc6c4"
+    },
+    {
+      "id": "scene_AnimObjectDefaultsA",
+      "category": "reconstructed_game",
+      "functions": 9,
+      "code_bytes": 92,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "62effeeffd537193ef1798bc5ea3a13a4ceef8f41ceb5ad771145ba5d2bb273f",
+      "linked_sha256": "4915145cf9c0a9665794945c6d2e17945590ed60ece6c35b712a723e5f9de0bd"
+    },
+    {
+      "id": "scene_AnimObjectDefaultsB",
+      "category": "reconstructed_game",
+      "functions": 20,
+      "code_bytes": 120,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e83017549fd2c4b4b3b160dc45165acd6c72cf1533ad7e3f2f91d75649aeb669",
+      "linked_sha256": "77d35e1ba37af0cfdec2dc775a546f4c250738b237371b7e9fdac08d7989e3b9"
     }
   ],
   "code_map": {
@@ -44914,45 +45114,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800a2794",
-            "size": 72,
-            "kind": "function",
-            "name": "OnCycleEnd__11CAnimObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800a27dc",
             "size": 356,
             "kind": "function",
             "name": "MoveTo__11CAnimObjectRC8CVector3f",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a2940",
-            "size": 32,
-            "kind": "function",
-            "name": "MoveTo__11CAnimObjectRC6COORD3f",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a2960",
-            "size": 20,
-            "kind": "function",
-            "name": "SetAnimCallback__11CAnimObject13EAnimCallback",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a2974",
-            "size": 52,
-            "kind": "function",
-            "name": "StartAnimCallback__11CAnimObjectRCf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a29a8",
-            "size": 104,
-            "kind": "function",
-            "name": "UpdateAnimCallback__11CAnimObjectRCf",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -44998,38 +45163,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800a3220",
-            "size": 44,
-            "kind": "function",
-            "name": "BindLocationCollision__11CAnimObjectPQ34EALA9Character13CollisionData",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800a324c",
             "size": 220,
             "kind": "function",
             "name": "_._11CAnimObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a3328",
-            "size": 88,
-            "kind": "function",
-            "name": "CleanUp__11CAnimObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a3380",
-            "size": 100,
-            "kind": "function",
-            "name": "SetAnimationState__11CAnimObjectPCci",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a33e4",
-            "size": 68,
-            "kind": "function",
-            "name": "SetAnimationState__11CAnimObjectPCcPQ24EALA4Task",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -45065,41 +45202,6 @@
             "size": 172,
             "kind": "function",
             "name": "DrawMesh__11CAnimObjectR12CDrawContextPPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a3d78",
-            "size": 52,
-            "kind": "function",
-            "name": "SetLocalBoundingVolume__11CAnimObjectQ210ISceneNode11EVolumeTypeP7IVolume",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a3dac",
-            "size": 52,
-            "kind": "function",
-            "name": "SetWorldBoundingVolume__11CAnimObjectQ210ISceneNode11EVolumeTypeP7IVolume",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a3de0",
-            "size": 68,
-            "kind": "function",
-            "name": "GetLocalBoundingVolume__C11CAnimObjectQ210ISceneNode11EVolumeType",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a3e24",
-            "size": 68,
-            "kind": "function",
-            "name": "GetWorldBoundingVolume__C11CAnimObjectQ210ISceneNode11EVolumeType",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a3e68",
-            "size": 56,
-            "kind": "function",
-            "name": "TriggerScriptEvent__11CAnimObjectiPvb",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -45145,41 +45247,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800a4cac",
-            "size": 32,
-            "kind": "function",
-            "name": "Halt__11CAnimObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a4ccc",
-            "size": 284,
-            "kind": "function",
-            "name": "ApplyForceTo__11CAnimObjectRC8CVector3f",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a4de8",
-            "size": 40,
-            "kind": "function",
-            "name": "BeginHurtling__11CAnimObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a4e10",
-            "size": 108,
-            "kind": "function",
-            "name": "GetTMLocalToWorld__C11CAnimObjectRQ24EAGL9Transform",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a4e7c",
-            "size": 44,
-            "kind": "function",
-            "name": "GetTMLocalToWorld__C11CAnimObjectR7CMatrix",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800a4ea8",
             "size": 400,
             "kind": "function",
@@ -45187,178 +45254,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800a5038",
-            "size": 8,
-            "kind": "function",
-            "name": "IsDrawEnabled__C11CAnimObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5040",
-            "size": 8,
-            "kind": "function",
-            "name": "GetCollisionId__C11CAnimObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5048",
-            "size": 72,
-            "kind": "function",
-            "name": "Reset__11CAnimObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5090",
-            "size": 36,
-            "kind": "function",
-            "name": "SetPosition__11CAnimObjectRC8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a50b4",
-            "size": 36,
-            "kind": "function",
-            "name": "Move__11CAnimObjectRC8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800a50d8",
             "size": 356,
             "kind": "function",
             "name": "Yaw__11CAnimObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a523c",
-            "size": 8,
-            "kind": "function",
-            "name": "GetYaw__C11CAnimObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5244",
-            "size": 92,
-            "kind": "function",
-            "name": "SetYaw__11CAnimObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a52a0",
-            "size": 36,
-            "kind": "function",
-            "name": "Orthonormalize__11CAnimObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a52c4",
-            "size": 80,
-            "kind": "function",
-            "name": "GetPosition__C11CAnimObjectR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5314",
-            "size": 80,
-            "kind": "function",
-            "name": "GetRightward__C11CAnimObjectR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5364",
-            "size": 80,
-            "kind": "function",
-            "name": "GetForward__C11CAnimObjectR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a53b4",
-            "size": 80,
-            "kind": "function",
-            "name": "GetUpward__C11CAnimObjectR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5404",
-            "size": 36,
-            "kind": "function",
-            "name": "EnterLightVolume__11CAnimObjectP14BPDLightVolume",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5428",
-            "size": 36,
-            "kind": "function",
-            "name": "ExitLightVolume__11CAnimObjectP14BPDLightVolume",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a544c",
-            "size": 36,
-            "kind": "function",
-            "name": "GetLightVolume__11CAnimObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5470",
-            "size": 36,
-            "kind": "function",
-            "name": "SetTMLocalToWorld__11CAnimObjectRC7CMatrix",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5494",
-            "size": 56,
-            "kind": "function",
-            "name": "AttachToLocation__11CAnimObjectRC7CMatrixf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a54cc",
-            "size": 28,
-            "kind": "function",
-            "name": "SetAttached__11CAnimObjectb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a54e8",
-            "size": 104,
-            "kind": "function",
-            "name": "GetPosition__11CAnimObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5550",
-            "size": 32,
-            "kind": "function",
-            "name": "GetRotation__11CAnimObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5570",
-            "size": 52,
-            "kind": "function",
-            "name": "SetPosition__11CAnimObjectRC6COORD3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a55a4",
-            "size": 36,
-            "kind": "function",
-            "name": "SetRotation__11CAnimObjectRCf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a55c8",
-            "size": 60,
-            "kind": "function",
-            "name": "MarkForDestruction__11CAnimObjecti",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5604",
-            "size": 44,
-            "kind": "function",
-            "name": "Destroy__11CAnimObject",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -45387,209 +45286,6 @@
             "size": 132,
             "kind": "function",
             "name": "StartAnimAdjust__11CAnimObjectRC8CVector3fb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5db4",
-            "size": 4,
-            "kind": "function",
-            "name": "LineAlmostCollided__C11CAnimObjectP7CBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5db8",
-            "size": 4,
-            "kind": "function",
-            "name": "Shutdown__11CAnimObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5dbc",
-            "size": 8,
-            "kind": "function",
-            "name": "SetScript__11CAnimObjectP8BSObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5dc4",
-            "size": 4,
-            "kind": "function",
-            "name": "UpdateLocalBoundingVolume__11CAnimObjectQ210ISceneNode11EVolumeTypeRC8CVector3T2",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5dc8",
-            "size": 8,
-            "kind": "function",
-            "name": "SetCollisionId__11CAnimObject7EClsnId",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5dd0",
-            "size": 4,
-            "kind": "function",
-            "name": "AsAnimObject__11CAnimObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5dd4",
-            "size": 4,
-            "kind": "function",
-            "name": "AsAnimObject__C11CAnimObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5dd8",
-            "size": 8,
-            "kind": "function",
-            "name": "GetScriptObject__C11CAnimObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5de0",
-            "size": 48,
-            "kind": "function",
-            "name": "GetWorldLinearVelocity__C11CAnimObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5e10",
-            "size": 8,
-            "kind": "function",
-            "name": "SetLightVolumeTransitionDuration__11CAnimObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5e18",
-            "size": 8,
-            "kind": "function",
-            "name": "AttachObject__11CAnimObjectP13CStaticObjectPci",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5e20",
-            "size": 8,
-            "kind": "function",
-            "name": "DetachObject__11CAnimObjectPc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5e28",
-            "size": 8,
-            "kind": "function",
-            "name": "GetAttachPointMatrix__11CAnimObjectPcP7CMatrix",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5e30",
-            "size": 4,
-            "kind": "function",
-            "name": "OnSwordDraw__11CAnimObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5e34",
-            "size": 4,
-            "kind": "function",
-            "name": "OnSwordSheath__11CAnimObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5e38",
-            "size": 4,
-            "kind": "function",
-            "name": "AttachFloatingBone__11CAnimObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5e3c",
-            "size": 4,
-            "kind": "function",
-            "name": "DetachFloatingBone__11CAnimObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5e40",
-            "size": 12,
-            "kind": "function",
-            "name": "GetValue__11CAnimObjectPCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5e4c",
-            "size": 8,
-            "kind": "function",
-            "name": "EvaluateScript__11CAnimObjectPCcUiT1",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5e54",
-            "size": 12,
-            "kind": "function",
-            "name": "FadeValue__C11CAnimObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5e60",
-            "size": 4,
-            "kind": "function",
-            "name": "FadeOut__11CAnimObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5e64",
-            "size": 4,
-            "kind": "function",
-            "name": "FadeIn__11CAnimObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5e68",
-            "size": 4,
-            "kind": "function",
-            "name": "PreTransform__11CAnimObjectRC7CMatrix",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5e6c",
-            "size": 4,
-            "kind": "function",
-            "name": "Transform__11CAnimObjectRC7CMatrix",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5e70",
-            "size": 4,
-            "kind": "function",
-            "name": "Rotate__11CAnimObjectRC8CVector3f",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5e74",
-            "size": 4,
-            "kind": "function",
-            "name": "Pitch__11CAnimObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5e78",
-            "size": 4,
-            "kind": "function",
-            "name": "Roll__11CAnimObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5e7c",
-            "size": 4,
-            "kind": "function",
-            "name": "SetBasis__11CAnimObjectRC8CVector3N21",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a5e80",
-            "size": 8,
-            "kind": "function",
-            "name": "GetSkeleton__11CAnimObject",
             "evidence": "adjacent-compiler-markers"
           }
         ],

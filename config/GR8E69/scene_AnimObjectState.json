@@ -1,0 +1,58 @@
+{
+  "id": "scene_AnimObjectState",
+  "source": "src/scene/AnimObjectState.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800a3328",
+      "size": 256
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029e8bc",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "CleanUp__11CAnimObject",
+      "address": "0x800a3328",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "SetAnimationState__11CAnimObjectPCci",
+      "address": "0x800a3380",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "SetAnimationState__11CAnimObjectPCcPQ24EALA4Task",
+      "address": "0x800a33e4",
+      "size": 68,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FreeSphereVolume__FPv": "0x8012b698",
+    "SetState__Q34EALA9Character13ChoreographerPCcPQ24EALA4TaskfPCQ44EALA9Character8Skeleton9Partition": "0x8008055c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "anim_obj.cpp",
+  "original_file_index": 831
+}

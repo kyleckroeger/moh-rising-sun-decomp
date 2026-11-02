@@ -1478,7 +1478,17 @@
     "scene_StaticObjectTailA.json",
     "scene_StaticObjectTailB.json",
     "explosion_visit.json",
-    "projectile_update.json"
+    "projectile_update.json",
+    "scene_AnimObjectCycleEnd.json",
+    "scene_AnimObjectCallback.json",
+    "scene_AnimObjectCollisionBind.json",
+    "scene_AnimObjectState.json",
+    "scene_AnimObjectVolumes.json",
+    "scene_AnimObjectForce.json",
+    "scene_AnimObjectReset.json",
+    "scene_AnimObjectAccess.json",
+    "scene_AnimObjectDefaultsA.json",
+    "scene_AnimObjectDefaultsB.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

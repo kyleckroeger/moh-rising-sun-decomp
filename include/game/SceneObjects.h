@@ -210,16 +210,140 @@ class CStaticObject {
     CObjectFadeManager fade; // +0x2dc; extent unknown.
 };
 
+struct COORD3;
+namespace EAGL { class Transform; }
+namespace EALA {
+class Task;
+namespace Character { struct CollisionData; }
+}
+class CAnimatedVolume;
+enum EAnimCallback { AnimCallbackUnknown = 0 };
 class CAnimObject {
   public:
     void Init();
     void CommitUpdate();
     void UpdateAnimation(float);
-    unsigned char unknown_0[0x234];
+    void SetLocalBoundingVolume(ISceneNode::EVolumeType, IVolume *);
+    void SetWorldBoundingVolume(ISceneNode::EVolumeType, IVolume *);
+    IVolume *GetLocalBoundingVolume(ISceneNode::EVolumeType) const;
+    IVolume *GetWorldBoundingVolume(ISceneNode::EVolumeType) const;
+    void TriggerScriptEvent(int, void *, bool);
+    unsigned int IsDrawEnabled() const;
+    EClsnId GetCollisionId() const;
+    void Reset();
+    void SetPosition(const CVector3 &);
+    void Move(const CVector3 &);
+    float GetYaw() const;
+    void SetYaw(float);
+    void Orthonormalize();
+    void GetPosition(CVector3 &) const;
+    void GetRightward(CVector3 &) const;
+    void GetForward(CVector3 &) const;
+    void GetUpward(CVector3 &) const;
+    void EnterLightVolume(BPDLightVolume *);
+    void ExitLightVolume(BPDLightVolume *);
+    BPDLightVolume *GetLightVolume();
+    void SetTMLocalToWorld(const CMatrix &);
+    void GetTMLocalToWorld(CMatrix &) const;
+    void AttachToLocation(const CMatrix &, float);
+    COORD3 GetPosition();
+    float GetRotation();
+    void SetPosition(const COORD3 &);
+    void SetRotation(const float &);
+    void MarkForDestruction(int);
+    void Destroy();
+    void SetScript(BSObject *);
+    void SetCollisionId(EClsnId);
+    CAnimObject *AsAnimObject();
+    const CAnimObject *AsAnimObject() const;
+    BSObject *GetScriptObject() const;
+    CVector3 GetWorldLinearVelocity() const;
+    void Halt();
+    void SetAnimCallback(EAnimCallback);
+    void StartAnimCallback(const float &);
+    void UpdateAnimCallback(const float &);
+    void Pathing_cb(const float &);
+    void PathingFacing_cb(const float &);
+    void Adjusting_cb(const float &);
+    void TrackTarget_cb(const float &);
+    void OnCycleEnd();
+    void MoveTo(const CVector3 &, float);
+    void MoveTo(const COORD3 &, float);
+    void CleanUp();
+    void BindLocationCollision(EALA::Character::CollisionData *);
+    int SetAnimationState(const char *, int);
+    int SetAnimationState(const char *, EALA::Task *);
+    void GetTMLocalToWorld(EAGL::Transform &) const;
+    void ApplyForceTo(const CVector3 &, float);
+    void BeginHurtling();
+    void SetLightVolumeTransitionDuration(float);
+    void LineAlmostCollided(CBullet *) const; // An empty body returning nothing.
+    void *GetSkeleton();
+    void Shutdown();
+    void UpdateLocalBoundingVolume(ISceneNode::EVolumeType, const CVector3 &, const CVector3 &);
+    int AttachObject(CStaticObject *, char *, int);
+    int DetachObject(char *);
+    int GetAttachPointMatrix(char *, CMatrix *);
+    void OnSwordDraw();
+    void OnSwordSheath();
+    void AttachFloatingBone();
+    void DetachFloatingBone();
+    float GetValue(const char *);
+    int EvaluateScript(const char *, unsigned int, const char *);
+    float FadeValue() const;
+    void FadeOut(float);
+    void FadeIn(float);
+    void PreTransform(const CMatrix &);
+    void Transform(const CMatrix &);
+    void Rotate(const CVector3 &, float);
+    void Pitch(float);
+    void Roll(float);
+    void SetBasis(const CVector3 &, const CVector3 &, const CVector3 &);
+    unsigned char unknown_0[0x54];
+    unsigned char choreographer[0x88 - 0x54]; // +0x54; EALA::Character::Choreographer methods run on it. Extent unknown.
+    unsigned char skeleton[0xd0 - 0x88]; // +0x88; GetSkeleton returns this address. Extent unknown.
+    CMatrix transform;   // +0xd0
+    IVolume *localVolumeType3; // +0x110
+    IVolume *localVolumeType0; // +0x114
+    IVolume *worldVolumeType3; // +0x118
+    IVolume *worldVolumeType0; // +0x11c
+    BSObject *script;    // +0x120
+    int collisionId;     // +0x124
+    CAnimatedVolume *animatedVolume; // +0x128
+    unsigned char unknown_12c[0x158 - 0x12c];
+    float yaw;           // +0x158
+    int animCallback;    // +0x15c
+    int pendingCallback; // +0x160
+    float callbackStart; // +0x164
+    float callbackLast;  // +0x168
+    unsigned char unknown_16c[0x18c - 0x16c];
+    const char *stateName; // +0x18c
+    unsigned char unknown_190[0x1a0 - 0x190];
+    CVector3 velocity;   // +0x1a0
+    unsigned char unknown_1b0[0x1d0 - 0x1b0];
+    float yawCopy;       // +0x1d0; SetYaw keeps it equal to yaw.
+    float yawRate;       // +0x1d4; cleared by Halt. Descriptive.
+    unsigned char unknown_1d8[0x220 - 0x1d8];
+    int hurtling;        // +0x220; meaning inferred.
+    unsigned char unknown_224[0x228 - 0x224];
+    int hurtlingState;   // +0x228; meaning inferred.
+    unsigned char unknown_22c[0x234 - 0x22c];
     int allowAnimationTranslation; // +0x234; set by BIFunc_SetAllowAnimationTranslation.
-    unsigned char unknown_238[0x294 - 0x238];
+    int attached;        // +0x238
+    int attachedToLocation; // +0x23c
+    float attachBlend;   // +0x240
+    unsigned char unknown_244[0x250 - 0x244];
+    CMatrix attachLocation; // +0x250
+    unsigned char unknown_290[0x294 - 0x290];
     int gravity;    // +0x294
     int groundCheck; // +0x298
+    unsigned char unknown_29c[0x2a0 - 0x29c];
+    int hurtlingBlocked; // +0x2a0; BeginHurtling does nothing while set. Descriptive.
+    CLightVolumeManager lightVolumes; // +0x2a4
+    unsigned char unknown_2c0[0x2c4 - 0x2c0];
+    int stateTask;       // +0x2c4; passed to SetState by address. Type unknown.
+    int stateValue;      // +0x2c8
+    CAnimObject *stateOwner; // +0x2cc
     void SetAttached(bool);
     void StartAnimAdjust(const CVector3 &, float, bool);
 };
@@ -384,7 +508,6 @@ class MotionBlur {
 // scene-node pointers they already hold, which point at the same object.
 namespace EALA { class Task; }
 namespace EAGL { class Transform; }
-enum EAnimCallback { AnimCallbackUnknown = 0 };
 class CAnimObjectInterface : public IMovingSceneNode {
   public:
     virtual void Init();
