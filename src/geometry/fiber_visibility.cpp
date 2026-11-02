@@ -5,6 +5,7 @@
 
 int CVolFiber::TestVisibility(CDrawContext &context) const {
     CVolCapsule capsule;
+    // Plain references: reproduce the code shape.
     CVolCapsule *c = &capsule;
     CLine3 &target = c->line;
     target = line;

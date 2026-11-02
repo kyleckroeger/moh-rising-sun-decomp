@@ -18,6 +18,7 @@ EClsnState CVolCapsule::TestCollision(const CPlane &plane, CCollision &collision
     CVector3 start = StartOf(line);
     CVector3 end = EndOf(line);
     float b = PlaneDist(plane, end);
+    // Plain reference: reproduces the code shape.
     const CVector3 &s = start;
     float a = PlaneDist(plane, s);
     if (!(a * b <= radius * radius)) {

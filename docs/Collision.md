@@ -109,15 +109,27 @@ helpers are project names: no symbol records the pool's type.
 
 `CCollisionVolume::~CCollisionVolume` inlines the `ISceneNode` destructor, which
 `SceneNode.h` declares out of line, and stays original context until that header decision
-is made. `CVolSphere::Create` waits on its file's header strings, above. Most long vector tests also remain: the sphere's sphere, point and line tests and
-visibility, the box tests, the capsule tests other than `Create`, the fiber's point and
-line tests and extents, `CCDBObject`'s line test and branch node tests, the CDB box and
-triangle tests, `CCompartment`'s constructor and loading, `CPlane` and the segment distance.
-Their reference-versus-local shape is the common obstacle.
+is made. `CVolSphere::Create` waits on its file's header strings, above, and with it any
+whole `sphere.cpp`. The long vector tests that remain are listed by
+`config/GR8E69` by omission: the box tests, the sphere line test and visibility, the capsule
+line and capsule tests, the fiber line test and extents, `CCDBObject`'s line test and branch
+node tests, the CDB box and triangle tests, `CCompartment`'s constructor and loading, `CPlane`
+and the segment distance.
+
+## Point tests and code shape
+
+The point and sphere tests of spheres, capsules and fibers match with `void` helpers that
+take their result by reference (`SetSub`, `SetSum`, `SetScaled`), a local passed to them
+directly, and by-value copies of the line's ends. No original helper name is recovered; they
+are descriptive, and so is `CLine3::CachedLength`, which stands for the length cache inlined
+into `CVolFiber`'s point test. What the shape shows is that the original used small inline
+vector operations, not which ones. Plain references such as `s` in the capsule plane test
+are marked in the source: they reproduce the code shape and carry no other evidence.
 
 `CCDBObject`'s `TestCollisionWithTriGroups` instances for box, capsule and animated volumes
 sit in the weak-code region, with their literals right after `cdbobject.cpp`'s. Their
-manifest names that file because they read its local `g_bDisablePassThru`.
+manifest names `cdbobject.cpp` on that basis: they read the local `g_bDisablePassThru`, which
+needs a file, and the literals' position supports this one. No file symbol proves it.
 
 ## File attributions
 

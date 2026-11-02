@@ -4,6 +4,7 @@
 // AI-assisted storage view; see docs/Geometry.md. This observed 64-byte prefix
 // does not establish the full historical class or allocation size.
 #include "CVector3.h"
+extern "C" float sqrtf(float);
 
 // Descriptive inline helper; no original function name or boundary is claimed.
 static inline float LineVectorSquared(const CVector3& v) {
@@ -25,6 +26,15 @@ public:
             lengthSquaredValid = 1;
         }
         return lengthSquared;
+    }
+
+    // Local name for the length cache inlined into the original callers.
+    float CachedLength() const {
+        if (!lengthValid) {
+            length = sqrtf(GetLengthSquared());
+            lengthValid = 1;
+        }
+        return length;
     }
 
     CLine3() {}

@@ -1646,7 +1646,12 @@
     "thrown_bullet_mark.json",
     "thrown_bullet_type.json",
     "scene_SoldierLocomotion.json",
-    "sound_spkt_stop.json"
+    "sound_spkt_stop.json",
+    "sphere_test_sphere.json",
+    "sphere_test_point.json",
+    "capsule_test_sphere.json",
+    "capsule_test_point.json",
+    "fiber_test_point.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
