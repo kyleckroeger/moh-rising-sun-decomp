@@ -1,0 +1,42 @@
+{
+  "id": "scene_HierObjectAttempt",
+  "source": "src/scene/HierObjectAttempt.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d0c2c",
+      "size": 128
+    }
+  ],
+  "functions": [
+    {
+      "name": "AttemptUpdate__11CHierObjectf",
+      "address": "0x800d0c2c",
+      "size": 128,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AttemptUpdateFromMotion__11CHierObjectf": "0x800d0cac",
+    "AttemptUpdateOfAttachedObjects__11CHierObject": "0x800d0da0",
+    "SetInheritedMatrix__11CHierObjectR7CMatrix": "0x800d24c4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "hierobject.cpp",
+  "original_file_index": 935
+}

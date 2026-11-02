@@ -165,7 +165,8 @@ class CStaticObject {
     BSObject *script;     // +0x140
     unsigned char unknown_144[0x150 - 0x144];
     CVector3 animPosition; // +0x150
-    unsigned char unknown_160[0x180 - 0x160];
+    CVector3 motionStartPosition; // +0x160
+    CQuaternion motionStartOrientation; // +0x170
     CQuaternion animOrientation; // +0x180
     CVector3 velocity;    // +0x190; CThrownObject limits its speed.
     CVector3 pathPosition; // +0x1a0
@@ -192,7 +193,8 @@ class CStaticObject {
     unsigned char unknown_244[4];
     int motionSpeed;      // +0x248
     int motionStart;      // +0x24c
-    unsigned char unknown_250[0x258 - 0x250];
+    int motionPlayEvent;  // +0x250
+    int motionPlayStart;  // +0x254
     int motionKey;        // +0x258
     int motionLoop;       // +0x25c
     unsigned char unknown_260[4];
@@ -429,13 +431,94 @@ class CSoldierObject {
 inline ISceneNode *CurrentWeaponNode(CSoldierObject *soldier) { return (ISceneNode *)soldier->weapons[soldier->currentWeaponSlot]; }
 
 class IVolume;
-class CHierObject {
+// The direct calls to CStaticObject::Draw and CAttachableObject::UpdateAttachedObjects on the
+// same pointer show both views start at the object's first byte; the attachable base's own
+// storage is not declared here.
+class CHierObject : public CStaticObject {
   public:
     IVolume *GetSubVolume(int) const;
     void RegisterBulletDamage(int, int, int, float);
     float GetBulletDamageMultiplierByClass(int, int);
     CStaticObject *GetSubObject(int);
     void ModifyMotionData(MotionData *);
+    // Descriptive inline: the original tests the three bits separately.
+    int HasScriptMotion() const {
+        if (flags.scriptMoving)
+            return 1;
+        if (flags.scriptRotating)
+            return 1;
+        if (flags.scriptScaling)
+            return 1;
+        return 0;
+    }
+    void Init(CHierObject *, int, int, int, CVector3 &);
+    void OnCollision(const CCollision &);
+    void CommitUpdate();
+    void SetRotation(CQuaternion &);
+    void GetRotation(CQuaternion &);
+    int GetAttachPointMatrix(int, CMatrix &);
+    void AddObjectToTree(CHierObject *, int, int);
+    int RemoveObjectFromTree(CHierObject *, int);
+    void CleanUp();
+    void AddHierChild(CHierObject *);
+    void BeginUpdate(float);
+    void DoBeginUpdate(float, bool);
+    CVector3 GetWorldLinearVelocity() const;
+    void AttemptUpdate(float);
+    void AttemptUpdateFromMotion(float);
+    void AttemptUpdateOfAttachedObjects();
+    int SetHierCollisionState(int);
+    IVolume *GetWorldBoundingVolume(ISceneNode::EVolumeType) const;
+    void SetInheritedMatrix(CMatrix &);
+    void SetAttachPointMatrix(CMatrix &);
+    int IsVisible(CDrawContext &) const;
+    void Draw(CDrawContext &);
+    BPDLightVolume *GetLightVolume();
+    void StartMotionPlayback(int, int, EBSEventEnum);
+    void SerializeSaveData();
+    int GetObjectType() const;
+    CHierObject *AsHierObject();
+    const CHierObject *AsHierObject() const;
+    int SetAnimationState(const char *, int);
+    struct HierFlags {
+        unsigned int disabled : 1;   // Bit 31; BeginUpdate does nothing while set. Descriptive.
+        unsigned int mountedGun : 1; // Bit 30; positions the mounted-gun player. Descriptive.
+        unsigned int root : 1;       // Bit 29; root of a hierarchy, owns a CSG volume. Descriptive.
+        unsigned int collided : 1;   // Bit 28; set by SetHierCollisionState.
+        unsigned int unknown_low : 28;
+    };
+    struct BulletDamage {
+        int minClass, maxClass;
+        float multiplier;
+    };
+    unsigned char unknown_2e0[0x980 - 0x2e0];
+    CHierObject *firstChild;  // +0x980
+    CHierObject *nextSibling; // +0x984
+    HierFlags hierFlags;      // +0x988
+    int treeIndex;            // +0x98c
+    CHierObject *root;        // +0x990
+    unsigned char csgVolume[0x9a0 - 0x994]; // +0x994; a CCSGVolume on root objects. Extent as declared.
+    CHierObject *subObjects[20]; // +0x9a0; the root's table of the tree by index.
+    CMatrix inheritedMatrix;  // +0x9f0
+    CMatrix attachPointMatrix; // +0xa30
+    CVector3 attachOffset;    // +0xa70
+    unsigned char unknown_a80[0xb28 - 0xa80];
+    BulletDamage bulletDamage[2]; // +0xb28; class ranges, unused entries hold -1.
+};
+
+// Forwards to an owned animated object; the pointer is at +0xb40. Original class, member-only view.
+class CHierAnimObject : public CHierObject {
+  public:
+    void Init(CHierObject *, int, int, int, CVector3 &, CAnimObject *);
+    void AttachAnimatedObject();
+    void CleanUp();
+    void Draw(CDrawContext &);
+    IVolume *GetWorldBoundingVolume(ISceneNode::EVolumeType) const;
+    void AttemptUpdate(float);
+    void CommitUpdate();
+    void OnCollision(const CCollision &);
+    CVector3 GetWorldLinearVelocity() const;
+    CAnimObject *animObject; // +0xb40
 };
 
 class TriggerObject;
@@ -583,12 +666,28 @@ class CAttachableObject {
     int GetNextChildHandle(int);
     ISceneNode *GetChild(int);
 };
-class CTankObject {
+class CAITankObject;
+class CAIDoodad;
+class CTankObject : public CHierObject {
   public:
-    unsigned char unknown_0[0xb50];
-    int lookObject; // +0xb50; set by BIFunc_HierObjectSetLookObject.
+    void InitAI();
+    void CleanUp();
+    void BeginUpdate(float);
+    void AttemptUpdate(float);
+    void CommitUpdate();
+    int AddWeapon(int, int);
+    CAIDoodad *GetAIDoodad();
+    const CAIDoodad *GetAIDoodad() const;
+    CAIObject *GetAIObject();
+    CTankObject *AsHierTankObject();
     void FireSubObject(int);
     void MapWeaponSlot(int, int);
+    unsigned char aiDoodad[0xb4c - 0xb40]; // +0xb40; a CAITankDoodad.
+    CAITankObject *aiObject; // +0xb4c
+    int lookObject;          // +0xb50; set by BIFunc_HierObjectSetLookObject.
+    unsigned char unknown_b54[4];
+    int weaponSlots[8];      // +0xb58; extent bounded by the next member.
+    CWeapon *weapons[3];     // +0xb78; loops in CleanUp and BeginUpdate cover three.
 };
 class CStaticObjectInterface : public IMovingSceneNode {
   public:

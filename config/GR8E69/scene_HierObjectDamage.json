@@ -1,0 +1,87 @@
+{
+  "id": "scene_HierObjectDamage",
+  "source": "src/scene/HierObjectDamage.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d2d10",
+      "size": 588
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a1634",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "RegisterBulletDamage__11CHierObjectiiif",
+      "address": "0x800d2d10",
+      "size": 176,
+      "binding": 1
+    },
+    {
+      "name": "GetBulletDamageMultiplierByClass__11CHierObjectii",
+      "address": "0x800d2dc0",
+      "size": 140,
+      "binding": 1
+    },
+    {
+      "name": "SerializeSaveData__11CHierObject",
+      "address": "0x800d2e4c",
+      "size": 248,
+      "binding": 1
+    },
+    {
+      "name": "GetObjectType__C11CHierObject",
+      "address": "0x800d2f44",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "AsHierObject__11CHierObject",
+      "address": "0x800d2f4c",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "AsHierObject__C11CHierObject",
+      "address": "0x800d2f50",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "SetAnimationState__11CHierObjectPCci",
+      "address": "0x800d2f54",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetRotation__11CHierObjectR11CQuaternion": "0x800d0764",
+    "GetSubObject__11CHierObjecti": "0x800d078c",
+    "SerializeValue__13CGameSettingsR11CQuaternion": "0x80170d70",
+    "SerializeValue__13CGameSettingsR8CVector3": "0x80170d28",
+    "SerializingIn__C13CGameSettings": "0x80170ee0",
+    "SetRotation__11CHierObjectR11CQuaternion": "0x800d073c",
+    "g_GameSettings": "0x802f80c8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "hierobject.cpp",
+  "original_file_index": 935
+}

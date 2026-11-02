@@ -50,9 +50,41 @@ The `.rodata` of `static_obj.cpp` is not continuous across the matched functions
 pool of a linker-stripped function, which is an inference. The units split there
 rather than reconstruct a dead function.
 
+## Animated and hierarchy objects
+
+`CAnimObject` and `CHierObject` follow the same per-offset rule. `CHierObject` derives
+from the `CStaticObject` view: both `CStaticObject::Draw` and
+`CAttachableObject::UpdateAttachedObjects` run on the same pointer, so those views start at
+the first byte. Its members begin near `+0x980`; each entry of its bullet-damage table is
+12 bytes. `CHierAnimObject` holds its animated object at `+0xb40`, and that object has a
+second table pointer at `+0x38` whose `+0x10` slot returns the skeleton; the attach point
+is named `JO_gun` in the data. `CTankObject` stores its AI doodad bytes at `+0xb40`, the AI
+object at `+0xb4c`, slot mappings at `+0xb58` and three weapons at `+0xb78`. In
+`objcreate.cpp` the box, sphere and animated volume allocators use the file's local pools;
+each `BSGO_*` class places script data at `+0x14` and its node after it.
+
+`CSoldierObject` stays a view unrelated to `CAnimObject` because existing members use other
+names for the same offsets; its methods convert the pointer unadjusted. Eight 112-byte attach
+slots start at `+0xba0`. `CWorldObject` returns one embedded volume at `+0xd0` for every type.
+
+The scene-object casts in these units pass a pointer unadjusted. That follows the scoped
+views and does not assert the original class layouts or inheritance order.
+
 ## Parked
 
 `Init` (2 diffs: the `+0x214` and `+0x110` stores swap), `CalculateMovementTime` (27:
 register allocation of the three times) and `AttemptUpdate` (29: the three script-flag
 tests stay separate in the original, with a register copy of the flags; merged or
-cross-jumped forms do not reproduce it).
+cross-jumped forms do not reproduce it). `CHierObject::AttemptUpdateFromMotion` shares the
+flag-test problem, `CHierObject::GetWorldLinearVelocity` has 19 diffs,
+`CTankObject::AddWeapon` 5 (register choice for the bullet class), and `AllocateBoxVolume`
+would need `CVolBox` data members that `Box.h` does not declare. `CStaticObject::AnimUpdate`
+is one `fmr` away (the period and its conversion share a register in my build),
+`AttemptAnimMotionUpdate` differs by one scheduled load (3 diffs), and
+`CAnimObject::BeginUpdate` keeps its local matrix address in a saved register where the
+original rematerializes it. `CSoldierObject::CleanUp`, `DetachObject` and
+`GetBulletEmitterMatrix` compute attach-slot addresses as `(this + i * 112) + offset`, which
+no array or pointer form tried so far reproduces.
+
+The script-motion bits in `CStaticObject` are tested through inline accessors that each return
+one bit; without them `||` merges the tests into one mask. The accessor names are descriptive.

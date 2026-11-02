@@ -15,6 +15,7 @@ public:
     CAIFilterGlobal();
     void UpdateFromGlobals(float);
     void UpdateToGlobals();
+    void EnableAllAStarPathNodes();
     void CreateSplinePathManager(void *, BPDPolyPath *, int);
     void ResetSplinePathManager(void *, BPDPolyPath *, int);
     void ShutdownSplinePathManager();

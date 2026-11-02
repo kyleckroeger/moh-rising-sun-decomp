@@ -1,0 +1,50 @@
+{
+  "id": "scene_TankObjectDoodad",
+  "source": "src/scene/TankObjectDoodad.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800c3cbc",
+      "size": 20
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetAIDoodad__11CTankObject",
+      "address": "0x800c3cbc",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetAIDoodad__C11CTankObject",
+      "address": "0x800c3cc4",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "AsHierTankObject__11CTankObject",
+      "address": "0x800c3ccc",
+      "size": 4,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Tank_object.cpp",
+  "original_file_index": 894
+}

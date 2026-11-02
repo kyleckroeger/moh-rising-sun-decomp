@@ -25,6 +25,8 @@ struct GameProfile {
 enum EShotLocations { ShotLocation0 = 0 };
 
 class CMatrix;
+class CVector3;
+class CQuaternion;
 // Member view of the game-settings singleton; only the profile pointer is named.
 class CGameSettings {
   public:
@@ -33,6 +35,8 @@ class CGameSettings {
     int SerializingOut() const;
     void SerializeDelta(const CMatrix &, CMatrix &);
     void SerializeValue(unsigned int &, unsigned int);
+    void SerializeValue(CVector3 &);
+    void SerializeValue(CQuaternion &);
     void AddCheat(int);
     void RegisterSavePoint(int, bool);
     void TriggerSavePointResponse(int, bool);

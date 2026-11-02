@@ -1,0 +1,71 @@
+{
+  "id": "scene_HierAnimObjectB",
+  "source": "src/scene/HierAnimObjectB.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d3160",
+      "size": 584
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a170c",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "AttemptUpdate__15CHierAnimObjectf",
+      "address": "0x800d3160",
+      "size": 260,
+      "binding": 1
+    },
+    {
+      "name": "CommitUpdate__15CHierAnimObject",
+      "address": "0x800d3264",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "OnCollision__15CHierAnimObjectRC10CCollision",
+      "address": "0x800d32b0",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "GetWorldLinearVelocity__C15CHierAnimObject",
+      "address": "0x800d3304",
+      "size": 164,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AttemptUpdateFromMotion__11CHierObjectf": "0x800d0cac",
+    "AttemptUpdateOfAttachedObjects__11CHierObject": "0x800d0da0",
+    "CommitUpdate__11CHierObject": "0x800d0e50",
+    "FindAttachPoint__Q34EALA9Character8SkeletonPCc": "0x80082630",
+    "GetWorldLinearVelocity__C11CHierObject": "0x800d0b84",
+    "OnCollision__11CHierObjectRC10CCollision": "0x800d1ea4",
+    "SetAttachPointMatrix__11CHierObjectR7CMatrix": "0x800d24e8",
+    "SetInheritedMatrix__11CHierObjectR7CMatrix": "0x800d24c4",
+    "__as__7CMatrixRC7CMatrix": "0x8007aa38"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "hierAnimobject.cpp",
+  "original_file_index": 937
+}

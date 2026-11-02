@@ -158,6 +158,7 @@ class PlayerDrawView {
 struct BS_STRUCT_HitByBulletInfo_struct;
 class CPlayerObject {
   public:
+    void SetPlayersMountedMGPositions(CMatrix *);
     // Member-only view of the target search at +0x1ca0; the class name is original,
     // member names and the inline's name are descriptive.
     class TargetFind {

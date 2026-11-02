@@ -82,6 +82,7 @@ class CWeapon : public CStaticObject {
     float GetBulletSpeed() const;
     int GetWeaponSoundType() const;
     void SetInfiniteAmo(bool);
+    void Update(float, bool);
     void ConfigMuzzleFlash();
     unsigned int GetMuzzleFlashStatus();
     void CreateMuzzlePuff(int, const CMatrix &);
