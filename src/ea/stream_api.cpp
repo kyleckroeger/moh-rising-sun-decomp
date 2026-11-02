@@ -105,6 +105,10 @@ struct STREAMHEADERtag {
 };
 
 extern "C" {
+void STREAM_setgreedystate(int, int);
+char* strncpy(char*, const char*, unsigned long);
+unsigned char* STREAM_get(int);
+void STREAM_release(int, unsigned char*);
 int FILESYS_completeop(int);
 void FILESYS_priorityop(int, int);
 int FILESYS_open(const char*, int, int, void*);
@@ -297,3 +301,94 @@ extern "C" void STREAM_destroy(int handle) {
     if (header->handle)
         FILESYS_closesync(header->handle, 100);
 }
+
+extern "C" void STREAM_setpriority(int handle, int priority, int priorityClass) {
+    TAPSTRUCTtag* stream;
+    STREAMHEADERtag* header;
+    if (validatehandle(handle, &header, &stream) == 0) {
+        header->unknown48 = priority;
+        header->priority = priorityClass;
+    }
+}
+
+extern "C" void STREAM_setgreedylevel(int handle, int level) {
+    TAPSTRUCTtag* stream;
+    STREAMHEADERtag* header;
+    if (validatehandle(handle, &header, &stream) == 0) {
+        int old = header->threshold;
+        int now;
+        int was;
+        header->threshold = level;
+        now = header->buffered < level;
+        was = header->buffered < old;
+        if (was != now)
+            STREAM_setgreedystate(handle, now);
+    }
+}
+
+extern "C" void STREAM_setgreedystate(int handle, int state) {
+    TAPSTRUCTtag* stream;
+    STREAMHEADERtag* header;
+    if (validatehandle(handle, &header, &stream) == 0) {
+        header->greedy = state;
+        if (state && header->state == 1)
+            FILESYS_priorityop(header->fileOp, header->priority);
+    }
+}
+
+extern "C" void* STREAM_taphandle(int handle, int tap) {
+    TAPSTRUCTtag* stream;
+    STREAMHEADERtag* header;
+    if (validatehandle(handle, &header, &stream) != 0)
+        return 0;
+    if (tap < 1 || tap > header->listCount)
+        return 0;
+    return &header->lists[tap - 1];
+}
+
+extern "C" int STREAM_queuefile(int handle, const char* name, int size, int id) {
+    TAPSTRUCTtag* stream;
+    STREAMHEADERtag* header;
+    REQUESTSTRUCTtag* request;
+    int state;
+    int error = validatehandle(handle, &header, &stream);
+
+    if (error)
+        return 0;
+    request = getfreerequest(header);
+    if (request == 0)
+        return 0;
+    request->type = 0;
+    strncpy(request->filename, name, 254);
+    request->size = size;
+    request->id = id;
+    queuerequest(header, request);
+    MUTEX_lock(header->mutex);
+    state = header->state;
+    if (state == 0)
+        header->state = 1;
+    MUTEX_unlock(header->mutex);
+    if (state == 0) {
+        if (header->greedy)
+            startnextrequest(header, header->priority);
+        else
+            startnextrequest(header, header->unknown48);
+    }
+    return request->index;
+}
+
+extern "C" int STREAM_queuemem(int handle, unsigned char* data, int size, int id);
+
+extern "C" void STREAM_cancelrequest(int handle, int requestHandle);
+
+extern "C" unsigned char* STREAM_get(int handle);
+
+extern "C" void STREAM_release(int handle, unsigned char* chunk);
+
+extern "C" void* STREAM_gettable(int handle);
+
+extern "C" int STREAM_state(int handle);
+
+extern "C" int STREAM_isendofstream(int handle);
+
+extern "C" int STREAM_buffersize(int handle);

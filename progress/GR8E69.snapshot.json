@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 843292,
+    "matching_code_bytes": 845252,
     "total_executable_code_bytes": 2492032,
-    "percent": 33.83953336072731,
+    "percent": 33.91818403616005,
     "categories": {
-      "reconstructed_game": 451076,
+      "reconstructed_game": 453036,
       "restored_library": 392216
     },
-    "matching_functions": 4050
+    "matching_functions": 4061
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -280,9 +280,11 @@
     "config/GR8E69/ea_printn3.json": "b7f6439bf63ccceeef282f8204d6d17143f87fa8d35cb9de43da82bc53016a7f",
     "config/GR8E69/ea_rcmp2real.json": "a05bdac5ae33f2e95a709a737a622fde986db04f4f0337a63ebdcc644614a5da",
     "config/GR8E69/ea_signals.json": "739f8d08688ad92e47b40d2b21ecf7e58f5aecc8da4c57e7b0b8b15e058e419c",
-    "config/GR8E69/ea_stream_api.json": "17e2889fd580d40eca6710dc81e67c6309b6fc9b86173247e901a6d1518090bd",
+    "config/GR8E69/ea_stream_api.json": "fa97dda34ba9fe1a759e47c151cb0c9252c3151a0f4ec852db1ab7930b21baa0",
     "config/GR8E69/ea_stream_callbacks.json": "299933972665906c4da534fa417f2fe0cf703a1bf0497d8e4e4876b3ed466fb1",
+    "config/GR8E69/ea_stream_cancel.json": "362530c2afcd60a6ed8554e19ab265449b87e765fe08a56ca59de3d43b06acfd",
     "config/GR8E69/ea_stream_requests.json": "a88bc79bf7b71880ac560f5bbbbd9303de73d63f7d3b0fb602dc7e09cb0a55db",
+    "config/GR8E69/ea_stream_tail.json": "5e234eb8f01bf6b785c315e73355c1b557a2bf177ec08bdc4eb04c09be0c7a86",
     "config/GR8E69/ea_syncfile.json": "5ad7e6a48ddd491ff43841235023597f0e85b8175ab705de2379f78c7ea3b886",
     "config/GR8E69/ea_systask.json": "141ec34b15f33585ca8126e62d8155683f6b747bb061d43d88ac144d23f18663",
     "config/GR8E69/ea_timerthread.json": "bfa69e1a4f9067764b5ab1a8149fa69fcedac577e7971798acc0c9564c317163",
@@ -775,7 +777,7 @@
     "config/GR8E69/player_weapon_overlays.json": "172965adf4a7a763b5932a9744ff75bbf384ef314e25785dee9d7617044a8d5b",
     "config/GR8E69/player_weapon_selectable.json": "c7e3f09ad1510713bfd88ee468db0fcb4c6ef18b3b89bdb414b32ea863b25668",
     "config/GR8E69/player_weapon_shutdown.json": "f90a42342572d125630e7ac3647193288c13301a5309bcdc49cc350364bc2b60",
-    "config/GR8E69/project.json": "273f735592db43aca5b59cfe2fe737aaad20d19ae1573630e8e88b5d798c4331",
+    "config/GR8E69/project.json": "3c7952e9d6d18afbcbe9375781b975246c499b2b767456a5af2c81076c83cdba",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -1865,7 +1867,7 @@
     "include/game/ScriptTimers.h": "a81f3399ff20908469a289229ed0f0aae2c28aa3a9889629e62049e8bb16705b",
     "include/game/Shell.h": "aac7dbeba4aa3119857814e65ea571c09c9078703e75663b8797bed92d03a4a6",
     "include/game/SoundAmbience.h": "a8ffdd3a842aa24e0d8511216e05fd27625c8c2e96c7db19d7557afa729b1fb5",
-    "include/game/SoundGlobals.h": "3d888498d924f8893aa6a6a8c929d3209170b13f2c58a674e5793d0a9c59cad0",
+    "include/game/SoundGlobals.h": "559f53eaf8fba266510fba8e2604b5625916764e0f804555f9d098bf4b9beff7",
     "include/game/SoundManager.h": "8aff3f442f2017a377fdb5aefb163df0137b62a91e978796fa06cde849a4084f",
     "include/game/SoundMixerView.h": "787617bfe14ec7a736949ac46528a91cfe30e6899acd0a9e811d83bf9364059c",
     "include/game/Sphere.h": "48220d28ba4b5e6f74e1a50c1637ca245e6b1f33f792284719f993ac2a0c3e26",
@@ -2296,9 +2298,11 @@
     "src/ea/printn3.cpp": "e260e8f11be93a4af6246aa0777791744bb479c223f80e9e78618811d1780c4b",
     "src/ea/rcmp2real.cpp": "cd31e2670f3b27a4a91c8962b8b4ba680f21e773e9023525cf718f699131d8ff",
     "src/ea/signals.cpp": "bbbc0bffb36932f5eb6cf92dc7b48e2c4b20623375a214da115ef76eacd1fcee",
-    "src/ea/stream_api.cpp": "1cdab91f1472f2ca89dfcd8d610ef7a2be24cbfe12d0f552503bb14441360159",
+    "src/ea/stream_api.cpp": "50996cf6086074c5b466945ff64c480f086f38f66fa1d4a4491ae1aa68218ce9",
     "src/ea/stream_callbacks.cpp": "7f0a1eb3730017e27f33511faa95a212967270fb5cee71896327994cbbe8f623",
+    "src/ea/stream_cancel.cpp": "f12677a10a9331999f46bbb824770add1d55519451016ce7ff49a67589f45807",
     "src/ea/stream_requests.cpp": "30e5e3a4e140a958d603ea7e92848f8cf209b315da72eeefdbdfee2c08f04a51",
+    "src/ea/stream_tail.cpp": "6cbbb3a2ee0858eebb9fe256dc24dba479be59018a89a5e4b19032b57459d50f",
     "src/ea/syncfile.cpp": "3df57d815e9d7e8ef396fdcf881e8e89ed7b7e77c762f80a3a18c0bf42ed09ba",
     "src/ea/systask.cpp": "064e88a22a3eb4ce2abeccd180f0df17d49e86028b44b3fc0a54e8cf7365d4bb",
     "src/ea/timerthread.cpp": "20cae02efd81691bf08a6c1e883b2df0059457929220cab81bb80a2b605cb50a",
@@ -35231,8 +35235,8 @@
     {
       "id": "ea_stream_api",
       "category": "reconstructed_game",
-      "functions": 4,
-      "code_bytes": 960,
+      "functions": 9,
+      "code_bytes": 1612,
       "compiler_family": "ProDG",
       "compiler_version": "3.8.1",
       "compiler_flags": [
@@ -35244,8 +35248,8 @@
       ],
       "strip_unused": false,
       "discarded_functions": [],
-      "object_sha256": "816e04e497354c75aaf9f00028d4314da341c2263a7553dcd7afd69cd7e21a73",
-      "linked_sha256": "3ee90b5fb7f10535b4f8df0531537f82cdd5f5690beb434b954471cf7080ef29"
+      "object_sha256": "2fd475b7a1980b6b99d55b03e9d2339566cafc60a7e9dae80331ad648eeeabd3",
+      "linked_sha256": "9a082e64a5d3ae3ba9dee7423415c9202653b06ba11be5154df2f5a9a63078de"
     },
     {
       "id": "scene_HierObjectTree",
@@ -35570,6 +35574,44 @@
       "discarded_functions": [],
       "object_sha256": "bf7f578bb7a3c42a47ba11a99d03a6042b3d481dfc18c6a8fdae366f166569fc",
       "linked_sha256": "cd56c5e16c7a36c9424d953f79fdfa00206f17ad3f4934f412bdb2aa02c377d3"
+    },
+    {
+      "id": "ea_stream_cancel",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 708,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "f07d4620a406da0c31c3358a93e923d3adea26b1469d6f75ff546fd671640b61",
+      "linked_sha256": "4f4451d8583efe8a4e65903ea9359c138e1e3bad5c9834b68b7246156ce525ed"
+    },
+    {
+      "id": "ea_stream_tail",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 600,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "729dd4d295ad16836b090dc7f4818763b4cb8fed444f019bd5d26defea35cb74",
+      "linked_sha256": "46e602cdc92f986ff702805803752441183af92ec6499c1210d5425639b3b0e5"
     }
   ],
   "code_map": {
@@ -72455,52 +72497,10 @@
             "evidence": "local-file-symbol"
           },
           {
-            "address": "0x8020a7a4",
-            "size": 80,
-            "kind": "function",
-            "name": "STREAM_setpriority",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020a7f4",
-            "size": 116,
-            "kind": "function",
-            "name": "STREAM_setgreedylevel",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020a868",
-            "size": 104,
-            "kind": "function",
-            "name": "STREAM_setgreedystate",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020a8d0",
-            "size": 108,
-            "kind": "function",
-            "name": "STREAM_taphandle",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020a93c",
-            "size": 244,
-            "kind": "function",
-            "name": "STREAM_queuefile",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8020aa30",
             "size": 416,
             "kind": "function",
             "name": "STREAM_queuemem",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020abd0",
-            "size": 708,
-            "kind": "function",
-            "name": "STREAM_cancelrequest",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -72515,41 +72515,6 @@
             "size": 384,
             "kind": "function",
             "name": "STREAM_get",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020b258",
-            "size": 308,
-            "kind": "function",
-            "name": "STREAM_release",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020b38c",
-            "size": 64,
-            "kind": "function",
-            "name": "STREAM_gettable",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020b3cc",
-            "size": 64,
-            "kind": "function",
-            "name": "STREAM_state",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020b40c",
-            "size": 92,
-            "kind": "function",
-            "name": "STREAM_isendofstream",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020b468",
-            "size": 72,
-            "kind": "function",
-            "name": "STREAM_buffersize",
             "evidence": "adjacent-compiler-markers"
           }
         ],

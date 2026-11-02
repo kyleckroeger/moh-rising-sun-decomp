@@ -1570,7 +1570,9 @@
     "scene_ObjCreatePoolA.json",
     "scene_ObjCreatePoolB.json",
     "scene_ObjCreateBSGO.json",
-    "ai_AIFilterPlayerVars.json"
+    "ai_AIFilterPlayerVars.json",
+    "ea_stream_cancel.json",
+    "ea_stream_tail.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
