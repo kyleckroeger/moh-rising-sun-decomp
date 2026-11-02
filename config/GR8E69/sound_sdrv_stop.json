@@ -1,0 +1,46 @@
+{
+  "id": "sound_sdrv_stop",
+  "source": "src/sound/ea/sdrv_stop.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8021df44",
+      "size": 348
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDPLATFORM_stop__Fi",
+      "address": "0x8021df44",
+      "size": 348,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AXSetVoiceState": "0x802312bc",
+    "MIXstopfn": "0x8041ee14",
+    "SNDDRV_freeaxvoice__Fii": "0x8021b548",
+    "SNDVOICEI_free__Fi": "0x802192bc",
+    "snddrv": "0x80410c40",
+    "sndgs": "0x804108fc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "snddrv.c",
+  "original_file_index": 3064
+}

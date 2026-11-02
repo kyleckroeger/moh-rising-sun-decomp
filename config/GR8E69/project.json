@@ -1664,7 +1664,14 @@
     "fiber_test_line.json",
     "bullet_sprites_load.json",
     "weapon_sprites_load.json",
-    "weapon_sprites_delete.json"
+    "weapon_sprites_delete.json",
+    "sound_sserver.json",
+    "sound_snddrv_cb.json",
+    "sound_sdrv_stop.json",
+    "sound_sfecho.json",
+    "sound_supmutf.json",
+    "sound_spktplay.json",
+    "sound_scalcpitch.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

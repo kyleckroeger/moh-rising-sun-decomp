@@ -63,10 +63,9 @@ Frontline's: the bank slot table is at `+0x1f4`, the memory pool at `+0x220` and
 abort-message hook at `+0xc8`. The sound system's public calls are partly C++ in this
 build (`Snd::System::Restore`, `Snd::CODASetNew`), where Frontline uses C names.
 
-These libraries match with `-O2 -G8 -fno-strength-reduce`: a `lwz rX,N(r13)` is small
-data, and a kept `mulli` or indexed `lfsx` in a loop is the absence of strength
-reduction, not a code-shape puzzle. New EA units use those flags. Earlier units keep
-the flags they landed with for now.
+These libraries were built with `-fno-strength-reduce`: a kept `mulli` or indexed `lfsx`
+in a loop is the absence of strength reduction, not a code-shape puzzle. The `-G` value
+differs by library; see the note on small data below.
 
 Other layouts that differ from Frontline: a voice record is 140 bytes rather than 128,
 and the voice table sits at `sndgs+0x1f0` with the voice count at `sndgs+0x17e`.
@@ -82,10 +81,16 @@ therefore not verified by the build.
 `sndgs` and `sndmix`. Both are single struct objects in the original: their members are
 reached through one base register, which a character-array view does not reproduce.
 
-Small data is not uniform across these libraries. The REAL runtime (`FONT_*`,
-`FILESYS_*`, `MEM_*`, `TIMER_*`, `THREAD_*`, `PRINT_*`) uses `r13`; the `SND*` code from
-`0x80218efc` to `0x8022bed0` has no `r13` reference, and its 4-byte globals such as
-`Snd::gMutexLockFn`, `MIXstopfn` and `everyother` sit outside `.sdata` and are reached
-with `lis`. `SNDSYS_entercritical` and `SNDSYS_leavecritical` match with `-G0
--fno-strength-reduce`. Units here are built with `-G8` for now, so code touching such
-globals is not yet reconstructed.
+Small data is not uniform across these libraries, and units follow it. The REAL runtime
+(`FONT_*`, `FILESYS_*`, `MEM_*`, `TIMER_*`, `THREAD_*`, `PRINT_*`) reaches its small
+statics through `r13`, so its units use `-G8 -fno-strength-reduce`. The `SND*` code from
+`0x80218efc` to `0x8022bed0` has 0 `r13` references across all 19,445 of its instructions,
+and its 4-byte globals such as `Snd::gMutexLockFn`, `MIXstopfn` and `everyother` sit
+outside `.sdata` and are reached with `lis`, so new units there use `-G0
+-fno-strength-reduce`. That is an inference from the instruction stream, not a recovered
+build setting. `SND*` units landed before this was established keep `-G8`; they match as landed and
+have not been migrated.
+
+Ownership of some small statics is not verified by the build: `g_thMain`,
+`MEM_allocfailcallback` and the timer statics are declared `extern` as original context,
+like `hlafile`'s statics above, rather than defined in a unit.

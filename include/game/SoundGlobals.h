@@ -56,11 +56,14 @@ struct SNDGSVIEW {
     char pad0[40];
     unsigned short bankcount;
     unsigned short samplerate;
-    char pad2c[7];
+    char pad2c[2];
+    unsigned char field2e;
+    char pad2f[4];
     unsigned char firstvoice;
     char pad34[18];
     unsigned char packetplayercount;
-    char pad47[121];
+    unsigned char channels;
+    char pad48[120];
     void* (*memallochook)(int);
     void (* volatile memfreehook)(unsigned int);
     char padc8[173];

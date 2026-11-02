@@ -1,0 +1,47 @@
+{
+  "id": "sound_spktplay",
+  "source": "src/sound/ea/spktplay.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8021ea0c",
+      "size": 64
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDPKTPLAYI_overhead__Fi",
+      "address": "0x8021ea0c",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "SNDPKTPLAY_overhead",
+      "address": "0x8021ea18",
+      "size": 52,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDPLATFORM_packetoverhead__Fv": "0x8021cf08"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "spktplay.c",
+  "original_file_index": 3076
+}
