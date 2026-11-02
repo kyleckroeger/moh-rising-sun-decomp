@@ -1285,7 +1285,9 @@
     "script_system_shutdown.json",
     "script_system_update.json",
     "script_file_lifecycle.json",
-    "sound_sfsplit.json"
+    "sound_sfsplit.json",
+    "jaw_controller_ctor.json",
+    "jaw_controller_motiontype.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

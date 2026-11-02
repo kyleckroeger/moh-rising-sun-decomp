@@ -21,11 +21,30 @@ enum EFireMethod { FireMethodUnknown = 0 };
 // unadjusted) and names only the observed members; bases, virtual interfaces
 // and complete sizes are not declared. Built-ins that need an inherited virtual
 // convert the view back to ISceneNode without adjustment.
-// Method-only view of the soldier's embedded jaw controller.
+// The soldier's embedded jaw controller. Member names are descriptive inferences
+// from the reconstructed methods.
 enum EJawType { JawTypeUnknown = 0 };
 class CJawController {
   public:
+    CJawController();
+    void Update(float);
     void SetMotionType(EJawType);
+    float closeStart; // +0x00; timer value at which the closing phase starts.
+    float closeEnd;   // +0x04; timer value above which the jaw is at rest.
+    float riseTime;   // +0x08
+    float holdTime;   // +0x0c
+    float fallTime;   // +0x10
+    int cyclesLeft;   // +0x14
+    int cycleCount;   // +0x18
+    float minValue;   // +0x1c
+    float maxValue;   // +0x20
+    int previousCode; // +0x24; meaning unknown.
+    int currentCode;  // +0x28; meaning unknown.
+    float timer;      // +0x2c
+    float value;      // +0x30
+    float startDelay; // +0x34
+    int delaying;     // +0x38
+    int type;         // +0x3c
 };
 
 struct MotionData;
@@ -107,7 +126,7 @@ class CSoldierObject {
     int voiceHandle;        // +0x1050; -12 when no voice is playing.
     unsigned char unknown_1054[0x10a8 - 0x1054];
     CJawController jaw;     // +0x10a8
-    unsigned char unknown_10a9[0x1148 - 0x10a9];
+    unsigned char unknown_10e8[0x1148 - 0x10e8];
     int aimSuspended;       // +0x1148; set by BIFunc_SuspendAiming.
     unsigned char unknown_114c[0x12b4 - 0x114c];
     int propAimSuspended;   // +0x12b4; set by BIFunc_SuspendPropAiming.

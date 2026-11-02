@@ -1,0 +1,43 @@
+{
+  "id": "jaw_controller_motiontype",
+  "source": "src/scene/jaw_controller_motiontype.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d37a4",
+      "size": 952
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a173c",
+      "size": 68
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetMotionType__14CJawController8EJawType",
+      "address": "0x800d37a4",
+      "size": 952,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "MathFunRandomUI32Raw__Fv": "0x80133958"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}
