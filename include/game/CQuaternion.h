@@ -15,6 +15,7 @@ public:
     void GetMatrix(CMatrix&) const;
     void SetFromEuler(float, float, float);
     void Slerp(CQuaternion, CQuaternion, float);
+    void Multiply(CQuaternion);
 };
 
 typedef char CQuaternionStorageSizeCheck[sizeof(CQuaternion) == 16 ? 1 : -1];

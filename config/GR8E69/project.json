@@ -1537,7 +1537,9 @@
     "sound_sbpatinf.json",
     "sound_spitch.json",
     "sound_s3dlow.json",
-    "sound_sautovol.json"
+    "sound_sautovol.json",
+    "thrown_collide.json",
+    "thrown_update.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

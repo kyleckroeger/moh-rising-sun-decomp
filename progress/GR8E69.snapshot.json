@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 829284,
+    "matching_code_bytes": 832568,
     "total_executable_code_bytes": 2492032,
-    "percent": 33.277421798757,
+    "percent": 33.409201808002464,
     "categories": {
-      "reconstructed_game": 437068,
+      "reconstructed_game": 440352,
       "restored_library": 392216
     },
-    "matching_functions": 3947
+    "matching_functions": 3954
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -765,7 +765,7 @@
     "config/GR8E69/player_weapon_overlays.json": "172965adf4a7a763b5932a9744ff75bbf384ef314e25785dee9d7617044a8d5b",
     "config/GR8E69/player_weapon_selectable.json": "c7e3f09ad1510713bfd88ee468db0fcb4c6ef18b3b89bdb414b32ea863b25668",
     "config/GR8E69/player_weapon_shutdown.json": "f90a42342572d125630e7ac3647193288c13301a5309bcdc49cc350364bc2b60",
-    "config/GR8E69/project.json": "6b869e395292bd4d0a842704af8f0f9a83c98b018a212d5a5f316d53aca8b134",
+    "config/GR8E69/project.json": "f78a2296553eba8d290014107e04afd3433a10cb249f32075afefaf77bfb3c73",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -1519,10 +1519,12 @@
     "config/GR8E69/thrown_bullet_velocity.json": "d8b34eb18acec2515aee0ebd1767e42a0737599d4142ec573ceb745b067e9fdf",
     "config/GR8E69/thrown_bullet_visible.json": "8eaab3ea578d5e2826ce936e1b251fda3116750dd151e0bd038daafb865d24d7",
     "config/GR8E69/thrown_cleanup.json": "eb57fe3dfce629c3cb075ffed5f2b4b21f1775da89e033ffefa981a1d27a8f12",
+    "config/GR8E69/thrown_collide.json": "5381c53c9b9f97b0fcf67853fccc1792f385bacf27cff1babddc46d3bacd0d3c",
     "config/GR8E69/thrown_collision_id.json": "04d24660bd9119a8a1e1f3ab63098d321f48395eaf774e07e78d90c255f397ef",
     "config/GR8E69/thrown_collision_light.json": "fdfd6732347b431c2ac9a3fd1a931f21fe5eb21c21321383bbbac597cb6dcd27",
     "config/GR8E69/thrown_motion.json": "cb835c548c368c989af05ec994db7eace9f0655b7404e8409b27c4e929a58774",
     "config/GR8E69/thrown_setters.json": "02e1ce7099126fe919d35532bd92037630cdd0509363f68024c8d97863480977",
+    "config/GR8E69/thrown_update.json": "53c8922765ce4c7aa1da89d560fd07b88b04125b8328bf3a64454c6d98485cc7",
     "config/GR8E69/trigger_base_name.json": "720744b136f7bb7ac5c28e8625176cd5bcbf30d91d1d9b25b98d52aaf8a14bb9",
     "config/GR8E69/trigger_class_queries.json": "04f920434d465df34440d49bc465c126e67d17658789ebd75ad202457be41b17",
     "config/GR8E69/trigger_clear_machine_guns.json": "7d85e192fd50b647ac560e95dc0c8e35ad1eb48c3d0072dcc439779fae8c0136",
@@ -1738,7 +1740,7 @@
     "include/game/CLine2.h": "e92fdbfd47ed264651ab9bbb90557a0461c3f6469267837079a5d514eb583f2c",
     "include/game/CLine3.h": "c243c3a0e44c43450743a627896dc7789079c2685ef3dac3f7be341d9bd52484",
     "include/game/CMatrix.h": "0a1cd7c02e0d72a241d00c861f92cf720b93960f3e96da8dea1f370ee8be27f9",
-    "include/game/CQuaternion.h": "69c3eeef77a281c6ef92674de3df0b4e98cad1beb2f051bea8c0956bb05c390b",
+    "include/game/CQuaternion.h": "8668ceb13489f3ce37788dda5debaa5a7b0dda54f55e588421d3824b05d15726",
     "include/game/CRC.h": "bcd5ed5667f902cc07c69d8d1b40e2e45f1f90b7d665c1ad3063fa61aadebbb6",
     "include/game/CSGVolume.h": "4e1b74888a25e46d47449afbc3081c2474e8104e59cfd1ee11c1e5e6b440cb23",
     "include/game/CVector3.h": "0c436c62dba8e3a7f44ca5e6eea6de50ff97e88e4e53545873d5ecca9d648aae",
@@ -1818,7 +1820,7 @@
     "include/game/ParticleRecipe.h": "04bba33839dcdae3132d1316e831585288f74ef842a5b01c6f6d6c37929ee61d",
     "include/game/PlacementNew.h": "49819284bb2cc2ffb2039d459ce855bd5a233bcfff0a6412ffe0bda02cd616c5",
     "include/game/PropertyData.h": "952ae5ac78dc17e43053a7b905a8e58499a1faa3c7d0721269329f639095b22a",
-    "include/game/SceneNode.h": "cff44a62e5611c6c0ebedc9dc4e29828ee12f057f576adf5be454f791a3bf497",
+    "include/game/SceneNode.h": "1c103df7617f87c46e5da78e8fba7fa75f7a5b2a949b90aa9c7612a50ab61412",
     "include/game/SceneObjects.h": "3c708c47873f43c6923ad493512c656754731c8dee9987d518bece07c644098b",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
     "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
@@ -1840,7 +1842,7 @@
     "include/game/TARExtension.h": "895c1de002730e0d0c627a3475a5370287e007f42b34b18a2901ef3465152b59",
     "include/game/TevStage.h": "47aaf3de5425dace0c30e2852896a9494f78ab4a4dcaad6be03d4aa4204d7466",
     "include/game/TevStageInlines.h": "03b19716c4d88b4eb2f3c74cdf2040ca0bb6c43e842d1eefc2c8bd148a278645",
-    "include/game/Thrown.h": "63eb682e6b59ea741b057fa2cb8aea622a9d6232e9ea8b36371fab17c85077ef",
+    "include/game/Thrown.h": "62c70dfcb9ad0243eba5bdf633073bb2563d3fe2b4da6bdcae42452c547912db",
     "include/game/TriggerObject.h": "73e70d537a184c92ad5f8f0e10b773f5efe3306ce871a82852a3c41398f7418b",
     "include/game/Volume.h": "cda9e7de972fc28d73bf86418423a8b271c864d60bb53d1eba7d42744622db46",
     "include/game/Weapon.h": "21c434a3e544e323810253b8366c909434870a4e88bd4fbd5f40c679f820b0ed",
@@ -2088,9 +2090,11 @@
     "src/bullets/ThrownBulletTransition.cpp": "7ca6ac9464f2deab560e133cf2f735971e98b1eacdaf4d5c2574bdebdcc4acd4",
     "src/bullets/ThrownBulletVelocity.cpp": "e24d39aed5d6d46a24ff4ab5ac976903c85067ff9ded571c6f16a4f87bfae672",
     "src/bullets/ThrownBulletVisible.cpp": "ebdb6bd8da731794cc4b5e205167082fe32fcf6993de7e906eb2426f426f37b0",
+    "src/bullets/ThrownCollide.cpp": "583930b608bc9cc214d0211b995d2917319500ccc5a7d66d7149f71217b77b41",
     "src/bullets/ThrownCollisionId.cpp": "c110604bd231f02c32524d8569fa009c16e50951be9c301d6e5a54059414f480",
     "src/bullets/ThrownCollisionLight.cpp": "773de461b874b6bb1b3a066e0ac5a8124c5df3a0ac5595a58ebb984375882d56",
     "src/bullets/ThrownSetters.cpp": "53bd8f3d5543f02d514a21a46422d909dc36d86b9f9058bef0b5e99b6b703dd4",
+    "src/bullets/ThrownUpdate.cpp": "aff8c3d144bdda27777aaa768f13c97ff87c9afb4e194eb191ab3bd942839a4c",
     "src/camera/axes.cpp": "5f01c8b680d40e8507f99181b64e824f3fd5f74911193154807716a91603286a",
     "src/camera/frustum_transform.cpp": "4bbe254e923e4c48c9b4468450fa8c93986141f00f98758a32be9071c57a9d7f",
     "src/camera/get_transform.cpp": "e3033e1c97452a331b5d46e6cdca18fba8f60ad43af2220d9cdc7bddbc12d468",
@@ -34906,6 +34910,42 @@
       "discarded_functions": [],
       "object_sha256": "30da7fa40ffe25a9a479d09682158b7d9f4e5b27f5cbcb154e2bdc1dfa928e92",
       "linked_sha256": "18b59daf64e1f5b6ae41b628860bfb830461ddb09a216133667caf4d66cd6a22"
+    },
+    {
+      "id": "thrown_collide",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 1320,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "6906975e86d6e81343be586da3f1099b7d1c1ec6d151f5b644803f8179aae799",
+      "linked_sha256": "dacccd4118ca7fa47044cf35bb2840cc42efaa065c591fa33105928ce30912e4"
+    },
+    {
+      "id": "thrown_update",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 1964,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "8d21846226d18fe0232a77bd704fc30ebfbf4879b2172d5416dbf6c32f4c866c",
+      "linked_sha256": "7365ce375e0830603ec04b4a863bf56657690dab82193ad1ee9691ddcace3adb"
     }
   ],
   "code_map": {
@@ -48825,59 +48865,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800cf178",
-            "size": 1040,
-            "kind": "function",
-            "name": "OnCollision__13CThrownObjectRC10CCollision",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800cf588",
-            "size": 280,
-            "kind": "function",
-            "name": "UpdateCollisionVolumes__13CThrownObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800cf6a0",
             "size": 816,
             "kind": "function",
             "name": "Constrain__13CThrownObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800cf9d0",
-            "size": 620,
-            "kind": "function",
-            "name": "Draw__13CThrownObjectR12CDrawContext",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800cfc3c",
-            "size": 332,
-            "kind": "function",
-            "name": "BeginUpdate__13CThrownObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800cfd88",
-            "size": 416,
-            "kind": "function",
-            "name": "AttemptUpdate__13CThrownObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800cff28",
-            "size": 360,
-            "kind": "function",
-            "name": "CommitUpdate__13CThrownObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d0090",
-            "size": 236,
-            "kind": "function",
-            "name": "HandleBulletCollision__13CThrownObjectP7CBulletRC10CCollision",
             "evidence": "adjacent-compiler-markers"
           }
         ],

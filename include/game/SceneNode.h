@@ -151,6 +151,7 @@ class CScene {
     int IsNodeInScene(const ISceneNode *) const;
     CPlayerObject *GetPlayer(int) const;
     CPlayerObject *FindClosestPlayer(const CVector3 &);
+    void ExcludeCollision(const ISceneNode &, const ISceneNode &, int);
     void VisitAllNodesInVolume(dwi::IVisitor<ISceneNode> &, const IVolume &, ISceneNode::EVolumeType, bool);
 };
 extern CScene g_scene;
