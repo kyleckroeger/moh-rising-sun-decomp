@@ -1,0 +1,96 @@
+{
+  "id": "box_distance",
+  "source": "src/geometry/box_distance.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8013cdf8",
+      "size": 5152
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a80ac",
+      "size": 52
+    }
+  ],
+  "functions": [
+    {
+      "name": "BoxPointSqrDistance__FRC8CVector3RC7CVolBoxPfN22",
+      "address": "0x8013cdf8",
+      "size": 688,
+      "binding": 1
+    },
+    {
+      "name": "Face__FiiiR8CVector3RC8CVector3RC7CVolBoxT4PfRf",
+      "address": "0x8013d0a8",
+      "size": 1300,
+      "binding": 0
+    },
+    {
+      "name": "CaseNoZeros__FR8CVector3RC8CVector3RC7CVolBoxPfRf",
+      "address": "0x8013d5bc",
+      "size": 332,
+      "binding": 0
+    },
+    {
+      "name": "Case0__FiiiR8CVector3RC8CVector3RC7CVolBoxPfRf",
+      "address": "0x8013d708",
+      "size": 644,
+      "binding": 0
+    },
+    {
+      "name": "Case00__FiiiR8CVector3RC8CVector3RC7CVolBoxPfRf",
+      "address": "0x8013d98c",
+      "size": 384,
+      "binding": 0
+    },
+    {
+      "name": "Case000__FR8CVector3RC7CVolBoxRf",
+      "address": "0x8013db0c",
+      "size": 280,
+      "binding": 0
+    },
+    {
+      "name": "BoxLineSqrDistance__FRC6CLine3RC7CVolBoxPfN32",
+      "address": "0x8013dc24",
+      "size": 1208,
+      "binding": 1
+    },
+    {
+      "name": "BoxSegmentSqrDistance__FRC6CLine3RC7CVolBoxPfN32",
+      "address": "0x8013e0dc",
+      "size": 316,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FastInverse__7CMatrixRC7CMatrix": "0x8007b164",
+    "GetSlot__7CMatrixUi": "0x802790e0",
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "SetFront__7CMatrixRC8CVector3": "0x8007ae44",
+    "SetPos__7CMatrixRC8CVector3": "0x8007ae7c",
+    "SetRight__7CMatrixRC8CVector3": "0x8007ae28",
+    "SetUp__7CMatrixRC8CVector3": "0x8007ae60",
+    "_7CMatrix.s_ClassInit": "0x802c2100",
+    "_7CMatrix.s_TempMat": "0x802fbf00",
+    "__as__7CMatrixRC7CMatrix": "0x8007aa38"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "box.cpp",
+  "original_file_index": 1316
+}

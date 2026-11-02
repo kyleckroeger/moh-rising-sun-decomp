@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 884724,
+    "matching_code_bytes": 891192,
     "total_executable_code_bytes": 2492032,
-    "percent": 35.50211233242591,
+    "percent": 35.761659561353945,
     "categories": {
-      "reconstructed_game": 492508,
+      "reconstructed_game": 498976,
       "restored_library": 392216
     },
-    "matching_functions": 4232
+    "matching_functions": 4241
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -188,6 +188,7 @@
     "config/GR8E69/base64.json": "e88ebd5740a86b7f43b5b6812b6c4e81114d43dfae07a3e7429abb7c6a1bfec7",
     "config/GR8E69/baseline.json": "9ebff32fd809e72fdf889ab49760be2aa1172768f855af86d0251c1fc4da2ef7",
     "config/GR8E69/box_create.json": "08b81afd8e39210b2713de6d2c883d05afc7baaac67b5ec7dc4567f59ce7c7bf",
+    "config/GR8E69/box_distance.json": "eb53a5981bd82d32e5650fa4c6698e1f0f22e0d5f123fc2ae6601c6a0ef05dc0",
     "config/GR8E69/box_tail.json": "93c8bd3f6a93ecf815426857be9e45c636f0c921b4294170f52fd857d8cbaeb3",
     "config/GR8E69/box_test_dispatch.json": "7a70d85d5875938059c2e4354c237ed3d4eb74c8421cf8d0040321c09ea239b0",
     "config/GR8E69/box_test_generic.json": "12b963776c05004668d26beed846112f3ba2cb017ddb92f0c78b7f3d6618592e",
@@ -803,7 +804,7 @@
     "config/GR8E69/player_weapon_overlays.json": "172965adf4a7a763b5932a9744ff75bbf384ef314e25785dee9d7617044a8d5b",
     "config/GR8E69/player_weapon_selectable.json": "c7e3f09ad1510713bfd88ee468db0fcb4c6ef18b3b89bdb414b32ea863b25668",
     "config/GR8E69/player_weapon_shutdown.json": "f90a42342572d125630e7ac3647193288c13301a5309bcdc49cc350364bc2b60",
-    "config/GR8E69/project.json": "60c77bd81a4ca1d57c6ec6dc5c72896a076e517d40a218bc1a58ddf97b05bce6",
+    "config/GR8E69/project.json": "13252ca119f71392251019c74049605063c62344a3c34d8d381927acb77d3cb2",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -1427,6 +1428,7 @@
     "config/GR8E69/sphere_tail.json": "3a9cfc4972b8059592d50e32e96e3c6bdf1b93bd3daaa39de0c3c4a8c1275c17",
     "config/GR8E69/sphere_test_dispatch.json": "d498bbe27e3ece25853eeafc29dd4c99e04ec4d1338a6c643149fc712699ab41",
     "config/GR8E69/sphere_test_generic.json": "95f769239bcc0e36b232ee05e451af9f1242d638de5d16097d2b7f553e8c97cb",
+    "config/GR8E69/sphere_test_line.json": "ec766a1ec01348dbc676187b1f98d8dc537e8508fd8c68da80770598983b7a2e",
     "config/GR8E69/sphere_test_plane.json": "c166becacf52bf416d8e3a4f0c67a4764e76cb085b370daaf98f8647bb1bc76f",
     "config/GR8E69/sphere_test_point.json": "968e1e93db76ec7ae73695edaab101b513a9d024be8066a8a7e0300c28ae9d80",
     "config/GR8E69/sphere_test_sphere.json": "4e00f0dc016dbf348da9f1c050aaa4cbc3cc12a506cef19260354d21d00ef929",
@@ -2646,6 +2648,7 @@
     "src/geometry/animated_volume_head.cpp": "23df314f9ced954f09dc466dd40c5733f234b699a9f5fb655a3c2e12ae551ba4",
     "src/geometry/animated_volume_tests.cpp": "f840db7fa1a281f301e273992e262605cdd17e463498259772e58a6746b88724",
     "src/geometry/box_create.cpp": "b33c7f1f47ad817c4982521c7165fd593c63b2c086e50fd8ea64814426a42c51",
+    "src/geometry/box_distance.cpp": "b1e810964e4f5ea017c047e0f0650be6d5993a5c88576a685d0b02293c67989c",
     "src/geometry/box_tail.cpp": "f03563f12a9c677d103f2ab4073f7a8b6168693bf317eeccdb750837dea6746a",
     "src/geometry/box_test_dispatch.cpp": "624e77fe5ee294e5bc2c364225cad880fa6a1b0e5c6566d85150cf467dafd0ed",
     "src/geometry/box_test_generic.cpp": "12f0577f0bffce624b57e5b34d9d4974105eedb024a3ac17a25a75899ee34ff1",
@@ -2704,6 +2707,7 @@
     "src/geometry/sphere_tail.cpp": "187f94405632d2d6c5dd0a5add03873e84af30f138df2251fdd5435b1afe9431",
     "src/geometry/sphere_test_dispatch.cpp": "99f0befcd9289a39467644fe130062eb2da9ad28e14d3b96462fee0cfb41c243",
     "src/geometry/sphere_test_generic.cpp": "ebb45981c0f5bfb82f5d439ebbf349e2f5c658bd778466152ad82d4bc737d274",
+    "src/geometry/sphere_test_line.cpp": "490d907ce977ebedb62fbfaf60fe7ef53fd6844a45ee8de7a707e34ccba97c1f",
     "src/geometry/sphere_test_plane.cpp": "2f2cdb479d8db4a6604c43a39069424116712e3eb1a00e0c891731046ac5a7d2",
     "src/geometry/sphere_test_point.cpp": "02d29c84bd5b34eefcc15ca9dcb9b12840454acd97010b0de915fadd758ac5c8",
     "src/geometry/sphere_test_sphere.cpp": "60797e3ad5c4d43e0577280ad3b786a5918bfcde5295892cfce98848e1bb732e",
@@ -37625,6 +37629,42 @@
       "discarded_functions": [],
       "object_sha256": "8b986c51372333e597843333879f9b30bd362d658e0acb37b46203dfbb3ec92f",
       "linked_sha256": "bed9be9c9e1f19a0163cf90d5d538dcc411f768984eed69713cc00293089ca99"
+    },
+    {
+      "id": "sphere_test_line",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 1316,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "6adfaa35a2f24f9d649d04b63501133db2a671af2d5ade4a722cdde0a4aab08c",
+      "linked_sha256": "f8eb2bbb98e39881e6ca51d6cf9c60e27097b4051fa0933a4695734357e9ec68"
+    },
+    {
+      "id": "box_distance",
+      "category": "reconstructed_game",
+      "functions": 8,
+      "code_bytes": 5152,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e4de7a7afb7c12d0135e57aa31a17186c1375f792aeee8cc4744826e60a3127a",
+      "linked_sha256": "f5114a2375c9ae65fa1910762335ea4885210b641460e3cedfb69ef5fd228c4d"
     }
   ],
   "code_map": {
@@ -58291,13 +58331,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x801371a8",
-            "size": 1316,
-            "kind": "function",
-            "name": "TestCollision__C10CVolSphereRC6CLine3R10CCollisionb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x801377f0",
             "size": 1284,
             "kind": "function",
@@ -58390,62 +58423,6 @@
             "size": 568,
             "kind": "function",
             "name": "GetExtents__C7CVolBoxR8CVector3T1",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8013cdf8",
-            "size": 688,
-            "kind": "function",
-            "name": "BoxPointSqrDistance__FRC8CVector3RC7CVolBoxPfN22",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8013d0a8",
-            "size": 1300,
-            "kind": "function",
-            "name": "Face__FiiiR8CVector3RC8CVector3RC7CVolBoxT4PfRf",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x8013d5bc",
-            "size": 332,
-            "kind": "function",
-            "name": "CaseNoZeros__FR8CVector3RC8CVector3RC7CVolBoxPfRf",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x8013d708",
-            "size": 644,
-            "kind": "function",
-            "name": "Case0__FiiiR8CVector3RC8CVector3RC7CVolBoxPfRf",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x8013d98c",
-            "size": 384,
-            "kind": "function",
-            "name": "Case00__FiiiR8CVector3RC8CVector3RC7CVolBoxPfRf",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x8013db0c",
-            "size": 280,
-            "kind": "function",
-            "name": "Case000__FR8CVector3RC7CVolBoxRf",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x8013dc24",
-            "size": 1208,
-            "kind": "function",
-            "name": "BoxLineSqrDistance__FRC6CLine3RC7CVolBoxPfN32",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8013e0dc",
-            "size": 316,
-            "kind": "function",
-            "name": "BoxSegmentSqrDistance__FRC6CLine3RC7CVolBoxPfN32",
             "evidence": "adjacent-compiler-markers"
           }
         ],

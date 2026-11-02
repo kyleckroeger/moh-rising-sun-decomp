@@ -1671,7 +1671,9 @@
     "sound_sfecho.json",
     "sound_supmutf.json",
     "sound_spktplay.json",
-    "sound_scalcpitch.json"
+    "sound_scalcpitch.json",
+    "sphere_test_line.json",
+    "box_distance.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
