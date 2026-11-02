@@ -1,0 +1,50 @@
+{
+  "id": "ea_printn3",
+  "source": "src/ea/printn3.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80218dec",
+      "size": 44
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bf7a0",
+      "size": 36
+    },
+    {
+      "name": ".data",
+      "address": "0x802d5420",
+      "size": 96
+    }
+  ],
+  "functions": [
+    {
+      "name": "PRINT_debuggerfunc__F12PRINTCHANNELPCc",
+      "address": "0x80218dec",
+      "size": 44,
+      "binding": 0
+    }
+  ],
+  "externals": {
+    "OSReport": "0x80255298"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "printn3.cpp",
+  "original_file_index": 3022
+}

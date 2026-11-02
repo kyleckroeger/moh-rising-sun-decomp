@@ -1312,7 +1312,11 @@
     "sound_sover.json",
     "sound_smemhigh.json",
     "sound_sbhdrsze.json",
-    "ea_syncfile.json"
+    "ea_syncfile.json",
+    "sound_ssysreal.json",
+    "ea_printn3.json",
+    "sound_spantoaz.json",
+    "ea_fontnull.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

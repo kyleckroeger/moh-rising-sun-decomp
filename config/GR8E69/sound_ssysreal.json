@@ -1,0 +1,61 @@
+{
+  "id": "sound_ssysreal",
+  "source": "src/sound/ea/ssysreal.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80226d00",
+      "size": 152
+    },
+    {
+      "name": ".data",
+      "address": "0x802d65f4",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDREAL_systemtask__Fii",
+      "address": "0x80226d00",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "SNDREAL_abortmsg__FPc",
+      "address": "0x80226d24",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "SNDSYS_vectortoreal",
+      "address": "0x80226d28",
+      "size": 112,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "REAL_addexit": "0x802176d4",
+    "SNDREAL_exithandler__Fv": "0x802276c8",
+    "SNDSYS_service": "0x802217d8",
+    "SYNCTASK_add": "0x80217ff4",
+    "sndgs": "0x804108fc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "ssysreal.c",
+  "original_file_index": 3213
+}
