@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 911144,
+    "matching_code_bytes": 911252,
     "total_executable_code_bytes": 2492032,
-    "percent": 36.56229133494273,
+    "percent": 36.566625147670656,
     "categories": {
-      "reconstructed_game": 518928,
+      "reconstructed_game": 519036,
       "restored_library": 392216
     },
-    "matching_functions": 4341
+    "matching_functions": 4345
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -320,6 +320,7 @@
     "config/GR8E69/ea_syncfile.json": "5ad7e6a48ddd491ff43841235023597f0e85b8175ab705de2379f78c7ea3b886",
     "config/GR8E69/ea_systask.json": "141ec34b15f33585ca8126e62d8155683f6b747bb061d43d88ac144d23f18663",
     "config/GR8E69/ea_threads.json": "b334b5342f45164624e235b5721cf91d927372692207369e96d177e29430be3f",
+    "config/GR8E69/ea_timer_tail.json": "1781f460ba94bfb6df1cf295cb93c69e1176a3b454a159b6d182e86198628398",
     "config/GR8E69/ea_timerthread.json": "bfa69e1a4f9067764b5ab1a8149fa69fcedac577e7971798acc0c9564c317163",
     "config/GR8E69/eagl_anim_anim_bank.json": "099184ad089e02e1952a18845c77b39f4e014ff9d32791205e9bbdc685b078ff",
     "config/GR8E69/eagl_anim_base.json": "385c7ed571a411e39f9d3051397d219e970bb687c378c1fbf7a969c9ea0f4089",
@@ -820,7 +821,7 @@
     "config/GR8E69/player_weapon_overlays.json": "172965adf4a7a763b5932a9744ff75bbf384ef314e25785dee9d7617044a8d5b",
     "config/GR8E69/player_weapon_selectable.json": "c7e3f09ad1510713bfd88ee468db0fcb4c6ef18b3b89bdb414b32ea863b25668",
     "config/GR8E69/player_weapon_shutdown.json": "f90a42342572d125630e7ac3647193288c13301a5309bcdc49cc350364bc2b60",
-    "config/GR8E69/project.json": "17ea900bbffd81bff9d03189374c53254afe0e79d1554c8a7ed4eb8cc7041bc6",
+    "config/GR8E69/project.json": "440cd48adede6e4ac4664440a51f0ff7176bb57537ae7bf22666a23b0191f223",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -2457,6 +2458,7 @@
     "src/ea/syncfile.cpp": "3df57d815e9d7e8ef396fdcf881e8e89ed7b7e77c762f80a3a18c0bf42ed09ba",
     "src/ea/systask.cpp": "064e88a22a3eb4ce2abeccd180f0df17d49e86028b44b3fc0a54e8cf7365d4bb",
     "src/ea/threads.cpp": "2c7671ef74c09c1d408ee608078336f80cd6017d0caffdfa6e53ac79d5edf327",
+    "src/ea/timer_tail.cpp": "8a34ce2d6e79a388a856400e71ee18545ca2e0732f04571cbc174e558340c2bc",
     "src/ea/timerthread.cpp": "20cae02efd81691bf08a6c1e883b2df0059457929220cab81bb80a2b605cb50a",
     "src/eagl/eagl_common_state_strings.cpp": "77d62062b069735a6f417ea2a70af129c6c8a18d87c7ab771dbdd531c6beb753",
     "src/eagl/eagl_cpt_color.cpp": "aa4f541f224ab98ddd4e58dbe1134876cbad6a34b5bc8b6797d39bf7b666ce7f",
@@ -38212,6 +38214,25 @@
       "discarded_functions": [],
       "object_sha256": "91be9da640d0a6d011146c4099ad9fd856e6ce6545238296723a7bb78e3f7ba9",
       "linked_sha256": "3fc119334689ba516cc150e2bc922833b11861074747840bb1ec4f2634639a8a"
+    },
+    {
+      "id": "ea_timer_tail",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 108,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "0dc9b07808a40e46a22452b4d7c6eb527252a0fbf038fbbea8ad170f840d3257",
+      "linked_sha256": "46cb6c1fe3d7d98f1a6357ba0e33ce9821effd719eb57b10de3147b6780f408b"
     }
   ],
   "code_map": {
@@ -75159,50 +75180,11 @@
             "kind": "function",
             "name": "TIMER_init",
             "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x802179d4",
-            "size": 36,
-            "kind": "function",
-            "name": "AlarmHandler__FP7OSAlarmP9OSContext",
-            "evidence": "local-file-symbol"
           }
         ],
         "marker_interval": [
           "0x802177e4",
           "0x802179f8"
-        ]
-      },
-      {
-        "name": "Unmatched files/timer.cpp [inferred file group]",
-        "file_record": 524,
-        "file_name": "timer.cpp",
-        "ranges": [
-          {
-            "address": "0x802179f8",
-            "size": 8,
-            "kind": "function",
-            "name": "TIMER_gettick",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80217a00",
-            "size": 56,
-            "kind": "function",
-            "name": "TIMER_elapsedticks",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80217a38",
-            "size": 8,
-            "kind": "function",
-            "name": "TIMER_getfrequency",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x802179f8",
-          "0x80217a40"
         ]
       },
       {
