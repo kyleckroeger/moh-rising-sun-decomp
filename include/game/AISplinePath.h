@@ -63,6 +63,12 @@ public:
 // Observed prefix through the locomotion pointer at +0x20. Constructor and
 // traversal accesses agree; this is not the complete navigation class.
 class CAIObject;
+// Method-only view of an A* area node.
+class CAreaPathNode {
+public:
+    void GetFurthestVertex(const CVector3 &, const CVector3 &, CVector3 *, bool) const;
+    void BiasTowardCentroid(CVector3 *, float) const;
+};
 class CAIAreaPathFinding {
 public:
     unsigned char unknown00[0x20];
@@ -79,6 +85,7 @@ public:
     void UpdateAStarPathWalk();
     bool SetupAStarPathWalkForPatrol(const CVector3 &);
     void RemovePointersTo(CAIObject *);
+    CAreaPathNode *GreedySearchAwayFromPoint(const CVector3 &, float, bool);
     void Update();
 };
 // Static navigation-mesh query. A namespace, not a class: ProDG mangles a no-argument

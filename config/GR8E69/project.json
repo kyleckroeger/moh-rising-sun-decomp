@@ -1682,7 +1682,11 @@
     "ai_AIObjectVisionSetup.json",
     "ai_AIObjectLineOfSight.json",
     "box_test_line.json",
-    "ea_threads.json"
+    "ea_threads.json",
+    "ai_AIObjectBestBehavior.json",
+    "ai_AIObjectMatchList.json",
+    "ai_AIObjectFindBehavior.json",
+    "ai_AIObjectSightHelpers.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

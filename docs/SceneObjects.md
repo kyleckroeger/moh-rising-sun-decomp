@@ -99,6 +99,8 @@ tree and a later reader should expect them to be close rather than solved.
   the const overload back too: that function and `IsObjectOccluded` share the two merged
   height tables and the literals are contiguous, so it cannot land in a unit of its own.
 - `CAIObject::IsObjectReachable` (44): a second temporary copy of the start vector.
+- `CAIObject::FindRunAwayPoint` (25): the shared failure return sits before the search, where this
+  build moves the zero result into a conditional store.
 
 The script-motion bits in `CStaticObject` are tested through inline accessors that each return
 one bit; without them `||` merges the tests into one mask. The accessor names are descriptive.

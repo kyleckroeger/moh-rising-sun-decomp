@@ -1,0 +1,52 @@
+{
+  "id": "ai_AIObjectSightHelpers",
+  "source": "src/ai/AIObjectSightHelpers.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800dcd0c",
+      "size": 384
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a289c",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "IsObjectInFieldOfView__9CAIObjectR9CAIObjectff",
+      "address": "0x800dcd0c",
+      "size": 188,
+      "binding": 1
+    },
+    {
+      "name": "IsObjectInLineOfSight__9CAIObjectRC9CAITargetf",
+      "address": "0x800dcdc8",
+      "size": 196,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetPosition__C9CAITarget": "0x800eea68",
+    "IsObjectInFieldOfView__9CAIObjectRC8CVector3ffbP10ISceneNode": "0x800db800"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIObject.cpp",
+  "original_file_index": 977
+}

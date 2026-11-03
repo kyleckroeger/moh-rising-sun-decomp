@@ -103,7 +103,7 @@ public:
     unsigned char unknown00[8];
     int enabled; // +0x08
     virtual ~CBehavior();
-    virtual void PureSlot2() = 0;
+    virtual float PureSlot2() = 0; // Compared to pick the best behavior; name descriptive.
     virtual void PureSlot3() = 0;
     virtual void PureSlot4() = 0;
     virtual int Start() = 0;
@@ -258,8 +258,8 @@ public:
     int IsObjectInLineOfSight(const CAITarget &, float);
     float GetHearingDistance();
     float GetAIValueByName(const char *);
-    CAIBehavior *FindMatchingBehavior(EBehaviorType);
-    CAIBehavior *FindMatchingBehaviorByCRC(int);
+    CBehavior *FindMatchingBehavior(EBehaviorType);
+    CBehavior *FindMatchingBehaviorByCRC(int);
     float GetDistanceSquaredXYReal(CAITarget);
     // Original nested enum tag; its members are unknown.
     enum ECollisionTestStyle { CollisionTestStyleDefault = 0 };
@@ -283,6 +283,7 @@ public:
     void ClearBehavior();
     int GetBehaviorCapability(ECapability);
     CBehavior *FindBestBehavior();
+    CBehavior *FindMatchingBehviorFromCurrentState(EBehaviorType);
     void GetLocation(float *, float *, float *);
     void GetLocation(CVector3 *);
     float GetDistanceXYZReal(CAIObject *);
