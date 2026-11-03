@@ -1,0 +1,50 @@
+{
+  "id": "sound_sdspmix_vol",
+  "source": "src/sound/ea/sdspmix_vol.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80223c78",
+      "size": 68
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDDRV_DSPMixerReleaseChannel__FP6_AXVPB",
+      "address": "0x80223c78",
+      "size": 28,
+      "binding": 1
+    },
+    {
+      "name": "SNDDRV_DSPMixerSetVol__FP6_AXVPBi",
+      "address": "0x80223c94",
+      "size": 40,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__MIXChannel": "0x8041d134"
+  },
+  "local_externals": [
+    "__MIXChannel"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sdspmix.c",
+  "original_file_index": 3157
+}
