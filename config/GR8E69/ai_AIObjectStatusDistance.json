@@ -1,0 +1,60 @@
+{
+  "id": "ai_AIObjectStatusDistance",
+  "source": "src/ai/AIObjectStatusDistance.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800dabd4",
+      "size": 588
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a2650",
+      "size": 68
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetDistanceSquaredXYReal__9CAIObjectG9CAITarget",
+      "address": "0x800dabd4",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "ComputeStatusDistance__9CAIObjectP9CAITarget",
+      "address": "0x800dac10",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "ComputeStatusExponentialDistance__9CAIObjectP9CAITarget",
+      "address": "0x800dac80",
+      "size": 416,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DistanceSquaredXY__C8CVector3RC8CVector3": "0x8007be08",
+    "DistanceXY__C8CVector3RC8CVector3": "0x8007bd44",
+    "Distance__C8CVector3RC8CVector3": "0x8007bcd4",
+    "GetPosition__C9CAITarget": "0x800eea68"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIObject.cpp",
+  "original_file_index": 977
+}

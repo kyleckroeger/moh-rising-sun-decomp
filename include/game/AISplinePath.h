@@ -62,6 +62,7 @@ public:
 };
 // Observed prefix through the locomotion pointer at +0x20. Constructor and
 // traversal accesses agree; this is not the complete navigation class.
+class CAIObject;
 class CAIAreaPathFinding {
 public:
     unsigned char unknown00[0x20];
@@ -77,6 +78,8 @@ public:
     void ExitAStarVolume(int);
     void UpdateAStarPathWalk();
     bool SetupAStarPathWalkForPatrol(const CVector3 &);
+    void RemovePointersTo(CAIObject *);
+    void Update();
 };
 // Static navigation-mesh query. A namespace, not a class: ProDG mangles a no-argument
 // function in a namespace with a trailing `v` (`ResetAreaPathNodes__13AIPathFindingv`) and a

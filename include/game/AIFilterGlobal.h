@@ -6,6 +6,8 @@ class CAISplinePath;
 // AI-assisted prefix through +0x13. The original singleton has additional
 // storage; this is not an allocation type. See docs/Paths.md.
 class IVolume;
+class ISceneNode;
+class CVector3;
 class CAIFilterGlobal {
 public:
     unsigned int frameCount;
@@ -17,6 +19,8 @@ public:
     void UpdateFromGlobals(float);
     void UpdateToGlobals();
     void EnableAllAStarPathNodes();
+    static int CheckVisionLineToEnvironment(const CVector3 &, const CVector3 &, ISceneNode *, ISceneNode *);
+    static int CheckCollisionLineToEnvironment(const CVector3 &, const CVector3 &, ISceneNode *, ISceneNode *);
     void DisableCollidingAStarPathNodes(const IVolume *);
     void CreateSplinePathManager(void *, BPDPolyPath *, int);
     void ResetSplinePathManager(void *, BPDPolyPath *, int);

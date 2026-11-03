@@ -115,6 +115,7 @@ public:
     virtual void Enable();
     virtual void Disable();
     virtual int GetScriptObject();
+    int Update(int, bool);
 };
 // Method-only view of the embedded tactics module.
 class CAITactics {
@@ -155,13 +156,22 @@ class CAIFilterObject;
 class CPlayerObject;
 class CAITankObject;
 class IMovingSceneNode;
+class CBehavior;
+// One high-level state's behavior list (four are stored from +0x380).
+struct AIBehaviorList {
+    CBehavior *behaviors[32];
+    int count;
+};
 class CAIObject {
 public:
+    CAIPhysics *Physics() { return (CAIPhysics *)physicsPrefix; }
     CAIObject *nextGlobal;   // +0x00; the global AI object list.
     CAIFilterObject *filter; // +0x04; the owning filter.
-    unsigned char unknown08[4];
+    IMovingSceneNode *sceneNode; // +0x08; set by UpdateFromGameObject.
     BSObject *scriptObject;
-    unsigned char unknown10[0x20];
+    EAIHighLevelState highLevelState; // +0x10
+    unsigned char unknown14[0xc];
+    unsigned char physicsPrefix[0x10]; // +0x20; start of the CAIPhysics module.
     CVector3 position;
     unsigned char unknown40[0x20];
     CVector3 forward;
@@ -178,14 +188,15 @@ public:
     BSObject *previousBehaviorScript; // +0x374
     CBehavior *currentBehavior;       // +0x378
     CBehavior *nextBehavior;          // +0x37c
-    unsigned char unknown380[0x594 - 0x380];
+    AIBehaviorList behaviorLists[4]; // +0x380; indexed by high-level state minus one.
+    float lastUpdateTime; // +0x590; written from the AI clock by Update.
     int cookie;          // +0x594; script-owned value (BIFunc_GetCookie/SetCookie).
     unsigned char team;  // +0x598; set by BIFunc_AISetTeam.
     unsigned char unknown599; // +0x599; 4 for soldiers, 7 for tanks and 5 for players.
     short id;            // +0x59a; the trigger's "ID".
     unsigned char unknown59c[0x5e0 - 0x59c];
     unsigned int statusFlags2; // +0x5e0; bit 0 cleared with flag 2.
-    unsigned char unknown5e4[4];
+    unsigned int previousStatusFlags2; // +0x5e4
     unsigned int statusFlags;  // +0x5e8; set and cleared by BIFunc_AISendFlag.
     CAIStatus status;    // +0x5ec
     unsigned char unknown61c[0x620 - 0x61c];
@@ -195,7 +206,18 @@ public:
     float accuracyFar;   // +0x62c
     unsigned char unknown630[0x638 - 0x630];
     float hearingRadius; // +0x638; set by BIFunc_AISetHearingRadius.
-    unsigned char unknown63c[0x6e4 - 0x63c];
+    unsigned char unknown63c[4];
+    CAITarget visionTarget;      // +0x640; last match in field-of-view list mode.
+    CAITarget fieldOfViewTarget; // +0x64c; field-of-view object mode.
+    unsigned char unknown658[0x698 - 0x658];
+    float fieldOfViewListRange;    // +0x698
+    float fieldOfViewObjectRange;  // +0x69c
+    float fieldOfViewCorpseRange;  // +0x6a0
+    float fieldOfViewObjectAngle;  // +0x6a4; scaled from the caller's value.
+    float fieldOfViewListAngle;    // +0x6a8
+    float fieldOfViewCorpseAngle;  // +0x6ac
+    aistatus_match visionMatchList[4]; // +0x6b0
+    int visionMatchCount;          // +0x6e0
     int inShadow;        // +0x6e4
     float shadowAmount;  // +0x6e8
     int matchList;       // +0x6ec; first word of the soldier match list returned by address.
@@ -220,6 +242,22 @@ public:
     void Init();
     void SetAIStatusVar(aistatus_var, int);
     int IsObjectInFieldOfView(CAIObject &, float, float);
+    int IsObjectInFieldOfView(const CVector3 &, float, float, bool, ISceneNode *);
+    int IsObjectInFieldOfView(const CVector3 &, const CVector3 &, const CVector3 &, float, float, bool, ISceneNode *);
+    int IsObjectOccluded(const CVector3 &, const CVector3 &, bool, ISceneNode *);
+    CAITarget *CheckFieldOfViewModeObject();
+    int CheckFieldOfViewModeList(CAITarget &);
+    int SearchNonAITargetsInFieldOfView(CAITarget &);
+    int CheckFieldOfViewCorpse(CAITarget &);
+    CAITarget *CheckLineOfSightModeObject();
+    int CheckLineOfSightModeList(CAITarget &);
+    int IsTargetInLineOfSight(float);
+    int IsObjectInLineOfSight(const CVector3 &, float, bool, const CAITarget *);
+    int IsObjectInLineOfSight(const CVector3 &, const CVector3 &, float, bool) const;
+    int IsObjectReachable(const CVector3 &);
+    int IsObjectInLineOfSight(const CAITarget &, float);
+    float GetHearingDistance();
+    float GetAIValueByName(const char *);
     CAIBehavior *FindMatchingBehavior(EBehaviorType);
     CAIBehavior *FindMatchingBehaviorByCRC(int);
     float GetDistanceSquaredXYReal(CAITarget);
@@ -255,7 +293,7 @@ public:
     void OnStateChange(EAIHighLevelState, EAIHighLevelState);
     void OnDeath();
     void SetupTargetMatchList(aistatus_match *, int);
-    int IsCrouching() const;
+    bool IsCrouching() const;
     int IsPlayer() const;
     int CheckIncomingFlagAll(unsigned int) const;
     int GetAIStatusVar(aistatus_var) const;
@@ -269,6 +307,11 @@ public:
     int IsNearbyPositionOnAStarMesh(ECollisionTestDirection, float);
     void SetupFieldOfViewCorpse(float, float);
     int FindRunAwayPoint(const ISceneNode *, float, CVector3 *, bool);
+    static void ResetGlobalList();
+    void UpdateHeuristics(int, bool);
+    CAIObject *GetNextVisionTarget();
+    int IsObjectInVisionDistance(const CVector3 &, float) const;
+    int ChooseTarget(float);
 };
 // Doodad and filter prefixes reached by the script built-ins: the doodad's first
 // word is its filter, and the filter's second word is the AI object.
@@ -332,11 +375,11 @@ public:
     virtual void OnDeath();
     virtual void SetupTargetMatchList(aistatus_match *, int);
     virtual int ChooseTarget(float);
-    virtual int IsCrouching() const;
+    virtual bool IsCrouching() const;
     virtual int IsPlayer() const;
     virtual void GetLookDirection(CVector3 &, CVector3 &);
     virtual int GetAIValueByName(const char *);
-    virtual int IsObjectInLineOfSight(const CVector3 &, float, bool, const ISceneNode *);
+    virtual int IsObjectInLineOfSight(const CVector3 &, float, bool, const CAITarget *);
     virtual ISceneNode *GetSceneNode();
 };
 enum EGrenadeThrow { GrenadeThrowUnknown = 0 };

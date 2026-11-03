@@ -26,7 +26,7 @@ public:
     virtual void PreUpdate();
     virtual void Update(float);
     virtual void UpdateFromGameObject(IMovingSceneNode *);
-    virtual int IsCrouching() const;
+    virtual bool IsCrouching() const;
     virtual int IsPlayer() const;
     virtual void GetLookDirection(CVector3 &, CVector3 &);
     virtual ISceneNode *GetSceneNode();

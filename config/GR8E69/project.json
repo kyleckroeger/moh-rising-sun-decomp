@@ -1677,7 +1677,11 @@
     "sound_sinitut.json",
     "sound_sdspmix_vol.json",
     "sound_sdrv_vrange.json",
-    "sound_spatkey.json"
+    "sound_spatkey.json",
+    "ai_AIObjectHeuristics.json",
+    "ai_AIObjectStatusDistance.json",
+    "ai_AIObjectVisionSetup.json",
+    "ai_AIObjectLineOfSight.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

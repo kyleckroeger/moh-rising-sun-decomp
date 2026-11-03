@@ -1,0 +1,105 @@
+{
+  "id": "ai_AIObjectVisionSetup",
+  "source": "src/ai/AIObjectVisionSetup.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800daebc",
+      "size": 1680
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a2694",
+      "size": 244
+    }
+  ],
+  "functions": [
+    {
+      "name": "ComputeStatusLOSValue__9CAIObjectP9CAITarget",
+      "address": "0x800daebc",
+      "size": 244,
+      "binding": 1
+    },
+    {
+      "name": "ComputeStatusIsEnemy__9CAIObjectP9CAITarget",
+      "address": "0x800dafb0",
+      "size": 176,
+      "binding": 1
+    },
+    {
+      "name": "GetNextVisionTarget__9CAIObject",
+      "address": "0x800db060",
+      "size": 160,
+      "binding": 1
+    },
+    {
+      "name": "IsObjectInVisionDistance__C9CAIObjectRC8CVector3f",
+      "address": "0x800db100",
+      "size": 140,
+      "binding": 1
+    },
+    {
+      "name": "SetupFieldOfViewModeObject__9CAIObjectRC9CAITargetff",
+      "address": "0x800db18c",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "SetupFieldOfViewModeList__9CAIObjectP14aistatus_matchiff",
+      "address": "0x800db1c0",
+      "size": 196,
+      "binding": 1
+    },
+    {
+      "name": "SetupFieldOfViewCorpse__9CAIObjectff",
+      "address": "0x800db284",
+      "size": 128,
+      "binding": 1
+    },
+    {
+      "name": "CheckFieldOfViewModeObject__9CAIObject",
+      "address": "0x800db304",
+      "size": 300,
+      "binding": 1
+    },
+    {
+      "name": "CheckFieldOfViewModeList__9CAIObjectR9CAITarget",
+      "address": "0x800db430",
+      "size": 284,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Distance__C8CVector3RC8CVector3": "0x8007bcd4",
+    "GetGlobalListStart__9CAIObject": "0x800d9e48",
+    "GetPosition__C9CAITarget": "0x800eea68",
+    "IsObjectInFieldOfView__9CAIObjectRC8CVector3ffbP10ISceneNode": "0x800db800",
+    "MatchStatusList__9CAIStatusP14aistatus_matchi": "0x800deb68",
+    "Matches__9CAITargetRC9CAITarget": "0x800eecc8",
+    "Nullify__9CAITarget": "0x800eed5c",
+    "SearchNonAITargetsInFieldOfView__9CAIObjectR9CAITarget": "0x800db54c",
+    "SetAsAITarget__9CAITargetP9CAIObject": "0x800eed70",
+    "SetLastSeenTargetPosition__12CAITargetingRC8CVector3": "0x800ecf08",
+    "g_iMsgVerbosityLevel": "0x802c1b48",
+    "memcpy": "0x802665e8",
+    "printf": "0x8026374c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIObject.cpp",
+  "original_file_index": 977
+}

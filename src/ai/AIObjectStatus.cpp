@@ -8,7 +8,7 @@ void *CAIObject::AsAITankObject() { return 0; }
 void CAIObject::OnStateChange(EAIHighLevelState, EAIHighLevelState) {}
 void CAIObject::OnDeath() {}
 void CAIObject::SetupTargetMatchList(aistatus_match *, int) {}
-int CAIObject::IsCrouching() const { return 0; }
+bool CAIObject::IsCrouching() const { return false; }
 int CAIObject::IsPlayer() const { return 0; }
 
 int CAIObject::CheckIncomingFlagAll(unsigned int flags) const { return (statusFlags & flags) == flags; }

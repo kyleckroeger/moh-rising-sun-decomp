@@ -449,7 +449,7 @@ class CPlayerObject {
     void SetZoom(float);
     void Respawn();
     int CanPlayerSwitchWeapon();
-    int IsPlayerCrouching() const;
+    bool IsPlayerCrouching() const;
     int IsInvincible() const;
     void SetMPShotLocation(BS_STRUCT_HitByBulletInfo_struct *);
     void StartDeathSequence();

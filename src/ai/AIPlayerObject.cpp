@@ -61,7 +61,7 @@ void CAIPlayerObject::UpdateStatus() {
     self->SetAIStatusVar((aistatus_var)3, 1);
 }
 
-int CAIPlayerObject::IsCrouching() const {
+bool CAIPlayerObject::IsCrouching() const {
     return g_scene.GetPlayer(0)->IsPlayerCrouching();
 }
 

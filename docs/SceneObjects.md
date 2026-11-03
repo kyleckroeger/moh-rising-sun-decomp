@@ -92,6 +92,13 @@ tree and a later reader should expect them to be close rather than solved.
   boundary before the double. A `static const float` in a `.rodata.*` section is folded back
   into the pool, so the subsection mapping cannot place it.
 - `NullDeallocateArchiveBuffer` has local binding and no caller in a matched unit.
+- `CAIObject::ComputeStatusThreatValue` (18): the value and status pointer swap registers and
+  the result is not kept in a saved register.
+- `CAIObject::IsObjectInLineOfSight(const CVector3 &, float, bool, const CAITarget *)` (49):
+  the only cause is that the target-vector address is hoisted out of the height loop. It holds
+  the const overload back too: that function and `IsObjectOccluded` share the two merged
+  height tables and the literals are contiguous, so it cannot land in a unit of its own.
+- `CAIObject::IsObjectReachable` (44): a second temporary copy of the start vector.
 
 The script-motion bits in `CStaticObject` are tested through inline accessors that each return
 one bit; without them `||` merges the tests into one mask. The accessor names are descriptive.
