@@ -1,0 +1,48 @@
+{
+  "id": "sound_sdrv_prestore",
+  "source": "src/sound/ea/sdrv_prestore.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8021c518",
+      "size": 164
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDPLATFORM_restore__Fv",
+      "address": "0x8021c518",
+      "size": 164,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AXQuit": "0x8022e884",
+    "AXRegisterAuxACallback": "0x8022f208",
+    "OSCancelThread": "0x8025a664",
+    "SNDARAM_restore__Fv": "0x80222960",
+    "SNDDRV_restoremixer__Fv": "0x8021bb24",
+    "SNDSYS_leavecritical": "0x8021f988",
+    "snddrv": "0x80410c40",
+    "sndgs": "0x804108fc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "snddrv.c",
+  "original_file_index": 3064
+}

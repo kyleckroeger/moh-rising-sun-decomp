@@ -1,0 +1,53 @@
+{
+  "id": "sound_snddrv_alloc",
+  "source": "src/sound/ea/snddrv_alloc.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8021b294",
+      "size": 692
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bf7c8",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDDRV_allocateaxvoice__Fi",
+      "address": "0x8021b294",
+      "size": 692,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AXAcquireVoice": "0x8022ec0c",
+    "AXFreeVoice": "0x8022eb8c",
+    "SNDDRV_DSPMixerInitChannel__FP6_AXVPBUliUsUsPfUsi": "0x80223a84",
+    "SNDDRV_callbackdropvoice__FPv": "0x8021b1bc",
+    "SNDI_aztospkrvol__FiPf": "0x8022315c",
+    "SNDVOICEI_free__Fi": "0x802192bc",
+    "snddrv": "0x80410c40",
+    "sndgs": "0x804108fc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "snddrv.c",
+  "original_file_index": 3064
+}

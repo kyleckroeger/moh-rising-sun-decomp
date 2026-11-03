@@ -1693,7 +1693,10 @@
     "capsule_transformed_copy.json",
     "ai_AIObjectTargetTeam.json",
     "ai_AISoldierObjectNew.json",
-    "ai_AISoldierObjectUpdate.json"
+    "ai_AISoldierObjectUpdate.json",
+    "sound_snddrv_alloc.json",
+    "sound_sdrv_caps.json",
+    "sound_sdrv_prestore.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
