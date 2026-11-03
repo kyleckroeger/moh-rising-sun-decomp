@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 910184,
+    "matching_code_bytes": 911144,
     "total_executable_code_bytes": 2492032,
-    "percent": 36.523768555138936,
+    "percent": 36.56229133494273,
     "categories": {
-      "reconstructed_game": 517968,
+      "reconstructed_game": 518928,
       "restored_library": 392216
     },
-    "matching_functions": 4339
+    "matching_functions": 4341
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -782,6 +782,7 @@
     "config/GR8E69/particle_terminate.json": "a86b85ccc5b1c04cc5f96524f3f4aee0e0605b48bdb06a2997185d7dad795f87",
     "config/GR8E69/particle_tm_local_to_world.json": "8857f22743da7deaf073d151e725db0f9a853e07de836188155d521797832301",
     "config/GR8E69/particle_velocity.json": "0e01a076771a973ea3070d16303239017aecb9fe38ed3185d094fff6f62a21b9",
+    "config/GR8E69/plane_transform_intersect.json": "a9d6d8fbd00fd7c137f81a216f6b95ddb3e8b7738a241f61469e0dd7389a21c5",
     "config/GR8E69/player_accessors.json": "78bc1825debdcabaf5a9ab0a70fe1641cc05093cd95668a51e9153c9d0478c40",
     "config/GR8E69/player_actions.json": "f8b21144b77884abcbd744111a4da60e5e48c0be3ea095252c97245100ec9f61",
     "config/GR8E69/player_ammo_counts.json": "a257652b0c26775b4bd139ee3e2ce70525ac451a83048ae2ac4ed4d307b1f9a6",
@@ -819,7 +820,7 @@
     "config/GR8E69/player_weapon_overlays.json": "172965adf4a7a763b5932a9744ff75bbf384ef314e25785dee9d7617044a8d5b",
     "config/GR8E69/player_weapon_selectable.json": "c7e3f09ad1510713bfd88ee468db0fcb4c6ef18b3b89bdb414b32ea863b25668",
     "config/GR8E69/player_weapon_shutdown.json": "f90a42342572d125630e7ac3647193288c13301a5309bcdc49cc350364bc2b60",
-    "config/GR8E69/project.json": "915a83722d32fa16347021f55e6de303c3d211799d25ba75cc3b781e52ccc4c4",
+    "config/GR8E69/project.json": "17ea900bbffd81bff9d03189374c53254afe0e79d1554c8a7ed4eb8cc7041bc6",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -2744,6 +2745,7 @@
     "src/geometry/line3_projection.cpp": "bc1a1d004a3336b14509c042a9fbf18dd384dd9735400bf9c03cdf5089ea7d55",
     "src/geometry/line3_set.cpp": "88fc60109effdd125e1740584a08b53f695786886279e2d26f6ad5cf3156e6f7",
     "src/geometry/math_sin_cos.cpp": "d06cdbb52f13d056e0d9fe63e1adedd616cb39ebba4ab27f9a5c2bd7131116e3",
+    "src/geometry/plane_transform_intersect.cpp": "a291284718989d5f68d832685221d4781b00d6cb8cf819c64ee0e1d42d507fe2",
     "src/geometry/sphere_extents.cpp": "cd4b32318d20f7c79e59e1f6b117bee35c063e55e01141e7b9b478ad925f6ba7",
     "src/geometry/sphere_tail.cpp": "187f94405632d2d6c5dd0a5add03873e84af30f138df2251fdd5435b1afe9431",
     "src/geometry/sphere_test_dispatch.cpp": "99f0befcd9289a39467644fe130062eb2da9ad28e14d3b96462fee0cfb41c243",
@@ -38192,6 +38194,24 @@
       "discarded_functions": [],
       "object_sha256": "eb70c2157448dce997f5696215a26a93e82d6c848ab4979d957099486884517c",
       "linked_sha256": "44a202c707ccf7e687031a4d4d81167bc80fd720cc34ea8dc42abcb890600a05"
+    },
+    {
+      "id": "plane_transform_intersect",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 960,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "91be9da640d0a6d011146c4099ad9fd856e6ce6545238296723a7bb78e3f7ba9",
+      "linked_sha256": "3fc119334689ba516cc150e2bc922833b11861074747840bb1ec4f2634639a8a"
     }
   ],
   "code_map": {
@@ -44646,22 +44666,8 @@
         ]
       },
       {
-        "name": "Unknown file/.text @ 8007be5c",
+        "name": "Unknown file/.text @ 8007c21c",
         "ranges": [
-          {
-            "address": "0x8007be5c",
-            "size": 372,
-            "kind": "function",
-            "name": "Transform__6CPlaneRC7CMatrix",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8007bfd0",
-            "size": 588,
-            "kind": "function",
-            "name": "GetIntersection__C6CPlaneRC6CLine3RfP8CVector3",
-            "evidence": "unknown-file"
-          },
           {
             "address": "0x8007c21c",
             "size": 316,

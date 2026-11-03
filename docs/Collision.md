@@ -113,8 +113,7 @@ is made. `CVolSphere::Create` waits on its file's header strings, above, and wit
 whole `sphere.cpp`. The long vector tests that remain are listed by
 `config/GR8E69` by omission: the box's box, sphere, capsule and plane tests and visibility, the sphere's visibility, the capsule's
 visibility, the fiber's extents, `CCDBObject`'s line test and branch
-node tests, the CDB box and triangle tests, `CCompartment`'s constructor and loading, `CPlane`
-and the segment distance.
+node tests, the CDB box and triangle tests, `CCompartment`'s constructor and loading, and the segment distance.
 
 ## Point tests and code shape
 

@@ -1699,7 +1699,8 @@
     "sound_sdrv_prestore.json",
     "scene_StaticFactoryLookup.json",
     "scene_WorldObjectCompartments.json",
-    "scene_WorldObjectDraw.json"
+    "scene_WorldObjectDraw.json",
+    "plane_transform_intersect.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
