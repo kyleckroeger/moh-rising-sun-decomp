@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 905708,
+    "matching_code_bytes": 907104,
     "total_executable_code_bytes": 2492032,
-    "percent": 36.34415609430376,
+    "percent": 36.400174636601776,
     "categories": {
-      "reconstructed_game": 513492,
+      "reconstructed_game": 514888,
       "restored_library": 392216
     },
-    "matching_functions": 4313
+    "matching_functions": 4327
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -127,10 +127,13 @@
     "config/GR8E69/ai_AIObjectSightHelpers.json": "e2238e7b905133a9d6c51b816a95f7e0e124202664b93d026846b3bb083318bf",
     "config/GR8E69/ai_AIObjectStatus.json": "13fec46ebd96419bcf2fbc2721b36bca69ac9058b9036740173e3b4e3112c420",
     "config/GR8E69/ai_AIObjectStatusDistance.json": "9f19ae969f316f986c492dda0b411ebfd2932568cc06b4f23267cee844cea219",
+    "config/GR8E69/ai_AIObjectTargetTeam.json": "0757354e28f65af16caab6a92befc8c57e9b9f8f4dd16798a53be98a2880cdac",
     "config/GR8E69/ai_AIObjectVisionSetup.json": "ec5d56a40a8d985daab844ede07e96546c96a8f54f649284d9e6b6245783ba77",
     "config/GR8E69/ai_AIPlayerDoodad.json": "8976209d5d59b86a5d929fac29a9e3ea68a001d594b16260e83a1360eec3227b",
     "config/GR8E69/ai_AIPlayerObject.json": "8ba7399ad3e067573248c2a983cc6db12e45969ae604d079c827a9e9e59961b2",
     "config/GR8E69/ai_AISoldierDoodad.json": "0eaebe52e58074f6eb5b7dd04ee0e4f40b1e85f8209f2dd8b1c1925244a85baf",
+    "config/GR8E69/ai_AISoldierObjectNew.json": "c87901467bad4f775cd629eedfffe23caa5128b8531342c46deeb0d70b6e4a57",
+    "config/GR8E69/ai_AISoldierObjectUpdate.json": "3c20d5d2d5c41faa2014cf1be63c5e739aeac08e9b07608fff96c25901c752d5",
     "config/GR8E69/ai_AIStatus.json": "116def6205f392b48bd2b8f9da5a552a5b7bf91e1c59f412687470a618ace22b",
     "config/GR8E69/ai_AITankDoodad.json": "724066023ce56095ce6bae2111e66550d73385166788fc69569925fe4764e476",
     "config/GR8E69/ai_AITankObjectA.json": "e5f1aa27d7958a89c6734c8d8179b3b20c7965ce4474e8ee9372d4609ac9fd04",
@@ -816,7 +819,7 @@
     "config/GR8E69/player_weapon_overlays.json": "172965adf4a7a763b5932a9744ff75bbf384ef314e25785dee9d7617044a8d5b",
     "config/GR8E69/player_weapon_selectable.json": "c7e3f09ad1510713bfd88ee468db0fcb4c6ef18b3b89bdb414b32ea863b25668",
     "config/GR8E69/player_weapon_shutdown.json": "f90a42342572d125630e7ac3647193288c13301a5309bcdc49cc350364bc2b60",
-    "config/GR8E69/project.json": "510f43b099d65644b6c17f7e1576e2db2e98984389cee69a643c06d49223c7c0",
+    "config/GR8E69/project.json": "32f9c1665e02277e6d17fa34a87d02fabb32c6974baf311645ab26e893d820de",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -1874,12 +1877,12 @@
     "include/dolphin-sdk/libc/wchar.h": "eb9359b3f8c80e980c291b31b08b913739a9fda753a2a5007f8bf2bf3c646439",
     "include/dolphin-sdk/macros.inc": "4e92f656bb511fbb45d66081291371c47ceba7bce9c55f86871116203cf38a46",
     "include/dolphin-sn/dolphin/types.h": "ca31e0bbb97e93ca4713654367df29578f6392f3acaf40ca68bc1de1c913af93",
-    "include/game/AIBehavior.h": "3784409536266ef1f5f5422bc7336b85c46355bdb27d358b0df9e710c94638b6",
+    "include/game/AIBehavior.h": "40531240532c4b8575970179a3b7f3f6545c916d1f6f31e3d9fb53d86d71bcbc",
     "include/game/AIDoodad.h": "5a8328fd7c55b6f602742adb79faabaeb4466fbaa44292b3a32fd0d0ad10aca9",
     "include/game/AIFilterGlobal.h": "344877aed1d2938ab6a0ab0eef531481adc62fd71f0329cf835ec5e85894c95a",
     "include/game/AIMovement.h": "143e409a2e3b38c72b2a667b1781a10c9af5ce7cc9cf5bd75ac43f142192d484",
-    "include/game/AISplinePath.h": "d7df505d1715f3cef3f2bcce9e5b8f8c583f640a03f7bb98afad4c2817b8abbb",
-    "include/game/AITargeting.h": "877d01a3ac11076eeac9ba745d77cd46dc0e31d54d4267132b1bbbf7804ca609",
+    "include/game/AISplinePath.h": "bea70ffc7cc2ba348ab3aa39c7c9d84fd5b592279453c829dfe3ee95bb81d6d6",
+    "include/game/AITargeting.h": "b87c7e2a3093e5edc1c7e2e0f213dee40664e1cc0ea9f8d1a05d791a4406cc08",
     "include/game/AnimatedVolume.h": "527918576e64cf9296cbb9164eefaf3fc8b7a0f96894e342d2da9e847df4cf25",
     "include/game/BPD.h": "ec4a3aceb83f181db2c6adf8ac87137ede2cd6a0e643548159c73a827aadd19e",
     "include/game/BSGameObject.h": "0251918a776754b0d6b3d30b69e61b0d0c8f919721dbd147dbecf710b180a45a",
@@ -2165,10 +2168,13 @@
     "src/ai/AIObjectSightHelpers.cpp": "177b3f8c53f44c854b115fe5dbd2c980a84d1b07e27595d419dd299b1a0faa0d",
     "src/ai/AIObjectStatus.cpp": "ebb0fd4391239b296538754ec4c860773defaa6a6ae876477acd9202cd75acba",
     "src/ai/AIObjectStatusDistance.cpp": "b9187afe0ffa0679e8c11d91e6c1ebbdb79ba7afa7de68c6e21c4416aae8d9d5",
+    "src/ai/AIObjectTargetTeam.cpp": "1aab2dbc90e47e28cd652a78d859abc78d4a21ef8c78c17057c13a80d695f194",
     "src/ai/AIObjectVisionSetup.cpp": "fdd7a290910dbfa6dc3dedcea1ca6f29d7cb48ba8dd8031216b1c0e4929a149a",
     "src/ai/AIPlayerDoodad.cpp": "aae454c7afa224f419a698b5e35635415fb9bcd40ff3c5a7ae4c3cc88feaa9bb",
     "src/ai/AIPlayerObject.cpp": "930b322c143d9d04f94c7abccede5a284b8b5d53926ba754559144324bd906ea",
     "src/ai/AISoldierDoodad.cpp": "69e8bc90a49fd028f5f23d1791ce17c60cc433862d36a8dedd339caa3017b9ac",
+    "src/ai/AISoldierObjectNew.cpp": "15788533d823ec81370378332a90f80eb042969236023e0cbaa1524ebb9a5089",
+    "src/ai/AISoldierObjectUpdate.cpp": "355ba15dd8b7ddd5a4373b58c2c07f980177ec5e995b59ae9f2e57a17228bfd7",
     "src/ai/AIStatus.cpp": "587c305fbf140fffa82832a2e326dc5a471e22b83420f9b84357630b97047455",
     "src/ai/AITankDoodad.cpp": "05e46e5f362ff308fbae636cc5210ca203a135e4cdb7ba2fe1d05b0683ea063f",
     "src/ai/AITankObjectA.cpp": "3655309735e03831209c98ad5772e2d9e7cfb737d543f277c274391276a79b95",
@@ -38009,6 +38015,60 @@
       "discarded_functions": [],
       "object_sha256": "579c127d0e54c389026beac0efbc141e8498419ac66ad19890a50cb7f0e81288",
       "linked_sha256": "354e697423bda43885491b930bc619a0bc20af693b810fb8fd3513124cb29df5"
+    },
+    {
+      "id": "ai_AIObjectTargetTeam",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 148,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "c55aa19b9183a815eb85cffa3b02728aa8a8b6a64923179b4d998a57f24a3def",
+      "linked_sha256": "286de8b929774ee912d2ca4a51dea70fcad32b73398714721c2b2c39cbba0c1d"
+    },
+    {
+      "id": "ai_AISoldierObjectNew",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 12,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "a132c609ca800d915c8f83ba5c561665f5bf5a181a4fe022b71054593dbc07d1",
+      "linked_sha256": "67b35668f5d1f077e2fb1c4b9902ec1b23647571a6ae238a5e6d6ed1f2c49308"
+    },
+    {
+      "id": "ai_AISoldierObjectUpdate",
+      "category": "reconstructed_game",
+      "functions": 11,
+      "code_bytes": 1236,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "ee6814eaf7e3a0646ccbee7327e2a65f92c7e3d77641abf46ddabd5602fa82ee",
+      "linked_sha256": "a9e80406256673bfe3ee599f6678bc5890ea593593d13156b38e70b39143d2f8"
     }
   ],
   "code_map": {
@@ -52213,13 +52273,6 @@
             "kind": "function",
             "name": "FindRunAwayPoint__9CAIObjectPC10ISceneNodefP8CVector3b",
             "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800dce8c",
-            "size": 148,
-            "kind": "function",
-            "name": "IsValidTargetTeam__9CAIObjectUc",
-            "evidence": "adjacent-compiler-markers"
           }
         ],
         "marker_interval": [
@@ -52258,20 +52311,6 @@
         "file_name": "AISoldierObject.cpp",
         "ranges": [
           {
-            "address": "0x800dd38c",
-            "size": 8,
-            "kind": "function",
-            "name": "__nw__16CAISoldierObjectUiPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800dd394",
-            "size": 4,
-            "kind": "function",
-            "name": "__dl__16CAISoldierObjectPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800dd398",
             "size": 476,
             "kind": "function",
@@ -52283,83 +52322,6 @@
             "size": 320,
             "kind": "function",
             "name": "_._16CAISoldierObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800dd6b4",
-            "size": 12,
-            "kind": "function",
-            "name": "SetSoldierObject__16CAISoldierObjectP14CSoldierObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800dd6c0",
-            "size": 104,
-            "kind": "function",
-            "name": "PreUpdate__16CAISoldierObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800dd728",
-            "size": 60,
-            "kind": "function",
-            "name": "UpdateFromGameObject__16CAISoldierObjectP16IMovingSceneNode",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800dd764",
-            "size": 368,
-            "kind": "function",
-            "name": "Update__16CAISoldierObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800dd8d4",
-            "size": 36,
-            "kind": "function",
-            "name": "GetAIValueByName__16CAISoldierObjectPCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800dd8f8",
-            "size": 68,
-            "kind": "function",
-            "name": "Init__16CAISoldierObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800dd93c",
-            "size": 192,
-            "kind": "function",
-            "name": "SetInitialStatus__16CAISoldierObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800dd9fc",
-            "size": 128,
-            "kind": "function",
-            "name": "UpdateStatus__16CAISoldierObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800dda7c",
-            "size": 60,
-            "kind": "function",
-            "name": "SetupTargetMatchList__16CAISoldierObjectP14aistatus_matchi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ddab8",
-            "size": 132,
-            "kind": "function",
-            "name": "ScoreTarget__FP9CAIObjectT0",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ddb3c",
-            "size": 76,
-            "kind": "function",
-            "name": "ScoreTargetByDistance__FRC8CVector3T0",
             "evidence": "adjacent-compiler-markers"
           },
           {

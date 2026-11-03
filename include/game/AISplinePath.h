@@ -83,6 +83,7 @@ public:
     static void RegisterAStarLinkPoint(TriggerObject *, int, int, int);
     void ExitAStarVolume(int);
     void UpdateAStarPathWalk();
+    void WalkAStarPath();
     bool SetupAStarPathWalkForPatrol(const CVector3 &);
     void RemovePointersTo(CAIObject *);
     CAreaPathNode *GreedySearchAwayFromPoint(const CVector3 &, float, bool);

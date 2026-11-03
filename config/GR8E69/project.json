@@ -1690,7 +1690,10 @@
     "sphere_transformed_copy.json",
     "box_transformed_copy.json",
     "fiber_transformed_copy.json",
-    "capsule_transformed_copy.json"
+    "capsule_transformed_copy.json",
+    "ai_AIObjectTargetTeam.json",
+    "ai_AISoldierObjectNew.json",
+    "ai_AISoldierObjectUpdate.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

@@ -88,6 +88,8 @@ class CCoverpointBehavior { // Type 4.
     virtual float GetHeuristicUpdateFrequency();
     virtual void UpdateHeuristicScore();
     int StartCoverPointWalk();
+    void WalkToCoverPoint();
+    float GetAIValueByName(const char *);
     void StopCoverPointWalk();
     void Arrived();
     void EndCoverpoint();

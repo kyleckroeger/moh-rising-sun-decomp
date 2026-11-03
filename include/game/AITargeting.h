@@ -157,6 +157,19 @@ class CPlayerObject;
 class CAITankObject;
 class IMovingSceneNode;
 class CBehavior;
+class CSoldierObject;
+class CAISnap {
+public:
+    unsigned char unknown00[4];
+    CSoldierObject *soldierObject; // +0x04
+    unsigned char unknown08[8];
+    CVector3 position; // +0x10
+    float angle;       // +0x20
+    int useAngle;      // +0x24
+    int active;        // +0x28
+    void Init();
+    void Update(float);
+};
 // One high-level state's behavior list (four are stored from +0x380).
 struct AIBehaviorList {
     CBehavior *behaviors[32];
@@ -226,13 +239,8 @@ public:
     float maxHitPoints;  // +0x734; set with hitPoints, meaning inferred.
     CPlayerObject *owner; // +0x738; set by CPlayerObject::InitAI.
     unsigned char unknown73c[0x770 - 0x73c];
-    struct SnapState {
-        unsigned char unknown00[0x10];
-        CVector3 position; // +0x10
-        float angle;       // +0x20
-        int useAngle;      // +0x24
-        int active;        // +0x28
-    } snap;              // +0x770; set by BIFunc_AISnapToMovePoint*.
+    typedef CAISnap SnapState;
+    CAISnap snap;        // +0x770; set by BIFunc_AISnapToMovePoint*.
     unsigned char unknown79c[0x7a0 - 0x79c];
     CAITactics tactics;  // +0x7a0
     static CAIObject *GetGlobalListStart();
@@ -310,6 +318,7 @@ public:
     int FindRunAwayPoint(const ISceneNode *, float, CVector3 *, bool);
     static void ResetGlobalList();
     void UpdateHeuristics(int, bool);
+    int IsValidTargetTeam(unsigned char);
     CAIObject *GetNextVisionTarget();
     int IsObjectInVisionDistance(const CVector3 &, float) const;
     int ChooseTarget(float);
@@ -343,6 +352,7 @@ public:
 // Member view of the soldier AI object returned by CAIObject slot 2.
 class CAIThreatEvaluation {
 public:
+    void Update(float);
     void FinishedInvestigation();
     void AddCorpseThreat(BSObject *);
 };
@@ -351,13 +361,29 @@ class CAISoldierObject {
 public:
     CAISoldierObject(void *);
     void *operator new(unsigned int, void *);
+    void operator delete(void *);
     void Init();
     void SetSoldierObject(CSoldierObject *);
+    void PreUpdate();
+    void UpdateFromGameObject(IMovingSceneNode *);
+    void Update(float);
+    float GetAIValueByName(const char *);
+    void SetInitialStatus();
+    void UpdateStatus();
+    void SetupTargetMatchList(aistatus_match *, int);
     unsigned char unknown_0[0x190];
     int aimDirty; // +0x190; set when an aim modifier changes. Descriptive.
-    unsigned char unknown_194[0x7b0 - 0x194];
+    unsigned char unknown_194[0x730 - 0x194];
+    float health;    // +0x730
+    float maxHealth; // +0x734
+    aistatus_match targetMatchList[4]; // +0x738
+    int targetMatchCount; // +0x768
+    CSoldierObject *soldierObject; // +0x76c
+    CAISnap snap; // +0x770
+    unsigned char unknown_79c[0x7b0 - 0x79c];
     CAIThreatEvaluation threatEvaluation; // +0x7b0
-    unsigned char unknown_7b1[3536 - 0x7b1]; // The allocation is 3536 bytes.
+    unsigned char unknown_7b1[0xd10 - 0x7b1];
+    unsigned char coverpointStorage[3536 - 0xd10]; // +0xd10; a CCoverpointBehavior. The allocation is 3536 bytes.
 };
 class IMovingSceneNode;
 // Virtual-interface view of CAIObject: its table pointer follows the data at
