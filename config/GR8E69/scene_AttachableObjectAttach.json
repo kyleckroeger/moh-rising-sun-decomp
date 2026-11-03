@@ -1,0 +1,58 @@
+{
+  "id": "scene_AttachableObjectAttach",
+  "source": "src/scene/AttachableObjectAttach.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800ba3e8",
+      "size": 780
+    }
+  ],
+  "functions": [
+    {
+      "name": "AttachObject__17CAttachableObjectP13CStaticObjecti",
+      "address": "0x800ba3e8",
+      "size": 224,
+      "binding": 1
+    },
+    {
+      "name": "AttachObject__17CAttachableObjectP13CPlayerObjectib",
+      "address": "0x800ba4c8",
+      "size": 308,
+      "binding": 1
+    },
+    {
+      "name": "AttachObject__17CAttachableObjectP11CAnimObjecti",
+      "address": "0x800ba5fc",
+      "size": 248,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "ExcludeCollision__6CSceneRC10ISceneNodeT1i": "0x801476b0",
+    "GetFreeAttachSlot__17CAttachableObject": "0x800ba308",
+    "ReOrder__6CSceneP10ISceneNodeT1": "0x8014ac88",
+    "SetAttached__11CAnimObjectb": "0x800a54cc",
+    "SetHideWeapon__13CPlayerObjectb": "0x800b7aac",
+    "UpdateSingleAttachedObject__17CAttachableObjecti": "0x800baaf8",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "attachobject.cpp",
+  "original_file_index": 873
+}

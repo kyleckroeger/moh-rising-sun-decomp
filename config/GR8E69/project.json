@@ -1701,7 +1701,9 @@
     "scene_WorldObjectCompartments.json",
     "scene_WorldObjectDraw.json",
     "plane_transform_intersect.json",
-    "ea_timer_tail.json"
+    "ea_timer_tail.json",
+    "scene_AttachableObjectAttach.json",
+    "scene_AttachableObjectDetach.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

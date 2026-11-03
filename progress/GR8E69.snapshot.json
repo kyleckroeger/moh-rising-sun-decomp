@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 911252,
+    "matching_code_bytes": 912700,
     "total_executable_code_bytes": 2492032,
-    "percent": 36.566625147670656,
+    "percent": 36.624730340541376,
     "categories": {
-      "reconstructed_game": 519036,
+      "reconstructed_game": 520484,
       "restored_library": 392216
     },
-    "matching_functions": 4345
+    "matching_functions": 4350
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -821,7 +821,7 @@
     "config/GR8E69/player_weapon_overlays.json": "172965adf4a7a763b5932a9744ff75bbf384ef314e25785dee9d7617044a8d5b",
     "config/GR8E69/player_weapon_selectable.json": "c7e3f09ad1510713bfd88ee468db0fcb4c6ef18b3b89bdb414b32ea863b25668",
     "config/GR8E69/player_weapon_shutdown.json": "f90a42342572d125630e7ac3647193288c13301a5309bcdc49cc350364bc2b60",
-    "config/GR8E69/project.json": "440cd48adede6e4ac4664440a51f0ff7176bb57537ae7bf22666a23b0191f223",
+    "config/GR8E69/project.json": "5a51a1e1a65984b4fb8c4a60f15e9464f0350f0c4b167d1f5e879a9f63c57d9e",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -854,8 +854,10 @@
     "config/GR8E69/scene_AnimObjectUpdateAnimation.json": "01338cb32f1af2a8e0c977c007de0f59dbd516f4b4e7e1362d8d7bc6ea4a2419",
     "config/GR8E69/scene_AnimObjectVolumes.json": "10ad011f639b6f24d962237099036c9fa0f26f0058cb9a11c7e7dcf07ad8b17b",
     "config/GR8E69/scene_AttachableObjectA.json": "c3e2b9a32e7040c1deeb440a9c3123b41398d074fe7a93c4f5fb897de385b2c1",
+    "config/GR8E69/scene_AttachableObjectAttach.json": "5a80394d36a319d7c4b5a63a54619aa52da3a05257f21792d0b46154f48c4db4",
     "config/GR8E69/scene_AttachableObjectB.json": "06c8e5cb4b989be36b3bc118de23ce315684abe48f28b0a7168d76747810489f",
     "config/GR8E69/scene_AttachableObjectC.json": "921a6e2635ca182465002db6373bc5f1ef5c82fb774db5befb51de4171c030f3",
+    "config/GR8E69/scene_AttachableObjectDetach.json": "b6047e294a73ca1d2d3fb160f56b0f3ba205ed9f73e8a28a002217d51ec85beb",
     "config/GR8E69/scene_AttachableObjectUpdate.json": "22767829235bfc73e8bc59a7c6752a3471838a1bf9a7423bc1abc491b2329c4d",
     "config/GR8E69/scene_HierAnimObjectA.json": "00ee093c8b03a969ce54c1512e76ff68d33b4d3d11ded5a29d221c4dd470ea7f",
     "config/GR8E69/scene_HierAnimObjectB.json": "df33d0da021654a581a21e996765155a734679b84e6e104ff3208500ab1cc097",
@@ -1983,8 +1985,8 @@
     "include/game/ParticleRecipe.h": "04bba33839dcdae3132d1316e831585288f74ef842a5b01c6f6d6c37929ee61d",
     "include/game/PlacementNew.h": "49819284bb2cc2ffb2039d459ce855bd5a233bcfff0a6412ffe0bda02cd616c5",
     "include/game/PropertyData.h": "952ae5ac78dc17e43053a7b905a8e58499a1faa3c7d0721269329f639095b22a",
-    "include/game/SceneNode.h": "a444643b4e6baf38b7ca6c33445362b716947571d440a21f13c7b0917d60f57f",
-    "include/game/SceneObjects.h": "e8afe9c9f467cc3d85cb6741869e232884b3aa9a6264d2a60b1094d3c15c51ca",
+    "include/game/SceneNode.h": "1e1ba56adba7fff1502e6ad627eda8609e36fef1519f16a8ce38f0013557a26f",
+    "include/game/SceneObjects.h": "109aeffe16f3e26219556ed698fb247e3a2ec393afe7409923805a854475b070",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
     "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
     "include/game/ScriptMachine.h": "ca23b124331e6be9f43fc9e17237cbdb7851ff2941192e76b4aa3f8086db44bb",
@@ -3087,8 +3089,10 @@
     "src/scene/AnimObjectUpdateAnimation.cpp": "74e9d29ea6bdd74830e23651e92bf56ab95cca029ba2c7f516f4fc6919472000",
     "src/scene/AnimObjectVolumes.cpp": "da4b685af96884e598375982a044940b87f663edd6143d787a7beae2fc860d4e",
     "src/scene/AttachableObjectA.cpp": "72deef8d7c8dd87b1804ecf6d4d562606b86f6f612e61869d74fd1448aea66d4",
+    "src/scene/AttachableObjectAttach.cpp": "55f0da4fe313f5f7887d0b1d0f926106e09d4ccafbd8821c81fa25bdfa2f7564",
     "src/scene/AttachableObjectB.cpp": "96f9d0b60a7cbe2777084971aa74470168d825cde7723184d83d4960d7176d39",
     "src/scene/AttachableObjectC.cpp": "4ba057f86eeeead5950370eb21bf7605d1bde0ff73ccc6b263b2d597cd40ea3f",
+    "src/scene/AttachableObjectDetach.cpp": "848bbabd8f8c3a159cff387d0d797a766204e0c5fe9f9926a8bac53cfb142590",
     "src/scene/AttachableObjectUpdate.cpp": "717a2967860405f49ea24eec6f4fb30e2079b7b6411fbd49ee1dd14bcdda1a48",
     "src/scene/HierAnimObjectA.cpp": "9283de5ba8b3bbbf79faa444b5cbd2c62ac8c35c30c4e16b5ecc716e10fb833a",
     "src/scene/HierAnimObjectB.cpp": "d8b064cd3066c42bf07322989e993ab0ab51fa24246d5622adb2e802355f1efc",
@@ -38233,6 +38237,42 @@
       "discarded_functions": [],
       "object_sha256": "0dc9b07808a40e46a22452b4d7c6eb527252a0fbf038fbbea8ad170f840d3257",
       "linked_sha256": "46cb6c1fe3d7d98f1a6357ba0e33ce9821effd719eb57b10de3147b6780f408b"
+    },
+    {
+      "id": "scene_AttachableObjectAttach",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 780,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e026f8096c9003425eaf6608683734a7d1c24455502a8eea7152efff0c947638",
+      "linked_sha256": "869bb187b38fb37e2bbb4032a5d5b80ac2d977d8d80d01e79c49fe1d5d6580fb"
+    },
+    {
+      "id": "scene_AttachableObjectDetach",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 668,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "086afe23e569f2d97d095205c89165797c3f2733019075f0eea491286cf2c5a4",
+      "linked_sha256": "48f5c3b4eaf64a045c5e675aa803d936ee5e6f41f48924ffe26a181b0a2657fc"
     }
   ],
   "code_map": {
@@ -50050,45 +50090,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800ba3e8",
-            "size": 224,
-            "kind": "function",
-            "name": "AttachObject__17CAttachableObjectP13CStaticObjecti",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ba4c8",
-            "size": 308,
-            "kind": "function",
-            "name": "AttachObject__17CAttachableObjectP13CPlayerObjectib",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ba5fc",
-            "size": 248,
-            "kind": "function",
-            "name": "AttachObject__17CAttachableObjectP11CAnimObjecti",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800ba6f4",
             "size": 208,
             "kind": "function",
             "name": "AttachAndAlignObject__17CAttachableObjectP11CAnimObjecti",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ba7c4",
-            "size": 348,
-            "kind": "function",
-            "name": "DetachObject__17CAttachableObjectP10ISceneNode",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ba920",
-            "size": 320,
-            "kind": "function",
-            "name": "DetachAllObjects__17CAttachableObject",
             "evidence": "adjacent-compiler-markers"
           },
           {

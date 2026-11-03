@@ -778,6 +778,10 @@ class CAttachableObject {
     } **mesh;
     unsigned char unknown_50[0x300 - 0x50];
     ISceneNode *children[20]; // +0x300
+    CMatrix childMatrices[20];     // +0x350
+    int childTypes[20];            // +0x850; 1 static, 2 animated, 3 player.
+    unsigned int childQueueIdentity[20]; // +0x8a0
+    int childNodes[20];            // +0x8f0
     int GetFreeAttachSlot();
     void Draw(CDrawContext &);
     int IsVisible(CDrawContext &) const;
