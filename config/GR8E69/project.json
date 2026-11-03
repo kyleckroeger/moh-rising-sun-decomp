@@ -1655,7 +1655,6 @@
     "ea_memtail.json",
     "ea_inittmr_a.json",
     "ea_inittmr_b.json",
-    "ea_thread_init.json",
     "weapon_factory_ctor.json",
     "weapon_factory_shutdown.json",
     "weapon_factory_props.json",
@@ -1682,7 +1681,8 @@
     "ai_AIObjectStatusDistance.json",
     "ai_AIObjectVisionSetup.json",
     "ai_AIObjectLineOfSight.json",
-    "box_test_line.json"
+    "box_test_line.json",
+    "ea_threads.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

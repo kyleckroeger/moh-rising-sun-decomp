@@ -1,0 +1,156 @@
+{
+  "id": "ea_threads",
+  "source": "src/ea/threads.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80217a40",
+      "size": 1256
+    }
+  ],
+  "functions": [
+    {
+      "name": "ThreadRealPriority2GCPriority__Fi",
+      "address": "0x80217a40",
+      "size": 120,
+      "binding": 0
+    },
+    {
+      "name": "ThreadGCPriority2RealPriority__Fl",
+      "address": "0x80217ab8",
+      "size": 100,
+      "binding": 0
+    },
+    {
+      "name": "THREAD_init",
+      "address": "0x80217b1c",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "THREAD_restore",
+      "address": "0x80217b44",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "THREAD_create",
+      "address": "0x80217b48",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "THREAD_createparam",
+      "address": "0x80217b7c",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "THREAD_destroy",
+      "address": "0x80217bf8",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "AlarmHandler__FP7OSAlarmP9OSContext",
+      "address": "0x80217c4c",
+      "size": 36,
+      "binding": 0
+    },
+    {
+      "name": "THREAD_yield64__Fx",
+      "address": "0x80217c70",
+      "size": 120,
+      "binding": 0
+    },
+    {
+      "name": "THREAD_yield",
+      "address": "0x80217ce8",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "THREAD_yieldticks",
+      "address": "0x80217d48",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "THREAD_iscurrent",
+      "address": "0x80217d70",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "THREAD_getpriority",
+      "address": "0x80217dd0",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "THREAD_setpriority",
+      "address": "0x80217e10",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "THREAD_testexit",
+      "address": "0x80217e70",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "THREAD_waitexit",
+      "address": "0x80217ebc",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "THREAD_exit",
+      "address": "0x80217f04",
+      "size": 36,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "InitAlarm__Fv": "0x802177e4",
+    "OSCancelAlarm": "0x80253df0",
+    "OSCancelThread": "0x8025a664",
+    "OSCreateAlarm": "0x80253aac",
+    "OSCreateThread": "0x8025a398",
+    "OSExitThread": "0x8025a580",
+    "OSGetCurrentThread": "0x80259d90",
+    "OSGetThreadPriority": "0x8025aec8",
+    "OSIsThreadTerminated": "0x80259d9c",
+    "OSResumeThread": "0x8025a820",
+    "OSSetAlarm": "0x80253d0c",
+    "OSSetThreadPriority": "0x8025ae08",
+    "OSYieldThread": "0x8025a35c",
+    "SIGNAL_create": "0x802181d8",
+    "SIGNAL_set": "0x80218208",
+    "SIGNAL_wait": "0x8021823c",
+    "g_thMain": "0x80451f40"
+  },
+  "sda_externals": [
+    "g_thMain"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "threads.cpp",
+  "original_file_index": 2984
+}
