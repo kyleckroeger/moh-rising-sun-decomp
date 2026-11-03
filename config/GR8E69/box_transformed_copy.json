@@ -1,0 +1,51 @@
+{
+  "id": "box_transformed_copy",
+  "source": "src/geometry/box_transformed_copy.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80137e80",
+      "size": 1584
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a8038",
+      "size": 20
+    }
+  ],
+  "functions": [
+    {
+      "name": "TransformedCopy__7CVolBoxRC7IVolumeRC7CMatrix",
+      "address": "0x80137e80",
+      "size": 1020,
+      "binding": 1
+    },
+    {
+      "name": "SetCorners__7CVolBoxRC8CVector3T1",
+      "address": "0x8013827c",
+      "size": 564,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "sqrtf": "0x80270538"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "box.cpp",
+  "original_file_index": 1316
+}

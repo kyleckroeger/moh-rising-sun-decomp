@@ -111,8 +111,8 @@ helpers are project names: no symbol records the pool's type.
 `SceneNode.h` declares out of line, and stays original context until that header decision
 is made. `CVolSphere::Create` waits on its file's header strings, above, and with it any
 whole `sphere.cpp`. The long vector tests that remain are listed by
-`config/GR8E69` by omission: the box's box, sphere, capsule and plane tests and visibility, the sphere's visibility, the capsule
-transformed copy and visibility, the fiber's transformed copy and extents, `CCDBObject`'s line test and branch
+`config/GR8E69` by omission: the box's box, sphere, capsule and plane tests and visibility, the sphere's visibility, the capsule's
+visibility, the fiber's extents, `CCDBObject`'s line test and branch
 node tests, the CDB box and triangle tests, `CCompartment`'s constructor and loading, `CPlane`
 and the segment distance.
 
@@ -142,6 +142,11 @@ reconstruction of the caller has no source for it.
 own symbols; the structure is the usual case split on which direction components are zero.
 Which of a function's zero-initialized extents is the literal and which are copies changes
 between them (`Case00` and `Face` against `Case0`), so their declaration orders differ.
+
+Each `TransformedCopy` transforms through an inline with a by-reference result, whose local and
+the assignment's return value account for the original's two temporaries. The box also
+normalizes its axes afterwards, which is why its half sizes in `SetCorners` are measured
+along the axes before normalizing.
 
 ## File attributions
 

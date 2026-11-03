@@ -1686,7 +1686,11 @@
     "ai_AIObjectBestBehavior.json",
     "ai_AIObjectMatchList.json",
     "ai_AIObjectFindBehavior.json",
-    "ai_AIObjectSightHelpers.json"
+    "ai_AIObjectSightHelpers.json",
+    "sphere_transformed_copy.json",
+    "box_transformed_copy.json",
+    "fiber_transformed_copy.json",
+    "capsule_transformed_copy.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

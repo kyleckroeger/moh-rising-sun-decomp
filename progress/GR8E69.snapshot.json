@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 902320,
+    "matching_code_bytes": 905708,
     "total_executable_code_bytes": 2492032,
-    "percent": 36.20820278391289,
+    "percent": 36.34415609430376,
     "categories": {
-      "reconstructed_game": 510104,
+      "reconstructed_game": 513492,
       "restored_library": 392216
     },
-    "matching_functions": 4308
+    "matching_functions": 4313
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -202,6 +202,7 @@
     "config/GR8E69/box_test_generic.json": "12b963776c05004668d26beed846112f3ba2cb017ddb92f0c78b7f3d6618592e",
     "config/GR8E69/box_test_line.json": "0c2a0c1956f6ef99cabf2597298028ade6f07387b57f678aebd957bb0d42978a",
     "config/GR8E69/box_test_triangle.json": "7bd60a2780eed4dfc96a1972aa80337c00b8ccef4c16fcad14ace31d2b1f3c2d",
+    "config/GR8E69/box_transformed_copy.json": "a3b327d7864be8b3e7b7dbf4e6b1b18b36f17ceb62dab4ca62e16738cb81e55d",
     "config/GR8E69/bpd_endian.json": "3aadb304ad55ca0cf66faa09c34e66abb388542cbec23719edc23a4a11d1bf4d",
     "config/GR8E69/bpd_free_properties.json": "17e2cd4532e14143ded1a6ba46fcf5321fdd74f2705320ca5178cf75b171c6a9",
     "config/GR8E69/bpd_light_volume.json": "e3931cdecf07dcd381e5058696fdf773127383abb36af8f4f317095e70d4849c",
@@ -239,6 +240,7 @@
     "config/GR8E69/capsule_test_point.json": "aaf983b2e511c5d05e72ba9daf60c54f41a362afd05a3892d16e01602eebe317",
     "config/GR8E69/capsule_test_sphere.json": "38e853730bc92161b182254df97eab652631f9f0a451baca7f5d5725f6574aed",
     "config/GR8E69/capsule_test_triangle.json": "5baaa3cf4ae64a36084efac699bbf1e015999a6d4f2295ecc6d66f89677b0bae",
+    "config/GR8E69/capsule_transformed_copy.json": "f3304fc1fe2330af8559165a3bb225f02b381442441774a2ef0c82ec819be4a2",
     "config/GR8E69/cdbgeom_box_fiber.json": "aa49c630e3c17ad5f334c863b7b0f43bae04eadf323947bb202034784bc5e3ce",
     "config/GR8E69/cdbgeom_box_forward.json": "9e588124762913284b6ae4f8703312ef9c6c37a2595e7f5740d36cd41ab9e231",
     "config/GR8E69/cdbgeom_box_plane.json": "7d97afb2dc56a6c2c5b73950f7e684f6bbadcc81391f945aec1140c058ce383b",
@@ -526,6 +528,7 @@
     "config/GR8E69/fiber_test_plane.json": "b8088fed4ab9dfc5ce753bf1c4e104d5eda678ed3ec75c11685a250e05a7438d",
     "config/GR8E69/fiber_test_point.json": "3444b5962fc6edf2c953b8531d1c46fea58450527c59cfd15e51efd8d7f1d914",
     "config/GR8E69/fiber_test_triangle.json": "96736f1b40ba16628a058e81f4361cb735bea07c690269060695607c8ef4fcfb",
+    "config/GR8E69/fiber_transformed_copy.json": "584e41ddcfc4d9783868b535501a005d5d80982d2dd1afd12a6fbc6a34eb04d7",
     "config/GR8E69/fiber_visibility.json": "db5c35232e5766320a1ac56105546d7ff9f483f2c6fcf4fe9c12d894fc3ae35e",
     "config/GR8E69/flex_bool.json": "e4b08a7acb491ffeb9919c749c2264a405093a44c83c65ec145e746cabe143f2",
     "config/GR8E69/flex_data.json": "0ba46b6e0b3c72424ca594a68c4dba4dc4ca0a458c33be7dbe949faad124347c",
@@ -813,7 +816,7 @@
     "config/GR8E69/player_weapon_overlays.json": "172965adf4a7a763b5932a9744ff75bbf384ef314e25785dee9d7617044a8d5b",
     "config/GR8E69/player_weapon_selectable.json": "c7e3f09ad1510713bfd88ee468db0fcb4c6ef18b3b89bdb414b32ea863b25668",
     "config/GR8E69/player_weapon_shutdown.json": "f90a42342572d125630e7ac3647193288c13301a5309bcdc49cc350364bc2b60",
-    "config/GR8E69/project.json": "e4aa5c9d66efce16da97ac4d1daaec1f23d638f7aee95fd5ee7e4d2be1534b19",
+    "config/GR8E69/project.json": "510f43b099d65644b6c17f7e1576e2db2e98984389cee69a643c06d49223c7c0",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -1446,6 +1449,7 @@
     "config/GR8E69/sphere_test_point.json": "968e1e93db76ec7ae73695edaab101b513a9d024be8066a8a7e0300c28ae9d80",
     "config/GR8E69/sphere_test_sphere.json": "4e00f0dc016dbf348da9f1c050aaa4cbc3cc12a506cef19260354d21d00ef929",
     "config/GR8E69/sphere_test_triangle.json": "2a5b8b5ff0e5f0df68069a329e049772042260412a2df8ba5c38283994312972",
+    "config/GR8E69/sphere_transformed_copy.json": "025056d6c715db1dad3375b20a1d22067222ae98559bf34ae18cab52a59c09b6",
     "config/GR8E69/stl_80278d64.json": "04dc314cda8644a93aa797638a2f5a3e946a7bc954506e9bb2be731800b7646a",
     "config/GR8E69/stl_80278ea0.json": "784844808dbfcbe4c0b2a360cdd8a5cd6c1115260192d1fa5e52d4a7ae8c4ebf",
     "config/GR8E69/stl_80278eec.json": "e32e4cdf075141acad3a5566b3d28a9cdd34b5cdb5c67b8da65fb91eb6effd05",
@@ -2675,6 +2679,7 @@
     "src/geometry/box_test_generic.cpp": "12f0577f0bffce624b57e5b34d9d4974105eedb024a3ac17a25a75899ee34ff1",
     "src/geometry/box_test_line.cpp": "d6bcf7fd3cdd1abe94f9949e0db6f9fcd97db2b64f300a35b5290b02b481b558",
     "src/geometry/box_test_triangle.cpp": "5fa4d842664919c70dc070ac2ff121d2d7d90d6d987558b915f7a7f517d8dcae",
+    "src/geometry/box_transformed_copy.cpp": "64059ef68438fb5a11915f4663d666b1190098675e6341842154fb63383b9c26",
     "src/geometry/capsule_create.cpp": "7fc901d6cf67df7da9a604facb841a79522ecb0f7ecca881a4dd396d55e3123b",
     "src/geometry/capsule_destructor.cpp": "dd33074c1b749b0178fa9d58ec22990194a869fa2e8a0d7d3a297f061ef55f12",
     "src/geometry/capsule_radius.cpp": "3cf781e54433336033eba2f9c93859fd758620910521346860b53f2a4792a1e0",
@@ -2686,6 +2691,7 @@
     "src/geometry/capsule_test_point.cpp": "f2b03a46a70a36f145a82c41abc4daa6276f7557faa22a0e89bbeb8e703ee3bb",
     "src/geometry/capsule_test_sphere.cpp": "8f88e07898331ef5141f86396afe7df6784eb36364908f210dc2bc0f48ffaca9",
     "src/geometry/capsule_test_triangle.cpp": "27bfc2ce10e795fd1806f01c35add2ce90df492bde1c463d6bf9cb676b1bd660",
+    "src/geometry/capsule_transformed_copy.cpp": "10864e2980ad6e5dba02775d5e66d8bafc4aa3eef89f347279dc9f1079bd8d15",
     "src/geometry/cdbgeom_box_fiber.cpp": "0306dc4fa1233e7c84307b2255175aa31a2a1841a9cf0db8f039102c8a891802",
     "src/geometry/cdbgeom_box_forward.cpp": "7232b33f2d3eb7129ccb1ec1e78ee93d0ef4431ec9f6dfa1e14760c9e9a5d866",
     "src/geometry/cdbgeom_box_plane.cpp": "0322fd01ea53e8db10d8bf18c9ad3bd4bba5df1b3728b81a681fc6afec76de4a",
@@ -2716,8 +2722,9 @@
     "src/geometry/fiber_test_fiber.cpp": "91b657fd118dd73f102dff42040d5337b73166e6c4ea0dd02bc7ea1344f40d1a",
     "src/geometry/fiber_test_line.cpp": "e5021a71d6c155d08eb4e111e07d2f5dd7fecaa6b2c0efa2b9eecb1c15a3ae2f",
     "src/geometry/fiber_test_plane.cpp": "55fea8a04d76b8351eb5e6545ab810f2ead3ebed3259665606cd410845961b5c",
-    "src/geometry/fiber_test_point.cpp": "9022141c1f6eae3983dcf07359dbe5a0575a5a804ac11e10f7f4ef2c36998b02",
+    "src/geometry/fiber_test_point.cpp": "c195bc4f7cb6b9fb39e7a3e3f8b35036f86d49a526f2c381b4ad992120fa824b",
     "src/geometry/fiber_test_triangle.cpp": "369f325d99dcb1976d4f1da49c2f18e03f7db57ed4aed4a6a74b434584e3e41e",
+    "src/geometry/fiber_transformed_copy.cpp": "6b1e31e428226a32859e04bf48e8a3c585f35989bf3d08e93de6c29d929dd9bc",
     "src/geometry/fiber_visibility.cpp": "ce5fe18c43ade66a34c52526e143b98ca09a92bce3d8a998df9cec09f97dcda5",
     "src/geometry/line2_closest_point.cpp": "5ca1d7b30bed3ac121a7c1ba9c1abc01010a4c06944db1c0685cab6d284be571",
     "src/geometry/line3_degenerate.cpp": "7957f9e369e0020c35f35633131f44521812552d810eab563d323b31fc1620fe",
@@ -2734,6 +2741,7 @@
     "src/geometry/sphere_test_point.cpp": "02d29c84bd5b34eefcc15ca9dcb9b12840454acd97010b0de915fadd758ac5c8",
     "src/geometry/sphere_test_sphere.cpp": "60797e3ad5c4d43e0577280ad3b786a5918bfcde5295892cfce98848e1bb732e",
     "src/geometry/sphere_test_triangle.cpp": "98c0c91d0b08fa691cfeb1c32ee13fe36f5b24d98704b8f9922f1b98f3941694",
+    "src/geometry/sphere_transformed_copy.cpp": "e2556742d1204ae376fa7080186e82720dea04834a88e6174c9ea072c9d4c086",
     "src/geometry/volume_defaults.cpp": "7cef4d2d51acfc60b1eb3a64a827289bc999a0b1903e2c4e99d7f54771692f93",
     "src/geometry/world_volume_extents.cpp": "7ce2eb5ee0754790c540908b017c166a281387f8bbb9e8943b4e7e5023558ba0",
     "src/geometry/world_volume_head.cpp": "31516a14b19f32aa0282e5c3eb86f780ee2a70387ab2c5e0eb4a3709775c6623",
@@ -37929,6 +37937,78 @@
       "discarded_functions": [],
       "object_sha256": "1a6556158df41f87dc41fa927bf99b6400fdaca7f293447847ce90cfe98f8ebc",
       "linked_sha256": "bba58cd093bef64a0bf8377cf5761fc8d4760a2573b2ddbfd26d4909c424c17d"
+    },
+    {
+      "id": "sphere_transformed_copy",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 284,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "d3b848410e5a2fad952129f8a54ed842c3156f1fdac3534a69cfbe2422c24a83",
+      "linked_sha256": "2b9a23ad604552ffd8d3011f127b2f5e4bd728546e3f197210b90862fa1f6bdb"
+    },
+    {
+      "id": "box_transformed_copy",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 1584,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "c179a40163bb0eb591d23e48a6889508064b1a77165e8fca079a1f2d07aeb613",
+      "linked_sha256": "cde2c9cb878be692ce03dd1071ebef0bfaabe4c03b739579e556fa476919e208"
+    },
+    {
+      "id": "fiber_transformed_copy",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 756,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "225e8a4f7de8e72bea7c3b51f6357c2f338ebd439d95ef0a69839d420aba8ff8",
+      "linked_sha256": "7da839c5fe4f4f5e8f49d3f175b061581fc0c4668612d23f8df491b9a48aec2c"
+    },
+    {
+      "id": "capsule_transformed_copy",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 764,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "579c127d0e54c389026beac0efbc141e8498419ac66ad19890a50cb7f0e81288",
+      "linked_sha256": "354e697423bda43885491b930bc619a0bc20af693b810fb8fd3513124cb29df5"
     }
   ],
   "code_map": {
@@ -58273,13 +58353,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80136a58",
-            "size": 284,
-            "kind": "function",
-            "name": "TransformedCopy__10CVolSphereRC7IVolumeRC7CMatrix",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x801377f0",
             "size": 1284,
             "kind": "function",
@@ -58303,20 +58376,6 @@
             "kind": "function",
             "name": "BoxBoxTest__Fff5EAxisRfT3R5EAxis",
             "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x80137e80",
-            "size": 1020,
-            "kind": "function",
-            "name": "TransformedCopy__7CVolBoxRC7IVolumeRC7CMatrix",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8013827c",
-            "size": 564,
-            "kind": "function",
-            "name": "SetCorners__7CVolBoxRC8CVector3T1",
-            "evidence": "adjacent-compiler-markers"
           },
           {
             "address": "0x80138510",
@@ -58571,18 +58630,6 @@
         ]
       },
       {
-        "name": "Unknown file/.text @ 80140ed4",
-        "ranges": [
-          {
-            "address": "0x80140ed4",
-            "size": 756,
-            "kind": "function",
-            "name": "TransformedCopy__9CVolFiberRC7IVolumeRC7CMatrix",
-            "evidence": "unknown-file"
-          }
-        ]
-      },
-      {
         "name": "Unknown file/.text @ 80142150",
         "ranges": [
           {
@@ -58590,18 +58637,6 @@
             "size": 588,
             "kind": "function",
             "name": "GetExtents__C9CVolFiberR8CVector3T1",
-            "evidence": "unknown-file"
-          }
-        ]
-      },
-      {
-        "name": "Unknown file/.text @ 8014241c",
-        "ranges": [
-          {
-            "address": "0x8014241c",
-            "size": 764,
-            "kind": "function",
-            "name": "TransformedCopy__11CVolCapsuleRC7IVolumeRC7CMatrix",
             "evidence": "unknown-file"
           }
         ]

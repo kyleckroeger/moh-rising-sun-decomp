@@ -10,12 +10,16 @@ static inline void SetSub(CVector3 &r, const CVector3 &a, const CVector3 &b) {
     r.z = a.z - b.z;
 }
 static inline float DotOf(const CVector3 &a, const CVector3 &b) { return a.x * b.x + a.y * b.y + a.z * b.z; }
-static inline CVector3 CrossOf(const CVector3 &a, const CVector3 &b) {
-    return CVector3(a.y * b.z - a.z * b.y, a.z * b.x - a.x * b.z, a.x * b.y - a.y * b.x);
-}
-
 static inline float MagnitudeZ(const CVector3 &v) { return fabs(v.z); }
-static inline void SetCross(CVector3 &r, const CVector3 &a, const CVector3 &b) { CVector3 c; c.x = a.y * b.z - a.z * b.y; c.y = a.z * b.x - a.x * b.z; c.z = a.x * b.y - a.y * b.x; r.x=c.x;r.y=c.y;r.z=c.z; }
+static inline void SetCross(CVector3 &r, const CVector3 &a, const CVector3 &b) {
+    CVector3 c;
+    c.x = a.y * b.z - a.z * b.y;
+    c.y = a.z * b.x - a.x * b.z;
+    c.z = a.x * b.y - a.y * b.x;
+    r.x = c.x;
+    r.y = c.y;
+    r.z = c.z;
+}
 
 EClsnState CVolFiber::TestCollision(const CVector3 &point, CCollision &collision, bool flag) const {
     collision.lineTest = 1;
