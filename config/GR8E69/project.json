@@ -1696,7 +1696,10 @@
     "ai_AISoldierObjectUpdate.json",
     "sound_snddrv_alloc.json",
     "sound_sdrv_caps.json",
-    "sound_sdrv_prestore.json"
+    "sound_sdrv_prestore.json",
+    "scene_StaticFactoryLookup.json",
+    "scene_WorldObjectCompartments.json",
+    "scene_WorldObjectDraw.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

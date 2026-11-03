@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 908736,
+    "matching_code_bytes": 910184,
     "total_executable_code_bytes": 2492032,
-    "percent": 36.465663362268224,
+    "percent": 36.523768555138936,
     "categories": {
-      "reconstructed_game": 516520,
+      "reconstructed_game": 517968,
       "restored_library": 392216
     },
-    "matching_functions": 4331
+    "matching_functions": 4339
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -819,7 +819,7 @@
     "config/GR8E69/player_weapon_overlays.json": "172965adf4a7a763b5932a9744ff75bbf384ef314e25785dee9d7617044a8d5b",
     "config/GR8E69/player_weapon_selectable.json": "c7e3f09ad1510713bfd88ee468db0fcb4c6ef18b3b89bdb414b32ea863b25668",
     "config/GR8E69/player_weapon_shutdown.json": "f90a42342572d125630e7ac3647193288c13301a5309bcdc49cc350364bc2b60",
-    "config/GR8E69/project.json": "ddf8b8306477ab0a84d9966ca3e1f9eaabdfdb3c7b33702e97ba3a3ee63d778e",
+    "config/GR8E69/project.json": "915a83722d32fa16347021f55e6de303c3d211799d25ba75cc3b781e52ccc4c4",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -888,6 +888,7 @@
     "config/GR8E69/scene_SoldierLook.json": "164942c73d8902c36d17047ad0128c21f7b72185178213d491072ea10782392f",
     "config/GR8E69/scene_SoldierUpdate.json": "7d602a1bb517faecae052fdb34db658100aefc12bdd24d8b82a19cd790a5399b",
     "config/GR8E69/scene_SoldierWeapons.json": "7bba8922322199afa0f9c92dffdde7994fd91c628390517e110ed4f4993fab79",
+    "config/GR8E69/scene_StaticFactoryLookup.json": "ed24c612b9bc8bcc1f742b63be0da9214d538c873cff0c71f1eac051c18740ec",
     "config/GR8E69/scene_StaticObjectAccess.json": "18b4299dfbcd360de3492e1e678113d6a340ac80c2b52111cac031fae788a90a",
     "config/GR8E69/scene_StaticObjectAttachedLight.json": "e50794d3d13fd901e01d342c36172d7d258e0b4966afa2af388442509d29c197",
     "config/GR8E69/scene_StaticObjectAttempt.json": "dc7f390dbf973c92a7b15aa21913570c31e6a25dd4f99f419b28d3410c359e94",
@@ -913,6 +914,8 @@
     "config/GR8E69/scene_TankObjectUpdate.json": "09f7e2de1557c8eb5ab28dbc7e9c9a84485a95cbdf2754a32b102dbb58d3dacd",
     "config/GR8E69/scene_WorldObjectAccess.json": "01111fd3cc00232224683840a38964bb6714e6edaec00af525a906cee4d51e6c",
     "config/GR8E69/scene_WorldObjectCasts.json": "2a8569cf1c995a02caf0f025ea42aa1d094373904b55037e6e83f5723e0a512e",
+    "config/GR8E69/scene_WorldObjectCompartments.json": "c4c0895416df092e4c472f94fc47117272c946531cf9ea81fe24bc10d89efecb",
+    "config/GR8E69/scene_WorldObjectDraw.json": "b60226eccd77fe5c9f964d1bc922dbbe1f378f0b0589b85383994dd62b987006",
     "config/GR8E69/scene_WorldObjectFiles.json": "f6658b04cd14d70654d7f448f3a37c57207a406bfa72e4d0146dfcbb410bb092",
     "config/GR8E69/scene_node_axis_defaults.json": "092b0d540e402069c588985246b692817db1af99a9d9c2cde0f3b1bfac31d590",
     "config/GR8E69/scene_node_centroid.json": "417789c5857125f62e4595e59f3e52ed74ac434de058b0123549164ceef3cd8b",
@@ -1905,7 +1908,7 @@
     "include/game/CameraShake.h": "9921df23e0af8b1e91b1e47f396f3f3a0032df36cfaea10dbef29ef82eaba6b2",
     "include/game/Capsule.h": "332dd06329ac7dc3ac5fc01793549a41e2defbe70298018accd2ce79c9e3ce3b",
     "include/game/CollisionVolume.h": "26ba5d9a9865a0185f0e87db21b13faf3214b7e213201e825181412f0f9a5b7c",
-    "include/game/Compartment.h": "6151cb25cd8d2ffd0602c5f8395651b07373c5a89256d2b981795fe180e07c34",
+    "include/game/Compartment.h": "42673c10c8ec7d752aa83871afd544971852c0901840b4643627c8f4d5f29e03",
     "include/game/DestructorQueue.h": "434ec17ba96007c8368db0dc62c9454d1650bc2c4d5615a13aad40969412bda8",
     "include/game/DwiList.h": "e9b2984e2c25f07de0ab383075c4dc77e732d073dbe49d1f667ecef166d4c59b",
     "include/game/EAGLAnim/AnimAllocation.h": "8e2480f7003eca4c8a99d7bc1189b4f00ee9e31bacd9192d6b1bb0bfbc2b38f8",
@@ -2004,7 +2007,7 @@
     "include/game/TriggerObject.h": "73e70d537a184c92ad5f8f0e10b773f5efe3306ce871a82852a3c41398f7418b",
     "include/game/Volume.h": "cda9e7de972fc28d73bf86418423a8b271c864d60bb53d1eba7d42744622db46",
     "include/game/Weapon.h": "a6ce3407991c46a49a3f30693bbba1bc972b23a88af294f0eb00a43aba985830",
-    "include/game/WorldObject.h": "2d5cbc9f6e7d2126b21fbdecae3891341a50d055946561e444ad24c88bb790fc",
+    "include/game/WorldObject.h": "9b5b154c87247d3295950b478724a0abe912e5092504a60bc1ce3c25b313771d",
     "include/game/WorldVolume.h": "9acfaf28c317912de14baef7ca50a3d80175ddc31dcf83cea18c80725e688318",
     "include/game-containers/AlgorithmTypes.h": "a4959e24b9ab8edd66054b63ed6d53516aebc500f71f821e27babbf931b8d51a",
     "include/game-containers/ContainerTypes.h": "f6b7f0133646a5eb70ccc5df78ced025919dee88dcd81edc3f565d0b71dd407c",
@@ -3125,6 +3128,7 @@
     "src/scene/SoldierLook.cpp": "320943220c3a79dbfde30ec40d4db5694fe50e80a21160be6ed155a494b433d9",
     "src/scene/SoldierUpdate.cpp": "72cfdecf336d90cd1fec4414a8b869dbe014ecf74e9b5a5f8217f4cf6c28e399",
     "src/scene/SoldierWeapons.cpp": "97cca0c9c31f68256d98a373b12353076d64d16f2ab03012c8c47a706c0895af",
+    "src/scene/StaticFactoryLookup.cpp": "b1f3e3d38d9117b19ac3af7fc6bc4be4aac0fe822b70fc0e489fa0c79d7ac1ec",
     "src/scene/StaticObjectAccess.cpp": "4226693d4a5aa5a32cce548b3f45086dcf07cf59dcbbdfab749188794913d0fb",
     "src/scene/StaticObjectAttachedLight.cpp": "ea79e7b7b90fba02effed2b77927e4abe661b535a878658f99e63d767c518437",
     "src/scene/StaticObjectAttempt.cpp": "ec21bf0a48006ef9bcf8b6b47aa99b91ee12d7591fc47018d30d64239d09f14d",
@@ -3150,6 +3154,8 @@
     "src/scene/TankObjectUpdate.cpp": "3ef052f8a097db2c09166b966002d044e4b7592a8c2df0464afb92dcbe648c95",
     "src/scene/WorldObjectAccess.cpp": "339c610ff164643182e6e57ef381fe617aafa6d06dc90fbec1647b8c65385edf",
     "src/scene/WorldObjectCasts.cpp": "13aa2ad4e14f195dac25fdefeacf4eadfaf078a77122d6b6f3879ffb6c6c72b3",
+    "src/scene/WorldObjectCompartments.cpp": "b536aa54c3559f94a50841fa2a9f786260c9cd373c98698819de97e8c2c5f216",
+    "src/scene/WorldObjectDraw.cpp": "93b5c5fc336b0cdd720869e1c812e753e0bf818a6153032af14765ec5db3842f",
     "src/scene/WorldObjectFiles.cpp": "dafa846e6cab827db1a3ab23a98ee740e7dad37753ae548b7a13606c5a3fccb2",
     "src/scene/jaw_controller_ctor.cpp": "d925c4b536ea558fe6c261c9a3f83d4dc65bb6cd3e396224e2ef8e3ef23b2920",
     "src/scene/jaw_controller_motiontype.cpp": "509a33964954db2b09fd38a2c55eecd16285fed2fc2e66d5383ad2b7f9aa71ee",
@@ -38132,6 +38138,60 @@
       "discarded_functions": [],
       "object_sha256": "d9cd43cfecb24a14a90113a731abaae6a7e75ddc0835a8e16628919089a2d975",
       "linked_sha256": "8e822e44434b982da756c9e48c3c971b77bdca45c08dfa4b06b0fcf656f64132"
+    },
+    {
+      "id": "scene_StaticFactoryLookup",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 844,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "71935a54f071965b96bd9f73ce58372da75becfd2d22578a6f986b0bc897485c",
+      "linked_sha256": "10c36af70a17f680d739bddcc0121240c6be6b61f7f3f2904466be3176da0e9f"
+    },
+    {
+      "id": "scene_WorldObjectCompartments",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 192,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "cd8a0688f27b0b6b4d6bface23bfc1e6dbd7fad715ad9122b1f30b64caaa5039",
+      "linked_sha256": "d7eec6018f957239d18b2635b2cee4e3f7572ca95ee2a51a389e54dfcf64da72"
+    },
+    {
+      "id": "scene_WorldObjectDraw",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 412,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "eb70c2157448dce997f5696215a26a93e82d6c848ab4979d957099486884517c",
+      "linked_sha256": "44a202c707ccf7e687031a4d4d81167bc80fd720cc34ea8dc42abcb890600a05"
     }
   ],
   "code_map": {
@@ -50598,20 +50658,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800c4eb8",
-            "size": 84,
-            "kind": "function",
-            "name": "GetCompartment__12CWorldObjecti",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c4f0c",
-            "size": 108,
-            "kind": "function",
-            "name": "HandleExplosion__12CWorldObjectRC10CExplosion",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800c4f78",
             "size": 460,
             "kind": "function",
@@ -50679,20 +50725,6 @@
             "size": 284,
             "kind": "function",
             "name": "BeginUpdate__12CWorldObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c696c",
-            "size": 232,
-            "kind": "function",
-            "name": "Draw__12CWorldObjectR12CDrawContext",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c6a54",
-            "size": 180,
-            "kind": "function",
-            "name": "DrawShadows__12CWorldObjectR12CDrawContext",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -51358,34 +51390,6 @@
             "size": 3844,
             "kind": "function",
             "name": "AllocateStaticObject__20CStaticObjectFactoryiiP10PickupInfo",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800cd820",
-            "size": 120,
-            "kind": "function",
-            "name": "DeallocateStaticObject__20CStaticObjectFactoryP13CStaticObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800cd898",
-            "size": 244,
-            "kind": "function",
-            "name": "GetStaticMesh__20CStaticObjectFactoryii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800cd98c",
-            "size": 228,
-            "kind": "function",
-            "name": "GetMotionData__20CStaticObjectFactoryii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800cda70",
-            "size": 252,
-            "kind": "function",
-            "name": "Reset__20CStaticObjectFactory",
             "evidence": "adjacent-compiler-markers"
           },
           {

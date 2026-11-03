@@ -1,0 +1,46 @@
+{
+  "id": "scene_WorldObjectCompartments",
+  "source": "src/scene/WorldObjectCompartments.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800c4eb8",
+      "size": 192
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetCompartment__12CWorldObjecti",
+      "address": "0x800c4eb8",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "HandleExplosion__12CWorldObjectRC10CExplosion",
+      "address": "0x800c4f0c",
+      "size": 108,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "HandleExplosion__12CCompartmentRC10CExplosion": "0x80070b64"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "world_object.cpp",
+  "original_file_index": 896
+}

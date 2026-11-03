@@ -10,6 +10,7 @@ class CDrawContext;
 class CPTHeader;
 class CRtcFile;
 
+class CExplosion;
 class CCompartment : public ISceneNode {
   public:
     virtual ~CCompartment();
@@ -18,6 +19,8 @@ class CCompartment : public ISceneNode {
     void InitCDB(int, char *, CDB *);
     static void GlobalReset();
     void DrawShadows(CDrawContext &);
+    void HandleExplosion(const CExplosion &);
+    static CCompartment *GetShared();
     virtual unsigned int IsDrawEnabled() const;
     virtual int GetLocalBoundingVolume(ISceneNode::EVolumeType) const;
     virtual int GetWorldBoundingVolume(ISceneNode::EVolumeType) const;
