@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 897368,
+    "matching_code_bytes": 899440,
     "total_executable_code_bytes": 2492032,
-    "percent": 36.00948944475834,
+    "percent": 36.09263444450151,
     "categories": {
-      "reconstructed_game": 505152,
+      "reconstructed_game": 507224,
       "restored_library": 392216
     },
-    "matching_functions": 4278
+    "matching_functions": 4279
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -196,6 +196,7 @@
     "config/GR8E69/box_tail.json": "93c8bd3f6a93ecf815426857be9e45c636f0c921b4294170f52fd857d8cbaeb3",
     "config/GR8E69/box_test_dispatch.json": "7a70d85d5875938059c2e4354c237ed3d4eb74c8421cf8d0040321c09ea239b0",
     "config/GR8E69/box_test_generic.json": "12b963776c05004668d26beed846112f3ba2cb017ddb92f0c78b7f3d6618592e",
+    "config/GR8E69/box_test_line.json": "0c2a0c1956f6ef99cabf2597298028ade6f07387b57f678aebd957bb0d42978a",
     "config/GR8E69/box_test_triangle.json": "7bd60a2780eed4dfc96a1972aa80337c00b8ccef4c16fcad14ace31d2b1f3c2d",
     "config/GR8E69/bpd_endian.json": "3aadb304ad55ca0cf66faa09c34e66abb388542cbec23719edc23a4a11d1bf4d",
     "config/GR8E69/bpd_free_properties.json": "17e2cd4532e14143ded1a6ba46fcf5321fdd74f2705320ca5178cf75b171c6a9",
@@ -808,7 +809,7 @@
     "config/GR8E69/player_weapon_overlays.json": "172965adf4a7a763b5932a9744ff75bbf384ef314e25785dee9d7617044a8d5b",
     "config/GR8E69/player_weapon_selectable.json": "c7e3f09ad1510713bfd88ee468db0fcb4c6ef18b3b89bdb414b32ea863b25668",
     "config/GR8E69/player_weapon_shutdown.json": "f90a42342572d125630e7ac3647193288c13301a5309bcdc49cc350364bc2b60",
-    "config/GR8E69/project.json": "6baf86457d3b802ad5099d2dc3781b09594233280817441d2359b6d1e6de25a9",
+    "config/GR8E69/project.json": "4fcd6e4c1ae274a88eff2b494a92e1cd38b44f269b92a425e27d92af9f8419ae",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -2664,6 +2665,7 @@
     "src/geometry/box_tail.cpp": "f03563f12a9c677d103f2ab4073f7a8b6168693bf317eeccdb750837dea6746a",
     "src/geometry/box_test_dispatch.cpp": "624e77fe5ee294e5bc2c364225cad880fa6a1b0e5c6566d85150cf467dafd0ed",
     "src/geometry/box_test_generic.cpp": "12f0577f0bffce624b57e5b34d9d4974105eedb024a3ac17a25a75899ee34ff1",
+    "src/geometry/box_test_line.cpp": "d6bcf7fd3cdd1abe94f9949e0db6f9fcd97db2b64f300a35b5290b02b481b558",
     "src/geometry/box_test_triangle.cpp": "5fa4d842664919c70dc070ac2ff121d2d7d90d6d987558b915f7a7f517d8dcae",
     "src/geometry/capsule_create.cpp": "7fc901d6cf67df7da9a604facb841a79522ecb0f7ecca881a4dd396d55e3123b",
     "src/geometry/capsule_destructor.cpp": "dd33074c1b749b0178fa9d58ec22990194a869fa2e8a0d7d3a297f061ef55f12",
@@ -37829,6 +37831,24 @@
       "discarded_functions": [],
       "object_sha256": "7f21a9360f483d032bd039586b62be16d4870d6b9e69b0a21b76420d97e340f9",
       "linked_sha256": "2ad3518fdaecfe793db3cc217f1197d3f5ab220cc42dff071abaad3c7d96121d"
+    },
+    {
+      "id": "box_test_line",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 2072,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "9a646c7c6d1eb28e4989b8f2fd35e05eaab319f8d9f5687e909bbf573f1d7bea",
+      "linked_sha256": "533c102fff4e5228d05ad1c7e1db18a7e29f8de94c931d624cc82dfb773a0d03"
     }
   ],
   "code_map": {
@@ -58335,13 +58355,6 @@
             "size": 1588,
             "kind": "function",
             "name": "TestCollision__C7CVolBoxRC11CVolCapsuleR10CCollisionb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8013bb9c",
-            "size": 2072,
-            "kind": "function",
-            "name": "TestCollision__C7CVolBoxRC6CLine3R10CCollisionb",
             "evidence": "adjacent-compiler-markers"
           },
           {

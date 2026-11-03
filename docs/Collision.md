@@ -111,7 +111,7 @@ helpers are project names: no symbol records the pool's type.
 `SceneNode.h` declares out of line, and stays original context until that header decision
 is made. `CVolSphere::Create` waits on its file's header strings, above, and with it any
 whole `sphere.cpp`. The long vector tests that remain are listed by
-`config/GR8E69` by omission: the box tests, the sphere's visibility, the capsule
+`config/GR8E69` by omission: the box's box, sphere, capsule and plane tests and visibility, the sphere's visibility, the capsule
 transformed copy and visibility, the fiber's transformed copy and extents, `CCDBObject`'s line test and branch
 node tests, the CDB box and triangle tests, `CCompartment`'s constructor and loading, `CPlane`
 and the segment distance.
