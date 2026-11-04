@@ -4,8 +4,7 @@
 // controllers not ready and resets them, and marks other ports as having no
 // controller. PADStatus is Dolphin's 12-byte pad status (as in pad.cpp). The
 // sampling callback and iPAD_init come first in the file; iPAD_init is two
-// lines off (draft in scratch/lib/ipad_wip.c), so they are not part of this
-// unit.
+// lines off, so they are not part of this unit.
 struct PADStatus {
     unsigned short button;
     signed char stickX;

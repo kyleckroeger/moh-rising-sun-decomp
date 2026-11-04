@@ -6,8 +6,8 @@
 // range check of the stream index. SNDSTREAMCHANNEL, SNDPLAYOPTS,
 // SNDLINKNODE, SNDLINKLIST, SNDSAMPLEFORMAT and SNDSAMPLEATTR are named by the
 // mangled symbols; their members and sndgs/sndss are inferred views (see
-// sst.c). SNDSTRMI_create, before this unit, is drafted in
-// scratch/path/sst_create_wip.cpp.
+// sst.c). SNDSTRMI_create comes before this unit and is not
+// yet reconstructed.
 #include "SoundGlobals.h"
 extern "C" void* sndss[];
 

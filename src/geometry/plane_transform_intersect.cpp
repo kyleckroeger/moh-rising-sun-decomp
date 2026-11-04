@@ -38,7 +38,7 @@ void CPlane::Transform(const CMatrix &m) {
 int CPlane::GetIntersection(const CLine3 &line, float &t, CVector3 *point) const {
     CVector3 dir;
     dir = DirectionCopy(line);
-// Plain references: reproduce the code shape.
+    // Plain references: reproduce the code shape.
     const CVector3 &dd = dir;
     const CVector3 &nn = normal;
     float denominator = nn.x * dd.x + nn.y * dd.y;

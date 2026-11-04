@@ -100,7 +100,7 @@ meanings are inferred; event numbers and constants are read from the code. Unlik
 Frontline, Rising Sun applies no explosion push here: the original still calls
 `AsPlayerObject` and discards the result at that point.
 
-Parked in `scratch/par/player/Explosion.cpp`: the constructor (two argument moves
+Not yet accepted: the constructor (two argument moves
 swapped), `ShouldHeightCheckBeFlipped` (one load-immediate position), `TestRay` and
 `CheckForObstructions`.
 
@@ -116,20 +116,18 @@ names at +0x300 to +0x3a0 and the bit names in the flags word at +0x394 are Fron
 readings or inferred. Scene node slots are checked against the disc: where Frontline
 tests `AsWorldObject`/`AsSoldierObject` for script state 1, Rising Sun tests
 `AsAnimObject`/`AsPlayerObject`. Events are 224 and 225, against Frontline's 231 and 232.
-`Constrain` stays parked at `scratch/par/player/ThrownConstrain_parked.cpp` (reload of the
-reflected normal differs, 176 of 204 instructions aligned).
 
 `CThrownBullet::Constrain` (bounce, friction and the optional keep-speed cheat word at
 `g_cheats` +0x1c, then a clamped time-of-impact position) and `CreateExplosionEffect` are
 reconstructed. `CExplosion` is 0x50 bytes: slot reuse across `CThrownBullet::CommitUpdate`
-fixes it. `CommitUpdate` itself is parked at
-`scratch/par/player/ThrownBulletCommit_parked.cpp`, one instruction out of position.
+fixes it. `CommitUpdate` itself is not yet
+accepted: one instruction is out of position.
 
 `CBulletFactory::LoadBulletGUISprites` allocates through `DWI_alloc` with the labels
 `source/weapons/bulletfactory.cpp:567` and `:603`, which record the original path and
 line. Projectile sprite names sit at +0x27 of each 96-byte record and thrown ones at +0x27
-of each 104-byte record. `DeleteBulletGUISprites` is parked at
-`scratch/par/player/BulletSpritesDelete_parked.cpp`: only two loop registers are swapped.
+of each 104-byte record. `DeleteBulletGUISprites` is not yet
+accepted: only two loop registers are swapped.
 
 `CWeaponFactory::LoadWeaponGUISprites` builds `data\<name>` in a stack buffer and then
 loads the sprite from the bare name, so the built path goes unused in this build. The
