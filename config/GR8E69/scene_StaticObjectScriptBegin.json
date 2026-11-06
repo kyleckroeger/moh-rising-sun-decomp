@@ -1,0 +1,47 @@
+{
+  "id": "scene_StaticObjectScriptBegin",
+  "source": "src/scene/StaticObjectScriptBegin.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800a659c",
+      "size": 392
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029eba0",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "BeginScriptMotionUpdate__13CStaticObjectf",
+      "address": "0x800a659c",
+      "size": 392,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Normalize__11CQuaternion": "0x8007ccdc",
+    "Set__11CQuaternionffff": "0x8007ccc8",
+    "TriggerScriptEvent__13CStaticObjectUsPvb": "0x800aa98c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "static_obj.cpp",
+  "original_file_index": 833
+}

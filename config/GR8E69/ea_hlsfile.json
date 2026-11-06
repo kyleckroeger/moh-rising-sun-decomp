@@ -1,0 +1,97 @@
+{
+  "id": "ea_hlsfile",
+  "source": "src/ea/hlsfile.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8020b4b0",
+      "size": 932
+    },
+    {
+      "name": ".sdata",
+      "address": "0x80451240",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "FILE_exists",
+      "address": "0x8020b4b0",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "filesizeatom__FiPv",
+      "address": "0x8020b4d4",
+      "size": 112,
+      "binding": 0
+    },
+    {
+      "name": "FILE_size",
+      "address": "0x8020b544",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "FILE_sizez",
+      "address": "0x8020b584",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "loadfileatom__FiPv",
+      "address": "0x8020b5c4",
+      "size": 188,
+      "binding": 0
+    },
+    {
+      "name": "FILE_loadz",
+      "address": "0x8020b680",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "loadbigheaderatom__FiPv",
+      "address": "0x8020b6c4",
+      "size": 332,
+      "binding": 0
+    },
+    {
+      "name": "FILE_loadbigheader",
+      "address": "0x8020b810",
+      "size": 68,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BIG_sizeofheader": "0x8020b974",
+    "BIG_typeofheader": "0x8020b8f0",
+    "FILESYS_atomic": "0x80208028",
+    "FILESYS_closesync": "0x80208b7c",
+    "FILESYS_existssync": "0x80208cf4",
+    "FILESYS_opensync": "0x80208abc",
+    "FILESYS_readsync": "0x80208b2c",
+    "FILESYS_sizesync": "0x80208bd8",
+    "MEM_copy": "0x802187b0",
+    "gFileSysOpts": "0x803ff480"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "hlsfile.cpp",
+  "original_file_index": 2870
+}

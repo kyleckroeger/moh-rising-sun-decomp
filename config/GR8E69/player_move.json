@@ -1,0 +1,75 @@
+{
+  "id": "player_move",
+  "source": "src/player/PlayerMove.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800b3abc",
+      "size": 208
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetPosition__13CPlayerObjectRC8CVector3",
+      "address": "0x800b3abc",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "SetBasis__13CPlayerObjectRC8CVector3N21",
+      "address": "0x800b3ae0",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "Move__13CPlayerObjectRC8CVector3",
+      "address": "0x800b3b30",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "Rotate__13CPlayerObjectRC8CVector3f",
+      "address": "0x800b3b54",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "Pitch__13CPlayerObjectf",
+      "address": "0x800b3b78",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "Roll__13CPlayerObjectf",
+      "address": "0x800b3b88",
+      "size": 4,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Rotate__7CMatrixRC8CVector3f": "0x8007af60",
+    "SetFront__7CMatrixRC8CVector3": "0x8007ae44",
+    "SetPos__7CMatrixRC8CVector3": "0x8007ae7c",
+    "SetRight__7CMatrixRC8CVector3": "0x8007ae28",
+    "SetUp__7CMatrixRC8CVector3": "0x8007ae60",
+    "Translate__7CMatrixRC8CVector3": "0x8007af2c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}

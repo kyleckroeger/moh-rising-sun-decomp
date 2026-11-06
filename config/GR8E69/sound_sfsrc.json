@@ -1,0 +1,52 @@
+{
+  "id": "sound_sfsrc",
+  "source": "src/sound/ea/sfsrc.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80229120",
+      "size": 148
+    }
+  ],
+  "functions": [
+    {
+      "name": "SFILTER_src__FPviT0T0i",
+      "address": "0x80229120",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "SFILTER_initSOURCE__FP8SRCSTATEPv",
+      "address": "0x80229170",
+      "size": 28,
+      "binding": 1
+    },
+    {
+      "name": "SFILTER_createSOURCE__FP8SRCSTATE",
+      "address": "0x8022918c",
+      "size": 40,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDI_memcpy": "0x8021ab84"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sfsrc.c",
+  "original_file_index": 3256
+}

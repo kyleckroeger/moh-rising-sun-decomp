@@ -4,7 +4,7 @@
 int GetWeaponInfoHelper(CWeapon *weapon, EWeaponInfo info) {
     switch (info) {
     case WeaponInfo0:
-        return weapon->infoValue0;
+        return weapon->loadedAmmo;
     case WeaponInfo1:
         return weapon->properties->infoValue1;
     }

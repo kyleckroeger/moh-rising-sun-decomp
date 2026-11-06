@@ -1,0 +1,123 @@
+{
+  "id": "ai_AISoldierObjectUpdate",
+  "source": "src/ai/AISoldierObjectUpdate.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800dd6b4",
+      "size": 1236
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a2aa0",
+      "size": 48
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetSoldierObject__16CAISoldierObjectP14CSoldierObject",
+      "address": "0x800dd6b4",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "PreUpdate__16CAISoldierObject",
+      "address": "0x800dd6c0",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "UpdateFromGameObject__16CAISoldierObjectP16IMovingSceneNode",
+      "address": "0x800dd728",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "Update__16CAISoldierObjectf",
+      "address": "0x800dd764",
+      "size": 368,
+      "binding": 1
+    },
+    {
+      "name": "GetAIValueByName__16CAISoldierObjectPCc",
+      "address": "0x800dd8d4",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "Init__16CAISoldierObject",
+      "address": "0x800dd8f8",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "SetInitialStatus__16CAISoldierObject",
+      "address": "0x800dd93c",
+      "size": 192,
+      "binding": 1
+    },
+    {
+      "name": "UpdateStatus__16CAISoldierObject",
+      "address": "0x800dd9fc",
+      "size": 128,
+      "binding": 1
+    },
+    {
+      "name": "SetupTargetMatchList__16CAISoldierObjectP14aistatus_matchi",
+      "address": "0x800dda7c",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "ScoreTarget__FP9CAIObjectT0",
+      "address": "0x800ddab8",
+      "size": 132,
+      "binding": 1
+    },
+    {
+      "name": "ScoreTargetByDistance__FRC8CVector3T0",
+      "address": "0x800ddb3c",
+      "size": 76,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "CheckIncomingFlagAll__C9CAIObjectUi": "0x800dcc50",
+    "Distance__C8CVector3RC8CVector3": "0x8007bcd4",
+    "GetAIValueByName__19CCoverpointBehaviorPCc": "0x800f2394",
+    "GetCurrentObjectivePosition__13CAILocomotion": "0x800ef088",
+    "GetDistanceXYZReal__9CAIObjectP9CAIObject": "0x800dab84",
+    "Init__7CAISnap": "0x800def18",
+    "Init__9CAIObject": "0x800d9fc4",
+    "PreUpdate__9CAIObject": "0x800d9e6c",
+    "SetAIStatusVar__9CAIObject12aistatus_vari": "0x800dcc8c",
+    "UpdateFromGameObject__9CAIObjectP16IMovingSceneNode": "0x800d9ec0",
+    "Update__12CAITargeting": "0x800ecf6c",
+    "Update__19CAIThreatEvaluationf": "0x800f3ad4",
+    "Update__7CAISnapf": "0x800def28",
+    "Update__9CAIObjectf": "0x800d9e70",
+    "WalkAStarPath__18CAIAreaPathFinding": "0x800eaee4",
+    "WalkNextSplinePathPoint__19CAISplinePathModule": "0x800e0aec",
+    "WalkToArbitraryPoint__13CAILocomotion": "0x800ef180",
+    "WalkToCoverPoint__19CCoverpointBehavior": "0x800f1f08"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AISoldierObject.cpp",
+  "original_file_index": 982
+}

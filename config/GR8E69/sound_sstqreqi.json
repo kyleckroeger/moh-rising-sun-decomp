@@ -1,0 +1,40 @@
+{
+  "id": "sound_sstqreqi",
+  "source": "src/sound/ea/sstqreqi.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80220bfc",
+      "size": 44
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDSTRM_queuerequestid",
+      "address": "0x80220bfc",
+      "size": 44,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDSTRMI_queue__FiiPcii": "0x80220554"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sstqreqi.c",
+  "original_file_index": 3111
+}

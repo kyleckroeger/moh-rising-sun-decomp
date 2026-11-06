@@ -1,0 +1,43 @@
+{
+  "id": "sound_spoutlat",
+  "source": "src/sound/ea/spoutlat.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8021f4a8",
+      "size": 56
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDPROFILE_outputlatency",
+      "address": "0x8021f4a8",
+      "size": 56,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDPLATFORM_outputlatency__Fv": "0x8021d324",
+    "sndgs": "0x804108fc"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "spoutlat.c",
+  "original_file_index": 3080
+}

@@ -1,0 +1,57 @@
+{
+  "id": "capsule_test_line",
+  "source": "src/geometry/capsule_test_line.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801433f0",
+      "size": 2772
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a85b0",
+      "size": 28
+    }
+  ],
+  "functions": [
+    {
+      "name": "FindIntersection__FRC6CLine3RC11CVolCapsulePf",
+      "address": "0x801433f0",
+      "size": 1628,
+      "binding": 0
+    },
+    {
+      "name": "TestCollision__C11CVolCapsuleRC6CLine3R10CCollisionb",
+      "address": "0x80143a4c",
+      "size": 1144,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddContact__10CCollisionRC12SClsnContact": "0x80133f5c",
+    "GetProjection__C6CLine3RC8CVector3R8CVector3Rf": "0x8007c510",
+    "IsDegenerate__C6CLine3": "0x8007cbf8",
+    "TestCollision__C10CVolSphereRC6CLine3R10CCollisionb": "0x801371a8",
+    "_vt.10CVolSphere": "0x802e9520",
+    "_vt.7IVolume": "0x802e1c38",
+    "sqrtf": "0x80270538"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "capsule.cpp",
+  "original_file_index": 1333
+}

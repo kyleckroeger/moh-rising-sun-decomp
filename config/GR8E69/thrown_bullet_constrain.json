@@ -1,0 +1,49 @@
+{
+  "id": "thrown_bullet_constrain",
+  "source": "src/bullets/ThrownBulletConstrain.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80151fa4",
+      "size": 1208
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a9520",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "Constrain__13CThrownBulletf",
+      "address": "0x80151fa4",
+      "size": 1208,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetEnd__C9CVolFiber": "0x801412bc",
+    "GetStart__C9CVolFiber": "0x8014128c",
+    "SetPos__7CMatrixRC8CVector3": "0x8007ae7c",
+    "g_cheats": "0x802f98e4",
+    "sqrtf": "0x80270538"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "thrownbullet.cpp",
+  "original_file_index": 1370
+}

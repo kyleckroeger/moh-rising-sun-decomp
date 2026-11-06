@@ -53,6 +53,7 @@ class CPistolBehavior { // Type 6.
     virtual void Enable();
     virtual void Disable();
     virtual BSObject *GetScriptObject();
+    virtual void SetWeaponScript(BSObject *);
 };
 
 class CMountedMachineGunBehavior { // Type 3.
@@ -82,10 +83,13 @@ class CCoverpointBehavior { // Type 4.
     // order of the original behavior tables (e.g. 0x802e8180).
     unsigned char unknown00[12];
     virtual ~CCoverpointBehavior();
+    static void UpdateCoverpointsOutOfArea(const ISceneNode *);
     virtual float GetCurrentHeuristicScore();
     virtual float GetHeuristicUpdateFrequency();
     virtual void UpdateHeuristicScore();
     int StartCoverPointWalk();
+    void WalkToCoverPoint();
+    float GetAIValueByName(const char *);
     void StopCoverPointWalk();
     void Arrived();
     void EndCoverpoint();
@@ -135,7 +139,28 @@ class CAITankObject {
   public:
     unsigned char unknown00[0x0c];
     BSObject *scriptObject;
+    unsigned char unknown10[0x730 - 0x10];
+    float health;      // +0x730
+    float maxHealth;   // +0x734
+    aistatus_match targetMatchList[1]; // +0x738; extent unknown.
+    unsigned char unknown744[0x768 - 0x744];
+    int field_768;     // +0x768; cleared by Init.
+    unsigned char unknown76c[0x7a0 - 0x76c];
+    ISceneNode *sceneNode; // +0x7a0; the tank scene object.
+    unsigned char unknown7a4[1968 - 0x7a4]; // The allocation is 1968 bytes.
     static CAITankObject *FindTank();
+    CAITankObject(void *);
+    void *operator new(unsigned int, void *);
+    void operator delete(void *);
+    void Init();
+    void SetInitialStatus();
+    void UpdateStatus();
+    void UpdateFromGameObject(IMovingSceneNode *);
+    void PreUpdate();
+    void SetupTargetMatchList(aistatus_match *, int);
+    int ChooseTarget(float);
+    ISceneNode *GetSceneNode();
+    CAITankObject *AsAITankObject();
 };
 
 #endif

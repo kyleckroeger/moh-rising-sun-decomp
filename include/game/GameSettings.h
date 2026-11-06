@@ -24,13 +24,19 @@ struct GameProfile {
 // Original enum tag; members are descriptive.
 enum EShotLocations { ShotLocation0 = 0 };
 
+class CMatrix;
+class CVector3;
+class CQuaternion;
 // Member view of the game-settings singleton; only the profile pointer is named.
 class CGameSettings {
   public:
     GameProfile *profile;
     int SerializingIn() const;
     int SerializingOut() const;
+    void SerializeDelta(const CMatrix &, CMatrix &);
     void SerializeValue(unsigned int &, unsigned int);
+    void SerializeValue(CVector3 &);
+    void SerializeValue(CQuaternion &);
     void AddCheat(int);
     void RegisterSavePoint(int, bool);
     void TriggerSavePointResponse(int, bool);
@@ -45,7 +51,13 @@ extern CGameSettings g_GameSettings;
 
 // Scoped view of the cheat state; only the replay-item unlock at +0x34 is named.
 struct CheatsView {
-    unsigned char unknown_0[0x34];
+    int invincible; // Tested by CPlayerObject::IsInvincible; name inferred.
+    int infiniteAmmo; // +4; CWeapon::Update refills an empty reserve. Name from Frontline.
+    unsigned char unknown_8[0x1c - 8];
+    int keepGrenadeSpeed; // +0x1c; name from Frontline.
+    unsigned char unknown_20[0x28 - 0x20];
+    int oneHitKills; // +0x28; damage becomes 1000 in CExplosion::Visit. Name from Frontline.
+    unsigned char unknown_2c[0x34 - 0x2c];
     int allReplayItems;
 };
 extern CheatsView g_cheats;

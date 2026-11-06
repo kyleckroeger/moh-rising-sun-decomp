@@ -1,0 +1,92 @@
+{
+  "id": "ea_stream_requests",
+  "source": "src/ea/stream_requests.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8020976c",
+      "size": 840
+    }
+  ],
+  "functions": [
+    {
+      "name": "validatehandle__FiPP15STREAMHEADERtagPP12TAPSTRUCTtag",
+      "address": "0x8020976c",
+      "size": 64,
+      "binding": 0
+    },
+    {
+      "name": "inbetween__FPcN20",
+      "address": "0x802097ac",
+      "size": 64,
+      "binding": 0
+    },
+    {
+      "name": "decbufferusage__FP15STREAMHEADERtagi",
+      "address": "0x802097ec",
+      "size": 128,
+      "binding": 0
+    },
+    {
+      "name": "getfreerequest__FP15STREAMHEADERtag",
+      "address": "0x8020986c",
+      "size": 132,
+      "binding": 0
+    },
+    {
+      "name": "queuerequest__FP15STREAMHEADERtagP16REQUESTSTRUCTtag",
+      "address": "0x802098f0",
+      "size": 124,
+      "binding": 0
+    },
+    {
+      "name": "locaterequest__FP15STREAMHEADERtagi",
+      "address": "0x8020996c",
+      "size": 80,
+      "binding": 0
+    },
+    {
+      "name": "freerequest__FP15STREAMHEADERtagP16REQUESTSTRUCTtag",
+      "address": "0x802099bc",
+      "size": 128,
+      "binding": 0
+    },
+    {
+      "name": "filterchunk__FP15STREAMHEADERtagP14STREAMCHUNKHDR",
+      "address": "0x80209a3c",
+      "size": 120,
+      "binding": 0
+    }
+  ],
+  "externals": {
+    "FILESYS_priorityop": "0x802073ac",
+    "MUTEX_lock": "0x80217f7c",
+    "MUTEX_unlock": "0x80217fa0",
+    "requestidcounter": "0x80451f30"
+  },
+  "local_externals": [
+    "requestidcounter"
+  ],
+  "sda_externals": [
+    "requestidcounter"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "stream.cpp",
+  "original_file_index": 2853
+}

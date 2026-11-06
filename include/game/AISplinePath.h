@@ -62,11 +62,19 @@ public:
 };
 // Observed prefix through the locomotion pointer at +0x20. Constructor and
 // traversal accesses agree; this is not the complete navigation class.
+class CAIObject;
+// Method-only view of an A* area node.
+class CAreaPathNode {
+public:
+    void GetFurthestVertex(const CVector3 &, const CVector3 &, CVector3 *, bool) const;
+    void BiasTowardCentroid(CVector3 *, float) const;
+};
 class CAIAreaPathFinding {
 public:
     unsigned char unknown00[0x20];
     CAILocomotion *locomotion;
     void StopAStarPathWalk();
+    void UpdateOffAStarPosition();
     int StartAStarPathWalk(BSObject *, EAStarDestinationInfo);
     int StartAStarPathWalk(EAStarDestinationInfo);
     void EnterAStarVolume(int);
@@ -75,13 +83,20 @@ public:
     static void RegisterAStarLinkPoint(TriggerObject *, int, int, int);
     void ExitAStarVolume(int);
     void UpdateAStarPathWalk();
+    void WalkAStarPath();
     bool SetupAStarPathWalkForPatrol(const CVector3 &);
+    void RemovePointersTo(CAIObject *);
+    CAreaPathNode *GreedySearchAwayFromPoint(const CVector3 &, float, bool);
+    void Update();
 };
-// Static navigation-mesh query.
-class AIPathFinding {
-public:
-    static int IsPointOnNetwork(const CVector3 &);
-};
+// Static navigation-mesh query. A namespace, not a class: ProDG mangles a no-argument
+// function in a namespace with a trailing `v` (`ResetAreaPathNodes__13AIPathFindingv`) and a
+// no-argument class static without one (`f__1A`), and `_13AIPathFinding.g_iLastPathNodeUpdatedOutOfArea`
+// has local binding, which a class static data member cannot have.
+namespace AIPathFinding {
+    int IsPointOnNetwork(const CVector3 &);
+    void UpdateAStarNodesOutOfArea();
+}
 // Prefix through the next-point vector at +0x20. The untouched bytes at
 // +0x18 and the complete allocation size remain unestablished.
 class CAISplinePathTraversal {

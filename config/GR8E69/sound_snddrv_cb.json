@@ -1,0 +1,83 @@
+{
+  "id": "sound_snddrv_cb",
+  "source": "src/sound/ea/snddrv_cb.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8021b8ec",
+      "size": 708
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bf7d8",
+      "size": 8
+    },
+    {
+      "name": ".data",
+      "address": "0x802d5490",
+      "size": 4
+    },
+    {
+      "name": ".bss",
+      "address": "0x80410c20",
+      "size": 4,
+      "type": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDDRV_audiocallback__FPvT0",
+      "address": "0x8021b8ec",
+      "size": 328,
+      "binding": 1
+    },
+    {
+      "name": "SNDDRV_initmixer__Fv",
+      "address": "0x8021ba34",
+      "size": 240,
+      "binding": 1
+    },
+    {
+      "name": "SNDDRV_restoremixer__Fv",
+      "address": "0x8021bb24",
+      "size": 140,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "MIX_getwetbuffer": "0x80224378",
+    "MIXinitfn": "0x8041ee00",
+    "MIXrestorefn": "0x8041ee04",
+    "OSEnableInterrupts": "0x802577ac",
+    "OSRestoreInterrupts": "0x802577c0",
+    "OSWakeupThread": "0x8025ad04",
+    "SNDDRV_mixvoicefree__Fi": "0x8021b190",
+    "SNDI_memcpy": "0x8021ab84",
+    "SNDMEMI_allocz__Fi": "0x8021ae30",
+    "SNDMEMI_free__FPv": "0x8021b034",
+    "SNDSYS_entercritical": "0x8021f948",
+    "SNDSYS_leavecritical": "0x8021f988",
+    "SNDSYS_linkmaincpumixer": "0x8022548c",
+    "snddrv": "0x80410c40",
+    "sndgs": "0x804108fc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "snddrv.c",
+  "original_file_index": 3064
+}

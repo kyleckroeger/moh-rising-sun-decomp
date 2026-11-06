@@ -26,7 +26,7 @@ void BIFunc_PlayerWeaponInfo(int **stack, void *object) {
     if (weapon) {
         switch (info) {
         case 0:
-            result = weapon->reserveAmmo + weapon->infoValue0;
+            result = weapon->reserveAmmo + weapon->loadedAmmo;
             break;
         case 1:
             result = weapon->properties->infoValue1;
@@ -35,10 +35,10 @@ void BIFunc_PlayerWeaponInfo(int **stack, void *object) {
             result = weaponObject && weaponObject->IsSelectable() ? 1 : 0;
             break;
         case 3:
-            result = weapon->infoValue0;
+            result = weapon->loadedAmmo;
             break;
         case 4:
-            result = weapon->infoValue0 == weapon->properties->clipSize;
+            result = weapon->loadedAmmo == weapon->properties->clipSize;
             break;
         }
     }

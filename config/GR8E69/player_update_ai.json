@@ -1,0 +1,38 @@
+{
+  "id": "player_update_ai",
+  "source": "src/player/PlayerUpdateAI.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800b0990",
+      "size": 56
+    }
+  ],
+  "functions": [
+    {
+      "name": "UpdateAI__13CPlayerObjectf",
+      "address": "0x800b0990",
+      "size": 56,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}

@@ -1,0 +1,71 @@
+{
+  "id": "capsule_destructor",
+  "source": "src/geometry/capsule_destructor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": true,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8014239c",
+      "size": 52
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a858c",
+      "size": 4
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.11CVolCapsule",
+      "address": "0x802e9940",
+      "size": 176,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "_._11CVolCapsule",
+      "address": "0x8014239c",
+      "size": 52,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Create__C11CVolCapsule": "0x801423d0",
+    "GetExtents__C11CVolCapsuleR8CVector3T1": "0x80144918",
+    "GetRadius__C11CVolCapsule": "0x80144ac8",
+    "SetRadius__11CVolCapsulef": "0x80144ac0",
+    "TestCollision__C11CVolCapsuleRC10CCDBObjectR10CCollisionb": "0x80142fa0",
+    "TestCollision__C11CVolCapsuleRC10CCSGVolumeR10CCollisionb": "0x8014309c",
+    "TestCollision__C11CVolCapsuleRC10CVolSphereR10CCollisionb": "0x801427d8",
+    "TestCollision__C11CVolCapsuleRC11CVolCapsuleR10CCollisionb": "0x80142ab0",
+    "TestCollision__C11CVolCapsuleRC12CWorldVolumeR10CCollisionb": "0x801430fc",
+    "TestCollision__C11CVolCapsuleRC15CAnimatedVolumeR10CCollisionb": "0x80143068",
+    "TestCollision__C11CVolCapsuleRC6CLine3R10CCollisionb": "0x80143a4c",
+    "TestCollision__C11CVolCapsuleRC6CPlaneR10CCollisionb": "0x80143ec4",
+    "TestCollision__C11CVolCapsuleRC7CVolBoxR10CCollisionb": "0x80142778",
+    "TestCollision__C11CVolCapsuleRC7IVolumeR10CCollisionb": "0x80142718",
+    "TestCollision__C11CVolCapsuleRC8CVector3R10CCollisionb": "0x8014315c",
+    "TestCollision__C11CVolCapsuleRC9CTriangleR10CCollisionb": "0x80144024",
+    "TestCollision__C11CVolCapsuleRC9CVolFiberR10CCollisionb": "0x80143000",
+    "TestVisibility__C11CVolCapsuleR12CDrawContext": "0x8014402c",
+    "TransformedCopy__11CVolCapsuleRC7IVolumeRC7CMatrix": "0x8014241c",
+    "__builtin_delete": "0x801a8990",
+    "_vt.7IVolume": "0x802e1c38"
+  },
+  "discarded_functions": [
+    "__11CVolCapsule"
+  ],
+  "undefined_in_discarded_code": []
+}

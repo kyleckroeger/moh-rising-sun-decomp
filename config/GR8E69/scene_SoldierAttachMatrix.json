@@ -1,0 +1,41 @@
+{
+  "id": "scene_SoldierAttachMatrix",
+  "source": "src/scene/SoldierAttachMatrix.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800c0b08",
+      "size": 72
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetAttachPointMatrix__14CSoldierObjectPcP7CMatrix",
+      "address": "0x800c0b08",
+      "size": 72,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FindAttachPoint__Q34EALA9Character8SkeletonPCc": "0x80082630",
+    "__as__7CMatrixRC7CMatrix": "0x8007aa38"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Soldier_object.cpp",
+  "original_file_index": 875
+}

@@ -1,0 +1,71 @@
+{
+  "id": "fiber_destructor",
+  "source": "src/geometry/fiber_destructor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": true,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80140e54",
+      "size": 52
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a8490",
+      "size": 4
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.9CVolFiber",
+      "address": "0x802e9890",
+      "size": 176,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "_._9CVolFiber",
+      "address": "0x80140e54",
+      "size": 52,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Create__C9CVolFiber": "0x80140e88",
+    "GetExtents__C9CVolFiberR8CVector3T1": "0x80142150",
+    "GetRadius__C7IVolume": "0x802798d8",
+    "SetRadius__7IVolumef": "0x802798e4",
+    "TestCollision__C9CVolFiberRC10CCDBObjectR10CCollisionb": "0x8014149c",
+    "TestCollision__C9CVolFiberRC10CCSGVolumeR10CCollisionb": "0x80141574",
+    "TestCollision__C9CVolFiberRC10CVolSphereR10CCollisionb": "0x801413c4",
+    "TestCollision__C9CVolFiberRC11CVolCapsuleR10CCollisionb": "0x80141430",
+    "TestCollision__C9CVolFiberRC12CWorldVolumeR10CCollisionb": "0x801415e0",
+    "TestCollision__C9CVolFiberRC15CAnimatedVolumeR10CCollisionb": "0x80141508",
+    "TestCollision__C9CVolFiberRC6CLine3R10CCollisionb": "0x801419dc",
+    "TestCollision__C9CVolFiberRC6CPlaneR10CCollisionb": "0x80141e94",
+    "TestCollision__C9CVolFiberRC7CVolBoxR10CCollisionb": "0x80141358",
+    "TestCollision__C9CVolFiberRC7IVolumeR10CCollisionb": "0x801412f8",
+    "TestCollision__C9CVolFiberRC8CVector3R10CCollisionb": "0x8014164c",
+    "TestCollision__C9CVolFiberRC9CTriangleR10CCollisionb": "0x80141ff0",
+    "TestCollision__C9CVolFiberRC9CVolFiberR10CCollisionb": "0x8014196c",
+    "TestVisibility__C9CVolFiberR12CDrawContext": "0x80142004",
+    "TransformedCopy__9CVolFiberRC7IVolumeRC7CMatrix": "0x80140ed4",
+    "__builtin_delete": "0x801a8990",
+    "_vt.7IVolume": "0x802e1c38"
+  },
+  "discarded_functions": [
+    "__9CVolFiber"
+  ],
+  "undefined_in_discarded_code": []
+}

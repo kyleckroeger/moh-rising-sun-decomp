@@ -1,0 +1,40 @@
+{
+  "id": "ea_memclear",
+  "source": "src/ea/memclear.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802184a4",
+      "size": 40
+    }
+  ],
+  "functions": [
+    {
+      "name": "MEM_clear",
+      "address": "0x802184a4",
+      "size": 40,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "MEM_fill": "0x8021866c"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

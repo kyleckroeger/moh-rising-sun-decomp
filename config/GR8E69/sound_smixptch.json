@@ -1,0 +1,47 @@
+{
+  "id": "sound_smixptch",
+  "source": "src/sound/ea/smixptch.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8022690c",
+      "size": 188
+    }
+  ],
+  "functions": [
+    {
+      "name": "MIX_setpitch",
+      "address": "0x8022690c",
+      "size": 188,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SFILTER_add": "0x80227e6c",
+    "SFILTER_rsfinit__FP8RSFSTATEii": "0x80228f48",
+    "SFILTER_rsfsetpitch__FP8RSFSTATEi": "0x80228c68",
+    "SNDMEMI_allocz__Fi": "0x8021ae30",
+    "sndgs": "0x804108fc",
+    "sndmix": "0x8041ec1c"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "smixptch.c",
+  "original_file_index": 3196
+}

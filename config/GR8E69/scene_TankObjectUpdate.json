@@ -1,0 +1,47 @@
+{
+  "id": "scene_TankObjectUpdate",
+  "source": "src/scene/TankObjectUpdate.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800c34c0",
+      "size": 64
+    }
+  ],
+  "functions": [
+    {
+      "name": "AttemptUpdate__11CTankObjectf",
+      "address": "0x800c34c0",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "CommitUpdate__11CTankObject",
+      "address": "0x800c34e0",
+      "size": 32,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AttemptUpdate__11CHierObjectf": "0x800d0c2c",
+    "CommitUpdate__11CHierObject": "0x800d0e50"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Tank_object.cpp",
+  "original_file_index": 894
+}

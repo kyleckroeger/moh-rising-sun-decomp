@@ -1,0 +1,38 @@
+{
+  "id": "compartment_draw_enabled",
+  "source": "src/geometry/compartment_draw_enabled.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80071e30",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "IsDrawEnabled__C12CCompartment",
+      "address": "0x80071e30",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "compartment.cpp",
+  "original_file_index": 517
+}

@@ -1,0 +1,39 @@
+{
+  "id": "sound_supmutf",
+  "source": "src/sound/ea/supmutf.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80229648",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "SFILTER_unpackgetframemtf__FPv",
+      "address": "0x80229648",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "supmutf.c",
+  "original_file_index": 3276
+}

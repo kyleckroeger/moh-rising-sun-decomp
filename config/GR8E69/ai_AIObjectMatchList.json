@@ -1,0 +1,38 @@
+{
+  "id": "ai_AIObjectMatchList",
+  "source": "src/ai/AIObjectMatchList.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800dc654",
+      "size": 124
+    }
+  ],
+  "functions": [
+    {
+      "name": "FindMatchingBehaviorFromList__FPP9CBehaviori13EBehaviorType",
+      "address": "0x800dc654",
+      "size": 124,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIObject.cpp",
+  "original_file_index": 977
+}

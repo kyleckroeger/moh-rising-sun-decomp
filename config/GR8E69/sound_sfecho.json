@@ -1,0 +1,62 @@
+{
+  "id": "sound_sfecho",
+  "source": "src/sound/ea/sfecho.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80227b50",
+      "size": 332
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bfc30",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "SFILTER_echorestore__FPv",
+      "address": "0x80227b50",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "SFILTER_createECHO__FP9ECHOSTATE",
+      "address": "0x80227b94",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "SFILTER_modifyECHO__FP9ECHOSTATEPi",
+      "address": "0x80227bd8",
+      "size": 196,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SFILTER_echo__FPviT0T0i": "0x8022798c",
+    "SNDI_findmult16__Fii": "0x802292d4",
+    "SNDMEMI_allocz__Fi": "0x8021ae30",
+    "SNDMEMI_free__FPv": "0x8021b034",
+    "memset": "0x80266778"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sfecho.c",
+  "original_file_index": 3232
+}

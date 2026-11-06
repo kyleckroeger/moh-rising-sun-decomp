@@ -1,0 +1,46 @@
+{
+  "id": "box_create",
+  "source": "src/geometry/box_create.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80137e34",
+      "size": 76
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a8034",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "Create__C7CVolBox",
+      "address": "0x80137e34",
+      "size": 76,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__builtin_new": "0x801a8910",
+    "_vt.7CVolBox": "0x802e95d0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "box.cpp",
+  "original_file_index": 1316
+}

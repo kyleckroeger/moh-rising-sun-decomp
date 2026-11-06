@@ -1,0 +1,60 @@
+{
+  "id": "cdbobject_test_zero",
+  "source": "src/geometry/cdbobject_test_zero.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8007445c",
+      "size": 40
+    }
+  ],
+  "functions": [
+    {
+      "name": "TestCollision__C10CCDBObjectRC10CCDBObjectR10CCollisionb",
+      "address": "0x8007445c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C10CCDBObjectRC12CWorldVolumeR10CCollisionb",
+      "address": "0x80074464",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C10CCDBObjectRC8CVector3R10CCollisionb",
+      "address": "0x8007446c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C10CCDBObjectRC6CPlaneR10CCollisionb",
+      "address": "0x80074474",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C10CCDBObjectRC9CTriangleR10CCollisionb",
+      "address": "0x8007447c",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

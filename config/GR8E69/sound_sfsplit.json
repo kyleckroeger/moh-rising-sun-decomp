@@ -1,0 +1,54 @@
+{
+  "id": "sound_sfsplit",
+  "source": "src/sound/ea/sfsplit.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80228fa4",
+      "size": 380
+    }
+  ],
+  "functions": [
+    {
+      "name": "SFILTER_splitter__FPviT0T0i",
+      "address": "0x80228fa4",
+      "size": 256,
+      "binding": 1
+    },
+    {
+      "name": "SFILTER_splitrestore__FPv",
+      "address": "0x802290a4",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "SFILTER_createSPLIT__FP10SPLITSTATE",
+      "address": "0x802290d0",
+      "size": 80,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDI_memcpy": "0x8021ab84",
+    "SNDMEMI_allocz__Fi": "0x8021ae30",
+    "SNDMEMI_free__FPv": "0x8021b034"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sfsplit.c",
+  "original_file_index": 3254
+}

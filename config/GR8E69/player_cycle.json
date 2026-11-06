@@ -1,0 +1,46 @@
+{
+  "id": "player_cycle",
+  "source": "src/player/PlayerCycle.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800b3f94",
+      "size": 504
+    }
+  ],
+  "functions": [
+    {
+      "name": "CycleWeapon__13CPlayerObjectii",
+      "address": "0x800b3f94",
+      "size": 504,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetWeaponSlot__15CAnimatedPlayerP7CWeapon": "0x800d5508",
+    "IsSelectable__C19CPlayerWeaponObject": "0x800c8e00",
+    "SetCurrentWeapon__14CSoldierObjectiib": "0x800c2c2c",
+    "SetDrawDelay__19CPlayerWeaponObjecti": "0x800c9cf8",
+    "Shoot__19CPlayerWeaponObject16EWeaponShootTypei": "0x800c8e3c",
+    "g_bCoopMultiplayer": "0x802c1b2c",
+    "g_bInMultiplayerMode": "0x802c1b30"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}

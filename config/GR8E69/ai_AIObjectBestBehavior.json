@@ -1,0 +1,55 @@
+{
+  "id": "ai_AIObjectBestBehavior",
+  "source": "src/ai/AIObjectBestBehavior.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800dc364",
+      "size": 280
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a2818",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetHearingDistance__9CAIObject",
+      "address": "0x800dc364",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetAIValueByName__9CAIObjectPCc",
+      "address": "0x800dc36c",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "FindBestBehavior__9CAIObject",
+      "address": "0x800dc378",
+      "size": 260,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIObject.cpp",
+  "original_file_index": 977
+}

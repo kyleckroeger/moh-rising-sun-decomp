@@ -1,0 +1,55 @@
+{
+  "id": "sound_supf",
+  "source": "src/sound/ea/supf.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80229420",
+      "size": 288
+    }
+  ],
+  "functions": [
+    {
+      "name": "SFILTER_unpackfgetframe__FPv",
+      "address": "0x80229420",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SFILTER_unpackf__FPviT0T0i",
+      "address": "0x80229428",
+      "size": 216,
+      "binding": 1
+    },
+    {
+      "name": "SFILTER_unpackfinit__FPvP16UNPACKINITPARAMS",
+      "address": "0x80229500",
+      "size": 64,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "memset": "0x80266778",
+    "sndmix": "0x8041ec1c"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "supf.c",
+  "original_file_index": 3272
+}

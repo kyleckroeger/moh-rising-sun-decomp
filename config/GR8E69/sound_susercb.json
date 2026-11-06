@@ -1,0 +1,50 @@
+{
+  "id": "sound_susercb",
+  "source": "src/sound/ea/susercb.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802226e0",
+      "size": 256
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDSYS_adduserdataclient",
+      "address": "0x802226e0",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "SNDSYS_removeuserdataclient",
+      "address": "0x80222718",
+      "size": 200,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDSYS_entercritical": "0x8021f948",
+    "SNDSYS_leavecritical": "0x8021f988",
+    "sndgs": "0x804108fc"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "susercb.c",
+  "original_file_index": 3136
+}

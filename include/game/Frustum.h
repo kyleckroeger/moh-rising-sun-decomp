@@ -5,12 +5,16 @@
 // Field names are descriptive. These views establish the observed plane stride
 // and frustum prefix, not complete historical classes or allocation contracts.
 #include "CMatrix.h"
+class CLine3;
 
 struct CPlane {
     CVector3 normal;
     float distance;
     unsigned char unknown14[12];
+    CPlane() {}
+    CPlane(const CVector3 &n, float d) : normal(n), distance(d) {}
     void Transform(const CMatrix &); // Original external body.
+    int GetIntersection(const CLine3 &, float &, CVector3 *) const;
 };
 
 struct CFrustum {

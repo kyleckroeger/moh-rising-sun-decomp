@@ -1,0 +1,57 @@
+{
+  "id": "sound_sfamplf",
+  "source": "src/sound/ea/sfamplf.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802276e8",
+      "size": 280
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bfc08",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "SFILTER_amplf__FPviT0T0i",
+      "address": "0x802276e8",
+      "size": 148,
+      "binding": 1
+    },
+    {
+      "name": "SFILTER_createAMPLF__FP10AMPLFSTATE",
+      "address": "0x8022777c",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "SFILTER_modifyAMPLF__FP10AMPLFSTATEPi",
+      "address": "0x802277bc",
+      "size": 68,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sfamplf.c",
+  "original_file_index": 3228
+}

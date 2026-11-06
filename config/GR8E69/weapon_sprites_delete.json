@@ -1,0 +1,44 @@
+{
+  "id": "weapon_sprites_delete",
+  "source": "src/weapons/WeaponSpritesDelete.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/stlport-runtime",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8014fe64",
+      "size": 264
+    }
+  ],
+  "functions": [
+    {
+      "name": "DeleteWeaponGUISprites__14CWeaponFactory",
+      "address": "0x8014fe64",
+      "size": 264,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_._7CSprite": "0x8005d1f4",
+    "_M_increment__Q24_STLt10_Rb_global1ZbPQ24_STL18_Rb_tree_node_base": "0x8027a1dc",
+    "strcmp": "0x802669b4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "weaponfactory.cpp",
+  "original_file_index": 1364
+}

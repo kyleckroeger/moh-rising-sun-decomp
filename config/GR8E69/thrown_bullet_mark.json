@@ -1,0 +1,43 @@
+{
+  "id": "thrown_bullet_mark",
+  "source": "src/bullets/ThrownBulletMisc.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80151a9c",
+      "size": 276
+    }
+  ],
+  "functions": [
+    {
+      "name": "MarkForDestruction__13CThrownBulleti",
+      "address": "0x80151a9c",
+      "size": 276,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GrenadeDestroyed__24CGrenadeResponseBehaviorP13CThrownBullet": "0x800f0598",
+    "MarkForDestruction__8ISubjecti": "0x8014ad2c",
+    "Remove__6CSceneR10ISceneNode": "0x80146e9c",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "thrownbullet.cpp",
+  "original_file_index": 1370
+}

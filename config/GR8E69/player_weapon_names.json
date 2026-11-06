@@ -1,0 +1,63 @@
+{
+  "id": "player_weapon_names",
+  "source": "src/weapons/PlayerWeaponNames.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800c9660",
+      "size": 188
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetAnimFolder__19CPlayerWeaponObjectPCc",
+      "address": "0x800c9660",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "SetWeaponName__19CPlayerWeaponObjectPCc",
+      "address": "0x800c9684",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "SetMuzzleStatusForPlayer__Fbi",
+      "address": "0x800c96b8",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "Destroy__19CPlayerWeaponObject",
+      "address": "0x800c96f0",
+      "size": 44,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetCurrentWeapon__C13CPlayerObject": "0x800b41a8",
+    "GetPlayer__C6CScenei": "0x8014ac08",
+    "ReleaseObject__18CAnimObjectFactoryP11CAnimObject": "0x800cc668",
+    "g_AnimObjFactory": "0x803e6bb0",
+    "g_scene": "0x803e6d90",
+    "strcpy": "0x80266a7c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player_weapon_object.cpp",
+  "original_file_index": 912
+}

@@ -1,0 +1,90 @@
+{
+  "id": "ai_AIPlayerDoodad",
+  "source": "src/ai/AIPlayerDoodad.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d7454",
+      "size": 460
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a1eb0",
+      "size": 52
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.15CAIPlayerDoodad",
+      "address": "0x802e77d8",
+      "size": 40,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "__15CAIPlayerDoodad",
+      "address": "0x800d7454",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "_._15CAIPlayerDoodad",
+      "address": "0x800d7498",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "Init__15CAIPlayerDoodadP13CPlayerObject",
+      "address": "0x800d7504",
+      "size": 176,
+      "binding": 1
+    },
+    {
+      "name": "CleanUp__15CAIPlayerDoodad",
+      "address": "0x800d75b4",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "GetAIObject__C15CAIPlayerDoodad",
+      "address": "0x800d760c",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "GetSceneNode__C15CAIPlayerDoodad",
+      "address": "0x800d7618",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "GetAIObject__C21CAIFilterPlayerObject": "0x800d9884",
+    "Init__15CAIPlayerObject": "0x800dd17c",
+    "Init__9CAIDoodad": "0x800d7448",
+    "LinkGameObject__15CAIFilterObjectPv": "0x800d8e9c",
+    "SetOneTimeVars__21CAIFilterPlayerObject": "0x800d9694",
+    "UpdateManualUpdateVars__21CAIFilterPlayerObject": "0x800d97c8",
+    "_._9CAIDoodad": "0x800d7414",
+    "__21CAIFilterPlayerObjectP8BSObject": "0x800d95cc",
+    "__9CAIDoodad": "0x800d73f8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIPlayerDoodad.cpp",
+  "original_file_index": 958
+}

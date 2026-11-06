@@ -1,0 +1,71 @@
+{
+  "id": "scene_AnimObjectReset",
+  "source": "src/scene/AnimObjectReset.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800a5038",
+      "size": 160
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029e9f4",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "IsDrawEnabled__C11CAnimObject",
+      "address": "0x800a5038",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetCollisionId__C11CAnimObject",
+      "address": "0x800a5040",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "Reset__11CAnimObject",
+      "address": "0x800a5048",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "SetPosition__11CAnimObjectRC8CVector3",
+      "address": "0x800a5090",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "Move__11CAnimObjectRC8CVector3",
+      "address": "0x800a50b4",
+      "size": 36,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetSlot__7CMatrixUi": "0x802790e0",
+    "SetPos__7CMatrixRC8CVector3": "0x8007ae7c",
+    "Translate__7CMatrixRC8CVector3": "0x8007af2c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "anim_obj.cpp",
+  "original_file_index": 831
+}

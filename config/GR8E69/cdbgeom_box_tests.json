@@ -1,0 +1,52 @@
+{
+  "id": "cdbgeom_box_tests",
+  "source": "src/geometry/cdbgeom_box_tests.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800759b0",
+      "size": 92
+    }
+  ],
+  "functions": [
+    {
+      "name": "TestCollision__C10CCDBVolBoxRC15CAnimatedVolumeR10CCollisionb",
+      "address": "0x800759b0",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C10CCDBVolBoxRC10CCSGVolumeR10CCollisionb",
+      "address": "0x800759e4",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C10CCDBVolBoxRC11CVolCapsuleR10CCollisionb",
+      "address": "0x800759ec",
+      "size": 32,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "TestCollision__C7CVolBoxRC11CVolCapsuleR10CCollisionb": "0x8013b2e8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "cdbgeom.cpp",
+  "original_file_index": 535
+}

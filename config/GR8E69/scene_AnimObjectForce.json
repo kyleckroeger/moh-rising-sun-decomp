@@ -1,0 +1,70 @@
+{
+  "id": "scene_AnimObjectForce",
+  "source": "src/scene/AnimObjectForce.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800a4cac",
+      "size": 508
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029e9e0",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "Halt__11CAnimObject",
+      "address": "0x800a4cac",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "ApplyForceTo__11CAnimObjectRC8CVector3f",
+      "address": "0x800a4ccc",
+      "size": 284,
+      "binding": 1
+    },
+    {
+      "name": "BeginHurtling__11CAnimObject",
+      "address": "0x800a4de8",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "GetTMLocalToWorld__C11CAnimObjectRQ24EAGL9Transform",
+      "address": "0x800a4e10",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "GetTMLocalToWorld__C11CAnimObjectR7CMatrix",
+      "address": "0x800a4e7c",
+      "size": 44,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__as__7CMatrixRC7CMatrix": "0x8007aa38",
+    "sqrtf": "0x80270538"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "anim_obj.cpp",
+  "original_file_index": 831
+}

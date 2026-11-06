@@ -1,0 +1,60 @@
+{
+  "id": "ea_ipad_vbl",
+  "source": "src/ea/ipad_vbl.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80216f48",
+      "size": 288
+    }
+  ],
+  "functions": [
+    {
+      "name": "iPADVBLUpdate__Fv",
+      "address": "0x80216f48",
+      "size": 116,
+      "binding": 1
+    },
+    {
+      "name": "iPAD_init__Fv",
+      "address": "0x80216fbc",
+      "size": 172,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "MEM_copy": "0x802187b0",
+    "MEM_fill": "0x8021866c",
+    "OldCallBack": "0x804512bc",
+    "PADClamp": "0x8025b98c",
+    "PADRead": "0x8025c618",
+    "PADSetSamplingCallback": "0x8025d39c",
+    "SISetSamplingRate": "0x8025eccc",
+    "gPadStatus": "0x8040f398",
+    "giPADStarted": "0x804512b8",
+    "vgPadStatus": "0x8040f3c8"
+  },
+  "sda_externals": [
+    "OldCallBack",
+    "giPADStarted"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "ipad.cpp",
+  "original_file_index": 2960
+}

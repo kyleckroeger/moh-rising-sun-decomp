@@ -1,0 +1,84 @@
+{
+  "id": "animplayer_draw",
+  "source": "src/player/AnimPlayerA.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d4a14",
+      "size": 316
+    }
+  ],
+  "functions": [
+    {
+      "name": "Draw__15CAnimatedPlayerR12CDrawContext",
+      "address": "0x800d4a14",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "UpdateAnimation__15CAnimatedPlayerf",
+      "address": "0x800d4a4c",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "SetPlayer__15CAnimatedPlayerP13CPlayerObject",
+      "address": "0x800d4a6c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SetFlocoParams__15CAnimatedPlayerfi",
+      "address": "0x800d4a74",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "GetFlocoParams__15CAnimatedPlayerRfRi",
+      "address": "0x800d4a80",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "GetLocalBoundingVolume__C15CAnimatedPlayerQ210ISceneNode11EVolumeType",
+      "address": "0x800d4a94",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "GetWorldBoundingVolume__C15CAnimatedPlayerQ210ISceneNode11EVolumeType",
+      "address": "0x800d4ad8",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "UpdateLocalBoundingVolume__15CAnimatedPlayerQ210ISceneNode11EVolumeTypeRC8CVector3T2",
+      "address": "0x800d4b1c",
+      "size": 52,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Draw__14CSoldierObjectR12CDrawContext": "0x800bcfe4",
+    "SetCorners__7CVolBoxRC8CVector3T1": "0x8013827c",
+    "UpdateAnimation__11CAnimObjectf": "0x800a3428"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "animplayer.cpp",
+  "original_file_index": 942
+}

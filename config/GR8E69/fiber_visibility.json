@@ -1,0 +1,47 @@
+{
+  "id": "fiber_visibility",
+  "source": "src/geometry/fiber_visibility.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80142004",
+      "size": 332
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a84cc",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "TestVisibility__C9CVolFiberR12CDrawContext",
+      "address": "0x80142004",
+      "size": 332,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "TestVisibility__C11CVolCapsuleR12CDrawContext": "0x8014402c",
+    "_._11CVolCapsule": "0x8014239c",
+    "_vt.11CVolCapsule": "0x802e9940"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "fiber.cpp",
+  "original_file_index": 1331
+}

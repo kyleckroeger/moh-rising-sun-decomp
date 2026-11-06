@@ -1,0 +1,128 @@
+{
+  "id": "animated_volume_tests",
+  "source": "src/geometry/animated_volume_tests.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8013e950",
+      "size": 828
+    }
+  ],
+  "functions": [
+    {
+      "name": "TestCollision__C15CAnimatedVolumeRC7IVolumeR10CCollisionb",
+      "address": "0x8013e950",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C15CAnimatedVolumeRC7CVolBoxR10CCollisionb",
+      "address": "0x8013e9b0",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C15CAnimatedVolumeRC10CVolSphereR10CCollisionb",
+      "address": "0x8013e9d0",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C15CAnimatedVolumeRC11CVolCapsuleR10CCollisionb",
+      "address": "0x8013e9f0",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C15CAnimatedVolumeRC10CCDBObjectR10CCollisionb",
+      "address": "0x8013ea10",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C15CAnimatedVolumeRC8CVector3R10CCollisionb",
+      "address": "0x8013ea70",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C15CAnimatedVolumeRC6CPlaneR10CCollisionb",
+      "address": "0x8013ea90",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C15CAnimatedVolumeRC9CTriangleR10CCollisionb",
+      "address": "0x8013eab0",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C15CAnimatedVolumeRC9CVolFiberR10CCollisionb",
+      "address": "0x8013ead0",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C15CAnimatedVolumeRC12CWorldVolumeR10CCollisionb",
+      "address": "0x8013eb40",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C15CAnimatedVolumeRC10CCSGVolumeR10CCollisionb",
+      "address": "0x8013eba0",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C15CAnimatedVolumeRC15CAnimatedVolumeR10CCollisionb",
+      "address": "0x8013ec00",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "Create__C15CAnimatedVolume",
+      "address": "0x8013ec20",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "TransformedCopy__15CAnimatedVolumeRC7IVolumeRC7CMatrix",
+      "address": "0x8013ec44",
+      "size": 72,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AllocateAnimatedVolume__Fv": "0x8012b574",
+    "GetLine__C9CVolFiber": "0x801412f0",
+    "SwapOrder__10CCollision": "0x80134070",
+    "TestCollision__C10CVolSphereRC10CVolSphereR10CCollisionb": "0x80136c34",
+    "TestCollision__C10CVolSphereRC11CVolCapsuleR10CCollisionb": "0x80136ed8",
+    "TestCollision__C10CVolSphereRC6CPlaneR10CCollisionb": "0x801376cc",
+    "TestCollision__C10CVolSphereRC7CVolBoxR10CCollisionb": "0x80136bd4",
+    "TestCollision__C10CVolSphereRC8CVector3R10CCollisionb": "0x80137008",
+    "TestCollision__C10CVolSphereRC9CTriangleR10CCollisionb": "0x801377e8",
+    "TransformedCopy__10CVolSphereRC7IVolumeRC7CMatrix": "0x80136a58",
+    "__15CAnimatedVolume": "0x8013e24c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "animated_volume.cpp",
+  "original_file_index": 1325
+}

@@ -1,0 +1,45 @@
+{
+  "id": "sound_sstopall",
+  "source": "src/sound/ea/sstopall.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80220abc",
+      "size": 104
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDstopall",
+      "address": "0x80220abc",
+      "size": 104,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDSYS_entercritical": "0x8021f948",
+    "SNDSYS_leavecritical": "0x8021f988",
+    "SNDstop": "0x80220a5c",
+    "sndgs": "0x804108fc"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sstopall.c",
+  "original_file_index": 3105
+}

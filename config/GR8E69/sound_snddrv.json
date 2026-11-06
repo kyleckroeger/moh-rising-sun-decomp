@@ -1,0 +1,63 @@
+{
+  "id": "sound_snddrv",
+  "source": "src/sound/ea/snddrv.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8021e2c4",
+      "size": 124
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDI_mutexalloc__Fv",
+      "address": "0x8021e2c4",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "SNDI_mutexfree__Fv",
+      "address": "0x8021e2ec",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "SNDI_mutexlock__Fv",
+      "address": "0x8021e2f0",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "SNDI_mutexunlock__Fv",
+      "address": "0x8021e318",
+      "size": 40,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "OSInitMutex": "0x80258504",
+    "OSLockMutex": "0x8025853c",
+    "OSUnlockMutex": "0x80258618",
+    "snddrv": "0x80410c40"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "snddrv.c",
+  "original_file_index": 3064
+}

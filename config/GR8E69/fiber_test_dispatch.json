@@ -1,0 +1,103 @@
+{
+  "id": "fiber_test_dispatch",
+  "source": "src/geometry/fiber_test_dispatch.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8014128c",
+      "size": 960
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a84a0",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetStart__C9CVolFiber",
+      "address": "0x8014128c",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "GetEnd__C9CVolFiber",
+      "address": "0x801412bc",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "GetLine__C9CVolFiber",
+      "address": "0x801412f0",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C9CVolFiberRC7IVolumeR10CCollisionb",
+      "address": "0x801412f8",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C9CVolFiberRC7CVolBoxR10CCollisionb",
+      "address": "0x80141358",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C9CVolFiberRC10CVolSphereR10CCollisionb",
+      "address": "0x801413c4",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C9CVolFiberRC11CVolCapsuleR10CCollisionb",
+      "address": "0x80141430",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C9CVolFiberRC10CCDBObjectR10CCollisionb",
+      "address": "0x8014149c",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C9CVolFiberRC15CAnimatedVolumeR10CCollisionb",
+      "address": "0x80141508",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C9CVolFiberRC10CCSGVolumeR10CCollisionb",
+      "address": "0x80141574",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C9CVolFiberRC12CWorldVolumeR10CCollisionb",
+      "address": "0x801415e0",
+      "size": 108,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SwapOrder__10CCollision": "0x80134070"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

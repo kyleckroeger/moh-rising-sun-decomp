@@ -1,0 +1,60 @@
+{
+  "id": "player_light_volumes",
+  "source": "src/player/PlayerLightVolumes.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/stlport-runtime",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800b6250",
+      "size": 584
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetDetonationTimeForPlayerTurret__13CPlayerObjectf",
+      "address": "0x800b6250",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "EnterLightVolume__13CPlayerObjectP14BPDLightVolume",
+      "address": "0x800b625c",
+      "size": 188,
+      "binding": 1
+    },
+    {
+      "name": "ExitLightVolume__13CPlayerObjectP14BPDLightVolume",
+      "address": "0x800b6318",
+      "size": 188,
+      "binding": 1
+    },
+    {
+      "name": "SetLightVolumeTransitionDuration__13CPlayerObjectf",
+      "address": "0x800b63d4",
+      "size": 196,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_M_increment__Q24_STLt10_Rb_global1ZbPQ24_STL18_Rb_tree_node_base": "0x8027a1dc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}

@@ -1,0 +1,152 @@
+{
+  "id": "collisionvolume",
+  "source": "src/geometry/collisionvolume.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800c9dfc",
+      "size": 1372
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a0bcc",
+      "size": 36
+    }
+  ],
+  "functions": [
+    {
+      "name": "Init__16CCollisionVolumeP7IVolumeP7CMatrix7EClsnId",
+      "address": "0x800c9dfc",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "GetTMLocalToWorld__C16CCollisionVolumeR7CMatrix",
+      "address": "0x800c9e3c",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "GetPosition__C16CCollisionVolumeR8CVector3",
+      "address": "0x800c9e68",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "GetRightward__C16CCollisionVolumeR8CVector3",
+      "address": "0x800c9eb8",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "GetForward__C16CCollisionVolumeR8CVector3",
+      "address": "0x800c9f08",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "GetUpward__C16CCollisionVolumeR8CVector3",
+      "address": "0x800c9f58",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "GetWorldBoundingVolume__C16CCollisionVolumeQ210ISceneNode11EVolumeType",
+      "address": "0x800c9fa8",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetLocalBoundingVolume__C16CCollisionVolumeQ210ISceneNode11EVolumeType",
+      "address": "0x800c9fb0",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "BeginUpdate__16CCollisionVolumef",
+      "address": "0x800c9fb8",
+      "size": 244,
+      "binding": 1
+    },
+    {
+      "name": "HandleBulletCollision__16CCollisionVolumeP7CBulletRC10CCollision",
+      "address": "0x800ca0ac",
+      "size": 492,
+      "binding": 1
+    },
+    {
+      "name": "MarkForDestruction__16CCollisionVolumei",
+      "address": "0x800ca298",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "Destroy__16CCollisionVolume",
+      "address": "0x800ca2d4",
+      "size": 92,
+      "binding": 1
+    },
+    {
+      "name": "GetCollisionId__C16CCollisionVolume",
+      "address": "0x800ca330",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "AsCollisionVolume__16CCollisionVolume",
+      "address": "0x800ca338",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "AsCollisionVolume__C16CCollisionVolume",
+      "address": "0x800ca33c",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "SetScript__16CCollisionVolumeP8BSObject",
+      "address": "0x800ca340",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetScriptObject__C16CCollisionVolume",
+      "address": "0x800ca348",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SetCollisionId__16CCollisionVolume7EClsnId",
+      "address": "0x800ca350",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSEventGetEventMemoryBlock__FUi": "0x8011dba8",
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "MarkForDestruction__8ISubjecti": "0x8014ad2c",
+    "Remove__6CSceneR10ISceneNode": "0x80146e9c",
+    "__as__7CMatrixRC7CMatrix": "0x8007aa38",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "collisionvolume.cpp",
+  "original_file_index": 916
+}

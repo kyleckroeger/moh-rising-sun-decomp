@@ -1,0 +1,73 @@
+{
+  "id": "box_tail",
+  "source": "src/geometry/box_tail.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": true,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8013e218",
+      "size": 52
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a80e4",
+      "size": 4
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.7CVolBox",
+      "address": "0x802e95d0",
+      "size": 176,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "_._7CVolBox",
+      "address": "0x8013e218",
+      "size": 52,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Create__C7CVolBox": "0x80137e34",
+    "GetExtents__C7CVolBoxR8CVector3T1": "0x8013cbc0",
+    "GetRadius__C7IVolume": "0x802798d8",
+    "SetRadius__7IVolumef": "0x802798e4",
+    "TestCollision__C7CVolBoxRC10CCDBObjectR10CCollisionb": "0x8013b91c",
+    "TestCollision__C7CVolBoxRC10CCSGVolumeR10CCollisionb": "0x8013b9dc",
+    "TestCollision__C7CVolBoxRC10CVolSphereR10CCollisionb": "0x8013abe4",
+    "TestCollision__C7CVolBoxRC11CVolCapsuleR10CCollisionb": "0x8013b2e8",
+    "TestCollision__C7CVolBoxRC12CWorldVolumeR10CCollisionb": "0x8013b97c",
+    "TestCollision__C7CVolBoxRC15CAnimatedVolumeR10CCollisionb": "0x8013bb3c",
+    "TestCollision__C7CVolBoxRC6CLine3R10CCollisionb": "0x8013bb9c",
+    "TestCollision__C7CVolBoxRC6CPlaneR10CCollisionb": "0x8013c3b4",
+    "TestCollision__C7CVolBoxRC7CVolBoxR10CCollisionb": "0x80138510",
+    "TestCollision__C7CVolBoxRC7IVolumeR10CCollisionb": "0x801384b0",
+    "TestCollision__C7CVolBoxRC8CVector3R10CCollisionb": "0x8013ba3c",
+    "TestCollision__C7CVolBoxRC9CTriangleR10CCollisionb": "0x8013ca70",
+    "TestCollision__C7CVolBoxRC9CVolFiberR10CCollisionb": "0x8013bacc",
+    "TestVisibility__C7CVolBoxR12CDrawContext": "0x8013ca78",
+    "TransformedCopy__7CVolBoxRC7IVolumeRC7CMatrix": "0x80137e80",
+    "__builtin_delete": "0x801a8990",
+    "_vt.7IVolume": "0x802e1c38"
+  },
+  "discarded_functions": [
+    "__7CVolBox"
+  ],
+  "undefined_in_discarded_code": [],
+  "original_file": "box.cpp",
+  "original_file_index": 1316
+}

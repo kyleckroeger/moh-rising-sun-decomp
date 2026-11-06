@@ -1,0 +1,59 @@
+{
+  "id": "ai_AITankObjectA",
+  "source": "src/ai/AITankObjectA.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800de400",
+      "size": 176
+    }
+  ],
+  "functions": [
+    {
+      "name": "__nw__13CAITankObjectUiPv",
+      "address": "0x800de400",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "__dl__13CAITankObjectPv",
+      "address": "0x800de408",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "UpdateFromGameObject__13CAITankObjectP16IMovingSceneNode",
+      "address": "0x800de40c",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "PreUpdate__13CAITankObject",
+      "address": "0x800de448",
+      "size": 104,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "PreUpdate__9CAIObject": "0x800d9e6c",
+    "UpdateFromGameObject__9CAIObjectP16IMovingSceneNode": "0x800d9ec0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AITankObject.cpp",
+  "original_file_index": 984
+}

@@ -1,0 +1,82 @@
+{
+  "id": "sound_sst_stream",
+  "source": "src/sound/ea/sst_stream.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8021fab8",
+      "size": 1048
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDSTRMI_destroyall__Fv",
+      "address": "0x8021fab8",
+      "size": 92,
+      "binding": 1
+    },
+    {
+      "name": "SNDSTRMI_getstreamptr__Fi",
+      "address": "0x8021fb14",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "SNDSTRMI_removerequest__Fi",
+      "address": "0x8021fb48",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "SNDSTRMI_releasecallback__FPvT0",
+      "address": "0x8021fbb0",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "SNDSTRMI_framescallback__FiiPv",
+      "address": "0x8021fbec",
+      "size": 168,
+      "binding": 1
+    },
+    {
+      "name": "SNDSTRMI_parseheader__FiP14STREAMCHUNKHDR",
+      "address": "0x8021fc94",
+      "size": 572,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDI_patchtohdr__FPvP11TAGGEDPATCHP15SNDSAMPLEFORMATP13SNDSAMPLEATTRP13SNDSAMPLEDESCPUc": "0x8021e340",
+    "SNDLINKI_push__FP11SNDLINKLISTP11SNDLINKNODE": "0x80225374",
+    "SNDLINKI_remove__FP11SNDLINKLISTP11SNDLINKNODE": "0x8022542c",
+    "SNDSTRMI_calcdatarate__FP15SNDSAMPLEFORMAT": "0x8021fa40",
+    "SNDSTRMI_getrequestptr__Fi": "0x8022098c",
+    "SNDSTRMI_startstream__FP16SNDSTREAMCHANNEL": "0x8021f9c8",
+    "SNDSTRM_destroy": "0x8022069c",
+    "STREAM_release": "0x8020b258",
+    "memcmp": "0x80266558",
+    "sndgs": "0x804108fc",
+    "sndss": "0x8041d084"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sst.c",
+  "original_file_index": 3091
+}

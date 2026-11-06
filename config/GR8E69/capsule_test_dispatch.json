@@ -1,0 +1,63 @@
+{
+  "id": "capsule_test_dispatch",
+  "source": "src/geometry/capsule_test_dispatch.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80142fa0",
+      "size": 444
+    }
+  ],
+  "functions": [
+    {
+      "name": "TestCollision__C11CVolCapsuleRC10CCDBObjectR10CCollisionb",
+      "address": "0x80142fa0",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C11CVolCapsuleRC9CVolFiberR10CCollisionb",
+      "address": "0x80143000",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C11CVolCapsuleRC15CAnimatedVolumeR10CCollisionb",
+      "address": "0x80143068",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C11CVolCapsuleRC10CCSGVolumeR10CCollisionb",
+      "address": "0x8014309c",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C11CVolCapsuleRC12CWorldVolumeR10CCollisionb",
+      "address": "0x801430fc",
+      "size": 96,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetLine__C9CVolFiber": "0x801412f0",
+    "SwapOrder__10CCollision": "0x80134070"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

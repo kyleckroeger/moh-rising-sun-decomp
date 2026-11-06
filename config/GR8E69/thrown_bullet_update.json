@@ -1,0 +1,61 @@
+{
+  "id": "thrown_bullet_update",
+  "source": "src/bullets/ThrownBulletUpdate.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8015245c",
+      "size": 1536
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a9538",
+      "size": 92
+    }
+  ],
+  "functions": [
+    {
+      "name": "BeginUpdate__13CThrownBulletf",
+      "address": "0x8015245c",
+      "size": 1048,
+      "binding": 1
+    },
+    {
+      "name": "AttemptUpdate__13CThrownBulletf",
+      "address": "0x80152874",
+      "size": 488,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DebugMsg__FPCce": "0x80279094",
+    "ForceUpdateProximityTriggerStatus__FP10BSGO_Basicb": "0x80123bf8",
+    "GetExtents__C9CVolFiberR8CVector3T1": "0x80142150",
+    "SetFront__7CMatrixRC8CVector3": "0x8007ae44",
+    "SetPos__7CMatrixRC8CVector3": "0x8007ae7c",
+    "SetRight__7CMatrixRC8CVector3": "0x8007ae28",
+    "SetUp__7CMatrixRC8CVector3": "0x8007ae60",
+    "Set__9CVolFiberRC8CVector3T1": "0x801411c8",
+    "UpdateGrenade__24CGrenadeResponseBehaviorP13CThrownBullet": "0x800f0b78",
+    "Update__19CLightVolumeManagerf": "0x80131808",
+    "sqrtf": "0x80270538"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "thrownbullet.cpp",
+  "original_file_index": 1370
+}

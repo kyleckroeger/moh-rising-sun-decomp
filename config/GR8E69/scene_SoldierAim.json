@@ -1,0 +1,70 @@
+{
+  "id": "scene_SoldierAim",
+  "source": "src/scene/SoldierAim.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800c0fcc",
+      "size": 324
+    }
+  ],
+  "functions": [
+    {
+      "name": "EnableAimModifier__14CSoldierObjectb",
+      "address": "0x800c0fcc",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "EnablePropAimModifier__14CSoldierObjectb",
+      "address": "0x800c1020",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "ResumeAimModifier__14CSoldierObject",
+      "address": "0x800c1074",
+      "size": 24,
+      "binding": 1
+    },
+    {
+      "name": "ResumePropAimModifier__14CSoldierObject",
+      "address": "0x800c108c",
+      "size": 24,
+      "binding": 1
+    },
+    {
+      "name": "SetHeadTrackPlayer__14CSoldierObjectb",
+      "address": "0x800c10a4",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "SetHeadTrans__14CSoldierObjectb",
+      "address": "0x800c10dc",
+      "size": 52,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SetEnabled__Q34EALA9Character11AimModifierb": "0x8007d560"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Soldier_object.cpp",
+  "original_file_index": 875
+}

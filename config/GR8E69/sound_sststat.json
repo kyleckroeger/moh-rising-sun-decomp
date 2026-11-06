@@ -1,0 +1,45 @@
+{
+  "id": "sound_sststat",
+  "source": "src/sound/ea/sststat.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80220d84",
+      "size": 224
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDSTRM_status",
+      "address": "0x80220d84",
+      "size": 224,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDPKTPLAY_framesoutstanding": "0x8021efe0",
+    "SNDSTRMI_getrequestptr__Fi": "0x8022098c",
+    "SNDSTRMI_getstreamptr__Fi": "0x8021fb14",
+    "STREAM_gettable": "0x8020b38c"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sststat.c",
+  "original_file_index": 3117
+}

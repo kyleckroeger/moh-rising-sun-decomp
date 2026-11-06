@@ -1,0 +1,46 @@
+{
+  "id": "fiber_test_plane",
+  "source": "src/geometry/fiber_test_plane.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80141e94",
+      "size": 348
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a84c4",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "TestCollision__C9CVolFiberRC6CPlaneR10CCollisionb",
+      "address": "0x80141e94",
+      "size": 348,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddContact__10CCollisionRC12SClsnContact": "0x80133f5c",
+    "GetIntersection__C6CPlaneRC6CLine3RfP8CVector3": "0x8007bfd0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "fiber.cpp",
+  "original_file_index": 1331
+}

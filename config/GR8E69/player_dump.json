@@ -1,0 +1,40 @@
+{
+  "id": "player_dump",
+  "source": "src/player/PlayerDump.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800b913c",
+      "size": 84
+    }
+  ],
+  "functions": [
+    {
+      "name": "DropMPDumpObject__13CPlayerObject",
+      "address": "0x800b913c",
+      "size": 84,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CreateDumpObject__FRC7CMatrixibP8BSObjecti12EPowerupType": "0x80127638"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}

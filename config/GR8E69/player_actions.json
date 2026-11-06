@@ -1,0 +1,95 @@
+{
+  "id": "player_actions",
+  "source": "src/player/PlayerActions.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/stlport-runtime",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800b4ca8",
+      "size": 660
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029f24c",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetScript__13CPlayerObjectP8BSObject",
+      "address": "0x800b4ca8",
+      "size": 156,
+      "binding": 1
+    },
+    {
+      "name": "TriggerScriptEvent__13CPlayerObjectiPvb",
+      "address": "0x800b4d44",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "SetClimbingState__13CPlayerObjectb",
+      "address": "0x800b4d7c",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "SetFallingDamageState__13CPlayerObjectb",
+      "address": "0x800b4d9c",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "FireMyWeapon__13CPlayerObjectf",
+      "address": "0x800b4dac",
+      "size": 132,
+      "binding": 1
+    },
+    {
+      "name": "SetZoom__13CPlayerObjectf",
+      "address": "0x800b4e30",
+      "size": 180,
+      "binding": 1
+    },
+    {
+      "name": "GetNumGrenades__C13CPlayerObject",
+      "address": "0x800b4ee4",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "ThrowGrenade__13CPlayerObjectf",
+      "address": "0x800b4f0c",
+      "size": 48,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "GetCurrentPlayerWeapon__C13CPlayerObject": "0x800b418c",
+    "GetCurrentWeapon__C13CPlayerObject": "0x800b41a8",
+    "MathFunClamp__H1Zf_X01X01X01_X01": "0x8027aa30",
+    "Shoot__7CWeapon16EWeaponShootTypeff": "0x8014ba20",
+    "TransitionFOV__13CPlayerObjectff": "0x800b6788",
+    "_M_increment__Q24_STLt10_Rb_global1ZbPQ24_STL18_Rb_tree_node_base": "0x8027a1dc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}

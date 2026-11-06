@@ -1,0 +1,44 @@
+{
+  "id": "sound_sbhdrcpy",
+  "source": "src/sound/ea/sbhdrcpy.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8021a54c",
+      "size": 116
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDbankheadercopy",
+      "address": "0x8021a54c",
+      "size": 116,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDbankheadersize": "0x8021a5c0",
+    "memmove": "0x8026668c",
+    "sndgs": "0x804108fc"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sbhdrcpy.c",
+  "original_file_index": 3039
+}

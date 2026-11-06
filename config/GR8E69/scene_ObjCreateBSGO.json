@@ -1,0 +1,122 @@
+{
+  "id": "scene_ObjCreateBSGO",
+  "source": "src/scene/ObjCreateBSGO.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8012b9bc",
+      "size": 120
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetScriptData__17BSGO_Destructable",
+      "address": "0x8012b9bc",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetSceneNode__17BSGO_Destructable",
+      "address": "0x8012b9c4",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetProximityData__17BSGO_Destructable",
+      "address": "0x8012b9cc",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetScriptData__9BSGO_Anim",
+      "address": "0x8012b9d4",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetSceneNode__9BSGO_Anim",
+      "address": "0x8012b9dc",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetProximityData__9BSGO_Anim",
+      "address": "0x8012b9e4",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetScriptData__12BSGO_Soldier",
+      "address": "0x8012b9ec",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetSceneNode__12BSGO_Soldier",
+      "address": "0x8012b9f4",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetProximityData__12BSGO_Soldier",
+      "address": "0x8012b9fc",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetScriptData__9BSGO_Tank",
+      "address": "0x8012ba04",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetSceneNode__9BSGO_Tank",
+      "address": "0x8012ba0c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetProximityData__9BSGO_Tank",
+      "address": "0x8012ba14",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetScriptData__11BSGO_Player",
+      "address": "0x8012ba1c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetSceneNode__11BSGO_Player",
+      "address": "0x8012ba24",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetProximityData__11BSGO_Player",
+      "address": "0x8012ba2c",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "objcreate.cpp",
+  "original_file_index": 1242
+}

@@ -1,0 +1,54 @@
+{
+  "id": "thrown_collide",
+  "source": "src/bullets/ThrownCollide.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800cf178",
+      "size": 1320
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a1488",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "OnCollision__13CThrownObjectRC10CCollision",
+      "address": "0x800cf178",
+      "size": 1040,
+      "binding": 1
+    },
+    {
+      "name": "UpdateCollisionVolumes__13CThrownObject",
+      "address": "0x800cf588",
+      "size": 280,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "ExcludeCollision__6CSceneRC10ISceneNodeT1i": "0x801476b0",
+    "GetSoundIndex__12CSurfaceTypeUsb": "0x8005cd40",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "thrown_obj.cpp",
+  "original_file_index": 933
+}

@@ -1,0 +1,89 @@
+{
+  "id": "scene_StaticFactoryLookup",
+  "source": "src/scene/StaticFactoryLookup.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800cd820",
+      "size": 844
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a1314",
+      "size": 48
+    }
+  ],
+  "functions": [
+    {
+      "name": "DeallocateStaticObject__20CStaticObjectFactoryP13CStaticObject",
+      "address": "0x800cd820",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "GetStaticMesh__20CStaticObjectFactoryii",
+      "address": "0x800cd898",
+      "size": 244,
+      "binding": 1
+    },
+    {
+      "name": "GetMotionData__20CStaticObjectFactoryii",
+      "address": "0x800cd98c",
+      "size": 228,
+      "binding": 1
+    },
+    {
+      "name": "Reset__20CStaticObjectFactory",
+      "address": "0x800cda70",
+      "size": 252,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AllocateStaticObject__20CStaticObjectFactoryiiP10PickupInfo": "0x800cc91c",
+    "CompareStaticObjectDefinitions__FPCvT0": "0x800cc8d8",
+    "DebugMsg__FPCce": "0x80279094",
+    "IGO_Destroy__11IGameObject": "0x800ca358",
+    "Reset__18CGameObjectFactory": "0x800ca460",
+    "_20CStaticObjectFactory.m_AttachObjectFactory": "0x80307720",
+    "_20CStaticObjectFactory.m_HierAnimObjectFactory": "0x80307760",
+    "_20CStaticObjectFactory.m_HierObjectFactory": "0x80307740",
+    "_20CStaticObjectFactory.m_RecycledThrownObjectFactory": "0x80307700",
+    "_20CStaticObjectFactory.m_StaticObjectFactory": "0x803076c0",
+    "_20CStaticObjectFactory.m_TankObjectFactory": "0x80307780",
+    "_20CStaticObjectFactory.m_ThrownObjectFactory": "0x803076e0",
+    "bsearch": "0x80264f3c",
+    "g_iMsgVerbosityLevel": "0x802c1b48",
+    "g_numTemplates": "0x802c26a0",
+    "g_pStaticObjectBazooka": "0x802c268c",
+    "g_pStaticObjectGrenade": "0x802c2688",
+    "g_pStaticObjectKnife": "0x802c2694",
+    "g_pStaticObjectStickGrenade": "0x802c2690",
+    "g_pStaticObjectTemplates": "0x802c269c",
+    "g_pStaticObjectWrench": "0x802c2698",
+    "ptr__14CAnyStaticMesh": "0x80283808"
+  },
+  "local_externals": [
+    "CompareStaticObjectDefinitions__FPCvT0",
+    "g_numTemplates",
+    "g_pStaticObjectTemplates"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "staticobjfactory.cpp",
+  "original_file_index": 924
+}

@@ -1,0 +1,162 @@
+{
+  "id": "scene_AnimObjectAccess",
+  "source": "src/scene/AnimObjectAccess.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800a523c",
+      "size": 1012
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029ea0c",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetYaw__C11CAnimObject",
+      "address": "0x800a523c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SetYaw__11CAnimObjectf",
+      "address": "0x800a5244",
+      "size": 92,
+      "binding": 1
+    },
+    {
+      "name": "Orthonormalize__11CAnimObject",
+      "address": "0x800a52a0",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "GetPosition__C11CAnimObjectR8CVector3",
+      "address": "0x800a52c4",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "GetRightward__C11CAnimObjectR8CVector3",
+      "address": "0x800a5314",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "GetForward__C11CAnimObjectR8CVector3",
+      "address": "0x800a5364",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "GetUpward__C11CAnimObjectR8CVector3",
+      "address": "0x800a53b4",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "EnterLightVolume__11CAnimObjectP14BPDLightVolume",
+      "address": "0x800a5404",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "ExitLightVolume__11CAnimObjectP14BPDLightVolume",
+      "address": "0x800a5428",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "GetLightVolume__11CAnimObject",
+      "address": "0x800a544c",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "SetTMLocalToWorld__11CAnimObjectRC7CMatrix",
+      "address": "0x800a5470",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "AttachToLocation__11CAnimObjectRC7CMatrixf",
+      "address": "0x800a5494",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "SetAttached__11CAnimObjectb",
+      "address": "0x800a54cc",
+      "size": 28,
+      "binding": 1
+    },
+    {
+      "name": "GetPosition__11CAnimObject",
+      "address": "0x800a54e8",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "GetRotation__11CAnimObject",
+      "address": "0x800a5550",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "SetPosition__11CAnimObjectRC6COORD3",
+      "address": "0x800a5570",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "SetRotation__11CAnimObjectRCf",
+      "address": "0x800a55a4",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "MarkForDestruction__11CAnimObjecti",
+      "address": "0x800a55c8",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "Destroy__11CAnimObject",
+      "address": "0x800a5604",
+      "size": 44,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddVolume__19CLightVolumeManagerP14BPDLightVolume": "0x8013183c",
+    "GetVolume__C19CLightVolumeManager": "0x801319c0",
+    "MarkForDestruction__8ISubjecti": "0x8014ad2c",
+    "Orthonormalize__7CMatrix": "0x8007b5a4",
+    "ReleaseObject__18CAnimObjectFactoryP11CAnimObject": "0x800cc668",
+    "RemoveVolume__19CLightVolumeManagerP14BPDLightVolume": "0x80131908",
+    "Remove__6CSceneR10ISceneNode": "0x80146e9c",
+    "__as__7CMatrixRC7CMatrix": "0x8007aa38",
+    "g_AnimObjFactory": "0x803e6bb0",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "anim_obj.cpp",
+  "original_file_index": 831
+}

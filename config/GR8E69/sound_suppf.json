@@ -1,0 +1,54 @@
+{
+  "id": "sound_suppf",
+  "source": "src/sound/ea/suppf.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80229cfc",
+      "size": 420
+    }
+  ],
+  "functions": [
+    {
+      "name": "SFILTER_unpackpf__FPviT0T0i",
+      "address": "0x80229cfc",
+      "size": 304,
+      "binding": 1
+    },
+    {
+      "name": "SFILTER_unpackpfinit__FPvP16UNPACKINITPARAMS",
+      "address": "0x80229e2c",
+      "size": 116,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDDRV_getmastervoice__Fi": "0x8021ce74",
+    "SNDDRV_getsamplechan__Fi": "0x8021cea4",
+    "SNDPKTPLAYI_freeframes__Fiii": "0x8021f330",
+    "SNDPKTPLAYI_get__FiiPiT2": "0x8021f0f4",
+    "SNDPKTPLAYI_voicetopackethandle__Fi": "0x80229398",
+    "memset": "0x80266778",
+    "sndmix": "0x8041ec1c"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "suppf.c",
+  "original_file_index": 3282
+}

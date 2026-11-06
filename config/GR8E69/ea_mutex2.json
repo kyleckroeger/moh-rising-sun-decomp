@@ -1,0 +1,61 @@
+{
+  "id": "ea_mutex2",
+  "source": "src/ea/mutex2.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80217f28",
+      "size": 156
+    }
+  ],
+  "functions": [
+    {
+      "name": "MUTEX_create",
+      "address": "0x80217f28",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "MUTEX_destroy",
+      "address": "0x80217f50",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "MUTEX_lock",
+      "address": "0x80217f7c",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "MUTEX_unlock",
+      "address": "0x80217fa0",
+      "size": 36,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "MEM_fill": "0x8021866c",
+    "OSInitMutex": "0x80258504",
+    "OSLockMutex": "0x8025853c",
+    "OSUnlockMutex": "0x80258618"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "mutex2.cpp",
+  "original_file_index": 2990
+}

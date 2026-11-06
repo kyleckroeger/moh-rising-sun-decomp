@@ -1,0 +1,120 @@
+{
+  "id": "ai_AIObjectHeuristics",
+  "source": "src/ai/AIObjectHeuristics.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d9d60",
+      "size": 1308
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a25f4",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "RemovePointersTo__9CAIObjectP9CAIObject",
+      "address": "0x800d9d60",
+      "size": 232,
+      "binding": 1
+    },
+    {
+      "name": "GetGlobalListStart__9CAIObject",
+      "address": "0x800d9e48",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "ResetGlobalList__9CAIObject",
+      "address": "0x800d9e54",
+      "size": 24,
+      "binding": 1
+    },
+    {
+      "name": "PreUpdate__9CAIObject",
+      "address": "0x800d9e6c",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "Update__9CAIObjectf",
+      "address": "0x800d9e70",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "UpdateFromGameObject__9CAIObjectP16IMovingSceneNode",
+      "address": "0x800d9ec0",
+      "size": 260,
+      "binding": 1
+    },
+    {
+      "name": "Init__9CAIObject",
+      "address": "0x800d9fc4",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "UpdateHeuristics__9CAIObjectib",
+      "address": "0x800d9fe4",
+      "size": 264,
+      "binding": 1
+    },
+    {
+      "name": "SendHighLevelStateTransitionEvents__FP8BSObject17EAIHighLevelStateT1",
+      "address": "0x800da0ec",
+      "size": 272,
+      "binding": 1
+    },
+    {
+      "name": "SetHighLevelState__9CAIObject17EAIHighLevelState",
+      "address": "0x800da1fc",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "ChooseTarget__9CAIObjectf",
+      "address": "0x800da274",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddToGlobalList__9CAIObject": "0x800d9c94",
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "Gameloop_QueryState__Fv": "0x80169014",
+    "Nullify__9CAITarget": "0x800eed5c",
+    "RemovePointersTo__18CAIAreaPathFindingP9CAIObject": "0x800eb7d0",
+    "SetTarget__12CAITargetingP9CAIObject": "0x800ed9bc",
+    "UpdateOrientationFrom__10CAIPhysicsRC8CVector3N21": "0x800dec58",
+    "UpdatePositionFrom__10CAIPhysicsRC8CVector3": "0x800ded40",
+    "Update__18CAIAreaPathFinding": "0x800eb9fc",
+    "Update__9CBehaviorib": "0x800e2858",
+    "g_aigAIFilterGlobalObject": "0x80309bfc",
+    "g_iAIObjectCount": "0x802c3448",
+    "g_paioAIObjectListStart": "0x802c344c"
+  },
+  "local_externals": [
+    "g_paioAIObjectListStart"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIObject.cpp",
+  "original_file_index": 977
+}

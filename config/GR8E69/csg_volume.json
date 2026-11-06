@@ -1,0 +1,176 @@
+{
+  "id": "csg_volume",
+  "source": "src/geometry/csg_volume.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80144ad0",
+      "size": 4900
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a87c0",
+      "size": 20
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.10CCSGVolume",
+      "address": "0x802e99f0",
+      "size": 176,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "__10CCSGVolume",
+      "address": "0x80144ad0",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "_._10CCSGVolume",
+      "address": "0x80144af0",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "Init__10CCSGVolumeiP11CHierObject",
+      "address": "0x80144b24",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C10CCSGVolumeRC6CLine3R10CCollisionb",
+      "address": "0x80144b30",
+      "size": 320,
+      "binding": 1
+    },
+    {
+      "name": "CheckContacts__C10CCSGVolumePiPfP10CCollisioniR10CCollisionb",
+      "address": "0x80144c70",
+      "size": 484,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C10CCSGVolumeRC7IVolumeR10CCollisionb",
+      "address": "0x80144e54",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C10CCSGVolumeRC7CVolBoxR10CCollisionb",
+      "address": "0x80144eb4",
+      "size": 320,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C10CCSGVolumeRC10CVolSphereR10CCollisionb",
+      "address": "0x80144ff4",
+      "size": 320,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C10CCSGVolumeRC11CVolCapsuleR10CCollisionb",
+      "address": "0x80145134",
+      "size": 320,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C10CCSGVolumeRC10CCDBObjectR10CCollisionb",
+      "address": "0x80145274",
+      "size": 320,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C10CCSGVolumeRC8CVector3R10CCollisionb",
+      "address": "0x801453b4",
+      "size": 320,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C10CCSGVolumeRC6CPlaneR10CCollisionb",
+      "address": "0x801454f4",
+      "size": 320,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C10CCSGVolumeRC9CTriangleR10CCollisionb",
+      "address": "0x80145634",
+      "size": 320,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C10CCSGVolumeRC9CVolFiberR10CCollisionb",
+      "address": "0x80145774",
+      "size": 320,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C10CCSGVolumeRC12CWorldVolumeR10CCollisionb",
+      "address": "0x801458b4",
+      "size": 320,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C10CCSGVolumeRC15CAnimatedVolumeR10CCollisionb",
+      "address": "0x801459f4",
+      "size": 320,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C10CCSGVolumeRC10CCSGVolumeR10CCollisionb",
+      "address": "0x80145b34",
+      "size": 320,
+      "binding": 1
+    },
+    {
+      "name": "Create__C10CCSGVolume",
+      "address": "0x80145c74",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "GetExtents__C10CCSGVolumeR8CVector3T1",
+      "address": "0x80145c9c",
+      "size": 340,
+      "binding": 1
+    },
+    {
+      "name": "TransformedCopy__10CCSGVolumeRC7IVolumeRC7CMatrix",
+      "address": "0x80145df0",
+      "size": 4,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddContact__10CCollisionRC12SClsnContact": "0x80133f5c",
+    "GetRadius__C7IVolume": "0x802798d8",
+    "GetSubVolume__C11CHierObjecti": "0x800d241c",
+    "SetRadius__7IVolumef": "0x802798e4",
+    "SwapOrder__10CCollision": "0x80134070",
+    "TestVisibility__C7IVolumeR12CDrawContext": "0x802798cc",
+    "_._10CCollision": "0x80133d10",
+    "__10CCollision": "0x80133bd4",
+    "__as__10CCollisionRC10CCollision": "0x80133d84",
+    "__builtin_delete": "0x801a8990",
+    "__builtin_new": "0x801a8910",
+    "_vt.7IVolume": "0x802e1c38"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "csg_volume.cpp",
+  "original_file_index": 1336
+}

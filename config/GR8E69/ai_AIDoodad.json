@@ -1,0 +1,65 @@
+{
+  "id": "ai_AIDoodad",
+  "source": "src/ai/AIDoodad.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d73f8",
+      "size": 92
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.9CAIDoodad",
+      "address": "0x802e77b0",
+      "size": 40,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "__9CAIDoodad",
+      "address": "0x800d73f8",
+      "size": 28,
+      "binding": 1
+    },
+    {
+      "name": "_._9CAIDoodad",
+      "address": "0x800d7414",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "Init__9CAIDoodad",
+      "address": "0x800d7448",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "GetSceneNode__C9CAIDoodad",
+      "address": "0x800d744c",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__builtin_delete": "0x801a8990",
+    "__pure_virtual": "0x8026c80c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIDoodad.cpp",
+  "original_file_index": 956
+}

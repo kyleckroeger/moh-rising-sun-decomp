@@ -1,0 +1,47 @@
+{
+  "id": "scene_WorldObjectDraw",
+  "source": "src/scene/WorldObjectDraw.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800c696c",
+      "size": 412
+    }
+  ],
+  "functions": [
+    {
+      "name": "Draw__12CWorldObjectR12CDrawContext",
+      "address": "0x800c696c",
+      "size": 232,
+      "binding": 1
+    },
+    {
+      "name": "DrawShadows__12CWorldObjectR12CDrawContext",
+      "address": "0x800c6a54",
+      "size": 180,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DrawShadows__12CCompartmentR12CDrawContext": "0x80071e24",
+    "GetShared__12CCompartment": "0x80070ac0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "world_object.cpp",
+  "original_file_index": 896
+}

@@ -1,0 +1,67 @@
+{
+  "id": "scene_StaticObjectHead",
+  "source": "src/scene/StaticObjectHead.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800a612c",
+      "size": 540
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029eb80",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "InitMotionProperties__13CStaticObjectP11CStaticMeshiiiiiP11MotionFrame",
+      "address": "0x800a612c",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "SetLocalBoundingVolume__13CStaticObjectQ210ISceneNode11EVolumeTypeP7IVolume",
+      "address": "0x800a619c",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "SetWorldBoundingVolume__13CStaticObjectQ210ISceneNode11EVolumeTypeP7IVolume",
+      "address": "0x800a61d0",
+      "size": 240,
+      "binding": 1
+    },
+    {
+      "name": "GetLocalBoundingVolume__C13CStaticObjectQ210ISceneNode11EVolumeType",
+      "address": "0x800a62c0",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "GetWorldBoundingVolume__C13CStaticObjectQ210ISceneNode11EVolumeType",
+      "address": "0x800a6304",
+      "size": 68,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "static_obj.cpp",
+  "original_file_index": 833
+}

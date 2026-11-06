@@ -1,0 +1,60 @@
+{
+  "id": "scene_HierAnimObjectA",
+  "source": "src/scene/HierAnimObjectA.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d2ffc",
+      "size": 356
+    }
+  ],
+  "functions": [
+    {
+      "name": "Init__15CHierAnimObjectP11CHierObjectiiiR8CVector3P11CAnimObject",
+      "address": "0x800d2ffc",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "CleanUp__15CHierAnimObject",
+      "address": "0x800d305c",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "Draw__15CHierAnimObjectR12CDrawContext",
+      "address": "0x800d30ac",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "GetWorldBoundingVolume__C15CHierAnimObjectQ210ISceneNode11EVolumeType",
+      "address": "0x800d3128",
+      "size": 56,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AttachAnimatedObject__15CHierAnimObject": "0x800d34f0",
+    "CleanUp__11CHierObject": "0x800d08c4",
+    "Init__11CHierObjectP11CHierObjectiiiR8CVector3": "0x800d0578"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "hierAnimobject.cpp",
+  "original_file_index": 937
+}

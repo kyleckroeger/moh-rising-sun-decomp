@@ -1,0 +1,51 @@
+{
+  "id": "sound_smixer_destroy",
+  "source": "src/sound/ea/smixer_destroy.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80225d9c",
+      "size": 212
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bfb3c",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "MIX_destroy",
+      "address": "0x80225d9c",
+      "size": 212,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDMEMI_free__FPv": "0x8021b034",
+    "SNDMIX_setmasterlowpass": "0x80225964",
+    "SNDSYS_entercritical": "0x8021f948",
+    "SNDSYS_leavecritical": "0x8021f988",
+    "sndmix": "0x8041ec1c"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "smixer.c",
+  "original_file_index": 3186
+}

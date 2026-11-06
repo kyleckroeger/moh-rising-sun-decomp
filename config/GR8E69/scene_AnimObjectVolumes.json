@@ -1,0 +1,64 @@
+{
+  "id": "scene_AnimObjectVolumes",
+  "source": "src/scene/AnimObjectVolumes.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800a3d78",
+      "size": 296
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetLocalBoundingVolume__11CAnimObjectQ210ISceneNode11EVolumeTypeP7IVolume",
+      "address": "0x800a3d78",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "SetWorldBoundingVolume__11CAnimObjectQ210ISceneNode11EVolumeTypeP7IVolume",
+      "address": "0x800a3dac",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "GetLocalBoundingVolume__C11CAnimObjectQ210ISceneNode11EVolumeType",
+      "address": "0x800a3de0",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "GetWorldBoundingVolume__C11CAnimObjectQ210ISceneNode11EVolumeType",
+      "address": "0x800a3e24",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "TriggerScriptEvent__11CAnimObjectiPvb",
+      "address": "0x800a3e68",
+      "size": 56,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "anim_obj.cpp",
+  "original_file_index": 831
+}

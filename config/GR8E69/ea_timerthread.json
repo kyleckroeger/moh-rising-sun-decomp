@@ -1,0 +1,76 @@
+{
+  "id": "ea_timerthread",
+  "source": "src/ea/timerthread.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8021850c",
+      "size": 352
+    },
+    {
+      "name": ".bss",
+      "address": "0x8040f538",
+      "size": 5048,
+      "type": 8
+    },
+    {
+      "name": ".sdata",
+      "address": "0x804512f8",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "ttInit__Fv",
+      "address": "0x8021850c",
+      "size": 136,
+      "binding": 1
+    },
+    {
+      "name": "ttKill__Fv",
+      "address": "0x80218594",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "ttMsg__F8TIMERMSG",
+      "address": "0x802185cc",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "TimerThreadFunc__FPv",
+      "address": "0x802185fc",
+      "size": 112,
+      "binding": 0
+    }
+  ],
+  "externals": {
+    "OSCreateThread": "0x8025a398",
+    "OSInitMessageQueue": "0x8025801c",
+    "OSReceiveMessage": "0x80258144",
+    "OSResumeThread": "0x8025a820",
+    "OSSendMessage": "0x8025807c",
+    "ttDoTimerMsg__Fv": "0x80217968",
+    "ttDoVTimerMsg__Fv": "0x80218d8c"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "timerthread.cpp",
+  "original_file_index": 3008
+}

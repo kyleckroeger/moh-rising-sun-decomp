@@ -1,0 +1,57 @@
+{
+  "id": "ea_memalloc",
+  "source": "src/ea/memalloc.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8020d224",
+      "size": 132
+    }
+  ],
+  "functions": [
+    {
+      "name": "MEM_allocalign",
+      "address": "0x8020d224",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "MEM_alloc",
+      "address": "0x8020d248",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "MEM_allocz",
+      "address": "0x8020d278",
+      "size": 48,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "MEM_allocaligna__FPCciiiib": "0x8020ceec"
+  },
+  "local_externals": [
+    "MEM_allocaligna__FPCciiiib"
+  ],
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "memalloc.cpp",
+  "original_file_index": 2897
+}

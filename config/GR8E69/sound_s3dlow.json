@@ -1,0 +1,45 @@
+{
+  "id": "sound_s3dlow",
+  "source": "src/sound/ea/s3dlow.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80218e18",
+      "size": 164
+    }
+  ],
+  "functions": [
+    {
+      "name": "SND3dpos",
+      "address": "0x80218e18",
+      "size": 164,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDPLATFORM_set3dpos__Fi": "0x8021d4e4",
+    "SNDVOICEI_get__Fi": "0x8021945c",
+    "iSNDpatchkey__FiPi": "0x8021e878",
+    "sndgs": "0x804108fc"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "s3dlow.c",
+  "original_file_index": 3024
+}

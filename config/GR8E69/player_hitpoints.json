@@ -1,0 +1,38 @@
+{
+  "id": "player_hitpoints",
+  "source": "src/player/PlayerHitpoints.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800b9038",
+      "size": 84
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetHitpoints__C13CPlayerObject",
+      "address": "0x800b9038",
+      "size": 84,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}

@@ -1,0 +1,83 @@
+{
+  "id": "thrown_update",
+  "source": "src/bullets/ThrownUpdate.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800cf9d0",
+      "size": 1964
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a14a4",
+      "size": 40
+    }
+  ],
+  "functions": [
+    {
+      "name": "Draw__13CThrownObjectR12CDrawContext",
+      "address": "0x800cf9d0",
+      "size": 620,
+      "binding": 1
+    },
+    {
+      "name": "BeginUpdate__13CThrownObjectf",
+      "address": "0x800cfc3c",
+      "size": 332,
+      "binding": 1
+    },
+    {
+      "name": "AttemptUpdate__13CThrownObjectf",
+      "address": "0x800cfd88",
+      "size": 416,
+      "binding": 1
+    },
+    {
+      "name": "CommitUpdate__13CThrownObject",
+      "address": "0x800cff28",
+      "size": 360,
+      "binding": 1
+    },
+    {
+      "name": "HandleBulletCollision__13CThrownObjectP7CBulletRC10CCollision",
+      "address": "0x800d0090",
+      "size": 236,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddVelocity__13CThrownObjectR8CVector3": "0x800d0228",
+    "BuildRot__7CMatrixRC8CVector3f": "0x8007ab7c",
+    "ForceUpdateProximityTriggerStatus__FP10BSGO_Basicb": "0x80123bf8",
+    "GetMatrix__C11CQuaternionR7CMatrix": "0x8007cd64",
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "Multiply__11CQuaternionT0": "0x8007d260",
+    "Multiply__7CMatrixRC7CMatrixT1": "0x802794b8",
+    "PlayImpactSound__FUsUsRC8CVector3b": "0x80157958",
+    "SetFromMatrix__11CQuaternionRC7CMatrix": "0x8007ce2c",
+    "SetPos__7CMatrixRC8CVector3": "0x8007ae7c",
+    "Update__19CLightVolumeManagerf": "0x80131808",
+    "_7CMatrix.s_ClassInit": "0x802c2100",
+    "_7CMatrix.s_TempMat": "0x802fbf00",
+    "__as__7CMatrixRC7CMatrix": "0x8007aa38",
+    "sqrtf": "0x80270538"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "thrown_obj.cpp",
+  "original_file_index": 933
+}

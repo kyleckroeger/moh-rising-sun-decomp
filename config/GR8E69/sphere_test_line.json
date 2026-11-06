@@ -1,0 +1,46 @@
+{
+  "id": "sphere_test_line",
+  "source": "src/geometry/sphere_test_line.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801371a8",
+      "size": 1316
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a7f48",
+      "size": 20
+    }
+  ],
+  "functions": [
+    {
+      "name": "TestCollision__C10CVolSphereRC6CLine3R10CCollisionb",
+      "address": "0x801371a8",
+      "size": 1316,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddContact__10CCollisionRC12SClsnContact": "0x80133f5c",
+    "sqrtf": "0x80270538"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sphere.cpp",
+  "original_file_index": 1314
+}

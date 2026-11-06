@@ -1,0 +1,49 @@
+{
+  "id": "sound_sstovrhd",
+  "source": "src/sound/ea/sstovrhd.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80220b24",
+      "size": 124
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDSTRM_overheadtap",
+      "address": "0x80220b24",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "SNDSTRM_overhead",
+      "address": "0x80220b5c",
+      "size": 68,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDPKTPLAY_overhead": "0x8021ea18",
+    "STREAM_overhead": "0x8020a3e4"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sstovrhd.c",
+  "original_file_index": 3107
+}

@@ -48,3 +48,49 @@ are verified in `src/script/` and counted separately from the sound functions ab
 ProDG 3.8.1 with `-O2 -G0 -fno-exceptions -fno-implicit-templates` reproduces every
 fragment and its strings and constants. The complete rebuilt analysis image is
 identical. Runtime behavior has not been tested.
+
+## EA audio and REAL runtime libraries
+
+`src/sound/ea/` and `src/ea/` hold EA's C-style audio (`SND*`, `SFILTER_*`) and
+runtime (`FILESYS_*`, `MEM_*`, `MUTEX_*`, `SIGNAL_*`, `FONT_*`) units, one per file
+group in the code map. The Frontline reconstruction is their semantic reference;
+every function was compiled with ProDG 3.8.1 and checked against GR8E69. Their
+record layouts and most member names are inferred; a type named in a mangled symbol
+is evidence for the name only.
+
+`sndgs` is 0x324 bytes here and its members sit at different offsets from
+Frontline's: the bank slot table is at `+0x1f4`, the memory pool at `+0x220` and the
+abort-message hook at `+0xc8`. The sound system's public calls are partly C++ in this
+build (`Snd::System::Restore`, `Snd::CODASetNew`), where Frontline uses C names.
+
+These libraries were built with `-fno-strength-reduce`: a kept `mulli` or indexed `lfsx`
+in a loop is the absence of strength reduction, not a code-shape puzzle. The `-G` value
+differs by library; see the note on small data below.
+
+Other layouts that differ from Frontline: a voice record is 140 bytes rather than 128,
+and the voice table sits at `sndgs+0x1f0` with the voice count at `sndgs+0x17e`.
+`sndmix` holds a pointer to its 96-byte channel records at `+0x1d8`. The stream record's
+members above about `+0xd0` sit 40 bytes further along than Frontline's.
+
+`hlafile`'s `numrequests`, `freequeue` and `requestidcounter` are small statics of that
+file. The original symbol table gives `.sbss` statics a size of 0, so the unit declares
+them `extern` as original context instead of defining them. Their ownership is
+therefore not verified by the build.
+
+`include/game/SoundGlobals.h` and `SoundMixerView.h` are inferred member views of
+`sndgs` and `sndmix`. Both are single struct objects in the original: their members are
+reached through one base register, which a character-array view does not reproduce.
+
+Small data is not uniform across these libraries, and units follow it. The REAL runtime
+(`FONT_*`, `FILESYS_*`, `MEM_*`, `TIMER_*`, `THREAD_*`, `PRINT_*`) reaches its small
+statics through `r13`, so its units use `-G8 -fno-strength-reduce`. The `SND*` code from
+`0x80218efc` to `0x8022bed0` has 0 `r13` references across all 19,445 of its instructions,
+and its 4-byte globals such as `Snd::gMutexLockFn`, `MIXstopfn` and `everyother` sit
+outside `.sdata` and are reached with `lis`, so new units there use `-G0
+-fno-strength-reduce`. That is an inference from the instruction stream, not a recovered
+build setting. `SND*` units landed before this was established keep `-G8`; they match as landed and
+have not been migrated.
+
+Ownership of some small statics is not verified by the build: `g_thMain`,
+`MEM_allocfailcallback` and the timer statics are declared `extern` as original context,
+like `hlafile`'s statics above, rather than defined in a unit.

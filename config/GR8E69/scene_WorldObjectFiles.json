@@ -1,0 +1,54 @@
+{
+  "id": "scene_WorldObjectFiles",
+  "source": "src/scene/WorldObjectFiles.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800c3cd0",
+      "size": 96
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetCptFilenameFromBigFile__FiPci",
+      "address": "0x800c3cd0",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "GetCdbFilenameFromBigFile__FiPci",
+      "address": "0x800c3cf0",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "GetRtcFilenameFromBigFile__FiPci",
+      "address": "0x800c3d10",
+      "size": 32,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetCompartmentCDBNameFromIndex__FiPci": "0x801a984c",
+    "GetCompartmentCPTNameFromIndex__FiPci": "0x801a9874",
+    "GetCompartmentRTCNameFromIndex__FiPci": "0x801a98a0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "world_object.cpp",
+  "original_file_index": 896
+}

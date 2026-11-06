@@ -1,0 +1,40 @@
+{
+  "id": "sound_sflpf_rc",
+  "source": "src/sound/ea/sflpf_rc.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802284ac",
+      "size": 168
+    }
+  ],
+  "functions": [
+    {
+      "name": "SFILTER_lpfRC__FPviT0T0i",
+      "address": "0x802284ac",
+      "size": 168,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sflpf.c",
+  "original_file_index": 3244
+}

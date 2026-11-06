@@ -1,0 +1,42 @@
+{
+  "id": "scene_StaticObjectCommitUpdate",
+  "source": "src/scene/StaticObjectCommitUpdate.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800a8150",
+      "size": 332
+    }
+  ],
+  "functions": [
+    {
+      "name": "CommitUpdate__13CStaticObject",
+      "address": "0x800a8150",
+      "size": 332,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "PreTranslate__7CMatrixRC8CVector3": "0x8007ae98",
+    "_7CMatrix.s_ClassInit": "0x802c2100"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "static_obj.cpp",
+  "original_file_index": 833
+}

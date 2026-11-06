@@ -1,0 +1,175 @@
+{
+  "id": "ea_hlafile",
+  "source": "src/ea/hlafile.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80208d50",
+      "size": 2588
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bf3ac",
+      "size": 28
+    },
+    {
+      "name": ".bss",
+      "address": "0x803ff494",
+      "size": 28,
+      "type": 8
+    },
+    {
+      "name": ".sdata",
+      "address": "0x80451238",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "queueadd__FP12REQUESTQUEUEP16REQUESTSTRUCTtag",
+      "address": "0x80208d50",
+      "size": 108,
+      "binding": 0
+    },
+    {
+      "name": "queuefetch__FP12REQUESTQUEUE",
+      "address": "0x80208dbc",
+      "size": 92,
+      "binding": 0
+    },
+    {
+      "name": "newrequestid__FP16REQUESTSTRUCTtag",
+      "address": "0x80208e18",
+      "size": 48,
+      "binding": 0
+    },
+    {
+      "name": "locaterequest__Fi",
+      "address": "0x80208e48",
+      "size": 72,
+      "binding": 0
+    },
+    {
+      "name": "releaserequest__FP16REQUESTSTRUCTtag",
+      "address": "0x80208e90",
+      "size": 108,
+      "binding": 0
+    },
+    {
+      "name": "finishrequest__FP16REQUESTSTRUCTtag",
+      "address": "0x80208efc",
+      "size": 128,
+      "binding": 0
+    },
+    {
+      "name": "loadfileclosecallback__FiiPv",
+      "address": "0x80208f7c",
+      "size": 56,
+      "binding": 0
+    },
+    {
+      "name": "loadfilereadcallback__FiiPv",
+      "address": "0x80208fb4",
+      "size": 244,
+      "binding": 0
+    },
+    {
+      "name": "loadfilesizecallback__FiiPv",
+      "address": "0x802090a8",
+      "size": 232,
+      "binding": 0
+    },
+    {
+      "name": "loadfileopencallback__FiiPv",
+      "address": "0x80209190",
+      "size": 272,
+      "binding": 0
+    },
+    {
+      "name": "ASYNCFILE_init",
+      "address": "0x802092a0",
+      "size": 212,
+      "binding": 1
+    },
+    {
+      "name": "ASYNCFILE_restore",
+      "address": "0x80209374",
+      "size": 240,
+      "binding": 1
+    },
+    {
+      "name": "ASYNCFILE_load",
+      "address": "0x80209464",
+      "size": 176,
+      "binding": 1
+    },
+    {
+      "name": "ASYNCFILE_getstatus",
+      "address": "0x80209514",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "ASYNCFILE_release",
+      "address": "0x8020957c",
+      "size": 292,
+      "binding": 1
+    },
+    {
+      "name": "ASYNCFILE_cancel",
+      "address": "0x802096a0",
+      "size": 204,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FILESYS_callbackop": "0x80207330",
+    "FILESYS_cancelop": "0x802074f8",
+    "FILESYS_close": "0x8020795c",
+    "FILESYS_completeop": "0x802076f4",
+    "FILESYS_open": "0x802078cc",
+    "FILESYS_read": "0x802079e8",
+    "FILESYS_size": "0x80207b04",
+    "FILESYS_waitop": "0x8020765c",
+    "MUTEX_create": "0x80217f28",
+    "MUTEX_destroy": "0x80217f50",
+    "MUTEX_lock": "0x80217f7c",
+    "MUTEX_unlock": "0x80217fa0",
+    "SYNCTASK_run": "0x8021811c",
+    "THREAD_iscurrent": "0x80217d70",
+    "THREAD_yield": "0x80217ce8",
+    "freequeue": "0x80451f24",
+    "gFileSysOpts": "0x803ff480",
+    "numrequests": "0x80451f20",
+    "requestidcounter": "0x80451f2c"
+  },
+  "local_externals": [
+    "freequeue",
+    "numrequests",
+    "requestidcounter"
+  ],
+  "sda_externals": [
+    "freequeue",
+    "numrequests",
+    "requestidcounter"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "hlafile.cpp",
+  "original_file_index": 2836
+}

@@ -1,12 +1,12 @@
 #ifndef BPD_LOADER_INTERNAL_H
 #define BPD_LOADER_INTERNAL_H
-// Original method-only/static interfaces. No class allocations are inferred.
+// Original method-only/static interfaces (AIPathFinding is a namespace, see
+// AISplinePath.h). No class allocations are inferred.
 #include "BPD.h"
 #include "AIFilterGlobal.h"
-class AIPathFinding {
-public:
-    static void ImportAreaPathNodeNetwork(BPDHeader *);
-};
+namespace AIPathFinding {
+    void ImportAreaPathNodeNetwork(BPDHeader *);
+}
 class CBuddyLeadBehavior {
 public:
     static void CacheBuddyLeadTriggers();

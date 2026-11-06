@@ -1,0 +1,40 @@
+{
+  "id": "player_switch",
+  "source": "src/player/PlayerSwitch.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800ab4c8",
+      "size": 100
+    }
+  ],
+  "functions": [
+    {
+      "name": "CanPlayerSwitchWeapon__13CPlayerObject",
+      "address": "0x800ab4c8",
+      "size": 100,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "IsSelectable__C19CPlayerWeaponObject": "0x800c8e00"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}

@@ -1,0 +1,92 @@
+{
+  "id": "ai_AIFilterHead",
+  "source": "src/ai/AIFilterHead.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d8e54",
+      "size": 316
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.15CAIFilterObject",
+      "address": "0x802e78d0",
+      "size": 32,
+      "target_name": ".data"
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.22CAIFilterSoldierObject",
+      "address": "0x802e78b0",
+      "size": 32,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "__15CAIFilterObjectP8BSObject",
+      "address": "0x800d8e54",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "_._15CAIFilterObject",
+      "address": "0x800d8e68",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "LinkGameObject__15CAIFilterObjectPv",
+      "address": "0x800d8e9c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "__22CAIFilterSoldierObjectP8BSObject",
+      "address": "0x800d8ea4",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "_._22CAIFilterSoldierObject",
+      "address": "0x800d8f08",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "__nw__22CAIFilterSoldierObjectUiPv",
+      "address": "0x800d8f84",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "__dl__22CAIFilterSoldierObjectPv",
+      "address": "0x800d8f8c",
+      "size": 4,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SetMoveTarget__15CAIFilterObjectRC8CVector3": "0x800d981c",
+    "SetMoveTarget__22CAIFilterSoldierObjectRC8CVector3": "0x800d9820",
+    "__16CAISoldierObjectPv": "0x800dd398",
+    "__builtin_delete": "0x801a8990",
+    "__nw__16CAISoldierObjectUiPv": "0x800dd38c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIFilter.cpp",
+  "original_file_index": 970
+}

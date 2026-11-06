@@ -1,0 +1,40 @@
+{
+  "id": "sound_SNDI_mult16",
+  "source": "src/sound/ea/SNDI_mult16.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802292d4",
+      "size": 52
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDI_findmult16__Fii",
+      "address": "0x802292d4",
+      "size": 52,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDI_findprime__Fii": "0x8022bee8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "SNDI_mult16.c",
+  "original_file_index": 3266
+}

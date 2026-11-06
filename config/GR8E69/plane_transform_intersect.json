@@ -1,0 +1,52 @@
+{
+  "id": "plane_transform_intersect",
+  "source": "src/geometry/plane_transform_intersect.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8007be5c",
+      "size": 960
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029b070",
+      "size": 20
+    }
+  ],
+  "functions": [
+    {
+      "name": "Transform__6CPlaneRC7CMatrix",
+      "address": "0x8007be5c",
+      "size": 372,
+      "binding": 1
+    },
+    {
+      "name": "GetIntersection__C6CPlaneRC6CLine3RfP8CVector3",
+      "address": "0x8007bfd0",
+      "size": 588,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetLengthSquared__C6CLine3": "0x8027c878",
+    "sqrtf": "0x80270538"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "plane.cpp",
+  "original_file_index": 550
+}

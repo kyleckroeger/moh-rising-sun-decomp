@@ -1,0 +1,51 @@
+{
+  "id": "scene_ObjCreatePoolA",
+  "source": "src/scene/ObjCreatePoolA.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8012b574",
+      "size": 88
+    }
+  ],
+  "functions": [
+    {
+      "name": "AllocateAnimatedVolume__Fv",
+      "address": "0x8012b574",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "FreeAnimatedVolume__FPv",
+      "address": "0x8012b5a0",
+      "size": 44,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FreeElement__35BSUtilObjectInstanceMemoryAllocatorPv": "0x800f8430",
+    "GetFreeElement__35BSUtilObjectInstanceMemoryAllocatorb": "0x800f83f4",
+    "g_pAnimatedVolumeAllocator": "0x8032ce20"
+  },
+  "local_externals": [
+    "g_pAnimatedVolumeAllocator"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "objcreate.cpp",
+  "original_file_index": 1242
+}

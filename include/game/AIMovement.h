@@ -27,7 +27,9 @@ class BSObject;
 struct BS_STRUCT_Vector_struct { float x, y, z; };
 // Scoped view of an AI object's script instance data: the move point is at +0xa4.
 struct AIScriptDataView {
-    unsigned char unknown00[0xa4];
+    unsigned char unknown00[0x5c];
+    float visionRange; // +0x5c; used as the line-of-sight distance.
+    unsigned char unknown60[0xa4 - 0x60];
     BS_STRUCT_Vector_struct movePoint;
 };
 // Original enum tags; enumerator names describe observed numeric selectors.

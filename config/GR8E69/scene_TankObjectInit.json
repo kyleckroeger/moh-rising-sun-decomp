@@ -1,0 +1,67 @@
+{
+  "id": "scene_TankObjectInit",
+  "source": "src/scene/TankObjectInit.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800c32cc",
+      "size": 320
+    }
+  ],
+  "functions": [
+    {
+      "name": "InitAI__11CTankObject",
+      "address": "0x800c32cc",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "GetAIObject__11CTankObject",
+      "address": "0x800c3314",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "CleanUp__11CTankObject",
+      "address": "0x800c331c",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "BeginUpdate__11CTankObjectf",
+      "address": "0x800c338c",
+      "size": 128,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BeginUpdate__11CHierObjectf": "0x800d099c",
+    "CleanUp__11CHierObject": "0x800d08c4",
+    "CleanUp__13CAITankDoodad": "0x800d7a28",
+    "DestroyWeapon__14CWeaponFactoryP7CWeapon": "0x8014f470",
+    "EnableAllAStarPathNodes__15CAIFilterGlobal": "0x800d8720",
+    "GetAIObject__C13CAITankDoodad": "0x800d7a80",
+    "Init__13CAITankDoodadP11CTankObject": "0x800d798c",
+    "Update__7CWeaponfb": "0x8014bc54",
+    "g_WeaponFactory": "0x803e6d40",
+    "g_aigAIFilterGlobalObject": "0x80309bfc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Tank_object.cpp",
+  "original_file_index": 894
+}

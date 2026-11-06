@@ -1,0 +1,69 @@
+{
+  "id": "ea_fontdraw",
+  "source": "src/ea/fontdraw.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80206130",
+      "size": 240
+    }
+  ],
+  "functions": [
+    {
+      "name": "FONT_switchcase__Fi",
+      "address": "0x80206130",
+      "size": 104,
+      "binding": 0
+    },
+    {
+      "name": "FONT_drawtexta",
+      "address": "0x80206198",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "FONT_drawtextw",
+      "address": "0x802061bc",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "FONT_getrecta",
+      "address": "0x802061e0",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "FONT_getrectw",
+      "address": "0x80206200",
+      "size": 32,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FONT_drawtextx__H1ZUc_P4FONTffPCX01Pv_v": "0x80293ebc",
+    "FONT_drawtextx__H1ZUs_P4FONTffPCX01Pv_v": "0x8029428c",
+    "FONT_getrectx__H1ZUc_P4FONTPCX01PfN32_v": "0x8029465c",
+    "FONT_getrectx__H1ZUs_P4FONTPCX01PfN32_v": "0x80294ac4"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "fontdraw.cpp",
+  "original_file_index": 2771
+}

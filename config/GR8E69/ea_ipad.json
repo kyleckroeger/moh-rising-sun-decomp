@@ -1,0 +1,48 @@
+{
+  "id": "ea_ipad",
+  "source": "src/ea/ipad.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80217104",
+      "size": 220
+    }
+  ],
+  "functions": [
+    {
+      "name": "iPAD_update__Fv",
+      "address": "0x80217104",
+      "size": 220,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "MEM_copy": "0x802187b0",
+    "OSDisableInterrupts": "0x80257798",
+    "OSRestoreInterrupts": "0x802577c0",
+    "PADReset": "0x8025c300",
+    "SIProbe": "0x8025eca8",
+    "gPadStatus": "0x8040f398",
+    "vgPadStatus": "0x8040f3c8"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "ipad.cpp",
+  "original_file_index": 2960
+}

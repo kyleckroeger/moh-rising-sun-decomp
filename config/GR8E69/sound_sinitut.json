@@ -1,0 +1,44 @@
+{
+  "id": "sound_sinitut",
+  "source": "src/sound/ea/sinitut.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802291fc",
+      "size": 96
+    }
+  ],
+  "functions": [
+    {
+      "name": "MIXI_initunpackmt",
+      "address": "0x802291fc",
+      "size": 96,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SFILTER_unpackmtfinit__FPvP16UNPACKINITPARAMS": "0x8022970c",
+    "SFILTER_unpackmtlfinit__FPvP16UNPACKINITPARAMS": "0x80229908",
+    "SFILTER_unpackmtpfinit__FPvP16UNPACKINITPARAMS": "0x80229c6c",
+    "sndmix": "0x8041ec1c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sinitut.c",
+  "original_file_index": 3260
+}

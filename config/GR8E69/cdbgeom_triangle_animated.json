@@ -1,0 +1,40 @@
+{
+  "id": "cdbgeom_triangle_animated",
+  "source": "src/geometry/cdbgeom_triangle_animated.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8007831c",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "TestCollision__C12CCDBTriangleRC15CAnimatedVolumeR10CCollisionPC6CDBTrib",
+      "address": "0x8007831c",
+      "size": 32,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "TestCollision__C12CCDBTriangleRC10CVolSphereR10CCollisionPC6CDBTrib": "0x80078198"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "cdbgeom.cpp",
+  "original_file_index": 535
+}

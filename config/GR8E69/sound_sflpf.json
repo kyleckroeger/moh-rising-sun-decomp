@@ -1,0 +1,47 @@
+{
+  "id": "sound_sflpf",
+  "source": "src/sound/ea/sflpf.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80228554",
+      "size": 64
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bfc80",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "SFILTER_createLPFRC__FP10LPFRCSTATE",
+      "address": "0x80228554",
+      "size": 64,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SFILTER_lpfRC__FPviT0T0i": "0x802284ac"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sflpf.c",
+  "original_file_index": 3244
+}

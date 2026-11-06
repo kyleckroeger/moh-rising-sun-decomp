@@ -1,0 +1,46 @@
+{
+  "id": "projectile_draw",
+  "source": "src/bullets/ProjectileDraw.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8014e314",
+      "size": 264
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a8dec",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "Draw__17CProjectileBulletR12CDrawContext",
+      "address": "0x8014e314",
+      "size": 264,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddCommand__12CDrawContext11ERenderBinsRC11DrawCommand": "0x8012ea14",
+    "ExecuteDraw__17CProjectileBulletR12CDrawContextPPv": "0x8014e41c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "projectilebullet.cpp",
+  "original_file_index": 1351
+}

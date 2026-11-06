@@ -1,0 +1,43 @@
+{
+  "id": "player_weapon_shutdown",
+  "source": "src/weapons/PlayerWeaponShutdown.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800c7eb8",
+      "size": 80
+    }
+  ],
+  "functions": [
+    {
+      "name": "Shutdown__19CPlayerWeaponObject",
+      "address": "0x800c7eb8",
+      "size": 80,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DestroyWeapon__14CWeaponFactoryP7CWeapon": "0x8014f470",
+    "Remove__6CSceneR10ISceneNode": "0x80146e9c",
+    "g_WeaponFactory": "0x803e6d40",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player_weapon_object.cpp",
+  "original_file_index": 912
+}

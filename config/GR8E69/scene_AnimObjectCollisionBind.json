@@ -1,0 +1,40 @@
+{
+  "id": "scene_AnimObjectCollisionBind",
+  "source": "src/scene/AnimObjectCollisionBind.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800a3220",
+      "size": 44
+    }
+  ],
+  "functions": [
+    {
+      "name": "BindLocationCollision__11CAnimObjectPQ34EALA9Character13CollisionData",
+      "address": "0x800a3220",
+      "size": 44,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Set__15CAnimatedVolumePQ34EALA9Character13CollisionData": "0x8013e338"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "anim_obj.cpp",
+  "original_file_index": 831
+}

@@ -1,0 +1,42 @@
+{
+  "id": "scene_TankObjectAI",
+  "source": "src/scene/TankObjectAI.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800c340c",
+      "size": 180
+    }
+  ],
+  "functions": [
+    {
+      "name": "UpdateAI__11CTankObjectf",
+      "address": "0x800c340c",
+      "size": 180,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DisableCollidingAStarPathNodes__15CAIFilterGlobalPC7IVolume": "0x800d8724",
+    "EnableAllAStarPathNodes__15CAIFilterGlobal": "0x800d8720",
+    "g_aigAIFilterGlobalObject": "0x80309bfc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Tank_object.cpp",
+  "original_file_index": 894
+}

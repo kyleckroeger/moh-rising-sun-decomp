@@ -1,0 +1,157 @@
+{
+  "id": "scene_AnimObjectDefaultsB",
+  "source": "src/scene/AnimObjectDefaultsB.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800a5e10",
+      "size": 120
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029ea98",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetLightVolumeTransitionDuration__11CAnimObjectf",
+      "address": "0x800a5e10",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "AttachObject__11CAnimObjectP13CStaticObjectPci",
+      "address": "0x800a5e18",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "DetachObject__11CAnimObjectPc",
+      "address": "0x800a5e20",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetAttachPointMatrix__11CAnimObjectPcP7CMatrix",
+      "address": "0x800a5e28",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "OnSwordDraw__11CAnimObject",
+      "address": "0x800a5e30",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "OnSwordSheath__11CAnimObject",
+      "address": "0x800a5e34",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "AttachFloatingBone__11CAnimObject",
+      "address": "0x800a5e38",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "DetachFloatingBone__11CAnimObject",
+      "address": "0x800a5e3c",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "GetValue__11CAnimObjectPCc",
+      "address": "0x800a5e40",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "EvaluateScript__11CAnimObjectPCcUiT1",
+      "address": "0x800a5e4c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "FadeValue__C11CAnimObject",
+      "address": "0x800a5e54",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "FadeOut__11CAnimObjectf",
+      "address": "0x800a5e60",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "FadeIn__11CAnimObjectf",
+      "address": "0x800a5e64",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "PreTransform__11CAnimObjectRC7CMatrix",
+      "address": "0x800a5e68",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "Transform__11CAnimObjectRC7CMatrix",
+      "address": "0x800a5e6c",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "Rotate__11CAnimObjectRC8CVector3f",
+      "address": "0x800a5e70",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "Pitch__11CAnimObjectf",
+      "address": "0x800a5e74",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "Roll__11CAnimObjectf",
+      "address": "0x800a5e78",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "SetBasis__11CAnimObjectRC8CVector3N21",
+      "address": "0x800a5e7c",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "GetSkeleton__11CAnimObject",
+      "address": "0x800a5e80",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "anim_obj.cpp",
+  "original_file_index": 831
+}

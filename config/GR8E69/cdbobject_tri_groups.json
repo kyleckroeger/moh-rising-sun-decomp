@@ -1,0 +1,64 @@
+{
+  "id": "cdbobject_tri_groups",
+  "source": "src/geometry/cdbobject_tri_groups.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8027c304",
+      "size": 1344
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029ae80",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "TestCollisionWithTriGroups__H1Z7CVolBox_RCQ23dwit8fast_vec1ZP11CDBTriGroupRCX01R10CCollisionb_10EClsnState",
+      "address": "0x8027c304",
+      "size": 448,
+      "binding": 1
+    },
+    {
+      "name": "TestCollisionWithTriGroups__H1Z11CVolCapsule_RCQ23dwit8fast_vec1ZP11CDBTriGroupRCX01R10CCollisionb_10EClsnState",
+      "address": "0x8027c4c4",
+      "size": 448,
+      "binding": 1
+    },
+    {
+      "name": "TestCollisionWithTriGroups__H1Z15CAnimatedVolume_RCQ23dwit8fast_vec1ZP11CDBTriGroupRCX01R10CCollisionb_10EClsnState",
+      "address": "0x8027c684",
+      "size": 448,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "IsPassThru__12CSurfaceTypeUsb": "0x8005cdd8",
+    "TestCollision__C12CCDBTriangleRC11CVolCapsuleR10CCollisionPC6CDBTrib": "0x8007833c",
+    "TestCollision__C12CCDBTriangleRC15CAnimatedVolumeR10CCollisionPC6CDBTrib": "0x8007831c",
+    "TestCollision__C12CCDBTriangleRC7CVolBoxR10CCollisionPC6CDBTrib": "0x80076ae4",
+    "g_bDisablePassThru": "0x802c1cf0"
+  },
+  "local_externals": [
+    "g_bDisablePassThru"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "cdbobject.cpp",
+  "original_file_index": 533
+}

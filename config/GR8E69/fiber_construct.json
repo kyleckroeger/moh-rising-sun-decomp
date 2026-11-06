@@ -1,0 +1,56 @@
+{
+  "id": "fiber_construct",
+  "source": "src/geometry/fiber_construct.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80140ca0",
+      "size": 436
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a8484",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "__9CVolFiberRC9CVolFiber",
+      "address": "0x80140ca0",
+      "size": 184,
+      "binding": 1
+    },
+    {
+      "name": "__9CVolFiberRC8CVector3T1",
+      "address": "0x80140d58",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "__9CVolFiberRC6CLine3",
+      "address": "0x80140db0",
+      "size": 164,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Set__6CLine3RC8CVector3T1": "0x80281690",
+    "_vt.9CVolFiber": "0x802e9890"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

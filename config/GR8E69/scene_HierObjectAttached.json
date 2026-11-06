@@ -1,0 +1,49 @@
+{
+  "id": "scene_HierObjectAttached",
+  "source": "src/scene/HierObjectAttached.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d0da0",
+      "size": 176
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a15a8",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "AttemptUpdateOfAttachedObjects__11CHierObject",
+      "address": "0x800d0da0",
+      "size": 176,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetExtents__C10CCSGVolumeR8CVector3T1": "0x80145c9c",
+    "GetPlayer__C6CScenei": "0x8014ac08",
+    "SetPlayersMountedMGPositions__13CPlayerObjectP7CMatrix": "0x800ad218",
+    "UpdateAttachedObjects__17CAttachableObject": "0x800baaa0",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "hierobject.cpp",
+  "original_file_index": 935
+}

@@ -1,0 +1,21 @@
+// AI-assisted reconstruction from GR8E69, with Medal of Honor: Frontline as a semantic
+// reference. Part of the original hierobject.cpp; member names are descriptive.
+#include "SceneObjects.h"
+
+void CHierObject::BeginScriptMotionUpdate(float) {
+    if (flags.scriptMoving && !(scriptMoveTime > 0.0f)) {
+        TriggerScriptEvent((unsigned short)scriptMoveEvent, (void *)treeIndex, 0);
+        scriptMoveTime = 0.0f;
+        flags.scriptMoving = 0;
+        velocity.Zero();
+    }
+    if (flags.scriptRotating) {
+        orientation.Normalize();
+        if (!(scriptRotateTime > 0.0f)) {
+            TriggerScriptEvent((unsigned short)scriptRotateEvent, (void *)treeIndex, 0);
+            scriptRotateTime = 0.0f;
+            flags.scriptRotating = 0;
+            scriptRotationDelta.Set(0.0f, 0.0f, 0.0f, 1.0f);
+        }
+    }
+}

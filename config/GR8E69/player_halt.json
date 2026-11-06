@@ -1,0 +1,59 @@
+{
+  "id": "player_halt",
+  "source": "src/player/PlayerHalt.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800b3858",
+      "size": 200
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029f1c0",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "Halt__13CPlayerObject",
+      "address": "0x800b3858",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "PreTransform__13CPlayerObjectRC7CMatrix",
+      "address": "0x800b3888",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "Transform__13CPlayerObjectRC7CMatrix",
+      "address": "0x800b38d4",
+      "size": 76,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Multiply__7CMatrixRC7CMatrixT1": "0x802794b8",
+    "_7CMatrix.s_TempMat": "0x802fbf00",
+    "__as__7CMatrixRC7CMatrix": "0x8007aa38"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}

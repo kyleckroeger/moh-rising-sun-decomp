@@ -1,0 +1,70 @@
+{
+  "id": "ai_AIObjectBehavior",
+  "source": "src/ai/AIObjectBehavior.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800dc47c",
+      "size": 472
+    }
+  ],
+  "functions": [
+    {
+      "name": "ChooseBehavior__9CAIObject",
+      "address": "0x800dc47c",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "ChooseNewBehavior__9CAIObject",
+      "address": "0x800dc4c8",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "StartBehavior__9CAIObject",
+      "address": "0x800dc51c",
+      "size": 92,
+      "binding": 1
+    },
+    {
+      "name": "StopBehavior__9CAIObjectb",
+      "address": "0x800dc578",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "ClearBehavior__9CAIObject",
+      "address": "0x800dc5b8",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "GetBehaviorCapability__9CAIObject11ECapability",
+      "address": "0x800dc60c",
+      "size": 72,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FindBestBehavior__9CAIObject": "0x800dc378"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIObject.cpp",
+  "original_file_index": 977
+}

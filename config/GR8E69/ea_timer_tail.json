@@ -1,0 +1,70 @@
+{
+  "id": "ea_timer_tail",
+  "source": "src/ea/timer_tail.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802179d4",
+      "size": 108
+    }
+  ],
+  "functions": [
+    {
+      "name": "AlarmHandler__FP7OSAlarmP9OSContext",
+      "address": "0x802179d4",
+      "size": 36,
+      "binding": 0
+    },
+    {
+      "name": "TIMER_gettick",
+      "address": "0x802179f8",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "TIMER_elapsedticks",
+      "address": "0x80217a00",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "TIMER_getfrequency",
+      "address": "0x80217a38",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "TIMERhz": "0x804512c8",
+    "ticks": "0x804512cc",
+    "tickval": "0x804512e0",
+    "ttMsg__F8TIMERMSG": "0x802185cc"
+  },
+  "local_externals": [
+    "tickval"
+  ],
+  "sda_externals": [
+    "TIMERhz",
+    "ticks",
+    "tickval"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "timer.cpp",
+  "original_file_index": 2981
+}

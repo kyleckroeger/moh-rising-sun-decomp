@@ -1,0 +1,48 @@
+{
+  "id": "sound_sballoc",
+  "source": "src/sound/ea/sballoc.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802197a0",
+      "size": 132
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDBANKI_alloc__Fv",
+      "address": "0x802197a0",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "SNDBANKI_getppatch__FP8BANKVER5i",
+      "address": "0x802197e4",
+      "size": 64,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "sndgs": "0x804108fc"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sballoc.c",
+  "original_file_index": 3033
+}

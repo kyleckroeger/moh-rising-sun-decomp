@@ -1,0 +1,51 @@
+{
+  "id": "ea_exit",
+  "source": "src/ea/exit.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80217664",
+      "size": 112
+    },
+    {
+      "name": ".data",
+      "address": "0x802d50e0",
+      "size": 256
+    }
+  ],
+  "functions": [
+    {
+      "name": "REAL_restore",
+      "address": "0x80217664",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "REAL_exit",
+      "address": "0x802176bc",
+      "size": 24,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "exit": "0x8025b48c"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

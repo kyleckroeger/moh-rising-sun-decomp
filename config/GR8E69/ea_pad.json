@@ -1,0 +1,81 @@
+{
+  "id": "ea_pad",
+  "source": "src/ea/pad.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80216e24",
+      "size": 292
+    }
+  ],
+  "functions": [
+    {
+      "name": "PAD_init",
+      "address": "0x80216e24",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "PAD_restore",
+      "address": "0x80216e44",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "PAD_getdataptr",
+      "address": "0x80216e64",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "PAD_active",
+      "address": "0x80216e78",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "PAD_state",
+      "address": "0x80216e98",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "PAD_scan",
+      "address": "0x80216ec4",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "PAD_update",
+      "address": "0x80216f28",
+      "size": 32,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "gPadStatus": "0x8040f398",
+    "iPAD_init__Fv": "0x80216fbc",
+    "iPAD_restore__Fv": "0x80217068",
+    "iPAD_update__Fv": "0x80217104"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "pad.cpp",
+  "original_file_index": 2958
+}

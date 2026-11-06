@@ -1,0 +1,108 @@
+{
+  "id": "ai_AIObjectLineOfSight",
+  "source": "src/ai/AIObjectLineOfSight.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800db6f0",
+      "size": 2196
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a278c",
+      "size": 124
+    }
+  ],
+  "functions": [
+    {
+      "name": "CheckFieldOfViewCorpse__9CAIObjectR9CAITarget",
+      "address": "0x800db6f0",
+      "size": 272,
+      "binding": 1
+    },
+    {
+      "name": "IsObjectInFieldOfView__9CAIObjectRC8CVector3ffbP10ISceneNode",
+      "address": "0x800db800",
+      "size": 280,
+      "binding": 1
+    },
+    {
+      "name": "IsObjectInFieldOfView__9CAIObjectRC8CVector3N21ffbP10ISceneNode",
+      "address": "0x800db918",
+      "size": 392,
+      "binding": 1
+    },
+    {
+      "name": "IsObjectOccluded__9CAIObjectRC8CVector3T1bP10ISceneNode",
+      "address": "0x800dbaa0",
+      "size": 236,
+      "binding": 1
+    },
+    {
+      "name": "SetupLineOfSightModeObject__9CAIObjectRC9CAITargetf",
+      "address": "0x800dbb8c",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "SetupLineOfSightModeList__9CAIObjectP14aistatus_matchif",
+      "address": "0x800dbbb0",
+      "size": 144,
+      "binding": 1
+    },
+    {
+      "name": "CheckLineOfSightModeObject__9CAIObject",
+      "address": "0x800dbc40",
+      "size": 392,
+      "binding": 1
+    },
+    {
+      "name": "CheckLineOfSightModeList__9CAIObjectR9CAITarget",
+      "address": "0x800dbdc8",
+      "size": 300,
+      "binding": 1
+    },
+    {
+      "name": "IsTargetInLineOfSight__9CAIObjectf",
+      "address": "0x800dbef4",
+      "size": 144,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CheckVisionLineToEnvironment__15CAIFilterGlobalRC8CVector3T1P10ISceneNodeT3": "0x800d88a4",
+    "GetGlobalListStart__9CAIObject": "0x800d9e48",
+    "GetNextVisionTarget__9CAIObject": "0x800db060",
+    "GetPosition__C9CAITarget": "0x800eea68",
+    "GetVarValue__C9CAIStatus12aistatus_var": "0x8028399c",
+    "IsObjectInVisionDistance__C9CAIObjectRC8CVector3f": "0x800db100",
+    "Matches__9CAITargetRC9CAITarget": "0x800eecc8",
+    "Nullify__9CAITarget": "0x800eed5c",
+    "SetAsAITarget__9CAITargetP9CAIObject": "0x800eed70",
+    "SetLastSeenTargetPosition__12CAITargetingRC8CVector3": "0x800ecf08",
+    "__9CAITargetP9CAIObject": "0x800eed84",
+    "cosf": "0x80270840",
+    "g_iMsgVerbosityLevel": "0x802c1b48",
+    "memcpy": "0x802665e8",
+    "printf": "0x8026374c",
+    "sqrtf": "0x80270538"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIObject.cpp",
+  "original_file_index": 977
+}

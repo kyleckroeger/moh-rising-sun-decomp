@@ -1,0 +1,46 @@
+{
+  "id": "thrown_bullet_effect",
+  "source": "src/bullets/ThrownBulletEffect.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80152a5c",
+      "size": 408
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a9594",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "CreateExplosionEffect__13CThrownBulletRC7CMatrixb",
+      "address": "0x80152a5c",
+      "size": 408,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Create__10CPSManagerUib15eParticleSystem": "0x80066a70",
+    "Create__6CLightUi": "0x8012ff28"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "thrownbullet.cpp",
+  "original_file_index": 1370
+}

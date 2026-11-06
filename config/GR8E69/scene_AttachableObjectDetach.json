@@ -1,0 +1,49 @@
+{
+  "id": "scene_AttachableObjectDetach",
+  "source": "src/scene/AttachableObjectDetach.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800ba7c4",
+      "size": 668
+    }
+  ],
+  "functions": [
+    {
+      "name": "DetachObject__17CAttachableObjectP10ISceneNode",
+      "address": "0x800ba7c4",
+      "size": 348,
+      "binding": 1
+    },
+    {
+      "name": "DetachAllObjects__17CAttachableObject",
+      "address": "0x800ba920",
+      "size": 320,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "IncludeCollision__6CSceneRC10ISceneNodeT1": "0x8014792c",
+    "SetAttached__11CAnimObjectb": "0x800a54cc",
+    "SetHideWeapon__13CPlayerObjectb": "0x800b7aac",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "attachobject.cpp",
+  "original_file_index": 873
+}

@@ -1,0 +1,67 @@
+{
+  "id": "cdbgeom_box_forward",
+  "source": "src/geometry/cdbgeom_box_forward.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8007a8c8",
+      "size": 136
+    }
+  ],
+  "functions": [
+    {
+      "name": "TestCollision__C10CCDBVolBoxRC7IVolumeR10CCollisionb",
+      "address": "0x8007a8c8",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C10CCDBVolBoxRC7CVolBoxR10CCollisionb",
+      "address": "0x8007a8e8",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C10CCDBVolBoxRC10CCDBObjectR10CCollisionb",
+      "address": "0x8007a908",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C10CCDBVolBoxRC8CVector3R10CCollisionb",
+      "address": "0x8007a928",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C10CCDBVolBoxRC12CWorldVolumeR10CCollisionb",
+      "address": "0x8007a948",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "TestCollision__C7CVolBoxRC10CCDBObjectR10CCollisionb": "0x8013b91c",
+    "TestCollision__C7CVolBoxRC7CVolBoxR10CCollisionb": "0x80138510",
+    "TestCollision__C7CVolBoxRC7IVolumeR10CCollisionb": "0x801384b0",
+    "TestCollision__C7CVolBoxRC8CVector3R10CCollisionb": "0x8013ba3c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "cdbgeom.cpp",
+  "original_file_index": 535
+}

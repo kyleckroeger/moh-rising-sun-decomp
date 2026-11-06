@@ -1,0 +1,90 @@
+{
+  "id": "scene_HierObjectTree",
+  "source": "src/scene/HierObjectTree.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d073c",
+      "size": 656
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetRotation__11CHierObjectR11CQuaternion",
+      "address": "0x800d073c",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "GetRotation__11CHierObjectR11CQuaternion",
+      "address": "0x800d0764",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "GetSubObject__11CHierObjecti",
+      "address": "0x800d078c",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "GetAttachPointMatrix__11CHierObjectiR7CMatrix",
+      "address": "0x800d079c",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "AddObjectToTree__11CHierObjectP11CHierObjectii",
+      "address": "0x800d07d0",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "RemoveObjectFromTree__11CHierObjectP11CHierObjecti",
+      "address": "0x800d0804",
+      "size": 192,
+      "binding": 1
+    },
+    {
+      "name": "CleanUp__11CHierObject",
+      "address": "0x800d08c4",
+      "size": 192,
+      "binding": 1
+    },
+    {
+      "name": "AddHierChild__11CHierObjectP11CHierObject",
+      "address": "0x800d0984",
+      "size": 24,
+      "binding": 1
+    },
+    {
+      "name": "BeginUpdate__11CHierObjectf",
+      "address": "0x800d099c",
+      "size": 48,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DeallocateStaticObject__20CStaticObjectFactoryP13CStaticObject": "0x800cd820",
+    "DoBeginUpdate__11CHierObjectfb": "0x800d09cc",
+    "FreeBoxVolume__FPv": "0x8012b624"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "hierobject.cpp",
+  "original_file_index": 935
+}

@@ -1,0 +1,58 @@
+{
+  "id": "ea_memclass",
+  "source": "src/ea/memclass.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8020cbc0",
+      "size": 576
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bf40c",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "MEMCLASS_create",
+      "address": "0x8020cbc0",
+      "size": 464,
+      "binding": 1
+    },
+    {
+      "name": "MEMCLASS_remove",
+      "address": "0x8020cd90",
+      "size": 112,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FREE_add__FP8MEMCLASSP8MEMBLOCK": "0x8020d718",
+    "MEM_fill": "0x8021866c",
+    "MEM_initblock__FP8MEMBLOCKPCciiiT0T0": "0x8020d5a4",
+    "MUTEX_create": "0x80217f28",
+    "MUTEX_destroy": "0x80217f50",
+    "memclass": "0x804098e0",
+    "sprintf": "0x80263a3c",
+    "strcpy": "0x80266a7c"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

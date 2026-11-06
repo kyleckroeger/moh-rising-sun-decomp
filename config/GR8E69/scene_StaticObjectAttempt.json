@@ -1,0 +1,49 @@
+{
+  "id": "scene_StaticObjectAttempt",
+  "source": "src/scene/StaticObjectAttempt.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800a7e04",
+      "size": 496
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029ebf4",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "AttemptUpdate__13CStaticObjectf",
+      "address": "0x800a7e04",
+      "size": 160,
+      "binding": 1
+    },
+    {
+      "name": "CommitScriptMotionUpdate__13CStaticObject",
+      "address": "0x800a7ea4",
+      "size": 336,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "static_obj.cpp",
+  "original_file_index": 833
+}

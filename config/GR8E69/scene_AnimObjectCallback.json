@@ -1,0 +1,62 @@
+{
+  "id": "scene_AnimObjectCallback",
+  "source": "src/scene/AnimObjectCallback.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800a2940",
+      "size": 208
+    }
+  ],
+  "functions": [
+    {
+      "name": "MoveTo__11CAnimObjectRC6COORD3f",
+      "address": "0x800a2940",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "SetAnimCallback__11CAnimObject13EAnimCallback",
+      "address": "0x800a2960",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "StartAnimCallback__11CAnimObjectRCf",
+      "address": "0x800a2974",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "UpdateAnimCallback__11CAnimObjectRCf",
+      "address": "0x800a29a8",
+      "size": 104,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Adjusting_cb__11CAnimObjectRCf": "0x800a2e78",
+    "MoveTo__11CAnimObjectRC8CVector3f": "0x800a27dc",
+    "PathingFacing_cb__11CAnimObjectRCf": "0x800a2cc8",
+    "Pathing_cb__11CAnimObjectRCf": "0x800a2b80",
+    "TrackTarget_cb__11CAnimObjectRCf": "0x800a3028"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "anim_obj.cpp",
+  "original_file_index": 831
+}

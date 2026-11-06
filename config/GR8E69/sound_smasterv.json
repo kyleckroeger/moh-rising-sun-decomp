@@ -1,0 +1,46 @@
+{
+  "id": "sound_smasterv",
+  "source": "src/sound/ea/smasterv.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8021aaec",
+      "size": 152
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDmastervol",
+      "address": "0x8021aaec",
+      "size": 152,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDPLATFORM_setvol__Fi": "0x8021d32c",
+    "SNDSYS_entercritical": "0x8021f948",
+    "SNDSYS_leavecritical": "0x8021f988",
+    "iSNDcalcvol__Fi": "0x802251e4",
+    "sndgs": "0x804108fc"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "smasterv.c",
+  "original_file_index": 3058
+}

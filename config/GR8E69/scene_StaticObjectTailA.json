@@ -1,0 +1,102 @@
+{
+  "id": "scene_StaticObjectTailA",
+  "source": "src/scene/StaticObjectTailA.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800aa8b8",
+      "size": 792
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029ece8",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "MarkForDestruction__13CStaticObjecti",
+      "address": "0x800aa8b8",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "Destroy__13CStaticObject",
+      "address": "0x800aa908",
+      "size": 132,
+      "binding": 1
+    },
+    {
+      "name": "TriggerScriptEvent__13CStaticObjectUsPvb",
+      "address": "0x800aa98c",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "InitAim__13CStaticObjectbf",
+      "address": "0x800aa9b8",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "FadeOut__13CStaticObjectf",
+      "address": "0x800aa9cc",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "FadeIn__13CStaticObjectf",
+      "address": "0x800aa9f8",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "FadeValue__C13CStaticObject",
+      "address": "0x800aaa24",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "SerializeSaveData__13CStaticObject",
+      "address": "0x800aaa48",
+      "size": 392,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "DeallocateStaticObject__20CStaticObjectFactoryP13CStaticObject": "0x800cd820",
+    "DestroyDumpObject__FP13CStaticObject": "0x80127bc4",
+    "FadeValue__C18CObjectFadeManager": "0x8006c348",
+    "GetMatrix__C13TriggerObjectR7CMatrix": "0x80122d30",
+    "MarkForDestruction__8ISubjecti": "0x8014ad2c",
+    "Remove__6CSceneR10ISceneNode": "0x80146e9c",
+    "SerializeDelta__13CGameSettingsRC7CMatrixR7CMatrix": "0x80170dc8",
+    "SerializingIn__C13CGameSettings": "0x80170ee0",
+    "SerializingOut__C13CGameSettings": "0x80170ef4",
+    "SetFromMatrix__11CQuaternionRC7CMatrix": "0x8007ce2c",
+    "StartFadeIn__18CObjectFadeManagerff": "0x8006c24c",
+    "StartFadeOut__18CObjectFadeManagerff": "0x8006c22c",
+    "__as__7CMatrixRC7CMatrix": "0x8007aa38",
+    "g_GameSettings": "0x802f80c8",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "static_obj.cpp",
+  "original_file_index": 833
+}

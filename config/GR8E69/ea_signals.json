@@ -1,0 +1,54 @@
+{
+  "id": "ea_signals",
+  "source": "src/ea/signals.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802181d8",
+      "size": 144
+    }
+  ],
+  "functions": [
+    {
+      "name": "SIGNAL_create",
+      "address": "0x802181d8",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "SIGNAL_set",
+      "address": "0x80218208",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "SIGNAL_wait",
+      "address": "0x8021823c",
+      "size": 44,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "OSInitMessageQueue": "0x8025801c",
+    "OSReceiveMessage": "0x80258144",
+    "OSSendMessage": "0x8025807c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "signals.cpp",
+  "original_file_index": 2997
+}
