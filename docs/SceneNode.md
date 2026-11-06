@@ -61,8 +61,42 @@ Return types are not encoded in these symbols. They are chosen as follows:
 Callers that use a placeholder result need evidence before its declaration is
 changed.
 
-`CScene` is a member-only view declaring `Remove(ISceneNode &)` for the external
-`g_scene` object.
+`CScene` is a member-only prefix view of the external `g_scene` object. Its named
+fields include the world pointer and the list heads established by the visitor
+routines below; the view is not a complete allocation declaration.
+
+## Scene visitors
+
+`scene_visitors` reconstructs three adjacent functions from the original
+`scene.cpp` (file record 1338), using ProDG 3.8.1 with the existing
+`-O2 -G0 -fno-exceptions -fno-implicit-templates` profile. Codex assisted this work.
+
+| Function | Address | Code bytes | Traversal |
+| --- | --- | ---: | --- |
+| `VisitAllStaticObjects` | `0x80147a1c` | 112 | Head at scene `+0x24`, next link at node `+0x48` |
+| `VisitAllLights` | `0x80147a8c` | 112 | Head at scene `+0x34`, next link at node `+0x3c` |
+| `VisitAllNodesInVolume` | `0x80147afc` | 372 | Head at scene `+0x00`, next link at node `+0x1c` |
+
+All three stop when `visitor.Visit` returns true and return true themselves;
+exhausting a list returns false. `VisitAllNodesInVolume` can skip world objects,
+then tests each node's requested world volume against the supplied volume. A node
+without a world volume is tested using its position instead. Collision state 1
+means no overlap; every other state reaches the visitor. The temporary collision
+is destroyed on both early success and normal iteration.
+
+The visitor result fixes the earlier `void` declaration and permits the
+[explosion constructor](Bullets.md#explosions-and-projectile-updates) to match.
+The next-link structures in `SceneVisitors.cpp` are deliberately member-only views:
+the observed offsets do not establish which historical base class owned each
+link or the complete size of any node. The fragment also verifies the four-byte
+vector constant at `0x802a8944`, which earns no code credit.
+
+Thirteen isolated PowerPC fixtures executed the production-linked constructor
+and visitor fragments: empty/exhausted lists, early exits, adjusted virtual calls,
+world skipping, volume and position tests (including collision states 0, 1 and 2),
+collision cleanup, constructor fields and noise/visit/world callback order.
+External queries, collision lifetime bodies and effect callbacks were stubbed.
+These checks are not game or Dolphin runtime tests.
 
 ## Verification
 

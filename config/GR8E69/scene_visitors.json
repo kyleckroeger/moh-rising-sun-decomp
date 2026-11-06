@@ -1,0 +1,58 @@
+{
+  "id": "scene_visitors",
+  "source": "src/scene/SceneVisitors.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80147a1c",
+      "size": 596
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a8944",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "VisitAllStaticObjects__6CSceneRQ23dwit8IVisitor1Z10ISceneNode",
+      "address": "0x80147a1c",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "VisitAllLights__6CSceneRQ23dwit8IVisitor1Z10ISceneNode",
+      "address": "0x80147a8c",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "VisitAllNodesInVolume__6CSceneRQ23dwit8IVisitor1Z10ISceneNodeRC7IVolumeQ210ISceneNode11EVolumeTypeb",
+      "address": "0x80147afc",
+      "size": 372,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__10CCollision": "0x80133bd4",
+    "_._10CCollision": "0x80133d10"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "scene.cpp",
+  "original_file_index": 1338
+}

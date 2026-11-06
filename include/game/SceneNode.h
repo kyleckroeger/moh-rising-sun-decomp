@@ -141,11 +141,17 @@ template <class T> class IVisitor {
 // The instantiation (and its table) belongs elsewhere in the original image.
 extern template class dwi::IVisitor<ISceneNode>;
 class IVolume;
-// Member-only view of the scene container; only the world pointer at +0x18 is named.
+// Member-only prefix of the scene container; visitor routines establish the list
+// heads below. This does not establish the complete CScene allocation.
 class CScene {
   public:
-    unsigned char unknown00[0x18];
+    ISceneNode *firstNode; // +0x00
+    unsigned char unknown04[0x18 - 4];
     CWorldObject *world; // +0x18
+    unsigned char unknown1c[8];
+    ISceneNode *firstStaticObject; // +0x24
+    unsigned char unknown28[12];
+    ISceneNode *firstLight; // +0x34
     void Add(ISceneNode &, ISceneNode *);
     void Remove(ISceneNode &);
     int IsNodeInScene(const ISceneNode *) const;
@@ -154,7 +160,9 @@ class CScene {
     void ExcludeCollision(const ISceneNode &, const ISceneNode &, int);
     void ReOrder(ISceneNode *, ISceneNode *);
     void IncludeCollision(const ISceneNode &, const ISceneNode &);
-    void VisitAllNodesInVolume(dwi::IVisitor<ISceneNode> &, const IVolume &, ISceneNode::EVolumeType, bool);
+    bool VisitAllStaticObjects(dwi::IVisitor<ISceneNode> &);
+    bool VisitAllLights(dwi::IVisitor<ISceneNode> &);
+    bool VisitAllNodesInVolume(dwi::IVisitor<ISceneNode> &, const IVolume &, ISceneNode::EVolumeType, bool);
 };
 extern CScene g_scene;
 
