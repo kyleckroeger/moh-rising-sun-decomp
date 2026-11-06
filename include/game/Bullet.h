@@ -227,8 +227,8 @@ struct ScriptHitInfo {
 class CScene;
 class ISceneNode;
 class CVector3;
-// Stack-constructed blast; its constructor writes through +0x44. The script
-// built-ins fix its frame at 0x4c or 0x50 bytes; 0x4c is used here.
+// Stack-constructed blast; its constructor writes through +0x44. Slot reuse in
+// CThrownBullet::CommitUpdate establishes the 0x50-byte extent; see docs/Bullets.md.
 class CExplosion;
 class CExplosion : public dwi::IVisitor<ISceneNode> {
   public:

@@ -1,0 +1,49 @@
+{
+  "id": "explosion_constructor",
+  "source": "src/bullets/ExplosionConstructor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80153e80",
+      "size": 228
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a97ec",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "__10CExplosionR6CSceneRC8CVector3fff17EScriptBulletTypeP10ISceneNodebT8",
+      "address": "0x80153e80",
+      "size": 228,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_vt.10CExplosion": "0x802ea8f0",
+    "_vt.10CVolSphere": "0x802e9520",
+    "MakeNoise__FPvP9CAIObjectRC8CVector3ifbi": "0x800f4034",
+    "VisitAllNodesInVolume__6CSceneRQ23dwit8IVisitor1Z10ISceneNodeRC7IVolumeQ210ISceneNode11EVolumeTypeb": "0x80147afc",
+    "HandleExplosion__12CWorldObjectRC10CExplosion": "0x800c4f0c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "explosion.cpp",
+  "original_file_index": 1374
+}

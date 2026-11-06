@@ -1,8 +1,9 @@
 # Bullets
 
-`src/bullets/` reconstructs 38 `CBullet`, `CProjectileBullet` and `CThrownBullet`
-functions (672 executable bytes) from the
-pinned GR8E69 executable. Claude Code assisted the analysis and verification.
+`src/bullets/` reconstructs bullet accessors, movement, collision and explosion
+behavior from the pinned GR8E69 executable. Accepted fragments and their evidence
+are described below; current totals live in the verified progress snapshot.
+Claude Code and Codex assisted the analysis and verification.
 
 ## Declarations
 
@@ -100,9 +101,30 @@ meanings are inferred; event numbers and constants are read from the code. Unlik
 Frontline, Rising Sun applies no explosion push here: the original still calls
 `AsPlayerObject` and discards the result at that point.
 
-Not yet accepted: the constructor (two argument moves
-swapped), `ShouldHeightCheckBeFlipped` (one load-immediate position), `TestRay` and
-`CheckForObstructions`.
+`explosion_constructor` accepts the 228-byte constructor and its eight bytes of
+float constants. It builds the sphere, stores strength/damage/type/source and both
+flags, makes noise of type 2 at six times the strength, visits nodes in the sphere
+with volume type 0 while excluding the world node, then notifies the world object
+when present. Neither the unused visitor return value nor the final world callback
+changes the constructor's returned object pointer.
+
+The two reordered argument moves in the earlier draft came from an incorrect
+`void` declaration of `CScene::VisitAllNodesInVolume`. Its original body returns
+1 when a visitor stops traversal and 0 otherwise. Correcting the declaration to
+`bool` reproduces the constructor with the existing ProDG profile. The scene
+routine itself is now reconstructed too; see [scene visitors](SceneNode.md#scene-visitors).
+
+Thanks to kyleckroeger for PR #47's explosion and thrown-bullet work and the
+[Frontline constructor reconstruction](https://github.com/kyleckroeger/moh-frontline-decomp/blob/33f5adccac2e27f26c2abcbb7acd7093ab16f2d6/src/game/explosion_dtor.cpp),
+used as a semantic reference under that project's CC0 license. Rising Sun's
+reference position, noise type, additional flag and all accepted bytes were
+checked independently against GR8E69. Parameter and field names are descriptive.
+
+`ShouldHeightCheckBeFlipped`, `TestRay` and `CheckForObstructions` remain research
+and receive no source credit. The obstruction routine normalizes the horizontal
+direction and tests three rays, adjusting the sample heights for crouching players,
+soldier look positions and the height-flip predicate. Understanding these operations
+does not establish a byte match or complete class layouts.
 
 `SetScaled` and `SetSum` in `ProjectileUpdate.cpp` are descriptive inline helpers; the
 original store and reload order requires a by-reference result, but their names and
@@ -120,8 +142,9 @@ tests `AsWorldObject`/`AsSoldierObject` for script state 1, Rising Sun tests
 `CThrownBullet::Constrain` (bounce, friction and the optional keep-speed cheat word at
 `g_cheats` +0x1c, then a clamped time-of-impact position) and `CreateExplosionEffect` are
 reconstructed. `CExplosion` is 0x50 bytes: slot reuse across `CThrownBullet::CommitUpdate`
-fixes it. `CommitUpdate` itself is not yet
-accepted: one instruction is out of position.
+fixes it. `CommitUpdate` itself remains unaccepted. Follow-up research identifies
+its explosion/effect construction, grenade and bazooka sound aliases, event 141
+notification, destruction and attached-light update; no partial credit is claimed.
 
 `CBulletFactory::LoadBulletGUISprites` allocates through `DWI_alloc` with the labels
 `source/weapons/bulletfactory.cpp:567` and `:603`, which record the original path and

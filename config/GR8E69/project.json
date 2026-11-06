@@ -1703,7 +1703,9 @@
     "plane_transform_intersect.json",
     "ea_timer_tail.json",
     "scene_AttachableObjectAttach.json",
-    "scene_AttachableObjectDetach.json"
+    "scene_AttachableObjectDetach.json",
+    "explosion_constructor.json",
+    "scene_visitors.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
