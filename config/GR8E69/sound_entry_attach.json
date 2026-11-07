@@ -1,0 +1,44 @@
+{
+  "id": "sound_entry_attach",
+  "source": "src/sound/SoundEntryAttach.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8015b8f4",
+      "size": 176
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetEmitter__10SoundEntryPC12SoundEmitter",
+      "address": "0x8015b8f4",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "DoNotifyCallback__10SoundEntry16SoundCBEventCode",
+      "address": "0x8015b940",
+      "size": 100,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "SoundEntry.cpp",
+  "original_file_index": 1409
+}

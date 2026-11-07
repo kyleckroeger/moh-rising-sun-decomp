@@ -1,13 +1,26 @@
-// AI-assisted scoped reconstruction from GR8E69; see docs/Script.md.
+// AI-assisted scoped reconstruction from GR8E69; see docs/Sound.md and docs/Script.md.
 #ifndef GAME_SOUND_MANAGER_H
 #define GAME_SOUND_MANAGER_H
 
 class SoundEntryPool;
+// Only the type name is recovered; zero is a descriptive placeholder.
+enum SoundCBEventCode { SoundCBEventCode_None = 0 };
 class SoundEmitter;
 
-// Method-only view of the embedded sound schedule.
+class SoundEntry;
+class cSoundBussMan {
+  public:
+    void RetroFitNewSound(SoundEntry *);
+};
+// Scoped prefix of the embedded sound schedule.
 class SoundSchedule {
   public:
+    unsigned char unknown_0[0x228];
+    unsigned int nextEventID;
+    cSoundBussMan busses;
+    // Descriptive inline helper; no historical name is claimed.
+    unsigned int AllocateEventID() { return nextEventID++; }
+    int Add(SoundEntry *);
     unsigned int AddSounds(const SoundEntryPool &);
     void ActivateBuss(unsigned int);
     void RemoveSound(unsigned int);
@@ -16,17 +29,53 @@ class SoundSchedule {
 // Scoped view of a sound entry: data through +0xd4, then the table pointer.
 class SoundEntry {
   public:
-    unsigned char unknown_0[0xc];
-    int looping; // +0xc; read by BIFunc_IsAliasSoundLooping.
-    unsigned char unknown_10[0x84 - 0x10];
-    int field_84, field_88; // Copied from a SoundEvent when its +8 word is nonzero.
+    unsigned char unknown_0[8];
+    int spatial; // +8; enables distance/azimuth processing.
+    int looping;
+    unsigned char unknown_10[8];
+    short pitch;
+    unsigned char unknown_1a[2];
+    float volume, volumeLimit, attenuation; // +0x1c, +0x20, +0x24; names descriptive.
+    unsigned char unknown_28[0x4c - 0x28];
+    int field_4c; // Set to 1 for a looping entry with a missing scene emitter.
+    SoundEmitter *emitter;
+    float distance;
+    int azimuth;
+    unsigned int emitterStorage[7]; // +0x5c through +0x77; scene emitter uses +0x74.
+    unsigned int eventID, field_7c, field_80; // eventID at +0x78.
+    int field_84, field_88; // Callback address and event mask; preserved raw-word ABI.
     unsigned char unknown_8c[4];
-    int params[3];         // +0x90; copied from SoundEvent +0x10. Name descriptive.
-    unsigned char unknown_9c[0xd4 - 0x9c];
+    int params[3];
+    unsigned char unknown_9c[4];
+    unsigned short updates; // +0xa0; dirty bits for playback parameters.
+    unsigned char unknown_a2[2];
+    int handle;
+    unsigned char unknown_a8[0xc4 - 0xa8];
+    float currentVolume;
+    unsigned char unknown_c8[0xd4 - 0xc8];
     void SetEmitter(const SoundEmitter *);
+    void DoNotifyCallback(SoundCBEventCode);
+    void Calculate3D();
+    int UpDateSoundParams();
+    float CalculateVolDistance();
     SoundEntry();
     virtual ~SoundEntry();
+    // Slot order is shared by the original bank and stream tables. Unused
+    // external return types remain provisional where callers do not consume them.
+    virtual int GetTypeID() const = 0;
+    virtual int Play() = 0;
+    virtual void Clone(SoundEntry *) const = 0;
+    virtual void UpdatePlayStatus() = 0;
+    virtual int IsFinished() = 0;
+    virtual void SetFade(float, float, bool) = 0;
+    virtual int CheckFade() = 0;
+    virtual void Stop() = 0;
+    virtual void SetNormSndVol(float) = 0;
+    virtual void SetSndPitch(int) = 0;
 };
+typedef char SoundEntrySizeCheck[sizeof(SoundEntry) == 0xd8 ? 1 : -1];
+typedef char SoundSchedulePrefixSizeCheck[sizeof(SoundSchedule) == 0x230 ? 1 : -1];
+
 // Bank-backed entry; the original constructor and destructor are inline.
 class SoundEntryBank : public SoundEntry {
   public:
@@ -35,15 +84,24 @@ class SoundEntryBank : public SoundEntry {
     SoundEntryBank() : field_d8(0), field_dc(0) {}
     virtual ~SoundEntryBank() {}
     virtual int GetTypeID() const;
+    virtual int Play();
+    virtual void Clone(SoundEntry *) const;
+    virtual void UpdatePlayStatus();
+    virtual int IsFinished();
+    virtual void SetFade(float, float, bool);
+    virtual int CheckFade();
+    virtual void Stop();
+    virtual void SetNormSndVol(float);
+    virtual void SetSndPitch(int);
 };
 
-// Scoped view of the 0x8700-byte g_SoundMan object (class cSoundMan). Only the
-// members the script built-ins touch are named.
+// Scoped view of the original 0x8700-byte g_SoundMan object (class cSoundMan).
+// SoundSchedule and cSoundBussMan are prefixes, not complete allocation types.
 class cSoundMan {
   public:
     unsigned char unknown_0[0x837c];
     SoundSchedule schedule; // +0x837c
-    unsigned char unknown_837d[0x85f4 - 0x837d];
+    unsigned char unknown_85ac[0x85f4 - 0x85ac]; // Remainder of schedule and following fields.
     int soundZone;          // +0x85f4; set by BIFunc_SetSoundZone.
     void GetSound(SoundEntryBank &, unsigned int);
     void GetSoundEntries(SoundEntryPool &, unsigned int);

@@ -1,0 +1,43 @@
+{
+  "id": "sound_schedule_add",
+  "source": "src/sound/SoundScheduleAdd.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8015a284",
+      "size": 244
+    }
+  ],
+  "functions": [
+    {
+      "name": "AddSounds__13SoundScheduleRC14SoundEntryPool",
+      "address": "0x8015a284",
+      "size": 244,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_bDisableSound": "0x802c4de0",
+    "RetroFitNewSound__13cSoundBussManP10SoundEntry": "0x8015f85c",
+    "Calculate3D__10SoundEntry": "0x8015ba60",
+    "Add__13SoundScheduleP10SoundEntry": "0x8015ace8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "soundschedule.cpp",
+  "original_file_index": 1406
+}

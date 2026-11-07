@@ -108,7 +108,7 @@ Run the scripts from any directory; all outputs remain inside this checkout. `ba
 | `src/lighting/`, `include/game/Light.h` | Reconstructed [light-volume selection and transitions, scene-light transforms and animated-light lifecycle](docs/LightVolumes.md) |
 | `src/bullets/`, `include/game/Bullet.h` | Reconstructed [bullet defaults, accessors and collision helpers](docs/Bullets.md) |
 | `src/triggers/` | Reconstructed [trigger initialization, property/transform queries, startup sizing, player starts and machine-gun searches](docs/TriggerObject.md) |
-| `src/sound/` | Reconstructed [ambient-track and sound accessors](docs/Sound.md) |
+| `src/sound/` | Reconstructed [sound events, entry pools and spatial playback updates](docs/Sound.md) |
 | `src/player/` | Reconstructed [camera-shake initialization, evaluation and player wrappers](docs/CameraShake.md), plus [path controls and spline evaluation](docs/Paths.md#player-paths-and-arbitrary-point-walking) |
 | `src/objectives/` | Reconstructed [objective initialization, status and visibility helpers](docs/Objectives.md) |
 | `src/observers/` | Reconstructed observers, weak pointers and destruction queue; [evidence](docs/Observers.md) |

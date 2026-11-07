@@ -1,0 +1,44 @@
+{
+  "id": "sound_pool_entries",
+  "source": "src/sound/SoundPoolEntries.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80168720",
+      "size": 364
+    }
+  ],
+  "functions": [
+    {
+      "name": "Clear__14SoundEntryPool",
+      "address": "0x80168720",
+      "size": 208,
+      "binding": 1
+    },
+    {
+      "name": "AddEntry__14SoundEntryPoolRC10SoundEntry",
+      "address": "0x801687f0",
+      "size": 156,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "SoundEntryPool.cpp",
+  "original_file_index": 1462
+}
