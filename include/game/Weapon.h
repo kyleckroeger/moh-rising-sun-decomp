@@ -23,7 +23,8 @@ struct WeaponProperties_struct {
     CSprite *icon;    // +0x58
     unsigned char unknown_5c[0x60 - 0x5c];
     short soundType;  // +0x60; returned by GetWeaponSoundType.
-    unsigned char unknown_62[0x68 - 0x62];
+    short field_62;   // Nonzero selects alternate grenade-catching side bounds.
+    unsigned char unknown_64[0x68 - 0x64];
     short weaponType; // +0x68; returned by the weapon-type built-ins.
 };
 

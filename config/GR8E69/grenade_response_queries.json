@@ -1,0 +1,83 @@
+{
+  "id": "grenade_response_queries",
+  "source": "src/ai/GrenadeResponseQueries.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f07dc",
+      "size": 924
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a4abc",
+      "size": 48
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetVectorToGrenade__FP14CSoldierObjectPC13CThrownBullet",
+      "address": "0x800f07dc",
+      "size": 204,
+      "binding": 1
+    },
+    {
+      "name": "IsAlive__FP14CSoldierObject",
+      "address": "0x800f08a8",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "IsCatchable__FP14CSoldierObjectP13CThrownBulletRC8CVector3f",
+      "address": "0x800f08f4",
+      "size": 384,
+      "binding": 1
+    },
+    {
+      "name": "IsStoppedOnGround__FP14CSoldierObjectPC13CThrownBullet",
+      "address": "0x800f0a74",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "IsStoppedOnGround__FRC8CVector3f",
+      "address": "0x800f0ad4",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "DistanceSquaredToGrenade__FP14CSoldierObjectP13CThrownBullet",
+      "address": "0x800f0b08",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "InDanger__FP14CSoldierObjectP13CThrownBullet",
+      "address": "0x800f0b44",
+      "size": 52,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetAIStatusVar__C9CAIObject12aistatus_var": "0x800dcc68",
+    "GetCurrentWeapon__C14CSoldierObject": "0x800c2f6c",
+    "sqrtf": "0x80270538"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "GrenadeResponseBehavior.cpp",
+  "original_file_index": 1079
+}

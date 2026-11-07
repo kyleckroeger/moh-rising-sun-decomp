@@ -146,6 +146,64 @@ fixes it. `CommitUpdate` itself remains unaccepted. Follow-up research identifie
 its explosion/effect construction, grenade and bazooka sound aliases, event 141
 notification, destruction and attached-light update; no partial credit is claimed.
 
+`thrown_bullet_penetrate` reconstructs the complete 396-byte `Penetrate` at
+`0x80151e18` and its 16 constant bytes at `0x802a9510`. It uses the stored normal
+at `+0x160`, not the collision argument. The forward-vector dot product selects
+`+0.02` times that normal when the dot is not `<= 0`, or `-0.02` otherwise.
+It adds the offset to the current matrix position, writes the matrix and cached
+position, then clears bits 30 and 28 of the word at `+0x25c`. Other bits and
+the vectors' fourth components remain unchanged. The normal is not normalized
+here. The negated comparison also preserves the original unordered-float path.
+The staged dot-product sum and by-reference vector helpers reproduce the original
+operations; their spelling and names are reconstruction choices.
+
+## Grenade response queries
+
+`grenade_response_queries` reconstructs seven adjacent functions from
+`GrenadeResponseBehavior.cpp` (original file record 1079), totaling 924 executable
+bytes and 48 constant bytes at `0x802a4abc`. Together with `Penetrate`, these
+fragments add eight whole functions and 1,320 game-code bytes. Codex assisted the
+reconstruction from GR8E69, building on the interfaces contributed in PR #47.
+
+| Function | Address | Code bytes | Behavior |
+| --- | --- | ---: | --- |
+| `GetVectorToGrenade` | `0x800f07dc` | 204 | Queries both positions and returns grenade minus soldier position. |
+| `IsAlive` | `0x800f08a8` | 76 | Tests whether the soldier's AI status selector 0 is positive. |
+| `IsCatchable` | `0x800f08f4` | 384 | Checks relative height and projections onto the soldier's forward and right vectors. |
+| `IsStoppedOnGround(soldier, grenade)` | `0x800f0a74` | 96 | Computes the relative vector and full three-dimensional velocity magnitude, then calls the scalar predicate. |
+| `IsStoppedOnGround(delta, speed)` | `0x800f0ad4` | 52 | For finite values, requires relative height below 0.09 and speed below 0.06. |
+| `DistanceSquaredToGrenade` | `0x800f0b08` | 60 | Returns squared XY distance; height is ignored. |
+| `InDanger` | `0x800f0b44` | 52 | Tests squared XY distance strictly below 36. |
+
+Catchability requires height strictly between 1.3 and 1.9, forward projection
+strictly between 0 and 1, and side projection strictly between -0.1 and 0.5.
+A nonzero signed halfword at weapon properties `+0x62` selects side bounds
+(-0.3, 0.2). `field_62` names only that observed selector; its original meaning
+is unknown. A missing current weapon uses the default bounds. The grenade pointer
+and float argument are unused by this helper. It does not itself check whether
+the soldier is alive or whether the grenade has exploded.
+
+`GrenadeResponse.h` exposes the recovered free-function names and parameter types.
+Return types follow the original bodies and callers. The soldier remains a
+member-only view, so virtual queries use the established `ISceneNode` interface;
+these helpers do not establish a complete soldier or behavior-object layout.
+Comparisons retain the original unordered-float behavior rather than replacing
+negated comparisons with superficially equivalent finite-value expressions.
+
+Both fragments use the unchanged ProDG 3.8.1
+`-O2 -G0 -fno-exceptions -fno-implicit-templates` profile. Forty-eight isolated
+PowerPC scenarios execute the production-linked functions, covering signed and
+non-unit normal offsets, flag preservation, adjusted virtual calls, life-state
+values, strict catch/ground/danger boundaries, alternate weapon selectors, and
+unordered comparisons. External queries, matrix `SetPos`, AI status, weapon
+lookup and `sqrtf` are stubbed. These are not game or Dolphin runtime tests.
+
+The explosion height/ray/obstruction helpers, thrown-bullet `CommitUpdate`, and
+the larger grenade-response update remain unmatched research. No partial credit
+is included for them.
+
+## Factory resources
+
 `CBulletFactory::LoadBulletGUISprites` allocates through `DWI_alloc` with the labels
 `source/weapons/bulletfactory.cpp:567` and `:603`, which record the original path and
 line. Projectile sprite names sit at +0x27 of each 96-byte record and thrown ones at +0x27
