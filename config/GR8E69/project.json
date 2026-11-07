@@ -1713,7 +1713,13 @@
     "position_sound_copy.json",
     "position_sound_defaults.json",
     "sound_alias_destructor.json",
-    "sound_alias_send.json"
+    "sound_alias_send.json",
+    "sound_entry_attach.json",
+    "sound_entry_spatial.json",
+    "sound_entry_update.json",
+    "sound_entry_volume.json",
+    "sound_pool_entries.json",
+    "sound_schedule_add.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

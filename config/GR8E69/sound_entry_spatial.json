@@ -1,0 +1,38 @@
+{
+  "id": "sound_entry_spatial",
+  "source": "src/sound/SoundEntrySpatial.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8015ba60",
+      "size": 272
+    }
+  ],
+  "functions": [
+    {
+      "name": "Calculate3D__10SoundEntry",
+      "address": "0x8015ba60",
+      "size": 272,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "SoundEntry.cpp",
+  "original_file_index": 1409
+}

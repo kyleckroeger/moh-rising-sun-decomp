@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 915400,
+    "matching_code_bytes": 916752,
     "total_executable_code_bytes": 2492032,
-    "percent": 36.73307565873954,
+    "percent": 36.78732857362987,
     "categories": {
-      "reconstructed_game": 523184,
+      "reconstructed_game": 524536,
       "restored_library": 392216
     },
-    "matching_functions": 4374
+    "matching_functions": 4382
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -825,7 +825,7 @@
     "config/GR8E69/player_weapon_shutdown.json": "f90a42342572d125630e7ac3647193288c13301a5309bcdc49cc350364bc2b60",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "0ded194f84216b061ed6928843540c525559b163decf236f3b35bd0bc4085ea5",
+    "config/GR8E69/project.json": "18272b61027b994ee299b4ee8bfb6467595c7bdc03a3aa80acacdc3f4ae46919",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -1351,9 +1351,14 @@
     "config/GR8E69/sound_alias_destructor.json": "df4b488e22bca49c93ea148613a6b119de76e12986c26bf6d5dbe03359696aa4",
     "config/GR8E69/sound_alias_send.json": "cba172da972f0def7bd58766375971c96aee9d4ffac58d3e1ecb85c736d06872",
     "config/GR8E69/sound_emitter_defaults.json": "69820a32e3ddb044d84d55ecc556f829aec47435210885daf02e2011dfe77ea6",
+    "config/GR8E69/sound_entry_attach.json": "3ff50328c89c2db06c89d8f0e23878eae5375c2ba3099dffe4927f5e98d669cd",
+    "config/GR8E69/sound_entry_spatial.json": "dabd9f8f5378e40c2759c5763067f8bbad57b6497bfeeb301d7ea22be07dca83",
+    "config/GR8E69/sound_entry_update.json": "efc7243942a0e7b9427bfdd31b9a3332c56020f20c2bb638be6a5cc8aa01d28b",
+    "config/GR8E69/sound_entry_volume.json": "701bcaa33ef24e790f62e4da2f3f421867bc4f1024755bd35df0c27925667e6c",
     "config/GR8E69/sound_event_defaults.json": "15e7dd13b990944c9046b1119cd652d61f4e8fafc19d8fab203473c7ec63da12",
     "config/GR8E69/sound_getters.json": "8383c1475babb703fa21c8d7d0af5c5f4d30a34856a855c40c8d91557df51c51",
     "config/GR8E69/sound_isnd64.json": "4df57a788f8434f2ef337a85f19898745132bcf91159a66dc4639217f30d322b",
+    "config/GR8E69/sound_pool_entries.json": "d40f0ffaa656ba0f5a8ee7843757955736791daf710f3b2e917fc01fe7f3dad4",
     "config/GR8E69/sound_s3dlow.json": "1f9ad59f9c8a9b129ce2e95b8a7dfc226c38a3702dbafcb351c3bbbbbacb9cff",
     "config/GR8E69/sound_salloc.json": "b57e0693875532fa553b072a6924bec50fe6ef89ad8634fa2f709c5f5421a2c9",
     "config/GR8E69/sound_saramman.json": "941b65c2823f2dc93040be55cba38e29540e1200445f1a1721219b1a5ebbc494",
@@ -1369,6 +1374,7 @@
     "config/GR8E69/sound_sbvalid.json": "4dd43162a39f3b6c13e5787848c0950d005843f91f7d27e1bfd402da69738071",
     "config/GR8E69/sound_scalcfx.json": "f05bfdf15c2663a70263864c56245fb73c7c79727c760c02c9450745707fd1b5",
     "config/GR8E69/sound_scalcpitch.json": "be229a2a4cbbba03e90475b65ba902767026dbc371e4d569597dbda83dd8b7f0",
+    "config/GR8E69/sound_schedule_add.json": "63fbaa14072bb14fee94b94da7422fa60c1ec2a083c871e153f0fc598221abd3",
     "config/GR8E69/sound_sclnt100.json": "a31805d83129674135581149cc9781ba4b6fa865c7fed5d5c16e6a5886985aee",
     "config/GR8E69/sound_sctlfilt.json": "d18858912ebc56192ec7b7c27363539d52720cf122af007c68f262ca7f6d341f",
     "config/GR8E69/sound_sdrv_caps.json": "708fd42cc8438719967185e12fdbadae00ec8d23dd77f317f67007b5eee539b4",
@@ -2009,10 +2015,10 @@
     "include/game/ScriptTimers.h": "a81f3399ff20908469a289229ed0f0aae2c28aa3a9889629e62049e8bb16705b",
     "include/game/Shell.h": "22349a61e76dcb2146bbdb6a518878724accda9a7950efb0f61ec3e50efbe219",
     "include/game/SoundAmbience.h": "a8ffdd3a842aa24e0d8511216e05fd27625c8c2e96c7db19d7557afa729b1fb5",
-    "include/game/SoundEntryPool.h": "f1ddb2b08b740d2a479900c365e6a982d5f30eae6fb178836d7f8801fc893a51",
+    "include/game/SoundEntryPool.h": "3766b906852ceb49985a2e376f46077c2e739f8dc17ca0f16a47b60b79eb0d59",
     "include/game/SoundEvents.h": "d20e7b3d30760633777ae0551fa0af9a18a358637d8ab674e20c4494961f05ed",
     "include/game/SoundGlobals.h": "09588b411265f69033064ec0f2592518523c79102eb3ed9f35752a8f7e5cb25d",
-    "include/game/SoundManager.h": "d780ba053acca6ce47e479d48fb477c31f284bd0cbf313bbdeb38a73b3b85f5b",
+    "include/game/SoundManager.h": "a82fa61bcff8045c6ba20c986f0501fa1f6326ae2c64097fee51d028af2d3a31",
     "include/game/SoundMixerView.h": "787617bfe14ec7a736949ac46528a91cfe30e6899acd0a9e811d83bf9364059c",
     "include/game/Sphere.h": "4fb7f91c288e5b711e495765718b14847cbb478030509f25cbb7defcbc4a182f",
     "include/game/StringCRC.h": "3940d0af2ade9e671b10c5bb1ef12705a7322101b231aae92cfd2aab4a07fa31",
@@ -3607,8 +3613,14 @@
     "src/sound/SoundAliasDestructor.cpp": "b3325933ec4e146e60906ee80afb2bc497a9451a15f118b30d00a8199b9c7a55",
     "src/sound/SoundAliasSend.cpp": "17e924894b59330d1c03e1b8864fe104e22863b6dd034473219b6e09b4b834ce",
     "src/sound/SoundEmitterDefaults.cpp": "9b2f1bc76e225f518b10fe98d65508a2164fad1c64f6c8e02882e52a1db55731",
+    "src/sound/SoundEntryAttach.cpp": "5b46030d32137c72d37b4586003262637f9c69c91676415af1da256da585730e",
+    "src/sound/SoundEntrySpatial.cpp": "9975d40315b40c5154bbec1ee91bdeb00e425521fa3d23d8fcdd8a3eebe94d74",
+    "src/sound/SoundEntryUpdate.cpp": "11cfd3f7f9fd98e53b56df463fcfbfc6a1d5c81b7afd34528b12b883de97053b",
+    "src/sound/SoundEntryVolume.cpp": "6cd7dbe976102632d4b0dfae8824acf0e4ccc4100ea265bca4e3bf769aed738b",
     "src/sound/SoundEventDefaults.cpp": "f44c6f9090c82a3aeb65d008ffed7a66796eedebd6b821e0a39740d3e312f9ca",
     "src/sound/SoundGetters.cpp": "e45a78805eeb00887fc9f92e3208fc185d1fce6f4b9bf8f763955e7161b1ecf3",
+    "src/sound/SoundPoolEntries.cpp": "ad57791090a9be57dfec6e65729ddcc8c0ce95c0b75f17b8a023a3beee2b4139",
+    "src/sound/SoundScheduleAdd.cpp": "772e16f060d741540a73db66bdc608e2c755c9e980a7fbd0d71a3d49a9fce65b",
     "src/sound/ea/SNDI_mult16.cpp": "4f89d97881a128095f971693bc70d7667fff3f4d9616ce2bb4c5d82d0287e3d4",
     "src/sound/ea/isnd64.cpp": "6b2f195cb4696a2c6c4435d711ed520975d96cbb2363316be54ecf816b8491ab",
     "src/sound/ea/s3dlow.cpp": "2c0c91830f1674e3126e5979e6a705b57ccc5d6be832d11be78e9a710bc70bf7",
@@ -38476,6 +38488,114 @@
       "discarded_functions": [],
       "object_sha256": "d18066cf77c3fef51763dfca4e082a9fe0da311367d60f7c42e7992edabc78ea",
       "linked_sha256": "e3472ba37cc0289e0ac58f5e7662de25cf85e326e1185628ab2a6fff28e7c637"
+    },
+    {
+      "id": "sound_entry_attach",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 176,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "9f47f30bee615e9ff32ce99eef213c515f4fd33c3d9fd0a8175a77cbb4df6f32",
+      "linked_sha256": "af04b28a2485ed6c2f69632a1751b34670f725367c0e4932516184c3eafc46cb"
+    },
+    {
+      "id": "sound_entry_spatial",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 272,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "5ba22876f8c7a4b55e9278f5e27d2239d407dc345ea390b4668f3ca084089334",
+      "linked_sha256": "3b171acc6d79d543c6708e27dc1d3761fc4f4a7e05343f74e5eb84fcad1591ff"
+    },
+    {
+      "id": "sound_entry_update",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 212,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "d1df64e7af7d19dd5fda91939c9fb451590abfc698ebd32d1ffdd21e86f25ce0",
+      "linked_sha256": "558afe9a8fc3e132925b1bbf973310bb5caf37b2914e3f476662c57503b81405"
+    },
+    {
+      "id": "sound_entry_volume",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 84,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "499446fd224e23f2dfd47d6658881e3be3780e180cf603c63f26a6451f768461",
+      "linked_sha256": "e727b543fb82e6c8a2512469435167ff18502453c8deb9659bfc452a87cca6b6"
+    },
+    {
+      "id": "sound_pool_entries",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 364,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "b4ffdcc49150eac03fc0411c86eec90b31a0d222cefbf77ae89683cf2d6012f3",
+      "linked_sha256": "1f7faae1f76195b4ddcd620c861379fcc11bc42a81cd8076a0b129e4a962b050"
+    },
+    {
+      "id": "sound_schedule_add",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 244,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "a6f942a50c74e2169e67ffaedb6e0054528ac8ed72f1da3c2b4c302a1098892c",
+      "linked_sha256": "1852bce0bc8c32ee78877fcd497d104becc519f14b68c2f1ac229bd5bc76a9b0"
     }
   ],
   "code_map": {
@@ -59975,13 +60095,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8015a284",
-            "size": 244,
-            "kind": "function",
-            "name": "AddSounds__13SoundScheduleRC14SoundEntryPool",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8015a378",
             "size": 200,
             "kind": "function",
@@ -60108,49 +60221,24 @@
             "kind": "function",
             "name": "SetSoundEntry__10SoundEntryPUcP9ColumnMapi",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8015b8f4",
-            "size": 76,
-            "kind": "function",
-            "name": "SetEmitter__10SoundEntryPC12SoundEmitter",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8015b940",
-            "size": 100,
-            "kind": "function",
-            "name": "DoNotifyCallback__10SoundEntry16SoundCBEventCode",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 8015b9a4",
+        "ranges": [
           {
             "address": "0x8015b9a4",
             "size": 188,
             "kind": "function",
             "name": "GetOpts__10SoundEntryR11SNDPLAYOPTSRf",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8015ba60",
-            "size": 272,
-            "kind": "function",
-            "name": "Calculate3D__10SoundEntry",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8015bb70",
-            "size": 212,
-            "kind": "function",
-            "name": "UpDateSoundParams__10SoundEntry",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8015bc44",
-            "size": 84,
-            "kind": "function",
-            "name": "CalculateVolDistance__10SoundEntry",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 8015bc98",
+        "ranges": [
           {
             "address": "0x8015bc98",
             "size": 80,
@@ -61551,20 +61639,6 @@
             "size": 176,
             "kind": "function",
             "name": "_._14SoundEntryPool",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80168720",
-            "size": 208,
-            "kind": "function",
-            "name": "Clear__14SoundEntryPool",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801687f0",
-            "size": 156,
-            "kind": "function",
-            "name": "AddEntry__14SoundEntryPoolRC10SoundEntry",
             "evidence": "unknown-file"
           }
         ]
