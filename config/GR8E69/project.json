@@ -1707,7 +1707,13 @@
     "explosion_constructor.json",
     "scene_visitors.json",
     "thrown_bullet_penetrate.json",
-    "grenade_response_queries.json"
+    "grenade_response_queries.json",
+    "sound_event_defaults.json",
+    "sound_emitter_defaults.json",
+    "position_sound_copy.json",
+    "position_sound_defaults.json",
+    "sound_alias_destructor.json",
+    "sound_alias_send.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

@@ -1,0 +1,48 @@
+{
+  "id": "sound_alias_send",
+  "source": "src/sound/SoundAliasSend.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801679b0",
+      "size": 320
+    }
+  ],
+  "functions": [
+    {
+      "name": "SendEvent__15SoundAliasEvent",
+      "address": "0x801679b0",
+      "size": 320,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "s_entries": "0x803e5874",
+    "Clear__14SoundEntryPool": "0x80168720",
+    "g_SoundMan": "0x80330c60",
+    "GetSoundEntries__9cSoundManR14SoundEntryPoolUi": "0x8015d204",
+    "SetEmitter__10SoundEntryPC12SoundEmitter": "0x8015b8f4",
+    "AddSounds__13SoundScheduleRC14SoundEntryPool": "0x8015a284"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "SoundAliasEvent.cpp",
+  "original_file_index": 1455,
+  "local_externals": [
+    "s_entries"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "position_sound_defaults",
+  "source": "src/sound/PositionSoundEmitterDefaults.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8016831c",
+      "size": 68
+    }
+  ],
+  "functions": [
+    {
+      "name": "_._20PositionSoundEmitter",
+      "address": "0x8016831c",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "GetObjRef__C20PositionSoundEmitter",
+      "address": "0x80168350",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetType__20PositionSoundEmitter",
+      "address": "0x80168358",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_vt.12SoundEmitter": "0x802e4ca0",
+    "__builtin_delete": "0x801a8990"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "GameSoundEmitter.cpp",
+  "original_file_index": 1460
+}

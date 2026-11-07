@@ -38,6 +38,11 @@ template <class T> class list_iter {
         node = node->next;
         return *this;
     }
+    list_iter operator++(int) {
+        list_iter old(*this);
+        ++*this;
+        return old;
+    }
     bool operator!=(list_iter other) const { return node != other.node; }
     bool operator==(const list_iter &other) const { return node == other.node; }
 

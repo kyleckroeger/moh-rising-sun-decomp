@@ -2,9 +2,13 @@
 #ifndef GAME_SOUND_MANAGER_H
 #define GAME_SOUND_MANAGER_H
 
+class SoundEntryPool;
+class SoundEmitter;
+
 // Method-only view of the embedded sound schedule.
 class SoundSchedule {
   public:
+    unsigned int AddSounds(const SoundEntryPool &);
     void ActivateBuss(unsigned int);
     void RemoveSound(unsigned int);
 };
@@ -14,7 +18,12 @@ class SoundEntry {
   public:
     unsigned char unknown_0[0xc];
     int looping; // +0xc; read by BIFunc_IsAliasSoundLooping.
-    unsigned char unknown_10[0xd4 - 0x10];
+    unsigned char unknown_10[0x84 - 0x10];
+    int field_84, field_88; // Copied from a SoundEvent when its +8 word is nonzero.
+    unsigned char unknown_8c[4];
+    int params[3];         // +0x90; copied from SoundEvent +0x10. Name descriptive.
+    unsigned char unknown_9c[0xd4 - 0x9c];
+    void SetEmitter(const SoundEmitter *);
     SoundEntry();
     virtual ~SoundEntry();
 };
@@ -37,6 +46,9 @@ class cSoundMan {
     unsigned char unknown_837d[0x85f4 - 0x837d];
     int soundZone;          // +0x85f4; set by BIFunc_SetSoundZone.
     void GetSound(SoundEntryBank &, unsigned int);
+    void GetSoundEntries(SoundEntryPool &, unsigned int);
+    // Descriptive inline accessor; retains the observed base-plus-offset access.
+    SoundSchedule &GetSchedule() { return schedule; }
 };
 typedef cSoundMan SoundManagerView;
 extern cSoundMan g_SoundMan;

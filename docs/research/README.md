@@ -31,6 +31,11 @@ Rising Sun reconstructions they helped prioritize.
 
 ## Applying the notes
 
+The [explosion and grenade update follow-up](explosion-grenade-updates.md)
+records GR8E69 behavior and unresolved matching work for the explosion helpers
+and `CThrownBullet::CommitUpdate`, building on PR #47. It also identifies the
+sound-event dependencies now accepted as matching source.
+
 The script dispatch table and named built-in functions provide concrete places to
 start reconstructing the script interpreter and small wrappers. The `.sin` and
 `.bpd` notes help interpret records used by class lookup and endian-conversion
