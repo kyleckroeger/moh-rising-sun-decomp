@@ -1,0 +1,54 @@
+{
+  "id": "sound_event_defaults",
+  "source": "src/sound/SoundEventDefaults.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80283618",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "UpdateEvent__10SoundEventUi",
+      "address": "0x80283618",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "EndEvent__10SoundEventUi",
+      "address": "0x80283620",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SetEmitter__10SoundEventP12SoundEmitter",
+      "address": "0x80283628",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SetListener__10SoundEventP8Listener",
+      "address": "0x80283630",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

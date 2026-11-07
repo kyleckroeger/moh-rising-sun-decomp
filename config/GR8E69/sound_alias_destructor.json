@@ -1,0 +1,41 @@
+{
+  "id": "sound_alias_destructor",
+  "source": "src/sound/SoundAliasDestructor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80167b30",
+      "size": 52
+    }
+  ],
+  "functions": [
+    {
+      "name": "_._15SoundAliasEvent",
+      "address": "0x80167b30",
+      "size": 52,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_vt.10SoundEvent": "0x802e4ce8",
+    "__builtin_delete": "0x801a8990"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "SoundAliasEvent.cpp",
+  "original_file_index": 1455
+}

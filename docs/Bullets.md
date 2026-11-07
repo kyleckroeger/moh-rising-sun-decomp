@@ -200,7 +200,11 @@ lookup and `sqrtf` are stubbed. These are not game or Dolphin runtime tests.
 
 The explosion height/ray/obstruction helpers, thrown-bullet `CommitUpdate`, and
 the larger grenade-response update remain unmatched research. No partial credit
-is included for them.
+is included for them. The [follow-up behavior notes](research/explosion-grenade-updates.md)
+record their branch conditions, isolated original/candidate execution comparisons
+and remaining compiler differences. The grenade/bazooka
+[sound dispatcher and supporting methods](Sound.md#grenade-and-bazooka-sound-events)
+are now matching source, with separate credit for their own ranges.
 
 ## Factory resources
 
