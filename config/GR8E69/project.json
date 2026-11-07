@@ -1705,7 +1705,9 @@
     "scene_AttachableObjectAttach.json",
     "scene_AttachableObjectDetach.json",
     "explosion_constructor.json",
-    "scene_visitors.json"
+    "scene_visitors.json",
+    "thrown_bullet_penetrate.json",
+    "grenade_response_queries.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

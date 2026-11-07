@@ -20,6 +20,10 @@ used as a semantic reference for control flow only; its layouts differ.
 - `AddAmo` starts a reload when the weapon held nothing, caps the reserve at the
   property word `+0x12`, and for weapon class 7 keeps the reserve one below that cap.
   `Shutdown` destroys the weapon script; Frontline's is empty.
+- The grenade-response `IsCatchable` helper reads the signed property halfword
+  at `+0x62`. A nonzero value changes its side-projection bounds from (-0.1, 0.5)
+  to (-0.3, 0.2). The header calls it `field_62`; its original meaning is unknown.
+  See [grenade response queries](Bullets.md#grenade-response-queries).
 
 ## Inferred
 

@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 913524,
+    "matching_code_bytes": 914844,
     "total_executable_code_bytes": 2492032,
-    "percent": 36.657795726539625,
+    "percent": 36.71076454876984,
     "categories": {
-      "reconstructed_game": 521308,
+      "reconstructed_game": 522628,
       "restored_library": 392216
     },
-    "matching_functions": 4354
+    "matching_functions": 4362
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -556,6 +556,7 @@
     "config/GR8E69/flexprop_matrix.json": "cf7d89aea80924588b0ce099751e6c9388001ab62afb04f7564e0b6d4ffaa082",
     "config/GR8E69/frustum_transform.json": "35766529dbd85ffd05cf8d34adb7010b3b10b02c04d1d097811dde2dfc2ef057",
     "config/GR8E69/fstload.json": "d49e84fe0d1e9af1dd569811065db3c015f596b540ac5988c5078fa2f9c5dd5e",
+    "config/GR8E69/grenade_response_queries.json": "5932b489bfec46bf4c73dad2d1d3bc9faa7acf77d137fb97cac1fdea8d343ecc",
     "config/GR8E69/instanced_anim_light.json": "73759e82b3bf6870d54d6fbf2ef1b64ec4c688cb847000881824fb8fb3d00093",
     "config/GR8E69/jaw_controller_ctor.json": "34ebd750d88f565421a7d8012ca30fca77ea5efe75bb9e81dac1017627be8d5c",
     "config/GR8E69/jaw_controller_motiontype.json": "f0998e4aa079cdafca1320e57a5a25cfa166bd3d71de883cd2a74cc2c599e4a1",
@@ -822,7 +823,7 @@
     "config/GR8E69/player_weapon_overlays.json": "172965adf4a7a763b5932a9744ff75bbf384ef314e25785dee9d7617044a8d5b",
     "config/GR8E69/player_weapon_selectable.json": "c7e3f09ad1510713bfd88ee468db0fcb4c6ef18b3b89bdb414b32ea863b25668",
     "config/GR8E69/player_weapon_shutdown.json": "f90a42342572d125630e7ac3647193288c13301a5309bcdc49cc350364bc2b60",
-    "config/GR8E69/project.json": "ddc3e54de425e074a190167b900bfb32aa121294933568b626891ba348432089",
+    "config/GR8E69/project.json": "257b019605cbcbc84b37c1171c7a7163faacfcdce2ebc78e3d18b23573919b85",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -1671,6 +1672,7 @@
     "config/GR8E69/thrown_bullet_destroy.json": "d1c0ca806ccb00ed6867057b337b43ace6c4518ab74bd04aeb61921a849addbb",
     "config/GR8E69/thrown_bullet_effect.json": "195e61b5eee3843a501c614ebf7d673df4abc41ad9ec82a8eff3e657ac1c653a",
     "config/GR8E69/thrown_bullet_mark.json": "76ce0be1ea21179983ec260c032185400496d07d3e005ac401d754192c46fa38",
+    "config/GR8E69/thrown_bullet_penetrate.json": "a064c0834856987212d8c690064a8d0cc71f5bbf1e1f4451cfc8327e025867d3",
     "config/GR8E69/thrown_bullet_shutdown.json": "c3d43abb73c1422956b35ff77e75515ad8240947f756ab8cace0b64b629d9947",
     "config/GR8E69/thrown_bullet_tail.json": "6e908afa80b8de6275d1d0a34cab023d646c7021f785c26ced75aad24c73cb98",
     "config/GR8E69/thrown_bullet_transition.json": "e44fe702d77971389ceeda6f2de90bfaca152c0afe1ca8b831ed6497259af274",
@@ -1971,6 +1973,7 @@
     "include/game/Fog.h": "30a37f01f3f665d1f9b3b0a5ef81ea098194595159c5ff794797541c6bf325c0",
     "include/game/Frustum.h": "8b459091729087e5119c39887634fd28825b36e40b7a0efdf9a40c2cf58741fe",
     "include/game/GameSettings.h": "052e40f725ee630fb3c8846350d0e293350e792fa814b52ce3f616a590038a01",
+    "include/game/GrenadeResponse.h": "a26075782a75877dd754799cb73d6fe55e2a6c6597676869bb956ba8cdb2bed4",
     "include/game/IDestructible.h": "1427a08ba92fefc7fdc63c4ba8fc7aab3ec64bc8d2d1cfb7fe035346b685379f",
     "include/game/IVolume.h": "95911ba145df993a5c74b9b441c050754f2084de085a7d62b324f66e4479f2bc",
     "include/game/LegacyField.h": "95883bc2693fd14b7014d3f1e6a6e514ed5126af239699aa46d05f565bce5afe",
@@ -2012,7 +2015,7 @@
     "include/game/Thrown.h": "62c70dfcb9ad0243eba5bdf633073bb2563d3fe2b4da6bdcae42452c547912db",
     "include/game/TriggerObject.h": "73e70d537a184c92ad5f8f0e10b773f5efe3306ce871a82852a3c41398f7418b",
     "include/game/Volume.h": "cda9e7de972fc28d73bf86418423a8b271c864d60bb53d1eba7d42744622db46",
-    "include/game/Weapon.h": "a6ce3407991c46a49a3f30693bbba1bc972b23a88af294f0eb00a43aba985830",
+    "include/game/Weapon.h": "85e234b8ab10929319a60a4eae408108de7adc16678a62db3efcad63c9ad46a7",
     "include/game/WorldObject.h": "9b5b154c87247d3295950b478724a0abe912e5092504a60bc1ce3c25b313771d",
     "include/game/WorldVolume.h": "9acfaf28c317912de14baef7ca50a3d80175ddc31dcf83cea18c80725e688318",
     "include/game-containers/AlgorithmTypes.h": "a4959e24b9ab8edd66054b63ed6d53516aebc500f71f821e27babbf931b8d51a",
@@ -2193,6 +2196,7 @@
     "src/ai/AITankObjectB.cpp": "49e0d1c0c80d2c4002097438ad0d77c84a73790d821490d7e49698bbe55dedfe",
     "src/ai/AITankObjectC.cpp": "3a017317124cc3af0802c29a7344830e4110956dd30c48cf6b55a6ea99c37ea2",
     "src/ai/AITankObjectD.cpp": "1d48f7210ac6083554bb04559b38da035c0101862b0202ce9e65b5ef7df36f7f",
+    "src/ai/GrenadeResponseQueries.cpp": "c69240fd532d35c3cd178969bbafd94bb6c3202d155ba8437e716d4f7ee4b2c9",
     "src/ai/filter_clock.cpp": "15b68a3c4487c496821009dc2ab90f971b7036cdd0a2fbcd54527ca71978bb58",
     "src/ai/filter_splines.cpp": "58cc98352a9799c6cb33d6bb8c2cc23892071c78418aa670ce0283f29fc5a5f3",
     "src/ai/locomotion_access.cpp": "b1d0b54e757064f8d4f6d747b4b7a48592465e918a044177e2a51f1df07fd08e",
@@ -2273,6 +2277,7 @@
     "src/bullets/ThrownBulletDestroy.cpp": "e5de8c2c5c794bca8f5f289ee97f2eac6c0aed5df771f8a9479a7dc2e75de95f",
     "src/bullets/ThrownBulletEffect.cpp": "4fa8ccdead657142a555a43be1175e9228bcc4d06c3c1a85ab5c7c9c13651308",
     "src/bullets/ThrownBulletMisc.cpp": "a7a9a96311ab3f8c1bdc10cce16bfa3925a2d7d9cc25efb26b6714aecb9b45ba",
+    "src/bullets/ThrownBulletPenetrate.cpp": "cabf42f3ef875218281e34d1d6652622593037c8531d8f23c9695379c3310330",
     "src/bullets/ThrownBulletShutdown.cpp": "1d03e3d10c32e963e9225767a4ea6af01d2fd214f575ee92118aff2cf7fb8d6a",
     "src/bullets/ThrownBulletTail.cpp": "bcbfded10fcbc2a7b1ae061d4c631b45ced03ac57989406e8ceb353ef027335d",
     "src/bullets/ThrownBulletTransition.cpp": "7ca6ac9464f2deab560e133cf2f735971e98b1eacdaf4d5c2574bdebdcc4acd4",
@@ -38313,6 +38318,42 @@
       "discarded_functions": [],
       "object_sha256": "41c18161ab378fe4610f74f2951b5d6957ea6d1215f56d8bfe54594a8adb8fd3",
       "linked_sha256": "11389e424c1cbb720ab2db03568d270a7c1eaa27dc68bcbaed87e994975f2143"
+    },
+    {
+      "id": "thrown_bullet_penetrate",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 396,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "ee06e4897b53b471b1c20c9444c196a92557b65122cd4c91f1ef924eff935c2b",
+      "linked_sha256": "7c0b7c874d003109c6c678847b104486b106630607e1417a1de5627c5de42b59"
+    },
+    {
+      "id": "grenade_response_queries",
+      "category": "reconstructed_game",
+      "functions": 7,
+      "code_bytes": 924,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "a01a373ba22b6f77a13cb128f81f10b79afff397f3502f54ad7bda63ddd76d51",
+      "linked_sha256": "7e947eeaee88b2a18b10148b86142237890c5b4eb78226135ac7ce4ca883e999"
     }
   ],
   "code_map": {
@@ -55411,55 +55452,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800f07dc",
-            "size": 204,
-            "kind": "function",
-            "name": "GetVectorToGrenade__FP14CSoldierObjectPC13CThrownBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f08a8",
-            "size": 76,
-            "kind": "function",
-            "name": "IsAlive__FP14CSoldierObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f08f4",
-            "size": 384,
-            "kind": "function",
-            "name": "IsCatchable__FP14CSoldierObjectP13CThrownBulletRC8CVector3f",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f0a74",
-            "size": 96,
-            "kind": "function",
-            "name": "IsStoppedOnGround__FP14CSoldierObjectPC13CThrownBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f0ad4",
-            "size": 52,
-            "kind": "function",
-            "name": "IsStoppedOnGround__FRC8CVector3f",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f0b08",
-            "size": 60,
-            "kind": "function",
-            "name": "DistanceSquaredToGrenade__FP14CSoldierObjectP13CThrownBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f0b44",
-            "size": 52,
-            "kind": "function",
-            "name": "InDanger__FP14CSoldierObjectP13CThrownBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800f0b78",
             "size": 1188,
             "kind": "function",
@@ -59275,13 +59267,6 @@
             "size": 3908,
             "kind": "function",
             "name": "Init__13CThrownBullet18EThrownBulletTypesP29ThrownBulletProperties_structRC8CVector3T3f7EClsnIdfP10ISceneNodeb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80151e18",
-            "size": 396,
-            "kind": "function",
-            "name": "Penetrate__13CThrownBulletRC10CCollision",
             "evidence": "adjacent-compiler-markers"
           },
           {
