@@ -2007,7 +2007,10 @@
     "ea_avplayer_dtor.json",
     "ea_avplayer_time.json",
     "ea_avplayer_chunk.json",
-    "pum_ctor.json"
+    "pum_ctor.json",
+    "scene_AnimObjectSetMoveTarget.json",
+    "scene_AnimObjectAdjustCallbacks.json",
+    "scene_AnimObjectStateDone.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

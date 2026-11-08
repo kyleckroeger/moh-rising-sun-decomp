@@ -341,6 +341,8 @@ class CAnimObject {
     void LineAlmostCollided(CBullet *) const; // An empty body returning nothing.
     void *GetSkeleton();
     void Shutdown();
+    class StateDone;
+    void SetMoveTarget(const CVector3 &);
     enum LocomotionType { LocomotionUnknown = 0 }; // Original name; its members are unknown.
     LocomotionType DetermineLocomotionType(float, LocomotionType);
     int IsVisible(CDrawContext &) const;
@@ -402,7 +404,7 @@ class CAnimObject {
     CVector3 adjustTarget; // +0x170
     float adjustValue;   // +0x180; descriptive.
     int adjustBlend;     // +0x184
-    int field_188; // +0x188; cleared by Init.
+    int locomotionType; // +0x188; DetermineLocomotionType's last result.
     const char *stateName; // +0x18c
     CVector3 previousPosition; // +0x190; soldier CommitUpdate copies the position here.
     CVector3 velocity;   // +0x1a0
@@ -429,14 +431,14 @@ class CAnimObject {
     float attachBlend;   // +0x240
     unsigned char unknown_244[0x250 - 0x244];
     CMatrix attachLocation; // +0x250
-    int field_290; // +0x290; cleared by Init.
+    int moveTargetPending; // +0x290; set by SetMoveTarget, cleared by the path callbacks.
     int gravity;    // +0x294
     int groundCheck; // +0x298
     int animMoved;   // +0x29c
     int hurtlingBlocked; // +0x2a0; BeginHurtling does nothing while set. Descriptive.
     CLightVolumeManager lightVolumes; // +0x2a4
     short field_2c0; // +0x2c0; Init stores 40.
-    int stateTask;       // +0x2c4; passed to SetState by address. Type unknown.
+    int stateTask;       // +0x2c4; a CAnimObject::StateDone, passed to SetState by address: table, event, owner.
     int stateValue;      // +0x2c8
     CAnimObject *stateOwner; // +0x2cc
     struct AO_OpcodeHandler {
@@ -444,7 +446,7 @@ class CAnimObject {
         CAnimObject *owner; // +4
     } opcodeHandler; // +0x2d0; class name from _vt.Q211CAnimObject16AO_OpcodeHandler.
     int poseEvaluated;   // +0x2d8; descriptive.
-    int field_2dc; // +0x2dc; set by Init and the constructor.
+    int stateDone; // +0x2dc; set by Init, the constructor and StateDone::Execute. Descriptive.
     void SetAttached(bool);
     void StartAnimAdjust(const CVector3 &, float, bool);
 };

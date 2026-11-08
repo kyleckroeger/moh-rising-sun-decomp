@@ -1,0 +1,52 @@
+{
+  "id": "scene_AnimObjectStateDone",
+  "source": "src/scene/AnimObjectStateDone.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800a5c94",
+      "size": 156
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.Q211CAnimObject9StateDone",
+      "address": "0x802e4898",
+      "size": 24,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "__Q211CAnimObject9StateDone",
+      "address": "0x800a5c94",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "Execute__Q211CAnimObject9StateDone",
+      "address": "0x800a5cb8",
+      "size": 120,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "anim_obj.cpp",
+  "original_file_index": 831
+}

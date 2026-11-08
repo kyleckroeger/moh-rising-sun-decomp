@@ -35,7 +35,7 @@ void CAnimObject::Init() {
     attachedToLocation = 0;
     allowAnimationTranslation = 1;
     ((WeakPtr<ISceneNode, 8> *)weakNode)->Assign(0);
-    field_290 = 0;
+    moveTargetPending = 0;
     gravity = 1;
     groundCheck = 0;
     fallStarted = 0;
@@ -47,6 +47,6 @@ void CAnimObject::Init() {
     pendingCallback = -1;
     poseEvaluated = 0;
     stateName = 0;
-    field_188 = 0;
-    field_2dc = 1;
+    locomotionType = 0;
+    stateDone = 1;
 }

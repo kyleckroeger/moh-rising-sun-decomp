@@ -131,6 +131,12 @@ whose own visibility result `Draw` ignores. `+0x140` is a `WeakPtr<ISceneNode, 8
 the table the constructor stores and by the link and subject that `Init` clears, and `+0x2d0` is
 the `AO_OpcodeHandler` that `Init` hands to the choreographer.
 
+`+0x2c4` is a `CAnimObject::StateDone`, the task `SetAnimationState` passes to the choreographer:
+a table, an event and the owner, whose `Execute` sets the word at `+0x2dc` and triggers the event
+on the owner's script when it is not negative. `SetMoveTarget` chooses the locomotion type from the
+angle between the move direction and, with a valid AI target, the direction to that target, or
+otherwise the object's yaw.
+
 ## Parked
 
 These still differ, with instruction differences in brackets; drafts are kept outside the
