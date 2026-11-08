@@ -1756,7 +1756,9 @@
     "scene_now.json",
     "scene_lock.json",
     "scene_query.json",
-    "scene_reorder.json"
+    "scene_reorder.json",
+    "skybox_class.json",
+    "skybox_dtor.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

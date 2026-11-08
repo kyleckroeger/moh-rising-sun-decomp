@@ -1,0 +1,113 @@
+{
+  "id": "skybox_class",
+  "source": "src/game/skybox_class.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800c6c68",
+      "size": 604
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a0510",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "__nw__7CSkyBoxUi",
+      "address": "0x800c6c68",
+      "size": 24,
+      "binding": 1
+    },
+    {
+      "name": "__dl__7CSkyBoxPv",
+      "address": "0x800c6c80",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "InitClass__7CSkyBox",
+      "address": "0x800c6c90",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "ShutdownClass__7CSkyBox",
+      "address": "0x800c6ca0",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "CreateInstance__7CSkyBoxR7CScreen",
+      "address": "0x800c6cdc",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "GetInstance__7CSkyBox",
+      "address": "0x800c6d1c",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "DestroyInstance__7CSkyBox",
+      "address": "0x800c6d28",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "ClearZBufferCommand__FR12CDrawContextPPv",
+      "address": "0x800c6d80",
+      "size": 52,
+      "binding": 0
+    },
+    {
+      "name": "BeginUpdate__7CSkyBoxf",
+      "address": "0x800c6db4",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "Draw__7CSkyBoxR12CDrawContext",
+      "address": "0x800c6dd8",
+      "size": 236,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddCommand__12CDrawContext11ERenderBinsRC11DrawCommand": "0x8012ea14",
+    "Draw__11CStaticMeshR12CDrawContextiUi11ERenderBinsT4": "0x8019f3c8",
+    "FastInverse__7CMatrixRC7CMatrix": "0x8007b164",
+    "SkyBoxSingletonBuf": "0x803075d0",
+    "Translate__7CMatrixRC8CVector3": "0x8007af2c",
+    "Update__11CStaticMeshf": "0x8019f264",
+    "_7CMatrix.s_TempMat": "0x802fbf00",
+    "_7CSkyBox.msbAllocated": "0x802c2670",
+    "_7CSkyBox.mspInitialized": "0x802c266c",
+    "_7CSkyBox.mspSingleton": "0x802c2668",
+    "__7CSkyBoxR7CScreen": "0x800c6ec4",
+    "__as__7CMatrixRC7CMatrix": "0x8007aa38"
+  },
+  "local_externals": [
+    "SkyBoxSingletonBuf"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "skybox.cpp",
+  "original_file_index": 904
+}
