@@ -1967,7 +1967,9 @@
     "sound_satospkr_vol.json",
     "mesh_draw.json",
     "mesh_vis.json",
-    "mesh_light.json"
+    "mesh_light.json",
+    "sound_spat2hdr.json",
+    "ea_locatbig_locate.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

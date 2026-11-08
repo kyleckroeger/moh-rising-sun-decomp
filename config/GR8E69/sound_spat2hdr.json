@@ -1,0 +1,47 @@
+{
+  "id": "sound_spat2hdr",
+  "source": "src/sound/ea/spat2hdr.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8021e340",
+      "size": 1336
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDI_patchtohdr__FPvP11TAGGEDPATCHP15SNDSAMPLEFORMATP13SNDSAMPLEATTRP13SNDSAMPLEDESCPUc",
+      "address": "0x8021e340",
+      "size": 1336,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDI_gettag__FP10SNDTAGINFO": "0x80224ef0",
+    "SNDI_memcpy": "0x8021ab84",
+    "SNDI_patchtohdrgen__FPvPQ29Sndgendef14GENTAGGEDPATCHP15SNDSAMPLEFORMATP13SNDSAMPLEATTRP13SNDSAMPLEDESC": "0x80224fdc",
+    "SNDMEMI_allocz__Fi": "0x8021ae30",
+    "SND_attrsetdef": "0x80223220",
+    "memset": "0x80266778",
+    "sndgs": "0x804108fc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "spat2hdr.c",
+  "original_file_index": 3070
+}

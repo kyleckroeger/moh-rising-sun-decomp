@@ -457,3 +457,7 @@ from `+36`. `SNDDRV_DSPMixerUpdate` copies targets to the current values on flag
 (`0x20000000` and `0x10000000` for the volume, `0x80000000` and `0x40000000` for the pan) and writes deltas over
 320 samples to the AX voice. Those offsets and flags are verified; the member names are inferred.
 `SNDDRV_DSPMixerResetChannel` is not reconstructed: its run of stores is in a different order.
+
+`sndgs` holds a channel map at `+716`, six rows of six 16-bit values indexed by channel count less one; `SNDI_patchtohdr`
+adds it to each channel's pan offset. A big-file entry's offset field may be wider than 4 bytes; `BIG_locateentryz` reads
+it as 64 bits and stores the low word. Those offsets are verified; the member names are inferred.

@@ -148,16 +148,7 @@ struct SNDGSVIEW {
     struct SNDFXBUS fxsecond[1];
     char pad220[4];
     struct SNDSPEAKERPAN speakerpan[7][6];
-    char pad2cc[12];
-    short stereopan[2];
-    char pad2dc[8];
-    unsigned short surroundpan0[3];
-    char pad2ea[6];
-    short surroundpan1[4];
-    char pad2f8[4];
-    short surroundpan2[5];
-    char pad306[2];
-    short surroundpan3[6];
+    unsigned short channelmap[6][6];
     void (*prehook)(void);
     void (*posthook)(void);
 };
