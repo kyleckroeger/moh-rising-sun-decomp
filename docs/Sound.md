@@ -451,3 +451,9 @@ member names are inferred.
 `sndgs`, with 6 channels per layout; the layout comes from the voice's channel count and the output
 count. `SNDDRV_dolbypl2balances` is 256 rows of four 16-bit levels indexed by azimuth over 256. A voice
 record's channel azimuths are at `+80`. Those offsets are verified; the member names are inferred.
+
+The DSP mixer's channel records (`__MIXChannel`, 76 bytes each) hold a current and target pair for each level
+from `+36`. `SNDDRV_DSPMixerUpdate` copies targets to the current values on flags in the channel's mode word
+(`0x20000000` and `0x10000000` for the volume, `0x80000000` and `0x40000000` for the pan) and writes deltas over
+320 samples to the AX voice. Those offsets and flags are verified; the member names are inferred.
+`SNDDRV_DSPMixerResetChannel` is not reconstructed: its run of stores is in a different order.

@@ -1,0 +1,47 @@
+{
+  "id": "sound_satospkr_vol",
+  "source": "src/sound/ea/satospkr_vol.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8022315c",
+      "size": 132
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bf9f0",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDI_aztospkrvol__FiPf",
+      "address": "0x8022315c",
+      "size": 132,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "sndaztospkr": "0x8041d11c",
+    "sndgs": "0x804108fc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "satospkr.c",
+  "original_file_index": 3145
+}

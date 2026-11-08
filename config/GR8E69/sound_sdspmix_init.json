@@ -1,0 +1,57 @@
+{
+  "id": "sound_sdspmix_init",
+  "source": "src/sound/ea/sdspmix_init.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80223a30",
+      "size": 584
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDDRV_DSPMixerInit__Fi",
+      "address": "0x80223a30",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "SNDDRV_DSPMixerInitChannel__FP6_AXVPBUliUsUsPfUsi",
+      "address": "0x80223a84",
+      "size": 500,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "OSDisableInterrupts": "0x80257798",
+    "OSRestoreInterrupts": "0x802577c0",
+    "SNDDRV_DSPMixerResetChannel__FP16SNDDRVMIXCHANNEL": "0x802238a8",
+    "SNDDRV_DSPMixerSetAuxBus__FP6_AXVPBUsi": "0x802239bc",
+    "SNDDRV_DSPMixerSetPan__FP6_AXVPBPfUsi": "0x802238e4",
+    "__MIXChannel": "0x8041d134",
+    "numoutputchannels": "0x8041e434"
+  },
+  "local_externals": [
+    "__MIXChannel",
+    "numoutputchannels"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sdspmix.c",
+  "original_file_index": 3157
+}

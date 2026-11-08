@@ -1960,7 +1960,11 @@
     "sound_sdrv_set3dpos.json",
     "scene_StaticObjectBullet.json",
     "scene_AnimObjectBullet.json",
-    "scene_HierObjectOnCollision.json"
+    "scene_HierObjectOnCollision.json",
+    "sound_sdspmix_pan.json",
+    "sound_sdspmix_init.json",
+    "sound_sdspmix_update.json",
+    "sound_satospkr_vol.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

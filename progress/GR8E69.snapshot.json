@@ -1636,6 +1636,7 @@
       "src/sound/ea/salloc.cpp": "dc89ebffb944e8ca21db6583bb331a078868102f36c0805db9e30904dc4f2439",
       "src/sound/ea/saramman.cpp": "f293b490d7cb9f6a1493d0f06259f2017debc2473c8c55a7bdebd1d88cadd2fd",
       "src/sound/ea/saramman_b.cpp": "28e13b6bd14b9b24ae2e24fedc0eb7af96d3e85a71e127e63693bd753a5a72a8",
+      "src/sound/ea/satospkr_vol.cpp": "9634652812b72ab5bfd485476d83443d68a253e5eaa12346dd3a1a4878bcac59",
       "src/sound/ea/sattrdef.cpp": "3275851e52148362c32816ee3bcad4365b2a822e29a524aaa39d7215803d8ca4",
       "src/sound/ea/sautovol.cpp": "9f9048559068cc42695ccbe825b5c969116873a56140b17d60446b45ae09efde",
       "src/sound/ea/sbadd.cpp": "3fb541b169f2352d36721551119668256d1bd3394b915f1f072fd5a671cce6aa",
@@ -1670,6 +1671,9 @@
       "src/sound/ea/sdrv_timemult.cpp": "d73f211c42ccba7cc0c63ff56079a0cac256c74e14180df7925d3685fc6d18cb",
       "src/sound/ea/sdrv_vrange.cpp": "01a9ba925252cd9460885ede8f248e15a2b9ab58c0e9edeffe49d4f94b443693",
       "src/sound/ea/sdspmix_auxbus.cpp": "0a89a993b8fef3b1e0e8ce69b420c556b4a6f8b095f766ceedb0961f3aec2739",
+      "src/sound/ea/sdspmix_init.cpp": "be8170b06e04dde638c5db427684f23f3b3defa55989eb6767fb6f47f311804b",
+      "src/sound/ea/sdspmix_pan.cpp": "c22c764903d8c72772b4af337491cec9b32fcd9b5c43bf343efb6fdcd21ae6fd",
+      "src/sound/ea/sdspmix_update.cpp": "39381a522deb74652d2a898aafcf8a7f5e10933bf85751492b5b5ec7dd6feac2",
       "src/sound/ea/sdspmix_vol.cpp": "edcf723d56d85a46bc526f62b4c66a93d9b78ee1db8410c3b3c7dedf769af942",
       "src/sound/ea/seffect.cpp": "a81bd260f880b3d4f2000d56642a8f65cd2d749c219abe8ca1326a7bc098ef70",
       "src/sound/ea/sfamplf.cpp": "b5e0e1378b6b933600349577efcd46e525d10547f4a340f22efb78ac6441dde6",
@@ -3401,7 +3405,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "774767e795672bf6778756c771ffaab1154f2a019e984644603b00363a778fc8",
+      "config/GR8E69/project.json": "6de69ddde4826acdbe93f513eaccdf31b46126b4aae9a0d5dae8321829eb6f40",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -4032,6 +4036,7 @@
       "config/GR8E69/sound_salloc.json": "b57e0693875532fa553b072a6924bec50fe6ef89ad8634fa2f709c5f5421a2c9",
       "config/GR8E69/sound_saramman.json": "941b65c2823f2dc93040be55cba38e29540e1200445f1a1721219b1a5ebbc494",
       "config/GR8E69/sound_saramman_b.json": "298c427e29af6ab2125bb00717d76bc663f49354f5aeacb41a99366b6e07cc06",
+      "config/GR8E69/sound_satospkr_vol.json": "63a7301bf3b2ac1dc9fb44e6db89aaa042b420fdea499b1821e990530162bd76",
       "config/GR8E69/sound_sattrdef.json": "a39236cc8f5c5a022e727921e857cd21cb6ee97f246243f2c200b484afa1bddb",
       "config/GR8E69/sound_sautovol.json": "abef93393353aa4fd1f8fce3e219cda21abf75777367c664380c2b3ed0edb00c",
       "config/GR8E69/sound_sbadd.json": "264518bd6aa564e62f4aad43f309a75d59f3686dfd2e7d4e19c46150a6da7946",
@@ -4067,6 +4072,9 @@
       "config/GR8E69/sound_sdrv_timemult.json": "3181118142a52590ba5cef7ee9aa4b65fcdfb337c426ae6ae29a578d87ccd957",
       "config/GR8E69/sound_sdrv_vrange.json": "6c64f58c468a37ed14dfb0d3eaa72e25f3c70f1413d11d3fbda933e83e8a5373",
       "config/GR8E69/sound_sdspmix_auxbus.json": "0fd5188ebeb8e18d94d6105ec2d75d71c831ac9a9b76769d7ce59eae0001fa1d",
+      "config/GR8E69/sound_sdspmix_init.json": "97d44a98ae6dc6743e5e17f563e78f22d379288819767f87bcce9d4994f8e0f0",
+      "config/GR8E69/sound_sdspmix_pan.json": "5aa9a323de17591f346c4dc34df9d57084cb787d77649e1d3e480aea58da6c4d",
+      "config/GR8E69/sound_sdspmix_update.json": "d2af3d3e4cf4f5c111d19a37117a06f262966d884a8ebb77d40a8169030266ac",
       "config/GR8E69/sound_sdspmix_vol.json": "544b50279e8f4e2bbd4209eb8e7f0f971f06b189480052c5b54c58f1ee203954",
       "config/GR8E69/sound_seffect.json": "42e9becea91b4a8bde15018a01fccbb7241fad0a7245823120fa58979bb676f3",
       "config/GR8E69/sound_sfamplf.json": "1239395bd0bcf74a5f6fdeba51c475d4c17d002c949dea4e0a2e8674fa159574",
@@ -4806,14 +4814,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1030636,
+    "matching_code_bytes": 1032636,
     "total_executable_code_bytes": 2492032,
-    "percent": 41.35725383943706,
+    "percent": 41.437509630694954,
     "categories": {
-      "reconstructed_game": 638420,
+      "reconstructed_game": 640420,
       "restored_library": 392216
     },
-    "matching_functions": 5006
+    "matching_functions": 5011
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -5723,7 +5731,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "774767e795672bf6778756c771ffaab1154f2a019e984644603b00363a778fc8",
+    "config/GR8E69/project.json": "6de69ddde4826acdbe93f513eaccdf31b46126b4aae9a0d5dae8321829eb6f40",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -6354,6 +6362,7 @@
     "config/GR8E69/sound_salloc.json": "b57e0693875532fa553b072a6924bec50fe6ef89ad8634fa2f709c5f5421a2c9",
     "config/GR8E69/sound_saramman.json": "941b65c2823f2dc93040be55cba38e29540e1200445f1a1721219b1a5ebbc494",
     "config/GR8E69/sound_saramman_b.json": "298c427e29af6ab2125bb00717d76bc663f49354f5aeacb41a99366b6e07cc06",
+    "config/GR8E69/sound_satospkr_vol.json": "63a7301bf3b2ac1dc9fb44e6db89aaa042b420fdea499b1821e990530162bd76",
     "config/GR8E69/sound_sattrdef.json": "a39236cc8f5c5a022e727921e857cd21cb6ee97f246243f2c200b484afa1bddb",
     "config/GR8E69/sound_sautovol.json": "abef93393353aa4fd1f8fce3e219cda21abf75777367c664380c2b3ed0edb00c",
     "config/GR8E69/sound_sbadd.json": "264518bd6aa564e62f4aad43f309a75d59f3686dfd2e7d4e19c46150a6da7946",
@@ -6389,6 +6398,9 @@
     "config/GR8E69/sound_sdrv_timemult.json": "3181118142a52590ba5cef7ee9aa4b65fcdfb337c426ae6ae29a578d87ccd957",
     "config/GR8E69/sound_sdrv_vrange.json": "6c64f58c468a37ed14dfb0d3eaa72e25f3c70f1413d11d3fbda933e83e8a5373",
     "config/GR8E69/sound_sdspmix_auxbus.json": "0fd5188ebeb8e18d94d6105ec2d75d71c831ac9a9b76769d7ce59eae0001fa1d",
+    "config/GR8E69/sound_sdspmix_init.json": "97d44a98ae6dc6743e5e17f563e78f22d379288819767f87bcce9d4994f8e0f0",
+    "config/GR8E69/sound_sdspmix_pan.json": "5aa9a323de17591f346c4dc34df9d57084cb787d77649e1d3e480aea58da6c4d",
+    "config/GR8E69/sound_sdspmix_update.json": "d2af3d3e4cf4f5c111d19a37117a06f262966d884a8ebb77d40a8169030266ac",
     "config/GR8E69/sound_sdspmix_vol.json": "544b50279e8f4e2bbd4209eb8e7f0f971f06b189480052c5b54c58f1ee203954",
     "config/GR8E69/sound_seffect.json": "42e9becea91b4a8bde15018a01fccbb7241fad0a7245823120fa58979bb676f3",
     "config/GR8E69/sound_sfamplf.json": "1239395bd0bcf74a5f6fdeba51c475d4c17d002c949dea4e0a2e8674fa159574",
@@ -8875,6 +8887,7 @@
     "src/sound/ea/salloc.cpp": "dc89ebffb944e8ca21db6583bb331a078868102f36c0805db9e30904dc4f2439",
     "src/sound/ea/saramman.cpp": "f293b490d7cb9f6a1493d0f06259f2017debc2473c8c55a7bdebd1d88cadd2fd",
     "src/sound/ea/saramman_b.cpp": "28e13b6bd14b9b24ae2e24fedc0eb7af96d3e85a71e127e63693bd753a5a72a8",
+    "src/sound/ea/satospkr_vol.cpp": "9634652812b72ab5bfd485476d83443d68a253e5eaa12346dd3a1a4878bcac59",
     "src/sound/ea/sattrdef.cpp": "3275851e52148362c32816ee3bcad4365b2a822e29a524aaa39d7215803d8ca4",
     "src/sound/ea/sautovol.cpp": "9f9048559068cc42695ccbe825b5c969116873a56140b17d60446b45ae09efde",
     "src/sound/ea/sbadd.cpp": "3fb541b169f2352d36721551119668256d1bd3394b915f1f072fd5a671cce6aa",
@@ -8909,6 +8922,9 @@
     "src/sound/ea/sdrv_timemult.cpp": "d73f211c42ccba7cc0c63ff56079a0cac256c74e14180df7925d3685fc6d18cb",
     "src/sound/ea/sdrv_vrange.cpp": "01a9ba925252cd9460885ede8f248e15a2b9ab58c0e9edeffe49d4f94b443693",
     "src/sound/ea/sdspmix_auxbus.cpp": "0a89a993b8fef3b1e0e8ce69b420c556b4a6f8b095f766ceedb0961f3aec2739",
+    "src/sound/ea/sdspmix_init.cpp": "be8170b06e04dde638c5db427684f23f3b3defa55989eb6767fb6f47f311804b",
+    "src/sound/ea/sdspmix_pan.cpp": "c22c764903d8c72772b4af337491cec9b32fcd9b5c43bf343efb6fdcd21ae6fd",
+    "src/sound/ea/sdspmix_update.cpp": "39381a522deb74652d2a898aafcf8a7f5e10933bf85751492b5b5ec7dd6feac2",
     "src/sound/ea/sdspmix_vol.cpp": "edcf723d56d85a46bc526f62b4c66a93d9b78ee1db8410c3b3c7dedf769af942",
     "src/sound/ea/seffect.cpp": "a81bd260f880b3d4f2000d56642a8f65cd2d749c219abe8ca1326a7bc098ef70",
     "src/sound/ea/sfamplf.cpp": "b5e0e1378b6b933600349577efcd46e525d10547f4a340f22efb78ac6441dde6",
@@ -48293,6 +48309,82 @@
       "discarded_functions": [],
       "object_sha256": "bc8f94c6297a7f2abaeed349230f2c8f1bf52175f95723adf9a46a506c3266ee",
       "linked_sha256": "a19ef176ca663e96a09a34742abb58bd5b16952ad152bcdf874b4a0e5e65135c"
+    },
+    {
+      "id": "sound_sdspmix_pan",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 216,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "fc8063134688c5497ebfdfdf9707ae7be6eb66644e4197ba9de1f6d703635286",
+      "linked_sha256": "befce0f64462719a17dcc1f70415c751cfe9c757c48b1b0c609ace959215fdf1"
+    },
+    {
+      "id": "sound_sdspmix_init",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 584,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "8426d2029b511f62b0f15f18aa8b4befca4cbbeaa79d3217f4d22a1d5ede5a0a",
+      "linked_sha256": "38b7e6e7fb7dd187abe86274b08a49ac952870deb7f914ac80e0f5044cfe79e3"
+    },
+    {
+      "id": "sound_sdspmix_update",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 1068,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "f9ef6a2fa360b760bc6a37febf5f7ac163b4368784fb94af8f1e504969bc1401",
+      "linked_sha256": "46fd6af28864439105468fd7091b83bfa52b86d801c28a7288ec5a38a284d19a"
+    },
+    {
+      "id": "sound_satospkr_vol",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 132,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "47ee3d0e9f5a43fc441bfac249373d3eec7e5c7e6e4d1f8515f2d78556ca5701",
+      "linked_sha256": "307eac5f5d4869369b0822b3bb28332ed6461a71acd0295e2ec10263d72d7b24"
     }
   ],
   "code_map": {
@@ -82017,13 +82109,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8022315c",
-            "size": 132,
-            "kind": "function",
-            "name": "SNDI_aztospkrvol__FiPf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x802231e0",
             "size": 64,
             "kind": "function",
@@ -82082,34 +82167,6 @@
             "size": 60,
             "kind": "function",
             "name": "SNDDRV_DSPMixerResetChannel__FP16SNDDRVMIXCHANNEL",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x802238e4",
-            "size": 216,
-            "kind": "function",
-            "name": "SNDDRV_DSPMixerSetPan__FP6_AXVPBPfUsi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80223a30",
-            "size": 84,
-            "kind": "function",
-            "name": "SNDDRV_DSPMixerInit__Fi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80223a84",
-            "size": 500,
-            "kind": "function",
-            "name": "SNDDRV_DSPMixerInitChannel__FP6_AXVPBUliUsUsPfUsi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80223cbc",
-            "size": 1068,
-            "kind": "function",
-            "name": "SNDDRV_DSPMixerUpdate__Fv",
             "evidence": "adjacent-compiler-markers"
           }
         ],
