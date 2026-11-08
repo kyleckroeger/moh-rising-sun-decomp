@@ -1657,7 +1657,6 @@
     "ea_inittmr_b.json",
     "weapon_factory_ctor.json",
     "weapon_factory_shutdown.json",
-    "weapon_factory_props.json",
     "capsule_test_capsule.json",
     "capsule_test_line.json",
     "fiber_test_line.json",
@@ -1868,7 +1867,8 @@
     "scene_ObjCreateNonVisDestruct.json",
     "scene_ObjCreateDumpObject.json",
     "scene_ObjCreateSubHier.json",
-    "scene_ObjCreateBoxVolume.json"
+    "scene_ObjCreateBoxVolume.json",
+    "weapon_factory_create.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

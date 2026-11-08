@@ -73,6 +73,8 @@ class CWeapon : public CStaticObject {
     float field_36c;            // +0x36c
     ISceneNode *holder; // +0x370
     int trigger;        // +0x374; proximity-trigger subobject, only its address is taken here.
+    void *operator new(unsigned int, void *storage) { return storage; }
+    CWeapon();
     void Init(int, WeaponProperties_struct *, ISceneNode *, short);
     void RegisterWithAI();
     int SupportsCoverpointBehavior();

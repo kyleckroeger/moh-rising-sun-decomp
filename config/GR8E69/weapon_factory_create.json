@@ -1,0 +1,63 @@
+{
+  "id": "weapon_factory_create",
+  "source": "src/weapons/WeaponFactoryCreate.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/stlport-runtime",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8014f030",
+      "size": 1088
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a8f70",
+      "size": 100
+    }
+  ],
+  "functions": [
+    {
+      "name": "CreateWeapon__14CWeaponFactoryiP10ISceneNodei",
+      "address": "0x8014f030",
+      "size": 492,
+      "binding": 1
+    },
+    {
+      "name": "GetWeaponPropertiesByCRC__14CWeaponFactoryiPi",
+      "address": "0x8014f21c",
+      "size": 152,
+      "binding": 1
+    },
+    {
+      "name": "CreateWeaponByCRC__14CWeaponFactoryiP10ISceneNodei",
+      "address": "0x8014f2b4",
+      "size": 444,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BUFEND_PADSIZE": "0x802a0c2c",
+    "BUFSTART_PADSIZE": "0x802a0c28",
+    "CheckRecycleThreshold__18CGameObjectFactory": "0x800ca664",
+    "DebugMsg__FPCce": "0x80279094",
+    "Init__7CWeaponiP23WeaponProperties_structP10ISceneNodes": "0x8014b498",
+    "__7CWeapon": "0x8014b2f8",
+    "memset": "0x80266778"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

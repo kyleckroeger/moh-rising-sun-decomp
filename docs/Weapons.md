@@ -54,3 +54,11 @@ and queues `DrawWeapon` in bin 11 with the matrix at `+0xd0` bound. Field names 
 registers around the factory's `Init` call and remains original context.
 `CPlayerWeaponObject::Shoot` matches but stays context: its double and float literals start
 an 8-byte aligned `.rodata` section that ngcas pads past the string the next function owns.
+
+`CWeaponFactory::CreateWeapon` and `CreateWeaponByCRC` inline the object factory's allocator; its
+warning text names it `CGameObjectFactory::AllocateGameObject`. The allocator walks a pool of
+`objectSize + BUFSTART_PADSIZE + BUFEND_PADSIZE` strides for an entry whose id at `+0x08` is zero,
+clears the storage and constructs the weapon in place with no null test. The entry's `+0x04` and
+the first word of the view at weapon `+0x38` link entry and object. `CreateWeaponByCRC` falls back
+to the first table entry for an unknown nonzero CRC and returns null for CRC zero. Field names are
+descriptive.
