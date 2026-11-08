@@ -2002,7 +2002,11 @@
     "scene_AnimObjectMoveTo.json",
     "scene_AnimObjectLocomotion.json",
     "scene_AnimObjectDraw.json",
-    "scene_AnimObjectVisible.json"
+    "scene_AnimObjectVisible.json",
+    "ea_avplayer_ctor.json",
+    "ea_avplayer_dtor.json",
+    "ea_avplayer_time.json",
+    "ea_avplayer_chunk.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

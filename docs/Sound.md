@@ -476,3 +476,8 @@ are the same pattern in `MEM_allocaligna`, which is not reconstructed yet. The r
 stores. `openfile` opens host files through `PCopen` and `PCcreat`, with the file number stored as an `int`, as
 `openfile_plat`'s mangled name shows; `MyStrCmpi`, despite its name, returns the prefix's length when the name starts
 with it. The name also belongs to a different function near `0x801b1448`.
+
+`RCMP::AV_PLAYER` is reconstructed in fragments (`avplayer_ctor`, `avplayer_dtor`, `avplayer_time`, `avplayer_chunk`). Not
+reconstructed here: `Init`, `GetFirstFrame` and `GetRCMPChunk`, which have small differences, and `GetFrame`, whose code
+matches but whose `.rodata` holds a second, unreferenced copy of the 2^31 literal at `0x802b8560`. `CHUNK` has an empty
+inline destructor: `delete chunk` tests for null, which it does not for a class without one.

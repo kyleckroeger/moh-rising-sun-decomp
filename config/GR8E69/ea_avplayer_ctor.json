@@ -1,0 +1,39 @@
+{
+  "id": "ea_avplayer_ctor",
+  "source": "src/ea/avplayer_ctor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801b22dc",
+      "size": 96
+    }
+  ],
+  "functions": [
+    {
+      "name": "__Q24RCMP9AV_PLAYERPCciT1iQ34RCMP9AV_PLAYER9LOAD_ENUMQ34RCMP9AV_PLAYER10SOUND_ENUM",
+      "address": "0x801b22dc",
+      "size": 96,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Init__Q24RCMP9AV_PLAYERPCciiT1iiQ34RCMP9AV_PLAYER9LOAD_ENUMQ34RCMP9AV_PLAYER10SOUND_ENUM": "0x801b233c",
+    "__udivdi3": "0x8026c82c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

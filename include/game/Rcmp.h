@@ -12,6 +12,8 @@ class FRAME;
 class CHUNK {
 public:
     CHUNK();
+    ~CHUNK();
+    static void operator delete(void *p);
 
     void *data;
     void *next;
@@ -55,12 +57,15 @@ public:
 
 extern RCMP_SYSTEM rcmp_sys;
 
+inline void CHUNK::operator delete(void *p) { rcmp_sys.release(p); }
+inline CHUNK::~CHUNK() {}
+
 class DECODER {
 public:
     DECODER(const CODEC_IDATA *);
     virtual ~DECODER();
     static void operator delete(void *p) { rcmp_sys.release(p); }
-    void ChooseCodec(CODEC *, CHUNK *);
+    int ChooseCodec(CODEC *, CHUNK *);
     void FreeChosenCodec();
     unsigned int GetCurrentFrameNumber();
     float GetFrameRate();
