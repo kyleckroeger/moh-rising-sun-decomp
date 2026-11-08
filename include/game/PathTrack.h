@@ -156,6 +156,8 @@ int PATHI_eventstart(int index);
 int PATHI_eventnode(int beat, unsigned char* index, PATHCELLVIEW* out);
 int PATHI_choosebeat(PATHNODEVIEW* node, PATHNODEVIEW* sync, int* start, int* end);
 void PATH_fade(unsigned int handle, int volume, int time);
+void PATH_stop(unsigned int handle);
+void PATH_pause(unsigned int handle, int pause);
 void PATH_volume(unsigned int handle, int volume);
 int PATHX_queuefile(int track, int user, char* name, int size, int volume, int start, int purge);
 int PATHI_sampleoffset(int node);

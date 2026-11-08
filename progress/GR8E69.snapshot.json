@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 993304,
+    "matching_code_bytes": 996416,
     "total_executable_code_bytes": 2492032,
-    "percent": 39.859199239817144,
+    "percent": 39.98407725101443,
     "categories": {
-      "reconstructed_game": 601088,
+      "reconstructed_game": 604200,
       "restored_library": 392216
     },
-    "matching_functions": 4919
+    "matching_functions": 4923
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -916,7 +916,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "7ebce636744721db572a21a969c3dfc719e9b0a649715b2e6ff05b143cc518e5",
+    "config/GR8E69/project.json": "e8a12a87cc52ee48e9a3bada199d7a06415df4437e07bf1f928fb3ad2ac61f5a",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -1500,9 +1500,12 @@
     "config/GR8E69/sound_path_control.json": "31d7c7caa8e5ac99c30d0d30ec9295f274a0649d42d51b2fed88c3dec83ee292",
     "config/GR8E69/sound_path_createtrack.json": "7a7003f4e938e73e085ab4c4a55add9cf4c0ed4b30bb84865a672e418554f3f9",
     "config/GR8E69/sound_path_ctl.json": "8e5046dd19af521a57b10d2947f66e2fcab6c9e90b1be05be1fda0bec89d0a19",
+    "config/GR8E69/sound_path_eventrestore.json": "7c99d1a0bae37b679ed04071cdeefc288037846a3a5a9b9c364193a10fa0e40f",
     "config/GR8E69/sound_path_init.json": "e2f65d1bc0fb3a2634ebd0f09efc9dca3cd1eae524426b04c0d92f279ee1bb9e",
     "config/GR8E69/sound_path_overhead.json": "d321821613f9aea946f2c0180c6030ad7927af19e9b8e5ac8a9970728a3732e4",
+    "config/GR8E69/sound_path_queuenode.json": "92591098a889ec655c92fd391bf4f70b061f3c43d5a69d92f20580e7bb47fffa",
     "config/GR8E69/sound_path_seek.json": "bfff4129c3fb4450fb0479eb6d78b61783cb23d1c9ec242eb37f307da0b80c3a",
+    "config/GR8E69/sound_path_service.json": "09d68be91ba5cc2be639a9e85704da86200b9ff505e9b6754aaf8caefa76d43a",
     "config/GR8E69/sound_path_servicetask.json": "7ffb2e75ce0ec5f713e7a17da85f520ddc93f5e451b72f0941fb718f73a6d43f",
     "config/GR8E69/sound_path_time.json": "99cd8e77d494dd19a2003b79d10acc70f95ee9731b323334e6f222444cac375d",
     "config/GR8E69/sound_path_tracks.json": "b8d1b9ed9c0e24f443415a5d7e93a96c4ef59e814b009d22d9b863204ea7a918",
@@ -2206,7 +2209,7 @@
     "include/game/OffsetPtr.h": "06d2e4c320890063bd6b210c1ddda4b7cefc28e7aa9a4f276e76c128c0a68499",
     "include/game/ParticleClock.h": "7784d24bb307ac0a9e2b796c228584fe306f5781575650f1896038426c80dc0b",
     "include/game/ParticleRecipe.h": "04bba33839dcdae3132d1316e831585288f74ef842a5b01c6f6d6c37929ee61d",
-    "include/game/PathTrack.h": "7d4f219195aefe85c07b1c7de2c4805cb8a02bcb60b23db492195ec3b9b0a819",
+    "include/game/PathTrack.h": "15fa2d9c336c67c1315921cef67cce813061a193dc51fac3417b482ddd345182",
     "include/game/PathxTrack.h": "f46f02824655f05c7a0c47d71481dfbe5c5845b6b73ae17d5f8f3453b5c4298a",
     "include/game/PlacementNew.h": "49819284bb2cc2ffb2039d459ce855bd5a233bcfff0a6412ffe0bda02cd616c5",
     "include/game/PopUpMessage.h": "3ba712308420d487fc901d235bd01e828a92eaff7fe9c095eadb933d05ba7737",
@@ -3973,9 +3976,12 @@
     "src/sound/ea/path_control.cpp": "12651e06dcb7ff8cee798d576ce0c4b69f73b24ac3d8db018f7c5e859e533d9c",
     "src/sound/ea/path_createtrack.cpp": "fbae8f31056cdf4a004045ebe80d905d515aa4a196807a266efdd8d72a1119e5",
     "src/sound/ea/path_ctl.cpp": "e953f0395dc2386605b65e7cb8a65f1884919c3f82c0dd9337634fa63c44444d",
+    "src/sound/ea/path_eventrestore.cpp": "dde67e35368f227b92244506e88943e53c70089b01298b49ce9a1b8572990efa",
     "src/sound/ea/path_init.cpp": "40f15ce8ccee6c2a0972a584f06c6145078ea5dcec6d53f79ae8c2ef36d707e8",
     "src/sound/ea/path_overhead.cpp": "492148897f70e53f134c1795f8d987b004cceb46e37d226dfaa9fb83e489228e",
+    "src/sound/ea/path_queuenode.cpp": "b12d489631d6c3dda121c23912393e7560238a7b8cb9aa5b577c6bc55aa59871",
     "src/sound/ea/path_seek.cpp": "5a47b30b0e1c121e720e66b30532d2f3684222864d8e5b95d93ffcf45f470325",
+    "src/sound/ea/path_service.cpp": "8b5aaf91bc91c7091930ea647e40cb2b7c32c149d720fc7cce07d7c30a4bd0d0",
     "src/sound/ea/path_servicetask.cpp": "8bb02bad9f1f0ba0234dcac0a86ff4aeada6f87b0d67aae893bc7b0f73bb291d",
     "src/sound/ea/path_time.cpp": "02367dbf8c300a21ae38673158b5cd0cd2475050cab085f5cfa04ada51b34f0f",
     "src/sound/ea/path_tracks.cpp": "351cb5d45e7d4ccc743e4445b4bc4b29cac483834600866f42ba2eb85b198a13",
@@ -42555,6 +42561,60 @@
       "discarded_functions": [],
       "object_sha256": "392eebe5e160bc926ac9b9e75ccb57c5995751fe35e4355ad2098b73856563f4",
       "linked_sha256": "d990ff2b651c22e8a28499cc9e5113fb4b93cbdccfbbfe80650d8605dc2a7ad4"
+    },
+    {
+      "id": "sound_path_eventrestore",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 296,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "aa11ec171d6a128a87ea7013724d0de66afa58589c58c584abe2da46831b6df2",
+      "linked_sha256": "65e696fb45d85855df1c73a3a679cfa3d3ecefc8167fade838d873e3333662e9"
+    },
+    {
+      "id": "sound_path_queuenode",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 1556,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "974a0aaf1fae877cf499adf7a0fbe21cdc87a3892b22a445777a42377f73435c",
+      "linked_sha256": "d5b713a1f9730fb314ccbce1dd4a8b10978a4caac896b705affa3e27d6be9503"
+    },
+    {
+      "id": "sound_path_service",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 1260,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "25c5cfefa78b655a06d04d6e2e56cf2899c40fbacc091d99e768da7f2da9cac5",
+      "linked_sha256": "78b90759dc17a98b2b6aa3ba23b03620c29dccf9ec83272e31593a232b285d48"
     }
   ],
   "code_map": {
@@ -42604,44 +42664,6 @@
             "size": 1100,
             "kind": "function",
             "name": "PATHI_eventstart",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80036590",
-            "size": 296,
-            "kind": "function",
-            "name": "PATHI_eventrestore",
-            "evidence": "unknown-file"
-          }
-        ]
-      },
-      {
-        "name": "Unknown file/.text @ 800368c8",
-        "ranges": [
-          {
-            "address": "0x800368c8",
-            "size": 788,
-            "kind": "function",
-            "name": "PATHI_queuenode",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80036bdc",
-            "size": 768,
-            "kind": "function",
-            "name": "PATHI_choosebeat",
-            "evidence": "unknown-file"
-          }
-        ]
-      },
-      {
-        "name": "Unknown file/.text @ 80037024",
-        "ranges": [
-          {
-            "address": "0x80037024",
-            "size": 1260,
-            "kind": "function",
-            "name": "PATHI_service",
             "evidence": "unknown-file"
           }
         ]

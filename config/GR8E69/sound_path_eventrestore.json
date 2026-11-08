@@ -1,0 +1,41 @@
+{
+  "id": "sound_path_eventrestore",
+  "source": "src/sound/ea/path_eventrestore.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80036590",
+      "size": 296
+    }
+  ],
+  "functions": [
+    {
+      "name": "PATHI_eventrestore",
+      "address": "0x80036590",
+      "size": 296,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "PATHI_enternode": "0x80035db4",
+    "PATHI_queuenode": "0x800368c8",
+    "PATHX_volume": "0x80158b9c",
+    "pfstate": "0x802c1680"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

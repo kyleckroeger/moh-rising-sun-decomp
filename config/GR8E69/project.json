@@ -1914,7 +1914,10 @@
     "mc_f.json",
     "mc_g.json",
     "scene_ObjCreateGerman.json",
-    "player_aim_target.json"
+    "player_aim_target.json",
+    "sound_path_eventrestore.json",
+    "sound_path_queuenode.json",
+    "sound_path_service.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

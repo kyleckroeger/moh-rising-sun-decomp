@@ -1,0 +1,54 @@
+{
+  "id": "sound_path_service",
+  "source": "src/sound/ea/path_service.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80037024",
+      "size": 1260
+    }
+  ],
+  "functions": [
+    {
+      "name": "PATHI_service",
+      "address": "0x80037024",
+      "size": 1260,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "PATHI_eventdeadline": "0x800366b8",
+    "PATHI_eventstart": "0x80036144",
+    "PATHI_gettrackptr": "0x800359e4",
+    "PATHI_seeknextnode": "0x8003671c",
+    "PATHI_setvolumes": "0x80035b8c",
+    "PATHI_switchproject": "0x80035728",
+    "PATHI_timeremaining": "0x80036f90",
+    "PATHX_getvolume": "0x80158494",
+    "PATHX_modifyhold": "0x80158ab8",
+    "PATHX_readyfornewrequest": "0x80158594",
+    "PATHX_stop": "0x80158d34",
+    "PATH_fade": "0x80038938",
+    "PATH_volume": "0x800387dc",
+    "bankservice": "0x802c1690",
+    "milliseconds": "0x802c1694",
+    "pfactive": "0x802c168c",
+    "pfstate": "0x802c1680"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}
