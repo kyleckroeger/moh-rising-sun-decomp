@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 972848,
+    "matching_code_bytes": 974360,
     "total_executable_code_bytes": 2492032,
-    "percent": 39.038343006831376,
+    "percent": 39.099016385022345,
     "categories": {
-      "reconstructed_game": 580632,
+      "reconstructed_game": 582144,
       "restored_library": 392216
     },
-    "matching_functions": 4802
+    "matching_functions": 4803
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -899,7 +899,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "c8d6be68b0da477b6b5adbc5bd9cf322a46569e4062850d0720028107016e672",
+    "config/GR8E69/project.json": "60316cd0466bba5aeb677284f0809c7c61b6cc58e7de9c9c0d6bdbf4ddbdbf28",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -1894,6 +1894,7 @@
     "config/GR8E69/weapon_factory_destroy.json": "79209dbc73a644e07394fb644af27756f95a215c1a497f4524b47a36af1b5f95",
     "config/GR8E69/weapon_factory_reset.json": "3251413545d68060cacea13cc336c063cbe1b4acdd89201e409dda38b5a07341",
     "config/GR8E69/weapon_factory_shutdown.json": "af597dad6faf743c92d8f0daf91e1147eec28b948db0f3e3012a4d041c7dc128",
+    "config/GR8E69/weapon_objects.json": "33a97ab8de1c63b0a7dee373b20792e3891c1a9c7cf0d39620ccebe2724b5f4d",
     "config/GR8E69/weapon_sprites_delete.json": "6ddbacb2d2f514cf01523875f74efa228f5c43b4b50c6fd6ddd020b62765abce",
     "config/GR8E69/weapon_sprites_load.json": "f3cb6e6e561509cccea8fc98164d81d040327630824c75fdaa47e2d423510d6a",
     "config/GR8E69/weapon_update.json": "338222143ddd57215072fef4d333c907c3543c2b707e0e771d014c41cc59d789",
@@ -2190,7 +2191,7 @@
     "include/game/SoundManager.h": "a82fa61bcff8045c6ba20c986f0501fa1f6326ae2c64097fee51d028af2d3a31",
     "include/game/SoundMixerView.h": "787617bfe14ec7a736949ac46528a91cfe30e6899acd0a9e811d83bf9364059c",
     "include/game/Sphere.h": "4fb7f91c288e5b711e495765718b14847cbb478030509f25cbb7defcbc4a182f",
-    "include/game/StaticMesh.h": "3ce7ef23c04372bf1266ec277f5b898cc3ec4f1d1c8a166d3fb07d279e37df9f",
+    "include/game/StaticMesh.h": "6ef5b7bb904e8466f2dc221962344dbd2695091180d07f6b6c35413cf83c8a54",
     "include/game/StringCRC.h": "3940d0af2ade9e671b10c5bb1ef12705a7322101b231aae92cfd2aab4a07fa31",
     "include/game/StringTable.h": "4249ba9fcf836cdacb806c1fd8e1a93697756e7896c7eb90f222935c6edc2bb4",
     "include/game/TARExtension.h": "895c1de002730e0d0c627a3475a5370287e007f42b34b18a2901ef3465152b59",
@@ -2201,7 +2202,7 @@
     "include/game/TriggerObject.h": "73e70d537a184c92ad5f8f0e10b773f5efe3306ce871a82852a3c41398f7418b",
     "include/game/VideoDriver.h": "dd21c14b75db031804f4dfd4afd30fcaf14e5211ed4c37079e3f6ff3e19ee668",
     "include/game/Volume.h": "cda9e7de972fc28d73bf86418423a8b271c864d60bb53d1eba7d42744622db46",
-    "include/game/Weapon.h": "5ece0f1410c375ee623c3ecf8279d932fbdbf49db15f17e2ae1e58bb203f4f7e",
+    "include/game/Weapon.h": "06c961fd954800c1d8766e2d17e71707a250f4de310b30d4c99182c3845d04b9",
     "include/game/WorldObject.h": "9b5b154c87247d3295950b478724a0abe912e5092504a60bc1ce3c25b313771d",
     "include/game/WorldVolume.h": "9acfaf28c317912de14baef7ca50a3d80175ddc31dcf83cea18c80725e688318",
     "include/game-containers/AlgorithmTypes.h": "a4959e24b9ab8edd66054b63ed6d53516aebc500f71f821e27babbf931b8d51a",
@@ -4295,6 +4296,7 @@
     "src/weapons/WeaponFactoryDestroy.cpp": "8a2d2063531792d31dab47336f2b5f6eba49de46b3b22c2a1e32f0e532fc603b",
     "src/weapons/WeaponFactoryReset.cpp": "4a9c74a2aff946f1ca34c1144f559f61be3aae82c7f5265ffa1d0f29f5070687",
     "src/weapons/WeaponFactoryShutdown.cpp": "00e8222b6dca46b4ac273ee1c83a3c42c25104be9c4a67abddc8a4364cf69a30",
+    "src/weapons/WeaponObjects.cpp": "5e4518e13dfb273a0e705fa9a369aa94b749b358e7abe2299420669713c474e1",
     "src/weapons/WeaponSpritesDelete.cpp": "f4455bc3bd526f193121f24bf3b5d0a853a7801cde1ec9f1aab63c799853271b",
     "src/weapons/WeaponSpritesLoad.cpp": "d0becb17bf215b0cffb9695c53f3d62c763a53aee44c664d53d33b141ea0724b",
     "src/weapons/WeaponUpdate.cpp": "687b9bbfe5fc4ea0a47ab694d948e3f030955f11e29ef29996b162d3ee5215ef",
@@ -41771,6 +41773,24 @@
       "discarded_functions": [],
       "object_sha256": "322182bae6baff9da674ccb9ba9b4d3ed4c78ad24c789b9a8a6eb8b1864664ef",
       "linked_sha256": "60699ab1d05e248d27cc8e41c5e926da753e60339f2eb69401f689e7aead3d9d"
+    },
+    {
+      "id": "weapon_objects",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 1512,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e5e1656b7f1ca6d002cf17381d5df3eba783980fc2b3bdc78d87ef022ef574d3",
+      "linked_sha256": "a50f203a0c8631110afeb8f9145c1736a84d386b3e1ca283ae22652298b9a8c1"
     }
   ],
   "code_map": {
@@ -61098,13 +61118,6 @@
             "size": 636,
             "kind": "function",
             "name": "LoadWeaponParameters__14CWeaponFactory",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014f87c",
-            "size": 1512,
-            "kind": "function",
-            "name": "LoadWeaponObjects__14CWeaponFactory",
             "evidence": "adjacent-compiler-markers"
           },
           {

@@ -1875,7 +1875,8 @@
     "hud_hit.json",
     "hud_state.json",
     "hud_reset.json",
-    "hud_target.json"
+    "hud_target.json",
+    "weapon_objects.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

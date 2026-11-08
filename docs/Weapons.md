@@ -62,3 +62,9 @@ clears the storage and constructs the weapon in place with no null test. The ent
 the first word of the view at weapon `+0x38` link entry and object. `CreateWeaponByCRC` falls back
 to the first table entry for an unknown nonzero CRC and returns null for CRC zero. Field names are
 descriptive.
+
+`CWeaponFactory::LoadWeaponObjects` collects the distinct model names of the property records in a
+local `map<string, CStaticMesh *>`, allocates one `CStaticMesh` per name and then walks the records
+again: the first record with a name loads and initializes the next mesh through
+`TLT_LoadFromRepository` and later records share it through the map. `CStaticMesh`'s default
+constructor is inline here, so the header now defines it.

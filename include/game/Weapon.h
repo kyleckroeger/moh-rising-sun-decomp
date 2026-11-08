@@ -17,7 +17,7 @@ struct WeaponProperties_struct {
     short projectile; // +0x0e; nonzero for projectile weapons.
     unsigned char unknown_10[2];
     short infoValue1; // +0x12; returned for EWeaponInfo 1; caps the reserve in AddAmo.
-    unsigned char unknown_14[0x34 - 0x14];
+    char modelName[0x34 - 0x14]; // +0x14; loaded by LoadWeaponObjects.
     void *model;      // +0x34; copied to the static object by Init.
     char iconName[0x58 - 0x38]; // +0x38; loaded by LoadWeaponGUISprites.
     CSprite *icon;    // +0x58

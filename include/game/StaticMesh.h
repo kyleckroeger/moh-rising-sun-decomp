@@ -33,7 +33,7 @@ struct StaticMesh {
 
 class CStaticMesh {
 public:
-    CStaticMesh();
+    CStaticMesh() : mesh(0), lighting(1), fogging(1), animShapes(0), unknown10(-1), unknown14(-1) {}
     CStaticMesh(StaticMesh *mesh, bool load);
     void Init();
     void Init(void *mesh, bool load);
