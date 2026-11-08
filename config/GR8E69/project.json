@@ -2017,7 +2017,8 @@
     "scene_draw.json",
     "hud_life.json",
     "scene_AnimObjectOpcode.json",
-    "hud_pos.json"
+    "hud_pos.json",
+    "hud_compass.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

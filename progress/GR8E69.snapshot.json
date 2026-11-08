@@ -2055,6 +2055,7 @@
       "src/triggers/TriggerTransforms.cpp": "f8b57f4feb0820442db55ae6292803c0643f053bb06d6e63bdaf48b6a46c1421",
       "src/triggers/TriggerTypedFields.cpp": "9e5921a0f7a2b61330423d544c4090fc188546cc61c1c4cf7d08f8705a10e7c3",
       "src/triggers/mg_entries.h": "03bdf8ceaf0fe020483f29832a9ca98a9632d686dbc075985efa1f3e42aa6da4",
+      "src/ui/hud_compass.cpp": "9bdda816e2342f5719c0223463311fbba3755e31ec8443b3ccb26b99fb658540",
       "src/ui/hud_edge.cpp": "1abca0cf6a4b9a45fb2fac5d7de1e806a880893fac755a4b7bd4976e18f1dbed",
       "src/ui/hud_fade.cpp": "897ffdba3cd9bd040e75f0353cc92146da301bc6009751d5d57d20f974370f99",
       "src/ui/hud_hit.cpp": "25a183d3a4dcd0e0812ae846214a49623ecc05385ae57c4b25781002840331f5",
@@ -2346,7 +2347,7 @@
       "include/game/Frustum.h": "8b459091729087e5119c39887634fd28825b36e40b7a0efdf9a40c2cf58741fe",
       "include/game/GameSettings.h": "176ccc59a47f478ecbf2657870e8d1c5cabf78c0a49c18f4c91c3ee7f71aad4c",
       "include/game/GrenadeResponse.h": "a26075782a75877dd754799cb73d6fe55e2a6c6597676869bb956ba8cdb2bed4",
-      "include/game/HeadsUpDisplay.h": "5ec1470370c4da9433367bfa19281a43d699b9b63eb0b1b29cb34a723cadef90",
+      "include/game/HeadsUpDisplay.h": "d2ec0be8ec139afa6cde43d5aab5dd4fcfb39fac459cfd54732b66c19e233989",
       "include/game/IDestructible.h": "1427a08ba92fefc7fdc63c4ba8fc7aab3ec64bc8d2d1cfb7fe035346b685379f",
       "include/game/IVolume.h": "95911ba145df993a5c74b9b441c050754f2084de085a7d62b324f66e4479f2bc",
       "include/game/LegacyField.h": "95883bc2693fd14b7014d3f1e6a6e514ed5126af239699aa46d05f565bce5afe",
@@ -3150,6 +3151,7 @@
       "config/GR8E69/gchw_vd_draw.json": "8240cd2ce5d0a0f00cae88ddb2fbd1c1a198a12246488f9b6cebd10604e92e3b",
       "config/GR8E69/gchw_vd_setters.json": "34856555c8f331dcd604dd04eb40e58713689ec5a0bdc6c685507364dc3fbc70",
       "config/GR8E69/grenade_response_queries.json": "5932b489bfec46bf4c73dad2d1d3bc9faa7acf77d137fb97cac1fdea8d343ecc",
+      "config/GR8E69/hud_compass.json": "230bb48fb8e54f510b0920d41d8908fce954e3f35ce7aabab7606e82e83b90ae",
       "config/GR8E69/hud_edge.json": "38e4411f9e33a7372d878142ae341157f0dbd5bc1f8fc94dcdb75f73f263c0e3",
       "config/GR8E69/hud_fade.json": "29567ace188b82868a73f5049cfd1a8451cfca30c884aaeab4ddd16ec30bb145",
       "config/GR8E69/hud_hit.json": "756fdc1f9ba5d0f1773db523cbca80748a2e0c17e4b9fc0a93541c9d0b50a16c",
@@ -3484,7 +3486,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "a0f57f6df624305aeda3675546909e7bfd3c93905fce3096d069d25d7a55712d",
+      "config/GR8E69/project.json": "b3d6e59bdc0b2579dee1314cd39030d26c406cb85a5a84f9eb67d43c53377c76",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -4924,14 +4926,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1064552,
+    "matching_code_bytes": 1065608,
     "total_executable_code_bytes": 2492032,
-    "percent": 42.71823154758847,
+    "percent": 42.760606605372644,
     "categories": {
-      "reconstructed_game": 672336,
+      "reconstructed_game": 673392,
       "restored_library": 392216
     },
-    "matching_functions": 5101
+    "matching_functions": 5103
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -5529,6 +5531,7 @@
     "config/GR8E69/gchw_vd_draw.json": "8240cd2ce5d0a0f00cae88ddb2fbd1c1a198a12246488f9b6cebd10604e92e3b",
     "config/GR8E69/gchw_vd_setters.json": "34856555c8f331dcd604dd04eb40e58713689ec5a0bdc6c685507364dc3fbc70",
     "config/GR8E69/grenade_response_queries.json": "5932b489bfec46bf4c73dad2d1d3bc9faa7acf77d137fb97cac1fdea8d343ecc",
+    "config/GR8E69/hud_compass.json": "230bb48fb8e54f510b0920d41d8908fce954e3f35ce7aabab7606e82e83b90ae",
     "config/GR8E69/hud_edge.json": "38e4411f9e33a7372d878142ae341157f0dbd5bc1f8fc94dcdb75f73f263c0e3",
     "config/GR8E69/hud_fade.json": "29567ace188b82868a73f5049cfd1a8451cfca30c884aaeab4ddd16ec30bb145",
     "config/GR8E69/hud_hit.json": "756fdc1f9ba5d0f1773db523cbca80748a2e0c17e4b9fc0a93541c9d0b50a16c",
@@ -5863,7 +5866,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "a0f57f6df624305aeda3675546909e7bfd3c93905fce3096d069d25d7a55712d",
+    "config/GR8E69/project.json": "b3d6e59bdc0b2579dee1314cd39030d26c406cb85a5a84f9eb67d43c53377c76",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7213,7 +7216,7 @@
     "include/game/Frustum.h": "8b459091729087e5119c39887634fd28825b36e40b7a0efdf9a40c2cf58741fe",
     "include/game/GameSettings.h": "176ccc59a47f478ecbf2657870e8d1c5cabf78c0a49c18f4c91c3ee7f71aad4c",
     "include/game/GrenadeResponse.h": "a26075782a75877dd754799cb73d6fe55e2a6c6597676869bb956ba8cdb2bed4",
-    "include/game/HeadsUpDisplay.h": "5ec1470370c4da9433367bfa19281a43d699b9b63eb0b1b29cb34a723cadef90",
+    "include/game/HeadsUpDisplay.h": "d2ec0be8ec139afa6cde43d5aab5dd4fcfb39fac459cfd54732b66c19e233989",
     "include/game/IDestructible.h": "1427a08ba92fefc7fdc63c4ba8fc7aab3ec64bc8d2d1cfb7fe035346b685379f",
     "include/game/IVolume.h": "95911ba145df993a5c74b9b441c050754f2084de085a7d62b324f66e4479f2bc",
     "include/game/LegacyField.h": "95883bc2693fd14b7014d3f1e6a6e514ed5126af239699aa46d05f565bce5afe",
@@ -9473,6 +9476,7 @@
     "src/triggers/TriggerTransforms.cpp": "f8b57f4feb0820442db55ae6292803c0643f053bb06d6e63bdaf48b6a46c1421",
     "src/triggers/TriggerTypedFields.cpp": "9e5921a0f7a2b61330423d544c4090fc188546cc61c1c4cf7d08f8705a10e7c3",
     "src/triggers/mg_entries.h": "03bdf8ceaf0fe020483f29832a9ca98a9632d686dbc075985efa1f3e42aa6da4",
+    "src/ui/hud_compass.cpp": "9bdda816e2342f5719c0223463311fbba3755e31ec8443b3ccb26b99fb658540",
     "src/ui/hud_edge.cpp": "1abca0cf6a4b9a45fb2fac5d7de1e806a880893fac755a4b7bd4976e18f1dbed",
     "src/ui/hud_fade.cpp": "897ffdba3cd9bd040e75f0353cc92146da301bc6009751d5d57d20f974370f99",
     "src/ui/hud_hit.cpp": "25a183d3a4dcd0e0812ae846214a49623ecc05385ae57c4b25781002840331f5",
@@ -49567,6 +49571,25 @@
       "discarded_functions": [],
       "object_sha256": "245dfa5a8992ab98f23dbc27099a39672dc0abc043b0e07c9f97730d7a8b1ff6",
       "linked_sha256": "ec4bf2f7a9258b1e7a5d44835843cbf1f98579cb86c23df7e12b4e6c246c805d"
+    },
+    {
+      "id": "hud_compass",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 1056,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-ffast-math"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e2069325f1512e05c1a3e77ba8499d6f60c509f15e5ab8e3f74ecae4cb945c3e",
+      "linked_sha256": "83e8c44b13845f88c9e6a8aafb5c4fe589e383e1196d550fd7a52380e6624b25"
     }
   ],
   "code_map": {
@@ -71215,20 +71238,6 @@
             "size": 3060,
             "kind": "function",
             "name": "DrawBulletStats__15CHeadsUpDisplay",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80175524",
-            "size": 780,
-            "kind": "function",
-            "name": "UpdateCompassRotation__15CHeadsUpDisplayP13CPlayerObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80175830",
-            "size": 276,
-            "kind": "function",
-            "name": "GetCompassPosition__15CHeadsUpDisplayRfT1f",
             "evidence": "adjacent-compiler-markers"
           },
           {

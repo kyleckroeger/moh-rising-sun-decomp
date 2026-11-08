@@ -16,6 +16,7 @@ public:
     void GetBulletStatsRightBottom(float &, float &);
     void GetCompassPosition(float &, float &, float);
     void DrawWeaponName(const char *);
+    void UpdateCompassRotation(CPlayerObject *, float);
     void Reset();
     void UpdateHitStatus(float elapsed);
     void ChangeHitStatus(unsigned int direction);
@@ -65,7 +66,8 @@ public:
     float unknown804;            // +0x804
     int unknown808;              // +0x808
     float unknown80c;            // +0x80c
-    unsigned char unknown810[0x818 - 0x810];
+    float compassVelocity;       // +0x810
+    float compassAngle;          // +0x814
     int unknown818;              // +0x818
     unsigned char unknown81c[0x828 - 0x81c];
     int unknown828;

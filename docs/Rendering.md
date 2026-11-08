@@ -296,6 +296,10 @@ The screen object owns two sprites at `+0x04` and `+0x08` and a 16-byte block at
 
 ## CHeadsUpDisplay and the X-Files text
 
+`hud_compass` (`UpdateCompassRotation` and `GetCompassPosition`) compiles with `-ffast-math`: the damping loop's
+first test is `i >= time` and its bottom test `i < time`, a reversal of a floating test that only that flag
+allows. This is what reproduces the code; it does not establish the original setting.
+
 `HeadsUpDisplay.h` is a scoped view holding only the small state functions. `UpdateHitStatus`
 reduces four hit-direction timers at `+0x7b0` by the elapsed time scaled by `0.0166834`, and
 `ChangeHitStatus` sets a direction's timer to 3 for directions 1 through 4. Interface state setters
