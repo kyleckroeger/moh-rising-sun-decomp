@@ -1,0 +1,43 @@
+{
+  "id": "weapon_params_delete",
+  "source": "src/weapons/WeaponParamsDelete.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/stlport-runtime",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8014ff6c",
+      "size": 128
+    }
+  ],
+  "functions": [
+    {
+      "name": "DeleteWeaponParameters__14CWeaponFactory",
+      "address": "0x8014ff6c",
+      "size": 128,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_M_increment__Q24_STLt10_Rb_global1ZbPQ24_STL18_Rb_tree_node_base": "0x8027a1dc",
+    "__builtin_delete": "0x801a8990"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "weaponfactory.cpp",
+  "original_file_index": 1364
+}

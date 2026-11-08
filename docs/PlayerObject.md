@@ -106,3 +106,12 @@ in ascending `weaponType`. `CCameraShake::Update` ramps toward the target and re
 fade time when the duration passes. `CCameraShake::SetShake` (four arguments) and
 `HitPickup` have matching code but stay context: each `.rodata` holds a double literal, and the
 assembler's 8-byte padding of that section cannot verify without neighbouring functions' literals.
+
+## Look-at trigger and aim adjustment
+
+`HandleLookatTrigger` stores the trigger, its first value converted from degrees to radians and
+its second value at `+0x1090`, `+0x1094` and `+0x1098`, and clears both values for a null trigger.
+`AimAdjust::UpdatePlayer` does nothing while inactive or when the target is within 5 units of the
+camera. Otherwise it writes the yaw as the arctangent of the flattened target direction's side and
+forward components in the camera's flattened axes, and the pitch as the arcsine of the normalized
+target direction against the camera's upward slot.

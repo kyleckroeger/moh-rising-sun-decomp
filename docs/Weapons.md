@@ -68,3 +68,6 @@ local `map<string, CStaticMesh *>`, allocates one `CStaticMesh` per name and the
 again: the first record with a name loads and initializes the next mesh through
 `TLT_LoadFromRepository` and later records share it through the map. `CStaticMesh`'s default
 constructor is inline here, so the header now defines it.
+
+`CWeaponFactory::DeleteWeaponParameters` frees every record in the property map and clears the
+map's pointers; the map itself stays.

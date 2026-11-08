@@ -1891,7 +1891,10 @@
     "device_a.json",
     "device_b.json",
     "device_d.json",
-    "device_c.json"
+    "device_c.json",
+    "player_lookat_trigger.json",
+    "weapon_params_delete.json",
+    "player_aim_update.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

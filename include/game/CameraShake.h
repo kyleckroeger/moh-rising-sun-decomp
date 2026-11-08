@@ -278,11 +278,14 @@ class CPlayerObject {
         ObserverLinkBase link;   // +0x08
         unsigned char unknown_10[4];
         int field_14;            // +0x14
-        unsigned char unknown_18[0x40 - 0x18];
+        unsigned char unknown_18[0x20 - 0x18];
+        CVector3 target;         // +0x20
+        unsigned char unknown_30[0x40 - 0x30];
         int field_40;            // +0x40
         int active;              // +0x44
         void Enable();
         void UpdateTarget(const CCamera &);
+        void UpdatePlayer(float &, float &, const CCamera &);
     };
     class CCameraShake {
       public:
@@ -445,7 +448,11 @@ class CPlayerObject {
     EClsnId collisionId;     // +0xfc0
     unsigned char unknown_fc4[0x1000 - 0xfc4];
     int field_1000;          // +0x1000
-    unsigned char unknown_1004[0x10a0 - 0x1004];
+    unsigned char unknown_1004[0x1090 - 0x1004];
+    BSObject *lookatTrigger; // +0x1090; set by HandleLookatTrigger, as the next two.
+    float lookatAngle;       // +0x1094; radians, from the trigger's degrees.
+    float lookatValue;       // +0x1098
+    unsigned char unknown_109c[0x10a0 - 0x109c];
     CVector3 field_10a0;     // +0x10a0
     unsigned char unknown_10b0[0x10bc - 0x10b0];
     int cameraPitchUnhinged; // +0x10bc
