@@ -1721,7 +1721,10 @@
     "sound_pool_entries.json",
     "sound_schedule_add.json",
     "scene_ObjCreateDumpContainer.json",
-    "player_respawn.json"
+    "player_respawn.json",
+    "linked_list.json",
+    "popup_message.json",
+    "popup_message_dtor.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

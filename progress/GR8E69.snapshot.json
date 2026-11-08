@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 919024,
+    "matching_code_bytes": 920136,
     "total_executable_code_bytes": 2492032,
-    "percent": 36.87849915249885,
+    "percent": 36.92312137243824,
     "categories": {
-      "reconstructed_game": 526808,
+      "reconstructed_game": 527920,
       "restored_library": 392216
     },
-    "matching_functions": 4395
+    "matching_functions": 4436
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -593,6 +593,7 @@
     "config/GR8E69/line3_length_squared.json": "f01db7bb74004b2d6dd3b79a6f3abd6cf9340458c8d4664b95d7e403412806b6",
     "config/GR8E69/line3_projection.json": "6b4ab838c56ec3aa8957049c727fe93522a0360e4561fbeefcf716671e2b0332",
     "config/GR8E69/line3_set.json": "c86111b3624518375ae9ff8d067c7209c29107740828f58c39dae0d42b95c021",
+    "config/GR8E69/linked_list.json": "10698d65c3a4601852967416a68653cf0d67baf140c679604cbe2f81dfbc3ff1",
     "config/GR8E69/llex.json": "8b9e0adf7b6cee93eaaa63cc0f928163181057456f431d385df183319c4d0ece",
     "config/GR8E69/lmathlib.json": "51899835a51deba0c1c67ba0b6990e4c8bb952b15cbd8cdbd18a6c39a41fe246",
     "config/GR8E69/lmem.json": "50eb92b479e35bed12877647ea9ecc4bc675e7d8ee089d21104de03838f5ec3e",
@@ -824,9 +825,11 @@
     "config/GR8E69/player_weapon_overlays.json": "172965adf4a7a763b5932a9744ff75bbf384ef314e25785dee9d7617044a8d5b",
     "config/GR8E69/player_weapon_selectable.json": "c7e3f09ad1510713bfd88ee468db0fcb4c6ef18b3b89bdb414b32ea863b25668",
     "config/GR8E69/player_weapon_shutdown.json": "f90a42342572d125630e7ac3647193288c13301a5309bcdc49cc350364bc2b60",
+    "config/GR8E69/popup_message.json": "44a501ddbd7218abf7a2ca0feabc70d36c7912ad9b09415a71ebb15d3669c7d7",
+    "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "5e03bdf8ac2beb9216aba55acf16a0489d5c78ebcd6d5958b3e331d734e99da2",
+    "config/GR8E69/project.json": "60c91904d5713d42bbd3f0663188aea01c611e6cc0298adb0b62e5f7675ba482",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -1995,6 +1998,7 @@
     "include/game/LegacyFieldInfo.h": "bb18c3680e0a67e1a775b5bc35547c3ceb0fa3a880ca2530dfeee4568a2ba52b",
     "include/game/Light.h": "3e6d3b90e5f95e09203a7333f15d856e04c645967b5e2bbfe50361742a406ee7",
     "include/game/LightVolumeManager.h": "f86744d00d312738c23085d84d513fbd05c495194b97a10bf4cde2011dbaf958",
+    "include/game/LinkedList.h": "e7b4b7ed5a4f76d2630b7a7f9433e8b92b34d63a0efbb47ad4a2d9ec918f5c92",
     "include/game/MPWeaponSet.h": "86bcb747bbed525dbf73844a22a156b74e8da90bd482fb541bc707e66cddae2c",
     "include/game/MathFun.h": "d92b6bc49451fbf1b8a55fa0859336cc7b6c7290c687133dda85c3e96d14f5da",
     "include/game/MemStack.h": "e96e48316cab4c90d5f0d26ae33db27bf681687e8f88544d20683150b4bb1606",
@@ -2004,6 +2008,7 @@
     "include/game/ParticleClock.h": "3a8ff4d629de0f34fc3a89e00121d9f079a0b0b4e469829d769856ecbb303198",
     "include/game/ParticleRecipe.h": "04bba33839dcdae3132d1316e831585288f74ef842a5b01c6f6d6c37929ee61d",
     "include/game/PlacementNew.h": "49819284bb2cc2ffb2039d459ce855bd5a233bcfff0a6412ffe0bda02cd616c5",
+    "include/game/PopUpMessage.h": "3ba712308420d487fc901d235bd01e828a92eaff7fe9c095eadb933d05ba7737",
     "include/game/PropertyData.h": "952ae5ac78dc17e43053a7b905a8e58499a1faa3c7d0721269329f639095b22a",
     "include/game/SceneNode.h": "9c8006bf11094c87cfd8b9579abe72b5a2766e72e28d682b4a523546f633df98",
     "include/game/SceneObjects.h": "109aeffe16f3e26219556ed698fb247e3a2ec393afe7409923805a854475b070",
@@ -2710,7 +2715,10 @@
     "src/flexprop/database_internal.h": "ac7ab80c8f21dcda7bda4ed5ea88929358f9e58c47f693b6b44a2a84015e6489",
     "src/flexprop/matrix.cpp": "96805490c5ab57a3e2dc9005c54d3988a1c734e4c824c093e931ef3717dfa779",
     "src/frontend/hash.cpp": "6d1834f84056ea091ae722973283ab6edc0b53f73938a4866d969db56d62d55b",
+    "src/frontend/popup_message.cpp": "6b62ed9879ae5d79a68fa9fbbe750817b3d737f27ccc04be2c671d1fc1eb39af",
+    "src/frontend/popup_message_dtor.cpp": "b0fa8b929b9341635239ac8359ca62485761cb69af3ae611c660b69221771b0f",
     "src/frontend/uppercase.cpp": "58d80513a4f76209e1895c6943d7e05837625be3bd2687efe32159afd23f70dd",
+    "src/game/LinkedList.cpp": "7361285bbff6c1c98f4751ffa81c4a80a8de7b348144d43b880f40ca98feb332",
     "src/game/string_80277f18.cpp": "b6c79191f3a19d54855216cdbc6cf512f4fa474cc60d95837b45a4acec64016c",
     "src/geometry/animated_volume_head.cpp": "23df314f9ced954f09dc466dd40c5733f234b699a9f5fb655a3c2e12ae551ba4",
     "src/geometry/animated_volume_tests.cpp": "f840db7fa1a281f301e273992e262605cdd17e463498259772e58a6746b88724",
@@ -38637,6 +38645,60 @@
       "discarded_functions": [],
       "object_sha256": "0441739fdc434268169495d80de10ad2ffe138359321742bc4215c2763f06dd5",
       "linked_sha256": "ef76a37a6b43852d43ec783dfa14822c0c961e2fb66fcac8fdc5d0a699c712aa"
+    },
+    {
+      "id": "linked_list",
+      "category": "reconstructed_game",
+      "functions": 12,
+      "code_bytes": 476,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "11012ff0830f766637439ee4473de70e276049a1d2d9f96d712e1fb9090e4897",
+      "linked_sha256": "d8bdedf220c3a6b7fab9910c6e79ab36feec547c056e0dc9cfc1d26c07e573c0"
+    },
+    {
+      "id": "popup_message",
+      "category": "reconstructed_game",
+      "functions": 28,
+      "code_bytes": 596,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "506817156667f26d531f99db919c9d6381df917f03c92d4ddcf16d5870a90b69",
+      "linked_sha256": "7a99dd2bc19e626da608549fa0de0ff9b68495aa059e29ded35f2d41151aa8ae"
+    },
+    {
+      "id": "popup_message_dtor",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 40,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "16db9b9dc7f7f88ed4b23fdfd9a9ffeed764ccd4fb4a24e19f23aea8e37c5180",
+      "linked_sha256": "56047e084e2a85911f0c2a11fabe1ba707e19cd9049c60a4e82c00f250885faa"
     }
   ],
   "code_map": {
@@ -53013,101 +53075,6 @@
         ]
       },
       {
-        "name": "Unmatched files/LinkedList.cpp [inferred file group]",
-        "file_record": 166,
-        "file_name": "LinkedList.cpp",
-        "ranges": [
-          {
-            "address": "0x800e0c94",
-            "size": 12,
-            "kind": "function",
-            "name": "__18CLinkedListElement",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e0ca0",
-            "size": 40,
-            "kind": "function",
-            "name": "_._18CLinkedListElement",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e0cc8",
-            "size": 16,
-            "kind": "function",
-            "name": "AddElementAfterMe__18CLinkedListElementP18CLinkedListElement",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e0cd8",
-            "size": 8,
-            "kind": "function",
-            "name": "GetNextElement__18CLinkedListElement",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e0ce0",
-            "size": 24,
-            "kind": "function",
-            "name": "__11CLinkedList",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e0cf8",
-            "size": 40,
-            "kind": "function",
-            "name": "_._11CLinkedList",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e0d20",
-            "size": 44,
-            "kind": "function",
-            "name": "AddElementAtBeginning__11CLinkedListP18CLinkedListElement",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e0d4c",
-            "size": 84,
-            "kind": "function",
-            "name": "AddElementAtEnd__11CLinkedListP18CLinkedListElement",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e0da0",
-            "size": 88,
-            "kind": "function",
-            "name": "RemoveElement__11CLinkedListP18CLinkedListElement",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e0df8",
-            "size": 52,
-            "kind": "function",
-            "name": "RemoveFirstElement__11CLinkedListP18CLinkedListElement",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e0e2c",
-            "size": 52,
-            "kind": "function",
-            "name": "RemoveElementGivenPrevious__11CLinkedListP18CLinkedListElementT1",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e0e60",
-            "size": 16,
-            "kind": "function",
-            "name": "IsEmpty__11CLinkedList",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x800e0c94",
-          "0x800e0e70"
-        ]
-      },
-      {
         "name": "Unmatched files/SearchNode.cpp [inferred file group]",
         "file_record": 167,
         "file_name": "SearchNode.cpp",
@@ -63207,213 +63174,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x801783f0",
-            "size": 40,
-            "kind": "function",
-            "name": "_._12PopUpMessage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80178418",
             "size": 344,
             "kind": "function",
             "name": "Reset__12PopUpMessage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80178570",
-            "size": 8,
-            "kind": "function",
-            "name": "Set_placement__12PopUpMessageUc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80178578",
-            "size": 12,
-            "kind": "function",
-            "name": "Set_screenLocs__12PopUpMessageUsUs",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80178584",
-            "size": 8,
-            "kind": "function",
-            "name": "Set_property__12PopUpMessageUc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017858c",
-            "size": 8,
-            "kind": "function",
-            "name": "Set_onScreenTime__12PopUpMessagef",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80178594",
-            "size": 8,
-            "kind": "function",
-            "name": "Set_textSize__12PopUpMessageUc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017859c",
-            "size": 8,
-            "kind": "function",
-            "name": "Set_viewportID__12PopUpMessages",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801785a4",
-            "size": 8,
-            "kind": "function",
-            "name": "Set_messageID__12PopUpMessages",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801785ac",
-            "size": 20,
-            "kind": "function",
-            "name": "Set_rgba__12PopUpMessageUcUcUcUc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801785c0",
-            "size": 8,
-            "kind": "function",
-            "name": "Set_top__12PopUpMessageUs",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801785c8",
-            "size": 8,
-            "kind": "function",
-            "name": "Set_bottom__12PopUpMessageUs",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801785d0",
-            "size": 8,
-            "kind": "function",
-            "name": "ChangeAvailability__12PopUpMessageUc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801785d8",
-            "size": 40,
-            "kind": "function",
-            "name": "SetString__12PopUpMessagePCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80178600",
-            "size": 8,
-            "kind": "function",
-            "name": "Available__12PopUpMessage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80178608",
-            "size": 8,
-            "kind": "function",
-            "name": "Get_placement__12PopUpMessage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80178610",
-            "size": 8,
-            "kind": "function",
-            "name": "Get_screenLocX__12PopUpMessage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80178618",
-            "size": 8,
-            "kind": "function",
-            "name": "Get_screenLocY__12PopUpMessage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80178620",
-            "size": 8,
-            "kind": "function",
-            "name": "Get_property__12PopUpMessage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80178628",
-            "size": 8,
-            "kind": "function",
-            "name": "Get_onScreenTime__12PopUpMessage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80178630",
-            "size": 8,
-            "kind": "function",
-            "name": "Get_viewportID__12PopUpMessage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80178638",
-            "size": 8,
-            "kind": "function",
-            "name": "Get_messageID__12PopUpMessage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80178640",
-            "size": 8,
-            "kind": "function",
-            "name": "Get_r__12PopUpMessage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80178648",
-            "size": 8,
-            "kind": "function",
-            "name": "Get_g__12PopUpMessage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80178650",
-            "size": 8,
-            "kind": "function",
-            "name": "Get_b__12PopUpMessage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80178658",
-            "size": 8,
-            "kind": "function",
-            "name": "Get_top__12PopUpMessage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80178660",
-            "size": 8,
-            "kind": "function",
-            "name": "GetString__12PopUpMessage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80178668",
-            "size": 88,
-            "kind": "function",
-            "name": "MoveTop__12PopUpMessage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801786c0",
-            "size": 244,
-            "kind": "function",
-            "name": "Scroll__12PopUpMessage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801787b4",
-            "size": 16,
-            "kind": "function",
-            "name": "UpdateDisplayTime__12PopUpMessagef",
             "evidence": "adjacent-compiler-markers"
           }
         ],
