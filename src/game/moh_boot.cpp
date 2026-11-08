@@ -14,7 +14,7 @@ void ICInvalidateRange(void *start, unsigned int length);
 void PPCSync();
 void OSResetSystem(int reset, unsigned int resetCode, int forceMenu);
 void CPU_detect();
-void TIMER_init(int rate);
+int TIMER_init(int rate);
 void THREAD_init();
 void SYNCTASK_init();
 void SYNCTASK_add(void (*task)(int, int), int, int);

@@ -461,3 +461,12 @@ from `+36`. `SNDDRV_DSPMixerUpdate` copies targets to the current values on flag
 `sndgs` holds a channel map at `+716`, six rows of six 16-bit values indexed by channel count less one; `SNDI_patchtohdr`
 adds it to each channel's pan offset. A big-file entry's offset field may be wider than 4 bytes; `BIG_locateentryz` reads
 it as 64 bits and stores the low word. Those offsets are verified; the member names are inferred.
+
+The runtime's variadic entry points (`REAL_abortmessage`, `SYSTEM_abortmessage`, `PRINT_string`, `FONT_drawtextfa`)
+copy the record `__builtin_saveregs` builds with inline word moves. Under `cc1plus` the standard `va_start` expands to
+`__builtin_memcpy`, which here is a call to `memcpy`, so these units write the same copy as a record assignment. That
+form is inferred. The same functions also match with the standard macro when compiled as C, but the code map names
+their files `.cpp`. The mixer hooks (`MIXinitfn` through `MIXsetpitchfn`) are declared with the signatures of the
+`MIX_*` functions they hold; `MIX_audioslice`'s parameters are inferred from its caller in the sound driver thread,
+since it is not reconstructed yet. `TIMER_init` reads the bus clock from low memory at `0x800000F8`; `OSLOWMEM` is an
+inferred view.

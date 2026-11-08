@@ -1654,8 +1654,6 @@
     "capsule_test_point.json",
     "fiber_test_point.json",
     "ea_memtail.json",
-    "ea_inittmr_a.json",
-    "ea_inittmr_b.json",
     "weapon_factory_ctor.json",
     "weapon_factory_shutdown.json",
     "capsule_test_capsule.json",
@@ -1991,7 +1989,11 @@
     "scene_HierObjectSwapOut.json",
     "scene_SoldierBulletHit.json",
     "scene_AnimObjectAttempt.json",
-    "scene_AnimObjectBegin.json"
+    "scene_AnimObjectBegin.json",
+    "ea_abortmsg.json",
+    "ea_fontdrawf.json",
+    "ea_printstr.json",
+    "ea_inittmr.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

@@ -55,7 +55,7 @@ struct SNDDRVVIEW {
 };
 
 extern SNDDRVVIEW snddrv;
-extern void (*MIXplayinitfn)(int, int, int, int, int, void*, int, int, int, int, int, int, int, int);
+extern void (*MIXplayinitfn)(int, int, int, void*, void*, unsigned char*, int, int, int, int, int, int, int, int);
 extern void (*MIXplayfn)(int);
 
 int SNDPLATFORM_setpitch(int);
@@ -79,7 +79,7 @@ int SNDPLATFORM_packetplay(int index, int voiceindex, int timemult, int, int low
     voice->count = format->channels;
     if (voice->flags & 4) {
         for (i = 0; i < voice->count; i++)
-            MIXplayinitfn(voice->channels[i] - sndgs.firstvoice, voice->type, 0, 0, 0, attr->data[i], voice->count, 0, -1, -1, 0, 0, attr->field7, i);
+            MIXplayinitfn(voice->channels[i] - sndgs.firstvoice, voice->type, 0, 0, 0, (unsigned char*)attr->data[i], voice->count, 0, -1, -1, 0, 0, attr->field7, i);
         SNDPLATFORM_setpitch(voice->channels[0]);
         SNDPLATFORM_set3dpos(voice->channels[0]);
         SNDPLATFORM_setvol(voice->channels[0]);

@@ -1,5 +1,11 @@
 // REAL timer set-up: a periodic OS alarm posts a message to the timer thread,
 // which runs the registered timer handlers.
+/* inferred: low memory as far as used here */
+struct OSLOWMEM {
+    unsigned char unknown00[248];
+    unsigned int busclock;
+};
+
 struct OSAlarm {
     unsigned char unknown00[40];
 };
@@ -28,11 +34,31 @@ extern OSAlarm Alarm;
 extern char bIsAlarmInited;
 extern char bIsTimerInited;
 
-void AlarmHandler(OSAlarm*, OSContext*);
+static void AlarmHandler(OSAlarm*, OSContext*);
 
-void InitAlarm();
+void InitAlarm() {
+    if (!bIsAlarmInited) {
+        OSInitAlarm();
+        bIsAlarmInited++;
+    }
+}
 
-extern "C" int TIMER_init(int hz);
+extern "C" int TIMER_init(int hz) {
+    if (bIsTimerInited)
+        return TIMERhz;
+
+    if (hz == 0)
+        hz = 100;
+    TIMERhz = hz;
+
+    OSTime now = OSGetTime();
+    OSTime period = (int)(((OSLOWMEM*)0x80000000)->busclock / 4 * (1.0f / hz));
+    ttInit();
+    OSSetPeriodicAlarm(&Alarm, now, period, AlarmHandler);
+    bIsTimerInited = 1;
+    REAL_addexit(TIMER_restore);
+    return TIMERhz;
+}
 
 extern "C" void TIMER_restore(void) {
     if (bIsTimerInited) {
@@ -51,4 +77,6 @@ void ttDoTimerMsg() {
     }
 }
 
-void AlarmHandler(OSAlarm*, OSContext*);
+static void AlarmHandler(OSAlarm*, OSContext*) {
+    ttMsg((TIMERMSG)0);
+}

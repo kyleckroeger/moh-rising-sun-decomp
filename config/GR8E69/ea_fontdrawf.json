@@ -1,6 +1,6 @@
 {
-  "id": "ea_inittmr_a",
-  "source": "src/ea/inittmr_a.cpp",
+  "id": "ea_fontdrawf",
+  "source": "src/ea/fontdrawf.cpp",
   "category": "reconstructed_game",
   "compiler_version": "3.8.1",
   "compiler_flags": [
@@ -19,30 +19,25 @@
   "sections": [
     {
       "name": ".text",
-      "address": "0x802177e4",
-      "size": 56
+      "address": "0x80206220",
+      "size": 204
     }
   ],
   "functions": [
     {
-      "name": "InitAlarm__Fv",
-      "address": "0x802177e4",
-      "size": 56,
+      "name": "FONT_drawtextfa",
+      "address": "0x80206220",
+      "size": 204,
       "binding": 1
     }
   ],
   "externals": {
-    "OSInitAlarm": "0x80253a60",
-    "bIsAlarmInited": "0x804512d8"
+    "FONT_drawtexta": "0x80206198",
+    "vsprintf": "0x80264dfc"
   },
-  "local_externals": [
-    "bIsAlarmInited"
-  ],
-  "sda_externals": [
-    "bIsAlarmInited"
-  ],
+  "sda_externals": [],
   "discarded_functions": [],
   "undefined_in_discarded_code": [],
-  "original_file": "inittmr.cpp",
-  "original_file_index": 2975
+  "original_file": "fontdrawf.cpp",
+  "original_file_index": 2774
 }

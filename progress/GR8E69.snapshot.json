@@ -283,6 +283,7 @@
       "src/dolphin/syn/__syn.h": "08b05a8b8e04e272305efa50936912ac395d76d937bd73a403065601e469f8ee",
       "src/dolphin/vi/__vi.h": "22201b234d317ca8d2724210a124ac6ceb9708df13c1b73eae87afab8e625b7b",
       "src/dolphin/vi/vi.c": "a39c975336daa3c42a5a186d68d0c9c39e91aa0df0003b1b052eb767cdf4beed",
+      "src/ea/abortmsg.cpp": "0b79a39d8c558fd89173cd95de69b33e33ddc2bdb3aabb046b3c03ef752a748b",
       "src/ea/audioplayer.cpp": "d7cb0381566d28d5a4bea0e4e58d44991b3c417e7b49ab028af8d0ddd136c541",
       "src/ea/debugbreak.cpp": "d50f4e6762b140affcc38bffd64450e3fd3e14f625ff3c1b0101c206ec715ef4",
       "src/ea/exit.cpp": "aee2216bb9de55d7631911b45e6f3f0375214505293efc561cc5dbd69d6751a5",
@@ -293,6 +294,7 @@
       "src/ea/fontchar.cpp": "2980d56dfbdbbeb46cba293f7c2397b7518079ba32d510118510c9301ee15a47",
       "src/ea/fontcreate.cpp": "fb846d119db1a373f03387cc09f0db8bf0c80ede2c1efb305914580be2630def",
       "src/ea/fontdraw.cpp": "a2add2aca7bf8e5dfd9f636944bcb77c9f833207222f054469a3c787cfaa9258",
+      "src/ea/fontdrawf.cpp": "b9a46a11e372dd93ef5c6af59e10fb25ab29795b51ec36f9d6cfa0832b14712b",
       "src/ea/fontdriver.cpp": "799464786df81aa82291f1d18699c4c4d2283338c1e6c75e4e508bc368470f9c",
       "src/ea/fontinit.cpp": "23ee3e1e4457de8dba71c1b08e1355e02844f0753acb1b2cdf4d8bc9ab7e7fa3",
       "src/ea/fontkern.cpp": "f9c9387cc69998804f226f0bf31880bb8dc9a5d7df7623a5df8b393f7e583e93",
@@ -301,8 +303,7 @@
       "src/ea/gchw_vd_setters.cpp": "066b3a421094bb5f71c42682307b2babaad374f41568eea555087a3cea962a7e",
       "src/ea/hlafile.cpp": "69eb87c6ebec4acc4d2789e1d59f3ff40b0313867571560e6dc885a7bc4ac823",
       "src/ea/hlsfile.cpp": "41342545a03c92e31fbf7cf30fb392194f2274d76ba1f85f91cbfa2a2b396b05",
-      "src/ea/inittmr_a.cpp": "7d0ad08c905b592ab18ca17521d0a98096ba7f6521453a2886f82fcf6fa530e9",
-      "src/ea/inittmr_b.cpp": "f30b3ae57b4b2d0ad88e50063edec0876bc26509f2cd0e4a5c1d3932f596fd64",
+      "src/ea/inittmr.cpp": "585ddaebe0636a6c5c89c84e33e757662546df54edd516fa89c149e59804f5cf",
       "src/ea/initvblt.cpp": "0e995f40d8d694cb7b05a068499bd563628ea40041658c6c8a9ec411b17deec3",
       "src/ea/ipad.cpp": "98849d1f0c36bbf03fefadce134c7456c2bf36a853db3bb967d1b79a9e66491a",
       "src/ea/ipad_vbl.cpp": "66c3f6f31d5eb828019a9d019df2d806941430558437500d7702bf522559ff84",
@@ -323,6 +324,7 @@
       "src/ea/mutex2.cpp": "84bb5fd9e59595a55eadbe25b9bac7a9262faf5c40f7bb0cc9d23e6b0e8fbf9b",
       "src/ea/pad.cpp": "1e0d78a24bcbcf5b3e857e77011296a3e7dcce2a29666cee124d12bbdd7c1603",
       "src/ea/printn3.cpp": "e260e8f11be93a4af6246aa0777791744bb479c223f80e9e78618811d1780c4b",
+      "src/ea/printstr.cpp": "5cd4d23d2e68e385104b07d6dc27489523a359a97fbe681989e574ace2b58ce3",
       "src/ea/rcmp2real.cpp": "cd31e2670f3b27a4a91c8962b8b4ba680f21e773e9023525cf718f699131d8ff",
       "src/ea/rcmpbase_decoder.cpp": "20f7a31b30a0d77509a364c36716411c714e4eb83ef4e0958b3b3e99d14597da",
       "src/ea/rcmpbase_frames.cpp": "ed4b0dad56110b523529a0629bff7c8186b6681450457e980f39e02b01bc4b52",
@@ -337,7 +339,7 @@
       "src/ea/syncfile.cpp": "3df57d815e9d7e8ef396fdcf881e8e89ed7b7e77c762f80a3a18c0bf42ed09ba",
       "src/ea/systask.cpp": "064e88a22a3eb4ce2abeccd180f0df17d49e86028b44b3fc0a54e8cf7365d4bb",
       "src/ea/threads.cpp": "2c7671ef74c09c1d408ee608078336f80cd6017d0caffdfa6e53ac79d5edf327",
-      "src/ea/timer_tail.cpp": "8a34ce2d6e79a388a856400e71ee18545ca2e0732f04571cbc174e558340c2bc",
+      "src/ea/timer_tail.cpp": "9924675f9ecc8fe7d4d9c692d9f3d917d1395c4a1a735b2f973e2d81dff05fae",
       "src/ea/timerthread.cpp": "20cae02efd81691bf08a6c1e883b2df0059457929220cab81bb80a2b605cb50a",
       "src/eagl/eagl_common_state_strings.cpp": "77d62062b069735a6f417ea2a70af129c6c8a18d87c7ab771dbdd531c6beb753",
       "src/eagl/eagl_cpt_color.cpp": "aa4f541f224ab98ddd4e58dbe1134876cbad6a34b5bc8b6797d39bf7b666ce7f",
@@ -588,7 +590,7 @@
       "src/game/input_ports.cpp": "c8e073d6d9e25381539ae8de570e54222add652af5b1400642cfc9159c14f36e",
       "src/game/input_state.cpp": "c875939ff44d67e321e0e286ebddc6e5880d2dc966559b8b2d9d23194da84de1",
       "src/game/input_tail.cpp": "3a03d39cf2824ead24e4e228c4b05c680c5b657609186cad161af73edb4987bf",
-      "src/game/moh_boot.cpp": "337908fd8daca3b30d58a8b0f42af4ba96ede0faf16b23cfb3317e9497a3f8a7",
+      "src/game/moh_boot.cpp": "76020b8073461dad019ff9996286629044e11c772c3bbd5926123de484d3f505",
       "src/game/moh_ld.cpp": "81ac57022ce25bb564ee521fe14a00e58a21a7a2ff7f482a7bed4d7a24806c43",
       "src/game/moh_loader.cpp": "eb5a65068e81a7d792ef4a16f8dffb817e5b4965e2534956940d449f4676cd2e",
       "src/game/moh_ls.cpp": "f55328123c5554d493c6f9452253e7f4a65f2e1fd8e5d29e81f3c1c11fd1615c",
@@ -1676,7 +1678,7 @@
       "src/sound/ea/sdrv_caps.cpp": "2f82c39a7b13dded87ff8dd951406ca5d5e364c2db15376f5b493de11c8b1940",
       "src/sound/ea/sdrv_frame.cpp": "15c1f88c02d8246326b712886b8604f76cbaffa5654f254477ff57bdd91dc4b7",
       "src/sound/ea/sdrv_mem.cpp": "5566f684635d96a19ad801faa3452d747c7e5bee6e934a12ae8f7aa5e7d6b416",
-      "src/sound/ea/sdrv_packetplay.cpp": "84c11356434a9acfd5dda15b21a67f41b96bc62bdc268e4e1b7dc615e7f6914d",
+      "src/sound/ea/sdrv_packetplay.cpp": "8ffe5dfb4cda804a653548c7b895dc4e7123859cca9750f3905c541ee64bcddc",
       "src/sound/ea/sdrv_pkt.cpp": "cd4ae40b0b66b16dad028f7fa4a8326a4dabb2cd9454ab60039d365cea23a3a1",
       "src/sound/ea/sdrv_pktdestroy.cpp": "dd661c40241590dd7962c636c75e2f2e07aef1fc230af38dfdc3cb7b339c3691",
       "src/sound/ea/sdrv_playtimbre.cpp": "e4ba6e2cc4cd0a12b3b2cbb3a7d96489487534e50b87bfe0fd40648adf121c93",
@@ -1720,7 +1722,7 @@
       "src/sound/ea/sinitut.cpp": "a26ae5a04af01a9949c0a3fa88a535827a4522e4f49b19afe62ce2d5af4c8874",
       "src/sound/ea/sinitxa.cpp": "a160f607e26ef32fd51dd8eddd9f46dbd803afb4771ae5e62bc918ff50027385",
       "src/sound/ea/slinklst.cpp": "7d0eed82063720c8424d4e5e54c681608a3c9dec7dc9427f3f99393408aff307",
-      "src/sound/ea/slinkmix.cpp": "3cf4c749e4f9caf67c6276ed5df5b66b07e13be40dc7192b1d952b35fd5225f5",
+      "src/sound/ea/slinkmix.cpp": "04e07af69cbd76a68d368b4dac60062f3516f035be2ba09287792eb35edfc42b",
       "src/sound/ea/smasterv.cpp": "774e8c0a6325c245918e0b3f422bd8501c3ade1bc4617a0e4616fc5558651678",
       "src/sound/ea/smemhigh.cpp": "9d4e5fdab61801b5137f48edce40a97c640cc82716519b9bc2763996c350de76",
       "src/sound/ea/smemman_a.cpp": "93ffe5589a086fc21403f7bd7cc89333276bdad33820cdebee0ed73cb10509aa",
@@ -1746,9 +1748,9 @@
       "src/sound/ea/smixwet.cpp": "6534625c8ed7ee6a0224ce2aafa98a838302558af32941b27667afff5b9e81d1",
       "src/sound/ea/snddrv.cpp": "c38bf90945f14551ff76e823e25be098ead109aef2d49f55a597705e56f6e15b",
       "src/sound/ea/snddrv_alloc.cpp": "0eb5e727c638925789ab06f1de6ac0bbd7e8a758e9a53aeffe2267fe03ee8a73",
-      "src/sound/ea/snddrv_cb.cpp": "5dcb6b4fd8a17d74691a0c85e0604432e0328e69fe5dc02fa80512d0a29b27be",
-      "src/sound/ea/snddrv_dma1.cpp": "5e4998f880a691c775ec1ce116a852d613cbe75cc8fd39c72219c0e5fdced0ca",
-      "src/sound/ea/snddrv_dma2.cpp": "034aed65efc3f7584a53794ce6e16c30db86d67155eeec65fdf743dc6de868e4",
+      "src/sound/ea/snddrv_cb.cpp": "2982ae92a674fbed66101555150a8971ab707dd3f743260c760fcd7230d6a53c",
+      "src/sound/ea/snddrv_dma1.cpp": "59a36586f2a9a1372f9c72bcd888237b2d5336cb76d2752d8a3a66297a3a99c9",
+      "src/sound/ea/snddrv_dma2.cpp": "8511bc36ef2388ec40a9d83624f10e84f740739d11896463d4ef810950f27d3f",
       "src/sound/ea/snddrv_frame.cpp": "5c9b44d19268da543121364fe7fc24a7970f98ddcf3cbec42ca700c4abf672fa",
       "src/sound/ea/snddrv_serve.cpp": "ad5932ecdf09861d9814d997c7968a31490d26a04ca66154c137e3ff2b60dc3c",
       "src/sound/ea/sover.cpp": "195a5eb257fd99eb0337c24b3f263591fc147eb5c4d343a039faaf66c2cbd950",
@@ -2817,6 +2819,7 @@
       "config/GR8E69/dvdidutils.json": "146c4fe18f3d3e8eef2b1cd674155ffd5696c80b23ada1f47cbf175b43d2e1ea",
       "config/GR8E69/dvdlow.json": "e7c3f8c921d458b9f0a4c9c1b60d76522a25bbcc6eff2994cf01b304525c2630",
       "config/GR8E69/dvdqueue.json": "50714e893a617523e6e28eff930b1d91d1a5eaa8a00c9cce217acf50c4337821",
+      "config/GR8E69/ea_abortmsg.json": "e1bd829916e8870d6b08251b3db71865de8ddbcfb655c4e832845188b1e151bd",
       "config/GR8E69/ea_debugbreak.json": "2382963befab86f6d70e08776b7b78784dc1eb1731b6edae60d3731be0de1599",
       "config/GR8E69/ea_exit.json": "de78f22a5df786df5c55dbc0478097d02d84041ef7ec7c833b28bcf167a6e187",
       "config/GR8E69/ea_filedev.json": "d4d68515f9bc5ca3a34326f97480829907a7d919a986150d48cfac4211bf2e70",
@@ -2826,14 +2829,14 @@
       "config/GR8E69/ea_fontchar.json": "1e52ab7673f6e190e13a35e0fe6fd63489a5cf38806f041eb69bb3cb4a9a1769",
       "config/GR8E69/ea_fontcreate.json": "8bde187429767df88e9c261b790b4a86fbe3edced2e17abfb412777116b78049",
       "config/GR8E69/ea_fontdraw.json": "51bc483feba71a2948e8618f24e872d17068d6160d6fa15866e94754d6a0314b",
+      "config/GR8E69/ea_fontdrawf.json": "92245a2b7d2b16631e9f6b624aab54eba32ae6f7da0a30e1d3865a7ce133b840",
       "config/GR8E69/ea_fontdriver.json": "5bba887e0c2189b785c6846c187e135359e4049e49328dadf4f25672a7e11022",
       "config/GR8E69/ea_fontinit.json": "d2ffe41e40449cc9c2c8ed941a7be52d60c8ae6c300145da58cb9a3be2db4b14",
       "config/GR8E69/ea_fontkern.json": "e4a435ce7a1f1666230acea5708173eea20820d87535f4f48391990622bfd154",
       "config/GR8E69/ea_fontnull.json": "ae8bc4044f12649d2ed70538aedfecd77fa8b69915a1480eb005a302413b4c9c",
       "config/GR8E69/ea_hlafile.json": "177245a6451643a6ab519ee15b4c344f4656f8a130434b290787558d78a1eb92",
       "config/GR8E69/ea_hlsfile.json": "8f56cc815378079dd1c69ac409956abf8667e6dcc35eeb73d00901ac143bc56f",
-      "config/GR8E69/ea_inittmr_a.json": "75e502d7bf7002b843d314e567872b634f8de4037a5bddc8b90fe650ac1885b2",
-      "config/GR8E69/ea_inittmr_b.json": "2986ddd5ab247544cf224c4854a6edb543ae3877681d1a61e753b41cdf61acbc",
+      "config/GR8E69/ea_inittmr.json": "151a5a305c1c96240db1a9c24def3875836e1c885426d7e30a5fadc42c8ff2cf",
       "config/GR8E69/ea_initvblt.json": "aec27a099f5ce34de68ae4012da6f05d5e60073d1bc463e794becc106d0fcb4a",
       "config/GR8E69/ea_ipad.json": "4a48bb2cf6c769f01d790b8c023bdbd7b99389261c6276ad475c12175ed8f6f3",
       "config/GR8E69/ea_ipad_vbl.json": "7d6de802ef682882fd356ed8e55b56cdcb87e3eb6a834680c5b8c5a51a87f7a2",
@@ -2854,6 +2857,7 @@
       "config/GR8E69/ea_mutex2.json": "a32b94532faacdd05795449967bacf7df3ca6399a141625db1d7a4750ba66f74",
       "config/GR8E69/ea_pad.json": "765aefb64290fe8520f0ec62750239dae4c10e3a499a8f5c9ab1dac82c2a6616",
       "config/GR8E69/ea_printn3.json": "b7f6439bf63ccceeef282f8204d6d17143f87fa8d35cb9de43da82bc53016a7f",
+      "config/GR8E69/ea_printstr.json": "a85d30aa56e60507bba123ce99270605fa26aa29ccf3119f0ad033e760a4262b",
       "config/GR8E69/ea_rcmp2real.json": "a05bdac5ae33f2e95a709a737a622fde986db04f4f0337a63ebdcc644614a5da",
       "config/GR8E69/ea_signals.json": "739f8d08688ad92e47b40d2b21ecf7e58f5aecc8da4c57e7b0b8b15e058e419c",
       "config/GR8E69/ea_stream_api.json": "fa97dda34ba9fe1a759e47c151cb0c9252c3151a0f4ec852db1ab7930b21baa0",
@@ -2866,7 +2870,7 @@
       "config/GR8E69/ea_syncfile.json": "5ad7e6a48ddd491ff43841235023597f0e85b8175ab705de2379f78c7ea3b886",
       "config/GR8E69/ea_systask.json": "141ec34b15f33585ca8126e62d8155683f6b747bb061d43d88ac144d23f18663",
       "config/GR8E69/ea_threads.json": "b334b5342f45164624e235b5721cf91d927372692207369e96d177e29430be3f",
-      "config/GR8E69/ea_timer_tail.json": "1781f460ba94bfb6df1cf295cb93c69e1176a3b454a159b6d182e86198628398",
+      "config/GR8E69/ea_timer_tail.json": "16390c54c6bef5d41daafa8458d451e9064fb9a4269d668fbd4626a49d02aa89",
       "config/GR8E69/ea_timerthread.json": "bfa69e1a4f9067764b5ab1a8149fa69fcedac577e7971798acc0c9564c317163",
       "config/GR8E69/eagl_anim_anim_bank.json": "099184ad089e02e1952a18845c77b39f4e014ff9d32791205e9bbdc685b078ff",
       "config/GR8E69/eagl_anim_base.json": "385c7ed571a411e39f9d3051397d219e970bb687c378c1fbf7a969c9ea0f4089",
@@ -3444,7 +3448,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "8223fa22ece1afc9ce77553ddc81fb5bbb09e00b8772011d7eb4c8153c4daa66",
+      "config/GR8E69/project.json": "2a34ce26ed553442575ab7f6173b87126b8e39988b1d2426dc518c168b6d6e14",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -4868,14 +4872,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1048164,
+    "matching_code_bytes": 1049260,
     "total_executable_code_bytes": 2492032,
-    "percent": 42.060615594021264,
+    "percent": 42.10459576763059,
     "categories": {
-      "reconstructed_game": 655948,
+      "reconstructed_game": 657044,
       "restored_library": 392216
     },
-    "matching_functions": 5053
+    "matching_functions": 5058
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -5170,6 +5174,7 @@
     "config/GR8E69/dvdidutils.json": "146c4fe18f3d3e8eef2b1cd674155ffd5696c80b23ada1f47cbf175b43d2e1ea",
     "config/GR8E69/dvdlow.json": "e7c3f8c921d458b9f0a4c9c1b60d76522a25bbcc6eff2994cf01b304525c2630",
     "config/GR8E69/dvdqueue.json": "50714e893a617523e6e28eff930b1d91d1a5eaa8a00c9cce217acf50c4337821",
+    "config/GR8E69/ea_abortmsg.json": "e1bd829916e8870d6b08251b3db71865de8ddbcfb655c4e832845188b1e151bd",
     "config/GR8E69/ea_debugbreak.json": "2382963befab86f6d70e08776b7b78784dc1eb1731b6edae60d3731be0de1599",
     "config/GR8E69/ea_exit.json": "de78f22a5df786df5c55dbc0478097d02d84041ef7ec7c833b28bcf167a6e187",
     "config/GR8E69/ea_filedev.json": "d4d68515f9bc5ca3a34326f97480829907a7d919a986150d48cfac4211bf2e70",
@@ -5179,14 +5184,14 @@
     "config/GR8E69/ea_fontchar.json": "1e52ab7673f6e190e13a35e0fe6fd63489a5cf38806f041eb69bb3cb4a9a1769",
     "config/GR8E69/ea_fontcreate.json": "8bde187429767df88e9c261b790b4a86fbe3edced2e17abfb412777116b78049",
     "config/GR8E69/ea_fontdraw.json": "51bc483feba71a2948e8618f24e872d17068d6160d6fa15866e94754d6a0314b",
+    "config/GR8E69/ea_fontdrawf.json": "92245a2b7d2b16631e9f6b624aab54eba32ae6f7da0a30e1d3865a7ce133b840",
     "config/GR8E69/ea_fontdriver.json": "5bba887e0c2189b785c6846c187e135359e4049e49328dadf4f25672a7e11022",
     "config/GR8E69/ea_fontinit.json": "d2ffe41e40449cc9c2c8ed941a7be52d60c8ae6c300145da58cb9a3be2db4b14",
     "config/GR8E69/ea_fontkern.json": "e4a435ce7a1f1666230acea5708173eea20820d87535f4f48391990622bfd154",
     "config/GR8E69/ea_fontnull.json": "ae8bc4044f12649d2ed70538aedfecd77fa8b69915a1480eb005a302413b4c9c",
     "config/GR8E69/ea_hlafile.json": "177245a6451643a6ab519ee15b4c344f4656f8a130434b290787558d78a1eb92",
     "config/GR8E69/ea_hlsfile.json": "8f56cc815378079dd1c69ac409956abf8667e6dcc35eeb73d00901ac143bc56f",
-    "config/GR8E69/ea_inittmr_a.json": "75e502d7bf7002b843d314e567872b634f8de4037a5bddc8b90fe650ac1885b2",
-    "config/GR8E69/ea_inittmr_b.json": "2986ddd5ab247544cf224c4854a6edb543ae3877681d1a61e753b41cdf61acbc",
+    "config/GR8E69/ea_inittmr.json": "151a5a305c1c96240db1a9c24def3875836e1c885426d7e30a5fadc42c8ff2cf",
     "config/GR8E69/ea_initvblt.json": "aec27a099f5ce34de68ae4012da6f05d5e60073d1bc463e794becc106d0fcb4a",
     "config/GR8E69/ea_ipad.json": "4a48bb2cf6c769f01d790b8c023bdbd7b99389261c6276ad475c12175ed8f6f3",
     "config/GR8E69/ea_ipad_vbl.json": "7d6de802ef682882fd356ed8e55b56cdcb87e3eb6a834680c5b8c5a51a87f7a2",
@@ -5207,6 +5212,7 @@
     "config/GR8E69/ea_mutex2.json": "a32b94532faacdd05795449967bacf7df3ca6399a141625db1d7a4750ba66f74",
     "config/GR8E69/ea_pad.json": "765aefb64290fe8520f0ec62750239dae4c10e3a499a8f5c9ab1dac82c2a6616",
     "config/GR8E69/ea_printn3.json": "b7f6439bf63ccceeef282f8204d6d17143f87fa8d35cb9de43da82bc53016a7f",
+    "config/GR8E69/ea_printstr.json": "a85d30aa56e60507bba123ce99270605fa26aa29ccf3119f0ad033e760a4262b",
     "config/GR8E69/ea_rcmp2real.json": "a05bdac5ae33f2e95a709a737a622fde986db04f4f0337a63ebdcc644614a5da",
     "config/GR8E69/ea_signals.json": "739f8d08688ad92e47b40d2b21ecf7e58f5aecc8da4c57e7b0b8b15e058e419c",
     "config/GR8E69/ea_stream_api.json": "fa97dda34ba9fe1a759e47c151cb0c9252c3151a0f4ec852db1ab7930b21baa0",
@@ -5219,7 +5225,7 @@
     "config/GR8E69/ea_syncfile.json": "5ad7e6a48ddd491ff43841235023597f0e85b8175ab705de2379f78c7ea3b886",
     "config/GR8E69/ea_systask.json": "141ec34b15f33585ca8126e62d8155683f6b747bb061d43d88ac144d23f18663",
     "config/GR8E69/ea_threads.json": "b334b5342f45164624e235b5721cf91d927372692207369e96d177e29430be3f",
-    "config/GR8E69/ea_timer_tail.json": "1781f460ba94bfb6df1cf295cb93c69e1176a3b454a159b6d182e86198628398",
+    "config/GR8E69/ea_timer_tail.json": "16390c54c6bef5d41daafa8458d451e9064fb9a4269d668fbd4626a49d02aa89",
     "config/GR8E69/ea_timerthread.json": "bfa69e1a4f9067764b5ab1a8149fa69fcedac577e7971798acc0c9564c317163",
     "config/GR8E69/eagl_anim_anim_bank.json": "099184ad089e02e1952a18845c77b39f4e014ff9d32791205e9bbdc685b078ff",
     "config/GR8E69/eagl_anim_base.json": "385c7ed571a411e39f9d3051397d219e970bb687c378c1fbf7a969c9ea0f4089",
@@ -5797,7 +5803,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "8223fa22ece1afc9ce77553ddc81fb5bbb09e00b8772011d7eb4c8153c4daa66",
+    "config/GR8E69/project.json": "2a34ce26ed553442575ab7f6173b87126b8e39988b1d2426dc518c168b6d6e14",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7615,6 +7621,7 @@
     "src/dolphin/syn/__syn.h": "08b05a8b8e04e272305efa50936912ac395d76d937bd73a403065601e469f8ee",
     "src/dolphin/vi/__vi.h": "22201b234d317ca8d2724210a124ac6ceb9708df13c1b73eae87afab8e625b7b",
     "src/dolphin/vi/vi.c": "a39c975336daa3c42a5a186d68d0c9c39e91aa0df0003b1b052eb767cdf4beed",
+    "src/ea/abortmsg.cpp": "0b79a39d8c558fd89173cd95de69b33e33ddc2bdb3aabb046b3c03ef752a748b",
     "src/ea/audioplayer.cpp": "d7cb0381566d28d5a4bea0e4e58d44991b3c417e7b49ab028af8d0ddd136c541",
     "src/ea/debugbreak.cpp": "d50f4e6762b140affcc38bffd64450e3fd3e14f625ff3c1b0101c206ec715ef4",
     "src/ea/exit.cpp": "aee2216bb9de55d7631911b45e6f3f0375214505293efc561cc5dbd69d6751a5",
@@ -7625,6 +7632,7 @@
     "src/ea/fontchar.cpp": "2980d56dfbdbbeb46cba293f7c2397b7518079ba32d510118510c9301ee15a47",
     "src/ea/fontcreate.cpp": "fb846d119db1a373f03387cc09f0db8bf0c80ede2c1efb305914580be2630def",
     "src/ea/fontdraw.cpp": "a2add2aca7bf8e5dfd9f636944bcb77c9f833207222f054469a3c787cfaa9258",
+    "src/ea/fontdrawf.cpp": "b9a46a11e372dd93ef5c6af59e10fb25ab29795b51ec36f9d6cfa0832b14712b",
     "src/ea/fontdriver.cpp": "799464786df81aa82291f1d18699c4c4d2283338c1e6c75e4e508bc368470f9c",
     "src/ea/fontinit.cpp": "23ee3e1e4457de8dba71c1b08e1355e02844f0753acb1b2cdf4d8bc9ab7e7fa3",
     "src/ea/fontkern.cpp": "f9c9387cc69998804f226f0bf31880bb8dc9a5d7df7623a5df8b393f7e583e93",
@@ -7633,8 +7641,7 @@
     "src/ea/gchw_vd_setters.cpp": "066b3a421094bb5f71c42682307b2babaad374f41568eea555087a3cea962a7e",
     "src/ea/hlafile.cpp": "69eb87c6ebec4acc4d2789e1d59f3ff40b0313867571560e6dc885a7bc4ac823",
     "src/ea/hlsfile.cpp": "41342545a03c92e31fbf7cf30fb392194f2274d76ba1f85f91cbfa2a2b396b05",
-    "src/ea/inittmr_a.cpp": "7d0ad08c905b592ab18ca17521d0a98096ba7f6521453a2886f82fcf6fa530e9",
-    "src/ea/inittmr_b.cpp": "f30b3ae57b4b2d0ad88e50063edec0876bc26509f2cd0e4a5c1d3932f596fd64",
+    "src/ea/inittmr.cpp": "585ddaebe0636a6c5c89c84e33e757662546df54edd516fa89c149e59804f5cf",
     "src/ea/initvblt.cpp": "0e995f40d8d694cb7b05a068499bd563628ea40041658c6c8a9ec411b17deec3",
     "src/ea/ipad.cpp": "98849d1f0c36bbf03fefadce134c7456c2bf36a853db3bb967d1b79a9e66491a",
     "src/ea/ipad_vbl.cpp": "66c3f6f31d5eb828019a9d019df2d806941430558437500d7702bf522559ff84",
@@ -7655,6 +7662,7 @@
     "src/ea/mutex2.cpp": "84bb5fd9e59595a55eadbe25b9bac7a9262faf5c40f7bb0cc9d23e6b0e8fbf9b",
     "src/ea/pad.cpp": "1e0d78a24bcbcf5b3e857e77011296a3e7dcce2a29666cee124d12bbdd7c1603",
     "src/ea/printn3.cpp": "e260e8f11be93a4af6246aa0777791744bb479c223f80e9e78618811d1780c4b",
+    "src/ea/printstr.cpp": "5cd4d23d2e68e385104b07d6dc27489523a359a97fbe681989e574ace2b58ce3",
     "src/ea/rcmp2real.cpp": "cd31e2670f3b27a4a91c8962b8b4ba680f21e773e9023525cf718f699131d8ff",
     "src/ea/rcmpbase_decoder.cpp": "20f7a31b30a0d77509a364c36716411c714e4eb83ef4e0958b3b3e99d14597da",
     "src/ea/rcmpbase_frames.cpp": "ed4b0dad56110b523529a0629bff7c8186b6681450457e980f39e02b01bc4b52",
@@ -7669,7 +7677,7 @@
     "src/ea/syncfile.cpp": "3df57d815e9d7e8ef396fdcf881e8e89ed7b7e77c762f80a3a18c0bf42ed09ba",
     "src/ea/systask.cpp": "064e88a22a3eb4ce2abeccd180f0df17d49e86028b44b3fc0a54e8cf7365d4bb",
     "src/ea/threads.cpp": "2c7671ef74c09c1d408ee608078336f80cd6017d0caffdfa6e53ac79d5edf327",
-    "src/ea/timer_tail.cpp": "8a34ce2d6e79a388a856400e71ee18545ca2e0732f04571cbc174e558340c2bc",
+    "src/ea/timer_tail.cpp": "9924675f9ecc8fe7d4d9c692d9f3d917d1395c4a1a735b2f973e2d81dff05fae",
     "src/ea/timerthread.cpp": "20cae02efd81691bf08a6c1e883b2df0059457929220cab81bb80a2b605cb50a",
     "src/eagl/eagl_common_state_strings.cpp": "77d62062b069735a6f417ea2a70af129c6c8a18d87c7ab771dbdd531c6beb753",
     "src/eagl/eagl_cpt_color.cpp": "aa4f541f224ab98ddd4e58dbe1134876cbad6a34b5bc8b6797d39bf7b666ce7f",
@@ -7920,7 +7928,7 @@
     "src/game/input_ports.cpp": "c8e073d6d9e25381539ae8de570e54222add652af5b1400642cfc9159c14f36e",
     "src/game/input_state.cpp": "c875939ff44d67e321e0e286ebddc6e5880d2dc966559b8b2d9d23194da84de1",
     "src/game/input_tail.cpp": "3a03d39cf2824ead24e4e228c4b05c680c5b657609186cad161af73edb4987bf",
-    "src/game/moh_boot.cpp": "337908fd8daca3b30d58a8b0f42af4ba96ede0faf16b23cfb3317e9497a3f8a7",
+    "src/game/moh_boot.cpp": "76020b8073461dad019ff9996286629044e11c772c3bbd5926123de484d3f505",
     "src/game/moh_ld.cpp": "81ac57022ce25bb564ee521fe14a00e58a21a7a2ff7f482a7bed4d7a24806c43",
     "src/game/moh_loader.cpp": "eb5a65068e81a7d792ef4a16f8dffb817e5b4965e2534956940d449f4676cd2e",
     "src/game/moh_ls.cpp": "f55328123c5554d493c6f9452253e7f4a65f2e1fd8e5d29e81f3c1c11fd1615c",
@@ -9008,7 +9016,7 @@
     "src/sound/ea/sdrv_caps.cpp": "2f82c39a7b13dded87ff8dd951406ca5d5e364c2db15376f5b493de11c8b1940",
     "src/sound/ea/sdrv_frame.cpp": "15c1f88c02d8246326b712886b8604f76cbaffa5654f254477ff57bdd91dc4b7",
     "src/sound/ea/sdrv_mem.cpp": "5566f684635d96a19ad801faa3452d747c7e5bee6e934a12ae8f7aa5e7d6b416",
-    "src/sound/ea/sdrv_packetplay.cpp": "84c11356434a9acfd5dda15b21a67f41b96bc62bdc268e4e1b7dc615e7f6914d",
+    "src/sound/ea/sdrv_packetplay.cpp": "8ffe5dfb4cda804a653548c7b895dc4e7123859cca9750f3905c541ee64bcddc",
     "src/sound/ea/sdrv_pkt.cpp": "cd4ae40b0b66b16dad028f7fa4a8326a4dabb2cd9454ab60039d365cea23a3a1",
     "src/sound/ea/sdrv_pktdestroy.cpp": "dd661c40241590dd7962c636c75e2f2e07aef1fc230af38dfdc3cb7b339c3691",
     "src/sound/ea/sdrv_playtimbre.cpp": "e4ba6e2cc4cd0a12b3b2cbb3a7d96489487534e50b87bfe0fd40648adf121c93",
@@ -9052,7 +9060,7 @@
     "src/sound/ea/sinitut.cpp": "a26ae5a04af01a9949c0a3fa88a535827a4522e4f49b19afe62ce2d5af4c8874",
     "src/sound/ea/sinitxa.cpp": "a160f607e26ef32fd51dd8eddd9f46dbd803afb4771ae5e62bc918ff50027385",
     "src/sound/ea/slinklst.cpp": "7d0eed82063720c8424d4e5e54c681608a3c9dec7dc9427f3f99393408aff307",
-    "src/sound/ea/slinkmix.cpp": "3cf4c749e4f9caf67c6276ed5df5b66b07e13be40dc7192b1d952b35fd5225f5",
+    "src/sound/ea/slinkmix.cpp": "04e07af69cbd76a68d368b4dac60062f3516f035be2ba09287792eb35edfc42b",
     "src/sound/ea/smasterv.cpp": "774e8c0a6325c245918e0b3f422bd8501c3ade1bc4617a0e4616fc5558651678",
     "src/sound/ea/smemhigh.cpp": "9d4e5fdab61801b5137f48edce40a97c640cc82716519b9bc2763996c350de76",
     "src/sound/ea/smemman_a.cpp": "93ffe5589a086fc21403f7bd7cc89333276bdad33820cdebee0ed73cb10509aa",
@@ -9078,9 +9086,9 @@
     "src/sound/ea/smixwet.cpp": "6534625c8ed7ee6a0224ce2aafa98a838302558af32941b27667afff5b9e81d1",
     "src/sound/ea/snddrv.cpp": "c38bf90945f14551ff76e823e25be098ead109aef2d49f55a597705e56f6e15b",
     "src/sound/ea/snddrv_alloc.cpp": "0eb5e727c638925789ab06f1de6ac0bbd7e8a758e9a53aeffe2267fe03ee8a73",
-    "src/sound/ea/snddrv_cb.cpp": "5dcb6b4fd8a17d74691a0c85e0604432e0328e69fe5dc02fa80512d0a29b27be",
-    "src/sound/ea/snddrv_dma1.cpp": "5e4998f880a691c775ec1ce116a852d613cbe75cc8fd39c72219c0e5fdced0ca",
-    "src/sound/ea/snddrv_dma2.cpp": "034aed65efc3f7584a53794ce6e16c30db86d67155eeec65fdf743dc6de868e4",
+    "src/sound/ea/snddrv_cb.cpp": "2982ae92a674fbed66101555150a8971ab707dd3f743260c760fcd7230d6a53c",
+    "src/sound/ea/snddrv_dma1.cpp": "59a36586f2a9a1372f9c72bcd888237b2d5336cb76d2752d8a3a66297a3a99c9",
+    "src/sound/ea/snddrv_dma2.cpp": "8511bc36ef2388ec40a9d83624f10e84f740739d11896463d4ef810950f27d3f",
     "src/sound/ea/snddrv_frame.cpp": "5c9b44d19268da543121364fe7fc24a7970f98ddcf3cbec42ca700c4abf672fa",
     "src/sound/ea/snddrv_serve.cpp": "ad5932ecdf09861d9814d997c7968a31490d26a04ca66154c137e3ff2b60dc3c",
     "src/sound/ea/sover.cpp": "195a5eb257fd99eb0337c24b3f263591fc147eb5c4d343a039faaf66c2cbd950",
@@ -42825,44 +42833,6 @@
       "linked_sha256": "35aa3f48a3aa4cd59b9afeaf4515cd0684eb15e27d306999ba2f6d858fd7108a"
     },
     {
-      "id": "ea_inittmr_a",
-      "category": "reconstructed_game",
-      "functions": 1,
-      "code_bytes": 56,
-      "compiler_family": "ProDG",
-      "compiler_version": "3.8.1",
-      "compiler_flags": [
-        "-O2",
-        "-G8",
-        "-fno-exceptions",
-        "-fno-implicit-templates",
-        "-fno-strength-reduce"
-      ],
-      "strip_unused": false,
-      "discarded_functions": [],
-      "object_sha256": "13ee6dae182233b423f56b157b3c38f541199e38bffe884c7d6b96781e85626a",
-      "linked_sha256": "9bda3cb53d296aa24f039a6e765dd2cc9b06f1e3b62adac9b1fcbe0eadf90e29"
-    },
-    {
-      "id": "ea_inittmr_b",
-      "category": "reconstructed_game",
-      "functions": 2,
-      "code_bytes": 172,
-      "compiler_family": "ProDG",
-      "compiler_version": "3.8.1",
-      "compiler_flags": [
-        "-O2",
-        "-G8",
-        "-fno-exceptions",
-        "-fno-implicit-templates",
-        "-fno-strength-reduce"
-      ],
-      "strip_unused": false,
-      "discarded_functions": [],
-      "object_sha256": "ebdcd46a425f28f7fa0c141ddd30f1d80e7fdedd240e05bf2230d803304198a4",
-      "linked_sha256": "cfe149c040b5b14d233986b4eb371728fdb0e37dd9c7997de5549e01c527417a"
-    },
-    {
       "id": "weapon_factory_ctor",
       "category": "reconstructed_game",
       "functions": 1,
@@ -43690,8 +43660,8 @@
     {
       "id": "ea_timer_tail",
       "category": "reconstructed_game",
-      "functions": 4,
-      "code_bytes": 108,
+      "functions": 3,
+      "code_bytes": 72,
       "compiler_family": "ProDG",
       "compiler_version": "3.8.1",
       "compiler_flags": [
@@ -43703,8 +43673,8 @@
       ],
       "strip_unused": false,
       "discarded_functions": [],
-      "object_sha256": "0dc9b07808a40e46a22452b4d7c6eb527252a0fbf038fbbea8ad170f840d3257",
-      "linked_sha256": "46cb6c1fe3d7d98f1a6357ba0e33ce9821effd719eb57b10de3147b6780f408b"
+      "object_sha256": "1102303a064bad92593631316c588be5d94a0cb5303e0f93ac63ecf9b6ba8f70",
+      "linked_sha256": "2a85d21a240bcfa2ed97f46cb2286105e9a5fce26fc2d092f91c7cde3e36582f"
     },
     {
       "id": "scene_AttachableObjectAttach",
@@ -48983,6 +48953,82 @@
       "discarded_functions": [],
       "object_sha256": "32f661cdf110614770ee107b8c7d6636c7183c21beb73701f67f3fb4ce6f00e8",
       "linked_sha256": "95019d3908df8daa698cd6a184c42f2b8c1af43cd53fba154d4b048ed1234822"
+    },
+    {
+      "id": "ea_abortmsg",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 476,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "0c73a399ade9ae7397bd75e0e3ffdc03c38ed976f19c9609162b0c7e7fa46804",
+      "linked_sha256": "3ebf936d2a2fda7b1fde9c6210ec9572942fb6ee1fc25056b0b1dd07d3b2d6fd"
+    },
+    {
+      "id": "ea_fontdrawf",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 204,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "18c153b7de6f7bf8c62c46721e1048785a931b4ce926d1bd13e088dddb0f8793",
+      "linked_sha256": "662c40d0cf86f6916e05d18e17f79a547d96b219b590c74652011d12cbebb358"
+    },
+    {
+      "id": "ea_printstr",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 148,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "d5a2de56177bb63306157159c53bba13e5970c2b86de319db144f1df0372db3d",
+      "linked_sha256": "f5484c1efe87bbce369de2aacb369da7bd2fd44f24a27bd2996986ed6a9a6807"
+    },
+    {
+      "id": "ea_inittmr",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 532,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "54852d647e574af3a4cebff29597c904515591639f2de2b8ade74a4736d810d7",
+      "linked_sha256": "94524b7ab776b478206571ceb06adffb01b04046c502606790069e6f2b22bd00"
     }
   ],
   "code_map": {
@@ -80155,24 +80201,6 @@
         ]
       },
       {
-        "name": "Unmatched files/fontdrawf.cpp [inferred file group]",
-        "file_record": 460,
-        "file_name": "fontdrawf.cpp",
-        "ranges": [
-          {
-            "address": "0x80206220",
-            "size": 204,
-            "kind": "function",
-            "name": "FONT_drawtextfa",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x80206220",
-          "0x802062ec"
-        ]
-      },
-      {
         "name": "Unmatched files/fontdriver.cpp [inferred file group]",
         "file_record": 461,
         "file_name": "fontdriver.cpp",
@@ -81753,49 +81781,6 @@
         ]
       },
       {
-        "name": "Unmatched files/inittmr.cpp [inferred file group]",
-        "file_record": 523,
-        "file_name": "inittmr.cpp",
-        "ranges": [
-          {
-            "address": "0x8021781c",
-            "size": 268,
-            "kind": "function",
-            "name": "TIMER_init",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x802177e4",
-          "0x802179f8"
-        ]
-      },
-      {
-        "name": "Unmatched files/abortmsg.cpp [inferred file group]",
-        "file_record": 529,
-        "file_name": "abortmsg.cpp",
-        "ranges": [
-          {
-            "address": "0x80218268",
-            "size": 220,
-            "kind": "function",
-            "name": "REAL_abortmessage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80218344",
-            "size": 256,
-            "kind": "function",
-            "name": "SYSTEM_abortmessage",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x80218268",
-          "0x80218444"
-        ]
-      },
-      {
         "name": "Unmatched files/memcopy.cpp [inferred file group]",
         "file_record": 537,
         "file_name": "memcopy.cpp",
@@ -81850,14 +81835,12 @@
             "kind": "function",
             "name": "PRINT_vstring",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80218c4c",
-            "size": 148,
-            "kind": "function",
-            "name": "PRINT_string",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 80218ce0",
+        "ranges": [
           {
             "address": "0x80218ce0",
             "size": 100,

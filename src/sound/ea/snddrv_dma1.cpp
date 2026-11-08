@@ -20,7 +20,6 @@ void SNDI_memcpy(void*, const void*, int);
 void SNDSYS_linkmaincpumixer(void);
 void SNDSYS_entercritical(void);
 void SNDSYS_leavecritical(void);
-extern void* MIXinitfn;
 }
 void SNDVOICEI_free(int);
 void* SNDMEMI_allocz(int);

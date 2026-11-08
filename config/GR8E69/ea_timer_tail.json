@@ -19,17 +19,11 @@
   "sections": [
     {
       "name": ".text",
-      "address": "0x802179d4",
-      "size": 108
+      "address": "0x802179f8",
+      "size": 72
     }
   ],
   "functions": [
-    {
-      "name": "AlarmHandler__FP7OSAlarmP9OSContext",
-      "address": "0x802179d4",
-      "size": 36,
-      "binding": 0
-    },
     {
       "name": "TIMER_gettick",
       "address": "0x802179f8",
@@ -52,8 +46,7 @@
   "externals": {
     "TIMERhz": "0x804512c8",
     "ticks": "0x804512cc",
-    "tickval": "0x804512e0",
-    "ttMsg__F8TIMERMSG": "0x802185cc"
+    "tickval": "0x804512e0"
   },
   "local_externals": [
     "tickval"

@@ -1,28 +1,30 @@
-// Installs the main-CPU mixer entry points. The pointers' types are not
-// established here; they are stored as addresses.
+// Installs the main-CPU mixer entry points. The parameter types follow the
+// definitions and the calls through these pointers; MIX_audioslice's is inferred
+// from its caller.
+struct SNDMIXOPTSVIEW;
 extern "C" {
-void MIX_create();
-void MIX_destroy();
-void MIX_audioslice();
-void MIX_playinit();
-void MIX_play();
-void MIX_stop();
-void MIX_setpitch();
-extern void* MIXinitfn;
-extern void* MIXrestorefn;
-extern void* MIXaudioslicefn;
-extern void* MIXplayinitfn;
-extern void* MIXplayfn;
-extern void* MIXstopfn;
-extern void* MIXsetpitchfn;
+void MIX_create(SNDMIXOPTSVIEW*);
+void MIX_destroy(void);
+void MIX_audioslice(void**, int);
+void MIX_playinit(int, int, int, void*, void*, unsigned char*, int, int, int, int, int, int, int, int);
+void MIX_play(int);
+void MIX_stop(int);
+void MIX_setpitch(int, int);
+extern void (*MIXinitfn)(SNDMIXOPTSVIEW*);
+extern void (*MIXrestorefn)(void);
+extern void (*MIXaudioslicefn)(void**, int);
+extern void (*MIXplayinitfn)(int, int, int, void*, void*, unsigned char*, int, int, int, int, int, int, int, int);
+extern void (*MIXplayfn)(int);
+extern void (*MIXstopfn)(int);
+extern void (*MIXsetpitchfn)(int, int);
 
 void SNDSYS_linkmaincpumixer() {
-    MIXinitfn = (void*)MIX_create;
-    MIXrestorefn = (void*)MIX_destroy;
-    MIXaudioslicefn = (void*)MIX_audioslice;
-    MIXplayinitfn = (void*)MIX_playinit;
-    MIXplayfn = (void*)MIX_play;
-    MIXstopfn = (void*)MIX_stop;
-    MIXsetpitchfn = (void*)MIX_setpitch;
+    MIXinitfn = MIX_create;
+    MIXrestorefn = MIX_destroy;
+    MIXaudioslicefn = MIX_audioslice;
+    MIXplayinitfn = MIX_playinit;
+    MIXplayfn = MIX_play;
+    MIXstopfn = MIX_stop;
+    MIXsetpitchfn = MIX_setpitch;
 }
 }
