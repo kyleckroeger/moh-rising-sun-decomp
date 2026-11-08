@@ -256,3 +256,16 @@ models only the members these read (the table pointer at `+100` is not declared)
 `CSurfaceType` reads a 12-byte record table at `CDB+0x34`, guarded by the word at
 `CDB+0x20`; the record field names follow the accessors and the flags are bits 0 to 3 of
 its first halfword.
+
+## CStaticMesh
+
+`CStaticMesh` keeps the mesh pointer at `+0x00`, lighting and fogging flags at `+0x04` and `+0x08`,
+the animated-texture shape list at `+0x0c`, two words set to -1 at `+0x10` and `+0x14`, and its
+table pointer at `+0x18`. Its `Update` advances each animated shape and each mesh material
+animation at most once per frame count. `CStaticAnimMesh` adds a frame table at `+0x1c`, a frame
+count at `+0x20` and ticks per frame at `+0x24`. `SetFrame` selects the frame's mesh, and `Draw`
+selects the requested frame, draws, then returns to frame 0.
+
+Not reconstructed: `Init`, `InitAnimatedTexturesOnly`, the texture registration functions,
+`SetAllShapesClamped`, the destructors (which emit the class table), `InitClass`, `GetBasis`,
+the base `Draw` and `DrawMesh`, `IsVisible`, and the inline virtual accessors.

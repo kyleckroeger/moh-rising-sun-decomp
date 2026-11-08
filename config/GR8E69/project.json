@@ -1854,7 +1854,17 @@
     "ea_locatbig.json",
     "ea_locatbig_tail.json",
     "sound_srandom.json",
-    "sound_sdspmix_auxbus.json"
+    "sound_sdspmix_auxbus.json",
+    "mesh_head.json",
+    "mesh_ctor.json",
+    "mesh_center.json",
+    "mesh_update.json",
+    "mesh_enabled.json",
+    "mesh_anim.json",
+    "mesh_animframe.json",
+    "mesh_frame.json",
+    "debug_msg.json",
+    "idebug_msg.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

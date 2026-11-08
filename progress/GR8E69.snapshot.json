@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 963488,
+    "matching_code_bytes": 964696,
     "total_executable_code_bytes": 2492032,
-    "percent": 38.662745903744415,
+    "percent": 38.711220401664185,
     "categories": {
-      "reconstructed_game": 571272,
+      "reconstructed_game": 572480,
       "restored_library": 392216
     },
-    "matching_functions": 4759
+    "matching_functions": 4774
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -287,6 +287,7 @@
     "config/GR8E69/cover_query.json": "649bb529f66b9e0b55d695c2cf7786de6a7852eb141b0934abead99e0782f667",
     "config/GR8E69/crc.json": "d29c0ef0d8149a361db85a37711abcf340764c87356e4ddb75ed5bb24c982792",
     "config/GR8E69/csg_volume.json": "40a2fd4c64ca48aff4063c4ba8f4cb09970ca4c745a5faff31543918559b4156",
+    "config/GR8E69/debug_msg.json": "668775e5b23b87c15679f01ef8896fc2ae452fbe71da62a13824d6cccd528f5d",
     "config/GR8E69/dolphin-network-source.json": "6b039c8ef3fc502a7441ab8f55160567fd2facec6c12d818739c3bc7fd741b82",
     "config/GR8E69/dolphin-source.json": "00e4890e3bb570018abbacc62a7beee8052c2ef4f115363b1716785b62884cf1",
     "config/GR8E69/dsp.json": "bcc4a05a8ec25869e7675234c297eb8243e9a2e03983f64bf5e7040c7a897cd7",
@@ -588,6 +589,7 @@
     "config/GR8E69/gchw_vd_draw.json": "8240cd2ce5d0a0f00cae88ddb2fbd1c1a198a12246488f9b6cebd10604e92e3b",
     "config/GR8E69/gchw_vd_setters.json": "34856555c8f331dcd604dd04eb40e58713689ec5a0bdc6c685507364dc3fbc70",
     "config/GR8E69/grenade_response_queries.json": "5932b489bfec46bf4c73dad2d1d3bc9faa7acf77d137fb97cac1fdea8d343ecc",
+    "config/GR8E69/idebug_msg.json": "16c0dcce743bd3b126556004c13231aa6e0843c77c928bdc22771526826b83ed",
     "config/GR8E69/input_init.json": "b6f5dc06d034cbacefd3e7578633720cbbe556f37fd31b197115ed2905dab52e",
     "config/GR8E69/input_ports.json": "2b16d73f7a9887c3e15f921a976b7ab3fffab6ae531e541718f3e369f33c4d03",
     "config/GR8E69/input_state.json": "420fc11884e0574393bd77a9e86d7f519bc4b39edcddb5f0cfdae93512d65954",
@@ -667,7 +669,15 @@
     "config/GR8E69/matrix_translation.json": "622a8647279665d8f4caeb887a2966a8719838335416b658bdcb872ddba78fd5",
     "config/GR8E69/md5.json": "c8e6e2f4eb9c41f917626bf7924787fa4654c663dd466d4377f67313eee22506",
     "config/GR8E69/memstack_lifecycle.json": "1b733583eefb0f32534fbb7ec55c414a8f61cb7ed1e84f095f839b1054fa0aba",
+    "config/GR8E69/mesh_anim.json": "cb64574e1026d550e15df3b0b14aa26ef39854548946f486ae9dd8db9f2f7f58",
+    "config/GR8E69/mesh_animframe.json": "aba2eacd5f286c2238f747176e509dfaa674403e63a0d72e60cc81ec8eb26ebb",
+    "config/GR8E69/mesh_center.json": "b73b64483cda1135059a105736309f8b66150e5507e3200fff981c3a560cc41f",
+    "config/GR8E69/mesh_ctor.json": "9e90c2f933ccc99f0c17aa53c7db3ee0a347a310b8ba4dd4e0d336b36856bed3",
+    "config/GR8E69/mesh_enabled.json": "8101def0d29ec31c5812aaacc78ecdbc06826bbfd126b6954ca4e430ff4411cf",
+    "config/GR8E69/mesh_frame.json": "ee319919de060caf007099911a0b068dcfff3dafd0dddcfeda31485406a7c591",
+    "config/GR8E69/mesh_head.json": "7b689c457b1390497631d30f59952e992be67ddf16d8ac54f676dd0ad0fc6a22",
     "config/GR8E69/mesh_particle_placement.json": "09675fa3d42007e283a71f282f3d3f2f890f1c087cb10c2c20f3a3231e955dc0",
+    "config/GR8E69/mesh_update.json": "619d13465d30053774dac2c1b826958c65c73b3bdb8fd1a1d4f6a6f282208b55",
     "config/GR8E69/moving_node_light_defaults.json": "11326888dd025f649beae1650cf3b91bb0d5b68dccce9fd75c058f2ea24ca33f",
     "config/GR8E69/moving_node_reset.json": "67a3713a8a1e1b7b5f0e00297a1a9e11dc4da80179665d43f5e0580a62913d96",
     "config/GR8E69/moving_node_transform_defaults.json": "bf036bd61b867754c63869e74af221f9ffb6d0f51aa4cb01a2c4fbc2c685b122",
@@ -882,7 +892,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "f334e1c80c11095775a5155c6299135e8c943af0fccad6f923c811c7c7a4a9eb",
+    "config/GR8E69/project.json": "b0c128373a4e3b1ca3c1f3437045417c57420903ee94519e4d0482e460dd3e1d",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -2167,6 +2177,7 @@
     "include/game/SoundManager.h": "a82fa61bcff8045c6ba20c986f0501fa1f6326ae2c64097fee51d028af2d3a31",
     "include/game/SoundMixerView.h": "787617bfe14ec7a736949ac46528a91cfe30e6899acd0a9e811d83bf9364059c",
     "include/game/Sphere.h": "4fb7f91c288e5b711e495765718b14847cbb478030509f25cbb7defcbc4a182f",
+    "include/game/StaticMesh.h": "3ce7ef23c04372bf1266ec277f5b898cc3ec4f1d1c8a166d3fb07d279e37df9f",
     "include/game/StringCRC.h": "3940d0af2ade9e671b10c5bb1ef12705a7322101b231aae92cfd2aab4a07fa31",
     "include/game/StringTable.h": "4249ba9fcf836cdacb806c1fd8e1a93697756e7896c7eb90f222935c6edc2bb4",
     "include/game/TARExtension.h": "895c1de002730e0d0c627a3475a5370287e007f42b34b18a2901ef3465152b59",
@@ -2886,11 +2897,13 @@
     "src/frontend/usermessages_lifetime.cpp": "250e5edf14476401ba9fd4c26cd2a8fb96303b302f127109a29647323be7b017",
     "src/game/LinkedList.cpp": "7361285bbff6c1c98f4751ffa81c4a80a8de7b348144d43b880f40ca98feb332",
     "src/game/configfile.cpp": "0b7f529b5026deac835ef66c0e735bf252c96ce3b825808ece1998806605444c",
+    "src/game/debug_msg.cpp": "9a5e4e7ca6cd102ae562f15de3cb54173f9bce402660cd40507cb79eba79b346",
     "src/game/font_attrs.cpp": "17a5dcba14710a5625b373dba980f883f4491d208bf930ab9eb0cec07b5f3fe7",
     "src/game/font_ctor.cpp": "58553ab744e9e2326e145ad958eb12bdd904aa92453a41030f63035cd506348f",
     "src/game/font_draw.cpp": "7d13587aadc975b86a92737e78cb108dcb191bf6a1c64973d98b2f70e746015a",
     "src/game/font_setcolor.cpp": "732885f73107c33c308a7d324faee714a86aff80f40bdc94707aa90305335a81",
     "src/game/framecount.cpp": "7b76621f1a2f5b452b4ee73c31317598062c4e3c5a4b7693d71b5f1371ef7931",
+    "src/game/idebug_msg.cpp": "f0ffa7cb1598e285b7800d2f98fe3e5d111219257969b8b838b54a32117abd71",
     "src/game/input_init.cpp": "92834b6924093f7ebc540f41b5eac7db9cfc3741eb2018ccbb066b14b2f5a952",
     "src/game/input_ports.cpp": "c8e073d6d9e25381539ae8de570e54222add652af5b1400642cfc9159c14f36e",
     "src/game/input_state.cpp": "c875939ff44d67e321e0e286ebddc6e5880d2dc966559b8b2d9d23194da84de1",
@@ -4012,6 +4025,14 @@
     "src/sound/ea/susercb.cpp": "a71b84268488393d97684ad26943b3a64ba777719e38e48c61df644fd75b5e3d",
     "src/sound/ea/svol.cpp": "604c59b717c9247132f920281f8c15fe5fe8091d32f06089ea87f96bdb869813",
     "src/sound/ea/sx87d16.cpp": "c1dd596abc75c11f30754a6dba703855646d4b8f22e144410e386724486258d4",
+    "src/staticmesh/mesh_anim.cpp": "bc53058cd0b86525ae610a1140974878b3c697be7235945cdc4534bb27a29b72",
+    "src/staticmesh/mesh_animframe.cpp": "2e7aabfc03739176d8e549b9f4ded922cc54b375f3c61809510da51ea940ec54",
+    "src/staticmesh/mesh_center.cpp": "b9feb4826bf5e9d55ac8ad8daa01c5dec76d274ac4285ecff9f71727c50c8753",
+    "src/staticmesh/mesh_ctor.cpp": "6c2388667d737cc4cddb5bfa36f7d236324e2a531db9e93ec25a3ff055a37cb1",
+    "src/staticmesh/mesh_enabled.cpp": "69c0dd2e2b27529c2f68fc9a1fa5783af82d466b90aa1af8a064b3a518bd5369",
+    "src/staticmesh/mesh_frame.cpp": "657ad8047e6536600a547a1fd5b438214438862fb56b80796b44634105850b49",
+    "src/staticmesh/mesh_head.cpp": "857f1a883fa0ed56f09dc5584e0d4e1bb6caa7a73ceca3514904b1a82f031812",
+    "src/staticmesh/mesh_update.cpp": "085ec6e4cf10c0155be9f67c132a00fc2ef282bea29bc1b9c6a255ed47980d2c",
     "src/stlport/CONTAINERS_NOTICE": "7c59267a930cdf87e1af44873547a8275a61b1329833c74ae5f821a5e507a22e",
     "src/stlport/COPYING.GCC": "dcc100d4161cc0b7177545ab6e47216f84857cda3843847c792a25289852dcaa",
     "src/stlport/containers/stl_80278d64.cpp": "e75a070f28a3c316c4e6064da2c7c710838c54dd1b2297c5d808bb5037c33590",
@@ -41347,6 +41368,186 @@
       "discarded_functions": [],
       "object_sha256": "dc26f17bdf8321bfcbf1fcf7e2783fe0f36aedc9b16d53bad0dba9f62f5ee5f1",
       "linked_sha256": "879d167a6030f5c1baa2d8739a8283e1396bea46a3bbb8f0249f2f56422667b6"
+    },
+    {
+      "id": "mesh_head",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 72,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "b97782fd678fa321428cc19fbd566e944743989d830969eefc5761f3fa414e5a",
+      "linked_sha256": "212da937c895cd319ddb9160dd433e002d530b406b06083402b71d59a70b198d"
+    },
+    {
+      "id": "mesh_ctor",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 116,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "243ba799c75d8a1ae0ee6911359a9f5015d3ec49fc28d4415b5e376ee7748cbb",
+      "linked_sha256": "0a5d6cdbefe4f9cabc4463bbbc2f1ce81b80af809306deed6199a6d826bec562"
+    },
+    {
+      "id": "mesh_center",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 84,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "c0ed767be9e9f084a598ca3078e078bba5deddd40201542f302df8529bcca44e",
+      "linked_sha256": "c795e47f6e466ed5bbff7aeef29111cd5e94ca5ae53d0b6630241ded9a26cee4"
+    },
+    {
+      "id": "mesh_update",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 356,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e44d67a6371ab4445b68384ffd9544b87f6d7f50cdf85edbe6ace567acc89634",
+      "linked_sha256": "79a139a1123471f7c47928b726af244874181038a560555e16fd7e17269ebd87"
+    },
+    {
+      "id": "mesh_enabled",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 8,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "8cfaf875ccaa72bd72f78a8c76f44e9e4971c3d54f1454bc30f0b1d679d1638b",
+      "linked_sha256": "a56ea04a6cfaee5c47f8f5196cf35d42eac8850a61b46c18044f75861e25468d"
+    },
+    {
+      "id": "mesh_anim",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 396,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "dda4fb935cdfbb8e82a5ccbae5dda2ef7245b85bf94de4bba15036674427c7ce",
+      "linked_sha256": "070f063c29544ab590b736465c5a91f4a226d7bedbd78d36534d06ee3282088f"
+    },
+    {
+      "id": "mesh_animframe",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 20,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "6ad017548c04936848b1dc672c3ed27edfad97cd45b280a1ff363e36734e6110",
+      "linked_sha256": "91aad8b2f076fe4713f9524aad03349a34dfd24ee05351d555c5f46d59847d88"
+    },
+    {
+      "id": "mesh_frame",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 4,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "43f8b62d601db57185d2b1427d68d6caad62d0bec4801cb74bff882ba2aeffc5",
+      "linked_sha256": "a7e0d5d6af5f92541aefb869a55454e5a23f948b2f098d1641c520f447736671"
+    },
+    {
+      "id": "debug_msg",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 76,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "7f508e5235e03e4552684896ac645c24e22cf48924d7e00370a67607d6d7cb37",
+      "linked_sha256": "6d3fd63f1809d35e9fd428ad6a9c62d6c39fcb2356c614699bbe3b5a30f378c6"
+    },
+    {
+      "id": "idebug_msg",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 76,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "6cded446be32399006e437d54d3c93123d841ae347229e95a8d954de635cae20",
+      "linked_sha256": "ccfd40d7a16887e09f589cd895f45a3e73339f00fd31e6992fb995440a9787b5"
     }
   ],
   "code_map": {
@@ -68098,13 +68299,6 @@
         "file_name": "staticmesh.cpp",
         "ranges": [
           {
-            "address": "0x8019d390",
-            "size": 72,
-            "kind": "function",
-            "name": "Init__11CStaticMeshPvb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8019d3d8",
             "size": 5264,
             "kind": "function",
@@ -68140,13 +68334,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8019ed98",
-            "size": 116,
-            "kind": "function",
-            "name": "__11CStaticMeshP10StaticMeshb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8019ee0c",
             "size": 388,
             "kind": "function",
@@ -68161,31 +68348,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8019f010",
-            "size": 84,
-            "kind": "function",
-            "name": "GetCenter__C11CStaticMeshR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8019f064",
             "size": 512,
             "kind": "function",
             "name": "GetBasis__C11CStaticMeshR8CVector3N21",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8019f264",
-            "size": 260,
-            "kind": "function",
-            "name": "Update__11CStaticMeshf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8019f368",
-            "size": 96,
-            "kind": "function",
-            "name": "RebindAnimatedTextures__11CStaticMesh",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -68203,13 +68369,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8019f664",
-            "size": 8,
-            "kind": "function",
-            "name": "IsDrawEnabled__C11CStaticMesh",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8019f66c",
             "size": 276,
             "kind": "function",
@@ -68224,53 +68383,11 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8019f870",
-            "size": 144,
-            "kind": "function",
-            "name": "Draw__15CStaticAnimMeshR12CDrawContextiUi11ERenderBinsT4",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8019f900",
-            "size": 128,
-            "kind": "function",
-            "name": "Init__15CStaticAnimMeshii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8019f980",
-            "size": 108,
-            "kind": "function",
-            "name": "Init__15CStaticAnimMeshiPvb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8019f9ec",
-            "size": 8,
-            "kind": "function",
-            "name": "GetNumFrames__C15CStaticAnimMesh",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8019f9f4",
-            "size": 8,
-            "kind": "function",
-            "name": "GetTicksPerFrame__C15CStaticAnimMesh",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8019f9fc",
             "size": 112,
             "kind": "function",
             "name": "__static_initialization_and_destruction_0",
             "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x8019fa6c",
-            "size": 4,
-            "kind": "function",
-            "name": "SetFrame__11CStaticMeshi",
-            "evidence": "adjacent-compiler-markers"
           },
           {
             "address": "0x8019fa70",
@@ -68298,13 +68415,6 @@
             "size": 8,
             "kind": "function",
             "name": "IsFoggingEnabled__11CStaticMesh",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8019fa90",
-            "size": 20,
-            "kind": "function",
-            "name": "SetFrame__15CStaticAnimMeshi",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -80305,18 +80415,6 @@
         ]
       },
       {
-        "name": "Unknown file/.text @ 80279094",
-        "ranges": [
-          {
-            "address": "0x80279094",
-            "size": 76,
-            "kind": "function",
-            "name": "DebugMsg__FPCce",
-            "evidence": "unknown-file"
-          }
-        ]
-      },
-      {
         "name": "Unknown file/.text @ 802793ec",
         "ranges": [
           {
@@ -81820,14 +81918,12 @@
             "kind": "function",
             "name": "RemoveSoundBanks__9cSoundMan",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8028b928",
-            "size": 76,
-            "kind": "function",
-            "name": "iDebugMsg__FPCce",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 8028b974",
+        "ranges": [
           {
             "address": "0x8028b974",
             "size": 32,
