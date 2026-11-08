@@ -1758,7 +1758,11 @@
     "scene_query.json",
     "scene_reorder.json",
     "skybox_class.json",
-    "skybox_dtor.json"
+    "skybox_dtor.json",
+    "input_init.json",
+    "input_ports.json",
+    "input_state.json",
+    "input_tail.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

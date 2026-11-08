@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 929540,
+    "matching_code_bytes": 930284,
     "total_executable_code_bytes": 2492032,
-    "percent": 37.30048410293287,
+    "percent": 37.330339257280805,
     "categories": {
-      "reconstructed_game": 537324,
+      "reconstructed_game": 538068,
       "restored_library": 392216
     },
-    "matching_functions": 4543
+    "matching_functions": 4556
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -564,6 +564,10 @@
     "config/GR8E69/frustum_transform.json": "35766529dbd85ffd05cf8d34adb7010b3b10b02c04d1d097811dde2dfc2ef057",
     "config/GR8E69/fstload.json": "d49e84fe0d1e9af1dd569811065db3c015f596b540ac5988c5078fa2f9c5dd5e",
     "config/GR8E69/grenade_response_queries.json": "5932b489bfec46bf4c73dad2d1d3bc9faa7acf77d137fb97cac1fdea8d343ecc",
+    "config/GR8E69/input_init.json": "b6f5dc06d034cbacefd3e7578633720cbbe556f37fd31b197115ed2905dab52e",
+    "config/GR8E69/input_ports.json": "2b16d73f7a9887c3e15f921a976b7ab3fffab6ae531e541718f3e369f33c4d03",
+    "config/GR8E69/input_state.json": "420fc11884e0574393bd77a9e86d7f519bc4b39edcddb5f0cfdae93512d65954",
+    "config/GR8E69/input_tail.json": "3d3f4329dd48ec1b9f50a86813e372486c148d345cc51c9e84081d0e1d654a48",
     "config/GR8E69/instanced_anim_light.json": "73759e82b3bf6870d54d6fbf2ef1b64ec4c688cb847000881824fb8fb3d00093",
     "config/GR8E69/jaw_controller_ctor.json": "34ebd750d88f565421a7d8012ca30fca77ea5efe75bb9e81dac1017627be8d5c",
     "config/GR8E69/jaw_controller_motiontype.json": "f0998e4aa079cdafca1320e57a5a25cfa166bd3d71de883cd2a74cc2c599e4a1",
@@ -838,7 +842,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "cefd665bbe7c140d249a67a4a9cea4f881498809ba4b6c4b4cf45139b7a5a98f",
+    "config/GR8E69/project.json": "92aa7072b258a7aa6ac2fa615dc46985cbf249a1d710592818c3fb80e5156676",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -2061,7 +2065,7 @@
     "include/game/ScriptSchedule.h": "6158dc9d8f6d57c34c31e527ba680a988f21a160149047de2f54bd5c216c1e19",
     "include/game/ScriptStartup.h": "ca298798406d593bc47296e17ca3c8778cde7e69bb465f05962cc05fc2eb40cc",
     "include/game/ScriptTimers.h": "a81f3399ff20908469a289229ed0f0aae2c28aa3a9889629e62049e8bb16705b",
-    "include/game/Shell.h": "22349a61e76dcb2146bbdb6a518878724accda9a7950efb0f61ec3e50efbe219",
+    "include/game/Shell.h": "7bc39e62f3b268333ff99c3c4a3b680b909f7662ea6b903d300d7afb5e8f013a",
     "include/game/SkyBox.h": "810947bbc2ecf7cb4d69dfa350c055b05d446c04b904abfadaf4828c7be01a55",
     "include/game/SoundAmbience.h": "a8ffdd3a842aa24e0d8511216e05fd27625c8c2e96c7db19d7557afa729b1fb5",
     "include/game/SoundEntryPool.h": "3766b906852ceb49985a2e376f46077c2e739f8dc17ca0f16a47b60b79eb0d59",
@@ -2769,6 +2773,10 @@
     "src/game/font_ctor.cpp": "58553ab744e9e2326e145ad958eb12bdd904aa92453a41030f63035cd506348f",
     "src/game/font_draw.cpp": "7d13587aadc975b86a92737e78cb108dcb191bf6a1c64973d98b2f70e746015a",
     "src/game/font_setcolor.cpp": "732885f73107c33c308a7d324faee714a86aff80f40bdc94707aa90305335a81",
+    "src/game/input_init.cpp": "92834b6924093f7ebc540f41b5eac7db9cfc3741eb2018ccbb066b14b2f5a952",
+    "src/game/input_ports.cpp": "c8e073d6d9e25381539ae8de570e54222add652af5b1400642cfc9159c14f36e",
+    "src/game/input_state.cpp": "c875939ff44d67e321e0e286ebddc6e5880d2dc966559b8b2d9d23194da84de1",
+    "src/game/input_tail.cpp": "3a03d39cf2824ead24e4e228c4b05c680c5b657609186cad161af73edb4987bf",
     "src/game/screen_init.cpp": "e0b48e8fa9140cb37b4791db75e8676370f877f67c8a9fe3b33c65350173e00d",
     "src/game/screen_setclear.cpp": "d1db021539edc57bb1519e4596aab8d380728cc7d63785d3446a80d48edfd416",
     "src/game/screen_tail.cpp": "f1a0401e50a6b75d185547ab60bcf96e3a4b68e64ef64a96c5cb4b579d3922ad",
@@ -39398,6 +39406,78 @@
       "discarded_functions": [],
       "object_sha256": "3e22c7c90ee1a6dfd9ed7c74f93678bf4848ee1daf5d39093ce40ab3c2811ad1",
       "linked_sha256": "e841d79aa9c4c5c0f1871129bcdc4ec713463778a174cd116913863001f13252"
+    },
+    {
+      "id": "input_init",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 12,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "d5fd842c28da5fc2355ea5c09e76b83ba2330b89bc4d6778bd9e1f5d25ffa5ce",
+      "linked_sha256": "e8583a4bb08b3381e5030f83d3e3249859b839a5bebb023d2deca97f95b3a5d6"
+    },
+    {
+      "id": "input_ports",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 172,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "b7f9710022738a6f6849b07cc1334cf015574091d830d8c30d8a7cce71d193b8",
+      "linked_sha256": "36410dbca590fec4d727c108500c4200ca43a535c3e70472ec5093d23fbafbc6"
+    },
+    {
+      "id": "input_state",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 288,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "5c079140c7f264183f1d7db30f214b6f6b3ea89582e5c48a5bb162ec430792ae",
+      "linked_sha256": "2fdb2ed175c2c601c36421079f514361f2e781c01d4372e5af38a9ff1eb0df54"
+    },
+    {
+      "id": "input_tail",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 272,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "14fd8d742aa307c35329d14d84cfe03239ea1b239088720479cb1f9540116146",
+      "linked_sha256": "e185422b6bf964cdcedb41bd9d85e595736837afbadbf26bbfbefc719b407833"
     }
   ],
   "code_map": {
@@ -52770,13 +52850,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800d68f0",
-            "size": 12,
-            "kind": "function",
-            "name": "Init__13CInputManager",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800d68fc",
             "size": 1448,
             "kind": "function",
@@ -52784,73 +52857,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800d6ea4",
-            "size": 4,
-            "kind": "function",
-            "name": "Shutdown__13CInputManager",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d6ea8",
-            "size": 40,
-            "kind": "function",
-            "name": "SetController__13CInputManagerUcSc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d6ed0",
-            "size": 56,
-            "kind": "function",
-            "name": "SetKeymap__13CInputManagerUcP6KEYMAP",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d6f08",
-            "size": 72,
-            "kind": "function",
-            "name": "GetValue__C13CInputManagerUcUs",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800d6f50",
             "size": 168,
             "kind": "function",
             "name": "GetInputAnyDevice__C13CInputManager",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d6ff8",
-            "size": 52,
-            "kind": "function",
-            "name": "IsReady__C13CInputManagerSc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d702c",
-            "size": 32,
-            "kind": "function",
-            "name": "IsActive__C13CInputManagerSc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d704c",
-            "size": 68,
-            "kind": "function",
-            "name": "SetFeedback__13CInputManagerUcUcUcff",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d7090",
-            "size": 120,
-            "kind": "function",
-            "name": "Reset__13CInputManager",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d7108",
-            "size": 16,
-            "kind": "function",
-            "name": "SetBlockVibrations__13CInputManagerbUc",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -52865,27 +52875,6 @@
             "size": 236,
             "kind": "function",
             "name": "CheckControllers__13CInputManagerb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d727c",
-            "size": 100,
-            "kind": "function",
-            "name": "SetSPLockedPort__13CInputManagerUc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d72e0",
-            "size": 104,
-            "kind": "function",
-            "name": "FindDeviceIDFromPortNum__C13CInputManagerUc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d7348",
-            "size": 68,
-            "kind": "function",
-            "name": "SetBadControllerPort__13CInputManagerUc",
             "evidence": "adjacent-compiler-markers"
           },
           {
