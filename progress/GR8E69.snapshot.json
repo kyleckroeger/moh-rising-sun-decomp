@@ -282,6 +282,7 @@
       "src/dolphin/vi/__vi.h": "22201b234d317ca8d2724210a124ac6ceb9708df13c1b73eae87afab8e625b7b",
       "src/dolphin/vi/vi.c": "a39c975336daa3c42a5a186d68d0c9c39e91aa0df0003b1b052eb767cdf4beed",
       "src/ea/audioplayer.cpp": "d7cb0381566d28d5a4bea0e4e58d44991b3c417e7b49ab028af8d0ddd136c541",
+      "src/ea/debugbreak.cpp": "d50f4e6762b140affcc38bffd64450e3fd3e14f625ff3c1b0101c206ec715ef4",
       "src/ea/exit.cpp": "aee2216bb9de55d7631911b45e6f3f0375214505293efc561cc5dbd69d6751a5",
       "src/ea/filedev.cpp": "1c7e4208404879a1d2e096eb38ec8e3c1f8cd59d5efbce8af985d6341649ffcf",
       "src/ea/filedev_close.cpp": "3aeb1e67e182ea7900ee496b59a5d1921bf7e4d28b9907ec8ddb7a8098ce04de",
@@ -2802,6 +2803,7 @@
       "config/GR8E69/dvdidutils.json": "146c4fe18f3d3e8eef2b1cd674155ffd5696c80b23ada1f47cbf175b43d2e1ea",
       "config/GR8E69/dvdlow.json": "e7c3f8c921d458b9f0a4c9c1b60d76522a25bbcc6eff2994cf01b304525c2630",
       "config/GR8E69/dvdqueue.json": "50714e893a617523e6e28eff930b1d91d1a5eaa8a00c9cce217acf50c4337821",
+      "config/GR8E69/ea_debugbreak.json": "2382963befab86f6d70e08776b7b78784dc1eb1731b6edae60d3731be0de1599",
       "config/GR8E69/ea_exit.json": "de78f22a5df786df5c55dbc0478097d02d84041ef7ec7c833b28bcf167a6e187",
       "config/GR8E69/ea_filedev.json": "d4d68515f9bc5ca3a34326f97480829907a7d919a986150d48cfac4211bf2e70",
       "config/GR8E69/ea_filedev_close.json": "c5bd473f3105c80e183851c795355c414c950945c828fc831b72fd9168efd1c3",
@@ -3428,7 +3430,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "edfe395c9a0c9e28f5c3d73d0515c7235fcb4388148401cc58bb25ca4820c6d8",
+      "config/GR8E69/project.json": "ac0b66afbcbd4de3bf41ab5f4d8d0617587f81332873ec3461e2a91b0ac35c78",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -4842,14 +4844,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1037680,
+    "matching_code_bytes": 1037744,
     "total_executable_code_bytes": 2492032,
-    "percent": 41.63991473624737,
+    "percent": 41.64248292156762,
     "categories": {
-      "reconstructed_game": 645464,
+      "reconstructed_game": 645528,
       "restored_library": 392216
     },
-    "matching_functions": 5031
+    "matching_functions": 5032
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -5142,6 +5144,7 @@
     "config/GR8E69/dvdidutils.json": "146c4fe18f3d3e8eef2b1cd674155ffd5696c80b23ada1f47cbf175b43d2e1ea",
     "config/GR8E69/dvdlow.json": "e7c3f8c921d458b9f0a4c9c1b60d76522a25bbcc6eff2994cf01b304525c2630",
     "config/GR8E69/dvdqueue.json": "50714e893a617523e6e28eff930b1d91d1a5eaa8a00c9cce217acf50c4337821",
+    "config/GR8E69/ea_debugbreak.json": "2382963befab86f6d70e08776b7b78784dc1eb1731b6edae60d3731be0de1599",
     "config/GR8E69/ea_exit.json": "de78f22a5df786df5c55dbc0478097d02d84041ef7ec7c833b28bcf167a6e187",
     "config/GR8E69/ea_filedev.json": "d4d68515f9bc5ca3a34326f97480829907a7d919a986150d48cfac4211bf2e70",
     "config/GR8E69/ea_filedev_close.json": "c5bd473f3105c80e183851c795355c414c950945c828fc831b72fd9168efd1c3",
@@ -5768,7 +5771,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "edfe395c9a0c9e28f5c3d73d0515c7235fcb4388148401cc58bb25ca4820c6d8",
+    "config/GR8E69/project.json": "ac0b66afbcbd4de3bf41ab5f4d8d0617587f81332873ec3461e2a91b0ac35c78",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7575,6 +7578,7 @@
     "src/dolphin/vi/__vi.h": "22201b234d317ca8d2724210a124ac6ceb9708df13c1b73eae87afab8e625b7b",
     "src/dolphin/vi/vi.c": "a39c975336daa3c42a5a186d68d0c9c39e91aa0df0003b1b052eb767cdf4beed",
     "src/ea/audioplayer.cpp": "d7cb0381566d28d5a4bea0e4e58d44991b3c417e7b49ab028af8d0ddd136c541",
+    "src/ea/debugbreak.cpp": "d50f4e6762b140affcc38bffd64450e3fd3e14f625ff3c1b0101c206ec715ef4",
     "src/ea/exit.cpp": "aee2216bb9de55d7631911b45e6f3f0375214505293efc561cc5dbd69d6751a5",
     "src/ea/filedev.cpp": "1c7e4208404879a1d2e096eb38ec8e3c1f8cd59d5efbce8af985d6341649ffcf",
     "src/ea/filedev_close.cpp": "3aeb1e67e182ea7900ee496b59a5d1921bf7e4d28b9907ec8ddb7a8098ce04de",
@@ -48695,6 +48699,25 @@
       "discarded_functions": [],
       "object_sha256": "540d39b5d607d05357efe84d9da6accf850970132d9da3f85be516f53035cf3e",
       "linked_sha256": "93fea1af1aa3b5b1b3ae92289b3a894245830745f10af4baf52f9651ea113d1a"
+    },
+    {
+      "id": "ea_debugbreak",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 64,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "85648844c116e19a8ff66d3ff61897672c7c7625ca99b126f641f039b415726e",
+      "linked_sha256": "7b9e98eba1aedbdfbbe7f8bbb842c4d3b8e2259031dfe334d7f8169c87264da0"
     }
   ],
   "code_map": {
@@ -81674,18 +81697,6 @@
         "marker_interval": [
           "0x80218268",
           "0x80218444"
-        ]
-      },
-      {
-        "name": "Unknown file/.text @ 802184cc",
-        "ranges": [
-          {
-            "address": "0x802184cc",
-            "size": 64,
-            "kind": "function",
-            "name": "DEBUG_break",
-            "evidence": "unknown-file"
-          }
         ]
       },
       {

@@ -1,0 +1,48 @@
+{
+  "id": "ea_debugbreak",
+  "source": "src/ea/debugbreak.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802184cc",
+      "size": 64
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bf71c",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "DEBUG_break",
+      "address": "0x802184cc",
+      "size": 64,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "OSPanic": "0x80255318",
+    "debugexit": "0x804512c4"
+  },
+  "sda_externals": [
+    "debugexit"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}
