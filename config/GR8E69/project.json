@@ -1957,7 +1957,10 @@
     "scene_StaticObjectAnimBegin.json",
     "scene_StaticObjectMotionPlayback.json",
     "scene_StaticObjectPathDest.json",
-    "sound_sdrv_set3dpos.json"
+    "sound_sdrv_set3dpos.json",
+    "scene_StaticObjectBullet.json",
+    "scene_AnimObjectBullet.json",
+    "scene_HierObjectOnCollision.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

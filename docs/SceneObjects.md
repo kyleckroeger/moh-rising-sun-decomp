@@ -117,6 +117,11 @@ brakes to the final point and raises script event 53 on arrival. State 3 keeps t
 `pathFollowTarget`, adjusting the wanted speed by the signed gap; mission 4 stage 2 lets it reverse. States 5
 and 6 stop the object, and a stopped state 6 becomes state 1.
 
+Bullet hits on static and animated objects raise script event 40 with a 32-byte record: source, damage,
+direction (0 to 3, from the bullet's facing against the object's forward and right vectors), bullet type and
+the contact's feature. Animated objects also scale damage by location: four times for features 0 and 1, half
+for 3 to 8 and 13 to 20. Static objects add the hit position relative to the object at `+0x18` and `+0x1c`.
+
 ## Parked
 
 These still differ, with instruction differences in brackets; drafts are kept outside the

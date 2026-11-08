@@ -1035,6 +1035,7 @@
       "src/scene/AnimObjFactoryReset.cpp": "02f7ce07d09dcff1319d008e7ab397b366ad1ef531ac4656f30ce0de598a3614",
       "src/scene/AnimObjectAccess.cpp": "8251933c1dc90e1e9d521d3fd184b7e8ec3817565251a66f32c32086d58eff09",
       "src/scene/AnimObjectAdjust.cpp": "32109919113bf17a1f4644874774d94da906b24779224fe0556594301d3ff12a",
+      "src/scene/AnimObjectBullet.cpp": "a17b19ecb831e79c7e772211170bcb6703759f74a53dafba1ed3a6f808133823",
       "src/scene/AnimObjectCallback.cpp": "3a3f77205332fe0ede0140110e49cd2a6b7b656b04686d101f71c7d4b2ee3177",
       "src/scene/AnimObjectCollisionBind.cpp": "fe5a5339d187aacad988f655cd0cf937f586ba767738e11f867d088a23ddfa6d",
       "src/scene/AnimObjectCommitUpdate.cpp": "8901bc32b1bc989b4887c7583689bbc996527c4959e8c06a0a4d5343e6067724",
@@ -1068,6 +1069,7 @@
       "src/scene/HierObjectLightVolume.cpp": "1d74d2caa42fb3eb1fcd1db956d525a8359fa0906fc982e80735c5a30c18f0d3",
       "src/scene/HierObjectMotion.cpp": "f5d65c1eab1f501f3304ecfe3e70c6175263d7f247336910ca29afc934f64e9e",
       "src/scene/HierObjectMotionAttempt.cpp": "6ec00d1cc1c81f378c1d5a4bf80110e237aca532ddd5498c18658854d51491c9",
+      "src/scene/HierObjectOnCollision.cpp": "107a14c859c722732e071b462b3bc3805f84cf2cf17897c8d9f0892a9d3d1556",
       "src/scene/HierObjectScriptAttempt.cpp": "1fd2fded1c8666a4ffd379089ea1e9c1988cc97fadeb9b92b62a6260391a3a17",
       "src/scene/HierObjectScriptBegin.cpp": "4304ad5faadb412a54a849e0fa70d5853aaee961b41b026543dab616829f263e",
       "src/scene/HierObjectScriptCommit.cpp": "d13df617cf5c58cdf6bceea4b0aa9b494dd86ac6c8bb60300483ab2cdc562f11",
@@ -1127,6 +1129,7 @@
       "src/scene/StaticObjectAttachedLight.cpp": "ea79e7b7b90fba02effed2b77927e4abe661b535a878658f99e63d767c518437",
       "src/scene/StaticObjectAttempt.cpp": "ec21bf0a48006ef9bcf8b6b47aa99b91ee12d7591fc47018d30d64239d09f14d",
       "src/scene/StaticObjectBeginUpdate.cpp": "d3a10033d7c1385f491e5e246b3c53d484af333209158a9619297c894747f96c",
+      "src/scene/StaticObjectBullet.cpp": "8d859ad0098713b3d4d7971b9441eefb0800e6ca7c9f42c9d0d5f57b9dbda36e",
       "src/scene/StaticObjectCommit.cpp": "42fe1d30e49414c7147a3e81fe5bd0839fdf993cfa4b377240334a51bc999b7c",
       "src/scene/StaticObjectCommitUpdate.cpp": "a15c1d6d1cc2d9119978f7119facbc25cee138cab7ff00e7410c817014345abd",
       "src/scene/StaticObjectHead.cpp": "c0fb66a3a1ff6f5aa09d75a84266915a1350f99a57e71b0543bc3e7e034b0398",
@@ -2310,7 +2313,7 @@
       "include/game/PropertyData.h": "952ae5ac78dc17e43053a7b905a8e58499a1faa3c7d0721269329f639095b22a",
       "include/game/Rcmp.h": "9f0b3fe189c690b8ee358797a865f8e6172f48640e9fc998e332061823b08cb2",
       "include/game/SceneNode.h": "0cec8ca3cf3e8302715836d269ca26ed943150907b80ac65b531b866f7e58e2c",
-      "include/game/SceneObjects.h": "ac7eb88fdf54356d9511dda6822a38233e0255fb3d4672b561b91671fa1a3847",
+      "include/game/SceneObjects.h": "71b14ee920b05901dacf4ae412d8d95089ec5a2d56f4e72388cf634a63be8e43",
       "include/game/Screen.h": "b4e501afbd3363469c5420dbf4e790d4f0f8a1f98932efc7fee4f7786818cd7c",
       "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
       "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
@@ -3398,7 +3401,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "3c404a177e654a1c7f8f7ea060a87228b3f8d39cdbe6a427f403c9af2c8e6686",
+      "config/GR8E69/project.json": "774767e795672bf6778756c771ffaab1154f2a019e984644603b00363a778fc8",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -3430,6 +3433,7 @@
       "config/GR8E69/scene_AnimObjFactoryReset.json": "f8f158148087c9a55b8d8ed48125111f8afcf668eb6a7f62ce6c610848f0ac57",
       "config/GR8E69/scene_AnimObjectAccess.json": "0f9a1fa701d92f4e3b1396be3b5c06bb6527ee24c437760e2d4da165aded0212",
       "config/GR8E69/scene_AnimObjectAdjust.json": "d8ac95cdc60c276e349310ef49840178247cc6eda41162537a5d1979f62a183a",
+      "config/GR8E69/scene_AnimObjectBullet.json": "d45a80d727bd14ea37a6aced91189483237f6dabaf7bb8a48ca0956b727d8d6b",
       "config/GR8E69/scene_AnimObjectCallback.json": "9bc95f1c9687004bcaead56cac59925917611ae4d4318f079b4d3cef3e7a4f64",
       "config/GR8E69/scene_AnimObjectCollisionBind.json": "a47c25fd019ffe7a7d0d67c79cc9eebb0a9e1776725b99def2b167777c23a2fb",
       "config/GR8E69/scene_AnimObjectCommitUpdate.json": "2c3af9d941467c1ca23e2cdc3c6b482c476a08bda143c2f5093511d2892beec9",
@@ -3463,6 +3467,7 @@
       "config/GR8E69/scene_HierObjectLightVolume.json": "9c294cc7141b9ccd5bb381e81cec6980ec7d94119448ce931902bf7d8e384cab",
       "config/GR8E69/scene_HierObjectMotion.json": "48f105001c172bdda64ffe667b7fb5ee1f2c705484807989edc470616c59107b",
       "config/GR8E69/scene_HierObjectMotionAttempt.json": "cfe8909c9d7f45adc17b6bb43f6779e9962957bb7f127236d303410393522a09",
+      "config/GR8E69/scene_HierObjectOnCollision.json": "fb1ec18e42f6aa93578b50bfa31cbfb0dd410d28e3511f88b3936249332f938b",
       "config/GR8E69/scene_HierObjectScriptAttempt.json": "91faad6488a86326bb15876745bbb962a1d3e14bdccafa5669fdeb23b1fa398a",
       "config/GR8E69/scene_HierObjectScriptBegin.json": "a24d6a7ed437a68d85fbfd48f35bf433d15b2b5fa8ac2d66e5522cd9e7d78404",
       "config/GR8E69/scene_HierObjectScriptCommit.json": "e4ec7bba2aae1b12466faed07a3e0f6922a57a8e4c13d4bd1faa0aa50f028d63",
@@ -3512,6 +3517,7 @@
       "config/GR8E69/scene_StaticObjectAttachedLight.json": "e50794d3d13fd901e01d342c36172d7d258e0b4966afa2af388442509d29c197",
       "config/GR8E69/scene_StaticObjectAttempt.json": "dc7f390dbf973c92a7b15aa21913570c31e6a25dd4f99f419b28d3410c359e94",
       "config/GR8E69/scene_StaticObjectBeginUpdate.json": "257dd8cdfffc984fc58a7038b0f361af42d69381caf424392118d7b2e4a8a4da",
+      "config/GR8E69/scene_StaticObjectBullet.json": "7e66af94a2876ef476cac51feed94583153f7582cd8ca3e47df33e44fc5b9f6b",
       "config/GR8E69/scene_StaticObjectCommit.json": "6e6e445663a0d40cc640f4df2e17647be616b876da71f4469131d75aee7b19bc",
       "config/GR8E69/scene_StaticObjectCommitUpdate.json": "be7af0d31286b5ad337c660a08f1a63006828d33aa43ae2089b3ce8d4f238e20",
       "config/GR8E69/scene_StaticObjectHead.json": "87f74bca2deaa0b057ba2556d04761151b49b597c28bf84afd1c404f2a8bf10f",
@@ -4800,14 +4806,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1027276,
+    "matching_code_bytes": 1030636,
     "total_executable_code_bytes": 2492032,
-    "percent": 41.22242411012379,
+    "percent": 41.35725383943706,
     "categories": {
-      "reconstructed_game": 635060,
+      "reconstructed_game": 638420,
       "restored_library": 392216
     },
-    "matching_functions": 5003
+    "matching_functions": 5006
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -5717,7 +5723,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "3c404a177e654a1c7f8f7ea060a87228b3f8d39cdbe6a427f403c9af2c8e6686",
+    "config/GR8E69/project.json": "774767e795672bf6778756c771ffaab1154f2a019e984644603b00363a778fc8",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -5749,6 +5755,7 @@
     "config/GR8E69/scene_AnimObjFactoryReset.json": "f8f158148087c9a55b8d8ed48125111f8afcf668eb6a7f62ce6c610848f0ac57",
     "config/GR8E69/scene_AnimObjectAccess.json": "0f9a1fa701d92f4e3b1396be3b5c06bb6527ee24c437760e2d4da165aded0212",
     "config/GR8E69/scene_AnimObjectAdjust.json": "d8ac95cdc60c276e349310ef49840178247cc6eda41162537a5d1979f62a183a",
+    "config/GR8E69/scene_AnimObjectBullet.json": "d45a80d727bd14ea37a6aced91189483237f6dabaf7bb8a48ca0956b727d8d6b",
     "config/GR8E69/scene_AnimObjectCallback.json": "9bc95f1c9687004bcaead56cac59925917611ae4d4318f079b4d3cef3e7a4f64",
     "config/GR8E69/scene_AnimObjectCollisionBind.json": "a47c25fd019ffe7a7d0d67c79cc9eebb0a9e1776725b99def2b167777c23a2fb",
     "config/GR8E69/scene_AnimObjectCommitUpdate.json": "2c3af9d941467c1ca23e2cdc3c6b482c476a08bda143c2f5093511d2892beec9",
@@ -5782,6 +5789,7 @@
     "config/GR8E69/scene_HierObjectLightVolume.json": "9c294cc7141b9ccd5bb381e81cec6980ec7d94119448ce931902bf7d8e384cab",
     "config/GR8E69/scene_HierObjectMotion.json": "48f105001c172bdda64ffe667b7fb5ee1f2c705484807989edc470616c59107b",
     "config/GR8E69/scene_HierObjectMotionAttempt.json": "cfe8909c9d7f45adc17b6bb43f6779e9962957bb7f127236d303410393522a09",
+    "config/GR8E69/scene_HierObjectOnCollision.json": "fb1ec18e42f6aa93578b50bfa31cbfb0dd410d28e3511f88b3936249332f938b",
     "config/GR8E69/scene_HierObjectScriptAttempt.json": "91faad6488a86326bb15876745bbb962a1d3e14bdccafa5669fdeb23b1fa398a",
     "config/GR8E69/scene_HierObjectScriptBegin.json": "a24d6a7ed437a68d85fbfd48f35bf433d15b2b5fa8ac2d66e5522cd9e7d78404",
     "config/GR8E69/scene_HierObjectScriptCommit.json": "e4ec7bba2aae1b12466faed07a3e0f6922a57a8e4c13d4bd1faa0aa50f028d63",
@@ -5831,6 +5839,7 @@
     "config/GR8E69/scene_StaticObjectAttachedLight.json": "e50794d3d13fd901e01d342c36172d7d258e0b4966afa2af388442509d29c197",
     "config/GR8E69/scene_StaticObjectAttempt.json": "dc7f390dbf973c92a7b15aa21913570c31e6a25dd4f99f419b28d3410c359e94",
     "config/GR8E69/scene_StaticObjectBeginUpdate.json": "257dd8cdfffc984fc58a7038b0f361af42d69381caf424392118d7b2e4a8a4da",
+    "config/GR8E69/scene_StaticObjectBullet.json": "7e66af94a2876ef476cac51feed94583153f7582cd8ca3e47df33e44fc5b9f6b",
     "config/GR8E69/scene_StaticObjectCommit.json": "6e6e445663a0d40cc640f4df2e17647be616b876da71f4469131d75aee7b19bc",
     "config/GR8E69/scene_StaticObjectCommitUpdate.json": "be7af0d31286b5ad337c660a08f1a63006828d33aa43ae2089b3ce8d4f238e20",
     "config/GR8E69/scene_StaticObjectHead.json": "87f74bca2deaa0b057ba2556d04761151b49b597c28bf84afd1c404f2a8bf10f",
@@ -7053,7 +7062,7 @@
     "include/game/PropertyData.h": "952ae5ac78dc17e43053a7b905a8e58499a1faa3c7d0721269329f639095b22a",
     "include/game/Rcmp.h": "9f0b3fe189c690b8ee358797a865f8e6172f48640e9fc998e332061823b08cb2",
     "include/game/SceneNode.h": "0cec8ca3cf3e8302715836d269ca26ed943150907b80ac65b531b866f7e58e2c",
-    "include/game/SceneObjects.h": "ac7eb88fdf54356d9511dda6822a38233e0255fb3d4672b561b91671fa1a3847",
+    "include/game/SceneObjects.h": "71b14ee920b05901dacf4ae412d8d95089ec5a2d56f4e72388cf634a63be8e43",
     "include/game/Screen.h": "b4e501afbd3363469c5420dbf4e790d4f0f8a1f98932efc7fee4f7786818cd7c",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
     "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
@@ -8265,6 +8274,7 @@
     "src/scene/AnimObjFactoryReset.cpp": "02f7ce07d09dcff1319d008e7ab397b366ad1ef531ac4656f30ce0de598a3614",
     "src/scene/AnimObjectAccess.cpp": "8251933c1dc90e1e9d521d3fd184b7e8ec3817565251a66f32c32086d58eff09",
     "src/scene/AnimObjectAdjust.cpp": "32109919113bf17a1f4644874774d94da906b24779224fe0556594301d3ff12a",
+    "src/scene/AnimObjectBullet.cpp": "a17b19ecb831e79c7e772211170bcb6703759f74a53dafba1ed3a6f808133823",
     "src/scene/AnimObjectCallback.cpp": "3a3f77205332fe0ede0140110e49cd2a6b7b656b04686d101f71c7d4b2ee3177",
     "src/scene/AnimObjectCollisionBind.cpp": "fe5a5339d187aacad988f655cd0cf937f586ba767738e11f867d088a23ddfa6d",
     "src/scene/AnimObjectCommitUpdate.cpp": "8901bc32b1bc989b4887c7583689bbc996527c4959e8c06a0a4d5343e6067724",
@@ -8298,6 +8308,7 @@
     "src/scene/HierObjectLightVolume.cpp": "1d74d2caa42fb3eb1fcd1db956d525a8359fa0906fc982e80735c5a30c18f0d3",
     "src/scene/HierObjectMotion.cpp": "f5d65c1eab1f501f3304ecfe3e70c6175263d7f247336910ca29afc934f64e9e",
     "src/scene/HierObjectMotionAttempt.cpp": "6ec00d1cc1c81f378c1d5a4bf80110e237aca532ddd5498c18658854d51491c9",
+    "src/scene/HierObjectOnCollision.cpp": "107a14c859c722732e071b462b3bc3805f84cf2cf17897c8d9f0892a9d3d1556",
     "src/scene/HierObjectScriptAttempt.cpp": "1fd2fded1c8666a4ffd379089ea1e9c1988cc97fadeb9b92b62a6260391a3a17",
     "src/scene/HierObjectScriptBegin.cpp": "4304ad5faadb412a54a849e0fa70d5853aaee961b41b026543dab616829f263e",
     "src/scene/HierObjectScriptCommit.cpp": "d13df617cf5c58cdf6bceea4b0aa9b494dd86ac6c8bb60300483ab2cdc562f11",
@@ -8357,6 +8368,7 @@
     "src/scene/StaticObjectAttachedLight.cpp": "ea79e7b7b90fba02effed2b77927e4abe661b535a878658f99e63d767c518437",
     "src/scene/StaticObjectAttempt.cpp": "ec21bf0a48006ef9bcf8b6b47aa99b91ee12d7591fc47018d30d64239d09f14d",
     "src/scene/StaticObjectBeginUpdate.cpp": "d3a10033d7c1385f491e5e246b3c53d484af333209158a9619297c894747f96c",
+    "src/scene/StaticObjectBullet.cpp": "8d859ad0098713b3d4d7971b9441eefb0800e6ca7c9f42c9d0d5f57b9dbda36e",
     "src/scene/StaticObjectCommit.cpp": "42fe1d30e49414c7147a3e81fe5bd0839fdf993cfa4b377240334a51bc999b7c",
     "src/scene/StaticObjectCommitUpdate.cpp": "a15c1d6d1cc2d9119978f7119facbc25cee138cab7ff00e7410c817014345abd",
     "src/scene/StaticObjectHead.cpp": "c0fb66a3a1ff6f5aa09d75a84266915a1350f99a57e71b0543bc3e7e034b0398",
@@ -47842,8 +47854,8 @@
       ],
       "strip_unused": false,
       "discarded_functions": [],
-      "object_sha256": "ee44481b194e8786a09127b9ea6d40c19f3fd4db4caff3b8bd8d0ad377ad89e4",
-      "linked_sha256": "57c5198c19cd80ea4238bbe07943cd39525f63f0275252b8d3d4d6129ddfc5a7"
+      "object_sha256": "8dbc0126577f67cd2418e671f3d8288c3a0a2296340f7f92ac70861aa214a152",
+      "linked_sha256": "941ae4fa50f22295511e402febec48b77b512a2d2cacee5fbae66e7cbfee5e9d"
     },
     {
       "id": "sound_snddrv_serve",
@@ -48227,6 +48239,60 @@
       "discarded_functions": [],
       "object_sha256": "284fb326fd3e935f6aff192f248912a19ebc9972e0d8c47fc871425ace913dfb",
       "linked_sha256": "eea706777166d6aa947046436448c3798d46e10b67cba930b08864a866790b03"
+    },
+    {
+      "id": "scene_StaticObjectBullet",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 984,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "0c3db51393ec04f50594ca3d80f2fbe0a51bf7cc26a2bf23e30c3c5fe6675314",
+      "linked_sha256": "179635a9a9695bdcbfa381ee42c749b49d77347cd1b3a9a279e7e017fc59c824"
+    },
+    {
+      "id": "scene_AnimObjectBullet",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 976,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "acede12dee16cb3eea4d237802b68d022e8621c1a0babc21310750e0c5d950ba",
+      "linked_sha256": "d45714d7e6c0ac141deb484961efe0e335e9fdaecfc9a7e0f8eca8b50a90a799"
+    },
+    {
+      "id": "scene_HierObjectOnCollision",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 1400,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "bc8f94c6297a7f2abaeed349230f2c8f1bf52175f95723adf9a46a506c3266ee",
+      "linked_sha256": "a19ef176ca663e96a09a34742abb58bd5b16952ad152bcdf874b4a0e5e65135c"
     }
   ],
   "code_map": {
@@ -58732,13 +58798,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800a3ea0",
-            "size": 976,
-            "kind": "function",
-            "name": "HandleBulletCollision__11CAnimObjectP7CBulletRC10CCollision",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800a4270",
             "size": 372,
             "kind": "function",
@@ -58873,13 +58932,6 @@
             "size": 708,
             "kind": "function",
             "name": "RotateFromScript__13CStaticObjectRC8CVector3T112EBSEventEnum",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a9b20",
-            "size": 984,
-            "kind": "function",
-            "name": "HandleBulletCollision__13CStaticObjectP7CBulletRC10CCollision",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -60322,13 +60374,6 @@
             "size": 168,
             "kind": "function",
             "name": "GetWorldLinearVelocity__C11CHierObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d1ea4",
-            "size": 1400,
-            "kind": "function",
-            "name": "OnCollision__11CHierObjectRC10CCollision",
             "evidence": "adjacent-compiler-markers"
           },
           {

@@ -97,6 +97,7 @@ class CStaticObject {
     void BeginAnimMotionUpdate(float);
     void AttemptScriptMotionUpdate(float);
     void AttemptAnimMotionUpdate(float);
+    void AttemptCollisionDamage(const CCollision &);
     void BeginPathMotionUpdate(float);
     void AttemptPathMotionUpdate(float);
     void CommitPathMotionUpdate();
@@ -264,6 +265,7 @@ enum EAnimCallback { AnimCallbackUnknown = 0 };
 class CScreen;
 class CAnimObject {
   public:
+    void HandleBulletCollision(CBullet *, const CCollision &);
     static void InitClass(CScreen *);
     void OnCollision(const CCollision &);
     void Init();
@@ -667,7 +669,19 @@ class CHierObject : public CStaticObject {
     CMatrix attachPointMatrix; // +0xa30
     CVector3 attachOffset;    // +0xa70
     CVector3 attachDelta;     // +0xa80; added to attachOffset on commit.
-    unsigned char unknown_a90[0xb28 - 0xa90];
+    // +0xa90: the animated objects touching this one, collected from contacts.
+    struct AttachedList {
+        ISceneNode **items;
+        unsigned char unknown_4[4];
+        int count;
+        int capacity;
+        void Add(ISceneNode *node) {
+            if (count < capacity)
+                items[count++] = node;
+        }
+    };
+    AttachedList touching;
+    unsigned char unknown_aa0[0xb28 - 0xaa0];
     BulletDamage bulletDamage[2]; // +0xb28; class ranges, unused entries hold -1.
 };
 
