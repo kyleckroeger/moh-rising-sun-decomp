@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 968976,
+    "matching_code_bytes": 971428,
     "total_executable_code_bytes": 2492032,
-    "percent": 38.88296779495609,
+    "percent": 38.98136139503826,
     "categories": {
-      "reconstructed_game": 576760,
+      "reconstructed_game": 579212,
       "restored_library": 392216
     },
-    "matching_functions": 4780
+    "matching_functions": 4788
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -546,6 +546,7 @@
     "config/GR8E69/ethsec.json": "5305737979b5e234b337720f07434e602f0d0ab8df682c5287ba2349d6438f69",
     "config/GR8E69/explosion_constructor.json": "23ced4ead134e230d87770045cab3792930c80b58c2e9f3e7259886ccd378a1f",
     "config/GR8E69/explosion_visit.json": "2cc8e7f5328098153ab906a1d679c04e8016c97fdec294b7494d7312bc417ec4",
+    "config/GR8E69/fader.json": "a511bee84e26a44b06b85880decce92b40617cf2aac02191146f6a4a062adc7e",
     "config/GR8E69/fe_hash_upper.json": "c9e6dff86f6763a1c5f4962057e5c6f58bd9587b9ea3b31fb71bf0e49f6bb451",
     "config/GR8E69/fe_upper_case.json": "db8afcb483244836c37cf2af7fedcc32bef682ca25f38e27ced5d4cf99978174",
     "config/GR8E69/fiber_construct.json": "9a6c883516c846241681107ecb034969838fcb1246adcc5dbf2f09e654c198cc",
@@ -892,7 +893,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "7bf8040b9cd0e4171495cf3a7c7e8a37c522da3bac6f84659b26bf2aed66e0b7",
+    "config/GR8E69/project.json": "bb876c9f4e3e55ef72eec6065b4c1263ebcb2c3708592fee101702754a95d664",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -2132,6 +2133,7 @@
     "include/game/EAGLTransform.h": "c8b8d8e4397d16d893d6b080bfa5a7a1a9e4fd35bd0d98096d75f3d00e64d433",
     "include/game/Endian.h": "6f3a06aca2ed749c09949cedff932c6e9a8db1272b5393bdc9a46185a384387b",
     "include/game/FEHash.h": "5d2777480e94ab65796f9850193722c7585a884299d6b68b610c5b3ce6a08757",
+    "include/game/Fader.h": "5e6a829b80a545618de960a1fcb77e1c59c1ea1ba2f2e0fee87d54c2e7c73143",
     "include/game/Fiber.h": "86a5b88a4e003f050e9a365b1a5c582c8d0163426b18fff783e17a465ddbb045",
     "include/game/FlexProp.h": "d4b492f690451a27c03371aa71637f8b6a4109c07ed8ba55de69ae5f256414ff",
     "include/game/FlexPropDatabase.h": "e3bb33faf5cff3877d051efc3335ff33c373c9d228a7afcb8b2c16f4ee97c767",
@@ -2162,7 +2164,7 @@
     "include/game/Rcmp.h": "9f0b3fe189c690b8ee358797a865f8e6172f48640e9fc998e332061823b08cb2",
     "include/game/SceneNode.h": "40a259452061449ceea65f58648fc29241bb00478413744071b736513d776c89",
     "include/game/SceneObjects.h": "53d5108eb20b0c149c785977b94a5e8bd1faae70c8da0f02e45a44c588891a41",
-    "include/game/Screen.h": "d8d90744c37d10401fcbc506ddf1269249efe5f516972005e96307a6322ed26e",
+    "include/game/Screen.h": "b4e501afbd3363469c5420dbf4e790d4f0f8a1f98932efc7fee4f7786818cd7c",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
     "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
     "include/game/ScriptMachine.h": "ca23b124331e6be9f43fc9e17237cbdb7851ff2941192e76b4aa3f8086db44bb",
@@ -2902,6 +2904,7 @@
     "src/game/LinkedList.cpp": "7361285bbff6c1c98f4751ffa81c4a80a8de7b348144d43b880f40ca98feb332",
     "src/game/configfile.cpp": "0b7f529b5026deac835ef66c0e735bf252c96ce3b825808ece1998806605444c",
     "src/game/debug_msg.cpp": "9a5e4e7ca6cd102ae562f15de3cb54173f9bce402660cd40507cb79eba79b346",
+    "src/game/fader.cpp": "747b4b655d1fd223cce5f602f80988b025c9c3ed3037e60e29588fc265522dba",
     "src/game/font_attrs.cpp": "17a5dcba14710a5625b373dba980f883f4491d208bf930ab9eb0cec07b5f3fe7",
     "src/game/font_ctor.cpp": "58553ab744e9e2326e145ad958eb12bdd904aa92453a41030f63035cd506348f",
     "src/game/font_draw.cpp": "7d13587aadc975b86a92737e78cb108dcb191bf6a1c64973d98b2f70e746015a",
@@ -41628,6 +41631,25 @@
       "discarded_functions": [],
       "object_sha256": "2be804c54371898a0beac1b93c0b0abffe75abb6618c73eab797f79b1f6718d0",
       "linked_sha256": "f7d1dcf10d839e2d5f9ef77e709c8fe91540aca7a4be1f5c51a597f74b42307a"
+    },
+    {
+      "id": "fader",
+      "category": "reconstructed_game",
+      "functions": 8,
+      "code_bytes": 2452,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-ffast-math"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "3a61014dc12ee12a1abaa7a33b4fd8a6c32fe54f04c389df4c8d04a42576372f",
+      "linked_sha256": "f28b6373567058fdd8dfc33dbad10099ae4047eb98275359e94e20da6bada1c2"
     }
   ],
   "code_map": {
@@ -46335,66 +46357,10 @@
         ]
       },
       {
-        "name": "Unmatched files/fader.cpp [inferred file group]",
+        "name": "Unmatched files/fader.cpp [local symbols only]",
         "file_record": 74,
         "file_name": "fader.cpp",
         "ranges": [
-          {
-            "address": "0x80068130",
-            "size": 76,
-            "kind": "function",
-            "name": "Coord__Ffff",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x8006817c",
-            "size": 228,
-            "kind": "function",
-            "name": "__6CFader",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80068260",
-            "size": 80,
-            "kind": "function",
-            "name": "Init__6CFader",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800682b0",
-            "size": 1020,
-            "kind": "function",
-            "name": "Update__6CFaderf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800686ac",
-            "size": 104,
-            "kind": "function",
-            "name": "IsFading__6CFader",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80068714",
-            "size": 308,
-            "kind": "function",
-            "name": "FadeIn__6CFaderG6CColorf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80068848",
-            "size": 316,
-            "kind": "function",
-            "name": "FadeOut__6CFaderG6CColorf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80068984",
-            "size": 320,
-            "kind": "function",
-            "name": "Flash__6CFaderG6CColorff",
-            "evidence": "adjacent-compiler-markers"
-          },
           {
             "address": "0x80068ac4",
             "size": 112,

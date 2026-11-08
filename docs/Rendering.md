@@ -269,3 +269,14 @@ selects the requested frame, draws, then returns to frame 0.
 Not reconstructed: `Init`, `InitAnimatedTexturesOnly`, the texture registration functions,
 `SetAllShapesClamped`, the destructors (which emit the class table), `InitClass`, `GetBasis`,
 the base `Draw` and `DrawMesh`, `IsVisible`, and the inline virtual accessors.
+
+## CFader
+
+`CFader` owns a primitive that extends `EAGL::DrawGouraud` (240 bytes), adding a fade colour of
+four floats at `+0xd0`, a fade-in time at `+0xe0`, a fade-out time at `+0xe4` and the elapsed time
+at `+0xe8`. Its `Update` lerps the colour from black during the first interval, holds when the
+second interval is the largest float, then lerps back. It doubles the colour, and draws a
+screen-covering quad when the result's alpha is positive, with channels clamped to 255. The unit
+compiles with `-ffast-math`, which folds subtractions and additions of the known zero red channel.
+`FadeIn` and `FadeOut` use normal blending, and `Flash` uses additive blending. The file's static
+initialization remains original.

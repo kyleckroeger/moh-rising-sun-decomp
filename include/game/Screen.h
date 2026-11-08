@@ -28,6 +28,8 @@ public:
     unsigned char unknown1c[0x64 - 0x1c];
 
     static CScreen *m_spScreen;
+    static unsigned int m_sWidth;
+    static int m_sHeight;
     static float m_sWidthScale;
     static float m_sHeightScale;
     static float m_2dXScale;

@@ -1,0 +1,107 @@
+{
+  "id": "fader",
+  "source": "src/game/fader.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-ffast-math"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80068130",
+      "size": 2452
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029a1f0",
+      "size": 160
+    }
+  ],
+  "functions": [
+    {
+      "name": "Coord__Ffff",
+      "address": "0x80068130",
+      "size": 76,
+      "binding": 0
+    },
+    {
+      "name": "__6CFader",
+      "address": "0x8006817c",
+      "size": 228,
+      "binding": 1
+    },
+    {
+      "name": "Init__6CFader",
+      "address": "0x80068260",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "Update__6CFaderf",
+      "address": "0x800682b0",
+      "size": 1020,
+      "binding": 1
+    },
+    {
+      "name": "IsFading__6CFader",
+      "address": "0x800686ac",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "FadeIn__6CFaderG6CColorf",
+      "address": "0x80068714",
+      "size": 308,
+      "binding": 1
+    },
+    {
+      "name": "FadeOut__6CFaderG6CColorf",
+      "address": "0x80068848",
+      "size": 316,
+      "binding": 1
+    },
+    {
+      "name": "Flash__6CFaderG6CColorff",
+      "address": "0x80068984",
+      "size": 320,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddVertex__Q24EAGL11DrawGouraudRC6COORD3RCQ24EAGL6Colour": "0x801e6ba0",
+    "Begin__Q24EAGL11DrawGouraudQ24EAGL13PrimitiveType": "0x801e67a4",
+    "DWI_alloc": "0x801a8670",
+    "End__Q24EAGL11DrawGouraud": "0x801e6958",
+    "GetState__Q24EAGL11DrawGouraud": "0x801e840c",
+    "Init__Q24EAGL11DrawGouraud": "0x801e6318",
+    "InternalFlush__Q24EAGL11DrawGouraud": "0x801e8324",
+    "SetAlphaBlendMode__Q24EAGL12GeoPrimStateQ24EAGL14AlphaBlendMode": "0x801df1f8",
+    "SetAlphaTestMethod__Q24EAGL12GeoPrimStateQ24EAGL15AlphaTestMethod": "0x801df21c",
+    "SetCullEnable__Q24EAGL12GeoPrimStateb": "0x801df1e0",
+    "SetDepthTestMethod__Q24EAGL12GeoPrimStateQ24EAGL15DepthTestMethod": "0x801df1ec",
+    "SetTransparencyMethod__Q24EAGL12GeoPrimStateQ24EAGL18TransparencyMethod": "0x801df238",
+    "SetZWritesEnable__Q24EAGL21GeoPrimStateExtensionb": "0x801df2d0",
+    "_7CScreen.m_sHeight": "0x80452578",
+    "_7CScreen.m_sWidth": "0x80452574",
+    "__Q24EAGL11DrawGouraud": "0x801e6138",
+    "g_pFader": "0x802c1c78"
+  },
+  "local_externals": [
+    "g_pFader"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "fader.cpp",
+  "original_file_index": 471
+}
