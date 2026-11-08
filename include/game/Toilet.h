@@ -19,10 +19,33 @@ struct LevelFileContentsStruct_ {
     TLTResourceEntry **data; // +0x08
 };
 
+struct RtcArchiveEntry {
+    int unknown00;
+    char *data; // +0x04, rebased by Dearchive
+    int unknown08;
+};
+
+struct RtcArchive {
+    unsigned char unknown00[0x0c];
+    int fileSize;             // +0x0c
+    int entryCount;           // +0x10
+    int unknown14;
+    // Entries follow at +0x18.
+    RtcArchiveEntry &Entry(int i) { return ((RtcArchiveEntry *)(this + 1))[i]; }
+};
+
 class CRtcFile {
 public:
+    ~CRtcFile();
+    void SetArchiveBuffer(char *buffer, void (*freeFunction)(void *));
     void DeallocateArchiveBuffer();
-    unsigned char unknown[0x10];
+    void Dearchive();
+    int GetFileSize() const;
+
+    RtcArchive *archive;          // +0x00
+    int dearchived;               // +0x04
+    int needsDearchive;           // +0x08
+    void (*freeFunction)(void *); // +0x0c
 };
 
 class Toilet {

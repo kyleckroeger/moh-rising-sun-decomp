@@ -1,0 +1,51 @@
+{
+  "id": "rtc_a",
+  "source": "src/game/rtc_a.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8005cebc",
+      "size": 288
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetArchiveBuffer__8CRtcFilePcPFPv_v",
+      "address": "0x8005cebc",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "DeallocateArchiveBuffer__8CRtcFile",
+      "address": "0x8005cee0",
+      "size": 188,
+      "binding": 1
+    },
+    {
+      "name": "_._8CRtcFile",
+      "address": "0x8005cf9c",
+      "size": 64,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__builtin_delete": "0x801a8990",
+    "__builtin_vec_delete": "0x801a89b0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

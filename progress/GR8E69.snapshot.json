@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1001996,
+    "matching_code_bytes": 1002420,
     "total_executable_code_bytes": 2492032,
-    "percent": 40.20799090862397,
+    "percent": 40.22500513637064,
     "categories": {
-      "reconstructed_game": 609780,
+      "reconstructed_game": 610204,
       "restored_library": 392216
     },
-    "matching_functions": 4944
+    "matching_functions": 4949
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -918,7 +918,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "0b917f870ef0cbf08fe60f276737056f945046c6a64bccc2189c161748f61acb",
+    "config/GR8E69/project.json": "b65493eb3ebe7cded068a1a51a44681136cb95021db517f42ccf52f9c5f5980b",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -942,6 +942,8 @@
     "config/GR8E69/quaternion_slerp.json": "1a0f13b162d329331ef995f603d989e695af05bdda0fce3a52b322131c771a16",
     "config/GR8E69/rcmpbase_decoder.json": "f0e7d02835301f05a7293f98aeb871ea4417d91cd4a55b3bb1c06d6536242f0a",
     "config/GR8E69/rcmpbase_frames.json": "56fec82984b72e2691a5734b9f2c899f58b759a77fdbaf3726bf768da94b1a20",
+    "config/GR8E69/rtc_a.json": "58b96c5751d8582fbe56c80a3b59f768803066e64cb987a784672bc856542275",
+    "config/GR8E69/rtc_b.json": "915642aa662dc6ad4778b05f8af129943a6210010eede8db307450709dc768bd",
     "config/GR8E69/scene_AnimObjFactoryConstructor.json": "beb4acd60fed40a6b29448a3570117b66a303faa06db9055bf5a291135e2e863",
     "config/GR8E69/scene_AnimObjFactoryLoaders.json": "69f7b7def6d7e0e4e6e30021635525499f2c9077c3cc34a29e2e5d86b5c189cb",
     "config/GR8E69/scene_AnimObjFactoryRelease.json": "50f6268ac1945950c6610e825a8ca87bee0aba837a50e912bf1e9953ddf16cec",
@@ -2253,7 +2255,7 @@
     "include/game/TevStage.h": "47aaf3de5425dace0c30e2852896a9494f78ab4a4dcaad6be03d4aa4204d7466",
     "include/game/TevStageInlines.h": "03b19716c4d88b4eb2f3c74cdf2040ca0bb6c43e842d1eefc2c8bd148a278645",
     "include/game/Thrown.h": "62c70dfcb9ad0243eba5bdf633073bb2563d3fe2b4da6bdcae42452c547912db",
-    "include/game/Toilet.h": "b3c7100bf5c6e5385de0298ecea12b79a8339dd4c94edf7ab1f3c47f2bc9d61c",
+    "include/game/Toilet.h": "a608aae7246153ba8ff8069a32a9080acb3d54ce06d1ce9f78ed5ccb94afacab",
     "include/game/TriggerObject.h": "73e70d537a184c92ad5f8f0e10b773f5efe3306ce871a82852a3c41398f7418b",
     "include/game/VideoDriver.h": "dd21c14b75db031804f4dfd4afd30fcaf14e5211ed4c37079e3f6ff3e19ee668",
     "include/game/Volume.h": "cda9e7de972fc28d73bf86418423a8b271c864d60bb53d1eba7d42744622db46",
@@ -2985,6 +2987,8 @@
     "src/game/input_tail.cpp": "3a03d39cf2824ead24e4e228c4b05c680c5b657609186cad161af73edb4987bf",
     "src/game/moh_boot.cpp": "1ba85a974ab861bb6b899025f7979c871890d299de7649f604ac1468b9ec0c01",
     "src/game/moh_loader.cpp": "eb5a65068e81a7d792ef4a16f8dffb817e5b4965e2534956940d449f4676cd2e",
+    "src/game/rtc_a.cpp": "d9e3685177a72199f1ac8856e4c91f6cea36b380183026e0086b9768eccf0d20",
+    "src/game/rtc_b.cpp": "6e20861f9cade38aae290ff193781e71ba7739aa26a9d26f57fe1ea0420c4965",
     "src/game/screen_init.cpp": "e0b48e8fa9140cb37b4791db75e8676370f877f67c8a9fe3b33c65350173e00d",
     "src/game/screen_setclear.cpp": "d1db021539edc57bb1519e4596aab8d380728cc7d63785d3446a80d48edfd416",
     "src/game/screen_tail.cpp": "f1a0401e50a6b75d185547ab60bcf96e3a4b68e64ef64a96c5cb4b579d3922ad",
@@ -42817,6 +42821,42 @@
       "discarded_functions": [],
       "object_sha256": "697401cf78a8fe56c61cab73546809f37b11bfe4fb170da222d336eb5b1a0d34",
       "linked_sha256": "8fba117de5b88622d193cb91ea9209b1cf53dbc0235c8ba6bfd910857073f599"
+    },
+    {
+      "id": "rtc_a",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 288,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "dcfabb6d184f84ca42a287e57d82428b9e2a9cb0cd51d8007bcb4b1d00a8ad11",
+      "linked_sha256": "913e21e57363cf71de019bc86ec58c1c53b4c0c0a7f6e8691cb2bc7bec1e754d"
+    },
+    {
+      "id": "rtc_b",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 136,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "b5ac611440e6faf24f986368c0c783a73a6dbba875b1f3c5a63415fe3691076b",
+      "linked_sha256": "d044dcfa9e97d321e78788c69392068f874e28de56329497083cd34ce78e2e0b"
     }
   ],
   "code_map": {
@@ -46079,48 +46119,13 @@
         ]
       },
       {
-        "name": "Unknown file/.text @ 8005cebc",
+        "name": "Unknown file/.text @ 8005cfdc",
         "ranges": [
-          {
-            "address": "0x8005cebc",
-            "size": 36,
-            "kind": "function",
-            "name": "SetArchiveBuffer__8CRtcFilePcPFPv_v",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8005cee0",
-            "size": 188,
-            "kind": "function",
-            "name": "DeallocateArchiveBuffer__8CRtcFile",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8005cf9c",
-            "size": 64,
-            "kind": "function",
-            "name": "_._8CRtcFile",
-            "evidence": "unknown-file"
-          },
           {
             "address": "0x8005cfdc",
             "size": 172,
             "kind": "function",
             "name": "GetRelocationTable__C8CRtcFileR15RelocationTable",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8005d088",
-            "size": 108,
-            "kind": "function",
-            "name": "Dearchive__8CRtcFile",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8005d0f4",
-            "size": 28,
-            "kind": "function",
-            "name": "GetFileSize__C8CRtcFile",
             "evidence": "unknown-file"
           }
         ]
