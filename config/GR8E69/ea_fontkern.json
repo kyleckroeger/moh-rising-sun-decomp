@@ -1,0 +1,52 @@
+{
+  "id": "ea_fontkern",
+  "source": "src/ea/fontkern.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802063a8",
+      "size": 272
+    }
+  ],
+  "functions": [
+    {
+      "name": "FONT_findkern16__FiPC8FONTKERNi",
+      "address": "0x802063a8",
+      "size": 56,
+      "binding": 0
+    },
+    {
+      "name": "FONT_findkern12__FiPC8FONTKERNii",
+      "address": "0x802063e0",
+      "size": 68,
+      "binding": 0
+    },
+    {
+      "name": "FONT_getkern",
+      "address": "0x80206424",
+      "size": 148,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "fontkern.cpp",
+  "original_file_index": 2780
+}

@@ -293,6 +293,7 @@
       "src/ea/fontdraw.cpp": "a2add2aca7bf8e5dfd9f636944bcb77c9f833207222f054469a3c787cfaa9258",
       "src/ea/fontdriver.cpp": "799464786df81aa82291f1d18699c4c4d2283338c1e6c75e4e508bc368470f9c",
       "src/ea/fontinit.cpp": "23ee3e1e4457de8dba71c1b08e1355e02844f0753acb1b2cdf4d8bc9ab7e7fa3",
+      "src/ea/fontkern.cpp": "f9c9387cc69998804f226f0bf31880bb8dc9a5d7df7623a5df8b393f7e583e93",
       "src/ea/fontnull.cpp": "f5c2dfb2e21956fc5d3a1b11c46ae763d9b5cd956badc5e3db912b1e59a9d641",
       "src/ea/gchw_vd_draw.cpp": "833342613de183885b97081289399b6fb871daf629ea5db35c6ae792d604a8c9",
       "src/ea/gchw_vd_setters.cpp": "066b3a421094bb5f71c42682307b2babaad374f41568eea555087a3cea962a7e",
@@ -2815,6 +2816,7 @@
       "config/GR8E69/ea_fontdraw.json": "51bc483feba71a2948e8618f24e872d17068d6160d6fa15866e94754d6a0314b",
       "config/GR8E69/ea_fontdriver.json": "5bba887e0c2189b785c6846c187e135359e4049e49328dadf4f25672a7e11022",
       "config/GR8E69/ea_fontinit.json": "d2ffe41e40449cc9c2c8ed941a7be52d60c8ae6c300145da58cb9a3be2db4b14",
+      "config/GR8E69/ea_fontkern.json": "e4a435ce7a1f1666230acea5708173eea20820d87535f4f48391990622bfd154",
       "config/GR8E69/ea_fontnull.json": "ae8bc4044f12649d2ed70538aedfecd77fa8b69915a1480eb005a302413b4c9c",
       "config/GR8E69/ea_hlafile.json": "177245a6451643a6ab519ee15b4c344f4656f8a130434b290787558d78a1eb92",
       "config/GR8E69/ea_hlsfile.json": "8f56cc815378079dd1c69ac409956abf8667e6dcc35eeb73d00901ac143bc56f",
@@ -3430,7 +3432,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "537aaa7d98ceda941c212498e320f4640b0f753e958c1ba019b29e91d4f22217",
+      "config/GR8E69/project.json": "5e127203bb10f3ed3d30309af28eb14ff40923ecc180a4e3188f74b5c429df8a",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -4846,14 +4848,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1038580,
+    "matching_code_bytes": 1038852,
     "total_executable_code_bytes": 2492032,
-    "percent": 41.67602984231342,
+    "percent": 41.6869446299245,
     "categories": {
-      "reconstructed_game": 646364,
+      "reconstructed_game": 646636,
       "restored_library": 392216
     },
-    "matching_functions": 5037
+    "matching_functions": 5040
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -5157,6 +5159,7 @@
     "config/GR8E69/ea_fontdraw.json": "51bc483feba71a2948e8618f24e872d17068d6160d6fa15866e94754d6a0314b",
     "config/GR8E69/ea_fontdriver.json": "5bba887e0c2189b785c6846c187e135359e4049e49328dadf4f25672a7e11022",
     "config/GR8E69/ea_fontinit.json": "d2ffe41e40449cc9c2c8ed941a7be52d60c8ae6c300145da58cb9a3be2db4b14",
+    "config/GR8E69/ea_fontkern.json": "e4a435ce7a1f1666230acea5708173eea20820d87535f4f48391990622bfd154",
     "config/GR8E69/ea_fontnull.json": "ae8bc4044f12649d2ed70538aedfecd77fa8b69915a1480eb005a302413b4c9c",
     "config/GR8E69/ea_hlafile.json": "177245a6451643a6ab519ee15b4c344f4656f8a130434b290787558d78a1eb92",
     "config/GR8E69/ea_hlsfile.json": "8f56cc815378079dd1c69ac409956abf8667e6dcc35eeb73d00901ac143bc56f",
@@ -5772,7 +5775,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "537aaa7d98ceda941c212498e320f4640b0f753e958c1ba019b29e91d4f22217",
+    "config/GR8E69/project.json": "5e127203bb10f3ed3d30309af28eb14ff40923ecc180a4e3188f74b5c429df8a",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7592,6 +7595,7 @@
     "src/ea/fontdraw.cpp": "a2add2aca7bf8e5dfd9f636944bcb77c9f833207222f054469a3c787cfaa9258",
     "src/ea/fontdriver.cpp": "799464786df81aa82291f1d18699c4c4d2283338c1e6c75e4e508bc368470f9c",
     "src/ea/fontinit.cpp": "23ee3e1e4457de8dba71c1b08e1355e02844f0753acb1b2cdf4d8bc9ab7e7fa3",
+    "src/ea/fontkern.cpp": "f9c9387cc69998804f226f0bf31880bb8dc9a5d7df7623a5df8b393f7e583e93",
     "src/ea/fontnull.cpp": "f5c2dfb2e21956fc5d3a1b11c46ae763d9b5cd956badc5e3db912b1e59a9d641",
     "src/ea/gchw_vd_draw.cpp": "833342613de183885b97081289399b6fb871daf629ea5db35c6ae792d604a8c9",
     "src/ea/gchw_vd_setters.cpp": "066b3a421094bb5f71c42682307b2babaad374f41568eea555087a3cea962a7e",
@@ -48739,6 +48743,25 @@
       "discarded_functions": [],
       "object_sha256": "3524978847e5158dd84e58a6fda26f183a3401b84691ccc70699f1352de5e047",
       "linked_sha256": "6bfc3f1468cf4c29ca2d594071e90f67cb681040b3125e53cbcda91e41d217a4"
+    },
+    {
+      "id": "ea_fontkern",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 272,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e7664e72442aec3ad5707dd302bb36b0174d8fc380c53c575ae18da4d77cfcda",
+      "linked_sha256": "ae171f5881d1ef6da906b02da5c0d4e45652f586ba3280b3e088c91861d38009"
     }
   ],
   "code_map": {
@@ -80035,38 +80058,6 @@
         "marker_interval": [
           "0x802062ec",
           "0x80206324"
-        ]
-      },
-      {
-        "name": "Unmatched files/fontkern.cpp [inferred file group]",
-        "file_record": 463,
-        "file_name": "fontkern.cpp",
-        "ranges": [
-          {
-            "address": "0x802063a8",
-            "size": 56,
-            "kind": "function",
-            "name": "FONT_findkern16__FiPC8FONTKERNi",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x802063e0",
-            "size": 68,
-            "kind": "function",
-            "name": "FONT_findkern12__FiPC8FONTKERNii",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x80206424",
-            "size": 148,
-            "kind": "function",
-            "name": "FONT_getkern",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x802063a8",
-          "0x802064b8"
         ]
       },
       {
