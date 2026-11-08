@@ -214,7 +214,7 @@ class CPlayerWeaponObject {
     void CreateEjectedShell(int);
     void DoneReloading();
     void SetAnimationState(const char *, int, Partition);
-    unsigned int IsSelectable() const;
+    bool IsSelectable() const;
 };
 // Scoped view of the mounted gun the player holds; names are descriptive.
 struct MountedGunView {
@@ -554,6 +554,10 @@ class CPlayerObject {
     void TransitionFOV(float, float);
     void MoveOnPath(CAISplinePath *, CAISplinePath *, float);
     void UpdateMovePath(float);
+    void *GetCurrentBulletSprite() const;
+    CPlayerWeaponObject *AddPlayerWeapon(int);
+    void StoreSaveData();
+    void RestoreSaveData();
     void PostUpdate(float);
     void EjectMountedMGShell();
     void SetFinishedLevelData();

@@ -1,0 +1,47 @@
+{
+  "id": "player_add_weapon",
+  "source": "src/player/PlayerAddWeapon.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/stlport-runtime",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800b9190",
+      "size": 628
+    }
+  ],
+  "functions": [
+    {
+      "name": "AddPlayerWeapon__13CPlayerObjecti",
+      "address": "0x800b9190",
+      "size": 628,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AllocateObject__18CAnimObjectFactoryUi12EObjectClass": "0x800cbcf4",
+    "Init__19CPlayerWeaponObjectiiP13CPlayerObject": "0x800c7dc8",
+    "SetLocalBoundingVolume__11CAnimObjectQ210ISceneNode11EVolumeTypeP7IVolume": "0x800a3d78",
+    "SetWorldBoundingVolume__11CAnimObjectQ210ISceneNode11EVolumeTypeP7IVolume": "0x800a3dac",
+    "g_AnimObjFactory": "0x803e6bb0",
+    "insert_unique__Q24_STLt8_Rb_tree5ZiZQ24_STLt4pair2ZCiZP19CPlayerWeaponObjectZQ24_STLt10_Select1st1ZQ24_STLt4pair2ZCiZP19CPlayerWeaponObjectZQ24_STLt4less1ZiZQ24_STLt9allocator1ZQ24_STLt4pair2ZCiZP19CPlayerWeaponObjectGQ24_STLt17_Rb_tree_iterator2ZQ24_STLt4pair2ZCiZP19CPlayerWeaponObjectZQ24_STLt16_Nonconst_traits1ZQ24_STLt4pair2ZCiZP19CPlayerWeaponObjectRCQ24_STLt4pair2ZCiZP19CPlayerWeaponObject": "0x80281adc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}

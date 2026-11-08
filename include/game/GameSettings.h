@@ -42,9 +42,18 @@ class CMatrix;
 class CVector3;
 class CQuaternion;
 // Member view of the game-settings singleton; only the profile pointer is named.
+class CWeapon;
 class CGameSettings {
   public:
     void SetPlayersFinishedLevelSuccessfully(int, int);
+    void SetCurrentHealth(float, int);
+    float GetCurrentHealth(int) const;
+    void SetCurrentWeapon(CWeapon *, int);
+    void GetCurrentWeapon(int &, int);
+    void SetCurrentAmmo(int, unsigned int, unsigned int, int);
+    void GetCurrentAmmo(int, unsigned int &, unsigned int &, int) const;
+    void SetIfCurrentWeaponSelectable(int, bool, int);
+    int GetIfCurrentWeaponSelectable(int, int) const;
     void SetPlayersFinishedLevelHealth(int, int, float);
     GameProfile *profile;
     int SerializingIn() const;

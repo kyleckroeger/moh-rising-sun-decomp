@@ -59,8 +59,6 @@ location group it once recorded; the switch has no effect in this build, as in t
 
 ## Parked
 
-- `GetCurrentBulletSprite`: the wielded-weapon selection loads into `r3` in the original
-  and through `r9` in every tried source (12 instructions differ).
 - `Yaw` and `SetTMLocalToWorld`: see above.
 
 ## Death sequence
@@ -96,3 +94,15 @@ both `LookAtTarget::Enable` overloads clear or set the observed subject; their l
 observed and `time`, `target` and `active` are descriptive. `PostUpdate` repositions a mounted
 gun, updates it, alternates the side bits in `mountedShotSide` and ejects a shell when bit 19 of
 the flags is set.
+
+## Save data and the weapon ring
+
+`StoreSaveData` and `RestoreSaveData` copy health, the current weapon, each map weapon's
+ammunition and selectability and the thrown weapon's ammunition to and from the game settings.
+`CPlayerWeaponObject::IsSelectable` returns `bool`: `StoreSaveData` passes the result to a `bool`
+parameter without normalizing it. `AddPlayerWeapon` allocates a weapon object once per CRC,
+gives it the box volumes at `+0xe0` and `+0x130` and inserts it into the ring at `weaponList`
+in ascending `weaponType`. `CCameraShake::Update` ramps toward the target and restarts with the
+fade time when the duration passes. `CCameraShake::SetShake` (four arguments) and
+`HitPickup` have matching code but stay context: each `.rodata` holds a double literal, and the
+assembler's 8-byte padding of that section cannot verify without neighbouring functions' literals.

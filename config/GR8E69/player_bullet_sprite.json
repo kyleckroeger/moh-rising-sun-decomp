@@ -1,0 +1,40 @@
+{
+  "id": "player_bullet_sprite",
+  "source": "src/player/PlayerBulletSprite.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800b42a8",
+      "size": 76
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetCurrentBulletSprite__C13CPlayerObject",
+      "address": "0x800b42a8",
+      "size": 76,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetBulletSprite__C7CWeapon": "0x8014b9dc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}

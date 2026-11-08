@@ -1835,7 +1835,11 @@
     "scene_ObjCreateSubHierAnim.json",
     "ai_AIThreatsNoiseEvent.json",
     "scene_SoldierCleanUp.json",
-    "scene_SoldierDetach.json"
+    "scene_SoldierDetach.json",
+    "player_bullet_sprite.json",
+    "player_save_data.json",
+    "camera_shake_update.json",
+    "player_add_weapon.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

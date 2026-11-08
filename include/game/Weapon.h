@@ -25,7 +25,7 @@ struct WeaponProperties_struct {
     short soundType;  // +0x60; returned by GetWeaponSoundType.
     short field_62;   // Nonzero selects alternate grenade-catching side bounds.
     unsigned char unknown_64[0x68 - 0x64];
-    short weaponType; // +0x68; returned by the weapon-type built-ins.
+    short weaponType; // +0x68; returned by the weapon-type built-ins; orders the player's weapon ring.
 };
 
 typedef WeaponProperties_struct WeaponProperties;
