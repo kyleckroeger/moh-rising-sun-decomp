@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1000840,
+    "matching_code_bytes": 1001996,
     "total_executable_code_bytes": 2492032,
-    "percent": 40.1616030612769,
+    "percent": 40.20799090862397,
     "categories": {
-      "reconstructed_game": 608624,
+      "reconstructed_game": 609780,
       "restored_library": 392216
     },
-    "matching_functions": 4942
+    "matching_functions": 4944
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -341,9 +341,10 @@
     "config/GR8E69/ea_rcmp2real.json": "a05bdac5ae33f2e95a709a737a622fde986db04f4f0337a63ebdcc644614a5da",
     "config/GR8E69/ea_signals.json": "739f8d08688ad92e47b40d2b21ecf7e58f5aecc8da4c57e7b0b8b15e058e419c",
     "config/GR8E69/ea_stream_api.json": "fa97dda34ba9fe1a759e47c151cb0c9252c3151a0f4ec852db1ab7930b21baa0",
-    "config/GR8E69/ea_stream_callbacks.json": "299933972665906c4da534fa417f2fe0cf703a1bf0497d8e4e4876b3ed466fb1",
+    "config/GR8E69/ea_stream_callbacks.json": "a0a08b8010763030239ac45490138bfe6f895a89005f4575354209e41b59d0a2",
     "config/GR8E69/ea_stream_cancel.json": "362530c2afcd60a6ed8554e19ab265449b87e765fe08a56ca59de3d43b06acfd",
     "config/GR8E69/ea_stream_kill.json": "b8525153c3feed478dbb9897b8d9a84912f8cdda847ffd02603e331d73272286",
+    "config/GR8E69/ea_stream_queuemem.json": "7003884f83fe206169324dc1fb1e95631bbca431eb7987e030d05d188875554a",
     "config/GR8E69/ea_stream_requests.json": "a88bc79bf7b71880ac560f5bbbbd9303de73d63f7d3b0fb602dc7e09cb0a55db",
     "config/GR8E69/ea_stream_tail.json": "5e234eb8f01bf6b785c315e73355c1b557a2bf177ec08bdc4eb04c09be0c7a86",
     "config/GR8E69/ea_syncfile.json": "5ad7e6a48ddd491ff43841235023597f0e85b8175ab705de2379f78c7ea3b886",
@@ -917,7 +918,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "aa616e258f74242c3197dfd7116abbfbdc02615e9457b0ce325854211e5d0461",
+    "config/GR8E69/project.json": "0b917f870ef0cbf08fe60f276737056f945046c6a64bccc2189c161748f61acb",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -2725,9 +2726,10 @@
     "src/ea/rcmpbase_frames.cpp": "ed4b0dad56110b523529a0629bff7c8186b6681450457e980f39e02b01bc4b52",
     "src/ea/signals.cpp": "bbbc0bffb36932f5eb6cf92dc7b48e2c4b20623375a214da115ef76eacd1fcee",
     "src/ea/stream_api.cpp": "1305078f16102ace56768edffadb11d0b919fb298096f0356af0baf00cfb40e3",
-    "src/ea/stream_callbacks.cpp": "17f7ee38228c3491764210268be197c07ba857ef6cc501c21d63157a371dc809",
+    "src/ea/stream_callbacks.cpp": "9db7ef7d6b5300a470bc0a15acfe320d6583d46805e26d142d6a3be305109eef",
     "src/ea/stream_cancel.cpp": "40f57389f02a213e7c307b6c5d28685acadfb09a2a782df16b0b2dcbe8bc532c",
     "src/ea/stream_kill.cpp": "7f9e10d0725a8728197e6ca8ba20b964b4e314efcd8594fe4e8f0a8e3f0a47b9",
+    "src/ea/stream_queuemem.cpp": "6f1c280637cd25d892f88786797a5e01d1dce4730a58facd038647778d727700",
     "src/ea/stream_requests.cpp": "628b813146037443b1dc351566560e95af6dd03fe3229049300c58462377ec8a",
     "src/ea/stream_tail.cpp": "58c0e9c270914591c50f73b55564a12dcf0961e895bd944c20bb6d9ee7fed546",
     "src/ea/syncfile.cpp": "3df57d815e9d7e8ef396fdcf881e8e89ed7b7e77c762f80a3a18c0bf42ed09ba",
@@ -35947,8 +35949,8 @@
     {
       "id": "ea_stream_callbacks",
       "category": "reconstructed_game",
-      "functions": 4,
-      "code_bytes": 768,
+      "functions": 5,
+      "code_bytes": 1508,
       "compiler_family": "ProDG",
       "compiler_version": "3.8.1",
       "compiler_flags": [
@@ -35960,8 +35962,8 @@
       ],
       "strip_unused": false,
       "discarded_functions": [],
-      "object_sha256": "b0a86315e9036cb8827b96ade70be5828371f764ece47639b9c7d7b2b141490d",
-      "linked_sha256": "39e20b05f99bcb0ccb2dbf033f55956dcfb9541583ab07ec0ef2794975a5fac6"
+      "object_sha256": "8004ece3a03285703b06d4fca6140278ccc0380d01e55772f831054ca9220c05",
+      "linked_sha256": "dbd5e160cd0799dd68d4b8daa2c02d4f13b434cce1c071af7ccc6e916755f91c"
     },
     {
       "id": "ea_stream_api",
@@ -42796,6 +42798,25 @@
       "discarded_functions": [],
       "object_sha256": "fe2c51bdef501b7a9a106442189bff8b04319edbcad85598561b2288cd8c95e6",
       "linked_sha256": "4fdcbee49828c071926ab1d16b154340540b5c7ba3cb2366360fadbebbde67e6"
+    },
+    {
+      "id": "ea_stream_queuemem",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 416,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "697401cf78a8fe56c61cab73546809f37b11bfe4fb170da222d336eb5b1a0d34",
+      "linked_sha256": "8fba117de5b88622d193cb91ea9209b1cf53dbc0235c8ba6bfd910857073f599"
     }
   ],
   "code_map": {
@@ -74831,25 +74852,11 @@
         "file_name": "stream.cpp",
         "ranges": [
           {
-            "address": "0x80209ab4",
-            "size": 740,
-            "kind": "function",
-            "name": "parsechunks__FP15STREAMHEADERtag",
-            "evidence": "local-file-symbol"
-          },
-          {
             "address": "0x8020a098",
             "size": 844,
             "kind": "function",
             "name": "restartstream__FP15STREAMHEADERtagi",
             "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x8020aa30",
-            "size": 416,
-            "kind": "function",
-            "name": "STREAM_queuemem",
-            "evidence": "adjacent-compiler-markers"
           },
           {
             "address": "0x8020b0d8",

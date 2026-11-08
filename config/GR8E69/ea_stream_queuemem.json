@@ -1,0 +1,53 @@
+{
+  "id": "ea_stream_queuemem",
+  "source": "src/ea/stream_queuemem.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8020aa30",
+      "size": 416
+    }
+  ],
+  "functions": [
+    {
+      "name": "STREAM_queuemem",
+      "address": "0x8020aa30",
+      "size": 416,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "MUTEX_lock": "0x80217f7c",
+    "MUTEX_unlock": "0x80217fa0",
+    "getfreerequest__FP15STREAMHEADERtag": "0x8020986c",
+    "queuerequest__FP15STREAMHEADERtagP16REQUESTSTRUCTtag": "0x802098f0",
+    "startnextrequest__FP15STREAMHEADERtagi": "0x80209f34",
+    "validatehandle__FiPP15STREAMHEADERtagPP12TAPSTRUCTtag": "0x8020976c"
+  },
+  "local_externals": [
+    "getfreerequest__FP15STREAMHEADERtag",
+    "queuerequest__FP15STREAMHEADERtagP16REQUESTSTRUCTtag",
+    "startnextrequest__FP15STREAMHEADERtagi",
+    "validatehandle__FiPP15STREAMHEADERtagPP12TAPSTRUCTtag"
+  ],
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "stream.cpp",
+  "original_file_index": 2853
+}

@@ -1926,7 +1926,8 @@
     "scene_SoldierSword.json",
     "scene_SoldierBulletEmitter.json",
     "scene_SoldierEmitterMatrix.json",
-    "scene_StaticFactoryHelmet.json"
+    "scene_StaticFactoryHelmet.json",
+    "ea_stream_queuemem.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

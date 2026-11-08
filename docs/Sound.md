@@ -322,5 +322,7 @@ file evidence. Its units use the game's flags, without `-fno-strength-reduce`: l
 `PATHI_gettrackptr`'s walk by 540 bytes. `pfstates` holds four 540-byte project states; each
 has a 24-entry track pointer table at `+444` and 16 queued 24-byte events at `+60`. A handle's
 top nibble selects projects, the next nibble songs and the low 24 bits tracks. Member names are
-inferred. `PATHI_sortprojects` is not reconstructed: the struct-swap loop's address computations
-are hoisted differently.
+inferred. Not reconstructed here: `PATHI_sortprojects` (the struct-swap loop's address computations
+are hoisted differently), `PATHI_eventstart` and `PATH_addmapfile` (their structure is right but
+their registers are allocated differently), and `PATH_createtrackfrombuf` and `PATH_event` (drafts
+that have not reached a match).

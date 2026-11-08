@@ -161,7 +161,85 @@ void freerequest(STREAMHEADERtag* header, REQUESTSTRUCTtag* request);
 
 int filterchunk(STREAMHEADERtag* header, STREAMCHUNKHDR* chunk);
 
-int parsechunks(STREAMHEADERtag* header);
+static int parsechunks(STREAMHEADERtag* header) {
+    unsigned char* chunk;
+    unsigned char* sizefield;
+    REQUESTSTRUCTtag* request;
+    int size;
+    int type;
+    int done;
+
+    request = header->current;
+    while (header->write - header->requestStart >= 8) {
+        chunk = header->requestStart;
+        sizefield = chunk + 4;
+        size = STREAM_GET32(sizefield);
+        if (size & 0xFF000000) {
+            put32(chunk, request->id);
+            size = 8;
+            sizefield[0] = size;
+            sizefield[1] = 0;
+            sizefield[2] = 0;
+            sizefield[3] = 0;
+        }
+        if (header->requestStart + size > header->write)
+            break;
+        if (STREAM_GET32(chunk) == request->id) {
+            int rest = (unsigned int)header->requestStart & 31;
+
+            size = ((size + rest + 31) & ~31) - rest;
+        }
+        type = filterchunk(header, (STREAMCHUNKHDR*)chunk);
+        if (type < 0) {
+            void* mutex = header->mutex;
+
+            MUTEX_lock(mutex);
+            done = request->state == 4;
+            if (!done) {
+                put32(chunk, 0xFFFFFFFE);
+                header->requestStart += size;
+            }
+            MUTEX_unlock(mutex);
+        } else {
+            int word = size | (type << 24);
+            int leavegreedy = 0;
+
+            put32(sizefield, word);
+            MUTEX_lock(header->mutex);
+            done = request->state == 4;
+            if (!done) {
+                TAPSTRUCTtag* list = &header->lists[type - 1];
+                int before;
+                int after;
+                int threshold;
+
+                list->size += size;
+                if (list->size == size)
+                    list->first = chunk;
+                before = header->buffered;
+                after = before + size;
+                header->buffered = after;
+                header->requestStart += size;
+                threshold = header->threshold;
+                if (before < threshold && after >= threshold)
+                    header->greedy = leavegreedy;
+            }
+            MUTEX_unlock(header->mutex);
+        }
+        if (done) {
+            if (STREAM_GET32(chunk) != request->id) {
+                int rest = (unsigned int)header->requestStart & 31;
+
+                size = ((size + rest + 31) & ~31) - rest;
+                put32(chunk + 4, size | (type << 24));
+            }
+            break;
+        }
+        if (STREAM_GET32(chunk) == request->id)
+            return 1;
+    }
+    return 0;
+}
 
 static void opencallback(int, int, void* data) {
     STREAMHEADERtag* header = (STREAMHEADERtag*)data;
