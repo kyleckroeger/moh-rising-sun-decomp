@@ -1,0 +1,49 @@
+{
+  "id": "sound_stagpat_playpatch",
+  "source": "src/sound/ea/stagpat_playpatch.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80221d0c",
+      "size": 604
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDBANKI_playpatch__FPvP11TAGGEDPATCHiiP11SNDPLAYOPTS",
+      "address": "0x80221d0c",
+      "size": 604,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDBANKI_findfreekey__Fv": "0x80221850",
+    "SNDBANKI_playtimbre__FiiPvP11SNDPLAYOPTSP15SNDIPATCHHEADERiii": "0x802218d4",
+    "SNDBANKI_userdatacallback__FP15SNDIPATCHHEADERi": "0x80219548",
+    "SNDI_parsetimbre__FPPvP15SNDIPATCHHEADER": "0x80222044",
+    "SNDVOICEI_get__Fi": "0x8021945c",
+    "SNDover": "0x80226b30",
+    "SNDstop": "0x80220a5c",
+    "randrange__Fi": "0x80226ca4",
+    "sndgs": "0x804108fc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "stagpat.c",
+  "original_file_index": 3129
+}

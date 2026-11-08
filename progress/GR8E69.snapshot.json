@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 996416,
+    "matching_code_bytes": 997020,
     "total_executable_code_bytes": 2492032,
-    "percent": 39.98407725101443,
+    "percent": 40.00831449997432,
     "categories": {
-      "reconstructed_game": 604200,
+      "reconstructed_game": 604804,
       "restored_library": 392216
     },
-    "matching_functions": 4923
+    "matching_functions": 4924
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -916,7 +916,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "e8a12a87cc52ee48e9a3bada199d7a06415df4437e07bf1f928fb3ad2ac61f5a",
+    "config/GR8E69/project.json": "57ab666dedd31e6f29ca4ab2f62a903ca202e0f2b8557d0028e0ae40046aa194",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -1639,6 +1639,7 @@
     "config/GR8E69/sound_ssysopts.json": "3fc30677b1743595ceaac1e1cc159469177a7eeec74510da2d4c039b2a0c6918",
     "config/GR8E69/sound_ssysreal.json": "954f0f5eb94303bad59cbebe0baf0950881bf4832991c2ffb8baf7b47f98b078",
     "config/GR8E69/sound_ssysserv.json": "0f5cc62af194ce3d683bcb09c919b5ce43b38774639147f370d1f074a3ca30ce",
+    "config/GR8E69/sound_stagpat_playpatch.json": "3982dc1d4129c9be2ce66b5159f09fe2e6f66a9f514425bc1e3e18f2e7891e2d",
     "config/GR8E69/sound_stretch.json": "70b099f075e73db324a71327d87672b875373a403db72a1274d02eed7a329c28",
     "config/GR8E69/sound_supf.json": "86839a34c64e7a96d21a8fce18b99fb495af513059d377a324a8189ed85c211a",
     "config/GR8E69/sound_suplf.json": "1275a5fd54404d2235f43088614fff47c7cb0ec9e31d9a4d7ed4d145c155a37e",
@@ -4113,6 +4114,7 @@
     "src/sound/ea/ssysopts.cpp": "e01e1014454d18c7d70b796780dad091ffe06fc58842ceffa8a2140020b62300",
     "src/sound/ea/ssysreal.cpp": "889a51f34a02038446f52f661087a066c48661006f50fe062fc5024f1f4d8ef5",
     "src/sound/ea/ssysserv.cpp": "893c409f94cadc72a2f47f066d0f41433576c607eabc8321c7d0de4ae95d4849",
+    "src/sound/ea/stagpat_playpatch.cpp": "50f00b6e853275074474a568f1c4bc852f13503c853baed3026b64ad2016b599",
     "src/sound/ea/stretch.cpp": "a3fa126b7a3209b34b0c970234e64619897895a1ebba0fa6dac0aee8b06be877",
     "src/sound/ea/supf.cpp": "b2a0bb3e826b53d0315d56952dcffd06ba844982a073d14375eacfcdbcc504fa",
     "src/sound/ea/suplf.cpp": "968c578e1fe244e626ed85f129f90f8a320521a20c77ef34cb9e2a01d8330337",
@@ -42615,6 +42617,25 @@
       "discarded_functions": [],
       "object_sha256": "25c5cfefa78b655a06d04d6e2e56cf2899c40fbacc091d99e768da7f2da9cac5",
       "linked_sha256": "78b90759dc17a98b2b6aa3ba23b03620c29dccf9ec83272e31593a232b285d48"
+    },
+    {
+      "id": "sound_stagpat_playpatch",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 604,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "889371a3ceef05df31085108b41700e56696b7c855b9cc725d2aa1e13b80e289",
+      "linked_sha256": "b089b92c822bd9b6279c875571d4a5b8e7231b5ce95a9e51aab15c0686cecb3c"
     }
   ],
   "code_map": {
@@ -76733,13 +76754,6 @@
             "size": 1080,
             "kind": "function",
             "name": "SNDBANKI_playtimbre__FiiPvP11SNDPLAYOPTSP15SNDIPATCHHEADERiii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80221d0c",
-            "size": 604,
-            "kind": "function",
-            "name": "SNDBANKI_playpatch__FPvP11TAGGEDPATCHiiP11SNDPLAYOPTS",
             "evidence": "adjacent-compiler-markers"
           }
         ],

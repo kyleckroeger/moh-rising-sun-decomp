@@ -1917,7 +1917,8 @@
     "player_aim_target.json",
     "sound_path_eventrestore.json",
     "sound_path_queuenode.json",
-    "sound_path_service.json"
+    "sound_path_service.json",
+    "sound_stagpat_playpatch.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
