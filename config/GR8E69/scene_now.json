@@ -1,0 +1,44 @@
+{
+  "id": "scene_now",
+  "source": "src/scene/scene_now.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80147120",
+      "size": 36
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetCamera_now__6CSceneRQ26CScene11SModCommand",
+      "address": "0x80147120",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "SetSkyBox_now__6CSceneRQ26CScene11SModCommand",
+      "address": "0x8014712c",
+      "size": 24,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "scene.cpp",
+  "original_file_index": 1338
+}

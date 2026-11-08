@@ -1,0 +1,50 @@
+{
+  "id": "scene_query",
+  "source": "src/scene/scene_query.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8014ac08",
+      "size": 44
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetPlayer__C6CScenei",
+      "address": "0x8014ac08",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "GetNodesBegin__C6CScene",
+      "address": "0x8014ac18",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "GetNodesEnd__C6CScene",
+      "address": "0x8014ac28",
+      "size": 12,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "scene.cpp",
+  "original_file_index": 1338
+}

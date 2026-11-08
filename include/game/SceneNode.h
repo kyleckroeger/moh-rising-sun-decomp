@@ -10,7 +10,9 @@ class CAIObject;
 class CAnimObject;
 class CAnimatedPlayer;
 class CBotObject;
+class CCamera;
 class CCollisionVolume;
+class CSkyBox;
 class CHierObject;
 class CPlayerObject;
 class CPlayerWeaponObject;
@@ -146,12 +148,56 @@ class IVolume;
 class CScene {
   public:
     ISceneNode *firstNode; // +0x00
-    unsigned char unknown04[0x18 - 4];
+    ISceneNode *lastNode;  // +0x04
+    CPlayerObject *players[4]; // +0x08
     CWorldObject *world; // +0x18
-    unsigned char unknown1c[8];
+    CCamera *camera;     // +0x1c
+    CSkyBox *skyBox;     // +0x20
     ISceneNode *firstStaticObject; // +0x24
     unsigned char unknown28[12];
     ISceneNode *firstLight; // +0x34
+    unsigned char unknown38[0x44 - 0x38];
+    int nodeCount; // +0x44
+    unsigned char unknown48[0x58 - 0x48];
+    int locked; // +0x58: changes queue while set; see Lock and Unlock.
+    int playerCount; // +0x5c
+    unsigned char unknown60[0x158 - 0x60];
+    // A deferred scene change: the handler to run and its two arguments.
+    struct SModCommand {
+        void (CScene::*function)(SModCommand &);
+        void *arg0;
+        void *arg1;
+    };
+    // +0x158: the capacity word is unread here and its name is inferred.
+    struct SCommandQueue {
+        SModCommand *items;
+        int capacity;
+        int count;
+        SModCommand *End() { return items + count; }
+    } queue;
+    void AddPlayer(CPlayerObject *);
+    void SetWorld(CWorldObject *);
+    void SetCamera(CCamera *);
+    void SetSkyBox(CSkyBox *);
+    void AddPlayer_now(SModCommand &);
+    void SetWorld_now(SModCommand &);
+    void SetCamera_now(SModCommand &);
+    void SetSkyBox_now(SModCommand &);
+    void AddNode_now(SModCommand &);
+    void RemoveNode_now(SModCommand &);
+    void AddNodeExtents(ISceneNode &);
+    // Node list iterator returned by value.
+    class NodeIterator {
+      public:
+        NodeIterator(ISceneNode *n) : node(n) {}
+        ISceneNode *node;
+    };
+    NodeIterator GetNodesBegin() const;
+    NodeIterator GetNodesEnd() const;
+    void Lock();
+    void Unlock();
+    void Reset();
+    void Shutdown();
     void Add(ISceneNode &, ISceneNode *);
     void Remove(ISceneNode &);
     int IsNodeInScene(const ISceneNode *) const;

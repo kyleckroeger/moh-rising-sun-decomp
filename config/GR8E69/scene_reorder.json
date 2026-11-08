@@ -1,0 +1,41 @@
+{
+  "id": "scene_reorder",
+  "source": "src/scene/scene_reorder.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8014ac88",
+      "size": 72
+    }
+  ],
+  "functions": [
+    {
+      "name": "ReOrder__6CSceneP10ISceneNodeT1",
+      "address": "0x8014ac88",
+      "size": 72,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Add__6CSceneR10ISceneNodeP10ISceneNode": "0x80146e08",
+    "Remove__6CSceneR10ISceneNode": "0x80146e9c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "scene.cpp",
+  "original_file_index": 1338
+}

@@ -1,0 +1,80 @@
+{
+  "id": "scene_commands",
+  "source": "src/scene/scene_commands.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80146bb8",
+      "size": 888
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a8900",
+      "size": 48
+    }
+  ],
+  "functions": [
+    {
+      "name": "AddPlayer__6CSceneP13CPlayerObject",
+      "address": "0x80146bb8",
+      "size": 148,
+      "binding": 1
+    },
+    {
+      "name": "SetWorld__6CSceneP12CWorldObject",
+      "address": "0x80146c4c",
+      "size": 148,
+      "binding": 1
+    },
+    {
+      "name": "SetCamera__6CSceneP7CCamera",
+      "address": "0x80146ce0",
+      "size": 148,
+      "binding": 1
+    },
+    {
+      "name": "SetSkyBox__6CSceneP7CSkyBox",
+      "address": "0x80146d74",
+      "size": 148,
+      "binding": 1
+    },
+    {
+      "name": "Add__6CSceneR10ISceneNodeP10ISceneNode",
+      "address": "0x80146e08",
+      "size": 148,
+      "binding": 1
+    },
+    {
+      "name": "Remove__6CSceneR10ISceneNode",
+      "address": "0x80146e9c",
+      "size": 148,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddNode_now__6CSceneRQ26CScene11SModCommand": "0x80147144",
+    "AddPlayer_now__6CSceneRQ26CScene11SModCommand": "0x80146f30",
+    "RemoveNode_now__6CSceneRQ26CScene11SModCommand": "0x80147364",
+    "SetCamera_now__6CSceneRQ26CScene11SModCommand": "0x80147120",
+    "SetSkyBox_now__6CSceneRQ26CScene11SModCommand": "0x8014712c",
+    "SetWorld_now__6CSceneRQ26CScene11SModCommand": "0x80147000"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "scene.cpp",
+  "original_file_index": 1338
+}

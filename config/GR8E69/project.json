@@ -1750,7 +1750,13 @@
     "font_ctor.json",
     "font_setcolor.json",
     "font_attrs.json",
-    "font_draw.json"
+    "font_draw.json",
+    "scene_shutdown.json",
+    "scene_commands.json",
+    "scene_now.json",
+    "scene_lock.json",
+    "scene_query.json",
+    "scene_reorder.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
