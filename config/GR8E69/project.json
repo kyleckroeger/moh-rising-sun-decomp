@@ -2016,7 +2016,8 @@
     "pum_down.json",
     "scene_draw.json",
     "hud_life.json",
-    "scene_AnimObjectOpcode.json"
+    "scene_AnimObjectOpcode.json",
+    "hud_pos.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

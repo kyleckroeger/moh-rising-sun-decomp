@@ -13,6 +13,9 @@ public:
     CHeadsUpDisplay();
     ~CHeadsUpDisplay();
     void Shutdown();
+    void GetBulletStatsRightBottom(float &, float &);
+    void GetCompassPosition(float &, float &, float);
+    void DrawWeaponName(const char *);
     void Reset();
     void UpdateHitStatus(float elapsed);
     void ChangeHitStatus(unsigned int direction);
