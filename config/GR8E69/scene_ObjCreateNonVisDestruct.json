@@ -1,0 +1,51 @@
+{
+  "id": "scene_ObjCreateNonVisDestruct",
+  "source": "src/scene/ObjCreateNonVisDestruct.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8012b6c4",
+      "size": 636
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a73c8",
+      "size": 436
+    }
+  ],
+  "functions": [
+    {
+      "name": "NonVisDestructFarthestSoldiers__Fi",
+      "address": "0x8012b6c4",
+      "size": 636,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "DebugMsg__FPCce": "0x80279094",
+    "GetPlayer__C6CScenei": "0x8014ac08",
+    "g_maxActiveSoldiers": "0x8032d018",
+    "g_numActiveSoldiers": "0x8032d014",
+    "g_pGermanList": "0x8032d008",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "objcreate.cpp",
+  "original_file_index": 1242
+}

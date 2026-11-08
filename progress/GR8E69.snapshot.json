@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 964696,
+    "matching_code_bytes": 965332,
     "total_executable_code_bytes": 2492032,
-    "percent": 38.711220401664185,
+    "percent": 38.73674174328419,
     "categories": {
-      "reconstructed_game": 572480,
+      "reconstructed_game": 573116,
       "restored_library": 392216
     },
-    "matching_functions": 4774
+    "matching_functions": 4775
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -892,7 +892,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "b0c128373a4e3b1ca3c1f3437045417c57420903ee94519e4d0482e460dd3e1d",
+    "config/GR8E69/project.json": "76bdf7399afb86628f77afac64e5e05ddd25286048513f928d7a0a84b49d63e0",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -959,6 +959,7 @@
     "config/GR8E69/scene_ObjCreateDumpContainer.json": "4971dc89672515ad11f2fbe87a29fdb2fd9d61efd98efb5c3557d5377e74249b",
     "config/GR8E69/scene_ObjCreateDumpObjects.json": "0bbe49aa4ff1722e0db41eb246d3bf221c8117ada2afe15c835d16c4d5092e93",
     "config/GR8E69/scene_ObjCreateHierSwap.json": "2d60fb9f5d0ac0c7e3b45491558b717a819fb686840478a765ff7c9e0a5033e3",
+    "config/GR8E69/scene_ObjCreateNonVisDestruct.json": "7ebf90054ff07b325ffce4ddf5cfd6f820e7261381ffbd32e1c617fa9f1e70d1",
     "config/GR8E69/scene_ObjCreatePoolA.json": "0b85d17eac6bacc2ef1efc5a628d9edb7dfc72aec63191973165f57b8d1e0456",
     "config/GR8E69/scene_ObjCreatePoolB.json": "00569bf051aaea6b0549efed6a945e9f83c3e80f3ecac73436c2ee4f4c68ec80",
     "config/GR8E69/scene_ObjCreatePowerup.json": "3090de12cd0c3ec4241b0c3c00fa1c34972bc796c8f7fe1bd1fb8dd3f295c8d4",
@@ -3384,6 +3385,7 @@
     "src/scene/ObjCreateDumpContainer.cpp": "4f61e18ee943350301763d0c3d16a4913570ab5bf9ff4afddc141fb5b30085fd",
     "src/scene/ObjCreateDumpObjects.cpp": "a88d6d783b15d26a441e3a4430826bb0f9c08764e36e98920c80cf271dad72ba",
     "src/scene/ObjCreateHierSwap.cpp": "135c0258b04097f365cb2d4b6acfeacf96fa059bd713b1a9afd6d1631c1636e3",
+    "src/scene/ObjCreateNonVisDestruct.cpp": "584ac3e95aa606a6c5b10fd18a72be01ffa98173acf3db456f4934ca780aa818",
     "src/scene/ObjCreatePoolA.cpp": "4bf0385ac5f296380009e8ea2c1da1bf99ba2453fe69333c50b36ef16bfe222b",
     "src/scene/ObjCreatePoolB.cpp": "2475fa2a3d92c31d5136d619a5ba52c0b29087914dce9f05f3d872a8dab9bead",
     "src/scene/ObjCreatePowerup.cpp": "6334391a79f4a019f7a0120cb741dd9e7c0bf37c2fd2241517cee1f01c663a94",
@@ -41548,6 +41550,24 @@
       "discarded_functions": [],
       "object_sha256": "6cded446be32399006e437d54d3c93123d841ae347229e95a8d954de635cae20",
       "linked_sha256": "ccfd40d7a16887e09f589cd895f45a3e73339f00fd31e6992fb995440a9787b5"
+    },
+    {
+      "id": "scene_ObjCreateNonVisDestruct",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 636,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "3f2d42eabd9066bee50a9884d1c3b38c00560b17ebf72fbd15bb807ba68f845b",
+      "linked_sha256": "a1186c83c4f88028f19648f1c20e087a04212fe36dc27611aaced6a4cc34d168"
     }
   ],
   "code_map": {
@@ -59551,13 +59571,6 @@
             "size": 88,
             "kind": "function",
             "name": "AllocateBoxVolume__Fv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012b6c4",
-            "size": 636,
-            "kind": "function",
-            "name": "NonVisDestructFarthestSoldiers__Fi",
             "evidence": "adjacent-compiler-markers"
           },
           {
