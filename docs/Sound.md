@@ -446,3 +446,8 @@ platform record is 9,600 bytes of buffer followed by staging pointers (`+9600`),
 the buffer half playing (`+9625`), a start countdown (`+9626`), its DSP addresses (`+9628`), the buffer
 midpoint (`+9652`) and the frames consumed from each half (`+9656`). Those offsets are verified; the
 member names are inferred.
+
+`SNDPLATFORM_set3dpos` reads a per-layout table of 4-byte {azimuth offset, gain} records at `+548` of
+`sndgs`, with 6 channels per layout; the layout comes from the voice's channel count and the output
+count. `SNDDRV_dolbypl2balances` is 256 rows of four 16-bit levels indexed by azimuth over 256. A voice
+record's channel azimuths are at `+80`. Those offsets are verified; the member names are inferred.

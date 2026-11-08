@@ -1,0 +1,51 @@
+{
+  "id": "sound_sdrv_set3dpos",
+  "source": "src/sound/ea/sdrv_set3dpos.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8021d4e4",
+      "size": 1620
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bf810",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDPLATFORM_set3dpos__Fi",
+      "address": "0x8021d4e4",
+      "size": 1620,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDDRV_DSPMixerSetPan__FP6_AXVPBPfUsi": "0x802238e4",
+    "SNDDRV_dolbypl2balances": "0x802d56a0",
+    "SNDI_aztospkrvol__FiPf": "0x8022315c",
+    "SNDPLATFORM_setvol__Fi": "0x8021d32c",
+    "snddrv": "0x80410c40",
+    "sndgs": "0x804108fc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "snddrv.c",
+  "original_file_index": 3064
+}

@@ -30,7 +30,9 @@ struct SNDVOICEVIEW {
     char pad42[6];
     float outvolume;
     unsigned short baseazimuth;
-    char pad4e[17];
+    char pad4e[2];
+    unsigned short azimuths[6];
+    char pad5c[3];
     signed char field5f;
     signed char send[1];
     signed char level[1];
@@ -52,6 +54,12 @@ struct SNDVOICEVIEW {
     unsigned short pitchrate;
     unsigned short scaled;
 };
+/* a speaker's azimuth offset and gain, per speaker layout and channel */
+struct SNDSPEAKERPAN {
+    short pan;
+    short gain;
+};
+
 
 /* an effect bus record (20 bytes) */
 struct SNDFXBUS {
@@ -138,7 +146,9 @@ struct SNDGSVIEW {
     struct SNDBANKSLOT* banks;
     struct SNDFXBUS fxreverb[1];
     struct SNDFXBUS fxsecond[1];
-    char pad220[184];
+    char pad220[4];
+    struct SNDSPEAKERPAN speakerpan[7][6];
+    char pad2cc[12];
     short stereopan[2];
     char pad2dc[8];
     unsigned short surroundpan0[3];
