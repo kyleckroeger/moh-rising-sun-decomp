@@ -161,8 +161,8 @@ Other offset-helper instantiations remain uncredited.
 clears the string-table object, unloads classes, then unloads properties. It
 closes and clears the PBSP buffer before the BPD buffer, testing each for null.
 The AI interface now has a scoped spline-manager pointer view; its singleton,
-both file buffers and all global storage remain original. `TLT_CloseFile` stays
-external; [spline shutdown and its manager](Paths.md) are now reconstructed.
+both file buffers and all global storage remain original. `TLT_CloseFile` is
+[reconstructed](Loading.md#toilet); [spline shutdown and its manager](Paths.md) are too.
 
 ## Verification and next work
 

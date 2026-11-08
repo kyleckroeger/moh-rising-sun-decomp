@@ -1,0 +1,96 @@
+{
+  "id": "toilet_compartment",
+  "source": "src/game/toilet_compartment.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a9764",
+      "size": 844
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b7b4c",
+      "size": 60
+    }
+  ],
+  "functions": [
+    {
+      "name": "TLT_CloseFile__FPv",
+      "address": "0x801a9764",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "GetCompartmentNameFromIndex__FiPci",
+      "address": "0x801a97e0",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "GetCompartmentCDBNameFromIndex__FiPci",
+      "address": "0x801a984c",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "GetCompartmentCPTNameFromIndex__FiPci",
+      "address": "0x801a9874",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "GetCompartmentRTCNameFromIndex__FiPci",
+      "address": "0x801a98a0",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "GetVisualSizeFromIndex__Fi",
+      "address": "0x801a98cc",
+      "size": 132,
+      "binding": 1
+    },
+    {
+      "name": "GetCollisionSizeFromIndex__Fi",
+      "address": "0x801a9950",
+      "size": 132,
+      "binding": 1
+    },
+    {
+      "name": "GetRTCSizeFromIndex__Fi",
+      "address": "0x801a99d4",
+      "size": 132,
+      "binding": 1
+    },
+    {
+      "name": "TLT_InitResourceType__FPFP24LevelFileContentsStruct__v13TLTResourceID",
+      "address": "0x801a9a58",
+      "size": 88,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BIG_locateentryz": "0x8020bb00",
+    "DWI_free": "0x801a8894",
+    "TLT_FindNextResourceByTypeAndVal__F13TLTResourceIDiiP24LevelFileContentsStruct_": "0x801a96fc",
+    "TLT_FindNextResourceByType__F13TLTResourceIDP24LevelFileContentsStruct_": "0x801a9690",
+    "g_toilet": "0x803f5360",
+    "sprintf": "0x80263a3c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

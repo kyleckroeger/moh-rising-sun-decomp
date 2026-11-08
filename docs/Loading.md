@@ -61,3 +61,25 @@ original `dlopen.cpp` file record. All generated strings, code, symbols and
 section boundaries are checked, with complete-image verification required before
 publication. No instruction substitutions or clipped constant pools are used.
 Loading and destructor behavior have not been tested in an emulator.
+
+## Toilet
+
+`Toilet` is the game's file loader, with one global instance, `g_toilet`. The image records no
+name for its source file. `include/game/Toilet.h` holds a view of the class: names of the class,
+functions and global come from the symbol table, and member names are inferred from use.
+
+`TLT_CloseFile` returns without freeing when the pointer lies inside the level big file or either
+of the two other big-file buffers at `+0x120` and `+0x128`, and otherwise passes it to `DWI_free`.
+A level-contents entry is 12 bytes: a type, an unknown word and a table of value records at `+8`.
+`TLT_FindNextResourceByType` walks these entries from the one after its argument, or from the
+start for null. `GetCompartmentNameFromIndex` looks the index up in resource type 0, comparing the
+value of table record 1, and formats record 0's value with `"|%s"`. Each compartment has three
+consecutive indices: index * 3 is its collision file, + 1 its visual file and + 2 its relocation
+file. A missing compartment big file or entry makes the size queries return -1.
+`TLT_Async_Load` runs one of 20 state functions from `g_ToiletLoadStates` and adds its result to
+the state. Its progress denominator is 21 for missions 2 through 4 and 22 for the others.
+
+Not reconstructed: the class constructor and language and system-file setup,
+`TLT_FindNextResourceByTypeAndVal` (6 differences, all parameter registers), and the two functions
+that use the file-local `s_ignoreLoadFileNormalLocked` (`TLT_ForceLoadFileNormalLocked`,
+`TLT_LoadFileNormal`), plus the repository and extension-search functions after them.

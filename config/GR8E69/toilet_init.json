@@ -1,0 +1,58 @@
+{
+  "id": "toilet_init",
+  "source": "src/game/toilet_init.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a9320",
+      "size": 300
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b7ab8",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "TLT_Init__Fii",
+      "address": "0x801a9320",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "TLT_Async_Start__Fv",
+      "address": "0x801a9354",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "TLT_Async_Load__Fv",
+      "address": "0x801a937c",
+      "size": 208,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "TLT_Async_LoadSystem__Fv": "0x801a8f90",
+    "TLT_InitLang__Fv": "0x801a90a4",
+    "g_ToiletLoadStates": "0x802c7dd0",
+    "g_toilet": "0x803f5360"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

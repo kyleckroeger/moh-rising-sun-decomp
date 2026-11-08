@@ -1839,7 +1839,12 @@
     "player_bullet_sprite.json",
     "player_save_data.json",
     "camera_shake_update.json",
-    "player_add_weapon.json"
+    "player_add_weapon.json",
+    "toilet_init.json",
+    "toilet_async.json",
+    "toilet_lookup.json",
+    "toilet_compartment.json",
+    "toilet_big.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

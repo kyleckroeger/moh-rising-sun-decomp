@@ -1,0 +1,56 @@
+{
+  "id": "toilet_big",
+  "source": "src/game/toilet_big.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a9b98",
+      "size": 332
+    }
+  ],
+  "functions": [
+    {
+      "name": "TLT_LoadFileFromBigFile__FPcPCcPi",
+      "address": "0x801a9b98",
+      "size": 200,
+      "binding": 1
+    },
+    {
+      "name": "TLT_UnLoadLevelRelocationFile__Fv",
+      "address": "0x801a9c60",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "TLT_LoadFromRepository__FPCcPiPb",
+      "address": "0x801a9c88",
+      "size": 92,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BIG_locate": "0x8020bfe0",
+    "BIG_locateentryz": "0x8020bb00",
+    "DeallocateArchiveBuffer__8CRtcFile": "0x8005cee0",
+    "TLT_InsertFileInRepository__FPc": "0x801a9dbc",
+    "TLT_IsFileInRepository__FPc": "0x801a9ce4",
+    "TLT_LoadFileFromLevelBigFile__FPCcPi": "0x801a9634",
+    "g_toilet": "0x803f5360"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}
