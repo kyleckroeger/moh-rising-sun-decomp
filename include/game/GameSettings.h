@@ -13,8 +13,9 @@ struct ProgressRecord {
 // The per-player multiplayer entry; 20 bytes, the class tag is from InitMultiplayer's
 // symbol. restartIndex (first byte, RestartPlayer's argument) is a descriptive name.
 struct SMPPlayerData {
-    unsigned char restartIndex;
-    unsigned char unknown_1[12];
+    unsigned char restartIndex; // +0x00; InitMultiplayer's team.
+    char bodyIndex;     // +0x01
+    char name[11];      // +0x02
     unsigned char maxHealth;    // +0x0d; SetHealthMax's value.
     unsigned char unknown_e[2];
 };

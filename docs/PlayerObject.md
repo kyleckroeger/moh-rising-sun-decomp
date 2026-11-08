@@ -123,3 +123,13 @@ found. With no target it casts a fiber into the world and aims at the hit point;
 keeps following the subject until the subject dies or the target leaves the line or strays more than
 20 units. The object begins like an `IObserver`, so the subject link and `AddObserver` use the prefix;
 whether the class really derives from it is unverified.
+
+## Multiplayer setup
+
+`InitMultiplayer` copies the team to the AI object. On a respawn it empties and refills the grenade
+and every weapon in the level's weapon set, sets each weapon's enable bit from the selectable table
+and re-registers the weapons with the body. Otherwise it stores the name (ten characters, trailing
+spaces and nulls cleared) and the team word, creates the body from the level's body table if
+needed, adds the weapons and grenade, registers them with the body, enables the selectable ones and
+raises script event 164 and `CycleWeapon(1, 0)` when the set is not empty. The weapon-set table
+layouts are descriptive views of the level resource.

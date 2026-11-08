@@ -1,0 +1,67 @@
+{
+  "id": "player_init_mp",
+  "source": "src/player/PlayerInitMultiplayer.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/stlport-runtime",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800ac3cc",
+      "size": 1420
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029efc8",
+      "size": 92
+    }
+  ],
+  "functions": [
+    {
+      "name": "InitMultiplayer__13CPlayerObjectP13SMPPlayerDatab",
+      "address": "0x800ac3cc",
+      "size": 1420,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddAmo__19CPlayerWeaponObjecti": "0x800c8eb0",
+    "AddAmo__7CWeapons": "0x8014ba40",
+    "AddPlayerWeapon__13CPlayerObjecti": "0x800b9190",
+    "AddWeapon__14CSoldierObjectiii": "0x800bebec",
+    "Add__6CSceneR10ISceneNodeP10ISceneNode": "0x80146e08",
+    "AllocateObject__18CAnimObjectFactoryUi12EObjectClass": "0x800cbcf4",
+    "CreateWeapon__14CWeaponFactoryiP10ISceneNodei": "0x8014f030",
+    "CycleWeapon__13CPlayerObjectii": "0x800b3f94",
+    "DebugMsg__FPCce": "0x80279094",
+    "DoneReloading__19CPlayerWeaponObject": "0x800c8e8c",
+    "DoneReloading__7CWeapon": "0x8014bb1c",
+    "Empty__7CWeapon": "0x8014bac0",
+    "SetPlayer__15CAnimatedPlayerP13CPlayerObject": "0x800d4a6c",
+    "TLT_FindNextResourceByTypeAndVal__F13TLTResourceIDiiP24LevelFileContentsStruct_": "0x801a96fc",
+    "TLT_FindNextResourceByType__F13TLTResourceIDP24LevelFileContentsStruct_": "0x801a9690",
+    "_M_increment__Q24_STLt10_Rb_global1ZbPQ24_STL18_Rb_tree_node_base": "0x8027a1dc",
+    "g_AnimObjFactory": "0x803e6bb0",
+    "g_WeaponFactory": "0x803e6d40",
+    "g_levelWeaponSetID": "0x802c1b40",
+    "g_scene": "0x803e6d90",
+    "strncpy": "0x80266dd4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}

@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 997520,
+    "matching_code_bytes": 998940,
     "total_executable_code_bytes": 2492032,
-    "percent": 40.02837844778879,
+    "percent": 40.0853600595819,
     "categories": {
-      "reconstructed_game": 605304,
+      "reconstructed_game": 606724,
       "restored_library": 392216
     },
-    "matching_functions": 4931
+    "matching_functions": 4932
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -882,6 +882,7 @@
     "config/GR8E69/player_health_max.json": "957c2e4a9d5078124970b85f3fb88b65acfc4c90c2810c50526b5a9e4292881c",
     "config/GR8E69/player_hide_weapon.json": "9302e34cf09ff8b686e6d1025ec3c0d8b3c33f9f722924ada54470615a0c2e26",
     "config/GR8E69/player_hitpoints.json": "a9f8dec5a34916c07c5f5e4910e85559f12ea45175268c20757529128a15b546",
+    "config/GR8E69/player_init_mp.json": "12672c98e62c9ea7225bdecd173770ea281e88f22279c2935d4423bdce347c86",
     "config/GR8E69/player_invincible.json": "2649803bf3a642fbc50bf3489b2a257ddb9f6ce7c2048ccc27ee07dcaf277b22",
     "config/GR8E69/player_level_data.json": "67b67acd67ad793d8c9cdccfcacb3ec3809d3346a26f993f5a99d9f82edfe39c",
     "config/GR8E69/player_light_volumes.json": "2e4a0d277da90d9dc4f4298aef3cff91d794bc0a26d7070e7457a7625eda2004",
@@ -916,7 +917,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "1c2a7a53f5bb28217ab5fd41d24e460d2d4b7f45f643607040fbff2190c7f8e8",
+    "config/GR8E69/project.json": "b0c8928067f5067f0c0aa6623da4493d04fa7812960e7ce7e420f7489dff44bf",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -2126,7 +2127,7 @@
     "include/game/CSGVolume.h": "4e1b74888a25e46d47449afbc3081c2474e8104e59cfd1ee11c1e5e6b440cb23",
     "include/game/CVector3.h": "0c436c62dba8e3a7f44ca5e6eea6de50ff97e88e4e53545873d5ecca9d648aae",
     "include/game/Camera.h": "c039c4dd37763c5f7980f02f7c88577d9a70f75ff7d329378d64e4c731a12b69",
-    "include/game/CameraShake.h": "a540d94e4211b84f09d4a371405ad6443fbd094ba3810845c68cdb2699913786",
+    "include/game/CameraShake.h": "27a442ae25b3aa9a897aef9e2153192f2b7ab3ccdd2b30ba9e33898817256916",
     "include/game/Capsule.h": "332dd06329ac7dc3ac5fc01793549a41e2defbe70298018accd2ce79c9e3ce3b",
     "include/game/CharacterShadow.h": "048ae3efc6fd6d3119f4c234f5bacd499c748c55b1573df386f686411e93a67a",
     "include/game/CollisionVolume.h": "26ba5d9a9865a0185f0e87db21b13faf3214b7e213201e825181412f0f9a5b7c",
@@ -2190,7 +2191,7 @@
     "include/game/Fog.h": "30a37f01f3f665d1f9b3b0a5ef81ea098194595159c5ff794797541c6bf325c0",
     "include/game/Font.h": "aac3ae3971b2a09911276f89091539c78c3d22be4046eca5d1e65a39c2f82e6b",
     "include/game/Frustum.h": "8b459091729087e5119c39887634fd28825b36e40b7a0efdf9a40c2cf58741fe",
-    "include/game/GameSettings.h": "03843f10edd316009ffc1b08d9911db8252e9b260626ad762e98bbe1d54accc7",
+    "include/game/GameSettings.h": "3fd28f28f39bcfac58db20ec5fea7eaadfca6653499773c9e6fff528772f3d53",
     "include/game/GrenadeResponse.h": "a26075782a75877dd754799cb73d6fe55e2a6c6597676869bb956ba8cdb2bed4",
     "include/game/HeadsUpDisplay.h": "b613ec580dd3ad3f40d768eef03b896f5d89dedaa45b42aa19228e43b0c49347",
     "include/game/IDestructible.h": "1427a08ba92fefc7fdc63c4ba8fc7aab3ec64bc8d2d1cfb7fe035346b685379f",
@@ -3381,6 +3382,7 @@
     "src/player/PlayerHealthMax.cpp": "1fa4e383a77ebe34d1bf75c32d86b6e740a9ad0cbdac93c2f314a7d6e13dbf51",
     "src/player/PlayerHideWeapon.cpp": "3e30da0e5f897a9ba94963d0b91836a7f717288e8a4c216dfaeb24271a67b0a9",
     "src/player/PlayerHitpoints.cpp": "1d2300ea2ad5df79ac7a71ef6d54aa0520a0ccc1ccf18d5f9f6464232e077f84",
+    "src/player/PlayerInitMultiplayer.cpp": "23e1523c097cda86dbaf5c932ac90b8b8b8e7c7e05a630da2a0e89ba02a0b286",
     "src/player/PlayerInvincible.cpp": "1b10beb6d82e55702cef051c47c065f66680ebf6d47fa04c5ec0caccbf2e8ac9",
     "src/player/PlayerLevelData.cpp": "37e76e8b3053b174a5d63f011fbdeb3a72ccbc3b28e80d4fb78dcdf9c81ec7e6",
     "src/player/PlayerLightVolumes.cpp": "b177252dcb2353bdf55571e9aca0efb57e5f98c83c8431a0b8d526fb2063be1b",
@@ -42656,6 +42658,24 @@
       "discarded_functions": [],
       "object_sha256": "a7d32d4f62a91a4521e01d33816f71ad802711e3e3d28b84262f4454b886d880",
       "linked_sha256": "4cbe3eaf9061698d57ecd0f3ee6ac31ff5583754f470d0525191d59075d3cf9c"
+    },
+    {
+      "id": "player_init_mp",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 1420,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "a3d4efce7131348d97f86390c03cfb880eaf600e543722c70daeeb5e458c0b50",
+      "linked_sha256": "20773a8b31d36ff2628c293bbaea78c7cdc76244a9790e49f54f8ab0034f1553"
     }
   ],
   "code_map": {
@@ -53439,13 +53459,6 @@
             "size": 2080,
             "kind": "function",
             "name": "Init__13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ac3cc",
-            "size": 1420,
-            "kind": "function",
-            "name": "InitMultiplayer__13CPlayerObjectP13SMPPlayerDatab",
             "evidence": "adjacent-compiler-markers"
           },
           {

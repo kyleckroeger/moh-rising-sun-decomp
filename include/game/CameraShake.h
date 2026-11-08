@@ -112,7 +112,9 @@ class CAnimatedPlayer {
     EALA::Character::AimModifier aimModifier; // +0x1138
     unsigned char unknown_1139[0x157c - 0x1139];
     int turning;        // +0x157c; set between script events 299 and 300 by PostUpdate.
-    unsigned char unknown_1580[0x1610 - 0x1580];
+    unsigned char unknown_1580[0x15a4 - 0x1580];
+    int team;              // +0x15a4; the player's team word, set by InitMultiplayer.
+    unsigned char unknown_15a8[0x1610 - 0x15a8];
     CPlayerObject *player; // +0x1610
     float flocoHeading; // +0x1614; the heading PostUpdate turns toward the player's.
     float flocoRate;    // +0x1618
@@ -485,8 +487,14 @@ class CPlayerObject {
     unsigned char unknown_1be0[0x1c28 - 0x1410 - sizeof(CHeadsUpDisplay)];
     int letterbox;           // +0x1c28; set by BIFunc_DisplayLetterbox.
     unsigned char unknown_1c2c[0x1c72 - 0x1c2c];
-    char name[0x1c83 - 0x1c72]; // +0x1c72; returned by GetName (extent inferred).
-    unsigned char team;      // +0x1c83
+    char name[0x1c80 - 0x1c72]; // +0x1c72; returned by GetName.
+    union {
+        int teamWord;        // +0x1c80; written whole by InitMultiplayer.
+        struct {
+            unsigned char unknown_1c80[3];
+            unsigned char team; // +0x1c83
+        };
+    };
     unsigned char unknown_1c84[4];
     int fireDelay;           // +0x1c88; set from RESPAWN_FIRE_DELAY. Name from Frontline.
     union {

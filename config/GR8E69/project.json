@@ -1919,7 +1919,8 @@
     "sound_path_queuenode.json",
     "sound_path_service.json",
     "sound_stagpat_playpatch.json",
-    "scene_AnimObjFactoryLoaders.json"
+    "scene_AnimObjFactoryLoaders.json",
+    "player_init_mp.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
