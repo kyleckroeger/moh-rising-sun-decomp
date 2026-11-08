@@ -53,6 +53,16 @@ struct SNDVOICEVIEW {
     unsigned short scaled;
 };
 
+/* an effect bus record (20 bytes) */
+struct SNDFXBUS {
+    short type;
+    unsigned char level;
+    unsigned char field3;
+    int param1;
+    int param2;
+    char fieldC[8];
+};
+
 struct SNDGSVIEW {
     unsigned short outputrate0;
     unsigned short outputrate1;
@@ -123,7 +133,9 @@ struct SNDGSVIEW {
     void (*destroystreams)(void);
     struct SNDVOICEVIEW* voices;
     struct SNDBANKSLOT* banks;
-    char pad1f8[284];
+    struct SNDFXBUS fxreverb[1];
+    struct SNDFXBUS fxsecond[1];
+    char pad220[244];
     void (*prehook)(void);
     void (*posthook)(void);
 };

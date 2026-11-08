@@ -1,0 +1,61 @@
+{
+  "id": "sound_seffect",
+  "source": "src/sound/ea/seffect.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802240e8",
+      "size": 508
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDCTRLI_getfxbus__Fii",
+      "address": "0x802240e8",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "SNDCTRLI_fxbustoplayloc__Fi",
+      "address": "0x80224130",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "SNDfxinitbus",
+      "address": "0x80224154",
+      "size": 200,
+      "binding": 1
+    },
+    {
+      "name": "SNDfxmasterlevel",
+      "address": "0x8022421c",
+      "size": 200,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDPLATFORM_fxinit__Fii": "0x802234dc",
+    "SNDSYS_entercritical": "0x8021f948",
+    "SNDSYS_leavecritical": "0x8021f988",
+    "SNDfxlevel": "0x802242e4",
+    "sndgs": "0x804108fc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

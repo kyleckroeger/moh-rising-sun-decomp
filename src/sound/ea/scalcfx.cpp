@@ -12,11 +12,12 @@ struct SNDVOICEVIEW {
     short fxlevel[21];
 };
 
-signed char* SNDCTRLI_getfxbus(int, int);
+struct SNDFXBUS;
+SNDFXBUS* SNDCTRLI_getfxbus(int group, int location);
 
 void SNDI_calcfxlevel(int bus, int voice) {
     SNDVOICEVIEW* entry = &(*(SNDVOICEVIEW**)(sndgs + 496))[voice];
-    signed char* fx = SNDCTRLI_getfxbus(bus, entry->fxbus);
+    signed char* fx = (signed char*)SNDCTRLI_getfxbus(bus, entry->fxbus);
 
     entry->fxlevel[bus] = entry->send[bus] * entry->level[bus] * fx[2] >> 6;
 }

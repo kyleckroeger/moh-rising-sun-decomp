@@ -1,0 +1,41 @@
+{
+  "id": "sound_smemman_free",
+  "source": "src/sound/ea/smemman_free.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8021b034",
+      "size": 192
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDMEMI_free__FPv",
+      "address": "0x8021b034",
+      "size": 192,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "sndgs": "0x804108fc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "smemman.c",
+  "original_file_index": 3062
+}

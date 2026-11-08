@@ -1729,7 +1729,17 @@
     "rcmpbase_frames.json",
     "audioplayer.json",
     "player_weapon_init.json",
-    "player_weapon_update.json"
+    "player_weapon_update.json",
+    "sound_seffect.json",
+    "sound_smixwet.json",
+    "sound_smixer_hooks.json",
+    "sound_ssys_inited.json",
+    "sound_smemman_a.json",
+    "sound_smemman_free.json",
+    "sound_path_createtrack.json",
+    "sound_path_overhead.json",
+    "ea_filedev_kill.json",
+    "ea_filedev_close.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

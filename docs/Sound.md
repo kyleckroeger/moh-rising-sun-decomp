@@ -275,6 +275,10 @@ and the voice table sits at `sndgs+0x1f0` with the voice count at `sndgs+0x17e`.
 `sndmix` holds a pointer to its 96-byte channel records at `+0x1d8`. The stream record's
 members above about `+0xd0` sit 40 bytes further along than Frontline's.
 
+An effect bus record (`SNDFXBUS`, 20 bytes) has two tables in `sndgs`, one at `+0x1f8`
+and one at `+0x20c`, and the voice send levels start at `+0x61` in a voice record.
+`mapchannel` is 216 bytes and `remap` indexes it as a 6 x 6 x 6 table.
+
 `hlafile`'s `numrequests`, `freequeue` and `requestidcounter` are small statics of that
 file. The original symbol table gives `.sbss` statics a size of 0, so the unit declares
 them `extern` as original context instead of defining them. Their ownership is

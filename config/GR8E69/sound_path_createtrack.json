@@ -1,0 +1,39 @@
+{
+  "id": "sound_path_createtrack",
+  "source": "src/sound/ea/path_createtrack.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8003782c",
+      "size": 48
+    }
+  ],
+  "functions": [
+    {
+      "name": "PATH_createtrack",
+      "address": "0x8003782c",
+      "size": 48,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "PATH_createtrackfrombuf": "0x8003785c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}
