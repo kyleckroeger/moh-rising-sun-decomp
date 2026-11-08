@@ -122,6 +122,15 @@ direction (0 to 3, from the bullet's facing against the object's forward and rig
 the contact's feature. Animated objects also scale damage by location: four times for features 0 and 1, half
 for 3 to 8 and 13 to 20. Static objects add the hit position relative to the object at `+0x18` and `+0x1c`.
 
+## `CAnimObject` drawing and initial state
+
+`CAnimObject::Draw` refuses an object whose animation has not been updated, then queues the
+mesh's first pass in bin 5 and, if the mesh word at `+0x30` is zero, a second pass in bin 9 sorted
+by the object's squared view depth clamped to 1,000,000. The depth comes from `ClipSphere`,
+whose own visibility result `Draw` ignores. `+0x140` is a `WeakPtr<ISceneNode, 8>`, identified by
+the table the constructor stores and by the link and subject that `Init` clears, and `+0x2d0` is
+the `AO_OpcodeHandler` that `Init` hands to the choreographer.
+
 ## Parked
 
 These still differ, with instruction differences in brackets; drafts are kept outside the

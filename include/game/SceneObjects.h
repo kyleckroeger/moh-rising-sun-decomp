@@ -263,6 +263,15 @@ namespace Character { struct CollisionData; }
 class CAnimatedVolume;
 enum EAnimCallback { AnimCallbackUnknown = 0 };
 class CScreen;
+struct MATRIX4;
+// The part of EALA::Character::Mesh that CAnimObject::Draw reads; names descriptive.
+struct StaticMeshPart;
+struct CharacterMeshView {
+    unsigned char unknown_0[12];
+    StaticMeshPart *part; // +0xc
+    unsigned char unknown_10[0x30 - 0x10];
+    int noSortedPass; // +0x30; the second draw command is queued only while this is zero.
+};
 class CAnimObject {
   public:
     void HandleBulletCollision(CBullet *, const CCollision &);
@@ -332,6 +341,12 @@ class CAnimObject {
     void LineAlmostCollided(CBullet *) const; // An empty body returning nothing.
     void *GetSkeleton();
     void Shutdown();
+    enum LocomotionType { LocomotionUnknown = 0 }; // Original name; its members are unknown.
+    LocomotionType DetermineLocomotionType(float, LocomotionType);
+    int IsVisible(CDrawContext &) const;
+    void Draw(CDrawContext &);
+    static void DrawMesh(CDrawContext &, void **);
+    static int ClipSphere(const MATRIX4 &, const COORD3 &, float, float, float &);
     void UpdateLocalBoundingVolume(ISceneNode::EVolumeType, const CVector3 &, const CVector3 &);
     int AttachObject(CStaticObject *, char *, int);
     int DetachObject(char *);
@@ -357,12 +372,16 @@ class CAnimObject {
     };
     unsigned char unknown_0[0x20];
     ExtentNode *sortMinX, *sortMaxX, *sortMinY, *sortMaxY; // +0x20
-    unsigned char unknown_30[0x4c - 0x30];
+    unsigned char unknown_30[0x44 - 0x30];
+    int field_44; // +0x44; cleared by Init.
+    int field_48; // +0x48; cleared by Init.
     float scale;         // +0x4c; multiplies the animation's motion and bounds. Descriptive.
-    unsigned char unknown_50[4];
+    int alwaysVisible;   // +0x50; IsVisible returns 1 while set. Descriptive.
     unsigned char choreographer[0x88 - 0x54]; // +0x54; EALA::Character::Choreographer methods run on it. Extent unknown.
     CMatrix *JointMatrices() const { return *(CMatrix **)(skeleton + 0x34); } // +0xbc
-    unsigned char skeleton[0xd0 - 0x88]; // +0x88; GetSkeleton returns this address. Extent unknown.
+    unsigned char skeleton[0xc8 - 0x88]; // +0x88; GetSkeleton returns this address. Extent from the destructor.
+    CharacterMeshView *mesh;      // +0xc8; an EALA::Resource::Pointer<Mesh>, released by the destructor.
+    unsigned char unknown_cc[4];
     CMatrix transform;   // +0xd0
     IVolume *localVolumeType3; // +0x110
     IVolume *localVolumeType0; // +0x114
@@ -371,7 +390,9 @@ class CAnimObject {
     BSObject *script;    // +0x120
     int collisionId;     // +0x124
     CAnimatedVolume *animatedVolume; // +0x128
-    unsigned char unknown_12c[0x158 - 0x12c];
+    unsigned char unknown_12c[0x130 - 0x12c];
+    CVector3 moveTarget; // +0x130; SetMoveTarget stores it.
+    unsigned char weakNode[0x154 + 4 - 0x140]; // +0x140; a WeakPtr<ISceneNode, 8>, from the table the constructor stores.
     float yaw;           // +0x158
     int animCallback;    // +0x15c
     int pendingCallback; // +0x160
@@ -381,7 +402,7 @@ class CAnimObject {
     CVector3 adjustTarget; // +0x170
     float adjustValue;   // +0x180; descriptive.
     int adjustBlend;     // +0x184
-    unsigned char unknown_188[4];
+    int field_188; // +0x188; cleared by Init.
     const char *stateName; // +0x18c
     CVector3 previousPosition; // +0x190; soldier CommitUpdate copies the position here.
     CVector3 velocity;   // +0x1a0
@@ -408,18 +429,22 @@ class CAnimObject {
     float attachBlend;   // +0x240
     unsigned char unknown_244[0x250 - 0x244];
     CMatrix attachLocation; // +0x250
-    unsigned char unknown_290[0x294 - 0x290];
+    int field_290; // +0x290; cleared by Init.
     int gravity;    // +0x294
     int groundCheck; // +0x298
     int animMoved;   // +0x29c
     int hurtlingBlocked; // +0x2a0; BeginHurtling does nothing while set. Descriptive.
     CLightVolumeManager lightVolumes; // +0x2a4
-    unsigned char unknown_2c0[0x2c4 - 0x2c0];
+    short field_2c0; // +0x2c0; Init stores 40.
     int stateTask;       // +0x2c4; passed to SetState by address. Type unknown.
     int stateValue;      // +0x2c8
     CAnimObject *stateOwner; // +0x2cc
-    unsigned char unknown_2d0[0x2d8 - 0x2d0];
+    struct AO_OpcodeHandler {
+        void *table;
+        CAnimObject *owner; // +4
+    } opcodeHandler; // +0x2d0; class name from _vt.Q211CAnimObject16AO_OpcodeHandler.
     int poseEvaluated;   // +0x2d8; descriptive.
+    int field_2dc; // +0x2dc; set by Init and the constructor.
     void SetAttached(bool);
     void StartAnimAdjust(const CVector3 &, float, bool);
 };
