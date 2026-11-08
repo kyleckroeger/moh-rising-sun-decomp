@@ -56,6 +56,7 @@ public:
     void Move(const CVector3 &);
     void Rotate(const CVector3 &, float);
     void Orthonormalize();
+    static const float ASPECT_4x3;
     void SetPerspective(float, float);
     void SetOrthographic(float, float);
     float GetHFOV() const;

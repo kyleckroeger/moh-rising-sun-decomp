@@ -508,6 +508,7 @@ class CPlayerObject {
     void GetTMLocalToWorld(CMatrix &) const;
     int GetLocalBoundingVolume(ISceneNode::EVolumeType) const;
     int GetWorldBoundingVolume(ISceneNode::EVolumeType) const;
+    void CommitUpdate();
     int IsVisible(CDrawContext &) const;
     unsigned int IsDrawEnabled() const;
     EClsnId GetCollisionId() const;

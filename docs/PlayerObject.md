@@ -133,3 +133,15 @@ spaces and nulls cleared) and the team word, creates the body from the level's b
 needed, adds the weapons and grenade, registers them with the body, enables the selectable ones and
 raises script event 164 and `CycleWeapon(1, 0)` when the set is not empty. The weapon-set table
 layouts are descriptive views of the level resource.
+
+## Per-frame commit
+
+`CommitUpdate` first places the multiplayer body at the transform (lifted by `g_MPAnimMeshZOffset`)
+and gives it its locomotion parameters: the horizontal distance moved since the last frame, and a
+direction type from the dot and cross of the normalised front and movement (1 forward, 4 backward, 2
+or 3 to the sides, 0 below `STAND_TO_WALK_TRANSITION`). With bit 9 of the path flags clear it casts a
+fiber from 0.39 above the position (the peek base while peeking) straight down against the scene's
+world volume; on a hit it stops the player, sets bit 30 and reruns `AttemptUpdate(0)`. With bit 9 set
+it updates the embedded camera from the camera matrix and the transform, the aim adjuster and the
+current weapon's transforms and muzzle flash, and points the thrown weapon along the camera. Then it
+records the position and the capsule's end height.
