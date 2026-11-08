@@ -2,8 +2,10 @@
 #define GAME_OBJ_CREATE_H
 // State of the original objcreate.cpp. Global, class and struct names come from the symbol table;
 // member names, the two queue entry structs and this header's name are descriptive.
+#include "BSGameObject.h"
 class BSObject;
 class CStaticObject;
+class ISceneNode;
 
 class PickupInfo {
   public:
@@ -52,7 +54,7 @@ void MarkDumpObjectForDestruction(DumpObject *);
 class TriggerObject;
 class BSUtilObjectInstanceMemoryAllocator;
 struct DelayDestroyEntry {
-    void *object;  // +0x00
+    BSGO_Basic *object; // +0x00
     int frame;     // +0x04; g_frameCounter when queued
 };
 struct GermanCreationEntry {
@@ -81,5 +83,82 @@ extern int g_iNumberOfEnemiesSpawned;
 extern int g_iGermanCreationQueueHeadIndex;
 extern int g_iGermanCreationQueueTailIndex;
 extern int g_iNumGermansQueuedThisFrame;
+
+// Each object reaches its scene node through this block; it sits after the script data, whose size
+// differs per class.
+struct BSGOBindingLink {
+    BSGOBindingLink *next;     // +0x00
+    BSGOBindingLink *previous; // +0x04
+};
+struct BSGOBinding {
+    unsigned char unknown00[8];
+    BSGOBindingLink link; // +0x08
+    unsigned char unknown10[4];
+    ISceneNode *sceneNode; // +0x14
+};
+
+class BSGO_Destructable : public BSGO_Basic {
+  public:
+    virtual ~BSGO_Destructable();
+    void Destroy();
+    virtual void *GetScriptData();
+    virtual ISceneNode *GetSceneNode();
+    virtual void *GetProximityData();
+    static void *operator new(unsigned int);
+    static void operator delete(void *);
+    unsigned char scriptData[0x20 - 0x14];
+    BSGOBinding binding;              // +0x20
+    unsigned char proximityData[4];   // +0x38; extent unknown.
+};
+class BSGO_Anim : public BSGO_Basic {
+  public:
+    virtual ~BSGO_Anim();
+    void Destroy();
+    virtual void *GetScriptData();
+    virtual ISceneNode *GetSceneNode();
+    virtual void *GetProximityData();
+    static void *operator new(unsigned int);
+    static void operator delete(void *);
+    unsigned char scriptData[0x18 - 0x14];
+    BSGOBinding binding;              // +0x18
+    unsigned char proximityData[4];   // +0x30; extent unknown.
+};
+class BSGO_Soldier : public BSGO_Basic {
+  public:
+    virtual ~BSGO_Soldier();
+    void Destroy();
+    virtual void *GetScriptData();
+    virtual ISceneNode *GetSceneNode();
+    virtual void *GetProximityData();
+    static void *operator new(unsigned int);
+    static void operator delete(void *);
+    unsigned char scriptData[0xe4 - 0x14];
+    BSGOBinding binding;              // +0xe4
+    unsigned char proximityData[4];   // +0xfc; extent unknown.
+};
+class BSGO_Tank : public BSGO_Basic {
+  public:
+    virtual ~BSGO_Tank();
+    void Destroy();
+    virtual void *GetScriptData();
+    virtual ISceneNode *GetSceneNode();
+    virtual void *GetProximityData();
+    static void *operator new(unsigned int);
+    static void operator delete(void *);
+    unsigned char scriptData[0xe4 - 0x14];
+    BSGOBinding binding;              // +0xe4
+    unsigned char proximityData[4];   // +0xfc; extent unknown.
+};
+class BSGO_Player : public BSGO_Basic {
+  public:
+    virtual ~BSGO_Player();
+    void Destroy();
+    virtual void *GetScriptData();
+    virtual ISceneNode *GetSceneNode();
+    virtual void *GetProximityData();
+    unsigned char scriptData[0x38 - 0x14];
+    ISceneNode *sceneNode;          // +0x38
+    unsigned char proximityData[4]; // +0x3c; extent unknown.
+};
 
 #endif

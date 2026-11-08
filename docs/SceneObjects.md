@@ -80,13 +80,15 @@ particle systems, 10 projector and 11 animated mechanic. A delayed destruction r
 more than one frame old. A queued German counts towards the non-visible soldier cull once it has
 waited more than six frames. `CreateEnemy` compares the child script with `BOT3` to choose a bot.
 `ShutdownObjectCreators` rebuilds the container in place, and the original tests the address first.
+Each `BSGO_*` destruction unlinks the object, removes its scene node, destroys the script object and
+deletes itself; each class keeps a 24-byte block with its scene node at `+0x14` after the script data.
+`DestroySingleQueueElement` sends message 264 before calling `Destroy`.
 
 ## Parked
 
 These still differ, with instruction differences in brackets; drafts are kept outside the
 tree and a later reader should expect them to be close rather than solved.
 
-- `CStaticObject::Init` (2): the `+0x214` and `+0x110` stores swap.
 - `CStaticObject::CalculateMovementTime` (27): register allocation of the three times.
 - `CStaticObject::AnimUpdate`: one missing `fmr`, which shifts the rest; the period and its
   conversion share a register in this build.
@@ -94,7 +96,7 @@ tree and a later reader should expect them to be close rather than solved.
 - `CStaticObject::StartMotionPlayback` (60): the key-frame temporaries.
 - `CAnimObject::BeginUpdate`, `DetectGround` and `Yaw`: a local's address stays in a saved
   register where the original rematerializes it.
-- `CHierObject::GetWorldLinearVelocity` (19) and `CTankObject::AddWeapon` (5): register choice.
+- `CHierObject::GetWorldLinearVelocity` (19): register choice.
 - `AllocateBoxVolume`: needs `CVolBox` data members that `Box.h` does not declare.
 - `CSoldierObject::CleanUp`, `DetachObject` and `GetBulletEmitterMatrix`: the original
   computes attach-slot addresses as `(this + i * 112) + offset`; no array or pointer form
@@ -102,7 +104,8 @@ tree and a later reader should expect them to be close rather than solved.
 - `CAITankObject::SetInitialStatus` and `UpdateStatus`: a 15.0 literal sits at a 4-byte
   boundary before the double. A `static const float` in a `.rodata.*` section is folded back
   into the pool, so the subsection mapping cannot place it.
-- `NullDeallocateArchiveBuffer` has local binding and no caller in a matched unit.
+- `NullDeallocateArchiveBuffer`, `CompareObjectDefinitions` and `CompareStaticObjectDefinitions` have
+  local binding and no caller in a matched unit; the two comparisons match when compiled alone.
 - `CAIObject::ComputeStatusThreatValue` (18): the value and status pointer swap registers and
   the result is not kept in a saved register.
 - `CAIObject::IsObjectInLineOfSight(const CVector3 &, float, bool, const CAITarget *)` (49):

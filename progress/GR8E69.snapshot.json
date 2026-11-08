@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 945992,
+    "matching_code_bytes": 948504,
     "total_executable_code_bytes": 2492032,
-    "percent": 37.96066824182033,
+    "percent": 38.06146951564025,
     "categories": {
-      "reconstructed_game": 553776,
+      "reconstructed_game": 556288,
       "restored_library": 392216
     },
-    "matching_functions": 4644
+    "matching_functions": 4671
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -110,11 +110,13 @@
     "config/GR8E69/UDPTransport.json": "2c2b2e2ed43cd5a432f9ba61b70b14c627ec3416e9a439b78e980b9aeb584f5c",
     "config/GR8E69/ai.json": "7b00f17f4fb56ada896ab693b54981297a779945d629d8e0920f1bffedda5893",
     "config/GR8E69/ai_AIDoodad.json": "e2609f553306a674aa8981751ce3c5b61ec5d9aa5c3a1a0509aae786409aebf4",
+    "config/GR8E69/ai_AIFilterAStarStubs.json": "a438094f6e7b0d6fb11a6b9fcb360ed3903952bc7f6354de34f114ff6fcd7012",
     "config/GR8E69/ai_AIFilterAccess.json": "b4aa6ccd0d536390a2fbe233696b27bd15914ebf90759dbde576445a54bfca1c",
     "config/GR8E69/ai_AIFilterHead.json": "eeb196fcc1a0c3511cbfa7d74a41e589b841bf8863e4b5b4584d1b719583012f",
     "config/GR8E69/ai_AIFilterPlayer.json": "67444c297f0b80cdf43d542d5a628e1aa019ff4928c07c1103ce186178a0a2a8",
     "config/GR8E69/ai_AIFilterPlayerVars.json": "3926a7cb19854b199b42bcb3a632aa0f29198d127c23a315669f48919516b864",
     "config/GR8E69/ai_AIFilterTank.json": "f00434e8d19008765bb603dcb4b91d0e0bae489665acd87a55a70735e4a6e63e",
+    "config/GR8E69/ai_AIFilterTankVars.json": "12a3afc4e64a0d7d87ca40b458e1a5a975bbd217f8e0bbc0bc572f7d22abd5b7",
     "config/GR8E69/ai_AIObjectBehavior.json": "df321fbe6f8cc1f6e8a49adf69fcbf2a993e8a12333dca287613346970a4fd5b",
     "config/GR8E69/ai_AIObjectBehaviorInfo.json": "bac5c462ff9531f1d32a346349d3beb1581746922cef1930a2de38b1c0edfcde",
     "config/GR8E69/ai_AIObjectBestBehavior.json": "46092335a8126928dc5347c5fd10c8c61fff32f0495cbf06d75b60439164b029",
@@ -124,6 +126,7 @@
     "config/GR8E69/ai_AIObjectLineOfSight.json": "8a55fa865a180771e5de0dd01995561ce87534fb3bc461f7703426309af257fc",
     "config/GR8E69/ai_AIObjectLocation.json": "d4f8ae1b32b5e498933e4ffb03c1e9df838e1d3d6b0bd2f2620e66e849b238a6",
     "config/GR8E69/ai_AIObjectMatchList.json": "cd3f3ba19a509480074a6fe59d953911a743991278e4ddf8f4899528302b21f4",
+    "config/GR8E69/ai_AIObjectParameters.json": "84343420a3419531516f213f3fb1323d0c647c661d61623dce0a40a049801cac",
     "config/GR8E69/ai_AIObjectSightHelpers.json": "e2238e7b905133a9d6c51b816a95f7e0e124202664b93d026846b3bb083318bf",
     "config/GR8E69/ai_AIObjectStatus.json": "13fec46ebd96419bcf2fbc2721b36bca69ac9058b9036740173e3b4e3112c420",
     "config/GR8E69/ai_AIObjectStatusDistance.json": "9f19ae969f316f986c492dda0b411ebfd2932568cc06b4f23267cee844cea219",
@@ -871,7 +874,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "b8b3232534343c266a35e4f80c77e133d6dcc5defe0002e38c2d9da299ca4482",
+    "config/GR8E69/project.json": "9eb9cbb82bc4d438d600a5b6da9c2fd22145733ddea5e2b75613d4c92c82a1af",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -901,6 +904,8 @@
     "config/GR8E69/scene_AnimObjectDefaultsA.json": "94028fbc5daad08a0de48b867854ff717663b96e45ba13347e46d4b94b577ec9",
     "config/GR8E69/scene_AnimObjectDefaultsB.json": "77dd0ea010f746fb41d983350dadae89ff819deb6baa1b0edb50cb0871cdc52e",
     "config/GR8E69/scene_AnimObjectForce.json": "1a9e64ebdc8a1028c15f728a20fb140adf6988066618e311b03759a147d81e3b",
+    "config/GR8E69/scene_AnimObjectInitClass.json": "d2e66897a0aa0db3e47f335cb98618e3640145f9e38640b0b10c54d9d5ec356c",
+    "config/GR8E69/scene_AnimObjectOnCollision.json": "e436c00734604e8c4011993b1ba05409a3e3d5250cdfa2c9c67b3601f12cba33",
     "config/GR8E69/scene_AnimObjectReset.json": "24f119712f4cf705df5e73088deeb9da603831cff90ee86502a1f52befcf519b",
     "config/GR8E69/scene_AnimObjectState.json": "67c136faf4d568c4531a9fe93c4fb4b7d7777ebdfc4b406ba67ba83ac8c38dcb",
     "config/GR8E69/scene_AnimObjectUpdateAnimation.json": "01338cb32f1af2a8e0c977c007de0f59dbd516f4b4e7e1362d8d7bc6ea4a2419",
@@ -929,9 +934,12 @@
     "config/GR8E69/scene_HierObjectTree.json": "77b4802b94d5690af98dcd86296d3b70b4540ac61239e2a6c6a8167751a37f1c",
     "config/GR8E69/scene_HierObjectVolumes.json": "c2073f614cf7ce1112bdded5e400734c38616e6a07bbdbd6b1dcaf492808a15e",
     "config/GR8E69/scene_ObjCreateBSGO.json": "c7ee37d70f270f49dc4e8a63d060cc3fb1514f8c2e4d8846b6f8595d37eae4e0",
+    "config/GR8E69/scene_ObjCreateBSGODestroy.json": "cf428640a764fdaf6a4b88b86e877101424fc97056bc4290243e5b86da1318b5",
     "config/GR8E69/scene_ObjCreateCreators.json": "62aaad8101915bd94a0824ef2851eaf17de3745ce03c08d40dc8211feb075a86",
+    "config/GR8E69/scene_ObjCreateDelayDestroy.json": "0071baf4ea11f105d6a74f991296756d591402a0b46209db3c1d9a36974501d2",
     "config/GR8E69/scene_ObjCreateDumpContainer.json": "4971dc89672515ad11f2fbe87a29fdb2fd9d61efd98efb5c3557d5377e74249b",
     "config/GR8E69/scene_ObjCreateDumpObjects.json": "0bbe49aa4ff1722e0db41eb246d3bf221c8117ada2afe15c835d16c4d5092e93",
+    "config/GR8E69/scene_ObjCreateHierSwap.json": "2d60fb9f5d0ac0c7e3b45491558b717a819fb686840478a765ff7c9e0a5033e3",
     "config/GR8E69/scene_ObjCreatePoolA.json": "0b85d17eac6bacc2ef1efc5a628d9edb7dfc72aec63191973165f57b8d1e0456",
     "config/GR8E69/scene_ObjCreatePoolB.json": "00569bf051aaea6b0549efed6a945e9f83c3e80f3ecac73436c2ee4f4c68ec80",
     "config/GR8E69/scene_SoldierAI.json": "c85b0dbcc085ed3bcb2baee74d13b9bec64222b734018638d2e390df12c641a6",
@@ -955,6 +963,7 @@
     "config/GR8E69/scene_StaticObjectCommit.json": "6e6e445663a0d40cc640f4df2e17647be616b876da71f4469131d75aee7b19bc",
     "config/GR8E69/scene_StaticObjectCommitUpdate.json": "be7af0d31286b5ad337c660a08f1a63006828d33aa43ae2089b3ce8d4f238e20",
     "config/GR8E69/scene_StaticObjectHead.json": "87f74bca2deaa0b057ba2556d04761151b49b597c28bf84afd1c404f2a8bf10f",
+    "config/GR8E69/scene_StaticObjectInit.json": "7d70b52aeb5b03904740d33c60919683f90f5e732ec344edba77a3646c59c11a",
     "config/GR8E69/scene_StaticObjectMotionFlags.json": "116d77e8139aef5a900c688f0864eea3c07d32756546d5330ced0f33f0d86cac",
     "config/GR8E69/scene_StaticObjectPathBegin.json": "8df320cfed6c9d1cca190a1abc3ac42a07d2e5e3b4e2b5fbb7c5f68f728a8f33",
     "config/GR8E69/scene_StaticObjectPlayAnimation.json": "22d5b212b78e08ed55ebe676d8b885e04ad1faf2176ec6103367b1b76186caa8",
@@ -965,6 +974,7 @@
     "config/GR8E69/scene_StaticObjectTranslate.json": "edc1b97fbc14262b720f9c0a66ab3180207adeacb1d3307c914cf5088621bd9c",
     "config/GR8E69/scene_StaticObjectVisible.json": "68004f40a8c82d0b730a505e0032677d9c9ae6c92e016e8162be82ea2b705129",
     "config/GR8E69/scene_TankObjectAI.json": "5cbe92bc381b64b15c9afc20951370511a86fb748c83d64b315012203b5db908",
+    "config/GR8E69/scene_TankObjectAddWeapon.json": "bb278c4218bb37adbc25da4e528f3d0fffd7bc68ca0dd86579cb41b7b30c51c8",
     "config/GR8E69/scene_TankObjectBullet.json": "0366675801ec27a56671f66baf98c4a373765b3ea01a8ab8148dd18805957ba2",
     "config/GR8E69/scene_TankObjectDoodad.json": "3397bce3283dcd58ac46e1318fb84263064b00ef6b2bc64a0fec4676221693b5",
     "config/GR8E69/scene_TankObjectInit.json": "1fc2eb3883c1ecffb57a5e8b938d49e354580c2412e21ab57eebf339e920eb9c",
@@ -1993,7 +2003,7 @@
     "include/game/AITargeting.h": "b87c7e2a3093e5edc1c7e2e0f213dee40664e1cc0ea9f8d1a05d791a4406cc08",
     "include/game/AnimatedVolume.h": "527918576e64cf9296cbb9164eefaf3fc8b7a0f96894e342d2da9e847df4cf25",
     "include/game/BPD.h": "ec4a3aceb83f181db2c6adf8ac87137ede2cd6a0e643548159c73a827aadd19e",
-    "include/game/BSGameObject.h": "0251918a776754b0d6b3d30b69e61b0d0c8f919721dbd147dbecf710b180a45a",
+    "include/game/BSGameObject.h": "87aa21faf701f616933e4bd6e79116978f24a8f59c784951bcc637bc57c433e1",
     "include/game/Box.h": "454c951bb9a0bc8521b8d0b0922fbd37aa6832688261ca449b90689a52d0bdb4",
     "include/game/BoxSetters.h": "3222aec6a7cf037d413787bb224818c6e1e4c8d9101a95cda1e72399895f773b",
     "include/game/Bullet.h": "a9ca3b51c01133102103234cbf909922da88ae0c66478c34424362124e610ba7",
@@ -2082,7 +2092,7 @@
     "include/game/MPWeaponSet.h": "86bcb747bbed525dbf73844a22a156b74e8da90bd482fb541bc707e66cddae2c",
     "include/game/MathFun.h": "d92b6bc49451fbf1b8a55fa0859336cc7b6c7290c687133dda85c3e96d14f5da",
     "include/game/MemStack.h": "e96e48316cab4c90d5f0d26ae33db27bf681687e8f88544d20683150b4bb1606",
-    "include/game/ObjCreate.h": "2260f1dc11a6cdec0afdd3f9a770d9631858fe53240f91dd35ba8062bd56bb45",
+    "include/game/ObjCreate.h": "4fa8ad553d219869e05391ad21cb4ef71cea721a0735521e2bb33e173bce2621",
     "include/game/Objectives.h": "db878bfff675f1018f00a7ccd5979806d83dba6c9b309ba6304bc3447ee5e3eb",
     "include/game/ObserverTypes.h": "687dfc07deb4adc23a1d0247270d6ab04c34b758bd88846bf5e4b6ef33e7cc1f",
     "include/game/OffsetPtr.h": "06d2e4c320890063bd6b210c1ddda4b7cefc28e7aa9a4f276e76c128c0a68499",
@@ -2093,7 +2103,7 @@
     "include/game/PropertyData.h": "952ae5ac78dc17e43053a7b905a8e58499a1faa3c7d0721269329f639095b22a",
     "include/game/Rcmp.h": "9f0b3fe189c690b8ee358797a865f8e6172f48640e9fc998e332061823b08cb2",
     "include/game/SceneNode.h": "40a259452061449ceea65f58648fc29241bb00478413744071b736513d776c89",
-    "include/game/SceneObjects.h": "c10a4b497ca61eb6dcb0fdc30a5745706cbc255d2f2ec73876a41e0c6521a0b9",
+    "include/game/SceneObjects.h": "1cca851858d70c4994dd42fc9e8a5577dba8dddc7812895243bde8f3d5a76eb3",
     "include/game/Screen.h": "d8d90744c37d10401fcbc506ddf1269249efe5f516972005e96307a6322ed26e",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
     "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
@@ -2273,11 +2283,13 @@
     "include/target/string.h": "b73138d3d89c4db3ea017939b94e7a8ed7b59d4f090f7e4df068a1fe854d0297",
     "src/MathFun.cpp": "62fdc1c10ab2ff80ae713d40d1fa1efc22748836588999759447f0350ca8bc91",
     "src/ai/AIDoodad.cpp": "b1c2db4af88214d62076c115bafd3ac149b189a45dd90abb2b37bb5250211b12",
+    "src/ai/AIFilterAStarStubs.cpp": "7af8f9ec9b517960c208e4382dab77fcb88e8a594145284cf9d4061dd728ac7f",
     "src/ai/AIFilterAccess.cpp": "4f3b357c06ed7897c863b68d866e79ec0082d93b562058846b08d25ddd5cedb2",
     "src/ai/AIFilterHead.cpp": "3a9e84d66eb2a48fef0b10e1a1121aa157fb1fb1f885252e2b2ee22364de421f",
     "src/ai/AIFilterPlayer.cpp": "268af5a1c74b71c56da493f82103f3746c29f16b06478d3d37d8dc518df976a9",
     "src/ai/AIFilterPlayerVars.cpp": "bc94f76bb72a6f6dc726fa11d1db5655e145cf58e25acccc3e495e1a2fdf2f19",
     "src/ai/AIFilterTank.cpp": "977bd9bbf589e74e00e7b09aaf9f31164ded18b3ab9804b593ebe96cd4edae65",
+    "src/ai/AIFilterTankVars.cpp": "ea9f88db1e89f52a6d42a6e58a3fa6c687793f87e097ababb4d8a87bc8c8a695",
     "src/ai/AIObjectBehavior.cpp": "308761ec4374338d825b611d886a88ea9a77e2665d24637887d35c6b9c615eb0",
     "src/ai/AIObjectBehaviorInfo.cpp": "830084c7cfc461b96c4db0f388b44fe49c12d427208b97ddeb9a0f2575409a88",
     "src/ai/AIObjectBestBehavior.cpp": "54dff2ff4340b6f4043b58a4210fd443b3053c6908d68956712af333e6028e75",
@@ -2287,6 +2299,7 @@
     "src/ai/AIObjectLineOfSight.cpp": "a3288002a0c1f32a29b89c49c8b9e8214802b390adedbb63386756da83808922",
     "src/ai/AIObjectLocation.cpp": "e32f83adf9f139e5ac332d04123dbe3d106a024de6d8a673bb803234157ef309",
     "src/ai/AIObjectMatchList.cpp": "4818f7d4db879fb3e8f1001913656222ec9a8f69007b93ccb7a53e4af44634ed",
+    "src/ai/AIObjectParameters.cpp": "634e9a1052c9ac6c835ee69a38c832231c8f5049b1e5f9a6b7e75eebc0a8d6fd",
     "src/ai/AIObjectSightHelpers.cpp": "177b3f8c53f44c854b115fe5dbd2c980a84d1b07e27595d419dd299b1a0faa0d",
     "src/ai/AIObjectStatus.cpp": "ebb0fd4391239b296538754ec4c860773defaa6a6ae876477acd9202cd75acba",
     "src/ai/AIObjectStatusDistance.cpp": "b9187afe0ffa0679e8c11d91e6c1ebbdb79ba7afa7de68c6e21c4416aae8d9d5",
@@ -3257,6 +3270,8 @@
     "src/scene/AnimObjectDefaultsA.cpp": "70b9d9d3116259dc3d8ed15b628adde918916eeba1421b331843bfb44d33da04",
     "src/scene/AnimObjectDefaultsB.cpp": "aea246305b62cbb2050b679306d2880df0b9a6f7fa8cf8f1693a166adf498b3f",
     "src/scene/AnimObjectForce.cpp": "aa148e8e2121739e960e79d4fc7e24eaee557051cb2d4e103c9b6f67b868d94e",
+    "src/scene/AnimObjectInitClass.cpp": "c13f16e0a113c561c9c3c1bc1c4f2fee8ba5a34e801245e424ae918a4c806fe0",
+    "src/scene/AnimObjectOnCollision.cpp": "7db16fd80269c4343160751f34931740b2ee982d523c8d5965c779df646c1779",
     "src/scene/AnimObjectReset.cpp": "ae277dca9c8fc3123ae671ae8e92df23633c9edcd0316726eac43379e5785c84",
     "src/scene/AnimObjectState.cpp": "9b9246313e1b7874d5af7bb985e37b0e38a46163bfb74378c643a5e00a3a77d3",
     "src/scene/AnimObjectUpdateAnimation.cpp": "74e9d29ea6bdd74830e23651e92bf56ab95cca029ba2c7f516f4fc6919472000",
@@ -3287,10 +3302,13 @@
     "src/scene/MovingNodeLightDefaults.cpp": "c023fc0a918cdf1fb20be3077ba39ee5e6e49503b16bf15c528bb0557145ad28",
     "src/scene/MovingNodeReset.cpp": "c2b3fc485ff5c1b562488b665e62ed8ec41130b5ac54daf2974e3835f16e9244",
     "src/scene/MovingNodeTransformDefaults.cpp": "7e49f15e9c0263e1a12315dff548c7981996f00128da21a72fba8727db90bc15",
-    "src/scene/ObjCreateBSGO.cpp": "107824958a301626bb7928a503411c177204562418f4bbc2b49cf80209662dd7",
+    "src/scene/ObjCreateBSGO.cpp": "88040eab5f2a8d572f1fd0b9f6210ff73907a883649ad32188f7916d7b6b78ce",
+    "src/scene/ObjCreateBSGODestroy.cpp": "4225a4d274ead8baa9d7afe4f34fba51073c01666ff8637567c8abc5c41f753e",
     "src/scene/ObjCreateCreators.cpp": "7390ff85674640adda06ba52435568eeb05fbd0f2beae083541e1c5b88330c32",
+    "src/scene/ObjCreateDelayDestroy.cpp": "4c2c65f0109b558997f02c93ed8e4c31d601df2366c532ac05c3ac553e1832ac",
     "src/scene/ObjCreateDumpContainer.cpp": "4f61e18ee943350301763d0c3d16a4913570ab5bf9ff4afddc141fb5b30085fd",
     "src/scene/ObjCreateDumpObjects.cpp": "a88d6d783b15d26a441e3a4430826bb0f9c08764e36e98920c80cf271dad72ba",
+    "src/scene/ObjCreateHierSwap.cpp": "135c0258b04097f365cb2d4b6acfeacf96fa059bd713b1a9afd6d1631c1636e3",
     "src/scene/ObjCreatePoolA.cpp": "4bf0385ac5f296380009e8ea2c1da1bf99ba2453fe69333c50b36ef16bfe222b",
     "src/scene/ObjCreatePoolB.cpp": "2475fa2a3d92c31d5136d619a5ba52c0b29087914dce9f05f3d872a8dab9bead",
     "src/scene/SceneNodeAxisDefaults.cpp": "2e62b6f3b3302ff27d6350acc7376566f9bc0cb72383e1f54fbd95b185f6cbf6",
@@ -3321,6 +3339,7 @@
     "src/scene/StaticObjectCommit.cpp": "1b237129911759fe08e8d56a27b37e6c19b35b1e5e395e560ac32a29caf5baec",
     "src/scene/StaticObjectCommitUpdate.cpp": "a15c1d6d1cc2d9119978f7119facbc25cee138cab7ff00e7410c817014345abd",
     "src/scene/StaticObjectHead.cpp": "c0fb66a3a1ff6f5aa09d75a84266915a1350f99a57e71b0543bc3e7e034b0398",
+    "src/scene/StaticObjectInit.cpp": "068bf77349e0c994a3a638363d790e4b194eefc79c6c6a6ebe6a692f4ff7953c",
     "src/scene/StaticObjectMotionFlags.cpp": "f8eb79d96fb7f062de179fae0b006790a50c5ff4f81497c6f40767b0e67b5b9e",
     "src/scene/StaticObjectPathBegin.cpp": "2c1ce8cd25adf0442ac47928001ba3467510b389fcc790384a9650f1649e5fe5",
     "src/scene/StaticObjectPlayAnimation.cpp": "775ab2a935dd26c9c5630f9de852e447c0df21783b918e499ba187986445f48f",
@@ -3331,6 +3350,7 @@
     "src/scene/StaticObjectTranslate.cpp": "cec8e14a0b8f70eb35d3cb265b4c0867a956227b3e16af76ab6bec9ab17c8a54",
     "src/scene/StaticObjectVisible.cpp": "4b5d2486ae9be4d6f821c785a71dcca9f94cf3c66fa5d2d8198465d32fe33603",
     "src/scene/TankObjectAI.cpp": "1efd4e80de3c27efa70916a921a737a561baae8ae75c38153db5673975649ec9",
+    "src/scene/TankObjectAddWeapon.cpp": "713bc5013a47b5a56379e727b0bbf02c17530f76d0dbb41d79243a5253ba4b88",
     "src/scene/TankObjectBullet.cpp": "2b443e0f6e7344ca4fe602a49858dbf249194c9410788d285716f7994f695a19",
     "src/scene/TankObjectDoodad.cpp": "97144efefd9321e93b0c56c2dd0ddbacde39c7d59a792c83859a1b8baf3306b7",
     "src/scene/TankObjectInit.cpp": "2dc0dba3911b219ef87eef48af04b75a87fc48cc88736215159cad28ef448e3f",
@@ -40263,6 +40283,186 @@
       "discarded_functions": [],
       "object_sha256": "cd3fee64f58b2f5bc41a0172fea0f20d4aeb8121b6b76ad234495af9565796ff",
       "linked_sha256": "bf2fd8771f11c26f7c1e5da40aee230cf794195f36c4b9a317c5898418966647"
+    },
+    {
+      "id": "scene_ObjCreateBSGODestroy",
+      "category": "reconstructed_game",
+      "functions": 13,
+      "code_bytes": 1464,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "c44510d1d38fac5ea02dde87053299325103e694f61bbe24eb217734aa87affc",
+      "linked_sha256": "f9e0d8c96cdecc51882c350a42ea457b014c6e3cccbe5a14d963346ba8d6bd80"
+    },
+    {
+      "id": "scene_ObjCreateDelayDestroy",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 396,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "f1e694c00f784157453a85172a8ac11ba98ff45ba73544df8ee92295a2d6fa10",
+      "linked_sha256": "3459aeac690da3c7e1344d3cd6e4234321fbd867d6f3f5dd684f9656fa6f5864"
+    },
+    {
+      "id": "scene_ObjCreateHierSwap",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 192,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "2f17438a0ea24560e6e03201c24210b30a02f589e80b39767f175fa9c26ab773",
+      "linked_sha256": "617f3f7f71b7c25c78032821f9a3d5172fa2355fefe5d8662a9de15b8f877196"
+    },
+    {
+      "id": "ai_AIFilterAStarStubs",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 8,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "b6acb5736cf5e2fa72da96bc99073aa37dddcea39c81fd28ba496a513d4f99d9",
+      "linked_sha256": "c3ae8d640bd90a009f619bef91b1260ede492ec1b6babde1f2af1351efe2cc98"
+    },
+    {
+      "id": "ai_AIFilterTankVars",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 4,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "763d2073d63efdda2944d09eea2a2140326aefeee60b5c3c131e0ce350ca501e",
+      "linked_sha256": "d7690c3f5ef87fe0a0fa17a6cc1a650aae356c5b1d8cbb20c928cf6548eb615e"
+    },
+    {
+      "id": "scene_AnimObjectOnCollision",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 4,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "60049eaa6d1ebd06737332cdb3b09b50009b237c1348916276211179464083e3",
+      "linked_sha256": "b44ea715d8212824094e3a6bed63e3c95c8b144e334815044e43935687c494c7"
+    },
+    {
+      "id": "scene_AnimObjectInitClass",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 32,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "f3edeb5171ea94616e5506aa6a0c439baab64f36ac21679892b79b2d44baa586",
+      "linked_sha256": "0973a0e8429b982ce18f80c63f65bf5b5f5433a12b5ccd5d31c3d894fa72407b"
+    },
+    {
+      "id": "ai_AIObjectParameters",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 100,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "de8758574ce98a31de2af8a24a04ded4dd8ed50668c71c7ae4717fa83a2e75f4",
+      "linked_sha256": "8a4da584a7323449d266c2dd250399f78b39cbcf2246ca6013e331f1db044ba0"
+    },
+    {
+      "id": "scene_TankObjectAddWeapon",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 168,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e0acdbca3617826cabedb378580cc6a4f4bceae77bfe689ae3a172418bc4f7cd",
+      "linked_sha256": "a60c136d4c19efd5dcd08d3f80f61991db211e49a220cafe0e378617b52d3922"
+    },
+    {
+      "id": "scene_StaticObjectInit",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 144,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "52599fe2b9bf3f94f05ad52256d59147ddfeb6771098df931143a02b11c6b00b",
+      "linked_sha256": "71326d56411d13230b01ab36f7e25bc4525860e667d4cb66ae97a96652cc5c35"
     }
   ],
   "code_map": {
@@ -51171,13 +51371,6 @@
         "file_name": "anim_obj.cpp",
         "ranges": [
           {
-            "address": "0x800a24d0",
-            "size": 32,
-            "kind": "function",
-            "name": "InitClass__11CAnimObjectP7CScreen",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800a24f0",
             "size": 356,
             "kind": "function",
@@ -51304,13 +51497,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800a4ca8",
-            "size": 4,
-            "kind": "function",
-            "name": "OnCollision__11CAnimObjectRC10CCollision",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800a4ea8",
             "size": 400,
             "kind": "function",
@@ -51368,13 +51554,6 @@
             "size": 152,
             "kind": "function",
             "name": "_._13CStaticObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a6348",
-            "size": 144,
-            "kind": "function",
-            "name": "Init__13CStaticObject",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -52329,13 +52508,6 @@
             "size": 824,
             "kind": "function",
             "name": "Draw__11CTankObjectR12CDrawContext",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c3a60",
-            "size": 168,
-            "kind": "function",
-            "name": "AddWeapon__11CTankObjectii",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -53627,20 +53799,6 @@
         "file_name": "AIFilter.cpp",
         "ranges": [
           {
-            "address": "0x800d8720",
-            "size": 4,
-            "kind": "function",
-            "name": "EnableAllAStarPathNodes__15CAIFilterGlobal",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d8724",
-            "size": 4,
-            "kind": "function",
-            "name": "DisableCollidingAStarPathNodes__15CAIFilterGlobalPC7IVolume",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800d8728",
             "size": 380,
             "kind": "function",
@@ -53687,13 +53845,6 @@
             "size": 632,
             "kind": "function",
             "name": "SetOneTimeVars__19CAIFilterTankObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d95c8",
-            "size": 4,
-            "kind": "function",
-            "name": "UpdateManualUpdateVars__19CAIFilterTankObject",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -53760,20 +53911,6 @@
         "file_record": 158,
         "file_name": "AIObject.cpp",
         "ranges": [
-          {
-            "address": "0x800d9964",
-            "size": 60,
-            "kind": "function",
-            "name": "__19CAIObjectParameters",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d99a0",
-            "size": 40,
-            "kind": "function",
-            "name": "_._19CAIObjectParameters",
-            "evidence": "adjacent-compiler-markers"
-          },
           {
             "address": "0x800d99c8",
             "size": 504,
@@ -58451,20 +58588,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8012a1b8",
-            "size": 136,
-            "kind": "function",
-            "name": "SwapHierObject__FP11CHierObjectii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012a240",
-            "size": 56,
-            "kind": "function",
-            "name": "DestroySubHierObject__FP11CHierObjecti",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8012a278",
             "size": 2428,
             "kind": "function",
@@ -58483,118 +58606,6 @@
             "size": 436,
             "kind": "function",
             "name": "CreatePlayer__FP13TriggerObjecti",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012adc8",
-            "size": 44,
-            "kind": "function",
-            "name": "__nw__17BSGO_DestructableUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012adf4",
-            "size": 44,
-            "kind": "function",
-            "name": "__nw__12BSGO_SoldierUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012ae20",
-            "size": 44,
-            "kind": "function",
-            "name": "__nw__9BSGO_TankUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012ae4c",
-            "size": 44,
-            "kind": "function",
-            "name": "__nw__9BSGO_AnimUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012ae78",
-            "size": 44,
-            "kind": "function",
-            "name": "__dl__17BSGO_DestructablePv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012aea4",
-            "size": 44,
-            "kind": "function",
-            "name": "__dl__12BSGO_SoldierPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012aed0",
-            "size": 44,
-            "kind": "function",
-            "name": "__dl__9BSGO_TankPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012aefc",
-            "size": 44,
-            "kind": "function",
-            "name": "__dl__9BSGO_AnimPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012af28",
-            "size": 240,
-            "kind": "function",
-            "name": "Destroy__12BSGO_Soldier",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012b018",
-            "size": 224,
-            "kind": "function",
-            "name": "Destroy__9BSGO_Anim",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012b0f8",
-            "size": 208,
-            "kind": "function",
-            "name": "Destroy__9BSGO_Tank",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012b1c8",
-            "size": 372,
-            "kind": "function",
-            "name": "Destroy__17BSGO_Destructable",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012b33c",
-            "size": 68,
-            "kind": "function",
-            "name": "Destroy__11BSGO_Player",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012b3e8",
-            "size": 120,
-            "kind": "function",
-            "name": "DelayDestroyObject__FP10BSGO_Basic",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012b460",
-            "size": 124,
-            "kind": "function",
-            "name": "AddObjectToDestroyList__FP10BSGO_Basic",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012b4dc",
-            "size": 152,
-            "kind": "function",
-            "name": "DestroySingleQueueElement__Fv",
             "evidence": "adjacent-compiler-markers"
           },
           {

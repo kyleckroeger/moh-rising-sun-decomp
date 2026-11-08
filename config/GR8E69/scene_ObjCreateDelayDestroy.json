@@ -1,0 +1,59 @@
+{
+  "id": "scene_ObjCreateDelayDestroy",
+  "source": "src/scene/ObjCreateDelayDestroy.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8012b3e8",
+      "size": 396
+    }
+  ],
+  "functions": [
+    {
+      "name": "DelayDestroyObject__FP10BSGO_Basic",
+      "address": "0x8012b3e8",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "AddObjectToDestroyList__FP10BSGO_Basic",
+      "address": "0x8012b460",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "DestroySingleQueueElement__Fv",
+      "address": "0x8012b4dc",
+      "size": 152,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "BSSendMessage__FUsP8BSObjectP13TriggerObjectT1Pv": "0x800f76e8",
+    "g_delayDestroyHead": "0x8032cff8",
+    "g_pDelayDestroyList": "0x8032cfa8"
+  },
+  "local_externals": [
+    "g_delayDestroyHead",
+    "g_pDelayDestroyList"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "objcreate.cpp",
+  "original_file_index": 1242
+}

@@ -1,0 +1,40 @@
+{
+  "id": "scene_AnimObjectInitClass",
+  "source": "src/scene/AnimObjectInitClass.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800a24d0",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "InitClass__11CAnimObjectP7CScreen",
+      "address": "0x800a24d0",
+      "size": 32,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "InitClass__16CCharacterShadow": "0x800677a0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "anim_obj.cpp",
+  "original_file_index": 831
+}

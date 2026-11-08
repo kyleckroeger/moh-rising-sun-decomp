@@ -246,8 +246,11 @@ namespace Character { struct CollisionData; }
 }
 class CAnimatedVolume;
 enum EAnimCallback { AnimCallbackUnknown = 0 };
+class CScreen;
 class CAnimObject {
   public:
+    static void InitClass(CScreen *);
+    void OnCollision(const CCollision &);
     void Init();
     void CommitUpdate();
     void UpdateAnimation(float);
@@ -577,6 +580,7 @@ class CHierObject : public CStaticObject {
     void RegisterBulletDamage(int, int, int, float);
     float GetBulletDamageMultiplierByClass(int, int);
     CStaticObject *GetSubObject(int);
+    void SwapOut(CStaticMesh *, MotionData *);
     void ModifyMotionData(MotionData *);
     void Init(CHierObject *, int, int, int, CVector3 &);
     void OnCollision(const CCollision &);

@@ -1801,7 +1801,17 @@
     "player_look_enable.json",
     "light_class.json",
     "light_create.json",
-    "light_dtor.json"
+    "light_dtor.json",
+    "scene_ObjCreateBSGODestroy.json",
+    "scene_ObjCreateDelayDestroy.json",
+    "scene_ObjCreateHierSwap.json",
+    "ai_AIFilterAStarStubs.json",
+    "ai_AIFilterTankVars.json",
+    "scene_AnimObjectOnCollision.json",
+    "scene_AnimObjectInitClass.json",
+    "ai_AIObjectParameters.json",
+    "scene_TankObjectAddWeapon.json",
+    "scene_StaticObjectInit.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

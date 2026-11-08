@@ -5,10 +5,11 @@
 #define GAME_BS_GAME_OBJECT_H
 #pragma interface
 #include "ObserverTypes.h"
+class BSObject;
 class ISceneNode;
 class BSGO_Basic : public ISubject {
 public:
-    unsigned char unknown08[4];
+    BSObject *script; // +0x08
     BSGO_Basic *next;
     BSGO_Basic *previous;
     virtual ~BSGO_Basic();
