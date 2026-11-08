@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 965332,
+    "matching_code_bytes": 968040,
     "total_executable_code_bytes": 2492032,
-    "percent": 38.73674174328419,
+    "percent": 38.84540808464739,
     "categories": {
-      "reconstructed_game": 573116,
+      "reconstructed_game": 575824,
       "restored_library": 392216
     },
-    "matching_functions": 4775
+    "matching_functions": 4778
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -892,7 +892,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "76bdf7399afb86628f77afac64e5e05ddd25286048513f928d7a0a84b49d63e0",
+    "config/GR8E69/project.json": "d0c1e50c81f4529fd2e1194f25bb011cf24c6303f2698e3980cd90f25e4e4368",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -954,15 +954,18 @@
     "config/GR8E69/scene_HierObjectVolumes.json": "c2073f614cf7ce1112bdded5e400734c38616e6a07bbdbd6b1dcaf492808a15e",
     "config/GR8E69/scene_ObjCreateBSGO.json": "c7ee37d70f270f49dc4e8a63d060cc3fb1514f8c2e4d8846b6f8595d37eae4e0",
     "config/GR8E69/scene_ObjCreateBSGODestroy.json": "cf428640a764fdaf6a4b88b86e877101424fc97056bc4290243e5b86da1318b5",
+    "config/GR8E69/scene_ObjCreateBoxVolume.json": "a628169d8a0f48fc7fd92de7a61187428e9bd2064287c69ec7ce29b8194d705a",
     "config/GR8E69/scene_ObjCreateCreators.json": "62aaad8101915bd94a0824ef2851eaf17de3745ce03c08d40dc8211feb075a86",
     "config/GR8E69/scene_ObjCreateDelayDestroy.json": "0071baf4ea11f105d6a74f991296756d591402a0b46209db3c1d9a36974501d2",
     "config/GR8E69/scene_ObjCreateDumpContainer.json": "4971dc89672515ad11f2fbe87a29fdb2fd9d61efd98efb5c3557d5377e74249b",
+    "config/GR8E69/scene_ObjCreateDumpObject.json": "d9eb3925b179fd20d5f5040452a5a14a63da0af4fafa58b235be584c93e5feb9",
     "config/GR8E69/scene_ObjCreateDumpObjects.json": "0bbe49aa4ff1722e0db41eb246d3bf221c8117ada2afe15c835d16c4d5092e93",
     "config/GR8E69/scene_ObjCreateHierSwap.json": "2d60fb9f5d0ac0c7e3b45491558b717a819fb686840478a765ff7c9e0a5033e3",
     "config/GR8E69/scene_ObjCreateNonVisDestruct.json": "7ebf90054ff07b325ffce4ddf5cfd6f820e7261381ffbd32e1c617fa9f1e70d1",
     "config/GR8E69/scene_ObjCreatePoolA.json": "0b85d17eac6bacc2ef1efc5a628d9edb7dfc72aec63191973165f57b8d1e0456",
     "config/GR8E69/scene_ObjCreatePoolB.json": "00569bf051aaea6b0549efed6a945e9f83c3e80f3ecac73436c2ee4f4c68ec80",
     "config/GR8E69/scene_ObjCreatePowerup.json": "3090de12cd0c3ec4241b0c3c00fa1c34972bc796c8f7fe1bd1fb8dd3f295c8d4",
+    "config/GR8E69/scene_ObjCreateSubHier.json": "690942e993fc6a1995adee185f41ba5c9004da6a6f9f3c8b94c3040fa4cb4df2",
     "config/GR8E69/scene_ObjCreateSubHierAnim.json": "7058a1cb8cf282333d0af0d2c9fbe1c5a20f522e318f092539d88fb5ac5744c1",
     "config/GR8E69/scene_ObjCreateThrownDelete.json": "c82033e0b1c422136ba230d1675da05aeb0e585b79a96c952ecc707995899ec5",
     "config/GR8E69/scene_SoldierAI.json": "c85b0dbcc085ed3bcb2baee74d13b9bec64222b734018638d2e390df12c641a6",
@@ -2057,9 +2060,9 @@
     "include/game/AITargeting.h": "73feafc918493ae7bc10e8f240e07ae56fa7bd62695845a0cea87d74b64b6c67",
     "include/game/AnimatedVolume.h": "527918576e64cf9296cbb9164eefaf3fc8b7a0f96894e342d2da9e847df4cf25",
     "include/game/BPD.h": "ec4a3aceb83f181db2c6adf8ac87137ede2cd6a0e643548159c73a827aadd19e",
-    "include/game/BSGameObject.h": "87aa21faf701f616933e4bd6e79116978f24a8f59c784951bcc637bc57c433e1",
-    "include/game/Box.h": "454c951bb9a0bc8521b8d0b0922fbd37aa6832688261ca449b90689a52d0bdb4",
-    "include/game/BoxSetters.h": "3222aec6a7cf037d413787bb224818c6e1e4c8d9101a95cda1e72399895f773b",
+    "include/game/BSGameObject.h": "51c5d3ea0adf00a425207d089ccc822373e80cc78b511d39bc7b5756ce9f884d",
+    "include/game/Box.h": "7c189d79a5e3f0d1404deb702ae90a8ffea1973ff6e2b9335ad177afa8dcced1",
+    "include/game/BoxSetters.h": "26767b5ffc1d3ea577d5fab9dcbdcdb9fc00b15151d33e340145a677fb958622",
     "include/game/Bullet.h": "a9ca3b51c01133102103234cbf909922da88ae0c66478c34424362124e610ba7",
     "include/game/CDBGeom.h": "52cc6684854d7d274db12c9e545f56e9add679d6133fc2f612c5d9c3f822d29b",
     "include/game/CDBObject.h": "10f30445fe2ce6b0b45aca93eea3a0a78acd8bca104f61fc9b74fea0025e8f11",
@@ -2147,7 +2150,7 @@
     "include/game/MPWeaponSet.h": "86bcb747bbed525dbf73844a22a156b74e8da90bd482fb541bc707e66cddae2c",
     "include/game/MathFun.h": "d92b6bc49451fbf1b8a55fa0859336cc7b6c7290c687133dda85c3e96d14f5da",
     "include/game/MemStack.h": "e96e48316cab4c90d5f0d26ae33db27bf681687e8f88544d20683150b4bb1606",
-    "include/game/ObjCreate.h": "4fa8ad553d219869e05391ad21cb4ef71cea721a0735521e2bb33e173bce2621",
+    "include/game/ObjCreate.h": "4120fef358b86de9e393703ea5bcb3364230b876f32434ceb371910e141c3f7a",
     "include/game/Objectives.h": "db878bfff675f1018f00a7ccd5979806d83dba6c9b309ba6304bc3447ee5e3eb",
     "include/game/ObserverTypes.h": "687dfc07deb4adc23a1d0247270d6ab04c34b758bd88846bf5e4b6ef33e7cc1f",
     "include/game/OffsetPtr.h": "06d2e4c320890063bd6b210c1ddda4b7cefc28e7aa9a4f276e76c128c0a68499",
@@ -3380,15 +3383,18 @@
     "src/scene/MovingNodeTransformDefaults.cpp": "7e49f15e9c0263e1a12315dff548c7981996f00128da21a72fba8727db90bc15",
     "src/scene/ObjCreateBSGO.cpp": "88040eab5f2a8d572f1fd0b9f6210ff73907a883649ad32188f7916d7b6b78ce",
     "src/scene/ObjCreateBSGODestroy.cpp": "4225a4d274ead8baa9d7afe4f34fba51073c01666ff8637567c8abc5c41f753e",
+    "src/scene/ObjCreateBoxVolume.cpp": "1fc7d37f463ae683bc22001d134f5153c37e787d21f3f7bf87133fd7c4af1125",
     "src/scene/ObjCreateCreators.cpp": "7390ff85674640adda06ba52435568eeb05fbd0f2beae083541e1c5b88330c32",
     "src/scene/ObjCreateDelayDestroy.cpp": "4c2c65f0109b558997f02c93ed8e4c31d601df2366c532ac05c3ac553e1832ac",
     "src/scene/ObjCreateDumpContainer.cpp": "4f61e18ee943350301763d0c3d16a4913570ab5bf9ff4afddc141fb5b30085fd",
+    "src/scene/ObjCreateDumpObject.cpp": "f304afb72af5e79f09fd0404dda364b243cc5dbd1019bf33700ea060812ee3a4",
     "src/scene/ObjCreateDumpObjects.cpp": "a88d6d783b15d26a441e3a4430826bb0f9c08764e36e98920c80cf271dad72ba",
     "src/scene/ObjCreateHierSwap.cpp": "135c0258b04097f365cb2d4b6acfeacf96fa059bd713b1a9afd6d1631c1636e3",
     "src/scene/ObjCreateNonVisDestruct.cpp": "584ac3e95aa606a6c5b10fd18a72be01ffa98173acf3db456f4934ca780aa818",
     "src/scene/ObjCreatePoolA.cpp": "4bf0385ac5f296380009e8ea2c1da1bf99ba2453fe69333c50b36ef16bfe222b",
     "src/scene/ObjCreatePoolB.cpp": "2475fa2a3d92c31d5136d619a5ba52c0b29087914dce9f05f3d872a8dab9bead",
     "src/scene/ObjCreatePowerup.cpp": "6334391a79f4a019f7a0120cb741dd9e7c0bf37c2fd2241517cee1f01c663a94",
+    "src/scene/ObjCreateSubHier.cpp": "5c7724eb186d361c3d427a50c119cb4c74d7ebf3bbcb10b566f0e52126c59881",
     "src/scene/ObjCreateSubHierAnim.cpp": "a51a3f72286b25589865821f6edf9ecd6b48e8d207edd564119798e8bc1f5094",
     "src/scene/ObjCreateThrownDelete.cpp": "c3bc5990878ec599e3a9b3f88fffcfe8c9bc0b2a590a2565470019fabc8fcff8",
     "src/scene/SceneNodeAxisDefaults.cpp": "2e62b6f3b3302ff27d6350acc7376566f9bc0cb72383e1f54fbd95b185f6cbf6",
@@ -41568,6 +41574,60 @@
       "discarded_functions": [],
       "object_sha256": "3f2d42eabd9066bee50a9884d1c3b38c00560b17ebf72fbd15bb807ba68f845b",
       "linked_sha256": "a1186c83c4f88028f19648f1c20e087a04212fe36dc27611aaced6a4cc34d168"
+    },
+    {
+      "id": "scene_ObjCreateDumpObject",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 1072,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "bb6f7e40cfa99a1df7390cd4198d274c09d0d9ef102989ea9ff874c102ca7d60",
+      "linked_sha256": "574b375be2d0a88088ee3d85e296ce85b2df16596c040edbf2b8c7a589287a69"
+    },
+    {
+      "id": "scene_ObjCreateSubHier",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 1548,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "2006e771ab8a19716b1ee7ca68b93a858a9c2eabbf1bc8483a812a88b1766f58",
+      "linked_sha256": "53b4ba4cc14364b9fb10d4a2390016d2c732951a48b529635339c4233b665952"
+    },
+    {
+      "id": "scene_ObjCreateBoxVolume",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 88,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "3c890acb22e1f41bf00aff1e1b2b03c2211c8a005b16efd5dc7745a371600665",
+      "linked_sha256": "1494a965a07f75a8e6b85963e2d0f29474bc30882353afaceb9b4d701edbb4cf"
     }
   ],
   "code_map": {
@@ -59497,13 +59557,6 @@
         "file_name": "objcreate.cpp",
         "ranges": [
           {
-            "address": "0x80127638",
-            "size": 1072,
-            "kind": "function",
-            "name": "CreateDumpObject__FRC7CMatrixibP8BSObjecti12EPowerupType",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80127d28",
             "size": 228,
             "kind": "function",
@@ -59546,13 +59599,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80129a9c",
-            "size": 1548,
-            "kind": "function",
-            "name": "CreateSubHierObject__FP11CHierObjectiiUiii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8012a278",
             "size": 2428,
             "kind": "function",
@@ -59564,13 +59610,6 @@
             "size": 436,
             "kind": "function",
             "name": "CreatePlayer__FP13TriggerObjecti",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012b5cc",
-            "size": 88,
-            "kind": "function",
-            "name": "AllocateBoxVolume__Fv",
             "evidence": "adjacent-compiler-markers"
           },
           {

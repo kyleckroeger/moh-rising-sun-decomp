@@ -12,4 +12,16 @@ inline void CVolBox::SetWidth(float w) { halfSize[0] = w * 0.5f; }
 inline void CVolBox::SetDepth(float d) { halfSize[1] = d * 0.5f; }
 inline void CVolBox::SetHeight(float h) { halfSize[2] = h; }
 inline void CVolBox::SetCenter(const CVector3 &c) { center = c; }
+inline CVolBox &CVolBox::operator=(const CVolBox &other) {
+    if (&other != this) {
+        halfSize[0] = other.halfSize[0];
+        halfSize[1] = other.halfSize[1];
+        halfSize[2] = other.halfSize[2];
+        axisX = other.axisX;
+        axisY = other.axisY;
+        axisZ = other.axisZ;
+        center = other.center;
+    }
+    return *this;
+}
 #endif

@@ -72,6 +72,12 @@ views and does not assert the original class layouts or inheritance order.
 
 ## Object creation
 
+`CreateDumpObject` builds a stack `BSGO_Dummy` (`BSGO_Basic` plus a `WeakPtr<ISceneNode, 8>` and four
+proximity words) so `ForceUpdateProximityTriggerStatus` can see the new object. `BSGO_Basic`'s destructor
+is implicit: the weak copy has no table store and callers reduce it to `ISubject`'s. The string "Team"
+at `0x802a705c` is first used by `CreateGerman` and shared by `CreateCollisionVolume`,
+`CreateSpecialThrownObject`, `CreateRootHierObject`, `CreateDestructable` and `CreatePlayer`, so those
+functions can only verify inside one unit with `CreateGerman`.
 `objcreate.cpp` keeps its pools and queues in file statics, declared in `ObjCreate.h`. The dump
 container holds a fixed array of 56-byte `DumpObject` entries linked oldest first. Its capacity comes
 from a level resource, with 25 as the fallback, and `DeleteOldest` skips entries marked to keep.
@@ -103,7 +109,6 @@ tree and a later reader should expect them to be close rather than solved.
 - `CAnimObject::BeginUpdate`, `DetectGround` and `Yaw`: a local's address stays in a saved
   register where the original rematerializes it.
 - `CHierObject::GetWorldLinearVelocity` (19): register choice.
-- `AllocateBoxVolume`: needs `CVolBox` data members that `Box.h` does not declare.
 - `CSoldierObject::GetBulletEmitterMatrix`: the original computes attach-slot addresses as
   `(this + i * 112) + offset`. `CleanUp` and `DetachObject` reproduce that with a pointer offset by
   the slot and `attachSlots[0]`, a source form that is inferred; this function still differs.

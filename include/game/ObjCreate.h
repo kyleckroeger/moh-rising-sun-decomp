@@ -3,6 +3,7 @@
 // State of the original objcreate.cpp. Global, class and struct names come from the symbol table;
 // member names, the two queue entry structs and this header's name are descriptive.
 #include "BSGameObject.h"
+#include "../game-containers/TargetTypes.h"
 class BSObject;
 class CStaticObject;
 class ISceneNode;
@@ -97,6 +98,14 @@ struct BSGOBinding {
     ISceneNode *sceneNode; // +0x14
 };
 
+// A stand-in game object that lets the proximity trigger code see a scene node with no script.
+class BSGO_Dummy : public BSGO_Basic {
+  public:
+    virtual ISceneNode *GetSceneNode();
+    virtual void *GetProximityData();
+    WeakPtr<ISceneNode, 8> sceneNode; // +0x14
+    int proximityData[4];             // +0x2c
+};
 class BSGO_Destructable : public BSGO_Basic {
   public:
     virtual ~BSGO_Destructable();

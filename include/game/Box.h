@@ -28,6 +28,7 @@ class CVolBox : public IVolume {
     virtual EClsnState TestCollision(const CCSGVolume &, CCollision &, bool) const;
     // The half sizes and the frame, as CCDBVolBox's constructor fills them; names descriptive.
     CVolBox() {}
+    CVolBox &operator=(const CVolBox &); // Body in BoxSetters.h.
     // Bodies in BoxSetters.h.
     void SetBasis(const CVector3 &x, const CVector3 &y, const CVector3 &z);
     void SetWidth(float w);

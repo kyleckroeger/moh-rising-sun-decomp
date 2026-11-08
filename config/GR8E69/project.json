@@ -1865,7 +1865,10 @@
     "mesh_frame.json",
     "debug_msg.json",
     "idebug_msg.json",
-    "scene_ObjCreateNonVisDestruct.json"
+    "scene_ObjCreateNonVisDestruct.json",
+    "scene_ObjCreateDumpObject.json",
+    "scene_ObjCreateSubHier.json",
+    "scene_ObjCreateBoxVolume.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

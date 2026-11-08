@@ -12,7 +12,9 @@ public:
     BSObject *script; // +0x08
     BSGO_Basic *next;
     BSGO_Basic *previous;
-    virtual ~BSGO_Basic();
+    // The destructor is implicit: its body is a weak copy with no table store, and callers
+    // inline it down to ISubject's.
+    BSGO_Basic() : script(0), next(0), previous(0) {}
     void Destroy();
     // Pointer ABI placeholders: concrete script/proximity data types are unknown.
     virtual void *GetScriptData();
