@@ -3,6 +3,7 @@
 #define MOH_SCENENODE_H
 #pragma interface
 #include "ObserverTypes.h"
+#include "DwiContainers.h"
 
 class CBullet;
 class CAIDoodad;
@@ -38,6 +39,13 @@ enum EClsnId { ClsnIdUnknown = 0 };
 class ISceneNode : public IObserver {
   public:
     enum EVolumeType { VolumeTypeUnknown = 0 };
+    // One end of a node's extent along a sweep axis.
+    struct SExtent {
+        ISceneNode *node;
+        int isBegin;
+        float position;
+        int unknown0c;
+    };
     virtual ~ISceneNode();
     virtual void BeginUpdate(float);
     virtual void UpdateAI(float);
@@ -168,7 +176,50 @@ class CScene {
     int projectorCount;            // +0x54
     int locked; // +0x58: changes queue while set; see Lock and Unlock.
     int playerCount; // +0x5c
-    unsigned char unknown60[0x140 - 0x60];
+    // +0x60, +0x78, +0x90: vectors emptied by Reset; their element types are not known.
+    dwi::fast_vec<void *> fast60, fast78, fast90;
+    // +0xa8, +0xd4: the two sweep lists.
+    dwi::list<ISceneNode::SExtent> extents0, extents1;
+    // A node pair met by a sweep, kept in address order. Only the fields used here are known.
+    union UNodePair {
+        struct {
+            ISceneNode *first;
+            ISceneNode *second;
+            signed char order;
+        } nodes;
+        unsigned char data[16];
+    };
+    // +0x100, +0x118: the pairs found by the two sweeps.
+    dwi::fast_vec<UNodePair> pairs0, pairs1;
+    // +0x130: the live collisions. The iterator clears its pointer on destruction; the inline
+    // operations that need the complete CCollision are in SceneCollisions.h.
+    struct SCollisionIter {
+        SCollisionIter(CCollision *q) : p(q) {}
+        SCollisionIter(const SCollisionIter &o) : p(o.p) {}
+        ~SCollisionIter() { p = 0; }
+        bool operator!=(const SCollisionIter &o) const { return p != o.p; }
+        SCollisionIter &operator++();
+        CCollision *p;
+    };
+    struct SCollisionConstIter {
+        SCollisionConstIter(const SCollisionIter &o) : p(o.p) {}
+        SCollisionConstIter(const SCollisionConstIter &o) : p(o.p) {}
+        ~SCollisionConstIter() { p = 0; }
+        bool operator!=(const SCollisionIter &o) const { return p != o.p; }
+        SCollisionConstIter &operator++();
+        const CCollision *p;
+    };
+    struct SCollisionVec {
+        SCollisionIter Begin() { return SCollisionIter(data); }
+        SCollisionIter End();
+        void Clear();
+        void PushBack(const CCollision &);
+        int Size() const { return count; }
+        int count;
+        int capacity;
+        CCollision *data;
+        int owned;
+    } collisions;
     // An excluded node pair, kept in address order, and a value.
     struct SExclusionEntry {
         SExclusionEntry(const ISceneNode *, const ISceneNode *, float);
@@ -190,6 +241,7 @@ class CScene {
         int count;
         SExclusionEntry *Begin() { return items; }
         SExclusionEntry *End() { return items + count; }
+        void Clear() { count = 0; }
         void Erase(SExclusionEntry *entry) {
             SExclusionEntry *end = End();
             SExclusionEntry *to = entry;
@@ -211,6 +263,7 @@ class CScene {
         int capacity;
         int count;
         SModCommand *End() { return items + count; }
+        void Clear() { count = 0; }
     } queue;
     void AddPlayer(CPlayerObject *);
     void SetWorld(CWorldObject *);
@@ -224,10 +277,15 @@ class CScene {
     void RemoveNode_now(SModCommand &);
     void AddNodeExtents(ISceneNode &);
     void RemoveNodeExtents(ISceneNode &);
+    void Update(float);
+    void SweepAllExtents();
+    int DetectSlowCollisions(float);
+    int DetectFastCollisions(float);
     // Node list iterator returned by value.
     class NodeIterator {
       public:
         NodeIterator(ISceneNode *n) : node(n) {}
+        NodeIterator(const NodeIterator &other) : node(other.node) {}
         ISceneNode *node;
     };
     NodeIterator GetNodesBegin() const;

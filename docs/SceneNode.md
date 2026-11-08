@@ -152,3 +152,16 @@ the list tail even when it inserts after another node. `AddNode_now` and
 
 The slot map applies to every class derived from `IMovingSceneNode`; each derived
 table should be checked against it rather than assumed.
+
+## CScene sweep containers
+
+`CScene` keeps two sweep lists at `+0xa8` and `+0xd4` (`dwi::list<ISceneNode::SExtent>`, named by
+`SweepExtents`' symbol) and two node-pair vectors at `+0x100` and `+0x118`
+(`dwi::fast_vec<CScene::UNodePair>`). `AddNodeExtents` enters a begin and an end extent for a node on
+each list, keeping four links at node `+0x20`; `RemoveNodeExtents` finds each by node and begin flag
+and returns the list node to the free list. `Reset` removes every node and empties all containers,
+destroying the collisions in the vector at `+0x130`. The vectors at `+0x60`, `+0x78` and `+0x90` are
+only emptied in the code reconstructed so far, so their element types are unknown. The collision
+iterators' user copy constructors and clearing destructors, and the field names, are inferred from the
+code shape. `DwiContainers.h` holds the containers without placement new, so that `SceneNode.h` can use
+them in units that also include the `new` header.
