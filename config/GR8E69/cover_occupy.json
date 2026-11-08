@@ -1,0 +1,50 @@
+{
+  "id": "cover_occupy",
+  "source": "src/ai/cover_occupy.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e1e08",
+      "size": 132
+    }
+  ],
+  "functions": [
+    {
+      "name": "FlagAsOccupied__11CCoverPoint",
+      "address": "0x800e1e08",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "FlagAsUnoccupied__11CCoverPoint",
+      "address": "0x800e1e54",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "SetOutOfArea__11CCoverPointb",
+      "address": "0x800e1e64",
+      "size": 40,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "IsOccupied__C11CCoverPoint": "0x800e1b1c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

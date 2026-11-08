@@ -1772,7 +1772,18 @@
     "sound_supxaf.json",
     "sound_supxalf.json",
     "sound_supxapf.json",
-    "sprite_ctor.json"
+    "sprite_ctor.json",
+    "camera_begin.json",
+    "camera_commit.json",
+    "camera_visible.json",
+    "usermessages_lifetime.json",
+    "usermessages_access.json",
+    "gchw_vd_setters.json",
+    "gchw_vd_draw.json",
+    "cover_flags.json",
+    "cover_query.json",
+    "cover_occupy.json",
+    "cover_invalidate.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

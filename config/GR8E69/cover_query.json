@@ -1,0 +1,48 @@
+{
+  "id": "cover_query",
+  "source": "src/ai/cover_query.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e1b1c",
+      "size": 44
+    }
+  ],
+  "functions": [
+    {
+      "name": "IsOccupied__C11CCoverPoint",
+      "address": "0x800e1b1c",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "IsValid__C11CCoverPoint",
+      "address": "0x800e1b28",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "IsAvailable__C11CCoverPoint",
+      "address": "0x800e1b38",
+      "size": 16,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

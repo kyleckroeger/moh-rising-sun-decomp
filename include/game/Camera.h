@@ -10,7 +10,13 @@
 class CCamera : public IMovingSceneNode {
 public:
     // The observed IObserver prefix occupies the first 0x18 bytes.
-    unsigned char unknown_18[0x38 - 0x18];
+    unsigned char unknown_18[0x20 - 0x18];
+    // Objects whose +8 float receives a position component in AttemptUpdate.
+    struct CFollower {
+        unsigned char unknown_0[8];
+        float value;
+    } *followers[4];
+    unsigned char unknown_30[0x38 - 0x30];
     float nearClip, farClip;
     float projectionX, projectionY;
     unsigned char unknown_48[8];
@@ -25,6 +31,17 @@ public:
     int field_160; // Both projection setters write 1; broader meaning unproven.
     unsigned char unknown164[12];
     CFrustum frustum;
+    static void InitClass();
+    static void ShutdownClass();
+    void AttemptUpdate(float);
+    void BeginUpdate(float);
+    void Pitch(float);
+    void Roll(float);
+    void Yaw(float);
+    void CommitUpdate();
+    void Draw(CDrawContext &);
+    unsigned int IsDrawEnabled() const;
+    int IsVisible(CDrawContext &) const;
     void GetTMLocalToWorld(CMatrix &) const;
     void GetPosition(CVector3 &) const;
     void GetRightward(CVector3 &) const;

@@ -1,0 +1,47 @@
+{
+  "id": "usermessages_lifetime",
+  "source": "src/frontend/usermessages_lifetime.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8017b8e8",
+      "size": 96
+    }
+  ],
+  "functions": [
+    {
+      "name": "__17CUserMessageTable",
+      "address": "0x8017b8e8",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "_._17CUserMessageTable",
+      "address": "0x8017b908",
+      "size": 64,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Unload__17CUserMessageTable": "0x8017bb64",
+    "__builtin_delete": "0x801a8990"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "pumhandler.cpp",
+  "original_file_index": 1539
+}

@@ -1,0 +1,70 @@
+{
+  "id": "usermessages_access",
+  "source": "src/frontend/usermessages_access.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8017bb64",
+      "size": 400
+    }
+  ],
+  "functions": [
+    {
+      "name": "Unload__17CUserMessageTable",
+      "address": "0x8017bb64",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "Loaded__C17CUserMessageTable",
+      "address": "0x8017bbdc",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "GetString__17CUserMessageTablei",
+      "address": "0x8017bc10",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "GetIndexFromCRC__17CUserMessageTableUi",
+      "address": "0x8017bc3c",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "GetStringFromCRC__17CUserMessageTableUi",
+      "address": "0x8017bc8c",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "GetStringLength__17CUserMessageTablei",
+      "address": "0x8017bccc",
+      "size": 40,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__builtin_vec_delete": "0x801a89b0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "pumhandler.cpp",
+  "original_file_index": 1539
+}

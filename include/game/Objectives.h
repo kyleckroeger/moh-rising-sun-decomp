@@ -2,11 +2,29 @@
 #ifndef GAME_OBJECTIVES_H
 #define GAME_OBJECTIVES_H
 
-// Method-only view of the user message table.
+// The user message table: an array of string records, a parallel CRC table and a count.
+// Member names follow what the methods do with them.
+struct CUserMessageRecord {
+    const char *text;
+    unsigned short length;
+};
+
 class CUserMessageTable {
   public:
+    CUserMessageTable();
+    ~CUserMessageTable();
+    void Unload();
+    int Loaded() const;
     const char *GetString(int);
+    int GetIndexFromCRC(unsigned int);
+    const char *GetStringFromCRC(unsigned int);
     int GetStringLength(int);
+
+    CUserMessageRecord *records;
+    void *field04;
+    void *field08;
+    unsigned int *crcTable;
+    int count;
 };
 
 // Scoped view: the message table at +1632 is all the objectives code reads.
