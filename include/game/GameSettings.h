@@ -10,6 +10,14 @@ struct ProgressRecord {
     unsigned char unknown_c[0xc598 - 0xc];
 };
 
+// The per-player multiplayer entry; 20 bytes, the class tag is from InitMultiplayer's
+// symbol. restartIndex (first byte, RestartPlayer's argument) is a descriptive name.
+struct SMPPlayerData {
+    unsigned char restartIndex;
+    unsigned char unknown_1[15];
+};
+struct SMPPlayerSlot { int unknown_0; SMPPlayerData data; };
+
 // Observed fields of the profile the settings object points to.
 struct GameProfile {
     unsigned char unknown_0[0xbf54];
@@ -17,7 +25,9 @@ struct GameProfile {
     unsigned char unknown_3101c[0x31664 - 0x3101c];
     unsigned char mission;              // +0x31664
     unsigned char level;                // +0x31665
-    unsigned char unknown_31666[0x321e0 - 0x31666];
+    unsigned char unknown_31666[0x32020 - 0x31666];
+    SMPPlayerSlot players[4];           // +0x32024; indexed by the player's slot (count inferred).
+    unsigned char unknown_32070[0x321e0 - 0x32070];
     signed char currentRecord;          // +0x321e0
 };
 

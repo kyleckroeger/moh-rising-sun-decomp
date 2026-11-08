@@ -1,0 +1,58 @@
+{
+  "id": "player_respawn",
+  "source": "src/player/PlayerRespawn.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800abef8",
+      "size": 1236
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029ef98",
+      "size": 48
+    }
+  ],
+  "functions": [
+    {
+      "name": "Respawn__13CPlayerObject",
+      "address": "0x800abef8",
+      "size": 1236,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "CycleWeapon__13CPlayerObjectii": "0x800b3f94",
+    "InitMultiplayer__13CPlayerObjectP13SMPPlayerDatab": "0x800ac3cc",
+    "RESPAWN_FIRE_DELAY": "0x802c25d0",
+    "RestartPlayer__FP13CPlayerObjectbUc": "0x801217c8",
+    "SetBlockVibrations__13CInputManagerbUc": "0x800d7108",
+    "SetHealthMax__13CPlayerObject": "0x800b8f9c",
+    "Set__6CLine3RC8CVector3T1": "0x80281690",
+    "g_GameSettings": "0x802f80c8",
+    "g_bMPEndLevel": "0x803e7570",
+    "g_inputMgr": "0x803077c4"
+  },
+  "local_externals": [
+    "RESPAWN_FIRE_DELAY"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}

@@ -53,3 +53,12 @@ supplied the shape. The timer starts at 180 and counts down at +0xdc0. The multi
 branch of `UpdateDeathSequence` reads a default-constructed matrix that nothing fills in
 this build: Frontline's `GetLookMatrix` call on the killer is gone from Rising Sun, so the
 original reads uninitialized stack here, and the source reproduces that as it stands.
+
+## Respawn
+
+`Respawn` restores the capsule and the box at `+0xe0` (`boxStorage`, kept as raw storage),
+clears the per-life state, reinitializes from the player's `SMPPlayerData` and restarts the
+player. `SMPPlayerData` is named by `InitMultiplayer`'s symbol; its 20-byte slot spacing is
+observed and `restartIndex` is descriptive. `SetBasis`, `SetWidth`, `SetDepth`, `SetHeight`
+and `SetCenter` on `CVolBox` are inferred inlines. A previous weapon no longer current after
+reinitialization is cycled back to by its CRC; `fireDelay` comes from `RESPAWN_FIRE_DELAY`.
