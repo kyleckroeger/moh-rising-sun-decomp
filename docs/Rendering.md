@@ -296,3 +296,12 @@ alpha at `0.35035` per unit of elapsed time, and finishing is signalled once alp
 
 `DisplayLandmarkStamp` and `DisplayTimeStamp` remain original. They build a `SoundAliasEvent` on the
 stack with inlined construction and destruction, which the shared `SoundEvents.h` does not provide.
+
+## PopUpMessageHandler
+
+The handler holds `PopUpMessage popups[5][4]` (four records for each of five viewports), the fonts
+and sprites at `+0x644` to `+0x650`, the prompt message table at `+0x660` and the subtitle table at
+`+0x674`. `GetOldest` picks by each viewport's scroll direction and resets the record it picks.
+`GetNewest` has a nested loop for viewports 1 and 2 that shares one counter.
+The constructor, destructor, the loop, `AddPopUpMessage`, the subtitle functions and
+`CUserMessageTable::Load` remain original.

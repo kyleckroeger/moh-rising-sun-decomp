@@ -1880,7 +1880,12 @@
     "sound_pathx_load.json",
     "sound_pathx_create.json",
     "sound_pathx_service.json",
-    "sound_pathx_play.json"
+    "sound_pathx_play.json",
+    "pum_a.json",
+    "pum_b.json",
+    "pum_c.json",
+    "pum_d.json",
+    "pum_e.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

@@ -14,6 +14,7 @@ class CUserMessageTable {
     CUserMessageTable();
     ~CUserMessageTable();
     void Unload();
+    void Load(char *, char *, char *);
     int Loaded() const;
     const char *GetString(int);
     int GetIndexFromCRC(unsigned int);
@@ -27,11 +28,31 @@ class CUserMessageTable {
     int count;
 };
 
-// Scoped view: the message table at +1632 is all the objectives code reads.
+#include "PopUpMessage.h"
+class CFont;
+class CSprite;
+
+// The pop-up message handler: viewports of four message records, the fonts and sprites its loop
+// draws with, and two message tables. Names of the members other than the tables are inferred.
 class PopUpMessageHandler {
-  public:
-    unsigned char unknown_0[1632];
-    CUserMessageTable messages;
+public:
+    void LoadSubtitles(char *, char *, char *);
+    void ShutdownPopUpMessageHandler();
+    unsigned short GetOldest(unsigned char viewport);
+    short GetNewest(unsigned char viewport);
+    short CheckForEmptySlot(unsigned char viewport);
+    void UpdateScroll(unsigned char viewport, short id);
+    void Clear();
+
+    PopUpMessage popups[5][4];
+    unsigned char unknown640[4];
+    CFont *font644;                  // +0x644
+    CFont *font648;                  // +0x648
+    CSprite *sprite64c;              // +0x64c
+    CSprite *sprite650;              // +0x650
+    unsigned char unknown654[0x660 - 0x654];
+    CUserMessageTable messages;      // +0x660
+    CUserMessageTable subtitles;     // +0x674
 };
 extern PopUpMessageHandler *g_pPopUpMessageHandler;
 void appendMessageToPrompt(const char *, int);
