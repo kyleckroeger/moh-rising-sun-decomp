@@ -1887,7 +1887,11 @@
     "pum_d.json",
     "pum_e.json",
     "moh_loader.json",
-    "moh_boot.json"
+    "moh_boot.json",
+    "device_a.json",
+    "device_b.json",
+    "device_d.json",
+    "device_c.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

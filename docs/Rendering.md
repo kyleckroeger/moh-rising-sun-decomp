@@ -305,3 +305,10 @@ and sprites at `+0x644` to `+0x650`, the prompt message table at `+0x660` and th
 `GetNewest` has a nested loop for viewports 1 and 2 that shares one counter.
 The constructor, destructor, the loop, `AddPopUpMessage`, the subtitle functions and
 `CUserMessageTable::Load` remain original.
+
+## CDeviceManager
+
+The device manager holds four 2284-byte `CGcDevice` records, each with a signed pad port at `+0`
+(-1 for none), input state at `+2` and an event table at `+0x60`. The count is at `+0x23b0`.
+`SetPort`, `GetDeviceState`, the constructor, `Update`, `IsActive` and `GetCurrentState` remain
+original; the last four reach file-local port state tables in a file with no recorded name.

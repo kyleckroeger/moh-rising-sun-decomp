@@ -1,0 +1,44 @@
+{
+  "id": "device_b",
+  "source": "src/game/device_b.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d66b8",
+      "size": 20
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetNumDevices__C14CDeviceManager",
+      "address": "0x800d66b8",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetNumPorts__C14CDeviceManager",
+      "address": "0x800d66c0",
+      "size": 12,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_9CGcDevice.MAX_NUM_PORTS": "0x802c26a8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

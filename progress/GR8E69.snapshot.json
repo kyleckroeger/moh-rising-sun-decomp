@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 980152,
+    "matching_code_bytes": 980560,
     "total_executable_code_bytes": 2492032,
-    "percent": 39.33143715650521,
+    "percent": 39.347809337921824,
     "categories": {
-      "reconstructed_game": 587936,
+      "reconstructed_game": 588344,
       "restored_library": 392216
     },
-    "matching_functions": 4852
+    "matching_functions": 4862
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -288,6 +288,10 @@
     "config/GR8E69/crc.json": "d29c0ef0d8149a361db85a37711abcf340764c87356e4ddb75ed5bb24c982792",
     "config/GR8E69/csg_volume.json": "40a2fd4c64ca48aff4063c4ba8f4cb09970ca4c745a5faff31543918559b4156",
     "config/GR8E69/debug_msg.json": "668775e5b23b87c15679f01ef8896fc2ae452fbe71da62a13824d6cccd528f5d",
+    "config/GR8E69/device_a.json": "89118186aa033bc46341dee495875b9668ea4ad29707b511b086469d27304fa2",
+    "config/GR8E69/device_b.json": "fcc3d822095821ae168f21b6c5c89e11efedeb9c1fcdad063290da70e0cdf911",
+    "config/GR8E69/device_c.json": "fec1918232ec214c86deaf390ff1d274d5b2eaef7c9cd14be7e3e622bff6d325",
+    "config/GR8E69/device_d.json": "0d211ba5bb46fbb995d2bec21e8233aef1ea0dce785da8616c54ea18f4cd2ad4",
     "config/GR8E69/dolphin-network-source.json": "6b039c8ef3fc502a7441ab8f55160567fd2facec6c12d818739c3bc7fd741b82",
     "config/GR8E69/dolphin-source.json": "00e4890e3bb570018abbacc62a7beee8052c2ef4f115363b1716785b62884cf1",
     "config/GR8E69/dsp.json": "bcc4a05a8ec25869e7675234c297eb8243e9a2e03983f64bf5e7040c7a897cd7",
@@ -901,7 +905,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "f1229454fc3c4828b8b3cdc25656935ac0a0d2dd1af1cf7111b856b92e69428f",
+    "config/GR8E69/project.json": "685a40bfb95a9f30c8cb2fc2e48cc25744d38ea64610442d1fa9ccf4e3b14715",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -2195,7 +2199,7 @@
     "include/game/ScriptSchedule.h": "6158dc9d8f6d57c34c31e527ba680a988f21a160149047de2f54bd5c216c1e19",
     "include/game/ScriptStartup.h": "ca298798406d593bc47296e17ca3c8778cde7e69bb465f05962cc05fc2eb40cc",
     "include/game/ScriptTimers.h": "a81f3399ff20908469a289229ed0f0aae2c28aa3a9889629e62049e8bb16705b",
-    "include/game/Shell.h": "7bc39e62f3b268333ff99c3c4a3b680b909f7662ea6b903d300d7afb5e8f013a",
+    "include/game/Shell.h": "db84b21f4281a41ca239238d55dbbd4531255dccebe64ad20d0edbc301e71e13",
     "include/game/SkyBox.h": "810947bbc2ecf7cb4d69dfa350c055b05d446c04b904abfadaf4828c7be01a55",
     "include/game/SoundAmbience.h": "a8ffdd3a842aa24e0d8511216e05fd27625c8c2e96c7db19d7557afa729b1fb5",
     "include/game/SoundEntryPool.h": "3766b906852ceb49985a2e376f46077c2e739f8dc17ca0f16a47b60b79eb0d59",
@@ -2925,6 +2929,10 @@
     "src/game/LinkedList.cpp": "7361285bbff6c1c98f4751ffa81c4a80a8de7b348144d43b880f40ca98feb332",
     "src/game/configfile.cpp": "0b7f529b5026deac835ef66c0e735bf252c96ce3b825808ece1998806605444c",
     "src/game/debug_msg.cpp": "9a5e4e7ca6cd102ae562f15de3cb54173f9bce402660cd40507cb79eba79b346",
+    "src/game/device_a.cpp": "28618faf851ad8aea3b81b6a468b6c36ecf5c768dc93571403fae8f84b83ee6c",
+    "src/game/device_b.cpp": "7c6d0c3f9e9ca649690400da465d0de0ffb34b994132243694e88f0bd9365868",
+    "src/game/device_c.cpp": "a521a60265baf3b48c3bd2fb3f7a50726d75d860c9c7e651c20e9a4cc5e39162",
+    "src/game/device_d.cpp": "1b5f2a867a8c893ee377b976142a0e777703f950403fd7732ad5f1d7c6274863",
     "src/game/fader.cpp": "747b4b655d1fd223cce5f602f80988b025c9c3ed3037e60e29588fc265522dba",
     "src/game/font_attrs.cpp": "17a5dcba14710a5625b373dba980f883f4491d208bf930ab9eb0cec07b5f3fe7",
     "src/game/font_ctor.cpp": "58553ab744e9e2326e145ad958eb12bdd904aa92453a41030f63035cd506348f",
@@ -42013,6 +42021,78 @@
       "discarded_functions": [],
       "object_sha256": "66f2aee74caebe3704a481cff4e4773123623b9af0f45ad209a7b3df420b1202",
       "linked_sha256": "8a0070bb9ce1c0e3491ce9ccdb80a10b8695e8c9b14f2aff7619ebfc45b3b9c5"
+    },
+    {
+      "id": "device_a",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 140,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "15b9116767c8bec6c21d0c7c73d3c22ca21505a3439a66a4d84b236c6dc74380",
+      "linked_sha256": "bebfb183ae2388ac21e2ff0c42c5fc3b942db9e3aebef0b1a8f362d0f3beeb64"
+    },
+    {
+      "id": "device_b",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 20,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "ceaa46fd39d49ef46c9966f561405280cbd88fc6d0bc7f23a5659174f84f28dd",
+      "linked_sha256": "27a230fb6daecfa3feff5c97354a58c1e584706cb40c06839ae17f0a99db15ba"
+    },
+    {
+      "id": "device_d",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 236,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "da35cba1c8a7b826d73dee007710fb6df72eee96eaef0fe91b4a253fcb4c5184",
+      "linked_sha256": "88948635b8f0d0d15e0d59772b7e92654616806b0194f9cdecf16e2cd26e01c8"
+    },
+    {
+      "id": "device_c",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 12,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "b44032e8b9c396084fc6f03b1674dc169b4ef62814dd5fd2baaa1f0db11fa18e",
+      "linked_sha256": "f8e3aa784e51051ec275f326cbf38e4b215e9a165369cc4f99cd3d6ffb0b3266"
     }
   ],
   "code_map": {
@@ -54779,28 +54859,12 @@
             "kind": "function",
             "name": "Update__9CGcDevice",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800d5cc8",
-            "size": 84,
-            "kind": "function",
-            "name": "GetInputState__C9CGcDevice",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800d5d1c",
-            "size": 28,
-            "kind": "function",
-            "name": "GetEventTable__9CGcDevice",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800d5d38",
-            "size": 28,
-            "kind": "function",
-            "name": "GetEventTable__C9CGcDevice",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 800d5d54",
+        "ranges": [
           {
             "address": "0x800d5d54",
             "size": 416,
@@ -54835,70 +54899,36 @@
             "kind": "function",
             "name": "SetPort__14CDeviceManagerUcSc",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800d66b8",
-            "size": 8,
-            "kind": "function",
-            "name": "GetNumDevices__C14CDeviceManager",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800d66c0",
-            "size": 12,
-            "kind": "function",
-            "name": "GetNumPorts__C14CDeviceManager",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 800d66cc",
+        "ranges": [
           {
             "address": "0x800d66cc",
             "size": 88,
             "kind": "function",
             "name": "GetDeviceState__C14CDeviceManagerUc",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800d6724",
-            "size": 104,
-            "kind": "function",
-            "name": "UpdateActuators__14CDeviceManagerf",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800d678c",
-            "size": 52,
-            "kind": "function",
-            "name": "SetActuatorState__14CDeviceManagerUcUcUcff",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800d67c0",
-            "size": 40,
-            "kind": "function",
-            "name": "GetEventTable__14CDeviceManagerUc",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800d67e8",
-            "size": 40,
-            "kind": "function",
-            "name": "GetEventTable__C14CDeviceManagerUc",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 800d6810",
+        "ranges": [
           {
             "address": "0x800d6810",
             "size": 48,
             "kind": "function",
             "name": "IsActive__C14CDeviceManagerSc",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800d6840",
-            "size": 12,
-            "kind": "function",
-            "name": "GetPortNum__C14CDeviceManagerUc",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 800d684c",
+        "ranges": [
           {
             "address": "0x800d684c",
             "size": 36,
