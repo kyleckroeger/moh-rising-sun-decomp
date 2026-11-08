@@ -58,6 +58,8 @@ class CGameSettings {
     int GetIfCurrentWeaponSelectable(int, int) const;
     void SetPlayersFinishedLevelHealth(int, int, float);
     GameProfile *profile;
+    unsigned char unknown_04[0xa8 - 4];
+    int unknown_a8; // Read as a copy by the pop-up message handler.
     int SerializingIn() const;
     int SerializingOut() const;
     void SerializeDelta(const CMatrix &, CMatrix &);

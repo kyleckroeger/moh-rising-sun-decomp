@@ -36,6 +36,8 @@ class CSprite;
 // draws with, and two message tables. Names of the members other than the tables are inferred.
 class PopUpMessageHandler {
 public:
+    PopUpMessageHandler(char *, char *, char *);
+    ~PopUpMessageHandler();
     void LoadSubtitles(char *, char *, char *);
     void ShutdownPopUpMessageHandler();
     unsigned short GetOldest(unsigned char viewport);
@@ -51,9 +53,11 @@ public:
     CFont *font648;                  // +0x648
     CSprite *sprite64c;              // +0x64c
     CSprite *sprite650;              // +0x650
-    unsigned char unknown654[0x660 - 0x654];
-    CUserMessageTable messages;      // +0x660
-    CUserMessageTable subtitles;     // +0x674
+    int settings654;                 // +0x654: copied from g_GameSettings at construction
+    short slots658[4];               // +0x658: all -1 at construction
+    CUserMessageTable tables[2];     // +0x660: messages, subtitles
+    unsigned char unknown688[0x6c4 - 0x688];
+    float lineHeight;                // +0x6c4
 };
 extern PopUpMessageHandler *g_pPopUpMessageHandler;
 void appendMessageToPrompt(const char *, int);

@@ -9,7 +9,7 @@ public:
 };
 
 void PopUpMessageHandler::LoadSubtitles(char *a, char *b, char *c) {
-    subtitles.Load(a, b, c);
+    tables[1].Load(a, b, c);
 }
 
 void PopUpMessageHandler::ShutdownPopUpMessageHandler() {

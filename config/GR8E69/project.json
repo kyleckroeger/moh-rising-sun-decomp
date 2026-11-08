@@ -2006,7 +2006,8 @@
     "ea_avplayer_ctor.json",
     "ea_avplayer_dtor.json",
     "ea_avplayer_time.json",
-    "ea_avplayer_chunk.json"
+    "ea_avplayer_chunk.json",
+    "pum_ctor.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
