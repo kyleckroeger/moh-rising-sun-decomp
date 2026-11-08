@@ -14,7 +14,9 @@ struct ProgressRecord {
 // symbol. restartIndex (first byte, RestartPlayer's argument) is a descriptive name.
 struct SMPPlayerData {
     unsigned char restartIndex;
-    unsigned char unknown_1[15];
+    unsigned char unknown_1[12];
+    unsigned char maxHealth;    // +0x0d; SetHealthMax's value.
+    unsigned char unknown_e[2];
 };
 struct SMPPlayerSlot { int unknown_0; SMPPlayerData data; };
 
@@ -27,7 +29,9 @@ struct GameProfile {
     unsigned char level;                // +0x31665
     unsigned char unknown_31666[0x32020 - 0x31666];
     SMPPlayerSlot players[4];           // +0x32024; indexed by the player's slot (count inferred).
-    unsigned char unknown_32070[0x321e0 - 0x32070];
+    unsigned char unknown_32070[0x32074 - 0x32070];
+    int field_32074;                    // +0x32074; a team setting CPlayerObject::HandleBulletCollision requires non-negative for friendly fire protection.
+    unsigned char unknown_32078[0x321e0 - 0x32078];
     signed char currentRecord;          // +0x321e0
 };
 
@@ -40,6 +44,8 @@ class CQuaternion;
 // Member view of the game-settings singleton; only the profile pointer is named.
 class CGameSettings {
   public:
+    void SetPlayersFinishedLevelSuccessfully(int, int);
+    void SetPlayersFinishedLevelHealth(int, int, float);
     GameProfile *profile;
     int SerializingIn() const;
     int SerializingOut() const;

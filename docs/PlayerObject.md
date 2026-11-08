@@ -37,8 +37,25 @@ limit. `CPlayerObject::TargetFind` at `+0x1ca0` has an inline disable, whose nam
 descriptive. `CAnimatedPlayer` is a separate member-only view; `Draw` skips the owning
 player's view by comparing the word at the player's `+0x10d8`.
 
+`CAnimatedPlayer::BeginUpdate` records the previous position, yaw, root-joint rotation and
+position and clears the velocity. `AttemptUpdate` blends toward the joint matrix's rotation
+and position by `dt`, moves the transform unless `attached` (`+0x238`) is set, updates the
+bounding volume and collision-sort extents, clears three record words and copies the muzzle
+state to the held weapon. Rising Sun's yaw handling reduces to zero here. The field names
+follow Frontline where marked in the header and are otherwise descriptive. `PostUpdate` turns
+`flocoHeading` toward the player's heading, raising script events 299 and 300 as the turn
+starts and ends, and rebuilds the transform. `HandleBulletCollision` spawns the `EnemyHit`
+effect aligned to the contact normal for projectile bullets and passes the hit to the player.
+
 `LineAlmostCollided` in `CAnimatedPlayer` is an empty body; its `int` return type follows
 the shared virtual declaration and the original returns nothing meaningful.
+
+`HandleBulletCollision` on the player ignores bullets while bit 29 of the flags is set; for
+projectiles and grenade types 4 and 7 it fills a 32-byte hit event (direction by the two dot
+products at 0.7071), applies invincibility and the one-hit-kills cheat, in multiplayer team
+protection and the contact's location (3x damage for locations 0 and 1), then raises script
+event 40, drives rumble and plays the impact sound. `SetMPShotLocation` still computes the
+location group it once recorded; the switch has no effect in this build, as in the original.
 
 ## Parked
 
@@ -62,3 +79,20 @@ player. `SMPPlayerData` is named by `InitMultiplayer`'s symbol; its 20-byte slot
 observed and `restartIndex` is descriptive. `SetBasis`, `SetWidth`, `SetDepth`, `SetHeight`
 and `SetCenter` on `CVolBox` are inferred inlines. A previous weapon no longer current after
 reinitialization is cycled back to by its CRC; `fireDelay` comes from `RESPAWN_FIRE_DELAY`.
+
+## Path movement, constraints and mounted positions
+
+`UpdateMovePath` advances `pathParameter` while bit 19 of the path flags is set, evaluates
+`movePath` at the half step (or integrates the velocity without a path), derives the velocity
+from the new position and builds an orientation from `lookPath`'s tangent or next point.
+`UpdateCollisionVolumes` refreshes the world capsule and collision-sort extents. `Constrain`
+returns 1 at once while bit 14 of the flags, melee immunity or `mmgBlocked` is set; otherwise
+it runs `SatisfyConstraints`, records failure in bit 20, limits the position change to 0.3 per
+frame and recomputes the velocity (cleared on failure). `SetPlayersMountedMGPositions` derives
+the player's transform, camera and mounted gun from the mount matrix through the offsets at
+`+0xea0`, `+0xee0` and `+0xf60`. `SetHealthMax` copies `SMPPlayerData::maxHealth` into the
+script data's health; `SetFinishedLevelData` records a won level. `AimAdjust::Enable` and
+both `LookAtTarget::Enable` overloads clear or set the observed subject; their layouts are
+observed and `time`, `target` and `active` are descriptive. `PostUpdate` repositions a mounted
+gun, updates it, alternates the side bits in `mountedShotSide` and ejects a shell when bit 19 of
+the flags is set.

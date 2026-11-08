@@ -1,0 +1,58 @@
+{
+  "id": "player_bullet_hit",
+  "source": "src/player/PlayerBulletHit.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800b2d80",
+      "size": 1228
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029f184",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "HandleBulletCollision__13CPlayerObjectP7CBulletRC10CCollision",
+      "address": "0x800b2d80",
+      "size": 1228,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddHitDirection__15CHeadsUpDisplayUi": "0x80177cf0",
+    "BSEventGetEventMemoryBlock__FUi": "0x8011dba8",
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "Explode__13CThrownBullet": "0x80153b18",
+    "IsInvincible__C13CPlayerObject": "0x800ba068",
+    "MathFunClamp__H1Zf_X01X01X01_X01": "0x8027aa30",
+    "PlayImpactSound__FUsUsRC8CVector3b": "0x80157958",
+    "SetFeedback__13CInputManagerUcUcUcff": "0x800d704c",
+    "SetMPShotLocation__13CPlayerObjectP32BS_STRUCT_HitByBulletInfo_struct": "0x800b908c",
+    "g_GameSettings": "0x802f80c8",
+    "g_bInMultiplayerMode": "0x802c1b30",
+    "g_bTeamDM": "0x802c1b34",
+    "g_cheats": "0x802f98e4",
+    "g_inputMgr": "0x803077c4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}

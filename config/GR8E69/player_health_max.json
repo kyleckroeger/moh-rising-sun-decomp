@@ -1,0 +1,45 @@
+{
+  "id": "player_health_max",
+  "source": "src/player/PlayerHealthMax.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800b8f9c",
+      "size": 156
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029f4f0",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetHealthMax__13CPlayerObject",
+      "address": "0x800b8f9c",
+      "size": 156,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_GameSettings": "0x802f80c8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}

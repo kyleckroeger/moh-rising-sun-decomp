@@ -1785,7 +1785,20 @@
     "cover_occupy.json",
     "cover_invalidate.json",
     "camera_class.json",
-    "camera_attempt.json"
+    "camera_attempt.json",
+    "animplayer_hit.json",
+    "animplayer_update.json",
+    "animplayer_post.json",
+    "player_post_update.json",
+    "player_bullet_hit.json",
+    "player_constrain.json",
+    "player_shot_location.json",
+    "player_move_path.json",
+    "player_mounted_gun.json",
+    "player_health_max.json",
+    "player_level_data.json",
+    "player_aim_enable.json",
+    "player_look_enable.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

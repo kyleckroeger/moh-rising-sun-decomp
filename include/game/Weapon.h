@@ -52,7 +52,8 @@ class CWeapon : public CStaticObject {
     int bulletClass;            // +0x31c; chosen from the holder's collision id.
     int weaponClass; // +0x320; returned by BIFunc_PlayerGetWeaponClass.
     float shootValue2;          // +0x324; Shoot keeps it when passed -1.
-    unsigned char unknown_328[0x340 - 0x328];
+    unsigned char unknown_328[0x330 - 0x328];
+    CVector3 direction;         // +0x330; set for a mounted gun by SetPlayersMountedMGPositions.
     CVector3 position;          // +0x340; returned by GetPosition.
     unsigned int reloading : 1; // +0x350, bit 31: cleared by BIFunc_PlayerClearReloading.
     unsigned int field_30 : 1;

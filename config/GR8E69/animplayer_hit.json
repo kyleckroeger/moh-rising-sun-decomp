@@ -1,0 +1,54 @@
+{
+  "id": "animplayer_hit",
+  "source": "src/player/AnimPlayerHit.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d462c",
+      "size": 1000
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a1aa0",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "HandleBulletCollision__15CAnimatedPlayerP7CBulletRC10CCollision",
+      "address": "0x800d462c",
+      "size": 1000,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Create__10CPSManagerUib15eParticleSystem": "0x80066a70",
+    "GetSlot__7CMatrixUi": "0x802790e0",
+    "GetStringCRC__FPCc": "0x801acb98",
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "SetFront__7CMatrixRC8CVector3": "0x8007ae44",
+    "SetPos__7CMatrixRC8CVector3": "0x8007ae7c",
+    "SetRight__7CMatrixRC8CVector3": "0x8007ae28",
+    "SetUp__7CMatrixRC8CVector3": "0x8007ae60",
+    "_7CMatrix.s_ClassInit": "0x802c2100",
+    "sqrtf": "0x80270538"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "animplayer.cpp",
+  "original_file_index": 942
+}
