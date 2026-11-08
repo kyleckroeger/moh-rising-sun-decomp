@@ -1,4 +1,4 @@
-// AI-assisted reconstruction from GR8E69. Part of the original Moh3.cpp.
+// AI-assisted reconstruction from GR8E69. Part of the original drivecheck.cpp.
 #include <stdio.h>
 
 extern "C" long DVDConvertPathToEntrynum(const char *);

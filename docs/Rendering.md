@@ -289,6 +289,11 @@ compiles with `-ffast-math`, which folds subtractions and additions of the known
 `FadeIn` and `FadeOut` use normal blending, and `Flash` uses additive blending. The file's static
 initialization remains original.
 
+## CStaticScreen
+
+The screen object owns two sprites at `+0x04` and `+0x08` and a 16-byte block at `+0x50`, which
+`Init` allocates once. Its table pointer is at `+0x58`.
+
 ## CHeadsUpDisplay and the X-Files text
 
 `HeadsUpDisplay.h` is a scoped view holding only the small state functions. `UpdateHitStatus`

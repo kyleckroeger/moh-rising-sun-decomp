@@ -1978,7 +1978,9 @@
     "moh_rest.json",
     "moh_ls.json",
     "moh_scan.json",
-    "ea_debugbreak.json"
+    "ea_debugbreak.json",
+    "pum_upd.json",
+    "static_screen.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

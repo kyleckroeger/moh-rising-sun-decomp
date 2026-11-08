@@ -1,4 +1,4 @@
-// AI-assisted reconstruction from GR8E69. Part of the original Moh3.cpp.
+// AI-assisted reconstruction from GR8E69. Part of the original LoadImage.cpp.
 int GetLoadscreenId(int multiplayer, bool second, bool first, bool none) {
     int id;
     if (multiplayer) {

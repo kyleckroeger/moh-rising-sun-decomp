@@ -1,0 +1,50 @@
+{
+  "id": "pum_upd",
+  "source": "src/ui/pum_upd.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8017abd8",
+      "size": 416
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802ad31c",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "UpdateSubtitles__Ff",
+      "address": "0x8017abd8",
+      "size": 416,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "PrintSubtitle__FPcfG6CColorP19PopUpMessageHandler": "0x8017ad78",
+    "StartupSubtitles__Fv": "0x8017a6d0",
+    "g_PauseScreen": "0x802f8040",
+    "g_pPopUpMessageHandler": "0x80326390",
+    "g_subtitle_queue": "0x803e8138",
+    "g_subtitle_queue_initialized": "0x802c59a0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "pumhandler.cpp",
+  "original_file_index": 1539
+}
