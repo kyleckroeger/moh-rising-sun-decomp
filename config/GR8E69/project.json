@@ -1724,7 +1724,10 @@
     "player_respawn.json",
     "linked_list.json",
     "popup_message.json",
-    "popup_message_dtor.json"
+    "popup_message_dtor.json",
+    "rcmpbase_decoder.json",
+    "rcmpbase_frames.json",
+    "audioplayer.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

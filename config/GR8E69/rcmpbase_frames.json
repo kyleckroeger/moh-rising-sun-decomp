@@ -1,0 +1,97 @@
+{
+  "id": "rcmpbase_frames",
+  "source": "src/ea/rcmpbase_frames.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801b0f48",
+      "size": 652
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b8434",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "FreeChosenCodec__Q24RCMP7DECODER",
+      "address": "0x801b0f48",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "GetCurrentFrameNumber__Q24RCMP7DECODER",
+      "address": "0x801b0fa0",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "GetFrameRate__Q24RCMP7DECODER",
+      "address": "0x801b0fe8",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "GetFrame__Q24RCMP7DECODERUi",
+      "address": "0x801b1034",
+      "size": 140,
+      "binding": 1
+    },
+    {
+      "name": "ReleaseFrame__Q24RCMP7DECODERPQ24RCMP5FRAME",
+      "address": "0x801b10c0",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "GetChunk__Q24RCMP7DECODER",
+      "address": "0x801b10f8",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "ReleaseChunk__Q24RCMP7DECODERPQ24RCMP5CHUNK",
+      "address": "0x801b1150",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "__Q24RCMP5CHUNK",
+      "address": "0x801b1184",
+      "size": 24,
+      "binding": 1
+    },
+    {
+      "name": "__Q24RCMP11CODEC_IDATA",
+      "address": "0x801b119c",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "__Q24RCMP11CODEC_IDATAPQ24RCMP8STREAMERPFPQ24RCMP7DECODERPQ24RCMP8STREAMERPPQ24RCMP5CHUNK_vPFPQ24RCMP7DECODERPQ24RCMP8STREAMERPQ24RCMP5CHUNK_vUi",
+      "address": "0x801b11bc",
+      "size": 24,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "rcmpbase.cpp",
+  "original_file_index": 2326
+}

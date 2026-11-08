@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 920136,
+    "matching_code_bytes": 921616,
     "total_executable_code_bytes": 2492032,
-    "percent": 36.92312137243824,
+    "percent": 36.98251065796908,
     "categories": {
-      "reconstructed_game": 527920,
+      "reconstructed_game": 529400,
       "restored_library": 392216
     },
-    "matching_functions": 4436
+    "matching_functions": 4453
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -196,6 +196,7 @@
     "config/GR8E69/animplayer_tail.json": "3366813c15f06af405df159af9b8f86049d3871539af85b8b8ab09ab7e1f1a15",
     "config/GR8E69/ar.json": "d8da1ec6cb2ac6c8f83ac2a4b995898cbb723d38d41c84a1d25a8d7a863b1908",
     "config/GR8E69/arq.json": "b79b6daec16d9806b4df0388a3f927cb06d48ce10fdb9fa35772dcecce291de7",
+    "config/GR8E69/audioplayer.json": "c76b5d715db0f64b5176aec64d787fa93232b6dc26efc5f44db2f17b55eb0c27",
     "config/GR8E69/base64.json": "e88ebd5740a86b7f43b5b6812b6c4e81114d43dfae07a3e7429abb7c6a1bfec7",
     "config/GR8E69/baseline.json": "9ebff32fd809e72fdf889ab49760be2aa1172768f855af86d0251c1fc4da2ef7",
     "config/GR8E69/box_create.json": "08b81afd8e39210b2713de6d2c883d05afc7baaac67b5ec7dc4567f59ce7c7bf",
@@ -829,7 +830,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "60c91904d5713d42bbd3f0663188aea01c611e6cc0298adb0b62e5f7675ba482",
+    "config/GR8E69/project.json": "4435b5313d0d369a47c6033ce2aab70fc907be4ae760a04c9b13b29853df0c01",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -846,6 +847,8 @@
     "config/GR8E69/quaternion_get_matrix.json": "c63fc72dbed2a9d3c604effaada46ecb10afde2020eaadd56e4e7f8ccf114e82",
     "config/GR8E69/quaternion_normalize.json": "d78a8760467d1cff8299eecd55985b34b9908086e277c7814083cb4c65a64fc4",
     "config/GR8E69/quaternion_slerp.json": "1a0f13b162d329331ef995f603d989e695af05bdda0fce3a52b322131c771a16",
+    "config/GR8E69/rcmpbase_decoder.json": "f0e7d02835301f05a7293f98aeb871ea4417d91cd4a55b3bb1c06d6536242f0a",
+    "config/GR8E69/rcmpbase_frames.json": "56fec82984b72e2691a5734b9f2c899f58b759a77fdbaf3726bf768da94b1a20",
     "config/GR8E69/scene_AnimObjFactoryRelease.json": "50f6268ac1945950c6610e825a8ca87bee0aba837a50e912bf1e9953ddf16cec",
     "config/GR8E69/scene_AnimObjFactoryReset.json": "f8f158148087c9a55b8d8ed48125111f8afcf668eb6a7f62ce6c610848f0ac57",
     "config/GR8E69/scene_AnimObjectAccess.json": "0f9a1fa701d92f4e3b1396be3b5c06bb6527ee24c437760e2d4da165aded0212",
@@ -2010,6 +2013,7 @@
     "include/game/PlacementNew.h": "49819284bb2cc2ffb2039d459ce855bd5a233bcfff0a6412ffe0bda02cd616c5",
     "include/game/PopUpMessage.h": "3ba712308420d487fc901d235bd01e828a92eaff7fe9c095eadb933d05ba7737",
     "include/game/PropertyData.h": "952ae5ac78dc17e43053a7b905a8e58499a1faa3c7d0721269329f639095b22a",
+    "include/game/Rcmp.h": "9f0b3fe189c690b8ee358797a865f8e6172f48640e9fc998e332061823b08cb2",
     "include/game/SceneNode.h": "9c8006bf11094c87cfd8b9579abe72b5a2766e72e28d682b4a523546f633df98",
     "include/game/SceneObjects.h": "109aeffe16f3e26219556ed698fb247e3a2ec393afe7409923805a854475b070",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
@@ -2448,6 +2452,7 @@
     "src/dolphin/syn/__syn.h": "08b05a8b8e04e272305efa50936912ac395d76d937bd73a403065601e469f8ee",
     "src/dolphin/vi/__vi.h": "22201b234d317ca8d2724210a124ac6ceb9708df13c1b73eae87afab8e625b7b",
     "src/dolphin/vi/vi.c": "a39c975336daa3c42a5a186d68d0c9c39e91aa0df0003b1b052eb767cdf4beed",
+    "src/ea/audioplayer.cpp": "d7cb0381566d28d5a4bea0e4e58d44991b3c417e7b49ab028af8d0ddd136c541",
     "src/ea/exit.cpp": "aee2216bb9de55d7631911b45e6f3f0375214505293efc561cc5dbd69d6751a5",
     "src/ea/filedev.cpp": "fc8797c1f5471a07cc274b76532754d6ffcce53c5f99439394e10f012aa5c704",
     "src/ea/filesys.cpp": "c3c94be82051fb71d94bba7ef22050a8ddbdd86b2534c9978ac816f6168897a0",
@@ -2480,6 +2485,8 @@
     "src/ea/pad.cpp": "1e0d78a24bcbcf5b3e857e77011296a3e7dcce2a29666cee124d12bbdd7c1603",
     "src/ea/printn3.cpp": "e260e8f11be93a4af6246aa0777791744bb479c223f80e9e78618811d1780c4b",
     "src/ea/rcmp2real.cpp": "cd31e2670f3b27a4a91c8962b8b4ba680f21e773e9023525cf718f699131d8ff",
+    "src/ea/rcmpbase_decoder.cpp": "20f7a31b30a0d77509a364c36716411c714e4eb83ef4e0958b3b3e99d14597da",
+    "src/ea/rcmpbase_frames.cpp": "ed4b0dad56110b523529a0629bff7c8186b6681450457e980f39e02b01bc4b52",
     "src/ea/signals.cpp": "bbbc0bffb36932f5eb6cf92dc7b48e2c4b20623375a214da115ef76eacd1fcee",
     "src/ea/stream_api.cpp": "1305078f16102ace56768edffadb11d0b919fb298096f0356af0baf00cfb40e3",
     "src/ea/stream_callbacks.cpp": "17f7ee38228c3491764210268be197c07ba857ef6cc501c21d63157a371dc809",
@@ -38699,6 +38706,62 @@
       "discarded_functions": [],
       "object_sha256": "16db9b9dc7f7f88ed4b23fdfd9a9ffeed764ccd4fb4a24e19f23aea8e37c5180",
       "linked_sha256": "56047e084e2a85911f0c2a11fabe1ba707e19cd9049c60a4e82c00f250885faa"
+    },
+    {
+      "id": "rcmpbase_decoder",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 204,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": true,
+      "discarded_functions": [
+        "__dl__Q24RCMP7DECODERPv"
+      ],
+      "object_sha256": "83b408cb7af88434e7f4fcc8d7e1069e89c3b5e9821751a52208d608b79a035b",
+      "linked_sha256": "322f3582d18441c336abf9ffa08a611ccaf1aac76ca687a7263c3786f265d739"
+    },
+    {
+      "id": "rcmpbase_frames",
+      "category": "reconstructed_game",
+      "functions": 10,
+      "code_bytes": 652,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "12c53f6e631912510922005bd42f5bf56b7423de5381aaa54100d5cb682d577a",
+      "linked_sha256": "645c7a2c450b10403dd4466fc6d817baf4dac10db5869fa8e3da11ed442b75b4"
+    },
+    {
+      "id": "audioplayer",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 624,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "6e0d2fceeb503488ad9c540c37685b7e8bf59557ae96261dfb1f83d6d83810ed",
+      "linked_sha256": "acf6f2ee32db42861a16eca78b1c342abe73cb0d3a7d30647bde2a79e5cffa33"
     }
   ],
   "code_map": {
@@ -69562,94 +69625,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x801b0e34",
-            "size": 116,
-            "kind": "function",
-            "name": "__Q24RCMP7DECODERPCQ24RCMP11CODEC_IDATA",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801b0ea8",
-            "size": 88,
-            "kind": "function",
-            "name": "_._Q24RCMP7DECODER",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x801b0f00",
             "size": 72,
             "kind": "function",
             "name": "ChooseCodec__Q24RCMP7DECODERPQ24RCMP5CODECPQ24RCMP5CHUNK",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801b0f48",
-            "size": 88,
-            "kind": "function",
-            "name": "FreeChosenCodec__Q24RCMP7DECODER",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801b0fa0",
-            "size": 72,
-            "kind": "function",
-            "name": "GetCurrentFrameNumber__Q24RCMP7DECODER",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801b0fe8",
-            "size": 76,
-            "kind": "function",
-            "name": "GetFrameRate__Q24RCMP7DECODER",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801b1034",
-            "size": 140,
-            "kind": "function",
-            "name": "GetFrame__Q24RCMP7DECODERUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801b10c0",
-            "size": 56,
-            "kind": "function",
-            "name": "ReleaseFrame__Q24RCMP7DECODERPQ24RCMP5FRAME",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801b10f8",
-            "size": 88,
-            "kind": "function",
-            "name": "GetChunk__Q24RCMP7DECODER",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801b1150",
-            "size": 52,
-            "kind": "function",
-            "name": "ReleaseChunk__Q24RCMP7DECODERPQ24RCMP5CHUNK",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801b1184",
-            "size": 24,
-            "kind": "function",
-            "name": "__Q24RCMP5CHUNK",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801b119c",
-            "size": 32,
-            "kind": "function",
-            "name": "__Q24RCMP11CODEC_IDATA",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801b11bc",
-            "size": 24,
-            "kind": "function",
-            "name": "__Q24RCMP11CODEC_IDATAPQ24RCMP8STREAMERPFPQ24RCMP7DECODERPQ24RCMP8STREAMERPPQ24RCMP5CHUNK_vPFPQ24RCMP7DECODERPQ24RCMP8STREAMERPQ24RCMP5CHUNK_vUi",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -69974,52 +69953,6 @@
             "name": "StaticReleaseRCMPChunk__Q24RCMP9AV_PLAYERPQ24RCMP7DECODERPQ24RCMP8STREAMERPQ24RCMP5CHUNK",
             "evidence": "unknown-file"
           }
-        ]
-      },
-      {
-        "name": "Unmatched files/audioplayer.cpp [inferred file group]",
-        "file_record": 360,
-        "file_name": "audioplayer.cpp",
-        "ranges": [
-          {
-            "address": "0x801b31ac",
-            "size": 232,
-            "kind": "function",
-            "name": "__Q24RCMP12AUDIO_PLAYERii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801b3294",
-            "size": 120,
-            "kind": "function",
-            "name": "_._Q24RCMP12AUDIO_PLAYER",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801b330c",
-            "size": 92,
-            "kind": "function",
-            "name": "SetSpeed__Q24RCMP12AUDIO_PLAYERUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801b3368",
-            "size": 88,
-            "kind": "function",
-            "name": "StartSound__Q24RCMP12AUDIO_PLAYER",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801b33c0",
-            "size": 92,
-            "kind": "function",
-            "name": "SetVol__Q24RCMP12AUDIO_PLAYERUi",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x801b31ac",
-          "0x801b341c"
         ]
       },
       {

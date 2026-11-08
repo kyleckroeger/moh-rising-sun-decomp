@@ -1,0 +1,81 @@
+{
+  "id": "audioplayer",
+  "source": "src/ea/audioplayer.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801b31ac",
+      "size": 624
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b857c",
+      "size": 20
+    }
+  ],
+  "functions": [
+    {
+      "name": "__Q24RCMP12AUDIO_PLAYERii",
+      "address": "0x801b31ac",
+      "size": 232,
+      "binding": 1
+    },
+    {
+      "name": "_._Q24RCMP12AUDIO_PLAYER",
+      "address": "0x801b3294",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "SetSpeed__Q24RCMP12AUDIO_PLAYERUi",
+      "address": "0x801b330c",
+      "size": 92,
+      "binding": 1
+    },
+    {
+      "name": "StartSound__Q24RCMP12AUDIO_PLAYER",
+      "address": "0x801b3368",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "SetVol__Q24RCMP12AUDIO_PLAYERUi",
+      "address": "0x801b33c0",
+      "size": 92,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DEBUG_break": "0x802184cc",
+    "SNDSTRM_createtap": "0x80220900",
+    "SNDSTRM_destroy": "0x8022069c",
+    "SNDSTRM_modifyhold": "0x80220a04",
+    "SNDSTRM_overheadtap": "0x80220b24",
+    "SNDSTRM_pitchmult": "0x80220ba0",
+    "SNDSTRM_queuerequestid": "0x80220bfc",
+    "SNDSTRM_vol": "0x80220e64",
+    "SNDSYS_entercritical": "0x8021f948",
+    "SNDSYS_inited": "0x80221700",
+    "SNDSYS_leavecritical": "0x8021f988",
+    "SNDplaysetdef": "0x8021f44c",
+    "_4RCMP.rcmp_sys": "0x803fef20"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "audioplayer.cpp",
+  "original_file_index": 2340
+}
