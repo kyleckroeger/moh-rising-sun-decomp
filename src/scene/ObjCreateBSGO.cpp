@@ -7,12 +7,12 @@ void *BSGO_Destructable::GetScriptData() { return scriptData; }
 ISceneNode *BSGO_Destructable::GetSceneNode() { return binding.sceneNode; }
 void *BSGO_Destructable::GetProximityData() { return proximityData; }
 
-void *BSGO_Anim::GetScriptData() { return scriptData; }
-ISceneNode *BSGO_Anim::GetSceneNode() { return binding.sceneNode; }
+void *BSGO_Anim::GetScriptData() { return &scriptData; }
+ISceneNode *BSGO_Anim::GetSceneNode() { return (ISceneNode *)target.GetSubject(); }
 void *BSGO_Anim::GetProximityData() { return proximityData; }
 
-void *BSGO_Soldier::GetScriptData() { return scriptData; }
-ISceneNode *BSGO_Soldier::GetSceneNode() { return binding.sceneNode; }
+void *BSGO_Soldier::GetScriptData() { return &scriptData; }
+ISceneNode *BSGO_Soldier::GetSceneNode() { return (ISceneNode *)target.GetSubject(); }
 void *BSGO_Soldier::GetProximityData() { return proximityData; }
 
 void *BSGO_Tank::GetScriptData() { return scriptData; }

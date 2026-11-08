@@ -17,14 +17,10 @@ enum TLTResourceID { TLTResourceUnknown = 0 };
 struct TLTResource;
 TLTResource *TLT_FindNextResourceByType(TLTResourceID, LevelFileContentsStruct_ *);
 
-struct CreatedGerman {
-    unsigned char unknown00[8];
-    void *eventData; // +0x08
-};
 void DestroySingleQueueElement();
 void ProcessCreationQueue();
 void NonVisDestructFarthestSoldiers(int);
-CreatedGerman *CreateGerman(TriggerObject *, int, int, bool, bool *);
+BSGO_Soldier *CreateGerman(TriggerObject *, int, int, bool, bool *);
 void *CreateMechanic(TriggerObject *, int, int, void *);
 void *CreateBasicAnimatedMech(TriggerObject *, int, int);
 void *CreateEnvModMechanic(TriggerObject *, int);
@@ -124,13 +120,13 @@ void UpdateObjectCreation() {
 void ProcessCreationQueue() {
     while (g_iGermanCreationQueueHeadIndex != g_iGermanCreationQueueTailIndex) {
         bool created = false;
-        CreatedGerman *german = CreateGerman(g_pGermanCreationQueue[g_iGermanCreationQueueHeadIndex].trigger,
+        BSGO_Soldier *german = CreateGerman(g_pGermanCreationQueue[g_iGermanCreationQueueHeadIndex].trigger,
                                              g_pGermanCreationQueue[g_iGermanCreationQueueHeadIndex].index,
                                              g_pGermanCreationQueue[g_iGermanCreationQueueHeadIndex].value08, false, &created);
         if (!german)
             break;
         BSObjectTriggerEvent(g_pGermanCreationQueue[g_iGermanCreationQueueHeadIndex].trigger->scriptObject, 232,
-                             german->eventData, 0, false);
+                             german->script, 0, false);
         g_pGermanCreationQueue[g_iGermanCreationQueueHeadIndex].trigger = 0;
         g_pGermanCreationQueue[g_iGermanCreationQueueHeadIndex].index = -1;
         g_pGermanCreationQueue[g_iGermanCreationQueueHeadIndex].value08 = 0;

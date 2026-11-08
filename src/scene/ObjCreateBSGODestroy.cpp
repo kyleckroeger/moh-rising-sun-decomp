@@ -41,28 +41,28 @@ void BSGO_Anim::operator delete(void *p) { g_pObjectAllocators[1].FreeElement(p)
 
 void BSGO_Soldier::Destroy() {
     g_numActiveSoldiers--;
-    BSGOBinding *b = &binding;
+    WeakPtr<CSoldierObject, 8> *b = &target;
     RemoveObjectFromList(this, (BSGO_Basic **)&g_pGermanList);
-    g_scene.Remove(*b->sceneNode);
-    ((CAnimObjectInterface *)b->sceneNode)->CleanUp();
-    g_AnimObjFactory.ReleaseObject((CAnimObject *)b->sceneNode);
+    ISceneNode *node = (ISceneNode *)b->GetSubject();
+    g_scene.Remove(*node);
+    ((CAnimObjectInterface *)b->GetSubject())->CleanUp();
+    g_AnimObjFactory.ReleaseObject((CAnimObject *)b->GetSubject());
     DestroyBSObject(script);
     script = 0;
-    Unlink(binding.link);
-    b->sceneNode = 0;
+    target.Assign(0);
     delete this;
 }
 
 void BSGO_Anim::Destroy() {
     RemoveObjectFromList(this, (BSGO_Basic **)&g_pAnimatedMechList);
-    BSGOBinding *b = &binding;
-    g_scene.Remove(*b->sceneNode);
-    ((CAnimObjectInterface *)b->sceneNode)->CleanUp();
-    g_AnimObjFactory.ReleaseObject((CAnimObject *)b->sceneNode);
+    WeakPtr<CAnimObject, 8> *b = &target;
+    ISceneNode *node = (ISceneNode *)b->GetSubject();
+    g_scene.Remove(*node);
+    ((CAnimObjectInterface *)b->GetSubject())->CleanUp();
+    g_AnimObjFactory.ReleaseObject((CAnimObject *)b->GetSubject());
     DestroyBSObject(script);
     script = 0;
-    Unlink(binding.link);
-    b->sceneNode = 0;
+    target.Assign(0);
     delete this;
 }
 

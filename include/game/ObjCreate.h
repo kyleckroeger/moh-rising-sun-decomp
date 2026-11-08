@@ -119,6 +119,7 @@ class BSGO_Destructable : public BSGO_Basic {
     BSGOBinding binding;              // +0x20
     unsigned char proximityData[4];   // +0x38; extent unknown.
 };
+class CAnimObject;
 class BSGO_Anim : public BSGO_Basic {
   public:
     virtual ~BSGO_Anim();
@@ -128,10 +129,11 @@ class BSGO_Anim : public BSGO_Basic {
     virtual void *GetProximityData();
     static void *operator new(unsigned int);
     static void operator delete(void *);
-    unsigned char scriptData[0x18 - 0x14];
-    BSGOBinding binding;              // +0x18
-    unsigned char proximityData[4];   // +0x30; extent unknown.
+    void *scriptData;               // +0x14; filled by CreateBSObject.
+    WeakPtr<CAnimObject, 8> target; // +0x18
+    int proximityData[4];           // +0x30
 };
+class CSoldierObject;
 class BSGO_Soldier : public BSGO_Basic {
   public:
     virtual ~BSGO_Soldier();
@@ -141,9 +143,21 @@ class BSGO_Soldier : public BSGO_Basic {
     virtual void *GetProximityData();
     static void *operator new(unsigned int);
     static void operator delete(void *);
-    unsigned char scriptData[0xe4 - 0x14];
-    BSGOBinding binding;              // +0xe4
-    unsigned char proximityData[4];   // +0xfc; extent unknown.
+    // Script data view: CreateGerman fills these; the fields' meanings are unknown except the first.
+    struct {
+        float hitPoints;   // +0x14
+        void *scriptState; // +0x18; filled by CreateBSObject.
+        unsigned char unknown_1c[0x3c - 0x1c];
+        int value3c;       // +0x3c
+        int value40;       // +0x40
+        int value44;       // +0x44
+        int value48;       // +0x48
+        int value4c;       // +0x4c
+        int value50;       // +0x50
+        unsigned char unknown_54[0xe4 - 0x54];
+    } scriptData;
+    WeakPtr<CSoldierObject, 8> target; // +0xe4
+    int proximityData[4];              // +0xfc
 };
 class BSGO_Tank : public BSGO_Basic {
   public:

@@ -73,11 +73,14 @@ views and does not assert the original class layouts or inheritance order.
 ## Object creation
 
 `CreateDumpObject` builds a stack `BSGO_Dummy` (`BSGO_Basic` plus a `WeakPtr<ISceneNode, 8>` and four
-proximity words) so `ForceUpdateProximityTriggerStatus` can see the new object. `BSGO_Basic`'s destructor
+proximity words) so `ForceUpdateProximityTriggerStatus` can see the new object. `BSGO_Soldier`'s scene
+node is a `WeakPtr<CSoldierObject, 8>` (the table symbol is in the image), and `CreateGerman` assigns it. `BSGO_Basic`'s destructor
 is implicit: the weak copy has no table store and callers reduce it to `ISubject`'s. The string "Team"
 at `0x802a705c` is first used by `CreateGerman` and shared by `CreateCollisionVolume`,
 `CreateSpecialThrownObject`, `CreateRootHierObject`, `CreateDestructable` and `CreatePlayer`, so those
-functions can only verify inside one unit with `CreateGerman`.
+functions can only verify inside one unit with `CreateGerman`. The double literals also mean each unit's
+`.rodata` must end on an eight-byte boundary, which is why `CreateGerman` and `CreateBasicAnimatedMech`
+share a unit.
 `objcreate.cpp` keeps its pools and queues in file statics, declared in `ObjCreate.h`. The dump
 container holds a fixed array of 56-byte `DumpObject` entries linked oldest first. Its capacity comes
 from a level resource, with 25 as the fallback, and `DeleteOldest` skips entries marked to keep.
