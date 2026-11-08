@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 916752,
+    "matching_code_bytes": 917788,
     "total_executable_code_bytes": 2492032,
-    "percent": 36.78732857362987,
+    "percent": 36.82890107350146,
     "categories": {
-      "reconstructed_game": 524536,
+      "reconstructed_game": 525572,
       "restored_library": 392216
     },
-    "matching_functions": 4382
+    "matching_functions": 4394
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -825,7 +825,7 @@
     "config/GR8E69/player_weapon_shutdown.json": "f90a42342572d125630e7ac3647193288c13301a5309bcdc49cc350364bc2b60",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "18272b61027b994ee299b4ee8bfb6467595c7bdc03a3aa80acacdc3f4ae46919",
+    "config/GR8E69/project.json": "729a2928c55fa4a69646a69b6d3d6ad8e198bbc3d3b509a91c6e810bf0fac156",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -881,6 +881,7 @@
     "config/GR8E69/scene_HierObjectTree.json": "77b4802b94d5690af98dcd86296d3b70b4540ac61239e2a6c6a8167751a37f1c",
     "config/GR8E69/scene_HierObjectVolumes.json": "c2073f614cf7ce1112bdded5e400734c38616e6a07bbdbd6b1dcaf492808a15e",
     "config/GR8E69/scene_ObjCreateBSGO.json": "c7ee37d70f270f49dc4e8a63d060cc3fb1514f8c2e4d8846b6f8595d37eae4e0",
+    "config/GR8E69/scene_ObjCreateDumpContainer.json": "4971dc89672515ad11f2fbe87a29fdb2fd9d61efd98efb5c3557d5377e74249b",
     "config/GR8E69/scene_ObjCreatePoolA.json": "0b85d17eac6bacc2ef1efc5a628d9edb7dfc72aec63191973165f57b8d1e0456",
     "config/GR8E69/scene_ObjCreatePoolB.json": "00569bf051aaea6b0549efed6a945e9f83c3e80f3ecac73436c2ee4f4c68ec80",
     "config/GR8E69/scene_SoldierAI.json": "c85b0dbcc085ed3bcb2baee74d13b9bec64222b734018638d2e390df12c641a6",
@@ -3137,6 +3138,7 @@
     "src/scene/MovingNodeReset.cpp": "c2b3fc485ff5c1b562488b665e62ed8ec41130b5ac54daf2974e3835f16e9244",
     "src/scene/MovingNodeTransformDefaults.cpp": "7e49f15e9c0263e1a12315dff548c7981996f00128da21a72fba8727db90bc15",
     "src/scene/ObjCreateBSGO.cpp": "107824958a301626bb7928a503411c177204562418f4bbc2b49cf80209662dd7",
+    "src/scene/ObjCreateDumpContainer.cpp": "fb090b69095295ede011c1b0ef1c097c7815482e43a389f4781bceb745af19f9",
     "src/scene/ObjCreatePoolA.cpp": "4bf0385ac5f296380009e8ea2c1da1bf99ba2453fe69333c50b36ef16bfe222b",
     "src/scene/ObjCreatePoolB.cpp": "2475fa2a3d92c31d5136d619a5ba52c0b29087914dce9f05f3d872a8dab9bead",
     "src/scene/SceneNodeAxisDefaults.cpp": "2e62b6f3b3302ff27d6350acc7376566f9bc0cb72383e1f54fbd95b185f6cbf6",
@@ -38596,6 +38598,24 @@
       "discarded_functions": [],
       "object_sha256": "a6f942a50c74e2169e67ffaedb6e0054528ac8ed72f1da3c2b4c302a1098892c",
       "linked_sha256": "1852bce0bc8c32ee78877fcd497d104becc519f14b68c2f1ac229bd5bc76a9b0"
+    },
+    {
+      "id": "scene_ObjCreateDumpContainer",
+      "category": "reconstructed_game",
+      "functions": 12,
+      "code_bytes": 1036,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "673389ebe536f042d46c73aac6aa4e51f118643dc7783a6caefa60b57f276bfd",
+      "linked_sha256": "82c20d976bf0af0490d428b0937d882542fd852d2f3282c0ee12b0862ce258cb"
     }
   ],
   "code_map": {
@@ -57363,90 +57383,6 @@
         "file_record": 204,
         "file_name": "objcreate.cpp",
         "ranges": [
-          {
-            "address": "0x80126ac8",
-            "size": 28,
-            "kind": "function",
-            "name": "__20CDumpObjectContainer",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80126ae4",
-            "size": 84,
-            "kind": "function",
-            "name": "_._20CDumpObjectContainer",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80126b38",
-            "size": 160,
-            "kind": "function",
-            "name": "Reset__20CDumpObjectContainer",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80126bd8",
-            "size": 220,
-            "kind": "function",
-            "name": "AddDumpObject__20CDumpObjectContainerP13CStaticObjectRC10PickupInfob",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80126cb4",
-            "size": 168,
-            "kind": "function",
-            "name": "DeleteDumpObject__20CDumpObjectContainerP10DumpObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80126d5c",
-            "size": 52,
-            "kind": "function",
-            "name": "GetDumpObject__20CDumpObjectContainerP13CStaticObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80126d90",
-            "size": 64,
-            "kind": "function",
-            "name": "AllocateDumpObject__20CDumpObjectContainer",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80126dd0",
-            "size": 12,
-            "kind": "function",
-            "name": "FreeDumpObject__20CDumpObjectContainerP10DumpObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80126ddc",
-            "size": 84,
-            "kind": "function",
-            "name": "GetAvailableObject__20CDumpObjectContainer",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80126e30",
-            "size": 148,
-            "kind": "function",
-            "name": "DeleteOldest__20CDumpObjectContainerb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80126ec4",
-            "size": 8,
-            "kind": "function",
-            "name": "GetFirstDumpObject__20CDumpObjectContainer",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80126ecc",
-            "size": 8,
-            "kind": "function",
-            "name": "GetNextDumpObject__20CDumpObjectContainerP10DumpObject",
-            "evidence": "adjacent-compiler-markers"
-          },
           {
             "address": "0x80126ed4",
             "size": 224,

@@ -1,0 +1,161 @@
+// AI-assisted reconstruction from GR8E69, with Medal of Honor: Frontline as a semantic
+// reference. Part of the original objcreate.cpp; member names are descriptive.
+#include "SceneObjects.h"
+#include "ScriptTimers.h"
+#include <string.h>
+
+extern "C" void *DWI_alloc(const char *, int, int);
+struct LevelFileContentsStruct_;
+enum TLTResourceID { TLTResourceUnknown = 0 };
+// Only the chain to the dump-object count is established.
+struct TLTResource;
+TLTResource *TLT_FindNextResourceByType(TLTResourceID, LevelFileContentsStruct_ *);
+
+class PickupInfo {
+  public:
+    unsigned char unknown00[0x1c];
+    BSObject *script; // +0x1c
+    unsigned char unknown20[4];
+};
+struct DumpObject {
+    CStaticObject *object;
+    PickupInfo pickup; // +0x04
+    int keep;          // +0x28
+    int inUse;         // +0x2c
+    DumpObject *next;  // +0x30
+    DumpObject *previous; // +0x34
+};
+void MarkDumpObjectForDestruction(DumpObject *);
+class CDumpObjectContainer {
+  public:
+    DumpObject *objects; // +0x00
+    DumpObject *first;   // +0x04
+    DumpObject *last;    // +0x08
+    int count;           // +0x0c
+    int capacity;        // +0x10
+    CDumpObjectContainer();
+    ~CDumpObjectContainer();
+    void Reset();
+    void AddDumpObject(CStaticObject *, const PickupInfo &, bool);
+    void DeleteDumpObject(DumpObject *);
+    DumpObject *GetDumpObject(CStaticObject *);
+    DumpObject *AllocateDumpObject();
+    void FreeDumpObject(DumpObject *);
+    DumpObject *GetAvailableObject();
+    DumpObject *DeleteOldest(bool);
+    DumpObject *GetFirstDumpObject();
+    DumpObject *GetNextDumpObject(DumpObject *);
+};
+
+CDumpObjectContainer::CDumpObjectContainer() {
+    first = last = 0;
+    count = 0;
+    capacity = 0;
+}
+
+CDumpObjectContainer::~CDumpObjectContainer() {
+    delete[] objects;
+    objects = 0;
+}
+
+void CDumpObjectContainer::Reset() {
+    if (!objects) {
+        TLTResource *resource = TLT_FindNextResourceByType((TLTResourceID)27, 0);
+        capacity = *(int *)(*(char **)(*(char **)((char *)resource + 8) + 232) + 8);
+        if (!capacity)
+            capacity = 25;
+        objects = (DumpObject *)DWI_alloc("source/ai_script/objcreate.cpp:190", capacity * sizeof(DumpObject), 1024);
+    }
+    memset(objects, 0, capacity * sizeof(DumpObject));
+    first = last = 0;
+    count = 0;
+}
+
+void CDumpObjectContainer::AddDumpObject(CStaticObject *object, const PickupInfo &pickup, bool keep) {
+    DumpObject *dump = AllocateDumpObject();
+    dump->object = object;
+    dump->pickup = pickup;
+    dump->keep = keep;
+    dump->next = 0;
+    dump->previous = last;
+    if (last)
+        last->next = dump;
+    last = dump;
+    if (!first)
+        first = dump;
+    count++;
+}
+
+void CDumpObjectContainer::DeleteDumpObject(DumpObject *dump) {
+    dump->object = 0;
+    if (first == dump) {
+        first = dump->next;
+        if (last == dump)
+            last = 0;
+        else
+            first->previous = 0;
+    } else if (last == dump) {
+        last = dump->previous;
+        last->next = 0;
+    } else {
+        dump->next->previous = dump->previous;
+        dump->previous->next = dump->next;
+    }
+    FreeDumpObject(dump);
+    count--;
+}
+
+DumpObject *CDumpObjectContainer::GetDumpObject(CStaticObject *object) {
+    DumpObject *dump = first;
+    while (dump->object != object) {
+        dump = dump->next;
+        if (!dump)
+            return 0;
+    }
+    return dump;
+}
+
+DumpObject *CDumpObjectContainer::AllocateDumpObject() {
+    DumpObject *dump = GetAvailableObject();
+    if (!dump)
+        dump = DeleteOldest(true);
+    return dump;
+}
+
+void CDumpObjectContainer::FreeDumpObject(DumpObject *dump) { dump->inUse = 0; }
+
+DumpObject *CDumpObjectContainer::GetAvailableObject() {
+    DumpObject *dump = objects;
+    int i;
+    for (i = 0; i < capacity; i++, dump++) {
+        if (!dump->inUse)
+            break;
+    }
+    if (i == capacity)
+        dump = 0;
+    if (dump)
+        dump->inUse = 1;
+    return dump;
+}
+
+DumpObject *CDumpObjectContainer::DeleteOldest(bool reuse) {
+    DumpObject *dump;
+    for (dump = first; dump; dump = dump->next) {
+        if (!dump->keep)
+            break;
+    }
+    if (dump) {
+        if (dump->pickup.script)
+            BSObjectTriggerEvent(dump->pickup.script, 43, 0, 0, true);
+        MarkDumpObjectForDestruction(dump);
+        if (reuse) {
+            dump->inUse = 1;
+            return dump;
+        }
+    }
+    return 0;
+}
+
+DumpObject *CDumpObjectContainer::GetFirstDumpObject() { return first; }
+
+DumpObject *CDumpObjectContainer::GetNextDumpObject(DumpObject *dump) { return dump->next; }
