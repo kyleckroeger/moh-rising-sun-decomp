@@ -1,0 +1,61 @@
+{
+  "id": "shadow_ctor",
+  "source": "src/game/shadow_ctor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800678a8",
+      "size": 188
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029a14c",
+      "size": 8
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.16CCharacterShadow",
+      "address": "0x802e23b0",
+      "size": 40,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "__16CCharacterShadow",
+      "address": "0x800678a8",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "_._16CCharacterShadow",
+      "address": "0x80067918",
+      "size": 76,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Draw__16CCharacterShadowR12CDrawContext": "0x80067d78",
+    "InitData__16CCharacterShadow": "0x800677a4",
+    "IsDrawEnabled__C16CCharacterShadow": "0x80068128",
+    "Release__16CCharacterShadow": "0x8006774c",
+    "__builtin_delete": "0x801a8990"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "shadow.cpp",
+  "original_file_index": 461
+}

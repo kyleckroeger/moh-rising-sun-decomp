@@ -1821,7 +1821,10 @@
     "ai_AIThreatsMakeNoise.json",
     "scene_AnimObjFactoryConstructor.json",
     "scene_ObjCreatePowerup.json",
-    "scene_ObjCreateThrownDelete.json"
+    "scene_ObjCreateThrownDelete.json",
+    "shadow_init.json",
+    "shadow_ctor.json",
+    "shadow_enabled.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

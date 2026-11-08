@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 953380,
+    "matching_code_bytes": 953696,
     "total_executable_code_bytes": 2492032,
-    "percent": 38.257133134727,
+    "percent": 38.26981354974575,
     "categories": {
-      "reconstructed_game": 561164,
+      "reconstructed_game": 561480,
       "restored_library": 392216
     },
-    "matching_functions": 4694
+    "matching_functions": 4700
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -875,7 +875,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "a50089404b1e1fffb66e3544dbe26b94580dc0699e186a51a8d01deaca292a19",
+    "config/GR8E69/project.json": "82788b4b06ff677a30eef9f5e8179b0064bcd143ceaacc0e1a876b715efc048d",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -1423,6 +1423,9 @@
     "config/GR8E69/script_update_player_stats.json": "77cd5bba8d6cb6d25c5dbba6d8d024268f7c3ea39d21909cac18f6aad8fd2c32",
     "config/GR8E69/script_use_binoculars.json": "d8c4e5835a40d963064960f7dcc80dc81004fec7cb851f7d642598fdddeec972",
     "config/GR8E69/script_validation_build.json": "f86d06f3557678d265e7072de1bb03bae84b12db5bf72c6e1f40f8af9e8f0c25",
+    "config/GR8E69/shadow_ctor.json": "eb6578130fce1291c6e416d50babce9804748315e7bfe35ae0b192f3489225ba",
+    "config/GR8E69/shadow_enabled.json": "50baaa0d93b7fb1707e7c75ba80764ef3968e921bf7fd9601e39836905829363",
+    "config/GR8E69/shadow_init.json": "d71042b90fb79cfce1ba7a46ff752d179976bdb0f7a7d69193bd31fd0699251a",
     "config/GR8E69/skybox_class.json": "6382327bdfd3308c3364c6cd96a02b3c8d1e82af96f09447f12c14cac9db21ea",
     "config/GR8E69/skybox_dtor.json": "d67d7fc8b0aebb0429903e6dcdaa65bf32a5f1930b319afc4a4bf8063f1d5e6b",
     "config/GR8E69/sn-library-source.json": "606ef80cd17599d3b7c2833a01c483622529485e2455c15ac76c975ba20507dc",
@@ -2030,6 +2033,7 @@
     "include/game/Camera.h": "c039c4dd37763c5f7980f02f7c88577d9a70f75ff7d329378d64e4c731a12b69",
     "include/game/CameraShake.h": "bc340f06e62f4e47df03cf884281f906b7485c688d276f6c44173bfc2bbb9912",
     "include/game/Capsule.h": "332dd06329ac7dc3ac5fc01793549a41e2defbe70298018accd2ce79c9e3ce3b",
+    "include/game/CharacterShadow.h": "048ae3efc6fd6d3119f4c234f5bacd499c748c55b1573df386f686411e93a67a",
     "include/game/CollisionVolume.h": "26ba5d9a9865a0185f0e87db21b13faf3214b7e213201e825181412f0f9a5b7c",
     "include/game/Color.h": "de545de60e69ea1ed6449833872b54d60ac164fa2d0fa76cc8deb25dc2b58be1",
     "include/game/Compartment.h": "42673c10c8ec7d752aa83871afd544971852c0901840b4643627c8f4d5f29e03",
@@ -2861,6 +2865,9 @@
     "src/game/screen_setclear.cpp": "d1db021539edc57bb1519e4596aab8d380728cc7d63785d3446a80d48edfd416",
     "src/game/screen_tail.cpp": "f1a0401e50a6b75d185547ab60bcf96e3a4b68e64ef64a96c5cb4b579d3922ad",
     "src/game/screen_vsyncs.cpp": "39f4093a78453d2d9cbd31cce143ee637ec6131b77d84ab25ce1c4c1a86065c7",
+    "src/game/shadow_ctor.cpp": "c565b9212141464677adbc4db0ca08a5a73ceea41c3cbb1ab373abbd16c31ae6",
+    "src/game/shadow_enabled.cpp": "bb3b47c8e8ce85ab1f6cbfbd2f5a2410fcce5f462780575ec285f9c921ee2286",
+    "src/game/shadow_init.cpp": "350d0900239aa515ab5abe76f7b0a68c0ae16836c44980818d53a3a3b74e399f",
     "src/game/skybox_class.cpp": "838c453a03ec151b70f404c2067b990fd3671d434f29800d2872a536db5a4e7d",
     "src/game/skybox_dtor.cpp": "79cd2c149b6a96728b91d9c1cc9efad78acd5eb4b5a263517946e0818d940a36",
     "src/game/sprite_ctor.cpp": "aa94e157dcb92e33c29ee871e1f9ffcec9e7f09d5430a2b94654088a59ece6dc",
@@ -40668,6 +40675,60 @@
       "discarded_functions": [],
       "object_sha256": "9172622f090dcfc2d6603e214fc3e70a3131a74e38e761aad0c2c0fc7cad27ac",
       "linked_sha256": "dbb6ba3de3990282aee1fe1cbc29026958ed085bcec5fe07c41e3fde9bdead01"
+    },
+    {
+      "id": "shadow_init",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 88,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "a93573029db76379b135eb83488edf120ae21caf444be4c6c89539dc718fbc85",
+      "linked_sha256": "543360c409558ba8c06e5734ff2ddbedc9af1c5228520e03368a36ef89649d5e"
+    },
+    {
+      "id": "shadow_ctor",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 188,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "bce3b37f913020d6e7d3dbb059e03add6506be3b33f3bf33aad9d845244bea23",
+      "linked_sha256": "b2a1f3355e94386c6fbdd4657d82e925a5be033f246cfe784e0f08d2f238b0c1"
+    },
+    {
+      "id": "shadow_enabled",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 40,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "345816076b0bbe4109fa0be0778a034b743cea999c4c469c04130c8d5d3dadc0",
+      "linked_sha256": "db2ae97c4b9bb953d55a7c1f0ed86e7165067bec77ba69ed05f4c8396f1786c4"
     }
   ],
   "code_map": {
@@ -45334,38 +45395,10 @@
         "file_name": "shadow.cpp",
         "ranges": [
           {
-            "address": "0x8006774c",
-            "size": 84,
-            "kind": "function",
-            "name": "Release__16CCharacterShadow",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800677a0",
-            "size": 4,
-            "kind": "function",
-            "name": "InitClass__16CCharacterShadow",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800677a4",
             "size": 260,
             "kind": "function",
             "name": "InitData__16CCharacterShadow",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800678a8",
-            "size": 112,
-            "kind": "function",
-            "name": "__16CCharacterShadow",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80067918",
-            "size": 76,
-            "kind": "function",
-            "name": "_._16CCharacterShadow",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -45394,20 +45427,6 @@
             "size": 912,
             "kind": "function",
             "name": "Draw__16CCharacterShadowR12CDrawContext",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80068108",
-            "size": 32,
-            "kind": "function",
-            "name": "Update__16CCharacterShadowf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80068128",
-            "size": 8,
-            "kind": "function",
-            "name": "IsDrawEnabled__C16CCharacterShadow",
             "evidence": "adjacent-compiler-markers"
           }
         ],
