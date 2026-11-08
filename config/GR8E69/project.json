@@ -1933,7 +1933,8 @@
     "sound_supmutlf.json",
     "sound_supmutpf.json",
     "sound_sdrv_setpitch.json",
-    "sound_sdrv_setvol.json"
+    "sound_sdrv_setvol.json",
+    "scene_StaticObjectMotionAttempt.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

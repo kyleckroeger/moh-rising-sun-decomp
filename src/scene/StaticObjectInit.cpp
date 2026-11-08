@@ -12,7 +12,7 @@ void CStaticObject::Init() {
     scriptScaleBase = 1.0f;
     velocity.Zero();
     pathState = 0;
-    pathScale = 0.5f;
+    pathTurnSlowdown = 0.5f;
     flags.allowCollisionDamage = 0;
     flags.pathFlag1 = 0;
     maxLightPriority = -1;

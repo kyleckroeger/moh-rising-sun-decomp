@@ -4,7 +4,7 @@
 
 void CStaticObject::BeginPathMotionUpdate(float) {
     pathPosition = transform.GetPos();
-    pathAngle = pathDistance;
+    pathPreviousSpeed = pathSpeed;
     flags.scriptMoving = 1;
     UpdatePathMotionDestAndSpeed();
 }

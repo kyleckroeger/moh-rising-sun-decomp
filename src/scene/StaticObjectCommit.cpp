@@ -16,6 +16,6 @@ void CStaticObject::CommitAnimMotionUpdate() {
 
 void CStaticObject::CommitPathMotionUpdate() {
     pathPosition = transform.GetPos();
-    pathAngle = pathDistance;
+    pathPreviousSpeed = pathSpeed;
     UpdatePathMotionDestAndSpeed();
 }

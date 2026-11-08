@@ -92,8 +92,10 @@ class CStaticObject {
     void TranslateFromScript(const CVector3 &, const CVector3 &, EBSEventEnum);
     void BeginScriptMotionUpdate(float);
     void BeginAnimMotionUpdate(float);
+    void AttemptScriptMotionUpdate(float);
     void AttemptAnimMotionUpdate(float);
     void BeginPathMotionUpdate(float);
+    void AttemptPathMotionUpdate(float);
     void CommitPathMotionUpdate();
     void UpdatePathMotionDestAndSpeed();
     void Destroy();
@@ -169,17 +171,17 @@ class CStaticObject {
     unsigned char unknown_90[0xa0 - 0x90];
     unsigned char lookTraversal[0x30]; // +0xa0; a CAISplinePathTraversal.
     unsigned char pathTraversal[0x30]; // +0xd0; a CAISplinePathTraversal.
-    float pathDistance;   // +0x100; descriptive, copied to +0x230 on commit.
+    float pathSpeed;      // +0x100; the current speed, copied to +0x230 on commit. Descriptive.
     float pathField104;   // +0x104; SetMovementPath stores the speed argument here too.
     float pathMaxSpeed;   // +0x108; name from Frontline.
-    float pathField10c;   // +0x10c
-    float pathScale;      // +0x110; BIFunc_MechSetPathFlag stores value / 100.
+    float pathAcceleration; // +0x10c; descriptive.
+    float pathTurnSlowdown; // +0x110; share of the speed lost at full yaw rate; BIFunc_MechSetPathFlag stores value / 100. Descriptive.
     void *pathFollowTarget; // +0x114; the player while following.
     float pathFollowDistanceSquared; // +0x118
-    float pathField11c;   // +0x11c
-    float pathField120;   // +0x120
-    float pathField124;   // +0x124
-    float pathField128;   // +0x128
+    float pathYawRate;    // +0x11c; descriptive.
+    float pathPitchRate;  // +0x120; descriptive.
+    float pathMaxTurnRate; // +0x124; descriptive.
+    float pathTurnAcceleration; // +0x128; descriptive.
     unsigned int pathState; // +0x12c; cleared by Init. Descriptive.
     IVolume *localVolumeType3; // +0x130; returned for volume type 3.
     // +0x134: GetLocalBoundingVolume's type-0 volume, despite the older field name.
@@ -214,8 +216,8 @@ class CStaticObject {
     int maxLightPriority; // +0x214
     Flags flags;          // +0x218
     unsigned int mechFlags; // +0x21c; bits set and cleared by BIFunc_MechSetFlag.
-    unsigned char unknown_220[0x230 - 0x220];
-    float pathAngle;      // +0x230
+    CVector3 pathDest;    // +0x220; steered toward by AttemptPathMotionUpdate. Name from Frontline.
+    float pathPreviousSpeed; // +0x230; the speed at the start of the update. Descriptive.
     int motionEvent;      // +0x234; PlayAnimation's event.
     int motionFrame;      // +0x238
     int motionEnd;        // +0x23c

@@ -24,12 +24,12 @@ void CStaticObject::SetMovementPath(int path, bool reverse, bool follow, float m
             }
         }
         if (!keepSpeed)
-            pathDistance = 0.0f;
+            pathSpeed = 0.0f;
         pathMaxSpeed = pathField104 = maxSpeed;
-        pathField10c = acceleration;
-        pathField120 = pathField11c = 0.0f;
-        pathField124 = f3;
-        pathField128 = f4;
+        pathAcceleration = acceleration;
+        pathPitchRate = pathYawRate = 0.0f;
+        pathMaxTurnRate = f3;
+        pathTurnAcceleration = f4;
         if (follow) {
             pathState = 3;
             pathFollowTarget = g_scene.GetPlayer(0);
@@ -43,7 +43,7 @@ void CStaticObject::SetMovementPath(int path, bool reverse, bool follow, float m
         else
             pathState = 6;
     } else if (path == -2) {
-        pathDistance = 0.0f;
+        pathSpeed = 0.0f;
         pathState = 0;
         TRAVERSAL->state = 0;
         pathMaxSpeed = 0.0f;

@@ -103,6 +103,11 @@ because a thrown object's table has no `FindAttachNode`.
 `MakeNoise`, the object skipped by the loop is read from a stack structure that is never written in this
 build, so the comparison reads uninitialized memory.
 
+`CStaticObject::AttemptPathMotionUpdate` steers toward `pathDest` at `+0x220` using the yaw and pitch
+rates at `+0x11c` and `+0x120`, limited by `+0x124` and changed by `+0x128` per update. The rotation about
+the x axis is an inline with its own axis local: the axis sits directly below the inline's matrix and the
+position copies in the frame.
+
 ## Parked
 
 These still differ, with instruction differences in brackets; drafts are kept outside the
@@ -111,7 +116,6 @@ tree and a later reader should expect them to be close rather than solved.
 - `CStaticObject::CalculateMovementTime` (27): register allocation of the three times.
 - `CStaticObject::AnimUpdate`: one missing `fmr`, which shifts the rest; the period and its
   conversion share a register in this build.
-- `CStaticObject::AttemptAnimMotionUpdate` (3): one scheduled load.
 - `CStaticObject::StartMotionPlayback` (60): the key-frame temporaries.
 - `CAnimObject::BeginUpdate`, `DetectGround` and `Yaw`: a local's address stays in a saved
   register where the original rematerializes it.
