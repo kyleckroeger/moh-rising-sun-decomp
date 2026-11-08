@@ -1123,6 +1123,7 @@
       "src/scene/StaticFactoryHelmet.cpp": "ff084d7eafcaffce9661725d6440309ff4d6961de6f8a6efa4687e33d8f5ebe4",
       "src/scene/StaticFactoryLookup.cpp": "b1f3e3d38d9117b19ac3af7fc6bc4be4aac0fe822b70fc0e489fa0c79d7ac1ec",
       "src/scene/StaticObjectAccess.cpp": "4226693d4a5aa5a32cce548b3f45086dcf07cf59dcbbdfab749188794913d0fb",
+      "src/scene/StaticObjectAnimBegin.cpp": "e4e9f124ece578fc2cc3f9581b4956db10658767d241ba8dd18be902bd887783",
       "src/scene/StaticObjectAttachedLight.cpp": "ea79e7b7b90fba02effed2b77927e4abe661b535a878658f99e63d767c518437",
       "src/scene/StaticObjectAttempt.cpp": "ec21bf0a48006ef9bcf8b6b47aa99b91ee12d7591fc47018d30d64239d09f14d",
       "src/scene/StaticObjectBeginUpdate.cpp": "d3a10033d7c1385f491e5e246b3c53d484af333209158a9619297c894747f96c",
@@ -1132,8 +1133,10 @@
       "src/scene/StaticObjectInit.cpp": "261c714a8f961bcb89a40e8d32bbb2999d08d55fd02043e979aa7e3c0300b8ed",
       "src/scene/StaticObjectMotionAttempt.cpp": "4ff9cd6aaef98c8e928d18de7f796eec080b1796ad110e1eec442e39e73814eb",
       "src/scene/StaticObjectMotionFlags.cpp": "f8eb79d96fb7f062de179fae0b006790a50c5ff4f81497c6f40767b0e67b5b9e",
+      "src/scene/StaticObjectMotionPlayback.cpp": "81078e9c868bb9cd77ec1779fe67fe7ed5f63757c2b1a4050558d557cfafb1d5",
       "src/scene/StaticObjectMovementPath.cpp": "6b6698b9a6c4675a29b322d34d955db298f63b5b930fdc3bc473ae5265e977b8",
       "src/scene/StaticObjectPathBegin.cpp": "d83208310662ca63ac0580501d604bd72bfcef78ab662a536d4e54ff8342f5db",
+      "src/scene/StaticObjectPathDest.cpp": "c5d7c51bd38cd2cacd1769e67ece3adc654dc21b682d8af2049c4def3fe40de5",
       "src/scene/StaticObjectPlayAnimation.cpp": "775ab2a935dd26c9c5630f9de852e447c0df21783b918e499ba187986445f48f",
       "src/scene/StaticObjectScale.cpp": "7f01471eba39bdaf0a87c5fd431722d6174ea0ddfe3a412f0a35bfde718f1abe",
       "src/scene/StaticObjectScriptBegin.cpp": "1b8b845c23ab4f36d48e44c57f0bab1b657ba178274b2a709e24e2e4f13f8a32",
@@ -2306,7 +2309,7 @@
       "include/game/PropertyData.h": "952ae5ac78dc17e43053a7b905a8e58499a1faa3c7d0721269329f639095b22a",
       "include/game/Rcmp.h": "9f0b3fe189c690b8ee358797a865f8e6172f48640e9fc998e332061823b08cb2",
       "include/game/SceneNode.h": "0cec8ca3cf3e8302715836d269ca26ed943150907b80ac65b531b866f7e58e2c",
-      "include/game/SceneObjects.h": "04935be17318a34f5376c9d00f0712e49f9182cf47cb43acfad7119f9328a278",
+      "include/game/SceneObjects.h": "ac7eb88fdf54356d9511dda6822a38233e0255fb3d4672b561b91671fa1a3847",
       "include/game/Screen.h": "b4e501afbd3363469c5420dbf4e790d4f0f8a1f98932efc7fee4f7786818cd7c",
       "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
       "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
@@ -3394,7 +3397,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "41617dea552f7293a9ff5cf023c9c6d618d4b978d2c49ea8635329e698817f5f",
+      "config/GR8E69/project.json": "36983fe79c2596d18a3e46d68c4eba4912bab454e64895a74dd1d436d806a152",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -3504,6 +3507,7 @@
       "config/GR8E69/scene_StaticFactoryHelmet.json": "a83de3ff3dcccc988ad62a4a625a135b5db95730e82708bce68db5b4bc1854be",
       "config/GR8E69/scene_StaticFactoryLookup.json": "ed24c612b9bc8bcc1f742b63be0da9214d538c873cff0c71f1eac051c18740ec",
       "config/GR8E69/scene_StaticObjectAccess.json": "18b4299dfbcd360de3492e1e678113d6a340ac80c2b52111cac031fae788a90a",
+      "config/GR8E69/scene_StaticObjectAnimBegin.json": "ba470a41d5243eb23155a03d9e9c2c8b77af2153bbc13838b3ae479b9d79b6a2",
       "config/GR8E69/scene_StaticObjectAttachedLight.json": "e50794d3d13fd901e01d342c36172d7d258e0b4966afa2af388442509d29c197",
       "config/GR8E69/scene_StaticObjectAttempt.json": "dc7f390dbf973c92a7b15aa21913570c31e6a25dd4f99f419b28d3410c359e94",
       "config/GR8E69/scene_StaticObjectBeginUpdate.json": "257dd8cdfffc984fc58a7038b0f361af42d69381caf424392118d7b2e4a8a4da",
@@ -3513,8 +3517,10 @@
       "config/GR8E69/scene_StaticObjectInit.json": "7d70b52aeb5b03904740d33c60919683f90f5e732ec344edba77a3646c59c11a",
       "config/GR8E69/scene_StaticObjectMotionAttempt.json": "bef8aeb6553ecaa36fc7bec127f30aebe8d2bd69f34614af96859553cee17af3",
       "config/GR8E69/scene_StaticObjectMotionFlags.json": "116d77e8139aef5a900c688f0864eea3c07d32756546d5330ced0f33f0d86cac",
+      "config/GR8E69/scene_StaticObjectMotionPlayback.json": "05819256a3a90d6cc58ee09d8f0b96cb0553e08f13afd0ec3153e7d749d61d30",
       "config/GR8E69/scene_StaticObjectMovementPath.json": "0940bd42e385bcfcfdcc0524c35c7e4cb642fc5d8d222a19848ad4c4e785b491",
       "config/GR8E69/scene_StaticObjectPathBegin.json": "8df320cfed6c9d1cca190a1abc3ac42a07d2e5e3b4e2b5fbb7c5f68f728a8f33",
+      "config/GR8E69/scene_StaticObjectPathDest.json": "151285911ef35fc3668568c919c58e7a2ae76d75f05757df0fde941ba3c58aeb",
       "config/GR8E69/scene_StaticObjectPlayAnimation.json": "22d5b212b78e08ed55ebe676d8b885e04ad1faf2176ec6103367b1b76186caa8",
       "config/GR8E69/scene_StaticObjectScale.json": "82ec550e4b3649995987aa5b88a3d81015f9bedd8795d71a463d1a484ea8185a",
       "config/GR8E69/scene_StaticObjectScriptBegin.json": "bbd24dfbf7a57bb7647620afb77e1db5eaa19c8088849f1e69bd71149b775060",
@@ -4792,14 +4798,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1022444,
+    "matching_code_bytes": 1025656,
     "total_executable_code_bytes": 2492032,
-    "percent": 41.02852611844471,
+    "percent": 41.15741691920489,
     "categories": {
-      "reconstructed_game": 630228,
+      "reconstructed_game": 633440,
       "restored_library": 392216
     },
-    "matching_functions": 4999
+    "matching_functions": 5002
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -5709,7 +5715,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "41617dea552f7293a9ff5cf023c9c6d618d4b978d2c49ea8635329e698817f5f",
+    "config/GR8E69/project.json": "36983fe79c2596d18a3e46d68c4eba4912bab454e64895a74dd1d436d806a152",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -5819,6 +5825,7 @@
     "config/GR8E69/scene_StaticFactoryHelmet.json": "a83de3ff3dcccc988ad62a4a625a135b5db95730e82708bce68db5b4bc1854be",
     "config/GR8E69/scene_StaticFactoryLookup.json": "ed24c612b9bc8bcc1f742b63be0da9214d538c873cff0c71f1eac051c18740ec",
     "config/GR8E69/scene_StaticObjectAccess.json": "18b4299dfbcd360de3492e1e678113d6a340ac80c2b52111cac031fae788a90a",
+    "config/GR8E69/scene_StaticObjectAnimBegin.json": "ba470a41d5243eb23155a03d9e9c2c8b77af2153bbc13838b3ae479b9d79b6a2",
     "config/GR8E69/scene_StaticObjectAttachedLight.json": "e50794d3d13fd901e01d342c36172d7d258e0b4966afa2af388442509d29c197",
     "config/GR8E69/scene_StaticObjectAttempt.json": "dc7f390dbf973c92a7b15aa21913570c31e6a25dd4f99f419b28d3410c359e94",
     "config/GR8E69/scene_StaticObjectBeginUpdate.json": "257dd8cdfffc984fc58a7038b0f361af42d69381caf424392118d7b2e4a8a4da",
@@ -5828,8 +5835,10 @@
     "config/GR8E69/scene_StaticObjectInit.json": "7d70b52aeb5b03904740d33c60919683f90f5e732ec344edba77a3646c59c11a",
     "config/GR8E69/scene_StaticObjectMotionAttempt.json": "bef8aeb6553ecaa36fc7bec127f30aebe8d2bd69f34614af96859553cee17af3",
     "config/GR8E69/scene_StaticObjectMotionFlags.json": "116d77e8139aef5a900c688f0864eea3c07d32756546d5330ced0f33f0d86cac",
+    "config/GR8E69/scene_StaticObjectMotionPlayback.json": "05819256a3a90d6cc58ee09d8f0b96cb0553e08f13afd0ec3153e7d749d61d30",
     "config/GR8E69/scene_StaticObjectMovementPath.json": "0940bd42e385bcfcfdcc0524c35c7e4cb642fc5d8d222a19848ad4c4e785b491",
     "config/GR8E69/scene_StaticObjectPathBegin.json": "8df320cfed6c9d1cca190a1abc3ac42a07d2e5e3b4e2b5fbb7c5f68f728a8f33",
+    "config/GR8E69/scene_StaticObjectPathDest.json": "151285911ef35fc3668568c919c58e7a2ae76d75f05757df0fde941ba3c58aeb",
     "config/GR8E69/scene_StaticObjectPlayAnimation.json": "22d5b212b78e08ed55ebe676d8b885e04ad1faf2176ec6103367b1b76186caa8",
     "config/GR8E69/scene_StaticObjectScale.json": "82ec550e4b3649995987aa5b88a3d81015f9bedd8795d71a463d1a484ea8185a",
     "config/GR8E69/scene_StaticObjectScriptBegin.json": "bbd24dfbf7a57bb7647620afb77e1db5eaa19c8088849f1e69bd71149b775060",
@@ -7041,7 +7050,7 @@
     "include/game/PropertyData.h": "952ae5ac78dc17e43053a7b905a8e58499a1faa3c7d0721269329f639095b22a",
     "include/game/Rcmp.h": "9f0b3fe189c690b8ee358797a865f8e6172f48640e9fc998e332061823b08cb2",
     "include/game/SceneNode.h": "0cec8ca3cf3e8302715836d269ca26ed943150907b80ac65b531b866f7e58e2c",
-    "include/game/SceneObjects.h": "04935be17318a34f5376c9d00f0712e49f9182cf47cb43acfad7119f9328a278",
+    "include/game/SceneObjects.h": "ac7eb88fdf54356d9511dda6822a38233e0255fb3d4672b561b91671fa1a3847",
     "include/game/Screen.h": "b4e501afbd3363469c5420dbf4e790d4f0f8a1f98932efc7fee4f7786818cd7c",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
     "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
@@ -8341,6 +8350,7 @@
     "src/scene/StaticFactoryHelmet.cpp": "ff084d7eafcaffce9661725d6440309ff4d6961de6f8a6efa4687e33d8f5ebe4",
     "src/scene/StaticFactoryLookup.cpp": "b1f3e3d38d9117b19ac3af7fc6bc4be4aac0fe822b70fc0e489fa0c79d7ac1ec",
     "src/scene/StaticObjectAccess.cpp": "4226693d4a5aa5a32cce548b3f45086dcf07cf59dcbbdfab749188794913d0fb",
+    "src/scene/StaticObjectAnimBegin.cpp": "e4e9f124ece578fc2cc3f9581b4956db10658767d241ba8dd18be902bd887783",
     "src/scene/StaticObjectAttachedLight.cpp": "ea79e7b7b90fba02effed2b77927e4abe661b535a878658f99e63d767c518437",
     "src/scene/StaticObjectAttempt.cpp": "ec21bf0a48006ef9bcf8b6b47aa99b91ee12d7591fc47018d30d64239d09f14d",
     "src/scene/StaticObjectBeginUpdate.cpp": "d3a10033d7c1385f491e5e246b3c53d484af333209158a9619297c894747f96c",
@@ -8350,8 +8360,10 @@
     "src/scene/StaticObjectInit.cpp": "261c714a8f961bcb89a40e8d32bbb2999d08d55fd02043e979aa7e3c0300b8ed",
     "src/scene/StaticObjectMotionAttempt.cpp": "4ff9cd6aaef98c8e928d18de7f796eec080b1796ad110e1eec442e39e73814eb",
     "src/scene/StaticObjectMotionFlags.cpp": "f8eb79d96fb7f062de179fae0b006790a50c5ff4f81497c6f40767b0e67b5b9e",
+    "src/scene/StaticObjectMotionPlayback.cpp": "81078e9c868bb9cd77ec1779fe67fe7ed5f63757c2b1a4050558d557cfafb1d5",
     "src/scene/StaticObjectMovementPath.cpp": "6b6698b9a6c4675a29b322d34d955db298f63b5b930fdc3bc473ae5265e977b8",
     "src/scene/StaticObjectPathBegin.cpp": "d83208310662ca63ac0580501d604bd72bfcef78ab662a536d4e54ff8342f5db",
+    "src/scene/StaticObjectPathDest.cpp": "c5d7c51bd38cd2cacd1769e67ece3adc654dc21b682d8af2049c4def3fe40de5",
     "src/scene/StaticObjectPlayAnimation.cpp": "775ab2a935dd26c9c5630f9de852e447c0df21783b918e499ba187986445f48f",
     "src/scene/StaticObjectScale.cpp": "7f01471eba39bdaf0a87c5fd431722d6174ea0ddfe3a412f0a35bfde718f1abe",
     "src/scene/StaticObjectScriptBegin.cpp": "1b8b845c23ab4f36d48e44c57f0bab1b657ba178274b2a709e24e2e4f13f8a32",
@@ -48138,6 +48150,60 @@
       "discarded_functions": [],
       "object_sha256": "0d4a49fbb2c042fceabc66af00700fc9fe04cf031934857b9c6e7eda63d79ffe",
       "linked_sha256": "b97500a3d82990d624a22acb143efa720e812bdaefaca09056e25381bca35bac"
+    },
+    {
+      "id": "scene_StaticObjectAnimBegin",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 1380,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e20f42013277aff3968247584cc95c761bd68d727726b149a4ccb92e21ef7d77",
+      "linked_sha256": "ceaf51ca08afaea2a71dcc116c7487992f35ce701fa8733e2caf7dca0dc1f730"
+    },
+    {
+      "id": "scene_StaticObjectMotionPlayback",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 532,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "d7cd8abb8cd48ab987b9b67cbd237478e173967c4d772f6238bd12cf42566943",
+      "linked_sha256": "89aeb64c086397b99c211c82727ca889151889a724e36569b497d22e628fd519"
+    },
+    {
+      "id": "scene_StaticObjectPathDest",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 1300,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "3d6630c890c11e8319922f48fa90f3983378eca2f92f06acd37a813b409bc2db",
+      "linked_sha256": "b5ad680690cc772ca80bbc580801c2733999b5436a51e3b8baf5afd2dbb25efc"
     }
   ],
   "code_map": {
@@ -58738,13 +58804,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800a6724",
-            "size": 1380,
-            "kind": "function",
-            "name": "BeginAnimMotionUpdate__13CStaticObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800a829c",
             "size": 844,
             "kind": "function",
@@ -58780,13 +58839,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800a9170",
-            "size": 532,
-            "kind": "function",
-            "name": "StartMotionPlayback__13CStaticObjectii12EBSEventEnum",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800a93a4",
             "size": 464,
             "kind": "function",
@@ -58805,13 +58857,6 @@
             "size": 984,
             "kind": "function",
             "name": "HandleBulletCollision__13CStaticObjectP7CBulletRC10CCollision",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800aa034",
-            "size": 1300,
-            "kind": "function",
-            "name": "UpdatePathMotionDestAndSpeed__13CStaticObject",
             "evidence": "adjacent-compiler-markers"
           },
           {

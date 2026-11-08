@@ -138,6 +138,7 @@ class CStaticObject {
     int IsVisible(CDrawContext &) const;
     void AttemptUpdate(float);
     void CommitUpdate();
+    void StartMotionPlayback(int, int, EBSEventEnum);
     void StopMotionPlayback();
     void ModifyMotionData(MotionData *);
     void SetMovementPath(int, bool, bool, float, float, float, float, BSObject *, float, bool);

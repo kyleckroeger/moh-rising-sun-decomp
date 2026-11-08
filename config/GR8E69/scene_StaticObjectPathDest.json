@@ -1,0 +1,50 @@
+{
+  "id": "scene_StaticObjectPathDest",
+  "source": "src/scene/StaticObjectPathDest.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800aa034",
+      "size": 1300
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029eca8",
+      "size": 44
+    }
+  ],
+  "functions": [
+    {
+      "name": "UpdatePathMotionDestAndSpeed__13CStaticObject",
+      "address": "0x800aa034",
+      "size": 1300,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DistanceSquared__C8CVector3RC8CVector3": "0x8007bdac",
+    "GetFinalPointForward__22CAISplinePathTraversalP8CVector3": "0x800e073c",
+    "GetNextPointForward__22CAISplinePathTraversalRC8CVector3T1P8CVector3P8BSObjectP19CAISplinePathModuleP18CAIAreaPathFinding": "0x800e03f4",
+    "TriggerScriptEvent__13CStaticObjectUsPvb": "0x800aa98c",
+    "g_GameSettings": "0x802f80c8",
+    "sqrtf": "0x80270538"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "static_obj.cpp",
+  "original_file_index": 833
+}

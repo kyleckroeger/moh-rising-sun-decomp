@@ -112,6 +112,11 @@ A motion key frame is 32 bytes: a position vector, then a rotation quaternion at
 `CHierObject::BeginAnimMotionUpdate` measures the distance to the next key once per key and stores it times
 60 over the key length at `+0x288`, remembering the key at `+0x28c`.
 
+`CStaticObject::UpdatePathMotionDestAndSpeed` runs the path states: 2 and 3 steer along the traversal, 4
+brakes to the final point and raises script event 53 on arrival. State 3 keeps the object level with
+`pathFollowTarget`, adjusting the wanted speed by the signed gap; mission 4 stage 2 lets it reverse. States 5
+and 6 stop the object, and a stopped state 6 becomes state 1.
+
 ## Parked
 
 These still differ, with instruction differences in brackets; drafts are kept outside the
@@ -120,7 +125,6 @@ tree and a later reader should expect them to be close rather than solved.
 - `CStaticObject::CalculateMovementTime` (27): register allocation of the three times.
 - `CStaticObject::AnimUpdate`: one missing `fmr`, which shifts the rest; the period and its
   conversion share a register in this build.
-- `CStaticObject::StartMotionPlayback` (60): the key-frame temporaries.
 - `CAnimObject::BeginUpdate`, `DetectGround` and `Yaw`: a local's address stays in a saved
   register where the original rematerializes it.
 - `CHierObject::GetWorldLinearVelocity` (19): register choice.
