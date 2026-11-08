@@ -268,7 +268,15 @@ selects the requested frame, draws, then returns to frame 0.
 
 Not reconstructed: `Init`, `InitAnimatedTexturesOnly`, the texture registration functions,
 `SetAllShapesClamped`, the destructors (which emit the class table), `InitClass`, `GetBasis`,
-the base `Draw` and `DrawMesh`, `IsVisible`, and the inline virtual accessors.
+and the inline default constructor.
+
+`CStaticMesh::Draw` queues one command per mesh part. The first part sorts by its own address and
+the second by its view depth squared, capped at 1000000 and scaled by 256. `DrawMesh` sets the
+light block from the command's node and writes the part's `ComputationIndex::ComputationIndex`
+variables only when the mode differs from the one recorded at `+0x10` or `+0x14`. `IsVisible` tests
+both parts' bounding spheres through a virtual slot of `CDrawContext`, whose table pointer is at
+`+0x224`. The slot's name is inferred. `Draw` passes the address of the context's `+0xc0` member to
+`EAGL::Transform::BuildMatrix`, while `DrawMesh` loads the same member as a matrix pointer.
 
 ## CFader
 

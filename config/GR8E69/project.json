@@ -1964,7 +1964,10 @@
     "sound_sdspmix_pan.json",
     "sound_sdspmix_init.json",
     "sound_sdspmix_update.json",
-    "sound_satospkr_vol.json"
+    "sound_satospkr_vol.json",
+    "mesh_draw.json",
+    "mesh_vis.json",
+    "mesh_light.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

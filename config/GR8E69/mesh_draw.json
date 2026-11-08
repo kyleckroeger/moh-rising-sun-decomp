@@ -1,0 +1,63 @@
+{
+  "id": "mesh_draw",
+  "source": "src/staticmesh/mesh_draw.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8019f3c8",
+      "size": 668
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b5dd8",
+      "size": 44
+    }
+  ],
+  "functions": [
+    {
+      "name": "Draw__11CStaticMeshR12CDrawContextiUi11ERenderBinsT4",
+      "address": "0x8019f3c8",
+      "size": 356,
+      "binding": 1
+    },
+    {
+      "name": "DrawMesh__11CStaticMeshR12CDrawContextPPv",
+      "address": "0x8019f52c",
+      "size": 312,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddCommand__12CDrawContext11ERenderBinsRC11DrawCommand": "0x8012ea14",
+    "BuildMatrix__Q24EAGL9TransformPC7MATRIX4": "0x801e21dc",
+    "Draw__Q24EAGL5ModelRC7MATRIX4": "0x801da0ac",
+    "IsModifiable__CQ34EAGL5Model8Variable": "0x801dae24",
+    "RebindAnimatedTextures__11CStaticMesh": "0x8019f368",
+    "SetLightBlock__6CLightP14BPDLightVolumeP12CDrawContextf": "0x8012f6dc",
+    "TransformPoint__CQ24EAGL9TransformRC6COORD3R6COORD3": "0x801e1ad0",
+    "find_end__CQ34EAGL5Model13VariableTablePCc": "0x801da9fc",
+    "find_first__CQ34EAGL5Model13VariableTablePCc": "0x801dad94",
+    "g_NearClip": "0x802c5d24"
+  },
+  "local_externals": [
+    "g_NearClip"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "staticmesh.cpp",
+  "original_file_index": 2056
+}

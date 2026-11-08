@@ -28,6 +28,7 @@ class LightColor {
 // IObserver prefix and the matrix, and after the radius, is not established.
 class CLight : public IMovingSceneNode {
   public:
+    static void SetLightBlock(BPDLightVolume *, CDrawContext *, float);
     unsigned char unknown_18[0x40 - 0x18];
     CMatrix localToWorld;
     CMatrix attachTransform;  // Multiplied by the parent's world matrix in BeginUpdate.

@@ -19,7 +19,7 @@
     {
       "name": ".text",
       "address": "0x8014ac08",
-      "size": 44
+      "size": 128
     }
   ],
   "functions": [
@@ -40,11 +40,15 @@
       "address": "0x8014ac28",
       "size": 12,
       "binding": 1
+    },
+    {
+      "name": "IsNodeInScene__C6CScenePC10ISceneNode",
+      "address": "0x8014ac34",
+      "size": 84,
+      "binding": 1
     }
   ],
   "externals": {},
   "discarded_functions": [],
-  "undefined_in_discarded_code": [],
-  "original_file": "scene.cpp",
-  "original_file_index": 1338
+  "undefined_in_discarded_code": []
 }

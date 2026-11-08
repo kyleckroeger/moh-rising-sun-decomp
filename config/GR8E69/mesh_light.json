@@ -1,0 +1,56 @@
+{
+  "id": "mesh_light",
+  "source": "src/staticmesh/mesh_light.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8019fa70",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "EnableLighting__11CStaticMeshb",
+      "address": "0x8019fa70",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "EnableFogging__11CStaticMeshb",
+      "address": "0x8019fa78",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "IsLightingEnabled__11CStaticMesh",
+      "address": "0x8019fa80",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "IsFoggingEnabled__11CStaticMesh",
+      "address": "0x8019fa88",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "staticmesh.cpp",
+  "original_file_index": 2056
+}

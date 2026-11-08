@@ -40,6 +40,7 @@ public:
     void InitAnimatedTexturesOnly();
     void RebindAnimatedTextures();
     void GetCenter(CVector3 &center) const;
+    static void DrawMesh(CDrawContext &context, void **parameters);
     void GetBasis(CVector3 &right, CVector3 &up, CVector3 &front) const;
     virtual ~CStaticMesh();
     virtual void Update(float elapsed);
