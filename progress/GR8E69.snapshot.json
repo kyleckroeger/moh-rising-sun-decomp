@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 955740,
+    "matching_code_bytes": 956524,
     "total_executable_code_bytes": 2492032,
-    "percent": 38.35183496841132,
+    "percent": 38.38329523858442,
     "categories": {
-      "reconstructed_game": 563524,
+      "reconstructed_game": 564308,
       "restored_library": 392216
     },
-    "matching_functions": 4709
+    "matching_functions": 4713
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -144,6 +144,7 @@
     "config/GR8E69/ai_AITankObjectC.json": "833fd5caca4fc8577ab77c8f11b76950b04942162058f6d56392b08423370865",
     "config/GR8E69/ai_AITankObjectD.json": "5c92c1ea302426601af352e931c5823c744898a4032b45f381ca6666d5d12a70",
     "config/GR8E69/ai_AIThreatsMakeNoise.json": "b06c11964d7ac075ffc0cb708f944422c029373acdefbf93b664fb0fe46dc290",
+    "config/GR8E69/ai_AIThreatsNoiseEvent.json": "f1926faf7a7b46c026848b4f3693067c9cb15971933ded3220769db7eea1a84f",
     "config/GR8E69/ai_filter_clock.json": "f2034db8752a041debc3e5f86662b062dae08812cf71d3c95f66f339dbd705b1",
     "config/GR8E69/ai_filter_splines.json": "26b024e231fa1eb564b501c3108a8fb71d50e76cdc7ad97470e83b7b39b7fbde",
     "config/GR8E69/ai_locomotion_access.json": "a561dbd2e9dc1e3932ea24b9e503dd28adac5b45f786bacaa0dd26e3f5cc6154",
@@ -875,7 +876,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "cdda642dc596f125f7def1b472dfe4548f2b6d269560e745abefb3b730102336",
+    "config/GR8E69/project.json": "365f128a96876ed939587141785055460cf04372cf98b34fb2a856530dbe1c71",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -945,11 +946,14 @@
     "config/GR8E69/scene_ObjCreatePoolA.json": "0b85d17eac6bacc2ef1efc5a628d9edb7dfc72aec63191973165f57b8d1e0456",
     "config/GR8E69/scene_ObjCreatePoolB.json": "00569bf051aaea6b0549efed6a945e9f83c3e80f3ecac73436c2ee4f4c68ec80",
     "config/GR8E69/scene_ObjCreatePowerup.json": "3090de12cd0c3ec4241b0c3c00fa1c34972bc796c8f7fe1bd1fb8dd3f295c8d4",
+    "config/GR8E69/scene_ObjCreateSubHierAnim.json": "7058a1cb8cf282333d0af0d2c9fbe1c5a20f522e318f092539d88fb5ac5744c1",
     "config/GR8E69/scene_ObjCreateThrownDelete.json": "c82033e0b1c422136ba230d1675da05aeb0e585b79a96c952ecc707995899ec5",
     "config/GR8E69/scene_SoldierAI.json": "c85b0dbcc085ed3bcb2baee74d13b9bec64222b734018638d2e390df12c641a6",
     "config/GR8E69/scene_SoldierAim.json": "258da4ac98e51720b964a139b518ae408bc9440f87d263088874dea7e08adb21",
     "config/GR8E69/scene_SoldierAttachMatrix.json": "fa659916cc9f7ae38c8d46a81039e6d2073660d785bad010751381a940223efa",
+    "config/GR8E69/scene_SoldierCleanUp.json": "03385d41dd6fd148b6722017e84408167d4d46c66fa6954a73a198340e67ae32",
     "config/GR8E69/scene_SoldierDestroy.json": "ce4a9f42fc79a7d1ec79c57323199fe3ceef76fc09037cff96c225d455a4ebd4",
+    "config/GR8E69/scene_SoldierDetach.json": "a699f14bca366462ecf45085189e8684b7143a5dbe8372305d4f4bc2ebbfe503",
     "config/GR8E69/scene_SoldierDoodad.json": "a0b964b9ad631e53a47f789392d8b6c5d4964eafe4d12289fa7877c138c0b8ec",
     "config/GR8E69/scene_SoldierFaceState.json": "9b28e10700c390ec797b4a75fb4345e35e19c7230dfba7939a09315b901e749b",
     "config/GR8E69/scene_SoldierFade.json": "c03a22c5ea1bdfcad3b3d869daa003bf2da46506885175e2112d756ed26a61e9",
@@ -2338,6 +2342,7 @@
     "src/ai/AITankObjectC.cpp": "3a017317124cc3af0802c29a7344830e4110956dd30c48cf6b55a6ea99c37ea2",
     "src/ai/AITankObjectD.cpp": "1d48f7210ac6083554bb04559b38da035c0101862b0202ce9e65b5ef7df36f7f",
     "src/ai/AIThreatsMakeNoise.cpp": "7bee718b455cdad488a5bd94fe4b89a14920f44fae951c91f5e2d53dc40f5c7a",
+    "src/ai/AIThreatsNoiseEvent.cpp": "d2e839aac6237e303a88e27ee5996125f76cf10713ebc8ef02bf8e5e0d7ae2cb",
     "src/ai/GrenadeResponseQueries.cpp": "c69240fd532d35c3cd178969bbafd94bb6c3202d155ba8437e716d4f7ee4b2c9",
     "src/ai/cover_flags.cpp": "70759f9875d7c34dbd0bae1737558f8bb0b0ff16498366b6528906e461242cb2",
     "src/ai/cover_invalidate.cpp": "59768695622932fd51e91523bfc0248c905726f09bd5fc168ef28150df4c7dc8",
@@ -3338,6 +3343,7 @@
     "src/scene/ObjCreatePoolA.cpp": "4bf0385ac5f296380009e8ea2c1da1bf99ba2453fe69333c50b36ef16bfe222b",
     "src/scene/ObjCreatePoolB.cpp": "2475fa2a3d92c31d5136d619a5ba52c0b29087914dce9f05f3d872a8dab9bead",
     "src/scene/ObjCreatePowerup.cpp": "6334391a79f4a019f7a0120cb741dd9e7c0bf37c2fd2241517cee1f01c663a94",
+    "src/scene/ObjCreateSubHierAnim.cpp": "a51a3f72286b25589865821f6edf9ecd6b48e8d207edd564119798e8bc1f5094",
     "src/scene/ObjCreateThrownDelete.cpp": "c3bc5990878ec599e3a9b3f88fffcfe8c9bc0b2a590a2565470019fabc8fcff8",
     "src/scene/SceneNodeAxisDefaults.cpp": "2e62b6f3b3302ff27d6350acc7376566f9bc0cb72383e1f54fbd95b185f6cbf6",
     "src/scene/SceneNodeCentroid.cpp": "7899f0a92f618aa7efeb10ddc99112cdcd045c7bd512476fd59c316b3a449af7",
@@ -3349,7 +3355,9 @@
     "src/scene/SoldierAI.cpp": "448e24d2d80058b7b635bd9be04fe4d928fc087f13da1c2241079216998596ef",
     "src/scene/SoldierAim.cpp": "73a95aa7f90e1a8dbbbe40d1c327be29145148b01a5eb810fb42f90ac5d82036",
     "src/scene/SoldierAttachMatrix.cpp": "c64ba18a738d38ef68ccb0031caddb77d39e521ff8578c426f70550afddd5e80",
+    "src/scene/SoldierCleanUp.cpp": "c1cc34910e0c71992988029d11736802a60210bfdd8b4a4e9ebf5c7b93ba7619",
     "src/scene/SoldierDestroy.cpp": "d4536faba697530313a673cbe2a7a5b5123f90325e5de7bfa82a627255ad4c23",
+    "src/scene/SoldierDetach.cpp": "e559b5714d39ee194a46a9a75581f1d4e8d9acd6bf71c440cef16e1c28b58d6e",
     "src/scene/SoldierDoodad.cpp": "68ce34926a382166eff8893f3d3d03052bcf581c84118d77b756b733e3193d20",
     "src/scene/SoldierFaceState.cpp": "033a5cc89299ea84492742fe6eb0e0610f19705f0a5dc1c17ce53994cda6c864",
     "src/scene/SoldierFade.cpp": "86ee08176d76986c82f7a597f69139f89a25ecce907744c1569bfa79eb1a608f",
@@ -40876,6 +40884,78 @@
       "discarded_functions": [],
       "object_sha256": "1541851f5f200382430252305fc80292086c79b3d3a189ca30a32c49dfac7170",
       "linked_sha256": "dddb4e04a62c235104df5e0a373d6166e7f5e91a3c5597727d4df6f22a730ce6"
+    },
+    {
+      "id": "scene_ObjCreateSubHierAnim",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 272,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "ff6065798eab70cb6e9ba606bf1d4437fa14bf7f261d46280c6e23ef35049a82",
+      "linked_sha256": "3ccd642115ccd0418c77e1be522611867d447b194198fade078c1ef26197e646"
+    },
+    {
+      "id": "ai_AIThreatsNoiseEvent",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 56,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "fc8091bce867d9c22c2c21a329082b6f4878077345b1f03e37a03a684d810d89",
+      "linked_sha256": "e02f2c70bf2f612e3597156459466dc54b43a6150b9d85a663f0f9aad0c1320f"
+    },
+    {
+      "id": "scene_SoldierCleanUp",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 272,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "155e6dcce49ca877c73cf02a508b615b25c28496995354317de28d9b51fd4e39",
+      "linked_sha256": "9adfddb266c48025464840c0d4b9a41313e4c89bd3d26b483e058cc8ca8a3e04"
+    },
+    {
+      "id": "scene_SoldierDetach",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 184,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "bac8099f06dcd55079e94bbaa73883c5a03975fcc1292071fe5fc78a9d9e5861",
+      "linked_sha256": "85385981ff099d0776ba7c9f191e7c28d682f570bb2c1d8e96bc863aed9e081f"
     }
   ],
   "code_map": {
@@ -52423,13 +52503,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800bc704",
-            "size": 272,
-            "kind": "function",
-            "name": "CleanUp__14CSoldierObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800bc948",
             "size": 444,
             "kind": "function",
@@ -52581,13 +52654,6 @@
             "size": 328,
             "kind": "function",
             "name": "AttachObject__14CSoldierObjectP13CStaticObjectPci",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c08cc",
-            "size": 184,
-            "kind": "function",
-            "name": "DetachObject__14CSoldierObjectPc",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -57672,13 +57738,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800f3ffc",
-            "size": 56,
-            "kind": "function",
-            "name": "NoiseTypeToEvent__Fi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800f4260",
             "size": 516,
             "kind": "function",
@@ -58914,13 +58973,6 @@
             "size": 1548,
             "kind": "function",
             "name": "CreateSubHierObject__FP11CHierObjectiiUiii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012a0a8",
-            "size": 272,
-            "kind": "function",
-            "name": "CreateSubHierAnimObject__FP11CHierObjectiiUiiii",
             "evidence": "adjacent-compiler-markers"
           },
           {

@@ -104,9 +104,9 @@ tree and a later reader should expect them to be close rather than solved.
   register where the original rematerializes it.
 - `CHierObject::GetWorldLinearVelocity` (19): register choice.
 - `AllocateBoxVolume`: needs `CVolBox` data members that `Box.h` does not declare.
-- `CSoldierObject::CleanUp`, `DetachObject` and `GetBulletEmitterMatrix`: the original
-  computes attach-slot addresses as `(this + i * 112) + offset`; no array or pointer form
-  tried reproduces it.
+- `CSoldierObject::GetBulletEmitterMatrix`: the original computes attach-slot addresses as
+  `(this + i * 112) + offset`. `CleanUp` and `DetachObject` reproduce that with a pointer offset by
+  the slot and `attachSlots[0]`, a source form that is inferred; this function still differs.
 - `CAITankObject::SetInitialStatus` and `UpdateStatus`: a 15.0 literal sits at a 4-byte
   boundary before the double. A `static const float` in a `.rodata.*` section is folded back
   into the pool, so the subsection mapping cannot place it.

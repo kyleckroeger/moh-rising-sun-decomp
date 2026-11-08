@@ -1,0 +1,43 @@
+{
+  "id": "scene_SoldierDetach",
+  "source": "src/scene/SoldierDetach.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800c08cc",
+      "size": 184
+    }
+  ],
+  "functions": [
+    {
+      "name": "DetachObject__14CSoldierObjectPc",
+      "address": "0x800c08cc",
+      "size": 184,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Add__6CSceneR10ISceneNodeP10ISceneNode": "0x80146e08",
+    "DeallocateStaticObject__20CStaticObjectFactoryP13CStaticObject": "0x800cd820",
+    "GetAttachPoint__14CSoldierObjectPCc": "0x800c0584",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Soldier_object.cpp",
+  "original_file_index": 875
+}

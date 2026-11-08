@@ -1,0 +1,50 @@
+{
+  "id": "scene_ObjCreateSubHierAnim",
+  "source": "src/scene/ObjCreateSubHierAnim.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8012a0a8",
+      "size": 272
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a7348",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "CreateSubHierAnimObject__FP11CHierObjectiiUiiii",
+      "address": "0x8012a0a8",
+      "size": 272,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Add__6CSceneR10ISceneNodeP10ISceneNode": "0x80146e08",
+    "AllocateObject__18CAnimObjectFactoryUi12EObjectClass": "0x800cbcf4",
+    "AllocateStaticObject__20CStaticObjectFactoryiiP10PickupInfo": "0x800cc91c",
+    "Init__15CHierAnimObjectP11CHierObjectiiiR8CVector3P11CAnimObject": "0x800d2ffc",
+    "g_AnimObjFactory": "0x803e6bb0",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "objcreate.cpp",
+  "original_file_index": 1242
+}

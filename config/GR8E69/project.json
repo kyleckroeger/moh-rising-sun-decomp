@@ -1831,7 +1831,11 @@
     "sound_SNDI_cos.json",
     "sound_SNDI_root1x.json",
     "sound_sgetdata.json",
-    "sound_ssys_restore.json"
+    "sound_ssys_restore.json",
+    "scene_ObjCreateSubHierAnim.json",
+    "ai_AIThreatsNoiseEvent.json",
+    "scene_SoldierCleanUp.json",
+    "scene_SoldierDetach.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
