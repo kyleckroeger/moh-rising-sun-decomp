@@ -1,0 +1,42 @@
+{
+  "id": "static_draw2",
+  "source": "src/shell/static_draw2.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a0698",
+      "size": 124
+    }
+  ],
+  "functions": [
+    {
+      "name": "DrawScreens__13CStaticScreen",
+      "address": "0x801a0698",
+      "size": 124,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DrawLoadingScreen__13CStaticScreenR7CSprite": "0x801a0714",
+    "_._7CSprite": "0x8005d1f4",
+    "__7CSpritePCcQ27CSprite15ESpriteLoadType": "0x8005d140"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "StaticScreen.cpp",
+  "original_file_index": 2065
+}

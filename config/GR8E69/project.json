@@ -1982,7 +1982,9 @@
     "pum_upd.json",
     "static_screen.json",
     "ea_fontkern.json",
-    "ai_AIFilterLineChecks.json"
+    "ai_AIFilterLineChecks.json",
+    "static_draw.json",
+    "static_draw2.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

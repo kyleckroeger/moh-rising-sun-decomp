@@ -1596,6 +1596,8 @@
       "src/script/use_binoculars.cpp": "3ab897eb9f47912d8c49df7f82f4b7a2d91baa056756f1b876b6755de43fbca5",
       "src/script/validation_build.cpp": "89251f21f21080d27633ad20ea624b1a8702565a91ab36e5f809b6e5e0ae4255",
       "src/shell/rcmp_alloc.cpp": "a7c4fd5e35bc1a95d47c4f85b55e5bb6c3b54fff65a813dd7bd2ae4150828f62",
+      "src/shell/static_draw.cpp": "5c31cd87db7e8acba89ef9c6e6878e17ee2e38e1e74a2569d004e19d66421be5",
+      "src/shell/static_draw2.cpp": "ddba7fedecc5798e4626fe84063c50a4ee123d4a83a4cd65f5eedf9655a3e85f",
       "src/shell/static_screen.cpp": "854412bd857510cace0da7e41289b26f13079c7bc1a1e8dda609505d3fc5735c",
       "src/shell/static_stop.cpp": "4e0f45cbe22baf974c621e4d2147515a09781c89af3a03e63f31231b92badd01",
       "src/sound/AmbientTrack.cpp": "806bc651699acac158151883251a45c29078a06e4fd195081a3d1d7443a56e52",
@@ -3434,7 +3436,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "f2259c3b59a895873193cff1d4c5a01e1f7666eea882c5e93d3332c62837a56f",
+      "config/GR8E69/project.json": "3fb96ac2a7df0fbe900779deca4b0e8b4ae432ab71bcddba3499da4373c6fb02",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -4227,6 +4229,8 @@
       "config/GR8E69/sphere_test_triangle.json": "2a5b8b5ff0e5f0df68069a329e049772042260412a2df8ba5c38283994312972",
       "config/GR8E69/sphere_transformed_copy.json": "025056d6c715db1dad3375b20a1d22067222ae98559bf34ae18cab52a59c09b6",
       "config/GR8E69/sprite_ctor.json": "1a13712a334e19091b8830494644f9b9914e0eed3d8e53ca030cdd8e2f9058dd",
+      "config/GR8E69/static_draw.json": "4ec55f884794175fe89cb6b8d0be7e4306b6a2da1953afc4dc67a05325c7135f",
+      "config/GR8E69/static_draw2.json": "479d4fd43bb7419b6aea1a6b48c25d0649a2ca56a0432f1cb77d3fb11df65b43",
       "config/GR8E69/static_screen.json": "0b055ec8f0df5367f869aa35f193e35f29b8add1693bf6e63802802d295fc4b6",
       "config/GR8E69/static_stop.json": "7894f1fbe7527f0976602d84a2bd1fa89d74914ebf5494dc59363614849c0310",
       "config/GR8E69/stl_80278d64.json": "04dc314cda8644a93aa797638a2f5a3e946a7bc954506e9bb2be731800b7646a",
@@ -4850,14 +4854,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1040308,
+    "matching_code_bytes": 1040556,
     "total_executable_code_bytes": 2492032,
-    "percent": 41.745370845960245,
+    "percent": 41.755322564076224,
     "categories": {
-      "reconstructed_game": 648092,
+      "reconstructed_game": 648340,
       "restored_library": 392216
     },
-    "matching_functions": 5043
+    "matching_functions": 5045
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -5778,7 +5782,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "f2259c3b59a895873193cff1d4c5a01e1f7666eea882c5e93d3332c62837a56f",
+    "config/GR8E69/project.json": "3fb96ac2a7df0fbe900779deca4b0e8b4ae432ab71bcddba3499da4373c6fb02",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -6571,6 +6575,8 @@
     "config/GR8E69/sphere_test_triangle.json": "2a5b8b5ff0e5f0df68069a329e049772042260412a2df8ba5c38283994312972",
     "config/GR8E69/sphere_transformed_copy.json": "025056d6c715db1dad3375b20a1d22067222ae98559bf34ae18cab52a59c09b6",
     "config/GR8E69/sprite_ctor.json": "1a13712a334e19091b8830494644f9b9914e0eed3d8e53ca030cdd8e2f9058dd",
+    "config/GR8E69/static_draw.json": "4ec55f884794175fe89cb6b8d0be7e4306b6a2da1953afc4dc67a05325c7135f",
+    "config/GR8E69/static_draw2.json": "479d4fd43bb7419b6aea1a6b48c25d0649a2ca56a0432f1cb77d3fb11df65b43",
     "config/GR8E69/static_screen.json": "0b055ec8f0df5367f869aa35f193e35f29b8add1693bf6e63802802d295fc4b6",
     "config/GR8E69/static_stop.json": "7894f1fbe7527f0976602d84a2bd1fa89d74914ebf5494dc59363614849c0310",
     "config/GR8E69/stl_80278d64.json": "04dc314cda8644a93aa797638a2f5a3e946a7bc954506e9bb2be731800b7646a",
@@ -8901,6 +8907,8 @@
     "src/script/use_binoculars.cpp": "3ab897eb9f47912d8c49df7f82f4b7a2d91baa056756f1b876b6755de43fbca5",
     "src/script/validation_build.cpp": "89251f21f21080d27633ad20ea624b1a8702565a91ab36e5f809b6e5e0ae4255",
     "src/shell/rcmp_alloc.cpp": "a7c4fd5e35bc1a95d47c4f85b55e5bb6c3b54fff65a813dd7bd2ae4150828f62",
+    "src/shell/static_draw.cpp": "5c31cd87db7e8acba89ef9c6e6878e17ee2e38e1e74a2569d004e19d66421be5",
+    "src/shell/static_draw2.cpp": "ddba7fedecc5798e4626fe84063c50a4ee123d4a83a4cd65f5eedf9655a3e85f",
     "src/shell/static_screen.cpp": "854412bd857510cace0da7e41289b26f13079c7bc1a1e8dda609505d3fc5735c",
     "src/shell/static_stop.cpp": "4e0f45cbe22baf974c621e4d2147515a09781c89af3a03e63f31231b92badd01",
     "src/sound/AmbientTrack.cpp": "806bc651699acac158151883251a45c29078a06e4fd195081a3d1d7443a56e52",
@@ -48784,6 +48792,42 @@
       "discarded_functions": [],
       "object_sha256": "07ed7575cb6597efe9d6a98cdd4ed65d2e068c4b0a0809c85c215afb17982963",
       "linked_sha256": "0e3a371abb9323dbc0ac93a1e6e3abdb246eabbc2857a0539a4981a3febb5872"
+    },
+    {
+      "id": "static_draw",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 124,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "54fea3669532e3d580afeb7e89149b3b1f4fa9c248f39df15eb8aab1092c1e55",
+      "linked_sha256": "edfa937eb505e42745e3d721f0e628bf830ba54bddd654cc3181e2c6da22af64"
+    },
+    {
+      "id": "static_draw2",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 124,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "c81fa0557c8be12cb9725c44a6c4444f6e99425f5b2150526acd26d5450dc3ff",
+      "linked_sha256": "38718f8986f74a7eb53de2678a7968f1660f0fc5fbe5b901386a45189bc7cc3b"
     }
   ],
   "code_map": {
@@ -74281,24 +74325,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8019fed0",
-            "size": 124,
-            "kind": "function",
-            "name": "DrawScreensFull__13CStaticScreen",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8019ff4c",
             "size": 1868,
             "kind": "function",
             "name": "DrawLoadingScreenFull__13CStaticScreenR7CSprite",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a0698",
-            "size": 124,
-            "kind": "function",
-            "name": "DrawScreens__13CStaticScreen",
             "evidence": "adjacent-compiler-markers"
           },
           {
