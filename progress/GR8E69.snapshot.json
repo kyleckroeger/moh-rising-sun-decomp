@@ -303,8 +303,7 @@
       "src/ea/initvblt.cpp": "0e995f40d8d694cb7b05a068499bd563628ea40041658c6c8a9ec411b17deec3",
       "src/ea/ipad.cpp": "98849d1f0c36bbf03fefadce134c7456c2bf36a853db3bb967d1b79a9e66491a",
       "src/ea/ipad_vbl.cpp": "66c3f6f31d5eb828019a9d019df2d806941430558437500d7702bf522559ff84",
-      "src/ea/locatbig.cpp": "9613e5dddb36d6750be57ba41cf72b28f8e7767f620dcb9e5cc225080eee3ac8",
-      "src/ea/locatbig_locate.cpp": "a78b84adcd983a9ccbcaf349e2a2dacc1496ef2d081e6ef547a7ca22f4744b1a",
+      "src/ea/locatbig.cpp": "fa584699c71e3da3490236f9e528144d80adaae632b140dacfd593baaed752eb",
       "src/ea/locatbig_tail.cpp": "cb31096d1baa481ab45660bc3f49c446161462158dae382c55064958c3ed9f9a",
       "src/ea/memalloc.cpp": "1fb8d6c6965d9916235e6ee35c94a13b67f5d332f5f5adbf44ff3c8285f12e21",
       "src/ea/memblock.cpp": "9c22c07fb0234fb28e395fc44ebaa5d07b2ae93122bdbfb90b8e1b0da347e3ef",
@@ -2822,8 +2821,7 @@
       "config/GR8E69/ea_initvblt.json": "aec27a099f5ce34de68ae4012da6f05d5e60073d1bc463e794becc106d0fcb4a",
       "config/GR8E69/ea_ipad.json": "4a48bb2cf6c769f01d790b8c023bdbd7b99389261c6276ad475c12175ed8f6f3",
       "config/GR8E69/ea_ipad_vbl.json": "7d6de802ef682882fd356ed8e55b56cdcb87e3eb6a834680c5b8c5a51a87f7a2",
-      "config/GR8E69/ea_locatbig.json": "f2820698b45f1ef3b5cdd135f4450ded74133f0acf1e17edfd3d69456fd1fe34",
-      "config/GR8E69/ea_locatbig_locate.json": "5acaef90a19502001965299688b320e4cfe335c87e1933d5139c47fd267f04fd",
+      "config/GR8E69/ea_locatbig.json": "3d89332ca2423b134f8824282b22d2ecef215b3c58f819e83b0a7a01988cbef1",
       "config/GR8E69/ea_locatbig_tail.json": "97e626d1b280764969830c1170bbef289eb95eacd8e7c58cd7c7e9260b229f88",
       "config/GR8E69/ea_memalloc.json": "4030127de92d45cef89b8bcbc97b5dce59122c4f49a385ce0d6cf6f3ae6a25f0",
       "config/GR8E69/ea_memblock.json": "d8bcb16d5b7e3784e63c0f2de83e1e3741b9dc84d3673d81e08b98a95d0117a0",
@@ -3430,7 +3428,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "ac0b66afbcbd4de3bf41ab5f4d8d0617587f81332873ec3461e2a91b0ac35c78",
+      "config/GR8E69/project.json": "3ddfcb77966845d184515d55f338e4a0cff01eeafbbd15292e4ff3ed10c6d185",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -4844,14 +4842,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1037744,
+    "matching_code_bytes": 1037900,
     "total_executable_code_bytes": 2492032,
-    "percent": 41.64248292156762,
+    "percent": 41.648742873285734,
     "categories": {
-      "reconstructed_game": 645528,
+      "reconstructed_game": 645684,
       "restored_library": 392216
     },
-    "matching_functions": 5032
+    "matching_functions": 5033
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -5163,8 +5161,7 @@
     "config/GR8E69/ea_initvblt.json": "aec27a099f5ce34de68ae4012da6f05d5e60073d1bc463e794becc106d0fcb4a",
     "config/GR8E69/ea_ipad.json": "4a48bb2cf6c769f01d790b8c023bdbd7b99389261c6276ad475c12175ed8f6f3",
     "config/GR8E69/ea_ipad_vbl.json": "7d6de802ef682882fd356ed8e55b56cdcb87e3eb6a834680c5b8c5a51a87f7a2",
-    "config/GR8E69/ea_locatbig.json": "f2820698b45f1ef3b5cdd135f4450ded74133f0acf1e17edfd3d69456fd1fe34",
-    "config/GR8E69/ea_locatbig_locate.json": "5acaef90a19502001965299688b320e4cfe335c87e1933d5139c47fd267f04fd",
+    "config/GR8E69/ea_locatbig.json": "3d89332ca2423b134f8824282b22d2ecef215b3c58f819e83b0a7a01988cbef1",
     "config/GR8E69/ea_locatbig_tail.json": "97e626d1b280764969830c1170bbef289eb95eacd8e7c58cd7c7e9260b229f88",
     "config/GR8E69/ea_memalloc.json": "4030127de92d45cef89b8bcbc97b5dce59122c4f49a385ce0d6cf6f3ae6a25f0",
     "config/GR8E69/ea_memblock.json": "d8bcb16d5b7e3784e63c0f2de83e1e3741b9dc84d3673d81e08b98a95d0117a0",
@@ -5771,7 +5768,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "ac0b66afbcbd4de3bf41ab5f4d8d0617587f81332873ec3461e2a91b0ac35c78",
+    "config/GR8E69/project.json": "3ddfcb77966845d184515d55f338e4a0cff01eeafbbd15292e4ff3ed10c6d185",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7599,8 +7596,7 @@
     "src/ea/initvblt.cpp": "0e995f40d8d694cb7b05a068499bd563628ea40041658c6c8a9ec411b17deec3",
     "src/ea/ipad.cpp": "98849d1f0c36bbf03fefadce134c7456c2bf36a853db3bb967d1b79a9e66491a",
     "src/ea/ipad_vbl.cpp": "66c3f6f31d5eb828019a9d019df2d806941430558437500d7702bf522559ff84",
-    "src/ea/locatbig.cpp": "9613e5dddb36d6750be57ba41cf72b28f8e7767f620dcb9e5cc225080eee3ac8",
-    "src/ea/locatbig_locate.cpp": "a78b84adcd983a9ccbcaf349e2a2dacc1496ef2d081e6ef547a7ca22f4744b1a",
+    "src/ea/locatbig.cpp": "fa584699c71e3da3490236f9e528144d80adaae632b140dacfd593baaed752eb",
     "src/ea/locatbig_tail.cpp": "cb31096d1baa481ab45660bc3f49c446161462158dae382c55064958c3ed9f9a",
     "src/ea/memalloc.cpp": "1fb8d6c6965d9916235e6ee35c94a13b67f5d332f5f5adbf44ff3c8285f12e21",
     "src/ea/memblock.cpp": "9c22c07fb0234fb28e395fc44ebaa5d07b2ae93122bdbfb90b8e1b0da347e3ef",
@@ -46377,8 +46373,8 @@
     {
       "id": "ea_locatbig",
       "category": "reconstructed_game",
-      "functions": 2,
-      "code_bytes": 272,
+      "functions": 5,
+      "code_bytes": 1772,
       "compiler_family": "ProDG",
       "compiler_version": "3.8.1",
       "compiler_flags": [
@@ -46390,8 +46386,8 @@
       ],
       "strip_unused": false,
       "discarded_functions": [],
-      "object_sha256": "d9e0d82fd1d5059a9d22fe69e6ea8616d0ea3bab114f6e492265c253f8d8b879",
-      "linked_sha256": "56c2b323a5cd004c21cc6059038d541e5f063cab0f34c4c63785b6c36cd39f1f"
+      "object_sha256": "43335b9ff1041d7023c1ab8d651fb495d4aa02ebdd4b518720f742e701e2ecb2",
+      "linked_sha256": "c7195e8b17cff8339e806df48d421b3669820cd4be8274f5ee7d9deb7bafb620"
     },
     {
       "id": "ea_locatbig_tail",
@@ -48518,25 +48514,6 @@
       "discarded_functions": [],
       "object_sha256": "0121c681372c391552d1e7a0e938d20c295d11759a63e41371de38e620835d4f",
       "linked_sha256": "eae9ad0bf1f53eb5c2c9f43b2641ed224d3521d128abd245917db053d17cd8e1"
-    },
-    {
-      "id": "ea_locatbig_locate",
-      "category": "reconstructed_game",
-      "functions": 2,
-      "code_bytes": 1344,
-      "compiler_family": "ProDG",
-      "compiler_version": "3.8.1",
-      "compiler_flags": [
-        "-O2",
-        "-G8",
-        "-fno-exceptions",
-        "-fno-implicit-templates",
-        "-fno-strength-reduce"
-      ],
-      "strip_unused": false,
-      "discarded_functions": [],
-      "object_sha256": "7439e82c2501f2bf2e2cd9123d95d87a960dc716e31c7f7408f5223578f845e5",
-      "linked_sha256": "8700ba5299ef75ab37ef11d7b1b8e9ef95a858737fa3265eca40a4078481e61f"
     },
     {
       "id": "static_stop",
@@ -80364,24 +80341,6 @@
         "marker_interval": [
           "0x8020976c",
           "0x8020b4b0"
-        ]
-      },
-      {
-        "name": "Unmatched files/locatbig.cpp [local symbols only]",
-        "file_record": 485,
-        "file_name": "locatbig.cpp",
-        "ranges": [
-          {
-            "address": "0x8020b854",
-            "size": 156,
-            "kind": "function",
-            "name": "BIG_stricmp__FPCcT0",
-            "evidence": "local-file-symbol"
-          }
-        ],
-        "marker_interval": [
-          "0x8020b854",
-          "0x8020c0e8"
         ]
       },
       {

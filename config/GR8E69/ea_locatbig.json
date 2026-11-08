@@ -19,11 +19,17 @@
   "sections": [
     {
       "name": ".text",
-      "address": "0x8020b8f0",
-      "size": 272
+      "address": "0x8020b854",
+      "size": 1772
     }
   ],
   "functions": [
+    {
+      "name": "BIG_stricmp__FPCcT0",
+      "address": "0x8020b854",
+      "size": 156,
+      "binding": 0
+    },
     {
       "name": "BIG_typeofheader",
       "address": "0x8020b8f0",
@@ -35,9 +41,24 @@
       "address": "0x8020b974",
       "size": 140,
       "binding": 1
+    },
+    {
+      "name": "BIG_debuginfo__FPCvPiPUi",
+      "address": "0x8020ba00",
+      "size": 256,
+      "binding": 0
+    },
+    {
+      "name": "BIG_locateentryz",
+      "address": "0x8020bb00",
+      "size": 1088,
+      "binding": 1
     }
   ],
-  "externals": {},
+  "externals": {
+    "_ctype_": "0x802bfdac",
+    "strlen": "0x80266b70"
+  },
   "sda_externals": [],
   "discarded_functions": [],
   "undefined_in_discarded_code": [],
