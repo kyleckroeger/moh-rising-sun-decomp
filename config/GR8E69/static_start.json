@@ -1,0 +1,48 @@
+{
+  "id": "static_start",
+  "source": "src/shell/static_start.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8019fc10",
+      "size": 704
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b5e64",
+      "size": 500
+    }
+  ],
+  "functions": [
+    {
+      "name": "StartLoading__13CStaticScreenii10ELanguagesb",
+      "address": "0x8019fc10",
+      "size": 704,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "__7CSpritePCcQ27CSprite15ESpriteLoadType": "0x8005d140",
+    "g_GameSettings": "0x802f80c8",
+    "sprintf": "0x80263a3c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "StaticScreen.cpp",
+  "original_file_index": 2065
+}

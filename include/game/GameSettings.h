@@ -60,6 +60,8 @@ class CGameSettings {
     GameProfile *profile;
     unsigned char unknown_04[0xa8 - 4];
     int unknown_a8; // Read as a copy by the pop-up message handler.
+    int unknown_ac;
+    int unknown_b0; // Compared with 1 before the language is used for loading screens.
     int SerializingIn() const;
     int SerializingOut() const;
     void SerializeDelta(const CMatrix &, CMatrix &);

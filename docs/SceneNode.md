@@ -165,3 +165,7 @@ only emptied in the code reconstructed so far, so their element types are unknow
 iterators' user copy constructors and clearing destructors, and the field names, are inferred from the
 code shape. `DwiContainers.h` holds the containers without placement new, so that `SceneNode.h` can use
 them in units that also include the `new` header.
+
+`Draw` hands the camera, fog and the three visible-node vectors at `+0x60`, `+0x78` and `+0x90` to the draw
+context, fills the first with visible lights and the third with enabled visible projectors, then draws the
+sky box and every enabled visible node between `InitCommands` and `ExecCommands`.

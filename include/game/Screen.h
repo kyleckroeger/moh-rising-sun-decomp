@@ -4,6 +4,7 @@
 // places the table pointer at +100, after these members.
 class CColor;
 
+class CDrawContext;
 class CScreen {
 public:
     void Init();
@@ -20,6 +21,8 @@ public:
     virtual void SetClearColor(const CColor &color);
     virtual int GetClear() const;
     virtual const CColor &GetClearColor() const;
+    virtual int GetTMViewToScreen() const;
+    virtual CDrawContext *GetOrthographicDrawContext() const = 0;
 
     int clear;
     unsigned int clearColor;

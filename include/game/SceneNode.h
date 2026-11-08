@@ -23,6 +23,7 @@ class CStaticObject;
 class CWorldObject;
 class CCollision;
 class CDrawContext;
+class CFog;
 class CLight;
 class CMatrix;
 class CVector3;
@@ -176,8 +177,8 @@ class CScene {
     int projectorCount;            // +0x54
     int locked; // +0x58: changes queue while set; see Lock and Unlock.
     int playerCount; // +0x5c
-    // +0x60, +0x78, +0x90: vectors emptied by Reset; their element types are not known.
-    dwi::fast_vec<void *> fast60, fast78, fast90;
+    // +0x60, +0x78, +0x90: the visible lights, an unused list and the visible projectors, filled by Draw.
+    dwi::fast_vec<ISceneNode *> fast60, fast78, fast90;
     // +0xa8, +0xd4: the two sweep lists.
     dwi::list<ISceneNode::SExtent> extents0, extents1;
     // A node pair met by a sweep, kept in address order. Only the fields used here are known.
@@ -278,6 +279,7 @@ class CScene {
     void AddNodeExtents(ISceneNode &);
     void RemoveNodeExtents(ISceneNode &);
     void Update(float);
+    void Draw(CDrawContext &, CFog &);
     void SweepAllExtents();
     int DetectSlowCollisions(float);
     int DetectFastCollisions(float);

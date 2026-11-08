@@ -2010,7 +2010,12 @@
     "pum_ctor.json",
     "scene_AnimObjectSetMoveTarget.json",
     "scene_AnimObjectAdjustCallbacks.json",
-    "scene_AnimObjectStateDone.json"
+    "scene_AnimObjectStateDone.json",
+    "static_start.json",
+    "static_text.json",
+    "pum_down.json",
+    "scene_draw.json",
+    "hud_life.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

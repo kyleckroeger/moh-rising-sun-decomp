@@ -3,22 +3,11 @@
 // shows it as a pop-up when the delay runs out, and removes it when its time is up. The queued
 // subtitle's members are inferred from this use.
 #include "Objectives.h"
-#include "Color.h"
-#include "DwiList.h"
+#include "SubtitleQueue.h"
 
-struct QueuedSubtitle {
-    int unknown00;
-    float delay;  // +0x04
-    float time;   // +0x08
-    int shown;    // +0x0c
-    CColor color; // +0x10
-    char text[52]; // +0x14
-};
 
 void PrintSubtitle(char *, float, CColor, PopUpMessageHandler *);
 void StartupSubtitles();
-extern dwi::list<QueuedSubtitle> g_subtitle_queue;
-extern int g_subtitle_queue_initialized;
 // Only the word read here is declared.
 struct PauseScreenView {
     unsigned char unknown00[0x10];

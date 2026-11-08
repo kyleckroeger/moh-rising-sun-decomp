@@ -1,0 +1,47 @@
+{
+  "id": "pum_down",
+  "source": "src/ui/pum_down.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8017aa64",
+      "size": 336
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802ad318",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "ShutdownSubtitles__Fv",
+      "address": "0x8017aa64",
+      "size": 336,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_free": "0x801a8894",
+    "g_subtitle_queue": "0x803e8138",
+    "g_subtitle_queue_initialized": "0x802c59a0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "pumhandler.cpp",
+  "original_file_index": 1539
+}

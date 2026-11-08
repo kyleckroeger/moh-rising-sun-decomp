@@ -16,7 +16,7 @@ template <class T> inline void Exchange(T &a, T &b) {
 }
 
 template <class T> struct list_node {
-    list_node() : prev(this), next(this), data(0) {}
+    list_node(const T &value = T()) : prev(this), next(this), data(value) {}
     void Reset() {
         list_node *h = this;
         next = h;
@@ -56,7 +56,7 @@ template <class T> class list {
     static list_node<T> *AllocateNodes(int size) {
         return (list_node<T> *)DWI_allocalign("source/tl/dwi_memory.h:56", size * sizeof(list_node<T>), 16, 1024);
     }
-    template <class I> list(int size, I first, I last) : count(0), capacity(size), pool(AllocateNodes(size)), freeList(0) {
+    template <class I> list(int size, I first, I last) : count(0), capacity(size), pool(AllocateNodes(capacity)), freeList(0) {
         owned = 1;
         list_node<T> *next = 0;
         list_node<T> *node;

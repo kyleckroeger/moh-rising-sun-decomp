@@ -1,0 +1,56 @@
+{
+  "id": "static_text",
+  "source": "src/shell/static_text.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a1330",
+      "size": 344
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b60f8",
+      "size": 56
+    }
+  ],
+  "functions": [
+    {
+      "name": "DrawLoadingText__13CStaticScreen",
+      "address": "0x801a1330",
+      "size": 344,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "DrawText__5CFontffPCc": "0x80067338",
+    "GetString__17CUserMessageTablei": "0x8017bc10",
+    "SetColor__5CFontG6CColor": "0x800674f8",
+    "SetScale__5CFontff": "0x80067590",
+    "TLT_LoadFileFromLevelBigFile__FPCcPi": "0x801a9634",
+    "WaitScreen__Fv": "0x8016c650",
+    "_._5CFont": "0x80066e6c",
+    "_7CScreen.m_sHeightScale": "0x80452580",
+    "_7CScreen.m_sWidthScale": "0x8045257c",
+    "__5CFontPc": "0x80066e14",
+    "g_pPopUpMessageHandler": "0x80326390"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "StaticScreen.cpp",
+  "original_file_index": 2065
+}
