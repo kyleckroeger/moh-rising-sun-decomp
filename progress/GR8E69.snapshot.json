@@ -1057,6 +1057,7 @@
       "src/scene/HierAnimObjectA.cpp": "9283de5ba8b3bbbf79faa444b5cbd2c62ac8c35c30c4e16b5ecc716e10fb833a",
       "src/scene/HierAnimObjectB.cpp": "d8b064cd3066c42bf07322989e993ab0ab51fa24246d5622adb2e802355f1efc",
       "src/scene/HierObjectAnimCommit.cpp": "8f068b35ea12f9344d0f0af66b3e0814ba323e5b388f97a7ec159e0df633215a",
+      "src/scene/HierObjectAnimMotion.cpp": "b50ddaca4211a9e46316c1d99d40895a26d47c597ab7322e5c520d6ef0e521f1",
       "src/scene/HierObjectAttached.cpp": "d3ee6d442f0ed6dd0cd5b32a7d8f6f989c727ba62c23a996159607836a577b92",
       "src/scene/HierObjectAttempt.cpp": "084d2d7fac72326feda3822c6f9d243d9c5e54b7a1f6316030e7cd186c59abad",
       "src/scene/HierObjectBeginUpdate.cpp": "ca35893a7aef0811152c86c59a486a80872ecadee2f7c1b53e7e130c18d99491",
@@ -1067,6 +1068,7 @@
       "src/scene/HierObjectLightVolume.cpp": "1d74d2caa42fb3eb1fcd1db956d525a8359fa0906fc982e80735c5a30c18f0d3",
       "src/scene/HierObjectMotion.cpp": "f5d65c1eab1f501f3304ecfe3e70c6175263d7f247336910ca29afc934f64e9e",
       "src/scene/HierObjectMotionAttempt.cpp": "6ec00d1cc1c81f378c1d5a4bf80110e237aca532ddd5498c18658854d51491c9",
+      "src/scene/HierObjectScriptAttempt.cpp": "1fd2fded1c8666a4ffd379089ea1e9c1988cc97fadeb9b92b62a6260391a3a17",
       "src/scene/HierObjectScriptBegin.cpp": "4304ad5faadb412a54a849e0fa70d5853aaee961b41b026543dab616829f263e",
       "src/scene/HierObjectScriptCommit.cpp": "d13df617cf5c58cdf6bceea4b0aa9b494dd86ac6c8bb60300483ab2cdc562f11",
       "src/scene/HierObjectTree.cpp": "393da00b1db8fcab109363653bcc44e592c1ca8c706b9994a2d9b9482285e6af",
@@ -2207,7 +2209,7 @@
       "include/game/CLine2.h": "e92fdbfd47ed264651ab9bbb90557a0461c3f6469267837079a5d514eb583f2c",
       "include/game/CLine3.h": "c0cc16c261e12da1a4c6eb128ffb57c7142e212ee2b9324492131c5a241d8d8c",
       "include/game/CMatrix.h": "0a1cd7c02e0d72a241d00c861f92cf720b93960f3e96da8dea1f370ee8be27f9",
-      "include/game/CQuaternion.h": "8668ceb13489f3ce37788dda5debaa5a7b0dda54f55e588421d3824b05d15726",
+      "include/game/CQuaternion.h": "9eabf871b57c327c2a0bf918a57ade2803a78442d8ff96068f6a87edc844c553",
       "include/game/CRC.h": "bcd5ed5667f902cc07c69d8d1b40e2e45f1f90b7d665c1ad3063fa61aadebbb6",
       "include/game/CSGVolume.h": "4e1b74888a25e46d47449afbc3081c2474e8104e59cfd1ee11c1e5e6b440cb23",
       "include/game/CVector3.h": "0c436c62dba8e3a7f44ca5e6eea6de50ff97e88e4e53545873d5ecca9d648aae",
@@ -2304,7 +2306,7 @@
       "include/game/PropertyData.h": "952ae5ac78dc17e43053a7b905a8e58499a1faa3c7d0721269329f639095b22a",
       "include/game/Rcmp.h": "9f0b3fe189c690b8ee358797a865f8e6172f48640e9fc998e332061823b08cb2",
       "include/game/SceneNode.h": "0cec8ca3cf3e8302715836d269ca26ed943150907b80ac65b531b866f7e58e2c",
-      "include/game/SceneObjects.h": "3e4e53e71c3b4349893ca2e0784407251ba188c555cc406cc7dcc77cfea53a1e",
+      "include/game/SceneObjects.h": "04935be17318a34f5376c9d00f0712e49f9182cf47cb43acfad7119f9328a278",
       "include/game/Screen.h": "b4e501afbd3363469c5420dbf4e790d4f0f8a1f98932efc7fee4f7786818cd7c",
       "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
       "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
@@ -3392,7 +3394,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "e617086516438adeffe49183e43b462fc75d6269c359a0dab2e22931a62446d6",
+      "config/GR8E69/project.json": "41617dea552f7293a9ff5cf023c9c6d618d4b978d2c49ea8635329e698817f5f",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -3446,6 +3448,7 @@
       "config/GR8E69/scene_HierAnimObjectA.json": "00ee093c8b03a969ce54c1512e76ff68d33b4d3d11ded5a29d221c4dd470ea7f",
       "config/GR8E69/scene_HierAnimObjectB.json": "df33d0da021654a581a21e996765155a734679b84e6e104ff3208500ab1cc097",
       "config/GR8E69/scene_HierObjectAnimCommit.json": "ce203ee4c29f9812e4297dcb6d2964962a1f3e4ceb20e0e080a535439641505e",
+      "config/GR8E69/scene_HierObjectAnimMotion.json": "8a804e087a172d97379a59c524c6828c183e08c0939e8606e06bdd1569ae3a81",
       "config/GR8E69/scene_HierObjectAttached.json": "21a537146ea58b8e9897cc6584e7d249f2f5fb8d99dcc1873c08190cddc80b21",
       "config/GR8E69/scene_HierObjectAttempt.json": "a7615e4db3c0dc524fb04b203bd7663261156717adc6cac375b36b8ab9fd06a4",
       "config/GR8E69/scene_HierObjectBeginUpdate.json": "c4231cbea7aec2dec491ff4e876833e925f4ceb94a7157f30ebf103d2d91134c",
@@ -3456,6 +3459,7 @@
       "config/GR8E69/scene_HierObjectLightVolume.json": "9c294cc7141b9ccd5bb381e81cec6980ec7d94119448ce931902bf7d8e384cab",
       "config/GR8E69/scene_HierObjectMotion.json": "48f105001c172bdda64ffe667b7fb5ee1f2c705484807989edc470616c59107b",
       "config/GR8E69/scene_HierObjectMotionAttempt.json": "cfe8909c9d7f45adc17b6bb43f6779e9962957bb7f127236d303410393522a09",
+      "config/GR8E69/scene_HierObjectScriptAttempt.json": "91faad6488a86326bb15876745bbb962a1d3e14bdccafa5669fdeb23b1fa398a",
       "config/GR8E69/scene_HierObjectScriptBegin.json": "a24d6a7ed437a68d85fbfd48f35bf433d15b2b5fa8ac2d66e5522cd9e7d78404",
       "config/GR8E69/scene_HierObjectScriptCommit.json": "e4ec7bba2aae1b12466faed07a3e0f6922a57a8e4c13d4bd1faa0aa50f028d63",
       "config/GR8E69/scene_HierObjectTree.json": "77b4802b94d5690af98dcd86296d3b70b4540ac61239e2a6c6a8167751a37f1c",
@@ -4788,14 +4792,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1019784,
+    "matching_code_bytes": 1022444,
     "total_executable_code_bytes": 2492032,
-    "percent": 40.921785916071705,
+    "percent": 41.02852611844471,
     "categories": {
-      "reconstructed_game": 627568,
+      "reconstructed_game": 630228,
       "restored_library": 392216
     },
-    "matching_functions": 4996
+    "matching_functions": 4999
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -5705,7 +5709,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "e617086516438adeffe49183e43b462fc75d6269c359a0dab2e22931a62446d6",
+    "config/GR8E69/project.json": "41617dea552f7293a9ff5cf023c9c6d618d4b978d2c49ea8635329e698817f5f",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -5759,6 +5763,7 @@
     "config/GR8E69/scene_HierAnimObjectA.json": "00ee093c8b03a969ce54c1512e76ff68d33b4d3d11ded5a29d221c4dd470ea7f",
     "config/GR8E69/scene_HierAnimObjectB.json": "df33d0da021654a581a21e996765155a734679b84e6e104ff3208500ab1cc097",
     "config/GR8E69/scene_HierObjectAnimCommit.json": "ce203ee4c29f9812e4297dcb6d2964962a1f3e4ceb20e0e080a535439641505e",
+    "config/GR8E69/scene_HierObjectAnimMotion.json": "8a804e087a172d97379a59c524c6828c183e08c0939e8606e06bdd1569ae3a81",
     "config/GR8E69/scene_HierObjectAttached.json": "21a537146ea58b8e9897cc6584e7d249f2f5fb8d99dcc1873c08190cddc80b21",
     "config/GR8E69/scene_HierObjectAttempt.json": "a7615e4db3c0dc524fb04b203bd7663261156717adc6cac375b36b8ab9fd06a4",
     "config/GR8E69/scene_HierObjectBeginUpdate.json": "c4231cbea7aec2dec491ff4e876833e925f4ceb94a7157f30ebf103d2d91134c",
@@ -5769,6 +5774,7 @@
     "config/GR8E69/scene_HierObjectLightVolume.json": "9c294cc7141b9ccd5bb381e81cec6980ec7d94119448ce931902bf7d8e384cab",
     "config/GR8E69/scene_HierObjectMotion.json": "48f105001c172bdda64ffe667b7fb5ee1f2c705484807989edc470616c59107b",
     "config/GR8E69/scene_HierObjectMotionAttempt.json": "cfe8909c9d7f45adc17b6bb43f6779e9962957bb7f127236d303410393522a09",
+    "config/GR8E69/scene_HierObjectScriptAttempt.json": "91faad6488a86326bb15876745bbb962a1d3e14bdccafa5669fdeb23b1fa398a",
     "config/GR8E69/scene_HierObjectScriptBegin.json": "a24d6a7ed437a68d85fbfd48f35bf433d15b2b5fa8ac2d66e5522cd9e7d78404",
     "config/GR8E69/scene_HierObjectScriptCommit.json": "e4ec7bba2aae1b12466faed07a3e0f6922a57a8e4c13d4bd1faa0aa50f028d63",
     "config/GR8E69/scene_HierObjectTree.json": "77b4802b94d5690af98dcd86296d3b70b4540ac61239e2a6c6a8167751a37f1c",
@@ -6938,7 +6944,7 @@
     "include/game/CLine2.h": "e92fdbfd47ed264651ab9bbb90557a0461c3f6469267837079a5d514eb583f2c",
     "include/game/CLine3.h": "c0cc16c261e12da1a4c6eb128ffb57c7142e212ee2b9324492131c5a241d8d8c",
     "include/game/CMatrix.h": "0a1cd7c02e0d72a241d00c861f92cf720b93960f3e96da8dea1f370ee8be27f9",
-    "include/game/CQuaternion.h": "8668ceb13489f3ce37788dda5debaa5a7b0dda54f55e588421d3824b05d15726",
+    "include/game/CQuaternion.h": "9eabf871b57c327c2a0bf918a57ade2803a78442d8ff96068f6a87edc844c553",
     "include/game/CRC.h": "bcd5ed5667f902cc07c69d8d1b40e2e45f1f90b7d665c1ad3063fa61aadebbb6",
     "include/game/CSGVolume.h": "4e1b74888a25e46d47449afbc3081c2474e8104e59cfd1ee11c1e5e6b440cb23",
     "include/game/CVector3.h": "0c436c62dba8e3a7f44ca5e6eea6de50ff97e88e4e53545873d5ecca9d648aae",
@@ -7035,7 +7041,7 @@
     "include/game/PropertyData.h": "952ae5ac78dc17e43053a7b905a8e58499a1faa3c7d0721269329f639095b22a",
     "include/game/Rcmp.h": "9f0b3fe189c690b8ee358797a865f8e6172f48640e9fc998e332061823b08cb2",
     "include/game/SceneNode.h": "0cec8ca3cf3e8302715836d269ca26ed943150907b80ac65b531b866f7e58e2c",
-    "include/game/SceneObjects.h": "3e4e53e71c3b4349893ca2e0784407251ba188c555cc406cc7dcc77cfea53a1e",
+    "include/game/SceneObjects.h": "04935be17318a34f5376c9d00f0712e49f9182cf47cb43acfad7119f9328a278",
     "include/game/Screen.h": "b4e501afbd3363469c5420dbf4e790d4f0f8a1f98932efc7fee4f7786818cd7c",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
     "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
@@ -8269,6 +8275,7 @@
     "src/scene/HierAnimObjectA.cpp": "9283de5ba8b3bbbf79faa444b5cbd2c62ac8c35c30c4e16b5ecc716e10fb833a",
     "src/scene/HierAnimObjectB.cpp": "d8b064cd3066c42bf07322989e993ab0ab51fa24246d5622adb2e802355f1efc",
     "src/scene/HierObjectAnimCommit.cpp": "8f068b35ea12f9344d0f0af66b3e0814ba323e5b388f97a7ec159e0df633215a",
+    "src/scene/HierObjectAnimMotion.cpp": "b50ddaca4211a9e46316c1d99d40895a26d47c597ab7322e5c520d6ef0e521f1",
     "src/scene/HierObjectAttached.cpp": "d3ee6d442f0ed6dd0cd5b32a7d8f6f989c727ba62c23a996159607836a577b92",
     "src/scene/HierObjectAttempt.cpp": "084d2d7fac72326feda3822c6f9d243d9c5e54b7a1f6316030e7cd186c59abad",
     "src/scene/HierObjectBeginUpdate.cpp": "ca35893a7aef0811152c86c59a486a80872ecadee2f7c1b53e7e130c18d99491",
@@ -8279,6 +8286,7 @@
     "src/scene/HierObjectLightVolume.cpp": "1d74d2caa42fb3eb1fcd1db956d525a8359fa0906fc982e80735c5a30c18f0d3",
     "src/scene/HierObjectMotion.cpp": "f5d65c1eab1f501f3304ecfe3e70c6175263d7f247336910ca29afc934f64e9e",
     "src/scene/HierObjectMotionAttempt.cpp": "6ec00d1cc1c81f378c1d5a4bf80110e237aca532ddd5498c18658854d51491c9",
+    "src/scene/HierObjectScriptAttempt.cpp": "1fd2fded1c8666a4ffd379089ea1e9c1988cc97fadeb9b92b62a6260391a3a17",
     "src/scene/HierObjectScriptBegin.cpp": "4304ad5faadb412a54a849e0fa70d5853aaee961b41b026543dab616829f263e",
     "src/scene/HierObjectScriptCommit.cpp": "d13df617cf5c58cdf6bceea4b0aa9b494dd86ac6c8bb60300483ab2cdc562f11",
     "src/scene/HierObjectTree.cpp": "393da00b1db8fcab109363653bcc44e592c1ca8c706b9994a2d9b9482285e6af",
@@ -48094,6 +48102,42 @@
       "discarded_functions": [],
       "object_sha256": "82aef5b7a1b5023bf87e0149fa45840c7d1035af648eb08bcce39e8ca48c16e3",
       "linked_sha256": "fade2fc8939e86c33e3510c4878cf8ab1858bc4919fef557b4582af030d2fa79"
+    },
+    {
+      "id": "scene_HierObjectScriptAttempt",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 864,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "b95e451e9c0f8706c7541e568bb2f17f432f64c9fee681f5a59058ae99840e01",
+      "linked_sha256": "e2ac9b71ed2c49787eb899944b78187eb8cd2f92baf89ad26bd9f1a92157ff7e"
+    },
+    {
+      "id": "scene_HierObjectAnimMotion",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 1796,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "0d4a49fbb2c042fceabc66af00700fc9fe04cf031934857b9c6e7eda63d79ffe",
+      "linked_sha256": "b97500a3d82990d624a22acb143efa720e812bdaefaca09056e25381bca35bac"
     }
   ],
   "code_map": {
@@ -60210,27 +60254,6 @@
             "size": 168,
             "kind": "function",
             "name": "GetWorldLinearVelocity__C11CHierObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d10b0",
-            "size": 864,
-            "kind": "function",
-            "name": "AttemptScriptMotionUpdate__11CHierObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d14ec",
-            "size": 1168,
-            "kind": "function",
-            "name": "BeginAnimMotionUpdate__11CHierObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d197c",
-            "size": 628,
-            "kind": "function",
-            "name": "AttemptAnimMotionUpdate__11CHierObjectf",
             "evidence": "adjacent-compiler-markers"
           },
           {

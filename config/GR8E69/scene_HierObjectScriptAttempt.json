@@ -1,0 +1,52 @@
+{
+  "id": "scene_HierObjectScriptAttempt",
+  "source": "src/scene/HierObjectScriptAttempt.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d10b0",
+      "size": 864
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a15b8",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "AttemptScriptMotionUpdate__11CHierObjectf",
+      "address": "0x800d10b0",
+      "size": 864,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetMatrix__C11CQuaternionR7CMatrix": "0x8007cd64",
+    "Multiply__11CQuaternionT0": "0x8007d260",
+    "Multiply__7CMatrixRC7CMatrixT1": "0x802794b8",
+    "SetPos__7CMatrixRC8CVector3": "0x8007ae7c",
+    "Slerp__11CQuaternionT0T0f": "0x8007d0ec",
+    "Translate__7CMatrixRC8CVector3": "0x8007af2c",
+    "_7CMatrix.s_TempMat": "0x802fbf00",
+    "__as__7CMatrixRC7CMatrix": "0x8007aa38"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "hierobject.cpp",
+  "original_file_index": 935
+}

@@ -59,7 +59,10 @@ class CLight;
 class CCollision;
 class CStaticMesh;
 class CTankObject;
-struct MotionFrame;
+struct MotionFrame {
+    CVector3 position;
+    CQuaternion rotation;
+};
 // Method-only view; the storage it occupies in an object is not established.
 class CObjectFadeManager {
   public:
@@ -229,15 +232,15 @@ class CStaticObject {
     int motionPlayStart;  // +0x254
     int motionKey;        // +0x258
     int motionLoop;       // +0x25c
-    unsigned char unknown_260[4];
+    float motionKeyTime;  // +0x260; time into the current key. Descriptive.
     float motionRate;     // +0x264
     int motionTimer;      // +0x268
     float motionSampleRate; // +0x26c
     float motionRemaining; // +0x270
     float motionStep;     // +0x274
     CQuaternion motionResetOrientation; // +0x278
-    float dumpAge;        // +0x288; advances while the object is a dump object. Descriptive.
-    unsigned char unknown_28c[0x290 - 0x28c];
+    float dumpAge;        // +0x288; advances while the object is a dump object; the motion update stores its speed here. Descriptive.
+    int motionSpeedKey;   // +0x28c; the key +0x288 was measured for. Descriptive.
     MotionFrame *motionFrames; // +0x290
     unsigned char unknown_294[0x2a8 - 0x294];
     CLight *attachedLight; // +0x2a8; the subject of the weak reference starting at +0x294.
@@ -623,6 +626,9 @@ class CHierObject : public CStaticObject {
     CVector3 GetWorldLinearVelocity() const;
     void AttemptUpdate(float);
     void AttemptUpdateFromMotion(float);
+    void AttemptScriptMotionUpdate(float);
+    void AttemptAnimMotionUpdate(float);
+    void BeginAnimMotionUpdate(float);
     void AttemptUpdateOfAttachedObjects();
     int SetHierCollisionState(int);
     IVolume *GetWorldBoundingVolume(ISceneNode::EVolumeType) const;

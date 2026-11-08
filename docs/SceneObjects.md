@@ -108,6 +108,10 @@ rates at `+0x11c` and `+0x120`, limited by `+0x124` and changed by `+0x128` per 
 the x axis is an inline with its own axis local: the axis sits directly below the inline's matrix and the
 position copies in the frame.
 
+A motion key frame is 32 bytes: a position vector, then a rotation quaternion at `+0x10`. While keys advance,
+`CHierObject::BeginAnimMotionUpdate` measures the distance to the next key once per key and stores it times
+60 over the key length at `+0x288`, remembering the key at `+0x28c`.
+
 ## Parked
 
 These still differ, with instruction differences in brackets; drafts are kept outside the

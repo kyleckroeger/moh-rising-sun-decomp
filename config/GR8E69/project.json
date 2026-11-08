@@ -1951,7 +1951,9 @@
     "sound_entry_destructor.json",
     "sound_entry_copy.json",
     "sound_entry_options.json",
-    "sound_sdrv_playtimbre.json"
+    "sound_sdrv_playtimbre.json",
+    "scene_HierObjectScriptAttempt.json",
+    "scene_HierObjectAnimMotion.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
