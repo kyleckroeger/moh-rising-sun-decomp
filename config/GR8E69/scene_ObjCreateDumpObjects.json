@@ -1,0 +1,84 @@
+{
+  "id": "scene_ObjCreateDumpObjects",
+  "source": "src/scene/ObjCreateDumpObjects.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80127a68",
+      "size": 704
+    }
+  ],
+  "functions": [
+    {
+      "name": "HitDumpObject__FP13CStaticObjectP10PickupInfo",
+      "address": "0x80127a68",
+      "size": 204,
+      "binding": 1
+    },
+    {
+      "name": "MarkDumpObjectForDestruction__FP10DumpObject",
+      "address": "0x80127b34",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "MarkDumpObjectForDestruction__FP13CStaticObject",
+      "address": "0x80127b8c",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "DestroyDumpObject__FP13CStaticObject",
+      "address": "0x80127bc4",
+      "size": 184,
+      "binding": 1
+    },
+    {
+      "name": "DestroyOldestDumpObject__Fv",
+      "address": "0x80127c7c",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "CreateEnvModMechanic__FP13TriggerObjecti",
+      "address": "0x80127cb4",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "CreateMechanic__FP13TriggerObjectiiPv",
+      "address": "0x80127cd4",
+      "size": 84,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CreateCollisionVolume__FP13TriggerObjecti": "0x80128894",
+    "CreateDestructable__FP13TriggerObjectii": "0x8012a278",
+    "CreatePlayer__FP13TriggerObjecti": "0x8012ac14",
+    "DeallocateStaticObject__20CStaticObjectFactoryP13CStaticObject": "0x800cd820",
+    "DeleteDumpObject__20CDumpObjectContainerP10DumpObject": "0x80126cb4",
+    "DeleteOldest__20CDumpObjectContainerb": "0x80126e30",
+    "FreeSphereVolume__FPv": "0x8012b698",
+    "GetDumpObject__20CDumpObjectContainerP13CStaticObject": "0x80126d5c",
+    "g_DumpObjectContainer": "0x8032ce58"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "objcreate.cpp",
+  "original_file_index": 1242
+}

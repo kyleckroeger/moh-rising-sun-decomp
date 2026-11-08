@@ -2,6 +2,7 @@
 // reference. Part of the original objcreate.cpp; member names are descriptive.
 #include "SceneObjects.h"
 #include "ScriptTimers.h"
+#include "ObjCreate.h"
 #include <string.h>
 
 extern "C" void *DWI_alloc(const char *, int, int);
@@ -10,42 +11,6 @@ enum TLTResourceID { TLTResourceUnknown = 0 };
 // Only the chain to the dump-object count is established.
 struct TLTResource;
 TLTResource *TLT_FindNextResourceByType(TLTResourceID, LevelFileContentsStruct_ *);
-
-class PickupInfo {
-  public:
-    unsigned char unknown00[0x1c];
-    BSObject *script; // +0x1c
-    unsigned char unknown20[4];
-};
-struct DumpObject {
-    CStaticObject *object;
-    PickupInfo pickup; // +0x04
-    int keep;          // +0x28
-    int inUse;         // +0x2c
-    DumpObject *next;  // +0x30
-    DumpObject *previous; // +0x34
-};
-void MarkDumpObjectForDestruction(DumpObject *);
-class CDumpObjectContainer {
-  public:
-    DumpObject *objects; // +0x00
-    DumpObject *first;   // +0x04
-    DumpObject *last;    // +0x08
-    int count;           // +0x0c
-    int capacity;        // +0x10
-    CDumpObjectContainer();
-    ~CDumpObjectContainer();
-    void Reset();
-    void AddDumpObject(CStaticObject *, const PickupInfo &, bool);
-    void DeleteDumpObject(DumpObject *);
-    DumpObject *GetDumpObject(CStaticObject *);
-    DumpObject *AllocateDumpObject();
-    void FreeDumpObject(DumpObject *);
-    DumpObject *GetAvailableObject();
-    DumpObject *DeleteOldest(bool);
-    DumpObject *GetFirstDumpObject();
-    DumpObject *GetNextDumpObject(DumpObject *);
-};
 
 CDumpObjectContainer::CDumpObjectContainer() {
     first = last = 0;

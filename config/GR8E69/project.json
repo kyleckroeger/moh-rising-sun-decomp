@@ -1739,7 +1739,9 @@
     "sound_path_createtrack.json",
     "sound_path_overhead.json",
     "ea_filedev_kill.json",
-    "ea_filedev_close.json"
+    "ea_filedev_close.json",
+    "scene_ObjCreateCreators.json",
+    "scene_ObjCreateDumpObjects.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

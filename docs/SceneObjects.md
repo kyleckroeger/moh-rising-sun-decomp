@@ -70,6 +70,17 @@ slots start at `+0xba0`. `CWorldObject` returns one embedded volume at `+0xd0` f
 The scene-object casts in these units pass a pointer unadjusted. That follows the scoped
 views and does not assert the original class layouts or inheritance order.
 
+## Object creation
+
+`objcreate.cpp` keeps its pools and queues in file statics, declared in `ObjCreate.h`. The dump
+container holds a fixed array of 56-byte `DumpObject` entries linked oldest first. Its capacity comes
+from a level resource, with 25 as the fallback, and `DeleteOldest` skips entries marked to keep.
+`CreateObject`'s types are 1 mechanic, 2 environment-modifier mechanic, 3 enemy, 4 powerup, 7 to 9
+particle systems, 10 projector and 11 animated mechanic. A delayed destruction runs once its entry is
+more than one frame old. A queued German counts towards the non-visible soldier cull once it has
+waited more than six frames. `CreateEnemy` compares the child script with `BOT3` to choose a bot.
+`ShutdownObjectCreators` rebuilds the container in place, and the original tests the address first.
+
 ## Parked
 
 These still differ, with instruction differences in brackets; drafts are kept outside the

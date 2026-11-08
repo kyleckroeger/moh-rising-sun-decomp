@@ -1,0 +1,135 @@
+{
+  "id": "scene_ObjCreateCreators",
+  "source": "src/scene/ObjCreateCreators.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80126ed4",
+      "size": 1892
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a6f88",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "CreateObjectGetMemoryRequirements__Fv",
+      "address": "0x80126ed4",
+      "size": 224,
+      "binding": 1
+    },
+    {
+      "name": "InitObjectCreators__Fv",
+      "address": "0x80126fb4",
+      "size": 624,
+      "binding": 1
+    },
+    {
+      "name": "ShutdownObjectCreators__Fv",
+      "address": "0x80127224",
+      "size": 160,
+      "binding": 1
+    },
+    {
+      "name": "UpdateObjectCreation__Fv",
+      "address": "0x801272c4",
+      "size": 252,
+      "binding": 1
+    },
+    {
+      "name": "ProcessCreationQueue__Fv",
+      "address": "0x801273c0",
+      "size": 252,
+      "binding": 1
+    },
+    {
+      "name": "CreateObject__FP13TriggerObjectiiiPv",
+      "address": "0x801274bc",
+      "size": 260,
+      "binding": 1
+    },
+    {
+      "name": "CreateEnemy__FP13TriggerObjectii",
+      "address": "0x801275c0",
+      "size": 120,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "BSUtilGetMemory__Fii": "0x800f8a90",
+    "BotSetup__Fv": "0x800907b4",
+    "ComputeNeededSize__35BSUtilObjectInstanceMemoryAllocatoriii": "0x800f8330",
+    "CreateBasicAnimatedMech__FP13TriggerObjectii": "0x80128588",
+    "CreateBots__FP13TriggerObject": "0x80090b28",
+    "CreateEnvModMechanic__FP13TriggerObjecti": "0x80127cb4",
+    "CreateGerman__FP13TriggerObjectiibPb": "0x80127e0c",
+    "CreateMechanic__FP13TriggerObjectiiPv": "0x80127cd4",
+    "CreatePowerup__FP13TriggerObjectii": "0x8012abf4",
+    "Create__10CPSManagerPC13TriggerObjectUib15eParticleSystem": "0x80066cb4",
+    "Create__10CProjectorUib": "0x801322cc",
+    "DestroySingleQueueElement__Fv": "0x8012b4dc",
+    "GetChildScript__C13TriggerObject": "0x8012308c",
+    "Init__35BSUtilObjectInstanceMemoryAllocatorPviii": "0x800f8370",
+    "NonVisDestructFarthestSoldiers__Fi": "0x8012b6c4",
+    "Reset__20CDumpObjectContainer": "0x80126b38",
+    "TLT_FindNextResourceByType__F13TLTResourceIDP24LevelFileContentsStruct_": "0x801a9690",
+    "_._20CDumpObjectContainer": "0x80126ae4",
+    "__20CDumpObjectContainer": "0x80126ac8",
+    "g_DumpObjectContainer": "0x8032ce58",
+    "g_delayDestroyHead": "0x8032cff8",
+    "g_delayDestroyTail": "0x8032cffc",
+    "g_fDumpObjectCollisionRadius": "0x8032d01c",
+    "g_frameCounter": "0x8032d000",
+    "g_iGermanCreationQueueHeadIndex": "0x802c4ae8",
+    "g_iGermanCreationQueueTailIndex": "0x802c4aec",
+    "g_iNumGermansQueuedThisFrame": "0x802c4af0",
+    "g_iNumberOfEnemiesSpawned": "0x8032d020",
+    "g_maxActiveSoldiers": "0x8032d018",
+    "g_numActiveSoldiers": "0x8032d014",
+    "g_pAnimatedMechList": "0x8032d010",
+    "g_pAnimatedVolumeAllocator": "0x8032ce20",
+    "g_pBoxList": "0x8032d004",
+    "g_pDelayDestroyList": "0x8032cfa8",
+    "g_pEnvModMechAllocator": "0x8032ce3c",
+    "g_pGermanCreationQueue": "0x8032ceb8",
+    "g_pGermanList": "0x8032d008",
+    "g_pObjectAllocators": "0x8032cdcc",
+    "g_pTankList": "0x8032d00c",
+    "g_pVolumeAllocator": "0x8032ce04",
+    "strcmp": "0x802669b4"
+  },
+  "local_externals": [
+    "g_delayDestroyHead",
+    "g_delayDestroyTail",
+    "g_fDumpObjectCollisionRadius",
+    "g_frameCounter",
+    "g_iNumGermansQueuedThisFrame",
+    "g_pAnimatedVolumeAllocator",
+    "g_pDelayDestroyList",
+    "g_pEnvModMechAllocator",
+    "g_pGermanCreationQueue",
+    "g_pObjectAllocators",
+    "g_pVolumeAllocator"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "objcreate.cpp",
+  "original_file_index": 1242
+}

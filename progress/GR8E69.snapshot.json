@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 923532,
+    "matching_code_bytes": 926128,
     "total_executable_code_bytes": 2492032,
-    "percent": 37.05939570599414,
+    "percent": 37.163567723046896,
     "categories": {
-      "reconstructed_game": 531316,
+      "reconstructed_game": 533912,
       "restored_library": 392216
     },
-    "matching_functions": 4475
+    "matching_functions": 4489
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -834,7 +834,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "b4af529241011934862ece3b132f5400ea38faf11ea1f348d11ce2c5068932e0",
+    "config/GR8E69/project.json": "ab02563f459093190b5d4851bdae156a9a39c2513612a4ca00400581b8255c18",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -892,7 +892,9 @@
     "config/GR8E69/scene_HierObjectTree.json": "77b4802b94d5690af98dcd86296d3b70b4540ac61239e2a6c6a8167751a37f1c",
     "config/GR8E69/scene_HierObjectVolumes.json": "c2073f614cf7ce1112bdded5e400734c38616e6a07bbdbd6b1dcaf492808a15e",
     "config/GR8E69/scene_ObjCreateBSGO.json": "c7ee37d70f270f49dc4e8a63d060cc3fb1514f8c2e4d8846b6f8595d37eae4e0",
+    "config/GR8E69/scene_ObjCreateCreators.json": "62aaad8101915bd94a0824ef2851eaf17de3745ce03c08d40dc8211feb075a86",
     "config/GR8E69/scene_ObjCreateDumpContainer.json": "4971dc89672515ad11f2fbe87a29fdb2fd9d61efd98efb5c3557d5377e74249b",
+    "config/GR8E69/scene_ObjCreateDumpObjects.json": "0bbe49aa4ff1722e0db41eb246d3bf221c8117ada2afe15c835d16c4d5092e93",
     "config/GR8E69/scene_ObjCreatePoolA.json": "0b85d17eac6bacc2ef1efc5a628d9edb7dfc72aec63191973165f57b8d1e0456",
     "config/GR8E69/scene_ObjCreatePoolB.json": "00569bf051aaea6b0549efed6a945e9f83c3e80f3ecac73436c2ee4f4c68ec80",
     "config/GR8E69/scene_SoldierAI.json": "c85b0dbcc085ed3bcb2baee74d13b9bec64222b734018638d2e390df12c641a6",
@@ -2017,10 +2019,11 @@
     "include/game/MPWeaponSet.h": "86bcb747bbed525dbf73844a22a156b74e8da90bd482fb541bc707e66cddae2c",
     "include/game/MathFun.h": "d92b6bc49451fbf1b8a55fa0859336cc7b6c7290c687133dda85c3e96d14f5da",
     "include/game/MemStack.h": "e96e48316cab4c90d5f0d26ae33db27bf681687e8f88544d20683150b4bb1606",
+    "include/game/ObjCreate.h": "2260f1dc11a6cdec0afdd3f9a770d9631858fe53240f91dd35ba8062bd56bb45",
     "include/game/Objectives.h": "84c28a5f1230c930944b85a552be7c88ecfd86dd60de6de078f3d00312c0ca9f",
     "include/game/ObserverTypes.h": "687dfc07deb4adc23a1d0247270d6ab04c34b758bd88846bf5e4b6ef33e7cc1f",
     "include/game/OffsetPtr.h": "06d2e4c320890063bd6b210c1ddda4b7cefc28e7aa9a4f276e76c128c0a68499",
-    "include/game/ParticleClock.h": "3a8ff4d629de0f34fc3a89e00121d9f079a0b0b4e469829d769856ecbb303198",
+    "include/game/ParticleClock.h": "7784d24bb307ac0a9e2b796c228584fe306f5781575650f1896038426c80dc0b",
     "include/game/ParticleRecipe.h": "04bba33839dcdae3132d1316e831585288f74ef842a5b01c6f6d6c37929ee61d",
     "include/game/PlacementNew.h": "49819284bb2cc2ffb2039d459ce855bd5a233bcfff0a6412ffe0bda02cd616c5",
     "include/game/PopUpMessage.h": "3ba712308420d487fc901d235bd01e828a92eaff7fe9c095eadb933d05ba7737",
@@ -3170,7 +3173,9 @@
     "src/scene/MovingNodeReset.cpp": "c2b3fc485ff5c1b562488b665e62ed8ec41130b5ac54daf2974e3835f16e9244",
     "src/scene/MovingNodeTransformDefaults.cpp": "7e49f15e9c0263e1a12315dff548c7981996f00128da21a72fba8727db90bc15",
     "src/scene/ObjCreateBSGO.cpp": "107824958a301626bb7928a503411c177204562418f4bbc2b49cf80209662dd7",
-    "src/scene/ObjCreateDumpContainer.cpp": "fb090b69095295ede011c1b0ef1c097c7815482e43a389f4781bceb745af19f9",
+    "src/scene/ObjCreateCreators.cpp": "7390ff85674640adda06ba52435568eeb05fbd0f2beae083541e1c5b88330c32",
+    "src/scene/ObjCreateDumpContainer.cpp": "4f61e18ee943350301763d0c3d16a4913570ab5bf9ff4afddc141fb5b30085fd",
+    "src/scene/ObjCreateDumpObjects.cpp": "a88d6d783b15d26a441e3a4430826bb0f9c08764e36e98920c80cf271dad72ba",
     "src/scene/ObjCreatePoolA.cpp": "4bf0385ac5f296380009e8ea2c1da1bf99ba2453fe69333c50b36ef16bfe222b",
     "src/scene/ObjCreatePoolB.cpp": "2475fa2a3d92c31d5136d619a5ba52c0b29087914dce9f05f3d872a8dab9bead",
     "src/scene/SceneNodeAxisDefaults.cpp": "2e62b6f3b3302ff27d6350acc7376566f9bc0cb72383e1f54fbd95b185f6cbf6",
@@ -39012,6 +39017,42 @@
       "discarded_functions": [],
       "object_sha256": "b0990dde97ca116dbf8ba8d2379839f1673d2fad9e078f3e682d449ad1db9eca",
       "linked_sha256": "fa0d9d50f945376276df8c40d9b6fcabdfd076a0e96e28110654a012f2a5f91e"
+    },
+    {
+      "id": "scene_ObjCreateCreators",
+      "category": "reconstructed_game",
+      "functions": 7,
+      "code_bytes": 1892,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "8438c3fdc40ac5c00f3a90885a3d841dd6bc1e5f85cc54d43adbc33e03a23b6e",
+      "linked_sha256": "1da512deb74360d1b24ece888ca6a0d22da017e20fbf1dfb24cbfffe23c83812"
+    },
+    {
+      "id": "scene_ObjCreateDumpObjects",
+      "category": "reconstructed_game",
+      "functions": 7,
+      "code_bytes": 704,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "47daef3a9f5ec2d621bbf0861f05c30163af129620714aeda73f3c78686b497a",
+      "linked_sha256": "6a9fdf15d5b6edbd44b15f3c358a1358a64919d1ee4c6c0722dd39c53846fcb5"
     }
   ],
   "code_map": {
@@ -57639,108 +57680,10 @@
         "file_name": "objcreate.cpp",
         "ranges": [
           {
-            "address": "0x80126ed4",
-            "size": 224,
-            "kind": "function",
-            "name": "CreateObjectGetMemoryRequirements__Fv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80126fb4",
-            "size": 624,
-            "kind": "function",
-            "name": "InitObjectCreators__Fv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80127224",
-            "size": 160,
-            "kind": "function",
-            "name": "ShutdownObjectCreators__Fv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801272c4",
-            "size": 252,
-            "kind": "function",
-            "name": "UpdateObjectCreation__Fv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801273c0",
-            "size": 252,
-            "kind": "function",
-            "name": "ProcessCreationQueue__Fv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801274bc",
-            "size": 260,
-            "kind": "function",
-            "name": "CreateObject__FP13TriggerObjectiiiPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801275c0",
-            "size": 120,
-            "kind": "function",
-            "name": "CreateEnemy__FP13TriggerObjectii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80127638",
             "size": 1072,
             "kind": "function",
             "name": "CreateDumpObject__FRC7CMatrixibP8BSObjecti12EPowerupType",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80127a68",
-            "size": 204,
-            "kind": "function",
-            "name": "HitDumpObject__FP13CStaticObjectP10PickupInfo",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80127b34",
-            "size": 88,
-            "kind": "function",
-            "name": "MarkDumpObjectForDestruction__FP10DumpObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80127b8c",
-            "size": 56,
-            "kind": "function",
-            "name": "MarkDumpObjectForDestruction__FP13CStaticObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80127bc4",
-            "size": 184,
-            "kind": "function",
-            "name": "DestroyDumpObject__FP13CStaticObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80127c7c",
-            "size": 56,
-            "kind": "function",
-            "name": "DestroyOldestDumpObject__Fv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80127cb4",
-            "size": 32,
-            "kind": "function",
-            "name": "CreateEnvModMechanic__FP13TriggerObjecti",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80127cd4",
-            "size": 84,
-            "kind": "function",
-            "name": "CreateMechanic__FP13TriggerObjectiiPv",
             "evidence": "adjacent-compiler-markers"
           },
           {
