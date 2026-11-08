@@ -1,0 +1,49 @@
+{
+  "id": "hud_state",
+  "source": "src/ui/hud_state.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80176c58",
+      "size": 60
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802ace38",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetCompassState__15CHeadsUpDisplay14InterfaceState",
+      "address": "0x80176c58",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "SetAmmoState__15CHeadsUpDisplay14InterfaceState",
+      "address": "0x80176c80",
+      "size": 20,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "HeadsUpDisplay.cpp",
+  "original_file_index": 1509
+}

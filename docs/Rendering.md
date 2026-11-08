@@ -280,3 +280,19 @@ screen-covering quad when the result's alpha is positive, with channels clamped 
 compiles with `-ffast-math`, which folds subtractions and additions of the known zero red channel.
 `FadeIn` and `FadeOut` use normal blending, and `Flash` uses additive blending. The file's static
 initialization remains original.
+
+## CHeadsUpDisplay and the X-Files text
+
+`HeadsUpDisplay.h` is a scoped view holding only the small state functions. `UpdateHitStatus`
+reduces four hit-direction timers at `+0x7b0` by the elapsed time scaled by `0.0166834`, and
+`ChangeHitStatus` sets a direction's timer to 3 for directions 1 through 4. Interface state setters
+store a state with a time: the compass gets 5 when turned on and 4.5 otherwise, and ammo always
+gets 4.5.
+
+`XFiles` is a file-local block of the landmark and time stamp text state. Its member names come from
+Frontline's corresponding file-local variables and are inferred. `SetLandmarkStampString` and
+`SetTimeStampString` treat null and a single space as no text. `FadeTheXFilesText` reduces the text
+alpha at `0.35035` per unit of elapsed time, and finishing is signalled once alpha falls below zero.
+
+`DisplayLandmarkStamp` and `DisplayTimeStamp` remain original. They build a `SoundAliasEvent` on the
+stack with inlined construction and destruction, which the shared `SoundEvents.h` does not provide.

@@ -1869,7 +1869,13 @@
     "scene_ObjCreateSubHier.json",
     "scene_ObjCreateBoxVolume.json",
     "weapon_factory_create.json",
-    "fader.json"
+    "fader.json",
+    "hud_stamp.json",
+    "hud_fade.json",
+    "hud_hit.json",
+    "hud_state.json",
+    "hud_reset.json",
+    "hud_target.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
