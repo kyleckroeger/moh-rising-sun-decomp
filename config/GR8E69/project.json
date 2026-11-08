@@ -1993,7 +1993,9 @@
     "ea_abortmsg.json",
     "ea_fontdrawf.json",
     "ea_printstr.json",
-    "ea_inittmr.json"
+    "ea_inittmr.json",
+    "ea_memfree.json",
+    "ea_filedev_open.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

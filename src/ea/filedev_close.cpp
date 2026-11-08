@@ -9,11 +9,11 @@ struct DVDFileInfo;
 struct HANDLE_def {
     int type;
     char field04[260];
-    void* file;
+    int file;
 };
 
 extern "C" {
-int PCclose(void*);
+int PCclose(int);
 int DVDClose(DVDFileInfo* fileInfo);
 }
 

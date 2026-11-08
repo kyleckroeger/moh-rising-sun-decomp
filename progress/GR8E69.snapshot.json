@@ -288,8 +288,9 @@
       "src/ea/debugbreak.cpp": "d50f4e6762b140affcc38bffd64450e3fd3e14f625ff3c1b0101c206ec715ef4",
       "src/ea/exit.cpp": "aee2216bb9de55d7631911b45e6f3f0375214505293efc561cc5dbd69d6751a5",
       "src/ea/filedev.cpp": "1c7e4208404879a1d2e096eb38ec8e3c1f8cd59d5efbce8af985d6341649ffcf",
-      "src/ea/filedev_close.cpp": "3aeb1e67e182ea7900ee496b59a5d1921bf7e4d28b9907ec8ddb7a8098ce04de",
+      "src/ea/filedev_close.cpp": "f7e929b4c9885137030dd724c2bed7093b1bba828afa140294a52ccba862f46c",
       "src/ea/filedev_kill.cpp": "8c0f3195f66e6e81f3081cc790df3364fc8faca2dee866254e5a811a12635c72",
+      "src/ea/filedev_open.cpp": "80ba240a2ebf4a997c44b9665e953e859508729c3925414c4d327de619bd34c6",
       "src/ea/filesys.cpp": "c3c94be82051fb71d94bba7ef22050a8ddbdd86b2534c9978ac816f6168897a0",
       "src/ea/fontchar.cpp": "2980d56dfbdbbeb46cba293f7c2397b7518079ba32d510118510c9301ee15a47",
       "src/ea/fontcreate.cpp": "fb846d119db1a373f03387cc09f0db8bf0c80ede2c1efb305914580be2630def",
@@ -311,9 +312,10 @@
       "src/ea/locatbig_tail.cpp": "cb31096d1baa481ab45660bc3f49c446161462158dae382c55064958c3ed9f9a",
       "src/ea/memalloc.cpp": "1fb8d6c6965d9916235e6ee35c94a13b67f5d332f5f5adbf44ff3c8285f12e21",
       "src/ea/memblock.cpp": "9c22c07fb0234fb28e395fc44ebaa5d07b2ae93122bdbfb90b8e1b0da347e3ef",
-      "src/ea/memclass.cpp": "488ac4376ea8dbe6b4f8ad5c6bfd5f22b59b9b927a24d66d59e701d4cf5ec0c9",
+      "src/ea/memclass.cpp": "196a92c247bbf907c1250a3e3090187e220b38ee4cc84b90ea8337dba4eca7ca",
       "src/ea/memclear.cpp": "4bcbb20faedd8fb3c8ef34967cc22274310acca8accb481971b83d4897948271",
       "src/ea/memfill.cpp": "b6b4cd5f43024135698bef1950d49238281dc813b15c00aca9e69a6a30169ef3",
+      "src/ea/memfree.cpp": "1c270c5350631a3634b167e1ad51e4410d8455ffef9a32d8de4b85bf45fa240f",
       "src/ea/meminitadr.cpp": "95eed033a03deab2f0918e8b1a92183e8cf0a9bb94d793f3558d6aa13d112d8d",
       "src/ea/memlist.cpp": "fc3b7e601b326eca1c7471a31f336f159932ca812a19f3e978072c8f719e5d6a",
       "src/ea/memmove.cpp": "0f691a941ed86b8b7b6018680653bd5c8ad5c990e2d46ec1869d90b7f2cb86e4",
@@ -1031,14 +1033,14 @@
       "src/quaternion/get_matrix.cpp": "833c4f1e128f98fd799af7974b65805cd409a2be36d0537e5915f5e23a9b65c2",
       "src/quaternion/normalize.cpp": "6a6d8d3dc0aec56da5bc7e6deea018e478cff41b6aa3ce416ae918e002dcd69b",
       "src/quaternion/slerp.cpp": "5d23dc039a6a7d8246e63aee872ffea35f85911f9e34b3017c97d647bc091bfd",
-      "src/save/mc_a.cpp": "b089cb6e2ac51e1ec63da9e5d5d25e19b2b56a1ea90ecac01e7e3e0f4984de75",
-      "src/save/mc_b.cpp": "0aed402a71dc224e73bba71cffb8b75029260571cd90b6dab5abc7a8ab97bec2",
-      "src/save/mc_c.cpp": "77035ea17ea3af1abd35b32df475ea9279debd24167dfb8e3a2990e9e48258e7",
-      "src/save/mc_d.cpp": "85d9672efc391421681aa0e7eb3c48b895e07c13df405a26a9b0af783ab7c4f9",
-      "src/save/mc_e.cpp": "7350468eef2bdfc314d8e8d18c1bddb3658964c7ae47c002734e6bff9f4e77d7",
-      "src/save/mc_f.cpp": "50e4020433a3cc0f2aa55da4439775e9839dc5eaabf1fadf4801327b6d551d63",
-      "src/save/mc_g.cpp": "fbdf8518cd1505dfbd2e6bb95e482d3ff20b224186411c450923e0b93c109733",
-      "src/save/mc_h.cpp": "745afa13fef0e91e76201a9a7ca47ff119084e10a93888c6a9aa7c3134f32f3b",
+      "src/save/mc_a.cpp": "d997337a6d0a141ddb425d9e7e14c486e016ba605c1cc1ba015908658e3fa7f7",
+      "src/save/mc_b.cpp": "3cb7374e400f87fb78095db71d53ad111fe2e6c464d074f6914e970b5c9d4f11",
+      "src/save/mc_c.cpp": "e3a290deb9c6b82ec0a315c05b04388c856d9890ba35e6c919899930bfdae2bc",
+      "src/save/mc_d.cpp": "c3feddb61cd75b5476f5df55f7dcf1317ea0e86ef80dcd980e88a2aba724fc46",
+      "src/save/mc_e.cpp": "797d02645741814699af7b8f68ede944441f85a97f021e844fe3dc465db8181d",
+      "src/save/mc_f.cpp": "1038791ebad2af39cb5d1070178e5645dde89d8034a6a3e3e4b0b4c027159f55",
+      "src/save/mc_g.cpp": "e639a05147fc56af84f8654a1a60c618fd32f0600b6ac95f8c5bd35211da4e75",
+      "src/save/mc_h.cpp": "6d4ea2cd72568b3250cba3ce64dba6c3bae2ea478598f0df6c60cc4521015303",
       "src/scene/AnimObjFactoryConstructor.cpp": "74d86ee9bb07110eb11aa5361a683e4cd3164e50b3ce1b16a066cfcc8cebf9d8",
       "src/scene/AnimObjFactoryLoaders.cpp": "f9b6e94a774c14277579338ca9f3bec4a379df821271425a464b85ad96026e68",
       "src/scene/AnimObjFactoryRelease.cpp": "1ad8052e8d3c457fc715e1512e952e1d702e532f3b2b2c8fef14f67005750f7a",
@@ -2825,6 +2827,7 @@
       "config/GR8E69/ea_filedev.json": "d4d68515f9bc5ca3a34326f97480829907a7d919a986150d48cfac4211bf2e70",
       "config/GR8E69/ea_filedev_close.json": "c5bd473f3105c80e183851c795355c414c950945c828fc831b72fd9168efd1c3",
       "config/GR8E69/ea_filedev_kill.json": "abbfe313dbf537f33e0c37ed83fc67c8ca9cddabc49b3568fafb801745a7ef34",
+      "config/GR8E69/ea_filedev_open.json": "e97f5219ff18eab471530c5762a71e3e833ac03ba3b29af4e9841c58fef8c74e",
       "config/GR8E69/ea_filesys.json": "2738aedc64fab28e1b4a76a601f496a5b5464547d13a689f20fd73bdde9e96d4",
       "config/GR8E69/ea_fontchar.json": "1e52ab7673f6e190e13a35e0fe6fd63489a5cf38806f041eb69bb3cb4a9a1769",
       "config/GR8E69/ea_fontcreate.json": "8bde187429767df88e9c261b790b4a86fbe3edced2e17abfb412777116b78049",
@@ -2847,6 +2850,7 @@
       "config/GR8E69/ea_memclass.json": "8e117c8b801c31ab4ce641234870dbfe51a29f5cf82036b5e9e215b928bd18d4",
       "config/GR8E69/ea_memclear.json": "6542f17c4314fa16b5e3fb6397dd7131e44270ec2b278c3b28d886386c06c4f9",
       "config/GR8E69/ea_memfill.json": "319db2ddfe0a2dac8abfddb718a02686d0b006f0bdcb82888f8d62673963fb32",
+      "config/GR8E69/ea_memfree.json": "cad953d61c5da3e6a6dae4f894b1a74deccd9b4b0d4efdd87bdbe2818cdd4d73",
       "config/GR8E69/ea_meminitadr.json": "0ba2627d0b97e0f7d18dba7a5ebf9c9277a2a1e94a807a30cd8155c067824df7",
       "config/GR8E69/ea_memlist.json": "71c33bc03a1ffa5761271632fd73345d3a64b9c15151307f11a2bbb8dafc9d7a",
       "config/GR8E69/ea_memmove.json": "b2129eb2dd393b154a7b376102b652ec75b5b4b21cf654c4d2d0386fcff6acbd",
@@ -3448,7 +3452,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "2a34ce26ed553442575ab7f6173b87126b8e39988b1d2426dc518c168b6d6e14",
+      "config/GR8E69/project.json": "17825fb290e18a32eb19f8c3d86569e8d40c4e80b3c1807ad2f94f92621a4433",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -4872,14 +4876,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1049260,
+    "matching_code_bytes": 1050464,
     "total_executable_code_bytes": 2492032,
-    "percent": 42.10459576763059,
+    "percent": 42.15290975396785,
     "categories": {
-      "reconstructed_game": 657044,
+      "reconstructed_game": 658248,
       "restored_library": 392216
     },
-    "matching_functions": 5058
+    "matching_functions": 5063
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -5180,6 +5184,7 @@
     "config/GR8E69/ea_filedev.json": "d4d68515f9bc5ca3a34326f97480829907a7d919a986150d48cfac4211bf2e70",
     "config/GR8E69/ea_filedev_close.json": "c5bd473f3105c80e183851c795355c414c950945c828fc831b72fd9168efd1c3",
     "config/GR8E69/ea_filedev_kill.json": "abbfe313dbf537f33e0c37ed83fc67c8ca9cddabc49b3568fafb801745a7ef34",
+    "config/GR8E69/ea_filedev_open.json": "e97f5219ff18eab471530c5762a71e3e833ac03ba3b29af4e9841c58fef8c74e",
     "config/GR8E69/ea_filesys.json": "2738aedc64fab28e1b4a76a601f496a5b5464547d13a689f20fd73bdde9e96d4",
     "config/GR8E69/ea_fontchar.json": "1e52ab7673f6e190e13a35e0fe6fd63489a5cf38806f041eb69bb3cb4a9a1769",
     "config/GR8E69/ea_fontcreate.json": "8bde187429767df88e9c261b790b4a86fbe3edced2e17abfb412777116b78049",
@@ -5202,6 +5207,7 @@
     "config/GR8E69/ea_memclass.json": "8e117c8b801c31ab4ce641234870dbfe51a29f5cf82036b5e9e215b928bd18d4",
     "config/GR8E69/ea_memclear.json": "6542f17c4314fa16b5e3fb6397dd7131e44270ec2b278c3b28d886386c06c4f9",
     "config/GR8E69/ea_memfill.json": "319db2ddfe0a2dac8abfddb718a02686d0b006f0bdcb82888f8d62673963fb32",
+    "config/GR8E69/ea_memfree.json": "cad953d61c5da3e6a6dae4f894b1a74deccd9b4b0d4efdd87bdbe2818cdd4d73",
     "config/GR8E69/ea_meminitadr.json": "0ba2627d0b97e0f7d18dba7a5ebf9c9277a2a1e94a807a30cd8155c067824df7",
     "config/GR8E69/ea_memlist.json": "71c33bc03a1ffa5761271632fd73345d3a64b9c15151307f11a2bbb8dafc9d7a",
     "config/GR8E69/ea_memmove.json": "b2129eb2dd393b154a7b376102b652ec75b5b4b21cf654c4d2d0386fcff6acbd",
@@ -5803,7 +5809,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "2a34ce26ed553442575ab7f6173b87126b8e39988b1d2426dc518c168b6d6e14",
+    "config/GR8E69/project.json": "17825fb290e18a32eb19f8c3d86569e8d40c4e80b3c1807ad2f94f92621a4433",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7626,8 +7632,9 @@
     "src/ea/debugbreak.cpp": "d50f4e6762b140affcc38bffd64450e3fd3e14f625ff3c1b0101c206ec715ef4",
     "src/ea/exit.cpp": "aee2216bb9de55d7631911b45e6f3f0375214505293efc561cc5dbd69d6751a5",
     "src/ea/filedev.cpp": "1c7e4208404879a1d2e096eb38ec8e3c1f8cd59d5efbce8af985d6341649ffcf",
-    "src/ea/filedev_close.cpp": "3aeb1e67e182ea7900ee496b59a5d1921bf7e4d28b9907ec8ddb7a8098ce04de",
+    "src/ea/filedev_close.cpp": "f7e929b4c9885137030dd724c2bed7093b1bba828afa140294a52ccba862f46c",
     "src/ea/filedev_kill.cpp": "8c0f3195f66e6e81f3081cc790df3364fc8faca2dee866254e5a811a12635c72",
+    "src/ea/filedev_open.cpp": "80ba240a2ebf4a997c44b9665e953e859508729c3925414c4d327de619bd34c6",
     "src/ea/filesys.cpp": "c3c94be82051fb71d94bba7ef22050a8ddbdd86b2534c9978ac816f6168897a0",
     "src/ea/fontchar.cpp": "2980d56dfbdbbeb46cba293f7c2397b7518079ba32d510118510c9301ee15a47",
     "src/ea/fontcreate.cpp": "fb846d119db1a373f03387cc09f0db8bf0c80ede2c1efb305914580be2630def",
@@ -7649,9 +7656,10 @@
     "src/ea/locatbig_tail.cpp": "cb31096d1baa481ab45660bc3f49c446161462158dae382c55064958c3ed9f9a",
     "src/ea/memalloc.cpp": "1fb8d6c6965d9916235e6ee35c94a13b67f5d332f5f5adbf44ff3c8285f12e21",
     "src/ea/memblock.cpp": "9c22c07fb0234fb28e395fc44ebaa5d07b2ae93122bdbfb90b8e1b0da347e3ef",
-    "src/ea/memclass.cpp": "488ac4376ea8dbe6b4f8ad5c6bfd5f22b59b9b927a24d66d59e701d4cf5ec0c9",
+    "src/ea/memclass.cpp": "196a92c247bbf907c1250a3e3090187e220b38ee4cc84b90ea8337dba4eca7ca",
     "src/ea/memclear.cpp": "4bcbb20faedd8fb3c8ef34967cc22274310acca8accb481971b83d4897948271",
     "src/ea/memfill.cpp": "b6b4cd5f43024135698bef1950d49238281dc813b15c00aca9e69a6a30169ef3",
+    "src/ea/memfree.cpp": "1c270c5350631a3634b167e1ad51e4410d8455ffef9a32d8de4b85bf45fa240f",
     "src/ea/meminitadr.cpp": "95eed033a03deab2f0918e8b1a92183e8cf0a9bb94d793f3558d6aa13d112d8d",
     "src/ea/memlist.cpp": "fc3b7e601b326eca1c7471a31f336f159932ca812a19f3e978072c8f719e5d6a",
     "src/ea/memmove.cpp": "0f691a941ed86b8b7b6018680653bd5c8ad5c990e2d46ec1869d90b7f2cb86e4",
@@ -8369,14 +8377,14 @@
     "src/quaternion/get_matrix.cpp": "833c4f1e128f98fd799af7974b65805cd409a2be36d0537e5915f5e23a9b65c2",
     "src/quaternion/normalize.cpp": "6a6d8d3dc0aec56da5bc7e6deea018e478cff41b6aa3ce416ae918e002dcd69b",
     "src/quaternion/slerp.cpp": "5d23dc039a6a7d8246e63aee872ffea35f85911f9e34b3017c97d647bc091bfd",
-    "src/save/mc_a.cpp": "b089cb6e2ac51e1ec63da9e5d5d25e19b2b56a1ea90ecac01e7e3e0f4984de75",
-    "src/save/mc_b.cpp": "0aed402a71dc224e73bba71cffb8b75029260571cd90b6dab5abc7a8ab97bec2",
-    "src/save/mc_c.cpp": "77035ea17ea3af1abd35b32df475ea9279debd24167dfb8e3a2990e9e48258e7",
-    "src/save/mc_d.cpp": "85d9672efc391421681aa0e7eb3c48b895e07c13df405a26a9b0af783ab7c4f9",
-    "src/save/mc_e.cpp": "7350468eef2bdfc314d8e8d18c1bddb3658964c7ae47c002734e6bff9f4e77d7",
-    "src/save/mc_f.cpp": "50e4020433a3cc0f2aa55da4439775e9839dc5eaabf1fadf4801327b6d551d63",
-    "src/save/mc_g.cpp": "fbdf8518cd1505dfbd2e6bb95e482d3ff20b224186411c450923e0b93c109733",
-    "src/save/mc_h.cpp": "745afa13fef0e91e76201a9a7ca47ff119084e10a93888c6a9aa7c3134f32f3b",
+    "src/save/mc_a.cpp": "d997337a6d0a141ddb425d9e7e14c486e016ba605c1cc1ba015908658e3fa7f7",
+    "src/save/mc_b.cpp": "3cb7374e400f87fb78095db71d53ad111fe2e6c464d074f6914e970b5c9d4f11",
+    "src/save/mc_c.cpp": "e3a290deb9c6b82ec0a315c05b04388c856d9890ba35e6c919899930bfdae2bc",
+    "src/save/mc_d.cpp": "c3feddb61cd75b5476f5df55f7dcf1317ea0e86ef80dcd980e88a2aba724fc46",
+    "src/save/mc_e.cpp": "797d02645741814699af7b8f68ede944441f85a97f021e844fe3dc465db8181d",
+    "src/save/mc_f.cpp": "1038791ebad2af39cb5d1070178e5645dde89d8034a6a3e3e4b0b4c027159f55",
+    "src/save/mc_g.cpp": "e639a05147fc56af84f8654a1a60c618fd32f0600b6ac95f8c5bd35211da4e75",
+    "src/save/mc_h.cpp": "6d4ea2cd72568b3250cba3ce64dba6c3bae2ea478598f0df6c60cc4521015303",
     "src/scene/AnimObjFactoryConstructor.cpp": "74d86ee9bb07110eb11aa5361a683e4cd3164e50b3ce1b16a066cfcc8cebf9d8",
     "src/scene/AnimObjFactoryLoaders.cpp": "f9b6e94a774c14277579338ca9f3bec4a379df821271425a464b85ad96026e68",
     "src/scene/AnimObjFactoryRelease.cpp": "1ad8052e8d3c457fc715e1512e952e1d702e532f3b2b2c8fef14f67005750f7a",
@@ -49029,6 +49037,44 @@
       "discarded_functions": [],
       "object_sha256": "54852d647e574af3a4cebff29597c904515591639f2de2b8ade74a4736d810d7",
       "linked_sha256": "94524b7ab776b478206571ceb06adffb01b04046c502606790069e6f2b22bd00"
+    },
+    {
+      "id": "ea_memfree",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 476,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "3d889f7c63717e37784f8d63398d835776b23eb74276c8e58a8240f3a8024950",
+      "linked_sha256": "90b275a5316213a239b67a9fdf87bfa8acfb8dd3040779d039dc9e2a956e583d"
+    },
+    {
+      "id": "ea_filedev_open",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 728,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "2baf5fdd81fcadeba271ffeb0361a5e81ee490b42c44252d8758264d6d449996",
+      "linked_sha256": "00554c31efe5e5d406ef4b75a425e3b5d3d661b4c9d6a622fc9584356b19d110"
     }
   ],
   "code_map": {
@@ -80521,34 +80567,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8020c188",
-            "size": 220,
-            "kind": "function",
-            "name": "openfile_plat__FPCcUiPi",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x8020c264",
-            "size": 68,
-            "kind": "function",
-            "name": "FixSlash__FPcPCc",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x8020c2a8",
-            "size": 80,
-            "kind": "function",
-            "name": "MyStrCmpi__FPCcT0",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x8020c2f8",
-            "size": 360,
-            "kind": "function",
-            "name": "openfile__FPCcUiP10HANDLE_def",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8020c4b4",
             "size": 52,
             "kind": "function",
@@ -80654,24 +80672,6 @@
         "marker_interval": [
           "0x8020ced4",
           "0x8020d2a8"
-        ]
-      },
-      {
-        "name": "Unmatched files/memfree.cpp [inferred file group]",
-        "file_record": 491,
-        "file_name": "memfree.cpp",
-        "ranges": [
-          {
-            "address": "0x8020d2a8",
-            "size": 476,
-            "kind": "function",
-            "name": "MEM_free",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x8020d2a8",
-          "0x8020d484"
         ]
       },
       {

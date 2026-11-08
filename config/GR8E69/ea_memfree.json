@@ -1,0 +1,48 @@
+{
+  "id": "ea_memfree",
+  "source": "src/ea/memfree.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8020d2a8",
+      "size": 476
+    }
+  ],
+  "functions": [
+    {
+      "name": "MEM_free",
+      "address": "0x8020d2a8",
+      "size": 476,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FREE_add__FP8MEMCLASSP8MEMBLOCK": "0x8020d718",
+    "FREE_remove__FP8MEMBLOCK": "0x8020d79c",
+    "MEM_name": "0x8020d7cc",
+    "MEM_tailsize__FPCci": "0x8020ced4",
+    "MUTEX_lock": "0x80217f7c",
+    "MUTEX_unlock": "0x80217fa0",
+    "memclass": "0x804098e0"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "memfree.cpp",
+  "original_file_index": 2900
+}

@@ -470,3 +470,9 @@ their files `.cpp`. The mixer hooks (`MIXinitfn` through `MIXsetpitchfn`) are de
 `MIX_*` functions they hold; `MIX_audioslice`'s parameters are inferred from its caller in the sound driver thread,
 since it is not reconstructed yet. `TIMER_init` reads the bus clock from low memory at `0x800000F8`; `OSLOWMEM` is an
 inferred view.
+
+`MEM_free` passes a record to two class hooks at `+100` and `+104` around the free; the alloc hooks at `+92` and `+96`
+are the same pattern in `MEM_allocaligna`, which is not reconstructed yet. The record's members are inferred from their
+stores. `openfile` opens host files through `PCopen` and `PCcreat`, with the file number stored as an `int`, as
+`openfile_plat`'s mangled name shows; `MyStrCmpi`, despite its name, returns the prefix's length when the name starts
+with it. The name also belongs to a different function near `0x801b1448`.

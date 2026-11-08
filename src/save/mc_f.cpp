@@ -7,7 +7,7 @@ extern void *g_pMiscTextDatabase;
 extern void *g_pScratchpad;
 extern int g_bWaitingForReply;
 extern int g_bIsBusy;
-extern "C" void MEM_free(void *);
+extern "C" int MEM_free(void *);
 
 class CMCDevice {
 public:
