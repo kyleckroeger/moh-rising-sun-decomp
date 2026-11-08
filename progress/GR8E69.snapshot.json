@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 930572,
+    "matching_code_bytes": 931828,
     "total_executable_code_bytes": 2492032,
-    "percent": 37.34189609122194,
+    "percent": 37.3922967281319,
     "categories": {
-      "reconstructed_game": 538356,
+      "reconstructed_game": 539612,
       "restored_library": 392216
     },
-    "matching_functions": 4561
+    "matching_functions": 4570
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -266,6 +266,7 @@
     "config/GR8E69/compartment_draw_enabled.json": "730b38a0998449f373a9662e21aca81719a2c97d3343655dd4bdbf108cf66b4e",
     "config/GR8E69/compartment_init.json": "c81d407c5a80e7637234adc8c653bb20d536159d7c6b2a164ec1cc43f40f1a7c",
     "config/GR8E69/compartment_world_volume.json": "71def021fb15bf3854ec3741d80859e072ad197ebdecb6d4a2930523362f855f",
+    "config/GR8E69/configfile.json": "816f617ef89dfb0785d03617a0cc28dba036126ca63533b3e33e646cbf78520f",
     "config/GR8E69/crc.json": "d29c0ef0d8149a361db85a37711abcf340764c87356e4ddb75ed5bb24c982792",
     "config/GR8E69/csg_volume.json": "40a2fd4c64ca48aff4063c4ba8f4cb09970ca4c745a5faff31543918559b4156",
     "config/GR8E69/dolphin-network-source.json": "6b039c8ef3fc502a7441ab8f55160567fd2facec6c12d818739c3bc7fd741b82",
@@ -843,7 +844,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "77cc269d942310e58106cd0e30412863680f13548f77147c722cb33553316c26",
+    "config/GR8E69/project.json": "936dc855820e80a7209f5068d75a924b6c8c19e0a29a53ec74adcdf3e5687951",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -2774,6 +2775,7 @@
     "src/frontend/popup_message_dtor.cpp": "b0fa8b929b9341635239ac8359ca62485761cb69af3ae611c660b69221771b0f",
     "src/frontend/uppercase.cpp": "58d80513a4f76209e1895c6943d7e05837625be3bd2687efe32159afd23f70dd",
     "src/game/LinkedList.cpp": "7361285bbff6c1c98f4751ffa81c4a80a8de7b348144d43b880f40ca98feb332",
+    "src/game/configfile.cpp": "0b7f529b5026deac835ef66c0e735bf252c96ce3b825808ece1998806605444c",
     "src/game/font_attrs.cpp": "17a5dcba14710a5625b373dba980f883f4491d208bf930ab9eb0cec07b5f3fe7",
     "src/game/font_ctor.cpp": "58553ab744e9e2326e145ad958eb12bdd904aa92453a41030f63035cd506348f",
     "src/game/font_draw.cpp": "7d13587aadc975b86a92737e78cb108dcb191bf6a1c64973d98b2f70e746015a",
@@ -39558,6 +39560,24 @@
       "discarded_functions": [],
       "object_sha256": "844ee0c0fef57039734364f4a133bf3ed246abd15a0ffe3834dafb2a03902bc8",
       "linked_sha256": "e464f8b8eb0efafb59562522508a02a97c22fc719796747bcd8bd12f9add056e"
+    },
+    {
+      "id": "configfile",
+      "category": "reconstructed_game",
+      "functions": 9,
+      "code_bytes": 1256,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "eed0a95c2d6ad2c510e8e466bcfe85f8f43e0e1edbb8acca127cf6cef10bcee7",
+      "linked_sha256": "15f45fd35820b6d3c03de2c7e43d4d1ef66bdc4f9732bead479ca6e111dfc14f"
     }
   ],
   "code_map": {
@@ -68695,80 +68715,6 @@
         "marker_interval": [
           "0x801a83cc",
           "0x801a89d0"
-        ]
-      },
-      {
-        "name": "Unmatched files/configfile.cpp [inferred file group]",
-        "file_record": 338,
-        "file_name": "configfile.cpp",
-        "ranges": [
-          {
-            "address": "0x801a89d0",
-            "size": 76,
-            "kind": "function",
-            "name": "SkipToEOL__FPc",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x801a8a1c",
-            "size": 144,
-            "kind": "function",
-            "name": "CopyStringData__FPcT0i",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x801a8aac",
-            "size": 416,
-            "kind": "function",
-            "name": "__11CConfigFilePCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a8c4c",
-            "size": 76,
-            "kind": "function",
-            "name": "_._11CConfigFile",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a8c98",
-            "size": 116,
-            "kind": "function",
-            "name": "SetSection__11CConfigFilePCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a8d0c",
-            "size": 176,
-            "kind": "function",
-            "name": "GetVar__11CConfigFilePCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a8dbc",
-            "size": 72,
-            "kind": "function",
-            "name": "AsInt__11CConfigFilePCcRi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a8e04",
-            "size": 104,
-            "kind": "function",
-            "name": "AsBool__11CConfigFilePCcRb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a8e6c",
-            "size": 76,
-            "kind": "function",
-            "name": "AsString__11CConfigFilePCcPci",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x801a89d0",
-          "0x801a8eb8"
         ]
       },
       {

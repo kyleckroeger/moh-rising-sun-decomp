@@ -1766,7 +1766,8 @@
     "viewport.json",
     "scene_exclusion.json",
     "framecount.json",
-    "toilet_shutdown.json"
+    "toilet_shutdown.json",
+    "configfile.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

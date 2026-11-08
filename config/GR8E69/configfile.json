@@ -1,0 +1,104 @@
+{
+  "id": "configfile",
+  "source": "src/game/configfile.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a89d0",
+      "size": 1256
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b7808",
+      "size": 124
+    }
+  ],
+  "functions": [
+    {
+      "name": "SkipToEOL__FPc",
+      "address": "0x801a89d0",
+      "size": 76,
+      "binding": 0
+    },
+    {
+      "name": "CopyStringData__FPcT0i",
+      "address": "0x801a8a1c",
+      "size": 144,
+      "binding": 0
+    },
+    {
+      "name": "__11CConfigFilePCc",
+      "address": "0x801a8aac",
+      "size": 416,
+      "binding": 1
+    },
+    {
+      "name": "_._11CConfigFile",
+      "address": "0x801a8c4c",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "SetSection__11CConfigFilePCc",
+      "address": "0x801a8c98",
+      "size": 116,
+      "binding": 1
+    },
+    {
+      "name": "GetVar__11CConfigFilePCc",
+      "address": "0x801a8d0c",
+      "size": 176,
+      "binding": 1
+    },
+    {
+      "name": "AsInt__11CConfigFilePCcRi",
+      "address": "0x801a8dbc",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "AsBool__11CConfigFilePCcRb",
+      "address": "0x801a8e04",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "AsString__11CConfigFilePCcPci",
+      "address": "0x801a8e6c",
+      "size": 76,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DebugMsg__FPCce": "0x80279094",
+    "TLT_CloseFile__FPv": "0x801a9764",
+    "TLT_LoadFileNormal__FPCcPii": "0x801a9abc",
+    "__builtin_delete": "0x801a8990",
+    "__builtin_vec_new": "0x801a8950",
+    "_ctype_": "0x802bfdac",
+    "atoi": "0x80264f14",
+    "memcpy": "0x802665e8",
+    "strcasecmp": "0x8026680c",
+    "strchr": "0x80266918",
+    "strncasecmp": "0x80266c48",
+    "strstr": "0x80266f6c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "configfile.cpp",
+  "original_file_index": 2184
+}
