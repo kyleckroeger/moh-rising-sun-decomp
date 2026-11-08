@@ -1767,7 +1767,11 @@
     "scene_exclusion.json",
     "framecount.json",
     "toilet_shutdown.json",
-    "configfile.json"
+    "configfile.json",
+    "sound_stretch.json",
+    "sound_supxaf.json",
+    "sound_supxalf.json",
+    "sound_supxapf.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
