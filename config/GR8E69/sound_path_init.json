@@ -1,0 +1,54 @@
+{
+  "id": "sound_path_init",
+  "source": "src/sound/ea/path_init.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800356a0",
+      "size": 360
+    }
+  ],
+  "functions": [
+    {
+      "name": "PATHI_init",
+      "address": "0x800356a0",
+      "size": 136,
+      "binding": 1
+    },
+    {
+      "name": "PATHI_switchproject",
+      "address": "0x80035728",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "PATHI_switchvoice",
+      "address": "0x800357a4",
+      "size": 100,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "inited": "0x802c1688",
+    "paused": "0x802c1689",
+    "pfactive": "0x802c168c",
+    "pfstate": "0x802c1680",
+    "pfstates": "0x802edd00"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

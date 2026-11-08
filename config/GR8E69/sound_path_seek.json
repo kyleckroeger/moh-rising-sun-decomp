@@ -1,0 +1,48 @@
+{
+  "id": "sound_path_seek",
+  "source": "src/sound/ea/path_seek.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800366b8",
+      "size": 528
+    }
+  ],
+  "functions": [
+    {
+      "name": "PATHI_eventdeadline",
+      "address": "0x800366b8",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "PATHI_seeknextnode",
+      "address": "0x8003671c",
+      "size": 428,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "PATHI_enternode": "0x80035db4",
+    "PATHI_nextnode": "0x80035cf0",
+    "PATHI_queuenode": "0x800368c8",
+    "pfstate": "0x802c1680",
+    "pfstates": "0x802edd00"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

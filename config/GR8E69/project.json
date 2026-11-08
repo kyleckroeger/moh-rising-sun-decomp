@@ -1897,7 +1897,14 @@
     "player_aim_update.json",
     "toilet_mvd.json",
     "toilet_ready.json",
-    "toilet_ext.json"
+    "toilet_ext.json",
+    "sound_path_init.json",
+    "sound_path_tracks.json",
+    "sound_path_seek.json",
+    "sound_path_time.json",
+    "sound_path_servicetask.json",
+    "sound_path_control.json",
+    "sound_path_ctl.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

@@ -1,0 +1,54 @@
+{
+  "id": "sound_path_servicetask",
+  "source": "src/sound/ea/path_servicetask.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80037510",
+      "size": 276
+    }
+  ],
+  "functions": [
+    {
+      "name": "PATHI_servicetask",
+      "address": "0x80037510",
+      "size": 232,
+      "binding": 1
+    },
+    {
+      "name": "PATHI_servicetimer",
+      "address": "0x800375f8",
+      "size": 44,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "PATHI_getmastertrack": "0x80035a84",
+    "PATHI_service": "0x80037024",
+    "PATHI_switchproject": "0x80035728",
+    "PATHX_milliseconds": "0x80158280",
+    "bankservice": "0x802c1690",
+    "inited": "0x802c1688",
+    "milliseconds": "0x802c1694",
+    "paused": "0x802c1689",
+    "pfactive": "0x802c168c",
+    "pfstate": "0x802c1680",
+    "pfstates": "0x802edd00"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

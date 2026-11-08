@@ -1,0 +1,55 @@
+{
+  "id": "sound_path_control",
+  "source": "src/sound/ea/path_control.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80037c64",
+      "size": 576
+    }
+  ],
+  "functions": [
+    {
+      "name": "PATH_latency",
+      "address": "0x80037c64",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "PATH_control",
+      "address": "0x80037ca8",
+      "size": 272,
+      "binding": 1
+    },
+    {
+      "name": "PATH_clearallevents",
+      "address": "0x80037db8",
+      "size": 236,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "PATHI_gettrackptr": "0x800359e4",
+    "PATHI_switchproject": "0x80035728",
+    "inited": "0x802c1688",
+    "pfactive": "0x802c168c",
+    "pfstate": "0x802c1680",
+    "pfstates": "0x802edd00"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 982192,
+    "matching_code_bytes": 988388,
     "total_executable_code_bytes": 2492032,
-    "percent": 39.41329806358827,
+    "percent": 39.661930504905236,
     "categories": {
-      "reconstructed_game": 589976,
+      "reconstructed_game": 596172,
       "restored_library": 392216
     },
-    "matching_functions": 4871
+    "matching_functions": 4900
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -907,7 +907,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "2d8b60e23d9fe82f41c72a5adebc5bb79d087294548aa8b24545208bb8ff6c23",
+    "config/GR8E69/project.json": "25d47a9c20d187752f525cf024f51135efa701a8b5fd0fcd4b7976c703567571",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -1487,8 +1487,15 @@
     "config/GR8E69/sound_event_defaults.json": "15e7dd13b990944c9046b1119cd652d61f4e8fafc19d8fab203473c7ec63da12",
     "config/GR8E69/sound_getters.json": "8383c1475babb703fa21c8d7d0af5c5f4d30a34856a855c40c8d91557df51c51",
     "config/GR8E69/sound_isnd64.json": "4df57a788f8434f2ef337a85f19898745132bcf91159a66dc4639217f30d322b",
+    "config/GR8E69/sound_path_control.json": "31d7c7caa8e5ac99c30d0d30ec9295f274a0649d42d51b2fed88c3dec83ee292",
     "config/GR8E69/sound_path_createtrack.json": "7a7003f4e938e73e085ab4c4a55add9cf4c0ed4b30bb84865a672e418554f3f9",
+    "config/GR8E69/sound_path_ctl.json": "8e5046dd19af521a57b10d2947f66e2fcab6c9e90b1be05be1fda0bec89d0a19",
+    "config/GR8E69/sound_path_init.json": "e2f65d1bc0fb3a2634ebd0f09efc9dca3cd1eae524426b04c0d92f279ee1bb9e",
     "config/GR8E69/sound_path_overhead.json": "d321821613f9aea946f2c0180c6030ad7927af19e9b8e5ac8a9970728a3732e4",
+    "config/GR8E69/sound_path_seek.json": "bfff4129c3fb4450fb0479eb6d78b61783cb23d1c9ec242eb37f307da0b80c3a",
+    "config/GR8E69/sound_path_servicetask.json": "7ffb2e75ce0ec5f713e7a17da85f520ddc93f5e451b72f0941fb718f73a6d43f",
+    "config/GR8E69/sound_path_time.json": "99cd8e77d494dd19a2003b79d10acc70f95ee9731b323334e6f222444cac375d",
+    "config/GR8E69/sound_path_tracks.json": "b8d1b9ed9c0e24f443415a5d7e93a96c4ef59e814b009d22d9b863204ea7a918",
     "config/GR8E69/sound_pathx_create.json": "c51644012f8ee19f7f97f5c26b1d8bfdc46486a3400f9c0de138165857a56373",
     "config/GR8E69/sound_pathx_load.json": "acb4921b4b2166aa042b69c8c9c9b73c0c4e41ee54a11bd32895d72de1fd56ae",
     "config/GR8E69/sound_pathx_play.json": "3ace1766bfe64efc7444cbaae5a1d2d2800045c86913f6d513c5bc4213c61eb1",
@@ -2188,6 +2195,7 @@
     "include/game/OffsetPtr.h": "06d2e4c320890063bd6b210c1ddda4b7cefc28e7aa9a4f276e76c128c0a68499",
     "include/game/ParticleClock.h": "7784d24bb307ac0a9e2b796c228584fe306f5781575650f1896038426c80dc0b",
     "include/game/ParticleRecipe.h": "04bba33839dcdae3132d1316e831585288f74ef842a5b01c6f6d6c37929ee61d",
+    "include/game/PathTrack.h": "7d4f219195aefe85c07b1c7de2c4805cb8a02bcb60b23db492195ec3b9b0a819",
     "include/game/PathxTrack.h": "f46f02824655f05c7a0c47d71481dfbe5c5845b6b73ae17d5f8f3453b5c4298a",
     "include/game/PlacementNew.h": "49819284bb2cc2ffb2039d459ce855bd5a233bcfff0a6412ffe0bda02cd616c5",
     "include/game/PopUpMessage.h": "3ba712308420d487fc901d235bd01e828a92eaff7fe9c095eadb933d05ba7737",
@@ -3941,8 +3949,15 @@
     "src/sound/ea/SNDI_root1x.cpp": "b8cb81975aae1629cfe4bb3b1a1724aa93700d217933dfd624cb97348a2b951d",
     "src/sound/ea/SNDI_sin.cpp": "48b77d6d0581a9304aa3f75ad076d39e5e2cafbc067c49354a718c50f88ac555",
     "src/sound/ea/isnd64.cpp": "6b2f195cb4696a2c6c4435d711ed520975d96cbb2363316be54ecf816b8491ab",
+    "src/sound/ea/path_control.cpp": "12651e06dcb7ff8cee798d576ce0c4b69f73b24ac3d8db018f7c5e859e533d9c",
     "src/sound/ea/path_createtrack.cpp": "fbae8f31056cdf4a004045ebe80d905d515aa4a196807a266efdd8d72a1119e5",
+    "src/sound/ea/path_ctl.cpp": "e953f0395dc2386605b65e7cb8a65f1884919c3f82c0dd9337634fa63c44444d",
+    "src/sound/ea/path_init.cpp": "40f15ce8ccee6c2a0972a584f06c6145078ea5dcec6d53f79ae8c2ef36d707e8",
     "src/sound/ea/path_overhead.cpp": "492148897f70e53f134c1795f8d987b004cceb46e37d226dfaa9fb83e489228e",
+    "src/sound/ea/path_seek.cpp": "5a47b30b0e1c121e720e66b30532d2f3684222864d8e5b95d93ffcf45f470325",
+    "src/sound/ea/path_servicetask.cpp": "8bb02bad9f1f0ba0234dcac0a86ff4aeada6f87b0d67aae893bc7b0f73bb291d",
+    "src/sound/ea/path_time.cpp": "02367dbf8c300a21ae38673158b5cd0cd2475050cab085f5cfa04ada51b34f0f",
+    "src/sound/ea/path_tracks.cpp": "351cb5d45e7d4ccc743e4445b4bc4b29cac483834600866f42ba2eb85b198a13",
     "src/sound/ea/pathx_create.cpp": "f71dbfad8e7270d45466d318cd84e917e179e60a8b4515259d04c7b983866002",
     "src/sound/ea/pathx_load.cpp": "b3e9d446fe7a76716cf25414a60decb397d1ffb1b391ec9e4adea795c201f977",
     "src/sound/ea/pathx_play.cpp": "6ee07cd0c1c8f20a85fc42bbca70899df01695396cc397381359eca82aec442a",
@@ -42213,6 +42228,132 @@
       "discarded_functions": [],
       "object_sha256": "342624edfdfe74681b2d7ba498280cdd66b8be24f4e176cec0b80b3cc326f369",
       "linked_sha256": "432467e8e52eae94def97f2cdd04d806901a83bdaf6824379a07a45ee6560d92"
+    },
+    {
+      "id": "sound_path_init",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 360,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "8f431b1617196e374324e176e41bcfcde9a51c45a9ebd8a0570e99f6ed91dcd2",
+      "linked_sha256": "3601325b0ce5a8c181a66debea500522fd15244246d8ac1798942c2b35cd45b8"
+    },
+    {
+      "id": "sound_path_tracks",
+      "category": "reconstructed_game",
+      "functions": 11,
+      "code_bytes": 1952,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "3caa7f3fa7ee3ed3941bb4cf87250c5a0453f6534553f477fc40e996a6fcde1c",
+      "linked_sha256": "b316e1978885c86e76e6eddf34a0a8f3acd23e9397b63aac74ae6f7aa489420d"
+    },
+    {
+      "id": "sound_path_seek",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 528,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "a63d9da6b3c7f734a3eefd9663c52755ebb37b0f2f4ba8381e791a21a96f6da6",
+      "linked_sha256": "3a8fbe88ab3c867dd9327b951abfc90837f33fdf9df50a534c32bfc17fd21a80"
+    },
+    {
+      "id": "sound_path_time",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 328,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "9db5158bc52e25dc3f75f47ad634de3b5c97c324829b3fa29393648a9af70163",
+      "linked_sha256": "8df4d7259c4c098fcf095731dc293877fd87076e60a2201d6d5be7bafa4ee348"
+    },
+    {
+      "id": "sound_path_servicetask",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 276,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "05efdc5935cf532a85c10e3a2af9cbecc60fc26f287da8d9fb0106caff415fa8",
+      "linked_sha256": "7a2233143098a9397f9553b426e3ba759a35bef4278e7e06b3f72201cfeceb66"
+    },
+    {
+      "id": "sound_path_control",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 576,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "bbef08dcf3c8611b2200f1bc9a61f0d655aff90c438d08a4e405cba81a2b9536",
+      "linked_sha256": "ba8064c2bcbad5d2510eddc28924d59f7edb9fdc8abbf7c6dcf7f252c2b5d5bf"
+    },
+    {
+      "id": "sound_path_ctl",
+      "category": "reconstructed_game",
+      "functions": 6,
+      "code_bytes": 2176,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "037aacb89495910fb435dea77214f7676ae4d9aa5137d243c42e144df53af0f1",
+      "linked_sha256": "f41d5e7a5056cf776a48eff448ec2f2c4ea9b3891d7cc6960b1806f81479e6c5"
     }
   ],
   "code_map": {
@@ -42243,113 +42384,20 @@
         ]
       },
       {
-        "name": "Unknown file/.text @ 800356a0",
+        "name": "Unknown file/.text @ 80035808",
         "ranges": [
-          {
-            "address": "0x800356a0",
-            "size": 136,
-            "kind": "function",
-            "name": "PATHI_init",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80035728",
-            "size": 124,
-            "kind": "function",
-            "name": "PATHI_switchproject",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800357a4",
-            "size": 100,
-            "kind": "function",
-            "name": "PATHI_switchvoice",
-            "evidence": "unknown-file"
-          },
           {
             "address": "0x80035808",
             "size": 412,
             "kind": "function",
             "name": "PATHI_sortprojects",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800359a4",
-            "size": 64,
-            "kind": "function",
-            "name": "PATHI_destroyall",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800359e4",
-            "size": 160,
-            "kind": "function",
-            "name": "PATHI_gettrackptr",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80035a84",
-            "size": 152,
-            "kind": "function",
-            "name": "PATHI_getmastertrack",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80035b1c",
-            "size": 112,
-            "kind": "function",
-            "name": "PATHI_numtracks",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80035b8c",
-            "size": 260,
-            "kind": "function",
-            "name": "PATHI_setvolumes",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80035c90",
-            "size": 96,
-            "kind": "function",
-            "name": "PATHI_sampleoffset",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80035cf0",
-            "size": 196,
-            "kind": "function",
-            "name": "PATHI_nextnode",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80035db4",
-            "size": 300,
-            "kind": "function",
-            "name": "PATHI_enternode",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80035ee0",
-            "size": 140,
-            "kind": "function",
-            "name": "PATHI_routenode",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80035f6c",
-            "size": 360,
-            "kind": "function",
-            "name": "PATHI_eventstate",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800360d4",
-            "size": 112,
-            "kind": "function",
-            "name": "PATHI_eventnode",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 80036144",
+        "ranges": [
           {
             "address": "0x80036144",
             "size": 1100,
@@ -42363,21 +42411,12 @@
             "kind": "function",
             "name": "PATHI_eventrestore",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800366b8",
-            "size": 100,
-            "kind": "function",
-            "name": "PATHI_eventdeadline",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8003671c",
-            "size": 428,
-            "kind": "function",
-            "name": "PATHI_seeknextnode",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 800368c8",
+        "ranges": [
           {
             "address": "0x800368c8",
             "size": 788,
@@ -42391,42 +42430,24 @@
             "kind": "function",
             "name": "PATHI_choosebeat",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80036edc",
-            "size": 180,
-            "kind": "function",
-            "name": "PATHI_timetonextstreambeat",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80036f90",
-            "size": 148,
-            "kind": "function",
-            "name": "PATHI_timeremaining",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 80037024",
+        "ranges": [
           {
             "address": "0x80037024",
             "size": 1260,
             "kind": "function",
             "name": "PATHI_service",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80037510",
-            "size": 232,
-            "kind": "function",
-            "name": "PATHI_servicetask",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800375f8",
-            "size": 44,
-            "kind": "function",
-            "name": "PATHI_servicetimer",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 80037624",
+        "ranges": [
           {
             "address": "0x80037624",
             "size": 520,
@@ -42449,76 +42470,13 @@
         ]
       },
       {
-        "name": "Unknown file/.text @ 80037c64",
+        "name": "Unknown file/.text @ 80037ea4",
         "ranges": [
-          {
-            "address": "0x80037c64",
-            "size": 68,
-            "kind": "function",
-            "name": "PATH_latency",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80037ca8",
-            "size": 272,
-            "kind": "function",
-            "name": "PATH_control",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80037db8",
-            "size": 236,
-            "kind": "function",
-            "name": "PATH_clearallevents",
-            "evidence": "unknown-file"
-          },
           {
             "address": "0x80037ea4",
             "size": 976,
             "kind": "function",
             "name": "PATH_event",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80038274",
-            "size": 472,
-            "kind": "function",
-            "name": "PATH_jump",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8003844c",
-            "size": 360,
-            "kind": "function",
-            "name": "PATH_destroy",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800385b4",
-            "size": 296,
-            "kind": "function",
-            "name": "PATH_pause",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800386dc",
-            "size": 256,
-            "kind": "function",
-            "name": "PATH_stop",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800387dc",
-            "size": 348,
-            "kind": "function",
-            "name": "PATH_volume",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80038938",
-            "size": 444,
-            "kind": "function",
-            "name": "PATH_fade",
             "evidence": "unknown-file"
           }
         ]

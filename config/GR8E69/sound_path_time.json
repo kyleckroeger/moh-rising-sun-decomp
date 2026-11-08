@@ -1,0 +1,46 @@
+{
+  "id": "sound_path_time",
+  "source": "src/sound/ea/path_time.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80036edc",
+      "size": 328
+    }
+  ],
+  "functions": [
+    {
+      "name": "PATHI_timetonextstreambeat",
+      "address": "0x80036edc",
+      "size": 180,
+      "binding": 1
+    },
+    {
+      "name": "PATHI_timeremaining",
+      "address": "0x80036f90",
+      "size": 148,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "PATHX_status": "0x8015883c",
+    "PATHX_timeremaining": "0x8015865c",
+    "pfstate": "0x802c1680"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

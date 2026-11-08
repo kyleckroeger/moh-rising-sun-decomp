@@ -316,3 +316,11 @@ name `+27`, bank data `+36`, play settings `+40`. Those offsets are verified; th
 inferred. `PATHX_status` is not reconstructed: it matches, but its `.rodata` run (two doubles
 and a float, 20 bytes) is directly followed by another function's string, so a fragment cannot
 be verified alone.
+
+The music path player (`PATH_*`, `PATHI_*`) is one stretch of code from `0x800356a0` with no
+file evidence. Its units use the game's flags, without `-fno-strength-reduce`: loops such as
+`PATHI_gettrackptr`'s walk by 540 bytes. `pfstates` holds four 540-byte project states; each
+has a 24-entry track pointer table at `+444` and 16 queued 24-byte events at `+60`. A handle's
+top nibble selects projects, the next nibble songs and the low 24 bits tracks. Member names are
+inferred. `PATHI_sortprojects` is not reconstructed: the struct-swap loop's address computations
+are hoisted differently.
