@@ -1,0 +1,50 @@
+{
+  "id": "scene_HierObjectSwapOut",
+  "source": "src/scene/HierObjectSwapOut.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-ffast-math"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d2578",
+      "size": 1216
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a15f0",
+      "size": 40
+    }
+  ],
+  "functions": [
+    {
+      "name": "SwapOut__11CHierObjectP11CStaticMeshP10MotionData",
+      "address": "0x800d2578",
+      "size": 1216,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetBasis__C11CStaticMeshR8CVector3N21": "0x8019f064",
+    "GetCenter__C11CStaticMeshR8CVector3": "0x8019f010",
+    "GetNumFrames__C15CStaticAnimMesh": "0x8019f9ec",
+    "GetTicksPerFrame__C15CStaticAnimMesh": "0x8019f9f4",
+    "sqrtf": "0x80270538"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "hierobject.cpp",
+  "original_file_index": 935
+}

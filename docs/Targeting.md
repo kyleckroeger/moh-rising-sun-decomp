@@ -267,7 +267,7 @@ holds 5 for players. Field names are descriptive.
 
 `AIPlayerObject.cpp` and `AITankObject.cpp` methods match except the constructors and
 destructors, which need a modelled `CAIObject` base (its table pointer sits at `+0x72c`
-with fields after it), and tank `Update`, `ChooseTarget`, `GetSceneNode`,
+with fields after it), and tank `Update`, `GetSceneNode`,
 `GetLookDirection`, `SetInitialStatus` and `UpdateStatus` (the last two share a double
 literal aligned by earlier pool entries). Calls into `CAIObject` convert the pointer unadjusted; this reflects
 the scoped views, not the original inheritance declarations.

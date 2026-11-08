@@ -133,6 +133,7 @@ tree and a later reader should expect them to be close rather than solved.
 - `CAnimObject::BeginUpdate`, `DetectGround` and `Yaw`: a local's address stays in a saved
   register where the original rematerializes it.
 - `CHierObject::GetWorldLinearVelocity` (19): register choice.
+- `BumpType`, private to `Soldier_object.cpp`: the first search step appears twice with the index folded to 0, including the hit path; the loop forms tried reproduce everything but that. `CSoldierObject::OnCollision` calls it through `local_externals`.
 - `CSoldierObject::SetHelmetOffset` and `EjectHelmet`: the "head" string is owned by `CleanUp`'s unit.
 - `CAITankObject::SetInitialStatus` and `UpdateStatus`: a 15.0 literal sits at a 4-byte
   boundary before the double. A `static const float` in a `.rodata.*` section is folded back
@@ -151,3 +152,10 @@ tree and a later reader should expect them to be close rather than solved.
 
 The script-motion bits in `CStaticObject` are tested through inline accessors that each return
 one bit; without them `||` merges the tests into one mask. The accessor names are descriptive.
+
+`CHierObject::SwapOut` needs `-ffast-math`, which its manifest passes: the zero product on the
+box centre's x disappears while its square-root call stays. That is what reproduces the code and
+is not evidence of the original setting. `GetAttachPointMatrix` is `void`, as its call in
+`CTankObject::FireSubObject` shows through the argument schedule; `CAITargeting::SetTarget`
+returns the current target, which its body loads last. `CVolBox::SetHeight` stores its argument
+unchanged for the player's box, so `SwapOut` halves the height through a local helper.

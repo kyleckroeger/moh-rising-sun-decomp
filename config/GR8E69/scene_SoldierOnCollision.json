@@ -1,0 +1,57 @@
+{
+  "id": "scene_SoldierOnCollision",
+  "source": "src/scene/SoldierOnCollision.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800be664",
+      "size": 1272
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029fbc0",
+      "size": 20
+    }
+  ],
+  "functions": [
+    {
+      "name": "OnCollision__14CSoldierObjectRC10CCollision",
+      "address": "0x800be664",
+      "size": 1272,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddConstraints__20CClsnConstraintsBaseRC10CCollisionb": "0x801344d8",
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "BumpPlayer__20CBuddyFollowBehavior": "0x800e5698",
+    "BumpType__F7EClsnIdT0": "0x800be308",
+    "COLLISION_TOLERANCE": "0x802a7e1c",
+    "FindMatchingBehavior__9CAIObject13EBehaviorType": "0x800dc8b4",
+    "GetSoundIndex__12CSurfaceTypeUsb": "0x8005cd40",
+    "GetVarValue__C9CAIStatus12aistatus_var": "0x8028399c",
+    "IsClimbable__12CSurfaceTypeUsb": "0x8005ce70",
+    "OnCollision__11CAnimObjectRC10CCollision": "0x800a4ca8"
+  },
+  "local_externals": [
+    "BumpType__F7EClsnIdT0"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Soldier_object.cpp",
+  "original_file_index": 875
+}

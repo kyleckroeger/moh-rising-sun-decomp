@@ -24,6 +24,7 @@ class CBuddyLeadBehavior { // Type 1.
 
 class CBuddyFollowBehavior { // Type 2.
   public:
+    void BumpPlayer();
     void CantReachTarget();
     void FinishedMovingAway();
     void SetDistances(float, float, float, float);

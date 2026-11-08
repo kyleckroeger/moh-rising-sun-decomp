@@ -6,8 +6,8 @@ void CHierObject::SetRotation(CQuaternion &rotation) { orientation = rotation; }
 void CHierObject::GetRotation(CQuaternion &rotation) { rotation = orientation; }
 CStaticObject *CHierObject::GetSubObject(int index) { return subObjects[index]; }
 
-int CHierObject::GetAttachPointMatrix(int index, CMatrix &matrix) {
-    return ((CStaticObjectInterface *)this)->FindAttachNode(index, &matrix);
+void CHierObject::GetAttachPointMatrix(int index, CMatrix &matrix) {
+    ((CStaticObjectInterface *)this)->FindAttachNode(index, &matrix);
 }
 
 void CHierObject::AddObjectToTree(CHierObject *object, int index, int parent) {

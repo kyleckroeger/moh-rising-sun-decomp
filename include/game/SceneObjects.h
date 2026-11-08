@@ -448,6 +448,7 @@ class CSoldierObject {
     void CleanUp();
     CStaticObject *DetachObject(char *);
     CStaticMesh *DetachMesh(char *);
+    void OnCollision(const CCollision &);
     void GetBulletEmitterMatrix(CMatrix &);
     int GetAttachPoint(const char *);
     int GetAttachPointMatrix(char *, CMatrix *);
@@ -468,16 +469,21 @@ class CSoldierObject {
     enum Partition { PartitionNone = 0, Partition1 = 1, Partition2 = 2, Partition3 = 3 };
     unsigned char unknown_0[0x120];
     BSObject *scriptObject; // +0x120
-    unsigned char unknown_124[0x220 - 0x124];
+    unsigned char unknown_124[0x1a8 - 0x124];
+    float fallSpeed;        // +0x1a8; descriptive: OnCollision only counts a ground check once it is not positive.
+    unsigned char unknown_1ac[0x220 - 0x1ac];
     int groundCheckPending; // +0x220
     unsigned char unknown_224[4];
     int groundCheckState;   // +0x228; cleared before the ground-check event.
-    unsigned char unknown_22c[0x2e0 - 0x22c];
+    unsigned char unknown_22c[0x2c0 - 0x22c];
+    short groundSound;      // +0x2c0; descriptive: the surface's sound index, or 40 without a surface.
+    unsigned char unknown_2c2[0x2e0 - 0x2c2];
     unsigned char aiDoodad[0x2ec - 0x2e0]; // +0x2e0; a CAISoldierDoodad.
     int locomotionInfo;     // +0x2ec; returned by address.
     unsigned char unknown_2f0[0x334 - 0x2f0];
     int nonVisDestructDisabled; // +0x334; the inverse of BIFunc_EnableNonVisDestruct's flag.
-    unsigned char unknown_338[0x344 - 0x338];
+    unsigned char unknown_338[0x340 - 0x338];
+    int clsnConstraints;    // +0x340; start of a CClsnConstraintsBase of unestablished extent.
     VolumeList volumeLists[3]; // +0x344
     unsigned char unknown_38c[0xb10 - 0x38c];
     int collidedThisFrame;  // +0xb10; descriptive.
@@ -619,7 +625,7 @@ class CHierObject : public CStaticObject {
     void CollisionResetMovement();
     void SetRotation(CQuaternion &);
     void GetRotation(CQuaternion &);
-    int GetAttachPointMatrix(int, CMatrix &);
+    void GetAttachPointMatrix(int, CMatrix &);
     void AddObjectToTree(CHierObject *, int, int);
     int RemoveObjectFromTree(CHierObject *, int);
     void CleanUp();
