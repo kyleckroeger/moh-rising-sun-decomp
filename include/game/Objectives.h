@@ -43,6 +43,7 @@ public:
     short CheckForEmptySlot(unsigned char viewport);
     void UpdateScroll(unsigned char viewport, short id);
     void Clear();
+    void AddPopUpMessage(char *, unsigned char, unsigned short, unsigned short, unsigned char, float, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, int, short);
 
     PopUpMessage popups[5][4];
     unsigned char unknown640[4];

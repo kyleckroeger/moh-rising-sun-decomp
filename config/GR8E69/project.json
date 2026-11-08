@@ -1971,7 +1971,14 @@
     "sound_spat2hdr.json",
     "ea_locatbig_locate.json",
     "static_stop.json",
-    "rcmp_alloc.json"
+    "rcmp_alloc.json",
+    "pum_prompt.json",
+    "pum_print.json",
+    "hud_edge.json",
+    "moh_ld.json",
+    "moh_rest.json",
+    "moh_ls.json",
+    "moh_scan.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

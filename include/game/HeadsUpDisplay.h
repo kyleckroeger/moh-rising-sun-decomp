@@ -2,6 +2,9 @@
 #define GAME_HEADSUPDISPLAY_H
 // A scoped view of the heads-up display for its small state functions. Names of the class, methods
 // and the InterfaceState enum come from the symbol table; member names are inferred from use.
+#include "Color.h"
+#include "SceneNode.h"
+class CSprite;
 enum InterfaceState { InterfaceStateUnknown = 0, InterfaceStateOn = 1 };
 
 class CHeadsUpDisplay {
@@ -13,6 +16,9 @@ public:
     void SetAmmoState(InterfaceState state);
     void AddHitDirection(unsigned int direction);
     void SetTarget(const char *name);
+    void DrawViewportEdge();
+    void DrawSprite(float, float, float, float, CSprite &, CColor, bool, float);
+    static CSprite *blackSprite;
 
     unsigned char unknown000[0x7b0];
     float hitStatus[4];          // +0x7b0
@@ -26,5 +32,7 @@ public:
     char targetName[11];         // +0x7f4
     unsigned char unknown7ff[0x818 - 0x7ff];
     int unknown818;              // +0x818
+    unsigned char unknown81c[0x840 - 0x81c];
+    IMovingSceneNode *player;    // +0x840
 };
 #endif

@@ -1,0 +1,49 @@
+{
+  "id": "hud_edge",
+  "source": "src/ui/hud_edge.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80177d10",
+      "size": 464
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802acf20",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "DrawViewportEdge__15CHeadsUpDisplay",
+      "address": "0x80177d10",
+      "size": 464,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DrawSprite__15CHeadsUpDisplayffffR7CSpriteG6CColorbf": "0x8028c450",
+    "_15CHeadsUpDisplay.blackSprite": "0x802c530c",
+    "_7CScreen.m_sHeight": "0x80452578",
+    "_7CScreen.m_sWidth": "0x80452574",
+    "g_NumPlayers": "0x802c1b3c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "HeadsUpDisplay.cpp",
+  "original_file_index": 1509
+}

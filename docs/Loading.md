@@ -100,6 +100,12 @@ zeroes each section first, flushes instruction and data caches, and jumps to the
 Not reconstructed: `CheckForControllerReset` (function-local statics), the path `LoadModule`, and
 the two compiler-placed destructors, which are declared but emitted far from these units.
 
+Also from `Moh3.cpp`: `LevelExistsOnCurrentDisc` asks DVD for `data/%d/%d_%d/comp.viv`,
+`RestoreCheats` reapplies the option cheats when game data is valid and the profile byte at
+`+0x31664` is 1, and `GetLoadscreenId` picks a load screen from its flags. `OnePassScanTask::Execute`
+records that the scan ran. `ShutdownCORE`, `InitCORE` and `RestartGame` are private to the file and
+need `main` in the same unit, because an unreferenced private function is not emitted.
+
 ## CMemoryCard
 
 `CMemoryCard` (a `EALA::Resource`, with the table pointer at `+4`) loads two localization files at

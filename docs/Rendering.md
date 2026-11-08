@@ -305,6 +305,9 @@ alpha at `0.35035` per unit of elapsed time, and finishing is signalled once alp
 `DisplayLandmarkStamp` and `DisplayTimeStamp` remain original. They build a `SoundAliasEvent` on the
 stack with inlined construction and destruction, which the shared `SoundEvents.h` does not provide.
 
+`DrawViewportEdge` runs for the first player of a split screen. It draws a two-pixel grey line across
+the middle of the screen with two players, and a second line down the middle with more.
+
 ## PopUpMessageHandler
 
 The handler holds `PopUpMessage popups[5][4]` (four records for each of five viewports), the fonts

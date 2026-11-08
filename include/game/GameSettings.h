@@ -46,6 +46,7 @@ class CQuaternion;
 class CWeapon;
 class CGameSettings {
   public:
+    void InitCheatsFromOptions();
     void SetPlayersFinishedLevelSuccessfully(int, int);
     void SetCurrentHealth(float, int);
     float GetCurrentHealth(int) const;
