@@ -103,7 +103,13 @@ class CPlayerWeaponObject {
   public:
     unsigned char unknown_0[0x38];
     WeaponAnimOwner animOwner; // +0x38; the animated-object subobject whose slot 2 returns the skeleton.
-    unsigned char unknown_3c[0x2e0 - 0x3c];
+    unsigned char unknown_3c[0xc8 - 0x3c];
+    int field_c8;      // +0xc8; the draw command's sort word.
+    unsigned char unknown_cc[0xd0 - 0xcc];
+    CMatrix transform; // +0xd0; bound while the weapon draws. Layout observed.
+    unsigned char unknown_110[0x2d8 - 0x110];
+    void *field_2d8;   // +0x2d8; Draw complains and skips while it is null.
+    unsigned char unknown_2dc[0x2e0 - 0x2dc];
     CPlayerWeaponObject *previous; // +0x2e0
     CPlayerWeaponObject *next; // +0x2e4
     CPlayerObject *player; // +0x2e8
@@ -111,7 +117,9 @@ class CPlayerWeaponObject {
     CSprite *aimOverlay;   // +0x2f0
     CSprite *crosshair;    // +0x2f4
     void *muzzleFlash;     // +0x2f8
-    unsigned char unknown_2fc[0x38c - 0x2fc];
+    unsigned char unknown_2fc[0x370 - 0x2fc];
+    CVector3 field_370; // +0x370; cleared by Init.
+    unsigned char unknown_380[0x38c - 0x380];
     float recoilYaw;   // +0x38c; added to the player's by FireMyWeapon.
     float recoilPitch; // +0x390
     unsigned char unknown_394[0x3a8 - 0x394];
@@ -126,8 +134,10 @@ class CPlayerWeaponObject {
             unsigned int flag31 : 1;
             unsigned int visible : 1; // Bit 30; cleared when the player dies. Name inferred.
             unsigned int enabled : 1; // Bit 29; SetWeaponEnable. Name inferred.
+            unsigned int flag28 : 1;
         };
     };
+    int field_3f4;     // +0x3f4; follows the weapon's reserve ammunition outside multiplayer.
     // Original nested enum tag; member names are descriptive.
     enum Partition { PartitionDefault = 0, PartitionAlternate = 1 };
     static CPlayerWeaponObject *m_pPlayerWeaponFirst;
@@ -143,6 +153,14 @@ class CPlayerWeaponObject {
     void SetWeaponName(const char *);
     void Destroy();
     void Init();
+    void Init(int, int, CPlayerObject *);
+    void BeginUpdate(float);
+    void AttemptUpdate(float);
+    void CommitUpdate();
+    void Draw(CDrawContext &);
+    static void DrawWeapon(CDrawContext &, void **);
+    void UpdateWeaponTransforms();
+    void UpdateMuzzleFlash();
     void SetDrawDelay(int);
     CPlayerWeaponObject *AsPlayerWeaponObject();
     const CPlayerWeaponObject *AsPlayerWeaponObject() const;
@@ -357,8 +375,13 @@ class CPlayerObject {
     float field_10cc;        // +0x10cc
     int field_10d0;          // +0x10d0
     unsigned char unknown_10d4[0x10d8 - 0x10d4];
-    short viewWordHigh;      // +0x10d8; the word here compares to a draw view's owner in CAnimatedPlayer::Draw.
-    short promptSlot;        // +0x10da; prompt buffer used by BIFunc_AddPlayerAmmo.
+    union {
+        int viewWord;        // +0x10d8; compared with the draw binding's owner by CPlayerWeaponObject::Draw.
+        struct {
+            short viewWordHigh; // The word here compares to a draw view's owner in CAnimatedPlayer::Draw.
+            short promptSlot;   // +0x10da; prompt buffer used by BIFunc_AddPlayerAmmo.
+        };
+    };
     int playerIndex;         // +0x10dc; read as a word and as its low byte.
     unsigned char unknown_10e0[0x112c - 0x10e0];
     int field_112c;          // +0x112c

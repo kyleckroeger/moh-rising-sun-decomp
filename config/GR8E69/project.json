@@ -1727,7 +1727,9 @@
     "popup_message_dtor.json",
     "rcmpbase_decoder.json",
     "rcmpbase_frames.json",
-    "audioplayer.json"
+    "audioplayer.json",
+    "player_weapon_init.json",
+    "player_weapon_update.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
