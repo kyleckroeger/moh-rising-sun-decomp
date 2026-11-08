@@ -144,6 +144,29 @@ interpretation rather than substituting machine instructions. Masked evaluation
 uses an eight-bit bone index; bone enumeration retains its observed 16-bit result.
 Original vtables remain external context for these channel fragments.
 
+Four derived channel destructors add 768 bytes at `0x80293368`–`0x80293668`:
+`FnDeltaLerpChan`, `FnDeltaQuatChan`, `FnKeyLerpChan` and `FnKeyQuatChan`.
+Each releases the previous-value buffer and DOF mask independently when non-null,
+then invokes `FnAnimMemoryMap` destruction with a zero deletion flag. If the
+incoming deletion flag's low bit is set, it finally calls `EAGLFree` with the
+object pointer and size 36. The target installs the appropriate plain/keyed base
+vtable before buffer cleanup. No additional derived fields are implied.
+
+`DeltaChanDestruction.cpp` supplies scoped inline copies of the two already
+reconstructed base destructor bodies so ProDG can inline inherited cleanup into
+the four empty derived destructors. The out-of-line base bodies remain in
+`DeltaChan.cpp`; their behavior must stay synchronized. This follows the native
+compilation-fragment approach used for the channel and BoneMask interfaces,
+not a recovered historical header boundary. The resulting object contains exactly
+the four expected functions, with no generated allocated data, extra base
+functions or discarded code. It uses the existing ProDG 3.8.1 animation profile.
+
+Isolated PowerPC fixtures compare original and compiled destructors in 576 cases:
+both nullable buffers, six deletion flags, signed virtual-call adjustments, and
+memory-manager replacement after the first buffer free. They check call order,
+the 36-byte object-free argument, object guards and preserved registers/stack.
+External callbacks are stubbed; this does not test the game or allocator runtime.
+
 ## Event and allocation support
 
 The event, bank, allocator, scratch-buffer and raw-pose support fragments add
@@ -270,6 +293,61 @@ the game remains untested.
 
 ## Quaternion support and control fragments
 
+### Maintained partial evaluators
+
+The registered `src/eagl_anim/FnDeltaQFast.cpp` and `FnDeltaQ.cpp`
+comparison units reproduce the earlier drafts against the pinned original. Their
+four unfinished evaluators total 15,228
+bytes, all still original context. Both fast evaluators differ at the same
+reverse-playback guard: the draft selects CR0 where the original selects CR7,
+changing three bytes per function. Both regular evaluators also differ in
+instruction scheduling, for fifteen differing bytes each. Function addresses,
+sizes and the full generated constant/vtable sections agree in these drafts.
+These are maintained partial source, measured by `tools/comparisons.py` and the
+public snapshot. They earn similarity credit, zero exact or linked credit, and
+have not been tested in the game.
+
+| Evaluator | Target bytes | Objdiff similarity | Differing bytes |
+| --- | ---: | ---: | ---: |
+| `FnDeltaQFast::EvalSQT` | 2,692 | 99.82169% | 3 |
+| `FnDeltaQFast::EvalSQTMask` | 2,020 | 99.762375% | 3 |
+| `FnDeltaQ::EvalSQT` | 5,040 | 99.42857% | 15 |
+| `FnDeltaQ::EvalSQTMasked` | 5,476 | 99.47407% | 15 |
+
+The full comparison units retain sixteen already-linked support functions as
+explicit exact context, without double counting. Their complete pools/vtables
+(224/184 bytes for Fast, 88/192 bytes for regular) match. `DECOMP_COMPARE` enables
+the unfinished evaluator bodies and their inline helpers under the same ProDG
+3.8.1 animation profile. No optimization settings change. The independent exact
+fragments remain the source of linked code; a context drift fails comparison.
+
+Regular `DeltaQ` comparison declarations add scoped packed storage views:
+twelve-byte range records hold three unsigned halfword minima and ranges;
+six-byte physical samples use a fifteen-bit x plus a sign bit for w, then
+sixteen-bit y/z. Three-byte deltas use seven-bit x plus w sign and eight-bit y/z.
+The decoded x/y/z determine w through a square root; if their squared length
+exceeds one, the draft normalizes them and sets w to zero. Interpolation normalizes
+the result. These operations and access strides follow the target instructions,
+not an implemented NFS reference. Helper boundaries and historical field names
+remain unproven, and the bitfield views are compiler-specific.
+
+The masked regular evaluator intentionally tests constant-bone selection through
+`mBoneIdxs`, writes through `mConstBoneIdxs`, and invalidates `mPrevKey` afterward.
+The existing wrapper still passes a null mask to the masked virtual method.
+Do not silently change these observed quirks or infer safe input ranges from a
+high similarity score. Tests here verify native output and reporting safeguards;
+they do not establish runtime safety for arbitrary animation data.
+
+ProDG 3.5, 3.5b140, 3.7, 3.8.1 and 3.9.3 reproduced the same differences.
+Equivalent guard rewrites and tested whole-file optimization variations did not
+resolve them while preserving the rest of each unit. A compiler-version switch
+alone is therefore not the next useful experiment. Investigate the condition's
+source lifetime and surrounding cache logic; retain complete comparisons and
+avoid register constraints or instruction patches. The reference quaternion
+implementation bodies remain empty, so they cannot supply the missing fix.
+
+### Accepted support
+
 Three `FnDeltaQFast` fragments add ten functions and **4,104 code bytes**:
 map binding and buffer initialization, unmasked next-key reconstruction, three
 masked delta/next-key helpers, construction/destruction, length lookup, the generic
@@ -279,12 +357,11 @@ The complete native virtual table occupies 184 bytes at `0x802ec948`.
 
 These are independent source fragments, not a completed decoder translation unit.
 The two main quaternion evaluators still have unresolved compiler differences and
-remain original context, with zero source credit. The masked/control fragment's
+remain original context, with zero exact or linked credit; their partial source is measured above. The masked/control fragment's
 native link discards the separately emitted inline `InitBuffers` body. That helper
 is used by the accepted map-binding fragment; its generated constant pool is fully
 retained and compared in the masked/control fragment. No mismatching target
-function is compiled and then stripped, and no pool or padding is clipped. Unused
-experimental accumulation helper bodies are not included in the accepted header.
+function is compiled and then stripped, and no pool or padding is clipped. The unfinished accumulation helper bodies are enabled only for comparison builds.
 
 The `FnDeltaQFast` object has 64 bytes and type value 18, supported by constructor,
 deleting destructor and field accesses. It allocates one block containing a
@@ -313,8 +390,9 @@ no normalization or interpolation behavior beyond their matched instructions.
 A separate `FnDeltaQ` control fragment adds six functions and **636 bytes**, plus
 an eight-byte conversion pool at `0x802bed70` and the complete 192-byte virtual table
 at `0x802ecab8`. Construction and deletion establish its 48-byte extent and type
-value 17. Its encoded range/sample types remain opaque in the public interface;
-the two main evaluators and buffer initialization remain original context. The
+value 17. Its encoded range/sample types remain opaque in exact builds; comparison mode
+adds the scoped views above. The two main evaluators and buffer initialization
+remain original context in the verified image. The
 wrapper calls the protected virtual masked evaluator with a null mask, preserving
 the original call without asserting that this is a safe runtime entry point.
 Both decoder families enumerate animated bone indices and derive length from the

@@ -593,6 +593,7 @@
     "eagl_anim_compound_channel.json",
     "eagl_anim_delta_compressed_data.json",
     "eagl_anim_delta_chan.json",
+    "eagl_anim_delta_chan_destruction.json",
     "eagl_loading_constructor_pool.json",
     "eagl_loading_symbol_pool_insert_remove.json",
     "eagl_loading_symbol_pool_lifetime.json",
@@ -1941,7 +1942,15 @@
     "sound_sserver_100hz.json",
     "scene_exclude.json",
     "scene_include.json",
-    "scene_closest.json"
+    "scene_closest.json",
+    "sound_bank_copy.json",
+    "sound_bank_status.json",
+    "sound_bank_defaults.json",
+    "sound_bank_parameters.json",
+    "sound_bank_play.json",
+    "sound_entry_destructor.json",
+    "sound_entry_copy.json",
+    "sound_entry_options.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
