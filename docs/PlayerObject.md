@@ -21,8 +21,6 @@ and sets bit 18 of the flag word at `+0xd44`.
 
 ## Not reconstructed
 
-- `Reset` calls `map<int, CPlayerWeaponObject *>::clear`, whose `_M_erase` is instantiated
-  in the original. A source would need `include/stlport-containers` in its manifest.
 - `Yaw` and `SetTMLocalToWorld` share an inline rotation. The closest source differs only by
   the scheduling of two address computations against the axis stores, so they remain context.
 

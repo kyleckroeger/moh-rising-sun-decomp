@@ -8,7 +8,8 @@
 // whole-file load (take a request from the free list, give it a
 // fresh id, start the file-system operation and its completion callback),
 // reporting whether a request is still busy, releasing a finished request
-// (waiting for its operation, reporting its byte counts) and cancelling one
+// (waiting for its operation, reporting the start of its buffer and its byte
+// count) and cancelling one
 // (cancelling its operation, freeing it when it never started). The function
 // and static names come from the symbols; the 48-byte request layout, the
 // options view and the queue members are inferred; the operation handle is
@@ -25,7 +26,7 @@ bool THREAD_iscurrent(int);
 void SYNCTASK_run(int);
 void THREAD_yield(int);
 int FILESYS_open(const char*, int, int, void*);
-int FILESYS_read(int, void*, int, int, int, void*);
+int FILESYS_read(int, int, void*, int, int, void*);
 void FILESYS_callbackop(int, void (*)(int, int, void*));
 int ASYNCFILE_cancel(int);
 int FILESYS_completeop(int);
@@ -52,9 +53,9 @@ struct REQUESTSTRUCTtag {
     int unknown18;
     volatile int op;
     int file;
-    void* buffer;
-    int size;
     int position;
+    int size;
+    char* buffer;
 };
 
 struct REQUESTQUEUE {
@@ -151,7 +152,7 @@ static void loadfilereadcallback(int, int, void* data) {
     REQUESTSTRUCTtag* r = (REQUESTSTRUCTtag*)data;
     int n = FILESYS_completeop(r->op);
     r->done += n;
-    r->position += n;
+    r->buffer += n;
     if (n < 0x8000 || r->cancelled) {
         r->op = FILESYS_close(r->file, 99, r);
         if (r->op)
@@ -159,12 +160,12 @@ static void loadfilereadcallback(int, int, void* data) {
     } else {
         int chunk;
 
-        r->buffer = (char*)r->buffer + n;
+        r->position += n;
         r->size -= n;
         chunk = r->size;
         if (chunk > 0x8000)
             chunk = 0x8000;
-        r->op = FILESYS_read(r->file, r->buffer, r->position, chunk, 99, r);
+        r->op = FILESYS_read(r->file, r->position, r->buffer, chunk, 99, r);
         if (r->op)
             FILESYS_callbackop(r->op, loadfilereadcallback);
     }
@@ -181,8 +182,8 @@ static void loadfilesizecallback(int, int, void* data) {
         int flags = r->size;
         r->size = 0x7fffffff;
         r->allocated = gFileSysOpts.malloc("ASYNCFILEBUF", size, flags);
-        r->position = (int)r->allocated;
-        r->op = FILESYS_read(r->file, r->buffer, r->position, 0x8000, 99, r);
+        r->buffer = (char*)r->allocated;
+        r->op = FILESYS_read(r->file, r->position, r->buffer, 0x8000, 99, r);
         if (r->op)
             FILESYS_callbackop(r->op, loadfilereadcallback);
     }
@@ -201,7 +202,7 @@ static void loadfileopencallback(int, int, void* data) {
         int n = r->size;
         if (n > 0x8000)
             n = 0x8000;
-        r->op = FILESYS_read(r->file, r->buffer, r->position, n, 99, r);
+        r->op = FILESYS_read(r->file, r->position, r->buffer, n, 99, r);
         if (r->op)
             FILESYS_callbackop(r->op, loadfilereadcallback);
     } else {
@@ -263,9 +264,9 @@ extern "C" int ASYNCFILE_load(const char* name, int size) {
     r->cancelled = 0;
     r->allocated = (void*)1;
     r->unknown18 = 0;
-    r->buffer = 0;
-    r->size = size;
     r->position = 0;
+    r->size = size;
+    r->buffer = 0;
     r->op = FILESYS_open(name, 1, 100, r);
     if (r->op == 0)
         return 0;
@@ -286,7 +287,7 @@ extern "C" int ASYNCFILE_getstatus(int id) {
     return status;
 }
 
-extern "C" int ASYNCFILE_release(int id, int* remaining, int* done) {
+extern "C" int ASYNCFILE_release(int id, char** buffer, int* done) {
     REQUESTSTRUCTtag* r;
     int cancelled = 0;
     MUTEX_lock(mutex);
@@ -302,15 +303,15 @@ extern "C" int ASYNCFILE_release(int id, int* remaining, int* done) {
     while (r->op != 0)
         FILESYS_waitop(r->op);
     if (r->cancelled) {
-        if (remaining)
-            *remaining = 0;
+        if (buffer)
+            *buffer = 0;
         if (done)
             *done = 0;
         releaserequest(r);
         return -1;
     }
-    if (remaining)
-        *remaining = r->position - r->done;
+    if (buffer)
+        *buffer = r->buffer - r->done;
     if (done)
         *done = r->done;
     releaserequest(r);
