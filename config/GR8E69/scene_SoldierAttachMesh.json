@@ -1,0 +1,48 @@
+{
+  "id": "scene_SoldierAttachMesh",
+  "source": "src/scene/SoldierAttachMesh.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800c0984",
+      "size": 348
+    }
+  ],
+  "functions": [
+    {
+      "name": "AttachMesh__14CSoldierObjectP11CStaticMeshPci",
+      "address": "0x800c0984",
+      "size": 260,
+      "binding": 1
+    },
+    {
+      "name": "DetachMesh__14CSoldierObjectPc",
+      "address": "0x800c0a88",
+      "size": 88,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FindAttachPoint__Q34EALA9Character8SkeletonPCc": "0x80082630",
+    "GetAttachPoint__14CSoldierObjectPCc": "0x800c0584",
+    "Inverse__7CMatrixRC7CMatrix": "0x8007b290"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Soldier_object.cpp",
+  "original_file_index": 875
+}

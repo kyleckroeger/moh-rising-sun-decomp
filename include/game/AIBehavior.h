@@ -111,6 +111,7 @@ class CScriptedBehavior { // Type 5.
 class CSwordBehavior { // Type 8.
   public:
     int IsSwordDrawn();
+    void SetSwordDrawn(bool);
 };
 
 class CGrenadeResponseBehavior { // Type 10.

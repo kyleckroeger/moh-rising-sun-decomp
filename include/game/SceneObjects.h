@@ -430,9 +430,16 @@ class CSoldierObject {
     void SetAttachedLight(CLight *, const CVector3 &);
     void TranslateFromScript(const CVector3 &, const CVector3 &, EBSEventEnum);
     int AddWeapon(int, int, int);
+    int AttachObject(int, char *, int);
+    int AttachObject(CStaticObject *, char *, int);
+    int AttachMesh(CStaticMesh *, char *, int);
+    void SetBulletEmitter(CStaticObject *, char *);
+    void OnSwordDraw();
+    void OnSwordSheath();
     void GetLookMatrix(CMatrix &);
     void CleanUp();
     CStaticObject *DetachObject(char *);
+    CStaticMesh *DetachMesh(char *);
     void GetBulletEmitterMatrix(CMatrix &);
     int GetAttachPoint(const char *);
     int GetAttachPointMatrix(char *, CMatrix *);
@@ -477,14 +484,18 @@ class CSoldierObject {
     struct AttachSlot {
         CStaticObject *object;
         const CMatrix *matrix;
-        unsigned char unknown_8[0x58 - 8];
+        unsigned char unknown_8[8];
+        CMatrix inverse; // +0x10
+        unsigned char unknown_50[8];
         int active;      // +0x58
         int keepObject;  // +0x5c
-        unsigned char unknown_60[4];
+        int hasInverse;  // +0x60
         int addToScene;  // +0x64
         int owned;       // +0x68
         unsigned char unknown_6c[4];
-    } attachSlots[8];       // +0xba0
+        // Above word alignment, inferred: only then do indexed members compile as
+        // (this + i * 112) + offset, as they do in the original.
+    } __attribute__((aligned(8))) attachSlots[8]; // +0xba0
     int currentWeaponSlot;  // +0xf20
     int emitterActive;      // +0xf24
     int emitterSlot;        // +0xf28

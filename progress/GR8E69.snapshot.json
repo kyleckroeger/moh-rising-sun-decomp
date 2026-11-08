@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 998940,
+    "matching_code_bytes": 1000840,
     "total_executable_code_bytes": 2492032,
-    "percent": 40.0853600595819,
+    "percent": 40.1616030612769,
     "categories": {
-      "reconstructed_game": 606724,
+      "reconstructed_game": 608624,
       "restored_library": 392216
     },
-    "matching_functions": 4932
+    "matching_functions": 4942
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -917,7 +917,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "b0c8928067f5067f0c0aa6623da4493d04fa7812960e7ce7e420f7489dff44bf",
+    "config/GR8E69/project.json": "aa616e258f74242c3197dfd7116abbfbdc02615e9457b0ce325854211e5d0461",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -1003,18 +1003,24 @@
     "config/GR8E69/scene_SoldierAI.json": "c85b0dbcc085ed3bcb2baee74d13b9bec64222b734018638d2e390df12c641a6",
     "config/GR8E69/scene_SoldierAim.json": "258da4ac98e51720b964a139b518ae408bc9440f87d263088874dea7e08adb21",
     "config/GR8E69/scene_SoldierAttachMatrix.json": "fa659916cc9f7ae38c8d46a81039e6d2073660d785bad010751381a940223efa",
+    "config/GR8E69/scene_SoldierAttachMesh.json": "6592a179174bf6504c68903a4f72163bbad729bcd4a91762901b735cf7235912",
+    "config/GR8E69/scene_SoldierAttachObject.json": "33c24fca1806e991a710132cf63e82919443c8bf8e9b7d0055c29e87d7b530e4",
+    "config/GR8E69/scene_SoldierBulletEmitter.json": "16053e1d991b9b9f3a8b688dd46b2e906500d3bc2e83a05f58c2c79ee9eaa18a",
     "config/GR8E69/scene_SoldierCleanUp.json": "03385d41dd6fd148b6722017e84408167d4d46c66fa6954a73a198340e67ae32",
     "config/GR8E69/scene_SoldierDestroy.json": "ce4a9f42fc79a7d1ec79c57323199fe3ceef76fc09037cff96c225d455a4ebd4",
     "config/GR8E69/scene_SoldierDetach.json": "a699f14bca366462ecf45085189e8684b7143a5dbe8372305d4f4bc2ebbfe503",
     "config/GR8E69/scene_SoldierDoodad.json": "a0b964b9ad631e53a47f789392d8b6c5d4964eafe4d12289fa7877c138c0b8ec",
+    "config/GR8E69/scene_SoldierEmitterMatrix.json": "86b727961f3670bd9527a3d48abd419e79ade15a96dab0207e2cb9b1159ee30b",
     "config/GR8E69/scene_SoldierFaceState.json": "9b28e10700c390ec797b4a75fb4345e35e19c7230dfba7939a09315b901e749b",
     "config/GR8E69/scene_SoldierFade.json": "c03a22c5ea1bdfcad3b3d869daa003bf2da46506885175e2112d756ed26a61e9",
     "config/GR8E69/scene_SoldierGag.json": "f0e1d4e256060d1d9192900896d1aa42f9f1b436ecfb5605d0b8c0c968d3266f",
     "config/GR8E69/scene_SoldierLipsync.json": "52fe3dea9826e84b29b295ff891c63b49c4b2d370edb3d65a8b78643ff5bc7c2",
     "config/GR8E69/scene_SoldierLocomotion.json": "e0066b3b23ae3d04b4448083f393012f9deb139ee4b706b0832dfb4e0cc7f20b",
     "config/GR8E69/scene_SoldierLook.json": "164942c73d8902c36d17047ad0128c21f7b72185178213d491072ea10782392f",
+    "config/GR8E69/scene_SoldierSword.json": "36c2dca63a9fb5c9425074bebf85e6e34cfa92a8442796f4e94e307f10d3f470",
     "config/GR8E69/scene_SoldierUpdate.json": "7d602a1bb517faecae052fdb34db658100aefc12bdd24d8b82a19cd790a5399b",
     "config/GR8E69/scene_SoldierWeapons.json": "7bba8922322199afa0f9c92dffdde7994fd91c628390517e110ed4f4993fab79",
+    "config/GR8E69/scene_StaticFactoryHelmet.json": "a83de3ff3dcccc988ad62a4a625a135b5db95730e82708bce68db5b4bc1854be",
     "config/GR8E69/scene_StaticFactoryLookup.json": "ed24c612b9bc8bcc1f742b63be0da9214d538c873cff0c71f1eac051c18740ec",
     "config/GR8E69/scene_StaticObjectAccess.json": "18b4299dfbcd360de3492e1e678113d6a340ac80c2b52111cac031fae788a90a",
     "config/GR8E69/scene_StaticObjectAttachedLight.json": "e50794d3d13fd901e01d342c36172d7d258e0b4966afa2af388442509d29c197",
@@ -2104,7 +2110,7 @@
     "include/dolphin-sdk/libc/wchar.h": "eb9359b3f8c80e980c291b31b08b913739a9fda753a2a5007f8bf2bf3c646439",
     "include/dolphin-sdk/macros.inc": "4e92f656bb511fbb45d66081291371c47ceba7bce9c55f86871116203cf38a46",
     "include/dolphin-sn/dolphin/types.h": "ca31e0bbb97e93ca4713654367df29578f6392f3acaf40ca68bc1de1c913af93",
-    "include/game/AIBehavior.h": "fab229f41c5e2386d916aaf0a5f3a140e272986ee53f77bdfbba40ba6d16e4fb",
+    "include/game/AIBehavior.h": "8f08b6611587af141301687dc1df0da3aabe3561fc7f9795f4d4f2898a6d0262",
     "include/game/AIDoodad.h": "5a8328fd7c55b6f602742adb79faabaeb4466fbaa44292b3a32fd0d0ad10aca9",
     "include/game/AIFilterGlobal.h": "344877aed1d2938ab6a0ab0eef531481adc62fd71f0329cf835ec5e85894c95a",
     "include/game/AIMovement.h": "143e409a2e3b38c72b2a667b1781a10c9af5ce7cc9cf5bd75ac43f142192d484",
@@ -2219,7 +2225,7 @@
     "include/game/PropertyData.h": "952ae5ac78dc17e43053a7b905a8e58499a1faa3c7d0721269329f639095b22a",
     "include/game/Rcmp.h": "9f0b3fe189c690b8ee358797a865f8e6172f48640e9fc998e332061823b08cb2",
     "include/game/SceneNode.h": "40a259452061449ceea65f58648fc29241bb00478413744071b736513d776c89",
-    "include/game/SceneObjects.h": "53d5108eb20b0c149c785977b94a5e8bd1faae70c8da0f02e45a44c588891a41",
+    "include/game/SceneObjects.h": "9c6c0cc9f67ca1b2f99c71d7bb432e2d3ce2e9e3f8f28b4705de39d23f8913ca",
     "include/game/Screen.h": "b4e501afbd3363469c5420dbf4e790d4f0f8a1f98932efc7fee4f7786818cd7c",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
     "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
@@ -3489,18 +3495,24 @@
     "src/scene/SoldierAI.cpp": "448e24d2d80058b7b635bd9be04fe4d928fc087f13da1c2241079216998596ef",
     "src/scene/SoldierAim.cpp": "73a95aa7f90e1a8dbbbe40d1c327be29145148b01a5eb810fb42f90ac5d82036",
     "src/scene/SoldierAttachMatrix.cpp": "c64ba18a738d38ef68ccb0031caddb77d39e521ff8578c426f70550afddd5e80",
-    "src/scene/SoldierCleanUp.cpp": "c1cc34910e0c71992988029d11736802a60210bfdd8b4a4e9ebf5c7b93ba7619",
+    "src/scene/SoldierAttachMesh.cpp": "9cc38f1493c3eb00cbee1c042b1ac5f4a74b03756afb89dff025a292bcd81f78",
+    "src/scene/SoldierAttachObject.cpp": "ae0e9561debf8c8fc0c3181c0284862fec811489f660d54cb9ef05060e959c0f",
+    "src/scene/SoldierBulletEmitter.cpp": "0ba3fa8ab7afa5371e3fdc87acaf67d639c46373ad407754d5c7ed3a7aed05ec",
+    "src/scene/SoldierCleanUp.cpp": "28b0d5d3aa1b436ff916933cc5a63b8e12bfc6aae59409c147cbd6c98967b88d",
     "src/scene/SoldierDestroy.cpp": "d4536faba697530313a673cbe2a7a5b5123f90325e5de7bfa82a627255ad4c23",
-    "src/scene/SoldierDetach.cpp": "e559b5714d39ee194a46a9a75581f1d4e8d9acd6bf71c440cef16e1c28b58d6e",
+    "src/scene/SoldierDetach.cpp": "291c246c0683009a3ded39d97d7606ef2ef32958e42692a6e7d25ef68d984796",
     "src/scene/SoldierDoodad.cpp": "68ce34926a382166eff8893f3d3d03052bcf581c84118d77b756b733e3193d20",
+    "src/scene/SoldierEmitterMatrix.cpp": "10f031d32d99dc318e9e383fca0c70f9c487f7c6444f2d82f33b5ac1763ecbbe",
     "src/scene/SoldierFaceState.cpp": "033a5cc89299ea84492742fe6eb0e0610f19705f0a5dc1c17ce53994cda6c864",
     "src/scene/SoldierFade.cpp": "86ee08176d76986c82f7a597f69139f89a25ecce907744c1569bfa79eb1a608f",
     "src/scene/SoldierGag.cpp": "56f9895ace50b4581882e46c99ff281ea33e6cb5bc9c2d5fec8f5ca8994c6708",
     "src/scene/SoldierLipsync.cpp": "d6b2233028a4f8452cf2ad494fd5406e75442149dd6cb1f6d20b0351eea3b418",
     "src/scene/SoldierLocomotion.cpp": "d0dfb05a2a6301e7ecfab1531d45b276ade8a014d0553a3f1ad2c821906cd017",
     "src/scene/SoldierLook.cpp": "320943220c3a79dbfde30ec40d4db5694fe50e80a21160be6ed155a494b433d9",
+    "src/scene/SoldierSword.cpp": "c126dbf5cb7f07317171d56ff1a82a020e2e11b320fc60a4d1bd4f518852ab0d",
     "src/scene/SoldierUpdate.cpp": "72cfdecf336d90cd1fec4414a8b869dbe014ecf74e9b5a5f8217f4cf6c28e399",
     "src/scene/SoldierWeapons.cpp": "97cca0c9c31f68256d98a373b12353076d64d16f2ab03012c8c47a706c0895af",
+    "src/scene/StaticFactoryHelmet.cpp": "ff084d7eafcaffce9661725d6440309ff4d6961de6f8a6efa4687e33d8f5ebe4",
     "src/scene/StaticFactoryLookup.cpp": "b1f3e3d38d9117b19ac3af7fc6bc4be4aac0fe822b70fc0e489fa0c79d7ac1ec",
     "src/scene/StaticObjectAccess.cpp": "4226693d4a5aa5a32cce548b3f45086dcf07cf59dcbbdfab749188794913d0fb",
     "src/scene/StaticObjectAttachedLight.cpp": "ea79e7b7b90fba02effed2b77927e4abe661b535a878658f99e63d767c518437",
@@ -42676,6 +42688,114 @@
       "discarded_functions": [],
       "object_sha256": "a3d4efce7131348d97f86390c03cfb880eaf600e543722c70daeeb5e458c0b50",
       "linked_sha256": "20773a8b31d36ff2628c293bbaea78c7cdc76244a9790e49f54f8ab0034f1553"
+    },
+    {
+      "id": "scene_SoldierAttachObject",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 668,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "081c25a3df8aced5c1bcb8abd52c0a4a6f86016b950c798b04c3d41d0742b495",
+      "linked_sha256": "21939a75294b41b720552be5e8f7550c22d990867351415a039226ebb4a26aa7"
+    },
+    {
+      "id": "scene_SoldierAttachMesh",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 348,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "b36422d331535023ee49fc70a510c10ac625273488fbb950b3a1e2efa65e5ab4",
+      "linked_sha256": "5db6e13c8f365c8d5b0196fc3d665b6c05407c64e8487165b52a04fae59bfb27"
+    },
+    {
+      "id": "scene_SoldierSword",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 160,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "fd3d75f21402b94a6531d3bac0e46923683bcea5b4884790598d79e726012f5d",
+      "linked_sha256": "2fa4cd65c8696c77408318d60c4fce01e9eaaba09d044c5763eeb50f96b9ee1c"
+    },
+    {
+      "id": "scene_SoldierBulletEmitter",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 328,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "093d871c9b8e5ac5b1094ff0acc124350b3aaf2bbc1e699863e21e6bdc513bbe",
+      "linked_sha256": "1942add0a15c1a798fc8b4afd4d09ec08f5ecb4b201cc704ec6089d73888ab95"
+    },
+    {
+      "id": "scene_SoldierEmitterMatrix",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 188,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "342f4873065e73a8d73efe63fde3a7e16fb21e70c872b5e1317e43ceabd49586",
+      "linked_sha256": "49b1d69a1bd4654ca26ea5c254a1dc1ef2f79a4b83b31d704c40f2158e97540a"
+    },
+    {
+      "id": "scene_StaticFactoryHelmet",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 208,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "fe2c51bdef501b7a9a106442189bff8b04319edbcad85598561b2288cd8c95e6",
+      "linked_sha256": "4fdcbee49828c071926ab1d16b154340540b5c7ba3cb2366360fadbebbde67e6"
     }
   ],
   "code_map": {
@@ -53834,13 +53954,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800bfa48",
-            "size": 188,
-            "kind": "function",
-            "name": "GetBulletEmitterMatrix__14CSoldierObjectR7CMatrix",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800bfb04",
             "size": 1344,
             "kind": "function",
@@ -53869,66 +53982,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800c0630",
-            "size": 244,
-            "kind": "function",
-            "name": "AttachObject__14CSoldierObjectiPci",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c0724",
-            "size": 96,
-            "kind": "function",
-            "name": "GetAttachedObjectAt__14CSoldierObjectPc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c0784",
-            "size": 328,
-            "kind": "function",
-            "name": "AttachObject__14CSoldierObjectP13CStaticObjectPci",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c0984",
-            "size": 260,
-            "kind": "function",
-            "name": "AttachMesh__14CSoldierObjectP11CStaticMeshPci",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c0a88",
-            "size": 88,
-            "kind": "function",
-            "name": "DetachMesh__14CSoldierObjectPc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800c0ae0",
             "size": 40,
             "kind": "function",
             "name": "SetHelmetOffset__14CSoldierObjectRC8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c0b50",
-            "size": 80,
-            "kind": "function",
-            "name": "OnSwordDraw__14CSoldierObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c0ba0",
-            "size": 80,
-            "kind": "function",
-            "name": "OnSwordSheath__14CSoldierObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c0bf0",
-            "size": 328,
-            "kind": "function",
-            "name": "SetBulletEmitter__14CSoldierObjectP13CStaticObjectPc",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -54826,13 +54883,6 @@
             "size": 272,
             "kind": "function",
             "name": "Shutdown__20CStaticObjectFactory",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ceb18",
-            "size": 208,
-            "kind": "function",
-            "name": "DoesHelmetTypeStopBullets__20CStaticObjectFactoryi",
             "evidence": "adjacent-compiler-markers"
           },
           {

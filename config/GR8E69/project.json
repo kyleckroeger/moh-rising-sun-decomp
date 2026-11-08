@@ -1920,7 +1920,13 @@
     "sound_path_service.json",
     "sound_stagpat_playpatch.json",
     "scene_AnimObjFactoryLoaders.json",
-    "player_init_mp.json"
+    "player_init_mp.json",
+    "scene_SoldierAttachObject.json",
+    "scene_SoldierAttachMesh.json",
+    "scene_SoldierSword.json",
+    "scene_SoldierBulletEmitter.json",
+    "scene_SoldierEmitterMatrix.json",
+    "scene_StaticFactoryHelmet.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

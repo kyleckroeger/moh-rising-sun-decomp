@@ -42,10 +42,8 @@ void CSoldierObject::CleanUp() {
     RemoveWeapons();
     int slot = GetAttachPoint("head");
     if (slot != -1) {
-        // The original forms this + slot * 112 first; the source form of the address is inferred.
-        CSoldierObject *base = (CSoldierObject *)((char *)this + slot * 112);
-        if (base->attachSlots[0].active && !base->attachSlots[0].keepObject)
-            CStaticObjectFactory::DeallocateStaticObject(base->attachSlots[0].object);
+        if (attachSlots[slot].active && !attachSlots[slot].keepObject)
+            CStaticObjectFactory::DeallocateStaticObject(attachSlots[slot].object);
     }
     ((CAISoldierDoodad *)aiDoodad)->CleanUp();
     ((CCharacterShadow *)shadowStorage)->Release();

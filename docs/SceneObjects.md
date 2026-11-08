@@ -81,6 +81,10 @@ at `0x802a705c` is first used by `CreateGerman` and shared by `CreateCollisionVo
 functions can only verify inside one unit with `CreateGerman`. The double literals also mean each unit's
 `.rodata` must end on an eight-byte boundary, which is why `CreateGerman` and `CreateBasicAnimatedMech`
 share a unit.
+`CSoldierObject`'s attach slots compile as `(this + i * 112) + offset`, which the compiler only does when the
+element's alignment differs from the access mode's, so the element is declared above word alignment. That
+alignment is inferred: the real type's other members are unknown.
+
 `objcreate.cpp` keeps its pools and queues in file statics, declared in `ObjCreate.h`. The dump
 container holds a fixed array of 56-byte `DumpObject` entries linked oldest first. Its capacity comes
 from a level resource, with 25 as the fallback, and `DeleteOldest` skips entries marked to keep.
@@ -112,9 +116,7 @@ tree and a later reader should expect them to be close rather than solved.
 - `CAnimObject::BeginUpdate`, `DetectGround` and `Yaw`: a local's address stays in a saved
   register where the original rematerializes it.
 - `CHierObject::GetWorldLinearVelocity` (19): register choice.
-- `CSoldierObject::GetBulletEmitterMatrix`: the original computes attach-slot addresses as
-  `(this + i * 112) + offset`. `CleanUp` and `DetachObject` reproduce that with a pointer offset by
-  the slot and `attachSlots[0]`, a source form that is inferred; this function still differs.
+- `CSoldierObject::SetHelmetOffset` and `EjectHelmet`: the "head" string is owned by `CleanUp`'s unit.
 - `CAITankObject::SetInitialStatus` and `UpdateStatus`: a 15.0 literal sits at a 4-byte
   boundary before the double. A `static const float` in a `.rodata.*` section is folded back
   into the pool, so the subsection mapping cannot place it.
