@@ -41,9 +41,13 @@ class CLight : public IMovingSceneNode {
     virtual ~CLight();
     static BPDLightVolume *GetDefaultLightVolume();
     static void Register(void *, int);
+    static void InitClass(CScene *);
+    static void ShutdownClass();
+    static void ResetClass();
     static void DestroyByPropertyID(unsigned int);
     static CLight *Create(unsigned int);
     static CLight *Create(void *);
+    void BeginUpdate(float);
     void MarkForDestruction(int);
     void Destroy();
     void AttemptUpdate(float);
@@ -114,6 +118,11 @@ class CAnimLightManager {
     AnimLightPool propertyLights;
     void Destroy(CInstancedAnimLight *);
     void Destroy(CPropertyAnimLight *);
+    void InitClass(CScene *);
+    void ShutdownClass();
+    void ResetClass();
+    CLight *Create(unsigned int);
+    CLight *Create(MOH_animatedLight_Struct *);
 };
 
 #endif

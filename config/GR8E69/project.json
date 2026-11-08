@@ -1798,7 +1798,10 @@
     "player_health_max.json",
     "player_level_data.json",
     "player_aim_enable.json",
-    "player_look_enable.json"
+    "player_look_enable.json",
+    "light_class.json",
+    "light_create.json",
+    "light_dtor.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
