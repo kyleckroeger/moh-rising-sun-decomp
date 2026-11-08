@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 981496,
+    "matching_code_bytes": 981664,
     "total_executable_code_bytes": 2492032,
-    "percent": 39.38536904823052,
+    "percent": 39.39211053469619,
     "categories": {
-      "reconstructed_game": 589280,
+      "reconstructed_game": 589448,
       "restored_library": 392216
     },
-    "matching_functions": 4865
+    "matching_functions": 4867
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -907,7 +907,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "ba92f254e4cc08a0478cdf4c253c17e4cb022fa594b4691e5103cf18259309a3",
+    "config/GR8E69/project.json": "56fd68f72e219c55548bb51489be199c6696e392e9b7fcdfae0524aeb3cd4bf0",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -1868,6 +1868,8 @@
     "config/GR8E69/toilet_compartment.json": "30512feb5d11d0305cd1c0d402890f3996e4481641ec26f089e4b21c1795b806",
     "config/GR8E69/toilet_init.json": "c60d5531a57452af49cfc6aded5f61112c2364c9f498bcae1e25fedbdc0e64f9",
     "config/GR8E69/toilet_lookup.json": "40fbdcc55b300118939e724aa2454f9279186a895cf0ef1df626c76ae0e2a24f",
+    "config/GR8E69/toilet_mvd.json": "a2624afbdf307ed9316122f58daefeaab035717199f4edf88d7548f6c9a0147e",
+    "config/GR8E69/toilet_ready.json": "4f11e7a0cea5701e57394dea8efb10e943225bb98160c5b9e604e74dfe8cfcc9",
     "config/GR8E69/toilet_shutdown.json": "3b280217238f6167080f1bfbec3772fe42cb1b33c2b1a89c710ea4e87bebf454",
     "config/GR8E69/trigger_base_name.json": "720744b136f7bb7ac5c28e8625176cd5bcbf30d91d1d9b25b98d52aaf8a14bb9",
     "config/GR8E69/trigger_class_queries.json": "04f920434d465df34440d49bc465c126e67d17658789ebd75ad202457be41b17",
@@ -2218,7 +2220,7 @@
     "include/game/TevStage.h": "47aaf3de5425dace0c30e2852896a9494f78ab4a4dcaad6be03d4aa4204d7466",
     "include/game/TevStageInlines.h": "03b19716c4d88b4eb2f3c74cdf2040ca0bb6c43e842d1eefc2c8bd148a278645",
     "include/game/Thrown.h": "62c70dfcb9ad0243eba5bdf633073bb2563d3fe2b4da6bdcae42452c547912db",
-    "include/game/Toilet.h": "71e1a0b6374ac5a7355f4c33db3ff092b10b3547f2af04325414afacb6b34afe",
+    "include/game/Toilet.h": "b3c7100bf5c6e5385de0298ecea12b79a8339dd4c94edf7ab1f3c47f2bc9d61c",
     "include/game/TriggerObject.h": "73e70d537a184c92ad5f8f0e10b773f5efe3306ce871a82852a3c41398f7418b",
     "include/game/VideoDriver.h": "dd21c14b75db031804f4dfd4afd30fcaf14e5211ed4c37079e3f6ff3e19ee668",
     "include/game/Volume.h": "cda9e7de972fc28d73bf86418423a8b271c864d60bb53d1eba7d42744622db46",
@@ -2966,6 +2968,8 @@
     "src/game/toilet_compartment.cpp": "33ab13e287ad744c1c307e3813c7f3baa19af39927a7ccddf08c6358eaa15371",
     "src/game/toilet_init.cpp": "3893dab910eb55bde8a257a7e1430baf3d104cb6c3c1fba15b127cf05f3fbe5b",
     "src/game/toilet_lookup.cpp": "873127e47497820facd9ea3b37b8313365c5e03f9165216d46dc28850014027f",
+    "src/game/toilet_mvd.cpp": "98bc3db6dddbb91b1816ddd44465dfd6e371699967780423226b5867a91a5691",
+    "src/game/toilet_ready.cpp": "be118f233cf670737ae40a0a4bdcb3d960654cbd62c87da06c0331070f97f931",
     "src/game/toilet_shutdown.cpp": "6eb4e5d7e6b80967088b32d956b4db9e356e37c7675006446fbcf98fa23375f0",
     "src/geometry/animated_volume_head.cpp": "23df314f9ced954f09dc466dd40c5733f234b699a9f5fb655a3c2e12ae551ba4",
     "src/geometry/animated_volume_tests.cpp": "f840db7fa1a281f301e273992e262605cdd17e463498259772e58a6746b88724",
@@ -42153,6 +42157,42 @@
       "discarded_functions": [],
       "object_sha256": "12f807b041e8a37e17f3f7e888cbf7f26efeb6c4e8cc13facad4a762a7acf539",
       "linked_sha256": "b4fc1183ec1fb020b986da531378f89a1543b42bad0d5a2b09e87052c7a41d6e"
+    },
+    {
+      "id": "toilet_mvd",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 140,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "c8159b67639e865ba9135e4f714c7d423cbf2d3862f9235d6190b8c8970f9a2f",
+      "linked_sha256": "33c4a7dcdd4b282b357eb503935e1bc89146317fc931d061b44c3e4c6b9fdbba"
+    },
+    {
+      "id": "toilet_ready",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 28,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "33e710b80fd989394a4e700d14c3f0ac92761abbb371f77d1753bcab6801f8dc",
+      "linked_sha256": "e7e237df5e3365c018069d3e120b26b6f360736a3a5d9cc7c513920f1649e3f4"
     }
   ],
   "code_map": {
@@ -70010,14 +70050,12 @@
             "kind": "function",
             "name": "TLT_InsertFileInRepository__FPc",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801a9e3c",
-            "size": 140,
-            "kind": "function",
-            "name": "TLT_LoadFromMVDBigFile__FPCcPiPb",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 801a9ec8",
+        "ranges": [
           {
             "address": "0x801a9ec8",
             "size": 216,
@@ -70072,13 +70110,6 @@
             "size": 144,
             "kind": "function",
             "name": "TLT_InitCompartment__Fv",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801aa2f4",
-            "size": 28,
-            "kind": "function",
-            "name": "TLT_IsCompartmentReady__Fv",
             "evidence": "unknown-file"
           }
         ]

@@ -41,7 +41,9 @@ public:
     char *pauseBigFile;                    // +0x128
     int pauseBigFileSize;                  // +0x12c
     void *compartmentBigFile;              // +0x130
-    unsigned char unknown134[0x160 - 0x134];
+    unsigned char unknown134[0x14c - 0x134];
+    void *mvdBigFile;                      // +0x14c
+    unsigned char unknown150[0x160 - 0x150];
     LevelFileContentsStruct_ *contents;    // +0x160
     LevelFileContentsStruct_ *contentsEnd; // +0x164
     unsigned char unknown168[0x184 - 0x168];

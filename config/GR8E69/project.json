@@ -1894,7 +1894,9 @@
     "device_c.json",
     "player_lookat_trigger.json",
     "weapon_params_delete.json",
-    "player_aim_update.json"
+    "player_aim_update.json",
+    "toilet_mvd.json",
+    "toilet_ready.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
