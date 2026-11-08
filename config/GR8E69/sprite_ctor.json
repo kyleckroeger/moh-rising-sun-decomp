@@ -1,0 +1,61 @@
+{
+  "id": "sprite_ctor",
+  "source": "src/game/sprite_ctor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8005d110",
+      "size": 344
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80299a7c",
+      "size": 52
+    }
+  ],
+  "functions": [
+    {
+      "name": "__7CSpriteP9ShapeFile",
+      "address": "0x8005d110",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "__7CSpritePCcQ27CSprite15ESpriteLoadType",
+      "address": "0x8005d140",
+      "size": 180,
+      "binding": 1
+    },
+    {
+      "name": "_._7CSprite",
+      "address": "0x8005d1f4",
+      "size": 116,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DebugMsg__FPCce": "0x80279094",
+    "Init__7CSpriteP9ShapeFile": "0x8005d3c8",
+    "TLT_CloseFile__FPv": "0x801a9764",
+    "TLT_LoadFileFromLevelBigFile__FPCcPi": "0x801a9634",
+    "TLT_LoadFileNormal__FPCcPii": "0x801a9abc",
+    "_._Q24EAGL3TAR": "0x801e0ae0",
+    "__builtin_delete": "0x801a8990"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

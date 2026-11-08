@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 935308,
+    "matching_code_bytes": 935652,
     "total_executable_code_bytes": 2492032,
-    "percent": 37.53194180492064,
+    "percent": 37.545745801017,
     "categories": {
-      "reconstructed_game": 543092,
+      "reconstructed_game": 543436,
       "restored_library": 392216
     },
-    "matching_functions": 4589
+    "matching_functions": 4592
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -844,7 +844,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "1b5827f43a384736930fc393232ff276649d44b6eaabc62522ea66e10a239a3d",
+    "config/GR8E69/project.json": "387afede262095587682e521017df297262615ce8f9552615c0592835e5c1e21",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -1527,6 +1527,7 @@
     "config/GR8E69/sphere_test_sphere.json": "4e00f0dc016dbf348da9f1c050aaa4cbc3cc12a506cef19260354d21d00ef929",
     "config/GR8E69/sphere_test_triangle.json": "2a5b8b5ff0e5f0df68069a329e049772042260412a2df8ba5c38283994312972",
     "config/GR8E69/sphere_transformed_copy.json": "025056d6c715db1dad3375b20a1d22067222ae98559bf34ae18cab52a59c09b6",
+    "config/GR8E69/sprite_ctor.json": "1a13712a334e19091b8830494644f9b9914e0eed3d8e53ca030cdd8e2f9058dd",
     "config/GR8E69/stl_80278d64.json": "04dc314cda8644a93aa797638a2f5a3e946a7bc954506e9bb2be731800b7646a",
     "config/GR8E69/stl_80278ea0.json": "784844808dbfcbe4c0b2a360cdd8a5cd6c1115260192d1fa5e52d4a7ae8c4ebf",
     "config/GR8E69/stl_80278eec.json": "e32e4cdf075141acad3a5566b3d28a9cdd34b5cdb5c67b8da65fb91eb6effd05",
@@ -2795,6 +2796,7 @@
     "src/game/screen_vsyncs.cpp": "39f4093a78453d2d9cbd31cce143ee637ec6131b77d84ab25ce1c4c1a86065c7",
     "src/game/skybox_class.cpp": "838c453a03ec151b70f404c2067b990fd3671d434f29800d2872a536db5a4e7d",
     "src/game/skybox_dtor.cpp": "79cd2c149b6a96728b91d9c1cc9efad78acd5eb4b5a263517946e0818d940a36",
+    "src/game/sprite_ctor.cpp": "aa94e157dcb92e33c29ee871e1f9ffcec9e7f09d5430a2b94654088a59ece6dc",
     "src/game/string_80277f18.cpp": "b6c79191f3a19d54855216cdbc6cf512f4fa474cc60d95837b45a4acec64016c",
     "src/game/surfacetype.cpp": "88645588850e3802162963971edbe8af8607679de8260f145fa4e8c30fb03399",
     "src/game/toilet_shutdown.cpp": "6eb4e5d7e6b80967088b32d956b4db9e356e37c7675006446fbcf98fa23375f0",
@@ -39662,6 +39664,24 @@
       "discarded_functions": [],
       "object_sha256": "162e4a4b0f337aa4666af9ccc4ec5c1eeb1f00f881e3740985b94263f27a2a5d",
       "linked_sha256": "e262bb95773c5d60ce4871d14b15488df9f436f04d056ddeb5ca472b1723e990"
+    },
+    {
+      "id": "sprite_ctor",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 344,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "8adc41214d9b4b18233ad6d73f2611fa2324f969acaa3c60dc5d3788ad891bc9",
+      "linked_sha256": "7019c03c959c46b2bd0350030f4d20167d58c73fb3182aa884ed92061ec09518"
     }
   ],
   "code_map": {
@@ -43335,28 +43355,12 @@
             "kind": "function",
             "name": "GetFileSize__C8CRtcFile",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8005d110",
-            "size": 48,
-            "kind": "function",
-            "name": "__7CSpriteP9ShapeFile",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8005d140",
-            "size": 180,
-            "kind": "function",
-            "name": "__7CSpritePCcQ27CSprite15ESpriteLoadType",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8005d1f4",
-            "size": 116,
-            "kind": "function",
-            "name": "_._7CSprite",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 8005d268",
+        "ranges": [
           {
             "address": "0x8005d268",
             "size": 264,

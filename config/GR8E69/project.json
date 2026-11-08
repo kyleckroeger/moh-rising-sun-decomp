@@ -1771,7 +1771,8 @@
     "sound_stretch.json",
     "sound_supxaf.json",
     "sound_supxalf.json",
-    "sound_supxapf.json"
+    "sound_supxapf.json",
+    "sprite_ctor.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
