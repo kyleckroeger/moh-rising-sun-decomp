@@ -1,0 +1,51 @@
+{
+  "id": "sound_ssys_restore",
+  "source": "src/sound/ea/ssys_restore.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802215f4",
+      "size": 268
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDSYS_restore",
+      "address": "0x802215f4",
+      "size": 268,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDI_freespkrtable__Fv": "0x802231e0",
+    "SNDI_mutexfree__Fv": "0x8021e2ec",
+    "SNDMEMI_free__FPv": "0x8021b034",
+    "SNDMEMI_restore__Fv": "0x8021ae10",
+    "SNDPLATFORM_restore__Fv": "0x8021c518",
+    "SNDSYS_entercritical": "0x8021f948",
+    "SNDSYS_inited": "0x80221700",
+    "SNDSYS_leavecritical": "0x8021f988",
+    "SNDfxinitbus": "0x80224154",
+    "SNDstopall": "0x80220abc",
+    "sndgs": "0x804108fc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "ssysinit.c",
+  "original_file_index": 3123
+}

@@ -279,6 +279,10 @@ An effect bus record (`SNDFXBUS`, 20 bytes) has two tables in `sndgs`, one at `+
 and one at `+0x20c`, and the voice send levels start at `+0x61` in a voice record.
 `mapchannel` is 216 bytes and `remap` indexes it as a 6 x 6 x 6 table.
 
+Several allocators and filter loops here reach table records through byte offsets: a
+named `char*` record gives the table base first in the `add`, which `&table[i]` does not.
+A guard followed by a bottom-tested loop is written as `if (c) do { ... } while (c);`.
+
 `hlafile`'s `numrequests`, `freequeue` and `requestidcounter` are small statics of that
 file. The original symbol table gives `.sbss` statics a size of 0, so the unit declares
 them `extern` as original context instead of defining them. Their ownership is

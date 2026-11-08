@@ -1,10 +1,6 @@
 // Fragment of the ARAM sample-memory manager: set-up, pool bounds (in 32-byte
-// units) and teardown, then the allocator: SNDARAM_alloc takes the first
-// free range (before, between or after the sorted allocated ranges, clipped
-// to the pool) that fits, inserting its record, and returns its byte
-// address (0 when full). SNDARAM_free after it is not part of this unit.
-// sndaram's members, the range record and the clipping helper are inferred
-// and are not original.
+// units) and teardown. The allocator that follows is in saramman_b.cpp.
+// sndaram's members and the range record are inferred and are not original.
 /* inferred: an allocated range (start and length, in 32-byte units) */
 struct SNDARAMBLOCKVIEW {
     unsigned int start;

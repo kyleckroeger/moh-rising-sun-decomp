@@ -1,0 +1,53 @@
+{
+  "id": "sound_saramman_b",
+  "source": "src/sound/ea/saramman_b.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802229b0",
+      "size": 688
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDARAM_constrain__FPUiPi",
+      "address": "0x802229b0",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "SNDARAM_alloc__Fi",
+      "address": "0x80222a00",
+      "size": 452,
+      "binding": 1
+    },
+    {
+      "name": "SNDARAM_free__FUi",
+      "address": "0x80222bc4",
+      "size": 156,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "sndaram": "0x8041d108"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "saramman.c",
+  "original_file_index": 3143
+}

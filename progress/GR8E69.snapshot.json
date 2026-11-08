@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 953696,
+    "matching_code_bytes": 955740,
     "total_executable_code_bytes": 2492032,
-    "percent": 38.26981354974575,
+    "percent": 38.35183496841132,
     "categories": {
-      "reconstructed_game": 561480,
+      "reconstructed_game": 563524,
       "restored_library": 392216
     },
-    "matching_functions": 4700
+    "matching_functions": 4709
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -875,7 +875,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "82788b4b06ff677a30eef9f5e8179b0064bcd143ceaacc0e1a876b715efc048d",
+    "config/GR8E69/project.json": "cdda642dc596f125f7def1b472dfe4548f2b6d269560e745abefb3b730102336",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -1429,7 +1429,10 @@
     "config/GR8E69/skybox_class.json": "6382327bdfd3308c3364c6cd96a02b3c8d1e82af96f09447f12c14cac9db21ea",
     "config/GR8E69/skybox_dtor.json": "d67d7fc8b0aebb0429903e6dcdaa65bf32a5f1930b319afc4a4bf8063f1d5e6b",
     "config/GR8E69/sn-library-source.json": "606ef80cd17599d3b7c2833a01c483622529485e2455c15ac76c975ba20507dc",
+    "config/GR8E69/sound_SNDI_cos.json": "287a7c6bda63c9aecddaf5c5ee432ad55999d46465fed70d9dbda4c2871a6f46",
     "config/GR8E69/sound_SNDI_mult16.json": "5ee21154684ee0405d463f947be20b6d7b921148d9e4251afe2ed9fcb1b1acfb",
+    "config/GR8E69/sound_SNDI_root1x.json": "adb374620a624ba61d9bece2ab55b067834ce9c8f584372dd3c9b19816fd1399",
+    "config/GR8E69/sound_SNDI_sin.json": "25e21cbf2867cdb5b266d42b661d18990628af5159e823dd745b9138f5cd5cea",
     "config/GR8E69/sound_alias_destructor.json": "df4b488e22bca49c93ea148613a6b119de76e12986c26bf6d5dbe03359696aa4",
     "config/GR8E69/sound_alias_send.json": "cba172da972f0def7bd58766375971c96aee9d4ffac58d3e1ecb85c736d06872",
     "config/GR8E69/sound_emitter_defaults.json": "69820a32e3ddb044d84d55ecc556f829aec47435210885daf02e2011dfe77ea6",
@@ -1446,6 +1449,7 @@
     "config/GR8E69/sound_s3dlow.json": "1f9ad59f9c8a9b129ce2e95b8a7dfc226c38a3702dbafcb351c3bbbbbacb9cff",
     "config/GR8E69/sound_salloc.json": "b57e0693875532fa553b072a6924bec50fe6ef89ad8634fa2f709c5f5421a2c9",
     "config/GR8E69/sound_saramman.json": "941b65c2823f2dc93040be55cba38e29540e1200445f1a1721219b1a5ebbc494",
+    "config/GR8E69/sound_saramman_b.json": "298c427e29af6ab2125bb00717d76bc663f49354f5aeacb41a99366b6e07cc06",
     "config/GR8E69/sound_sattrdef.json": "a39236cc8f5c5a022e727921e857cd21cb6ee97f246243f2c200b484afa1bddb",
     "config/GR8E69/sound_sautovol.json": "abef93393353aa4fd1f8fce3e219cda21abf75777367c664380c2b3ed0edb00c",
     "config/GR8E69/sound_sbadd.json": "264518bd6aa564e62f4aad43f309a75d59f3686dfd2e7d4e19c46150a6da7946",
@@ -1495,6 +1499,7 @@
     "config/GR8E69/sound_sfsplit.json": "e0cf7bbdaaf71479c70dcf56932e5f20d43014e7b74d080f3c4cf796506e3341",
     "config/GR8E69/sound_sfsrc.json": "ca7ddc634a8c23447f43ef388aeb68668918daac73695ffea3d1bbe2270fa070",
     "config/GR8E69/sound_sfxlevel.json": "1a10dff6df270a418f4af3efd751c6dc6f7283373349fb31f0aa50561110e674",
+    "config/GR8E69/sound_sgetdata.json": "58ecb466dc3eabc9ebc4103e5bc1f238c5ca031c2ba789af905f6d7e05c6c65f",
     "config/GR8E69/sound_sgetpvol.json": "471756ccbb6c8dd35e094811ca6b8c3fc22e8264a9d525cfd811357bb3b82de2",
     "config/GR8E69/sound_sgettag.json": "94e5a36ef2c36472293eecbe53a5c7f6f4646b2368fcd6f2d8b0df4858f4f765",
     "config/GR8E69/sound_sinit16.json": "070c034de242119bd829336f0287c13bc197dd3db7e940cf77165591507cd13b",
@@ -1505,6 +1510,7 @@
     "config/GR8E69/sound_smasterv.json": "3fed4f7e4917c91fe332822426fb81783cb90265592888954f0d4a601459e19f",
     "config/GR8E69/sound_smemhigh.json": "f94a51644cd751b0799f02c8cf092dcc4b60796a29aee3726f13078727df42aa",
     "config/GR8E69/sound_smemman_a.json": "9516c865e2a7b0f92f1ff78ecb700df033ef133eb8105acef5ba38aa5c243595",
+    "config/GR8E69/sound_smemman_allocz.json": "2cff35a0d668975bd883d7c6b1b889de528493164fb0abe331bd609943c9295d",
     "config/GR8E69/sound_smemman_free.json": "e195f3111cb41933929f37504cfd73f72d9b20bf8a7239464a1c4e337d060868",
     "config/GR8E69/sound_smixc.json": "cde2ba126b4e5d6243a221e047b8eedb734814044dca9f89f47c3859ea9dfc0d",
     "config/GR8E69/sound_smixer_destroy.json": "52657b881263b03628aa4898ee4a23843a793570bda76081c7a34d24559bf0eb",
@@ -1554,6 +1560,7 @@
     "config/GR8E69/sound_sststat.json": "60eaf8b6417456b09bb63e7bc37e8cc70d7c9e303363e77b57f446e1e48b0491",
     "config/GR8E69/sound_sstvol.json": "88bb6b75656df38545c09fc465db77e54e94654aba36ee27cf38153d304e6801",
     "config/GR8E69/sound_ssys_inited.json": "ba7edd1a2087710e264c038c07ed3fc12d56ca299356f2c95c20d8e5960ac147",
+    "config/GR8E69/sound_ssys_restore.json": "7fc7173398211e9c4832b7c1dfece369753d9b89d89b4b435ef489aefdbafd38",
     "config/GR8E69/sound_ssysreal.json": "954f0f5eb94303bad59cbebe0baf0950881bf4832991c2ffb8baf7b47f98b078",
     "config/GR8E69/sound_ssysserv.json": "0f5cc62af194ce3d683bcb09c919b5ce43b38774639147f370d1f074a3ca30ce",
     "config/GR8E69/sound_stretch.json": "70b099f075e73db324a71327d87672b875373a403db72a1274d02eed7a329c28",
@@ -2133,7 +2140,7 @@
     "include/game/SoundAmbience.h": "a8ffdd3a842aa24e0d8511216e05fd27625c8c2e96c7db19d7557afa729b1fb5",
     "include/game/SoundEntryPool.h": "3766b906852ceb49985a2e376f46077c2e739f8dc17ca0f16a47b60b79eb0d59",
     "include/game/SoundEvents.h": "d20e7b3d30760633777ae0551fa0af9a18a358637d8ab674e20c4494961f05ed",
-    "include/game/SoundGlobals.h": "40083cff69fb5e8057fc37a4dc8be71fee56b8d434074f94f7047e544c60da5a",
+    "include/game/SoundGlobals.h": "aa7f92a13ce3f3da4ca99262602421f6cc940ed4126a8bcd6c48e4203532fa39",
     "include/game/SoundManager.h": "a82fa61bcff8045c6ba20c986f0501fa1f6326ae2c64097fee51d028af2d3a31",
     "include/game/SoundMixerView.h": "787617bfe14ec7a736949ac46528a91cfe30e6899acd0a9e811d83bf9364059c",
     "include/game/Sphere.h": "4fb7f91c288e5b711e495765718b14847cbb478030509f25cbb7defcbc4a182f",
@@ -3824,13 +3831,17 @@
     "src/sound/SoundGetters.cpp": "e45a78805eeb00887fc9f92e3208fc185d1fce6f4b9bf8f763955e7161b1ecf3",
     "src/sound/SoundPoolEntries.cpp": "ad57791090a9be57dfec6e65729ddcc8c0ce95c0b75f17b8a023a3beee2b4139",
     "src/sound/SoundScheduleAdd.cpp": "772e16f060d741540a73db66bdc608e2c755c9e980a7fbd0d71a3d49a9fce65b",
+    "src/sound/ea/SNDI_cos.cpp": "11f5f9540580bab4272f185f5c0a86474507ccbe94676ee3eeea8dbf28546276",
     "src/sound/ea/SNDI_mult16.cpp": "4f89d97881a128095f971693bc70d7667fff3f4d9616ce2bb4c5d82d0287e3d4",
+    "src/sound/ea/SNDI_root1x.cpp": "b8cb81975aae1629cfe4bb3b1a1724aa93700d217933dfd624cb97348a2b951d",
+    "src/sound/ea/SNDI_sin.cpp": "48b77d6d0581a9304aa3f75ad076d39e5e2cafbc067c49354a718c50f88ac555",
     "src/sound/ea/isnd64.cpp": "6b2f195cb4696a2c6c4435d711ed520975d96cbb2363316be54ecf816b8491ab",
     "src/sound/ea/path_createtrack.cpp": "fbae8f31056cdf4a004045ebe80d905d515aa4a196807a266efdd8d72a1119e5",
     "src/sound/ea/path_overhead.cpp": "87336d2994ad9ecb25b56b47fdc48b1e4e9e8f6bc5d63e51952307b75569b011",
     "src/sound/ea/s3dlow.cpp": "2c0c91830f1674e3126e5979e6a705b57ccc5d6be832d11be78e9a710bc70bf7",
     "src/sound/ea/salloc.cpp": "dc89ebffb944e8ca21db6583bb331a078868102f36c0805db9e30904dc4f2439",
-    "src/sound/ea/saramman.cpp": "c1a56376ec6bb1a908310f558d560458604ef9765b2beaaf283606a9b1fcd452",
+    "src/sound/ea/saramman.cpp": "f293b490d7cb9f6a1493d0f06259f2017debc2473c8c55a7bdebd1d88cadd2fd",
+    "src/sound/ea/saramman_b.cpp": "28e13b6bd14b9b24ae2e24fedc0eb7af96d3e85a71e127e63693bd753a5a72a8",
     "src/sound/ea/sattrdef.cpp": "3275851e52148362c32816ee3bcad4365b2a822e29a524aaa39d7215803d8ca4",
     "src/sound/ea/sautovol.cpp": "9f9048559068cc42695ccbe825b5c969116873a56140b17d60446b45ae09efde",
     "src/sound/ea/sbadd.cpp": "3fb541b169f2352d36721551119668256d1bd3394b915f1f072fd5a671cce6aa",
@@ -3875,10 +3886,11 @@
     "src/sound/ea/sfmixer.cpp": "14b17cb1759d7c475ceaaa51442e10f1d44c3c0eb6de4f88e507757f95d9ae67",
     "src/sound/ea/sfreson.cpp": "f4ad81c99ed8cb5098566c5642bad0f79bf9c70dc0dc5c128d7b62c73ebeef82",
     "src/sound/ea/sfrsf.cpp": "a06aa4b543be5ded606dc7599c0c9004059b7a0610dc0f40c141ea752e800f89",
-    "src/sound/ea/sfrsf_init.cpp": "173bc5a2fc02b4b30c2e8b433c61cc34fe28940f8e082b56ccc3b3367c443265",
+    "src/sound/ea/sfrsf_init.cpp": "3bfda25dde09e673eacc17df4d7cec08e35c9db571c93933e9ad9700ab3eebbc",
     "src/sound/ea/sfsplit.cpp": "c646089a4b40c6be760e9f276a65a43aa37c75b467b1fcc77fcdea8095e653df",
     "src/sound/ea/sfsrc.cpp": "45a8e856a1ed709b59d651d51f19953d9ea89dfcf997a63da0a14576e32ae00f",
     "src/sound/ea/sfxlevel.cpp": "adc2eada9a695e944555cffb5199c00eec216c7645e4ee350c9d68805083680e",
+    "src/sound/ea/sgetdata.cpp": "54e8050e45ed1032b9902c6377fec66d9d8e44c50e234f70b007ed55b044b224",
     "src/sound/ea/sgetpvol.cpp": "f38ce868b9cb4c7946ac8c6dfc36ae21e76ad0d7ea600ddd9ee1031999670be7",
     "src/sound/ea/sgettag.cpp": "87aac6e484c3dad29d22f0042085ddcd0cdc61b350f4cc33646fb8e706143860",
     "src/sound/ea/sinit16.cpp": "bd95922041dadec0bf01059e3ec3a4fc28fdcf2084eecf23e195893026d47938",
@@ -3888,7 +3900,8 @@
     "src/sound/ea/slinkmix.cpp": "3cf4c749e4f9caf67c6276ed5df5b66b07e13be40dc7192b1d952b35fd5225f5",
     "src/sound/ea/smasterv.cpp": "774e8c0a6325c245918e0b3f422bd8501c3ade1bc4617a0e4616fc5558651678",
     "src/sound/ea/smemhigh.cpp": "9d4e5fdab61801b5137f48edce40a97c640cc82716519b9bc2763996c350de76",
-    "src/sound/ea/smemman_a.cpp": "1a6e8749c34bc2ce7060f5b1d86dbe0d368f7ad41ed639f2c939665f01a7616e",
+    "src/sound/ea/smemman_a.cpp": "93ffe5589a086fc21403f7bd7cc89333276bdad33820cdebee0ed73cb10509aa",
+    "src/sound/ea/smemman_allocz.cpp": "16c504ade4a7a436e55ed578f9a0fe6fd4c64aae3cc67414fa4eeb5dc00aaa8c",
     "src/sound/ea/smemman_free.cpp": "e433b0cf98b0b55613d87bdd38f973ba679d2b1dd8f676650092c431fb0db9e3",
     "src/sound/ea/smixc.cpp": "b542a8008788e16e593044f58cd9e37c7ab0dee235d94abcd84ef409e8a47937",
     "src/sound/ea/smixer_destroy.cpp": "c15aa93e042281abf36979a82762d67eecd4256c8399d5ff94c582b1e4a459b2",
@@ -3938,6 +3951,7 @@
     "src/sound/ea/sststat.cpp": "35555d92273b87ed48807abe4e01a99304a2e0adc23103d9297746f5df123257",
     "src/sound/ea/sstvol.cpp": "41e109bddcbf6d5fde910f7d047f0752c0e2ffaeb37edad869be9e6e9e0f85a7",
     "src/sound/ea/ssys_inited.cpp": "225a018f216edcadf9d419b9b4d1bbea909b1fb830b469f953611750b1a8d730",
+    "src/sound/ea/ssys_restore.cpp": "01666f4c348a50927c13e6a466c9380a2d5e5f681dd07f99dd4bc8dc919c9719",
     "src/sound/ea/ssysreal.cpp": "889a51f34a02038446f52f661087a066c48661006f50fe062fc5024f1f4d8ef5",
     "src/sound/ea/ssysserv.cpp": "893c409f94cadc72a2f47f066d0f41433576c607eabc8321c7d0de4ae95d4849",
     "src/sound/ea/stretch.cpp": "a3fa126b7a3209b34b0c970234e64619897895a1ebba0fa6dac0aee8b06be877",
@@ -40729,6 +40743,139 @@
       "discarded_functions": [],
       "object_sha256": "345816076b0bbe4109fa0be0778a034b743cea999c4c469c04130c8d5d3dadc0",
       "linked_sha256": "db2ae97c4b9bb953d55a7c1f0ed86e7165067bec77ba69ed05f4c8396f1786c4"
+    },
+    {
+      "id": "sound_saramman_b",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 688,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "c9e08e70f1409119bda43d409ce02a2cd8510b813e3a108ec79a4a7e0817e87f",
+      "linked_sha256": "245af55975c1c824f02667ef6a392402f495309e3d912a5aaec103c46c46fffe"
+    },
+    {
+      "id": "sound_smemman_allocz",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 516,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "3c5ac7cd17e8ab1c5bd6ae4e94e151b8284dea195fb62705529764a91488f202",
+      "linked_sha256": "fe2ee0b27a7a7a586bab34775f3c64dbb40d716831b6ed1a0263827a8f305c6d"
+    },
+    {
+      "id": "sound_SNDI_sin",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 148,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "91714b87588cf643a5dbd6ff4eddfab0c9ad509dc618ac67ec1992cd485adff7",
+      "linked_sha256": "1c5851dacc722feb215d8373e63b5bb2f9668f060a22cd6e46bc57b3f7f82379"
+    },
+    {
+      "id": "sound_SNDI_cos",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 152,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "30bcd98c8a96fb17c0df57f563fe10dfe72381f927302c59f49c981708f88d2b",
+      "linked_sha256": "0b8b090979c46cb89c7ba5674cc463d7b2b9c4e67668c7d32cc12c68684c8287"
+    },
+    {
+      "id": "sound_SNDI_root1x",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 144,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "825d78ca45bac4f5b5f23c3d2456fa2443ec2e3aa136f63f24cc99d833768f81",
+      "linked_sha256": "7201111be7d0997c72fb6c3630ef6fa7d39f218e547dce125b04b80f83493ebb"
+    },
+    {
+      "id": "sound_sgetdata",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 128,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "fe619273950d724792576587d821d4124f50891eb1e59fc27b0318b61cc02dcc",
+      "linked_sha256": "7491d517df4ed9ebdc9914cb1c481431f7909681d13c20feccc9bb449aa89058"
+    },
+    {
+      "id": "sound_ssys_restore",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 268,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "1541851f5f200382430252305fc80292086c79b3d3a189ca30a32c49dfac7170",
+      "linked_sha256": "dddb4e04a62c235104df5e0a373d6166e7f5e91a3c5597727d4df6f22a730ce6"
     }
   ],
   "code_map": {
@@ -75826,24 +75973,6 @@
         ]
       },
       {
-        "name": "Unmatched files/smemman.c [inferred file group]",
-        "file_record": 561,
-        "file_name": "smemman.c",
-        "ranges": [
-          {
-            "address": "0x8021ae30",
-            "size": 516,
-            "kind": "function",
-            "name": "SNDMEMI_allocz__Fi",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x8021ad7c",
-          "0x8021b0f4"
-        ]
-      },
-      {
         "name": "Unmatched files/snddrv.c [inferred file group]",
         "file_record": 562,
         "file_name": "snddrv.c",
@@ -76226,13 +76355,6 @@
             "kind": "function",
             "name": "SNDSYSI_init",
             "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x802215f4",
-            "size": 268,
-            "kind": "function",
-            "name": "SNDSYS_restore",
-            "evidence": "adjacent-compiler-markers"
           }
         ],
         "marker_interval": [
@@ -76324,38 +76446,6 @@
         "marker_interval": [
           "0x802227e0",
           "0x80222804"
-        ]
-      },
-      {
-        "name": "Unmatched files/saramman.c [inferred file group]",
-        "file_record": 598,
-        "file_name": "saramman.c",
-        "ranges": [
-          {
-            "address": "0x802229b0",
-            "size": 80,
-            "kind": "function",
-            "name": "SNDARAM_constrain__FPUiPi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80222a00",
-            "size": 452,
-            "kind": "function",
-            "name": "SNDARAM_alloc__Fi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80222bc4",
-            "size": 156,
-            "kind": "function",
-            "name": "SNDARAM_free__FUi",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x802228bc",
-          "0x80222c60"
         ]
       },
       {
@@ -76533,24 +76623,6 @@
         ]
       },
       {
-        "name": "Unmatched files/sgetdata.c [inferred file group]",
-        "file_record": 610,
-        "file_name": "sgetdata.c",
-        "ranges": [
-          {
-            "address": "0x80224e70",
-            "size": 128,
-            "kind": "function",
-            "name": "SNDI_getb__FPvi",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x80224e70",
-          "0x80224ef0"
-        ]
-      },
-      {
         "name": "Unmatched files/sgparse.cpp [inferred file group]",
         "file_record": 612,
         "file_name": "sgparse.cpp",
@@ -76662,42 +76734,6 @@
         "marker_interval": [
           "0x80226620",
           "0x802266a8"
-        ]
-      },
-      {
-        "name": "Unmatched files/SNDI_cos.c [inferred file group]",
-        "file_record": 627,
-        "file_name": "SNDI_cos.c",
-        "ranges": [
-          {
-            "address": "0x80226a04",
-            "size": 152,
-            "kind": "function",
-            "name": "SNDI_cos__Ff",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x80226a04",
-          "0x80226a9c"
-        ]
-      },
-      {
-        "name": "Unmatched files/SNDI_sin.c [inferred file group]",
-        "file_record": 628,
-        "file_name": "SNDI_sin.c",
-        "ranges": [
-          {
-            "address": "0x80226a9c",
-            "size": 148,
-            "kind": "function",
-            "name": "SNDI_sin__Ff",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x80226a9c",
-          "0x80226b30"
         ]
       },
       {
@@ -76856,24 +76892,6 @@
         "marker_interval": [
           "0x80228c68",
           "0x80228fa4"
-        ]
-      },
-      {
-        "name": "Unmatched files/SNDI_root1x.c [inferred file group]",
-        "file_record": 658,
-        "file_name": "SNDI_root1x.c",
-        "ranges": [
-          {
-            "address": "0x80229308",
-            "size": 144,
-            "kind": "function",
-            "name": "SNDI_rootof1plusx__Ff",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x80229308",
-          "0x80229398"
         ]
       },
       {

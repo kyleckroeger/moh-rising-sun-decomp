@@ -1824,7 +1824,14 @@
     "scene_ObjCreateThrownDelete.json",
     "shadow_init.json",
     "shadow_ctor.json",
-    "shadow_enabled.json"
+    "shadow_enabled.json",
+    "sound_saramman_b.json",
+    "sound_smemman_allocz.json",
+    "sound_SNDI_sin.json",
+    "sound_SNDI_cos.json",
+    "sound_SNDI_root1x.json",
+    "sound_sgetdata.json",
+    "sound_ssys_restore.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

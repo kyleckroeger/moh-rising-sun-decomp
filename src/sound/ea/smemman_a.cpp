@@ -3,8 +3,8 @@
 // indexed downward. SNDMEMI_constrain limits a gap to what the pool's free
 // size allows, SNDMEMI_init lays the pool out (data 16-byte aligned after a
 // 24-byte header) and SNDMEMI_restore asks for the high-water mark. The
-// function names come from the symbols; the pool and record views are inferred,
-// and SNDMEMI_allocz, which follows, is not part of this unit.
+// function names come from the symbols; the pool and record views are inferred.
+// SNDMEMI_allocz, which follows, is in smemman_allocz.cpp.
 struct SNDMEMRECORDVIEW {
     unsigned int offset;
     int size;
@@ -46,6 +46,6 @@ void SNDMEMI_init(void* memory, int size) {
     sndgs.pool->lowest = size;
 }
 
-void SNDMEMI_restore() {
-    SNDMEM_gethighwater();
+int SNDMEMI_restore() {
+    return SNDMEM_gethighwater();
 }
