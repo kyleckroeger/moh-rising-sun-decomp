@@ -162,6 +162,13 @@ class CScene {
     int locked; // +0x58: changes queue while set; see Lock and Unlock.
     int playerCount; // +0x5c
     unsigned char unknown60[0x158 - 0x60];
+    // An excluded node pair, kept in address order, and a value.
+    struct SExclusionEntry {
+        SExclusionEntry(const ISceneNode *, const ISceneNode *, float);
+        const ISceneNode *low;
+        const ISceneNode *high;
+        float value;
+    };
     // A deferred scene change: the handler to run and its two arguments.
     struct SModCommand {
         void (CScene::*function)(SModCommand &);

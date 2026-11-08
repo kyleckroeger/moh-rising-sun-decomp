@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 930284,
+    "matching_code_bytes": 930572,
     "total_executable_code_bytes": 2492032,
-    "percent": 37.330339257280805,
+    "percent": 37.34189609122194,
     "categories": {
-      "reconstructed_game": 538068,
+      "reconstructed_game": 538356,
       "restored_library": 392216
     },
-    "matching_functions": 4556
+    "matching_functions": 4561
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -561,6 +561,7 @@
     "config/GR8E69/font_ctor.json": "845307706220c7756f2bdcb0fb7dfd49282418a1f80acefe7bf9f530da4071ab",
     "config/GR8E69/font_draw.json": "1f4db7878d67aa3f16bcf3b47cf62125c4df21bfbcbb4660676760f05d56340d",
     "config/GR8E69/font_setcolor.json": "1d52d0e8fcbded84ab37f7e6965fe7debfb7e6a38adef2d1dcde6dca46fca8b4",
+    "config/GR8E69/framecount.json": "7bd0dd7ee9ed7947fa10ed915ba8b1bf34fde1b0e777286f39ec6b0b8c2bbdee",
     "config/GR8E69/frustum_transform.json": "35766529dbd85ffd05cf8d34adb7010b3b10b02c04d1d097811dde2dfc2ef057",
     "config/GR8E69/fstload.json": "d49e84fe0d1e9af1dd569811065db3c015f596b540ac5988c5078fa2f9c5dd5e",
     "config/GR8E69/grenade_response_queries.json": "5932b489bfec46bf4c73dad2d1d3bc9faa7acf77d137fb97cac1fdea8d343ecc",
@@ -842,7 +843,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "92aa7072b258a7aa6ac2fa615dc46985cbf249a1d710592818c3fb80e5156676",
+    "config/GR8E69/project.json": "77cc269d942310e58106cd0e30412863680f13548f77147c722cb33553316c26",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -948,6 +949,7 @@
     "config/GR8E69/scene_WorldObjectDraw.json": "b60226eccd77fe5c9f964d1bc922dbbe1f378f0b0589b85383994dd62b987006",
     "config/GR8E69/scene_WorldObjectFiles.json": "f6658b04cd14d70654d7f448f3a37c57207a406bfa72e4d0146dfcbb410bb092",
     "config/GR8E69/scene_commands.json": "0ace24af0e29023a9814a064cbd5a9970833aa5f331c46d0c86419c23c536989",
+    "config/GR8E69/scene_exclusion.json": "22d7aeaeabdf5931671f6e49663c26d2ec05addeaf4bbcd53e5d42c6b57ef589",
     "config/GR8E69/scene_lock.json": "83e20e2b0f820bc05fedd8a3ce97eba655ab399484a99dddad031a62f43b6cd6",
     "config/GR8E69/scene_node_axis_defaults.json": "092b0d540e402069c588985246b692817db1af99a9d9c2cde0f3b1bfac31d590",
     "config/GR8E69/scene_node_centroid.json": "417789c5857125f62e4595e59f3e52ed74ac434de058b0123549164ceef3cd8b",
@@ -1742,6 +1744,7 @@
     "config/GR8E69/thrown_motion.json": "cb835c548c368c989af05ec994db7eace9f0655b7404e8409b27c4e929a58774",
     "config/GR8E69/thrown_setters.json": "02e1ce7099126fe919d35532bd92037630cdd0509363f68024c8d97863480977",
     "config/GR8E69/thrown_update.json": "53c8922765ce4c7aa1da89d560fd07b88b04125b8328bf3a64454c6d98485cc7",
+    "config/GR8E69/toilet_shutdown.json": "3b280217238f6167080f1bfbec3772fe42cb1b33c2b1a89c710ea4e87bebf454",
     "config/GR8E69/trigger_base_name.json": "720744b136f7bb7ac5c28e8625176cd5bcbf30d91d1d9b25b98d52aaf8a14bb9",
     "config/GR8E69/trigger_class_queries.json": "04f920434d465df34440d49bc465c126e67d17658789ebd75ad202457be41b17",
     "config/GR8E69/trigger_clear_machine_guns.json": "7d85e192fd50b647ac560e95dc0c8e35ad1eb48c3d0072dcc439779fae8c0136",
@@ -1764,6 +1767,7 @@
     "config/GR8E69/vector_dot.json": "3a018e12136189037665a12a59e33136f545f8777e45cf4813501da197158016",
     "config/GR8E69/vector_methods.json": "912ec9c6f429286eddc371a4eb9c495967c3be2239f5254be03ef35402d749e5",
     "config/GR8E69/vi.json": "dd95046e01890cb33bdb0006c936ff713366f21401f267c9cf268a70ac8b8833",
+    "config/GR8E69/viewport.json": "6a801b98a150a54773ae5eb7717398fb7e8d4813f1204ea9810f555e4e844a38",
     "config/GR8E69/volume_defaults.json": "ec1834b402ae07ad4d233082ab460cb579890c27c953532ce02d216062910d69",
     "config/GR8E69/weak_8028147c.json": "cc02f4fbc0e20dc88c9cad44b86e59ef5362235032a4832a6a740921f10cfc1d",
     "config/GR8E69/weak_802814e4.json": "3853fb0778a939dd88d1396ef97687c503cd6d349bac566b21cf985a5e08a9eb",
@@ -2053,7 +2057,7 @@
     "include/game/PopUpMessage.h": "3ba712308420d487fc901d235bd01e828a92eaff7fe9c095eadb933d05ba7737",
     "include/game/PropertyData.h": "952ae5ac78dc17e43053a7b905a8e58499a1faa3c7d0721269329f639095b22a",
     "include/game/Rcmp.h": "9f0b3fe189c690b8ee358797a865f8e6172f48640e9fc998e332061823b08cb2",
-    "include/game/SceneNode.h": "27748ee276bf9497202e74d989d7b0f74ad84609997146b44b4c5e71855ee35d",
+    "include/game/SceneNode.h": "40a259452061449ceea65f58648fc29241bb00478413744071b736513d776c89",
     "include/game/SceneObjects.h": "c10a4b497ca61eb6dcb0fdc30a5745706cbc255d2f2ec73876a41e0c6521a0b9",
     "include/game/Screen.h": "d8d90744c37d10401fcbc506ddf1269249efe5f516972005e96307a6322ed26e",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
@@ -2363,6 +2367,7 @@
     "src/camera/projection.cpp": "4ed326a09aac21ee19656d0c6538dbe65908d865e795f163ae092f67e9972767",
     "src/camera/transforms.cpp": "4f1d6ff74f4f9d296d64a95495ab90f53f98010031fde9b051b8a5be89c7278a",
     "src/camera/update_projection.cpp": "fd6857c4d808bd67914b5c1041d239ff9219b03f7d8a7bbe579e7d846583f4f7",
+    "src/camera/viewport.cpp": "280c610501e88f6cedc6d8ab86186067423ed8b0e974e1905c9b0a385fb48912",
     "src/camera/world_to_camera.cpp": "9c8631b1a6b92af8fece7a1b109bb61c516f6bc69bd7eccee0c678bbf1b8c1c3",
     "src/camera/world_to_clip.cpp": "291ee3d9b216585f1d3a9a710fa8a283765d8f07a257d59bc0317e4ba92137e3",
     "src/crc.cpp": "6736f2715ded88eedcb87aa7eece4de1874d9c52fe091cebaeffa6d9ba67d6ac",
@@ -2773,6 +2778,7 @@
     "src/game/font_ctor.cpp": "58553ab744e9e2326e145ad958eb12bdd904aa92453a41030f63035cd506348f",
     "src/game/font_draw.cpp": "7d13587aadc975b86a92737e78cb108dcb191bf6a1c64973d98b2f70e746015a",
     "src/game/font_setcolor.cpp": "732885f73107c33c308a7d324faee714a86aff80f40bdc94707aa90305335a81",
+    "src/game/framecount.cpp": "7b76621f1a2f5b452b4ee73c31317598062c4e3c5a4b7693d71b5f1371ef7931",
     "src/game/input_init.cpp": "92834b6924093f7ebc540f41b5eac7db9cfc3741eb2018ccbb066b14b2f5a952",
     "src/game/input_ports.cpp": "c8e073d6d9e25381539ae8de570e54222add652af5b1400642cfc9159c14f36e",
     "src/game/input_state.cpp": "c875939ff44d67e321e0e286ebddc6e5880d2dc966559b8b2d9d23194da84de1",
@@ -2785,6 +2791,7 @@
     "src/game/skybox_dtor.cpp": "79cd2c149b6a96728b91d9c1cc9efad78acd5eb4b5a263517946e0818d940a36",
     "src/game/string_80277f18.cpp": "b6c79191f3a19d54855216cdbc6cf512f4fa474cc60d95837b45a4acec64016c",
     "src/game/surfacetype.cpp": "88645588850e3802162963971edbe8af8607679de8260f145fa4e8c30fb03399",
+    "src/game/toilet_shutdown.cpp": "6eb4e5d7e6b80967088b32d956b4db9e356e37c7675006446fbcf98fa23375f0",
     "src/geometry/animated_volume_head.cpp": "23df314f9ced954f09dc466dd40c5733f234b699a9f5fb655a3c2e12ae551ba4",
     "src/geometry/animated_volume_tests.cpp": "f840db7fa1a281f301e273992e262605cdd17e463498259772e58a6746b88724",
     "src/geometry/box_create.cpp": "b33c7f1f47ad817c4982521c7165fd593c63b2c086e50fd8ea64814426a42c51",
@@ -3271,6 +3278,7 @@
     "src/scene/jaw_controller_ctor.cpp": "d925c4b536ea558fe6c261c9a3f83d4dc65bb6cd3e396224e2ef8e3ef23b2920",
     "src/scene/jaw_controller_motiontype.cpp": "509a33964954db2b09fd38a2c55eecd16285fed2fc2e66d5383ad2b7f9aa71ee",
     "src/scene/scene_commands.cpp": "a8687c5bba909fd093a2bba7fd5210f16447c38eb0806dee508bdcd6aa2345c8",
+    "src/scene/scene_exclusion.cpp": "7237b55d019afcfb3adc1502b89ae88227f77be74583b8f75514908f2da98765",
     "src/scene/scene_lock.cpp": "d1534b596ca427eac0b94e7689cc710fc1dc4bf22161523987d052c133b52d50",
     "src/scene/scene_now.cpp": "d73133c40d4c1eded243898711eafd99af2c55c86223b07af6c812456789b891",
     "src/scene/scene_query.cpp": "9ac00d297ad3317e2a935be6140df494ce0774217ea82b785df4ad90a74a2ade",
@@ -39478,6 +39486,78 @@
       "discarded_functions": [],
       "object_sha256": "14fd8d742aa307c35329d14d84cfe03239ea1b239088720479cb1f9540116146",
       "linked_sha256": "e185422b6bf964cdcedb41bd9d85e595736837afbadbf26bbfbefc719b407833"
+    },
+    {
+      "id": "viewport",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 236,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "7a8e3ae626f51b48438499a42e1d3d621e04cba7c0e1be906b8bf926418b3353",
+      "linked_sha256": "e0ea58a60b6438814aba7b3b001f75f1c0178c58b2cc206a6c426673ed3e27d3"
+    },
+    {
+      "id": "scene_exclusion",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 36,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "8125c3aad73983d9cd378cac48c2fe5ff80dff8f25034eeb5780bd28784fd4a8",
+      "linked_sha256": "0ed0b51ba6b53deec342a346d6138e57d137b756b178a8f9da086632814dd5fa"
+    },
+    {
+      "id": "framecount",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 12,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "418dc44681a37065782d08320d3163c5ad3dbd42c8defc21ec64698c909829a3",
+      "linked_sha256": "2feeef07268505e3cddaa297194ce8d3dc80bdc2f885b133cb8023c090e0ab85"
+    },
+    {
+      "id": "toilet_shutdown",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 4,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "844ee0c0fef57039734364f4a133bf3ed246abd15a0ffe3834dafb2a03902bc8",
+      "linked_sha256": "e464f8b8eb0efafb59562522508a02a97c22fc719796747bcd8bd12f9add056e"
     }
   ],
   "code_map": {
@@ -58306,31 +58386,6 @@
         ]
       },
       {
-        "name": "Unmatched files/viewport.cpp [file record 207] [inferred file group]",
-        "file_record": 207,
-        "file_name": "viewport.cpp",
-        "ranges": [
-          {
-            "address": "0x8012f5bc",
-            "size": 52,
-            "kind": "function",
-            "name": "SetRect__9CViewportffff",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012f5f0",
-            "size": 184,
-            "kind": "function",
-            "name": "GetTMClipToView__C9CViewport",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x8012f5bc",
-          "0x8012f6a8"
-        ]
-      },
-      {
         "name": "Unmatched files/light.cpp [inferred file group]",
         "file_record": 208,
         "file_name": "light.cpp",
@@ -59214,13 +59269,6 @@
         "file_record": 222,
         "file_name": "scene.cpp",
         "ranges": [
-          {
-            "address": "0x80145df4",
-            "size": 36,
-            "kind": "function",
-            "name": "__Q26CScene15SExclusionEntryPC10ISceneNodeT1f",
-            "evidence": "adjacent-compiler-markers"
-          },
           {
             "address": "0x80145e18",
             "size": 2924,
@@ -61796,14 +61844,12 @@
             "kind": "function",
             "name": "Gameloop_Progress__FfPc",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80168a40",
-            "size": 12,
-            "kind": "function",
-            "name": "GetFrameCount__Fv",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 80168a4c",
+        "ranges": [
           {
             "address": "0x80168a4c",
             "size": 1480,
@@ -68818,14 +68864,12 @@
             "kind": "function",
             "name": "TLT_FileExists__FPCc",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801a9598",
-            "size": 4,
-            "kind": "function",
-            "name": "TLT_Shutdown__Fv",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 801a959c",
+        "ranges": [
           {
             "address": "0x801a959c",
             "size": 12,

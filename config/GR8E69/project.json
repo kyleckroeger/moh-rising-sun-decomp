@@ -1762,7 +1762,11 @@
     "input_init.json",
     "input_ports.json",
     "input_state.json",
-    "input_tail.json"
+    "input_tail.json",
+    "viewport.json",
+    "scene_exclusion.json",
+    "framecount.json",
+    "toilet_shutdown.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
