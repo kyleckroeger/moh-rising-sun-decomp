@@ -137,6 +137,13 @@ on the owner's script when it is not negative. `SetMoveTarget` chooses the locom
 angle between the move direction and, with a valid AI target, the direction to that target, or
 otherwise the object's yaw.
 
+`AO_OpcodeHandler::Execute` switches on the opcode's id at `+2`, with a 32-bit parameter from the
+words at `+4` and `+6` and a duration at `+8`. It raises script events, plays enemy-movement,
+reload and triggered sounds, toggles head tracking and sword state, and starts controller
+feedback on the owning player's port. Unknown ids format an error message into a local buffer
+that nothing reads, and return 0. For the feedback case the binary tests `g_bInMultiplayerMode`
+and `g_bCoopMultiplayer`, yet both paths do the same work; the two-armed source is inferred.
+
 ## Parked
 
 These still differ, with instruction differences in brackets; drafts are kept outside the

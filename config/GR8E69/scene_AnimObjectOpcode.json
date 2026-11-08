@@ -1,0 +1,106 @@
+{
+  "id": "scene_AnimObjectOpcode",
+  "source": "src/scene/AnimObjectOpcode.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800a54cc",
+      "size": 1992
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029EA28",
+      "size": 56
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.Q211CAnimObject16AO_OpcodeHandler",
+      "address": "0x802e4880",
+      "size": 24,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetAttached__11CAnimObjectb",
+      "address": "0x800a54cc",
+      "size": 28,
+      "binding": 1
+    },
+    {
+      "name": "GetPosition__11CAnimObject",
+      "address": "0x800a54e8",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "GetRotation__11CAnimObject",
+      "address": "0x800a5550",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "SetPosition__11CAnimObjectRC6COORD3",
+      "address": "0x800a5570",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "SetRotation__11CAnimObjectRCf",
+      "address": "0x800a55a4",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "MarkForDestruction__11CAnimObjecti",
+      "address": "0x800a55c8",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "Destroy__11CAnimObject",
+      "address": "0x800a5604",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "Execute__Q211CAnimObject16AO_OpcodeHandlerRQ34EALA9Character6Opcode",
+      "address": "0x800a5630",
+      "size": 1636,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetYaw__C11CAnimObject": "0x800a523c",
+    "MarkForDestruction__8ISubjecti": "0x8014ad2c",
+    "PlayAnimTriggeredSound__FiP11CAnimObject": "0x80157670",
+    "PlayEnemyMovement__FUsiP11CAnimObject": "0x801573f8",
+    "PlayReloadSound__FiP11CAnimObject": "0x80157800",
+    "ReleaseObject__18CAnimObjectFactoryP11CAnimObject": "0x800cc668",
+    "Remove__6CSceneR10ISceneNode": "0x80146e9c",
+    "SetFeedback__13CInputManagerUcUcUcff": "0x800d704c",
+    "SetHeadTrackPlayer__14CSoldierObjectb": "0x800c10a4",
+    "SetYaw__11CAnimObjectf": "0x800a5244",
+    "g_AnimObjFactory": "0x803e6bb0",
+    "g_bCoopMultiplayer": "0x802c1b2c",
+    "g_bInMultiplayerMode": "0x802c1b30",
+    "g_inputMgr": "0x803077c4",
+    "g_scene": "0x803e6d90",
+    "sprintf": "0x80263a3c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

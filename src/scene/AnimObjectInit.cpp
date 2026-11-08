@@ -5,7 +5,6 @@
 
 namespace EALA {
 namespace Character {
-namespace Opcode { class Handler; }
 class Choreographer {
   public:
     void SetOpcodeHandler(Opcode::Handler *);
@@ -42,7 +41,7 @@ void CAnimObject::Init() {
     hurtlingState = 0;
     hurtling = 1;
     field_2c0 = 40;
-    ((EALA::Character::Choreographer *)choreographer)->SetOpcodeHandler((EALA::Character::Opcode::Handler *)handler);
+    ((EALA::Character::Choreographer *)choreographer)->SetOpcodeHandler(handler);
     animCallback = -1;
     pendingCallback = -1;
     poseEvaluated = 0;

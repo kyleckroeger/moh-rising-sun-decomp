@@ -4,12 +4,6 @@
 #include "ObserverTypes.h"
 #include "EAGLTransform.h"
 
-class CAnimObjectFactory {
-  public:
-    void ReleaseObject(CAnimObject *);
-};
-extern CAnimObjectFactory g_AnimObjFactory;
-
 float CAnimObject::GetYaw() const { return yaw; }
 
 void CAnimObject::SetYaw(float angle) {
@@ -44,30 +38,3 @@ void CAnimObject::AttachToLocation(const CMatrix &location, float blend) {
     attachBlend = blend;
     attachLocation = location;
 }
-
-void CAnimObject::SetAttached(bool value) {
-    attached = value;
-    attachedToLocation = 0;
-    attachBlend = -1.0f;
-}
-
-COORD3 CAnimObject::GetPosition() {
-    COORD3 position;
-    ((ISceneNode *)this)->GetPosition(*(CVector3 *)&position);
-    return position;
-}
-
-float CAnimObject::GetRotation() { return GetYaw(); }
-
-void CAnimObject::SetPosition(const COORD3 &position) {
-    ((IMovingSceneNode *)this)->SetPosition(*(const CVector3 *)&position);
-}
-
-void CAnimObject::SetRotation(const float &angle) { SetYaw(angle); }
-
-void CAnimObject::MarkForDestruction(int flag) {
-    ((ISubject *)this)->ISubject::MarkForDestruction(flag);
-    g_scene.Remove(*(ISceneNode *)this);
-}
-
-void CAnimObject::Destroy() { g_AnimObjFactory.ReleaseObject(this); }

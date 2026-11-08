@@ -258,7 +258,22 @@ struct COORD3;
 namespace EAGL { class Transform; }
 namespace EALA {
 class Task;
-namespace Character { struct CollisionData; }
+namespace Character {
+struct CollisionData;
+// The record a choreographer hands its handler; names beyond the class names are descriptive.
+class Opcode {
+  public:
+    class Handler {
+      public:
+        virtual int Execute(Opcode &) = 0;
+    };
+    unsigned short unknown_0;
+    unsigned short id;        // +2
+    unsigned short paramLow;  // +4
+    unsigned short paramHigh; // +6
+    unsigned short extra;     // +8
+};
+}
 }
 class CAnimatedVolume;
 enum EAnimCallback { AnimCallbackUnknown = 0 };
@@ -441,8 +456,9 @@ class CAnimObject {
     int stateTask;       // +0x2c4; a CAnimObject::StateDone, passed to SetState by address: table, event, owner.
     int stateValue;      // +0x2c8
     CAnimObject *stateOwner; // +0x2cc
-    struct AO_OpcodeHandler {
-        void *table;
+    class AO_OpcodeHandler : public EALA::Character::Opcode::Handler {
+      public:
+        virtual int Execute(EALA::Character::Opcode &);
         CAnimObject *owner; // +4
     } opcodeHandler; // +0x2d0; class name from _vt.Q211CAnimObject16AO_OpcodeHandler.
     int poseEvaluated;   // +0x2d8; descriptive.
