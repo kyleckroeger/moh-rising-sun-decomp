@@ -1,0 +1,60 @@
+{
+  "id": "screen_tail",
+  "source": "src/game/screen_tail.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8005bb50",
+      "size": 112
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetClearColor__7CScreenRC6CColor",
+      "address": "0x8005bb50",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "GetDepthBufferMax__C7CScreen",
+      "address": "0x8005bb5c",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "GetClear__C7CScreen",
+      "address": "0x8005bbac",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetClearColor__C7CScreen",
+      "address": "0x8005bbb4",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "Clear__7CScreen",
+      "address": "0x8005bbbc",
+      "size": 4,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

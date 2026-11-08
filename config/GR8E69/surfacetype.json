@@ -1,0 +1,87 @@
+{
+  "id": "surfacetype",
+  "source": "src/game/surfacetype.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8005cc94",
+      "size": 552
+    }
+  ],
+  "functions": [
+    {
+      "name": "InitClass__12CSurfaceTypePC3CDBT1",
+      "address": "0x8005cc94",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "GetDecalCRC__12CSurfaceTypeUsb",
+      "address": "0x8005cca8",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "GetParticleCRC__12CSurfaceTypeUsb",
+      "address": "0x8005ccf4",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "GetSoundIndex__12CSurfaceTypeUsb",
+      "address": "0x8005cd40",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "IsShootThru__12CSurfaceTypeUsb",
+      "address": "0x8005cd8c",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "IsPassThru__12CSurfaceTypeUsb",
+      "address": "0x8005cdd8",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "IsSeeThru__12CSurfaceTypeUsb",
+      "address": "0x8005ce24",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "IsClimbable__12CSurfaceTypeUsb",
+      "address": "0x8005ce70",
+      "size": 76,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_pCDB1": "0x802c1bc0",
+    "g_pCDB2": "0x802c1bc4"
+  },
+  "local_externals": [
+    "g_pCDB1",
+    "g_pCDB2"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "surfacetype.cpp",
+  "original_file_index": 410
+}

@@ -1,0 +1,73 @@
+{
+  "id": "font_attrs",
+  "source": "src/game/font_attrs.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80067560",
+      "size": 200
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029a024",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetDepth__5CFontUi",
+      "address": "0x80067560",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "GetScale__5CFontRfT1",
+      "address": "0x80067574",
+      "size": 28,
+      "binding": 1
+    },
+    {
+      "name": "SetScale__5CFontff",
+      "address": "0x80067590",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "SetJustification__5CFontUi",
+      "address": "0x800675a4",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetJustification__5CFont",
+      "address": "0x800675ac",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetRenderedSize__5CFontPCcRfT2",
+      "address": "0x800675b4",
+      "size": 116,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FONT_getrecta": "0x802061e0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

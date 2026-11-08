@@ -18,9 +18,18 @@ struct CDBTri {
     unsigned short surface;
 };
 
+class CDB;
+
 class CSurfaceType {
   public:
+    static void InitClass(const CDB *, const CDB *);
+    static unsigned int GetDecalCRC(unsigned short, bool);
+    static unsigned int GetParticleCRC(unsigned short, bool);
+    static int GetSoundIndex(unsigned short, bool);
+    static bool IsShootThru(unsigned short, bool);
     static bool IsPassThru(unsigned short, bool);
+    static bool IsSeeThru(unsigned short, bool);
+    static bool IsClimbable(unsigned short, bool);
 };
 
 // A plane (a three-float normal and a distance); the mark at +16 is negated once a group
@@ -64,9 +73,11 @@ class CDB {
   public:
     unsigned char unknown_00[28];
     int branchCount;
-    unsigned char unknown_20[12];
+    int surfaceTypeCount;
+    unsigned char unknown_24[8];
     CDBLeafNode *leafRoot;
     CDBBranchNode *branchRoot;
+    const void *surfaceTypes;
 };
 
 template <class T>

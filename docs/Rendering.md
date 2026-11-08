@@ -244,3 +244,15 @@ Mipmap filtering preserves context overrides, palette restrictions, anisotropy
 selection and the original LOD-bias bounds. Generated property strings, diagnostics
 and float/double constants are all compared in full. Runtime loading and rendering
 remain untested.
+
+## Screen, font and surface-type fragments
+
+`CScreen`'s `Init`, `GetVSyncs`, clear-state accessors and
+`GetDepthBufferMax` compile with the standard ProDG 3.8.1 profile. `include/game/Screen.h`
+models only the members these read (the table pointer at `+100` is not declared);
+`m_sFrameNum` is volatile because `GetVSyncs` stores and immediately reloads it.
+`CFont` keeps its `FONT` record at `+0`; `SetDepth` ignores its argument and stores 0.0.
+`CFont::GetColor` is not reconstructed.
+`CSurfaceType` reads a 12-byte record table at `CDB+0x34`, guarded by the word at
+`CDB+0x20`; the record field names follow the accessors and the flags are bits 0 to 3 of
+its first halfword.

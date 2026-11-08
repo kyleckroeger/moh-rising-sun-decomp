@@ -1741,7 +1741,16 @@
     "ea_filedev_kill.json",
     "ea_filedev_close.json",
     "scene_ObjCreateCreators.json",
-    "scene_ObjCreateDumpObjects.json"
+    "scene_ObjCreateDumpObjects.json",
+    "surfacetype.json",
+    "screen_init.json",
+    "screen_vsyncs.json",
+    "screen_setclear.json",
+    "screen_tail.json",
+    "font_ctor.json",
+    "font_setcolor.json",
+    "font_attrs.json",
+    "font_draw.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

@@ -1,0 +1,47 @@
+{
+  "id": "font_ctor",
+  "source": "src/game/font_ctor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80066e14",
+      "size": 180
+    }
+  ],
+  "functions": [
+    {
+      "name": "__5CFontPc",
+      "address": "0x80066e14",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "_._5CFont",
+      "address": "0x80066e6c",
+      "size": 92,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CreateHandle__5CFontPc": "0x80066f4c",
+    "DestroyHandle__5CFontP4FONT": "0x80067194",
+    "FONTstand": "0x80451224",
+    "__builtin_delete": "0x801a8990"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}
