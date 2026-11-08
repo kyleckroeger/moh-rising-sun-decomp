@@ -119,14 +119,15 @@ struct SNDGSVIEW {
     unsigned char inited;
     unsigned char mastervolume;
     unsigned char critical;
-    unsigned char field177;
+    signed char clientcount;
     unsigned char field178;
     signed char userdataclients;
     unsigned char voicequality;
     char pad17b[3];
     short voicecount;
     unsigned int tick;
-    char pad184[60];
+    void (*clients[1])();
+    char pad188[56];
     int ticksnapped;
     float rate;
     void (*userdataclient[7])(void*);

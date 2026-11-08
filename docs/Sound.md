@@ -332,3 +332,11 @@ decoder. A state record has its decoder at `+40` (`supmutf.c`), `+28` (`supmutlf
 `Snd::MTFSTATE` is a 12-byte record whose `+8` word is set to 1 on a restart. Those offsets are verified;
 the member names are inferred. The driver's per-channel record is 64 bytes with its AX voice at `+60`.
 `SNDPLATFORM_setpitch` scales the voice's rate by `+138` of the voice record.
+
+`sndgs` keeps a table of periodic clients at `+388`, counted by the signed byte at `+375`;
+`SNDSYSI_100hzserver` calls them after `iSNDserve`. A voice record's envelope segments are 8-byte
+{duration, level} records and a negative duration means the segment holds. A packet player's
+platform record is 9,600 bytes of buffer followed by staging pointers (`+9600`), its voice (`+9624`),
+the buffer half playing (`+9625`), a start countdown (`+9626`), its DSP addresses (`+9628`), the buffer
+midpoint (`+9652`) and the frames consumed from each half (`+9656`). Those offsets are verified; the
+member names are inferred.

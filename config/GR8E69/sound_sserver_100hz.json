@@ -1,0 +1,47 @@
+{
+  "id": "sound_sserver_100hz",
+  "source": "src/sound/ea/sserver_100hz.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8021f6a8",
+      "size": 608
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDSYSI_100hzserver__Fv",
+      "address": "0x8021f6a8",
+      "size": 608,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDPLATFORM_setpitch__Fi": "0x8021db38",
+    "SNDPLATFORM_setvol__Fi": "0x8021d32c",
+    "SNDstop": "0x80220a5c",
+    "iSNDcalcpitch__Fi": "0x802233bc",
+    "iSNDcalcvol__Fi": "0x802251e4",
+    "iSNDserve__Fv": "0x8021c5bc",
+    "sndgs": "0x804108fc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sserver.c",
+  "original_file_index": 3088
+}

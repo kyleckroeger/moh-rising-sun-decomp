@@ -1,0 +1,56 @@
+{
+  "id": "sound_snddrv_serve",
+  "source": "src/sound/ea/snddrv_serve.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8021c5bc",
+      "size": 900
+    }
+  ],
+  "functions": [
+    {
+      "name": "iSNDserve__Fv",
+      "address": "0x8021c5bc",
+      "size": 900,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AXSetVoiceAddr": "0x80231318",
+    "AXSetVoiceAdpcm": "0x80231428",
+    "AXSetVoiceAdpcmLoop": "0x80231564",
+    "AXSetVoiceState": "0x802312bc",
+    "SNDDRV_DSPMixerUpdate__Fv": "0x80223cbc",
+    "SNDDRV_fillbufwithpackets__FiP13SNDDRVPKTCHANP7CHANPUB": "0x8021bbb0",
+    "SNDDRV_freeaxvoice__Fii": "0x8021b548",
+    "SNDDRV_freenextframe__Fv": "0x8021b0f4",
+    "SNDPKTPLAYI_flushcallbackdata__Fv": "0x8021f39c",
+    "SNDPKTPLAYI_freeframes__Fiii": "0x8021f330",
+    "SNDPLATFORM_set3dpos__Fi": "0x8021d4e4",
+    "SNDPLATFORM_setpitch__Fi": "0x8021db38",
+    "SNDPLATFORM_setvol__Fi": "0x8021d32c",
+    "memset": "0x80266778",
+    "snddrv": "0x80410c40",
+    "sndgs": "0x804108fc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "snddrv.c",
+  "original_file_index": 3064
+}

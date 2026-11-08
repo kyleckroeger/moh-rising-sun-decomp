@@ -1935,7 +1935,10 @@
     "sound_sdrv_setpitch.json",
     "sound_sdrv_setvol.json",
     "scene_StaticObjectMotionAttempt.json",
-    "player_commit.json"
+    "player_commit.json",
+    "sound_snddrv_serve.json",
+    "sound_sdrv_packetplay.json",
+    "sound_sserver_100hz.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
