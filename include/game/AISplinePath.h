@@ -94,7 +94,7 @@ public:
 // no-argument class static without one (`f__1A`), and `_13AIPathFinding.g_iLastPathNodeUpdatedOutOfArea`
 // has local binding, which a class static data member cannot have.
 namespace AIPathFinding {
-    int IsPointOnNetwork(const CVector3 &);
+    bool IsPointOnNetwork(const CVector3 &);
     void UpdateAStarNodesOutOfArea();
 }
 // Prefix through the next-point vector at +0x20. The untouched bytes at

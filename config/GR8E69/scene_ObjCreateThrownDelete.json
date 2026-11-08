@@ -1,0 +1,41 @@
+{
+  "id": "scene_ObjCreateThrownDelete",
+  "source": "src/scene/ObjCreateThrownDelete.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801291d8",
+      "size": 152
+    }
+  ],
+  "functions": [
+    {
+      "name": "DeleteSpecialThrownObject__FP13CThrownObject",
+      "address": "0x801291d8",
+      "size": 152,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DeallocateStaticObject__20CStaticObjectFactoryP13CStaticObject": "0x800cd820",
+    "DestroyBSObject__FP8BSObject": "0x800f6cec"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "objcreate.cpp",
+  "original_file_index": 1242
+}

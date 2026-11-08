@@ -352,6 +352,7 @@ public:
 // Member view of the soldier AI object returned by CAIObject slot 2.
 class CAIThreatEvaluation {
 public:
+    void PropagateSoundToMe(int, float, const CVector3 &, CAIObject *, bool);
     void Update(float);
     void FinishedInvestigation();
     void AddCorpseThreat(BSObject *);

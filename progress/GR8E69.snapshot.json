@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 952028,
+    "matching_code_bytes": 953380,
     "total_executable_code_bytes": 2492032,
-    "percent": 38.202880219836665,
+    "percent": 38.257133134727,
     "categories": {
-      "reconstructed_game": 559812,
+      "reconstructed_game": 561164,
       "restored_library": 392216
     },
-    "matching_functions": 4688
+    "matching_functions": 4694
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -143,6 +143,7 @@
     "config/GR8E69/ai_AITankObjectB.json": "86ca57c24e19d4f2de9f1b998906e699515aaa5d74e42714215d84ecd5613dda",
     "config/GR8E69/ai_AITankObjectC.json": "833fd5caca4fc8577ab77c8f11b76950b04942162058f6d56392b08423370865",
     "config/GR8E69/ai_AITankObjectD.json": "5c92c1ea302426601af352e931c5823c744898a4032b45f381ca6666d5d12a70",
+    "config/GR8E69/ai_AIThreatsMakeNoise.json": "b06c11964d7ac075ffc0cb708f944422c029373acdefbf93b664fb0fe46dc290",
     "config/GR8E69/ai_filter_clock.json": "f2034db8752a041debc3e5f86662b062dae08812cf71d3c95f66f339dbd705b1",
     "config/GR8E69/ai_filter_splines.json": "26b024e231fa1eb564b501c3108a8fb71d50e76cdc7ad97470e83b7b39b7fbde",
     "config/GR8E69/ai_locomotion_access.json": "a561dbd2e9dc1e3932ea24b9e503dd28adac5b45f786bacaa0dd26e3f5cc6154",
@@ -874,7 +875,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "27a07ce8ee41944236274377dd8b041f5499b2e4817ea1f46e1750350db46b2b",
+    "config/GR8E69/project.json": "a50089404b1e1fffb66e3544dbe26b94580dc0699e186a51a8d01deaca292a19",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -893,6 +894,7 @@
     "config/GR8E69/quaternion_slerp.json": "1a0f13b162d329331ef995f603d989e695af05bdda0fce3a52b322131c771a16",
     "config/GR8E69/rcmpbase_decoder.json": "f0e7d02835301f05a7293f98aeb871ea4417d91cd4a55b3bb1c06d6536242f0a",
     "config/GR8E69/rcmpbase_frames.json": "56fec82984b72e2691a5734b9f2c899f58b759a77fdbaf3726bf768da94b1a20",
+    "config/GR8E69/scene_AnimObjFactoryConstructor.json": "beb4acd60fed40a6b29448a3570117b66a303faa06db9055bf5a291135e2e863",
     "config/GR8E69/scene_AnimObjFactoryRelease.json": "50f6268ac1945950c6610e825a8ca87bee0aba837a50e912bf1e9953ddf16cec",
     "config/GR8E69/scene_AnimObjFactoryReset.json": "f8f158148087c9a55b8d8ed48125111f8afcf668eb6a7f62ce6c610848f0ac57",
     "config/GR8E69/scene_AnimObjectAccess.json": "0f9a1fa701d92f4e3b1396be3b5c06bb6527ee24c437760e2d4da165aded0212",
@@ -942,6 +944,8 @@
     "config/GR8E69/scene_ObjCreateHierSwap.json": "2d60fb9f5d0ac0c7e3b45491558b717a819fb686840478a765ff7c9e0a5033e3",
     "config/GR8E69/scene_ObjCreatePoolA.json": "0b85d17eac6bacc2ef1efc5a628d9edb7dfc72aec63191973165f57b8d1e0456",
     "config/GR8E69/scene_ObjCreatePoolB.json": "00569bf051aaea6b0549efed6a945e9f83c3e80f3ecac73436c2ee4f4c68ec80",
+    "config/GR8E69/scene_ObjCreatePowerup.json": "3090de12cd0c3ec4241b0c3c00fa1c34972bc796c8f7fe1bd1fb8dd3f295c8d4",
+    "config/GR8E69/scene_ObjCreateThrownDelete.json": "c82033e0b1c422136ba230d1675da05aeb0e585b79a96c952ecc707995899ec5",
     "config/GR8E69/scene_SoldierAI.json": "c85b0dbcc085ed3bcb2baee74d13b9bec64222b734018638d2e390df12c641a6",
     "config/GR8E69/scene_SoldierAim.json": "258da4ac98e51720b964a139b518ae408bc9440f87d263088874dea7e08adb21",
     "config/GR8E69/scene_SoldierAttachMatrix.json": "fa659916cc9f7ae38c8d46a81039e6d2073660d785bad010751381a940223efa",
@@ -965,6 +969,7 @@
     "config/GR8E69/scene_StaticObjectHead.json": "87f74bca2deaa0b057ba2556d04761151b49b597c28bf84afd1c404f2a8bf10f",
     "config/GR8E69/scene_StaticObjectInit.json": "7d70b52aeb5b03904740d33c60919683f90f5e732ec344edba77a3646c59c11a",
     "config/GR8E69/scene_StaticObjectMotionFlags.json": "116d77e8139aef5a900c688f0864eea3c07d32756546d5330ced0f33f0d86cac",
+    "config/GR8E69/scene_StaticObjectMovementPath.json": "0940bd42e385bcfcfdcc0524c35c7e4cb642fc5d8d222a19848ad4c4e785b491",
     "config/GR8E69/scene_StaticObjectPathBegin.json": "8df320cfed6c9d1cca190a1abc3ac42a07d2e5e3b4e2b5fbb7c5f68f728a8f33",
     "config/GR8E69/scene_StaticObjectPlayAnimation.json": "22d5b212b78e08ed55ebe676d8b885e04ad1faf2176ec6103367b1b76186caa8",
     "config/GR8E69/scene_StaticObjectScale.json": "82ec550e4b3649995987aa5b88a3d81015f9bedd8795d71a463d1a484ea8185a",
@@ -2004,8 +2009,8 @@
     "include/game/AIDoodad.h": "5a8328fd7c55b6f602742adb79faabaeb4466fbaa44292b3a32fd0d0ad10aca9",
     "include/game/AIFilterGlobal.h": "344877aed1d2938ab6a0ab0eef531481adc62fd71f0329cf835ec5e85894c95a",
     "include/game/AIMovement.h": "143e409a2e3b38c72b2a667b1781a10c9af5ce7cc9cf5bd75ac43f142192d484",
-    "include/game/AISplinePath.h": "bea70ffc7cc2ba348ab3aa39c7c9d84fd5b592279453c829dfe3ee95bb81d6d6",
-    "include/game/AITargeting.h": "b87c7e2a3093e5edc1c7e2e0f213dee40664e1cc0ea9f8d1a05d791a4406cc08",
+    "include/game/AISplinePath.h": "b099db9f3b62cd89d875d5fcaf42b91b7b23a8d20085288a26f1f94c37bd89df",
+    "include/game/AITargeting.h": "73feafc918493ae7bc10e8f240e07ae56fa7bd62695845a0cea87d74b64b6c67",
     "include/game/AnimatedVolume.h": "527918576e64cf9296cbb9164eefaf3fc8b7a0f96894e342d2da9e847df4cf25",
     "include/game/BPD.h": "ec4a3aceb83f181db2c6adf8ac87137ede2cd6a0e643548159c73a827aadd19e",
     "include/game/BSGameObject.h": "87aa21faf701f616933e4bd6e79116978f24a8f59c784951bcc637bc57c433e1",
@@ -2108,7 +2113,7 @@
     "include/game/PropertyData.h": "952ae5ac78dc17e43053a7b905a8e58499a1faa3c7d0721269329f639095b22a",
     "include/game/Rcmp.h": "9f0b3fe189c690b8ee358797a865f8e6172f48640e9fc998e332061823b08cb2",
     "include/game/SceneNode.h": "40a259452061449ceea65f58648fc29241bb00478413744071b736513d776c89",
-    "include/game/SceneObjects.h": "1cca851858d70c4994dd42fc9e8a5577dba8dddc7812895243bde8f3d5a76eb3",
+    "include/game/SceneObjects.h": "53d5108eb20b0c149c785977b94a5e8bd1faae70c8da0f02e45a44c588891a41",
     "include/game/Screen.h": "d8d90744c37d10401fcbc506ddf1269249efe5f516972005e96307a6322ed26e",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
     "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
@@ -2321,6 +2326,7 @@
     "src/ai/AITankObjectB.cpp": "49e0d1c0c80d2c4002097438ad0d77c84a73790d821490d7e49698bbe55dedfe",
     "src/ai/AITankObjectC.cpp": "3a017317124cc3af0802c29a7344830e4110956dd30c48cf6b55a6ea99c37ea2",
     "src/ai/AITankObjectD.cpp": "1d48f7210ac6083554bb04559b38da035c0101862b0202ce9e65b5ef7df36f7f",
+    "src/ai/AIThreatsMakeNoise.cpp": "7bee718b455cdad488a5bd94fe4b89a14920f44fae951c91f5e2d53dc40f5c7a",
     "src/ai/GrenadeResponseQueries.cpp": "c69240fd532d35c3cd178969bbafd94bb6c3202d155ba8437e716d4f7ee4b2c9",
     "src/ai/cover_flags.cpp": "70759f9875d7c34dbd0bae1737558f8bb0b0ff16498366b6528906e461242cb2",
     "src/ai/cover_invalidate.cpp": "59768695622932fd51e91523bfc0248c905726f09bd5fc168ef28150df4c7dc8",
@@ -3264,6 +3270,7 @@
     "src/quaternion/get_matrix.cpp": "833c4f1e128f98fd799af7974b65805cd409a2be36d0537e5915f5e23a9b65c2",
     "src/quaternion/normalize.cpp": "6a6d8d3dc0aec56da5bc7e6deea018e478cff41b6aa3ce416ae918e002dcd69b",
     "src/quaternion/slerp.cpp": "5d23dc039a6a7d8246e63aee872ffea35f85911f9e34b3017c97d647bc091bfd",
+    "src/scene/AnimObjFactoryConstructor.cpp": "7c8a885f4433cd8af6efba2b742071f3885f1ecbb454ee2f627910a2dac14a0c",
     "src/scene/AnimObjFactoryRelease.cpp": "1ad8052e8d3c457fc715e1512e952e1d702e532f3b2b2c8fef14f67005750f7a",
     "src/scene/AnimObjFactoryReset.cpp": "02f7ce07d09dcff1319d008e7ab397b366ad1ef531ac4656f30ce0de598a3614",
     "src/scene/AnimObjectAccess.cpp": "8251933c1dc90e1e9d521d3fd184b7e8ec3817565251a66f32c32086d58eff09",
@@ -3316,6 +3323,8 @@
     "src/scene/ObjCreateHierSwap.cpp": "135c0258b04097f365cb2d4b6acfeacf96fa059bd713b1a9afd6d1631c1636e3",
     "src/scene/ObjCreatePoolA.cpp": "4bf0385ac5f296380009e8ea2c1da1bf99ba2453fe69333c50b36ef16bfe222b",
     "src/scene/ObjCreatePoolB.cpp": "2475fa2a3d92c31d5136d619a5ba52c0b29087914dce9f05f3d872a8dab9bead",
+    "src/scene/ObjCreatePowerup.cpp": "6334391a79f4a019f7a0120cb741dd9e7c0bf37c2fd2241517cee1f01c663a94",
+    "src/scene/ObjCreateThrownDelete.cpp": "c3bc5990878ec599e3a9b3f88fffcfe8c9bc0b2a590a2565470019fabc8fcff8",
     "src/scene/SceneNodeAxisDefaults.cpp": "2e62b6f3b3302ff27d6350acc7376566f9bc0cb72383e1f54fbd95b185f6cbf6",
     "src/scene/SceneNodeCentroid.cpp": "7899f0a92f618aa7efeb10ddc99112cdcd045c7bd512476fd59c316b3a449af7",
     "src/scene/SceneNodeDestructor.cpp": "56a6495fa5fd7f8fa0e267ea0c7e314d8cafc24ab743c986bf6a6d00f27c9ffa",
@@ -3346,6 +3355,7 @@
     "src/scene/StaticObjectHead.cpp": "c0fb66a3a1ff6f5aa09d75a84266915a1350f99a57e71b0543bc3e7e034b0398",
     "src/scene/StaticObjectInit.cpp": "068bf77349e0c994a3a638363d790e4b194eefc79c6c6a6ebe6a692f4ff7953c",
     "src/scene/StaticObjectMotionFlags.cpp": "f8eb79d96fb7f062de179fae0b006790a50c5ff4f81497c6f40767b0e67b5b9e",
+    "src/scene/StaticObjectMovementPath.cpp": "6712f67023e415e32ca3c4fb11809aa6d5e7e37b55c40114cd400facd12908ba",
     "src/scene/StaticObjectPathBegin.cpp": "2c1ce8cd25adf0442ac47928001ba3467510b389fcc790384a9650f1649e5fe5",
     "src/scene/StaticObjectPlayAnimation.cpp": "775ab2a935dd26c9c5630f9de852e447c0df21783b918e499ba187986445f48f",
     "src/scene/StaticObjectScale.cpp": "7f01471eba39bdaf0a87c5fd431722d6174ea0ddfe3a412f0a35bfde718f1abe",
@@ -40568,6 +40578,96 @@
       "discarded_functions": [],
       "object_sha256": "c2531ceba80cae28325c8e3aeffcf2d17ed920eef18354fa5a17d50a3df29fe5",
       "linked_sha256": "80336163067ef024a09ecf8374cfbafa6ceadcda6f901fda74124fc35d8ae2ff"
+    },
+    {
+      "id": "scene_StaticObjectMovementPath",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 432,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "cae67dc8f4e56bbba2c80c3cd1553b016c02f008d5a0f058547ab57693772d57",
+      "linked_sha256": "1e4a8a4dba06b25126d7ae56431e30f9551db8fb6f613643e8cf44f4bad86316"
+    },
+    {
+      "id": "ai_AIThreatsMakeNoise",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 556,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "38668d62091e518cfe0f145f4669336239b02e4ef6eef2aeb0033279561e51eb",
+      "linked_sha256": "9e86863fd7cf9729001a6ba20eb970807310e3788d815af62016805d954f5035"
+    },
+    {
+      "id": "scene_AnimObjFactoryConstructor",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 180,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "341cc78824ed289080d2bdb90f4aca821a397069f9abc1fbadf7f0d5cdd20078",
+      "linked_sha256": "8a9b733c4ec6c47f7523a421b4a7275a2370792f0cc91a5a494b44781826d06c"
+    },
+    {
+      "id": "scene_ObjCreatePowerup",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 32,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "7085c84aa87d6d94db360fcc4d86459df7c58f2a579be1a270fc6a7898a126af",
+      "linked_sha256": "e8729f7ec71aba3b7d1eae7656a13f33790a85e1d89ad8dfaba9ea3852a46489"
+    },
+    {
+      "id": "scene_ObjCreateThrownDelete",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 152,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "9172622f090dcfc2d6603e214fc3e70a3131a74e38e761aad0c2c0fc7cad27ac",
+      "linked_sha256": "dbb6ba3de3990282aee1fe1cbc29026958ed085bcec5fe07c41e3fde9bdead01"
     }
   ],
   "code_map": {
@@ -51753,13 +51853,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800a9970",
-            "size": 432,
-            "kind": "function",
-            "name": "SetMovementPath__13CStaticObjectibT2ffffP8BSObjectfT2",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800a9b20",
             "size": 984,
             "kind": "function",
@@ -53125,13 +53218,6 @@
             "kind": "function",
             "name": "CompareObjectDefinitions__FPCvT0",
             "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x800ca784",
-            "size": 180,
-            "kind": "function",
-            "name": "__18CAnimObjectFactory",
-            "evidence": "adjacent-compiler-markers"
           },
           {
             "address": "0x800ca838",
@@ -57427,20 +57513,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800f4034",
-            "size": 360,
-            "kind": "function",
-            "name": "MakeNoise__FPvP9CAIObjectRC8CVector3ifbi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f419c",
-            "size": 196,
-            "kind": "function",
-            "name": "MakeNoise__FP10ISceneNodeifi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800f4260",
             "size": 516,
             "kind": "function",
@@ -58665,13 +58737,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x801291d8",
-            "size": 152,
-            "kind": "function",
-            "name": "DeleteSpecialThrownObject__FP13CThrownObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80129270",
             "size": 2092,
             "kind": "function",
@@ -58697,13 +58762,6 @@
             "size": 2428,
             "kind": "function",
             "name": "CreateDestructable__FP13TriggerObjectii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012abf4",
-            "size": 32,
-            "kind": "function",
-            "name": "CreatePowerup__FP13TriggerObjectii",
             "evidence": "adjacent-compiler-markers"
           },
           {

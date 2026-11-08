@@ -166,11 +166,20 @@ class CStaticObject {
     unsigned char unknown_30[0x4c - 0x30];
     void *model;          // +0x4c; drawing is skipped while it is null.
     CMatrix transform;    // +0x50
-    unsigned char unknown_90[0x100 - 0x90];
+    unsigned char unknown_90[0xa0 - 0x90];
+    unsigned char lookTraversal[0x30]; // +0xa0; a CAISplinePathTraversal.
+    unsigned char pathTraversal[0x30]; // +0xd0; a CAISplinePathTraversal.
     float pathDistance;   // +0x100; descriptive, copied to +0x230 on commit.
-    unsigned char unknown_104[0x110 - 0x104];
+    float pathField104;   // +0x104; SetMovementPath stores the speed argument here too.
+    float pathMaxSpeed;   // +0x108; name from Frontline.
+    float pathField10c;   // +0x10c
     float pathScale;      // +0x110; BIFunc_MechSetPathFlag stores value / 100.
-    unsigned char unknown_114[0x12c - 0x114];
+    void *pathFollowTarget; // +0x114; the player while following.
+    float pathFollowDistanceSquared; // +0x118
+    float pathField11c;   // +0x11c
+    float pathField120;   // +0x120
+    float pathField124;   // +0x124
+    float pathField128;   // +0x128
     unsigned int pathState; // +0x12c; cleared by Init. Descriptive.
     IVolume *localVolumeType3; // +0x130; returned for volume type 3.
     // +0x134: GetLocalBoundingVolume's type-0 volume, despite the older field name.

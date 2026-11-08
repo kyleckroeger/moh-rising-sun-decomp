@@ -83,6 +83,12 @@ waited more than six frames. `CreateEnemy` compares the child script with `BOT3`
 Each `BSGO_*` destruction unlinks the object, removes its scene node, destroys the script object and
 deletes itself; each class keeps a 24-byte block with its scene node at `+0x14` after the script data.
 `DestroySingleQueueElement` sends message 264 before calling `Destroy`.
+`DeleteSpecialThrownObject` calls `CleanUp` at table offset 840, one slot before the attachable table's,
+because a thrown object's table has no `FindAttachNode`.
+
+`CStaticObject::SetMovementPath` keeps its path and look traversals at `+0xd0` and `+0xa0`. In
+`MakeNoise`, the object skipped by the loop is read from a stack structure that is never written in this
+build, so the comparison reads uninitialized memory.
 
 ## Parked
 

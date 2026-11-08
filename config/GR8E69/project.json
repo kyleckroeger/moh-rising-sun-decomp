@@ -1816,7 +1816,12 @@
     "sound_sdfx.json",
     "sound_smixer_reset.json",
     "sound_scrsfl.json",
-    "sound_sdrv_samplechan.json"
+    "sound_sdrv_samplechan.json",
+    "scene_StaticObjectMovementPath.json",
+    "ai_AIThreatsMakeNoise.json",
+    "scene_AnimObjFactoryConstructor.json",
+    "scene_ObjCreatePowerup.json",
+    "scene_ObjCreateThrownDelete.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

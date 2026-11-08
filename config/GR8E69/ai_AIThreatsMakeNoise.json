@@ -1,0 +1,55 @@
+{
+  "id": "ai_AIThreatsMakeNoise",
+  "source": "src/ai/AIThreatsMakeNoise.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f4034",
+      "size": 556
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a4efc",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "MakeNoise__FPvP9CAIObjectRC8CVector3ifbi",
+      "address": "0x800f4034",
+      "size": 360,
+      "binding": 1
+    },
+    {
+      "name": "MakeNoise__FP10ISceneNodeifi",
+      "address": "0x800f419c",
+      "size": 196,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetGlobalListStart__9CAIObject": "0x800d9e48",
+    "GetPlayer__C6CScenei": "0x8014ac08",
+    "IsPointOnNetwork__13AIPathFindingRC8CVector3": "0x800e7654",
+    "PropagateSoundToMe__19CAIThreatEvaluationifRC8CVector3P9CAIObjectb": "0x800f4260",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIThreats.cpp",
+  "original_file_index": 1094
+}
