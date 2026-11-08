@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 974360,
+    "matching_code_bytes": 977288,
     "total_executable_code_bytes": 2492032,
-    "percent": 39.099016385022345,
+    "percent": 39.216510863423906,
     "categories": {
-      "reconstructed_game": 582144,
+      "reconstructed_game": 585072,
       "restored_library": 392216
     },
-    "matching_functions": 4803
+    "matching_functions": 4822
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -899,7 +899,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "60316cd0466bba5aeb677284f0809c7c61b6cc58e7de9c9c0d6bdbf4ddbdbf28",
+    "config/GR8E69/project.json": "db5d6f0e9038fe728d92e1d7d53213ea32a43d09b1d4a8e7dab47eb114a9217d",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -1476,6 +1476,10 @@
     "config/GR8E69/sound_isnd64.json": "4df57a788f8434f2ef337a85f19898745132bcf91159a66dc4639217f30d322b",
     "config/GR8E69/sound_path_createtrack.json": "7a7003f4e938e73e085ab4c4a55add9cf4c0ed4b30bb84865a672e418554f3f9",
     "config/GR8E69/sound_path_overhead.json": "d321821613f9aea946f2c0180c6030ad7927af19e9b8e5ac8a9970728a3732e4",
+    "config/GR8E69/sound_pathx_create.json": "c51644012f8ee19f7f97f5c26b1d8bfdc46486a3400f9c0de138165857a56373",
+    "config/GR8E69/sound_pathx_load.json": "acb4921b4b2166aa042b69c8c9c9b73c0c4e41ee54a11bd32895d72de1fd56ae",
+    "config/GR8E69/sound_pathx_play.json": "3ace1766bfe64efc7444cbaae5a1d2d2800045c86913f6d513c5bc4213c61eb1",
+    "config/GR8E69/sound_pathx_service.json": "6ab9f2ba5d6686741d110e061197394d3a2f42b537bbae2cb4b33b7ed170883f",
     "config/GR8E69/sound_pool_entries.json": "d40f0ffaa656ba0f5a8ee7843757955736791daf710f3b2e917fc01fe7f3dad4",
     "config/GR8E69/sound_s3dlow.json": "1f9ad59f9c8a9b129ce2e95b8a7dfc226c38a3702dbafcb351c3bbbbbacb9cff",
     "config/GR8E69/sound_salloc.json": "b57e0693875532fa553b072a6924bec50fe6ef89ad8634fa2f709c5f5421a2c9",
@@ -2166,6 +2170,7 @@
     "include/game/OffsetPtr.h": "06d2e4c320890063bd6b210c1ddda4b7cefc28e7aa9a4f276e76c128c0a68499",
     "include/game/ParticleClock.h": "7784d24bb307ac0a9e2b796c228584fe306f5781575650f1896038426c80dc0b",
     "include/game/ParticleRecipe.h": "04bba33839dcdae3132d1316e831585288f74ef842a5b01c6f6d6c37929ee61d",
+    "include/game/PathxTrack.h": "f46f02824655f05c7a0c47d71481dfbe5c5845b6b73ae17d5f8f3453b5c4298a",
     "include/game/PlacementNew.h": "49819284bb2cc2ffb2039d459ce855bd5a233bcfff0a6412ffe0bda02cd616c5",
     "include/game/PopUpMessage.h": "3ba712308420d487fc901d235bd01e828a92eaff7fe9c095eadb933d05ba7737",
     "include/game/PropertyData.h": "952ae5ac78dc17e43053a7b905a8e58499a1faa3c7d0721269329f639095b22a",
@@ -3908,7 +3913,11 @@
     "src/sound/ea/SNDI_sin.cpp": "48b77d6d0581a9304aa3f75ad076d39e5e2cafbc067c49354a718c50f88ac555",
     "src/sound/ea/isnd64.cpp": "6b2f195cb4696a2c6c4435d711ed520975d96cbb2363316be54ecf816b8491ab",
     "src/sound/ea/path_createtrack.cpp": "fbae8f31056cdf4a004045ebe80d905d515aa4a196807a266efdd8d72a1119e5",
-    "src/sound/ea/path_overhead.cpp": "87336d2994ad9ecb25b56b47fdc48b1e4e9e8f6bc5d63e51952307b75569b011",
+    "src/sound/ea/path_overhead.cpp": "492148897f70e53f134c1795f8d987b004cceb46e37d226dfaa9fb83e489228e",
+    "src/sound/ea/pathx_create.cpp": "f71dbfad8e7270d45466d318cd84e917e179e60a8b4515259d04c7b983866002",
+    "src/sound/ea/pathx_load.cpp": "b3e9d446fe7a76716cf25414a60decb397d1ffb1b391ec9e4adea795c201f977",
+    "src/sound/ea/pathx_play.cpp": "6ee07cd0c1c8f20a85fc42bbca70899df01695396cc397381359eca82aec442a",
+    "src/sound/ea/pathx_service.cpp": "ada89e1b26ab5b6b11abec7ea14b3b431bcde852ddd3a7ac469cbb6d2b49d631",
     "src/sound/ea/s3dlow.cpp": "2c0c91830f1674e3126e5979e6a705b57ccc5d6be832d11be78e9a710bc70bf7",
     "src/sound/ea/salloc.cpp": "dc89ebffb944e8ca21db6583bb331a078868102f36c0805db9e30904dc4f2439",
     "src/sound/ea/saramman.cpp": "f293b490d7cb9f6a1493d0f06259f2017debc2473c8c55a7bdebd1d88cadd2fd",
@@ -41791,6 +41800,78 @@
       "discarded_functions": [],
       "object_sha256": "e5e1656b7f1ca6d002cf17381d5df3eba783980fc2b3bdc78d87ef022ef574d3",
       "linked_sha256": "a50f203a0c8631110afeb8f9145c1736a84d386b3e1ca283ae22652298b9a8c1"
+    },
+    {
+      "id": "sound_pathx_load",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 476,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "8d2490c0e309f139b2684b0e1405dae5a0a2c7d373d8c71447f5e17f2e2f0c68",
+      "linked_sha256": "f8a41215090c2593f7af18366a83ed4f84e79897a295e786a250fef23d8d80d5"
+    },
+    {
+      "id": "sound_pathx_create",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 532,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "6742b717bd7ddf74ec31a959835feda9084be364771fcedf5d2b55ad6d4871ec",
+      "linked_sha256": "c0384495b7111be89a355bcaa74ea3c3b1643ea9b40c44664bf56b2423824c75"
+    },
+    {
+      "id": "sound_pathx_service",
+      "category": "reconstructed_game",
+      "functions": 6,
+      "code_bytes": 936,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "914c8a9624acd0eabdb488fa3e4a98667b403f24ba85ac4fd46fa3d415816e06",
+      "linked_sha256": "ce5653483ca05c5e2071a87bc0e527540f5c63473c77678c0eb7fee282089f86"
+    },
+    {
+      "id": "sound_pathx_play",
+      "category": "reconstructed_game",
+      "functions": 6,
+      "code_bytes": 984,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "43cfd435c13f1d8d002135feb610eebb13f5edf6d47d0dd69507138a8a100420",
+      "linked_sha256": "a2aa688bddb00adcf97c66b97152d4fb643a982feb25cd6e0733e95406dd0b8c"
     }
   ],
   "code_map": {
@@ -61498,143 +61579,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x801580a4",
-            "size": 52,
-            "kind": "function",
-            "name": "PATHX_igetslot__Fv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801580d8",
-            "size": 224,
-            "kind": "function",
-            "name": "PATHX_iloadbank__FiPcT1",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801581b8",
-            "size": 144,
-            "kind": "function",
-            "name": "PATHX_iloadfile__FPc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80158248",
-            "size": 56,
-            "kind": "function",
-            "name": "PATHX_isynctask__Fii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80158280",
-            "size": 140,
-            "kind": "function",
-            "name": "PATHX_milliseconds",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8015830c",
-            "size": 52,
-            "kind": "function",
-            "name": "PATHX_overheadtrack",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80158340",
-            "size": 340,
-            "kind": "function",
-            "name": "PATHX_createtrack",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80158494",
-            "size": 108,
-            "kind": "function",
-            "name": "PATHX_getvolume",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80158500",
-            "size": 148,
-            "kind": "function",
-            "name": "PATHX_destroytrack",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80158594",
-            "size": 200,
-            "kind": "function",
-            "name": "PATHX_readyfornewrequest",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8015865c",
-            "size": 184,
-            "kind": "function",
-            "name": "PATHX_timeremaining",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80158714",
-            "size": 180,
-            "kind": "function",
-            "name": "PATHX_initservice",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801587c8",
-            "size": 116,
-            "kind": "function",
-            "name": "PATHX_endservice",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8015883c",
             "size": 392,
             "kind": "function",
             "name": "PATHX_status",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801589c4",
-            "size": 244,
-            "kind": "function",
-            "name": "PATHX_queuefile",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80158ab8",
-            "size": 68,
-            "kind": "function",
-            "name": "PATHX_modifyhold",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80158afc",
-            "size": 160,
-            "kind": "function",
-            "name": "PATHX_fade",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80158b9c",
-            "size": 236,
-            "kind": "function",
-            "name": "PATHX_volume",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80158c88",
-            "size": 172,
-            "kind": "function",
-            "name": "PATHX_pause",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80158d34",
-            "size": 104,
-            "kind": "function",
-            "name": "PATHX_stop",
             "evidence": "adjacent-compiler-markers"
           },
           {

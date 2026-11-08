@@ -1,0 +1,65 @@
+{
+  "id": "sound_pathx_create",
+  "source": "src/sound/ea/pathx_create.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80158280",
+      "size": 532
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a9d40",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "PATHX_milliseconds",
+      "address": "0x80158280",
+      "size": 140,
+      "binding": 1
+    },
+    {
+      "name": "PATHX_overheadtrack",
+      "address": "0x8015830c",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "PATHX_createtrack",
+      "address": "0x80158340",
+      "size": 340,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "PATHX_igetslot__Fv": "0x801580a4",
+    "PATHX_iloadbank__FiPcT1": "0x801580d8",
+    "SNDSTRM_create": "0x80220674",
+    "SNDSTRM_overhead": "0x80220b5c",
+    "SNDplaysetdef": "0x8021f44c",
+    "TIMER_gettick": "0x802179f8",
+    "TIMERhz": "0x804512c8",
+    "pathxinfo": "0x803e0cec",
+    "sprintf": "0x80263a3c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sound.cpp",
+  "original_file_index": 1378
+}

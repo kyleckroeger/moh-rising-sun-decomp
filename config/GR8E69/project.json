@@ -1876,7 +1876,11 @@
     "hud_state.json",
     "hud_reset.json",
     "hud_target.json",
-    "weapon_objects.json"
+    "weapon_objects.json",
+    "sound_pathx_load.json",
+    "sound_pathx_create.json",
+    "sound_pathx_service.json",
+    "sound_pathx_play.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

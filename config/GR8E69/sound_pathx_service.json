@@ -1,0 +1,92 @@
+{
+  "id": "sound_pathx_service",
+  "source": "src/sound/ea/pathx_service.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80158494",
+      "size": 936
+    }
+  ],
+  "functions": [
+    {
+      "name": "PATHX_getvolume",
+      "address": "0x80158494",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "PATHX_destroytrack",
+      "address": "0x80158500",
+      "size": 148,
+      "binding": 1
+    },
+    {
+      "name": "PATHX_readyfornewrequest",
+      "address": "0x80158594",
+      "size": 200,
+      "binding": 1
+    },
+    {
+      "name": "PATHX_timeremaining",
+      "address": "0x8015865c",
+      "size": 184,
+      "binding": 1
+    },
+    {
+      "name": "PATHX_initservice",
+      "address": "0x80158714",
+      "size": 180,
+      "binding": 1
+    },
+    {
+      "name": "PATHX_endservice",
+      "address": "0x801587c8",
+      "size": 116,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "MEM_free": "0x8020d2a8",
+    "PATHX_isynctask__Fii": "0x80158248",
+    "REAL_abortmessage": "0x80218268",
+    "SNDCTRL_getprogvol": "0x8021aaa8",
+    "SNDSTRM_destroy": "0x8022069c",
+    "SNDSTRM_getprogvol": "0x80220940",
+    "SNDSTRM_requeststatus": "0x80220c28",
+    "SNDSTRM_status": "0x80220d84",
+    "SNDSYS_add100hzclient": "0x8021a934",
+    "SNDSYS_entercritical": "0x8021f948",
+    "SNDSYS_leavecritical": "0x8021f988",
+    "SNDSYS_remove100hzclient": "0x8021a96c",
+    "SNDbankremove": "0x8021a748",
+    "SNDtimeremaining": "0x80221f68",
+    "SYNCTASK_add": "0x80217ff4",
+    "SYNCTASK_del": "0x802180b8",
+    "pathCleanup": "0x802c4df8",
+    "pathService": "0x802c4df0",
+    "pathTimer": "0x802c4df4",
+    "pathabortmsg": "0x802c4de4",
+    "pathprintf": "0x802c4de8",
+    "pathxinfo": "0x803e0cec",
+    "printf": "0x8026374c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sound.cpp",
+  "original_file_index": 1378
+}

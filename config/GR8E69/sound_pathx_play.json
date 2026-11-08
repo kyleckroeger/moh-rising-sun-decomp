@@ -1,0 +1,85 @@
+{
+  "id": "sound_pathx_play",
+  "source": "src/sound/ea/pathx_play.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801589c4",
+      "size": 984
+    }
+  ],
+  "functions": [
+    {
+      "name": "PATHX_queuefile",
+      "address": "0x801589c4",
+      "size": 244,
+      "binding": 1
+    },
+    {
+      "name": "PATHX_modifyhold",
+      "address": "0x80158ab8",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "PATHX_fade",
+      "address": "0x80158afc",
+      "size": 160,
+      "binding": 1
+    },
+    {
+      "name": "PATHX_volume",
+      "address": "0x80158b9c",
+      "size": 236,
+      "binding": 1
+    },
+    {
+      "name": "PATHX_pause",
+      "address": "0x80158c88",
+      "size": 172,
+      "binding": 1
+    },
+    {
+      "name": "PATHX_stop",
+      "address": "0x80158d34",
+      "size": 104,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDBANK_play": "0x8021a6bc",
+    "SNDCTRL_getprogvol": "0x8021aaa8",
+    "SNDSTRM_autovol": "0x80220894",
+    "SNDSTRM_getprogvol": "0x80220940",
+    "SNDSTRM_modifyhold": "0x80220a04",
+    "SNDSTRM_pitchmult": "0x80220ba0",
+    "SNDSTRM_purge": "0x8022075c",
+    "SNDSTRM_queuefile": "0x80220738",
+    "SNDSTRM_vol": "0x80220e64",
+    "SNDSYS_entercritical": "0x8021f948",
+    "SNDSYS_leavecritical": "0x8021f988",
+    "SNDautovol": "0x802194b0",
+    "SNDpitchmult": "0x8021e924",
+    "SNDstop": "0x80220a5c",
+    "SNDvol": "0x80222804",
+    "pathxinfo": "0x803e0cec"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sound.cpp",
+  "original_file_index": 1378
+}

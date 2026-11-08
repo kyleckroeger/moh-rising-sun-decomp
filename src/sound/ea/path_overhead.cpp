@@ -3,10 +3,10 @@
 // and 16 bytes per node, then taken up to the next multiple of 16. The function
 // name comes from the symbol; the meaning of the sizes is inferred.
 extern "C" {
-int PATHX_overheadtrack(int nodes);
+int PATHX_overheadtrack(int nodes, int streams);
 
-int PATH_overheadtrack(int nodes) {
-    int size = PATHX_overheadtrack(nodes) + 220;
+int PATH_overheadtrack(int nodes, int streams) {
+    int size = PATHX_overheadtrack(nodes, streams) + 220;
 
     size += nodes * 16;
     size += 16 - size % 16;

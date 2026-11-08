@@ -305,3 +305,14 @@ have not been migrated.
 Ownership of some small statics is not verified by the build: `g_thMain`,
 `MEM_allocfailcallback` and the timer statics are declared `extern` as original context,
 like `hlafile`'s statics above, rather than defined in a unit.
+
+The pathx layer (`PATHX_*`) sits inside `sound.cpp`'s sections: its `.rodata` continues
+that file's pool and `pathxinfo` follows `g_objSound` in `.bss`, while its private helpers
+carry C++ mangled names and its public functions C names. Its units use the game's flags,
+without `-fno-strength-reduce`: `PATHX_igetslot` and `PATHX_initservice` have strength-reduced
+loops. A slot is 64 bytes: stream or bank `+0`, sound handle `+4`, stream request `+8`,
+patch `+12`, node count `+16`, requested volume `+20`, saved pitch `+24`, sound flag `+26`,
+name `+27`, bank data `+36`, play settings `+40`. Those offsets are verified; the member names are
+inferred. `PATHX_status` is not reconstructed: it matches, but its `.rodata` run (two doubles
+and a float, 20 bytes) is directly followed by another function's string, so a fragment cannot
+be verified alone.
