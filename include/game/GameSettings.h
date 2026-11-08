@@ -82,7 +82,8 @@ struct CheatsView {
     int infiniteAmmo; // +4; CWeapon::Update refills an empty reserve. Name from Frontline.
     unsigned char unknown_8[0x1c - 8];
     int keepGrenadeSpeed; // +0x1c; name from Frontline.
-    unsigned char unknown_20[0x28 - 0x20];
+    int oneShotKillsEnemies; // +0x20; a soldier's bullet damage becomes 1000. Descriptive.
+    int headShotsOnly;       // +0x24; name from Frontline.
     int oneHitKills; // +0x28; damage becomes 1000 in CExplosion::Visit. Name from Frontline.
     unsigned char unknown_2c[0x34 - 0x2c];
     int allReplayItems;

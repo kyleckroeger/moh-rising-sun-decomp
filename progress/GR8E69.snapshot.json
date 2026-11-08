@@ -1117,6 +1117,7 @@
       "src/scene/SoldierAttachMesh.cpp": "9cc38f1493c3eb00cbee1c042b1ac5f4a74b03756afb89dff025a292bcd81f78",
       "src/scene/SoldierAttachObject.cpp": "ae0e9561debf8c8fc0c3181c0284862fec811489f660d54cb9ef05060e959c0f",
       "src/scene/SoldierBulletEmitter.cpp": "0ba3fa8ab7afa5371e3fdc87acaf67d639c46373ad407754d5c7ed3a7aed05ec",
+      "src/scene/SoldierBulletHit.cpp": "9e0dd9188e7a910f2ecfae783493dac2e89e45ebb6ffb4c6db8bf15632f849af",
       "src/scene/SoldierCleanUp.cpp": "28b0d5d3aa1b436ff916933cc5a63b8e12bfc6aae59409c147cbd6c98967b88d",
       "src/scene/SoldierDestroy.cpp": "d4536faba697530313a673cbe2a7a5b5123f90325e5de7bfa82a627255ad4c23",
       "src/scene/SoldierDetach.cpp": "291c246c0683009a3ded39d97d7606ef2ef32958e42692a6e7d25ef68d984796",
@@ -2313,7 +2314,7 @@
       "include/game/Fog.h": "30a37f01f3f665d1f9b3b0a5ef81ea098194595159c5ff794797541c6bf325c0",
       "include/game/Font.h": "aac3ae3971b2a09911276f89091539c78c3d22be4046eca5d1e65a39c2f82e6b",
       "include/game/Frustum.h": "8b459091729087e5119c39887634fd28825b36e40b7a0efdf9a40c2cf58741fe",
-      "include/game/GameSettings.h": "7bbd20aa30b299fe9f27944664781dc4f618d967c1c8169161f5cb67ad06593d",
+      "include/game/GameSettings.h": "5eb5ccc17567c2a8bebe9c2797c2d866b57b4bc074554c439d2413804e063749",
       "include/game/GrenadeResponse.h": "a26075782a75877dd754799cb73d6fe55e2a6c6597676869bb956ba8cdb2bed4",
       "include/game/HeadsUpDisplay.h": "65c5ba853e8d4d77074ea2381cc5b8ed7991725cf63c1a44011776607680dbc1",
       "include/game/IDestructible.h": "1427a08ba92fefc7fdc63c4ba8fc7aab3ec64bc8d2d1cfb7fe035346b685379f",
@@ -2341,7 +2342,7 @@
       "include/game/PropertyData.h": "952ae5ac78dc17e43053a7b905a8e58499a1faa3c7d0721269329f639095b22a",
       "include/game/Rcmp.h": "9f0b3fe189c690b8ee358797a865f8e6172f48640e9fc998e332061823b08cb2",
       "include/game/SceneNode.h": "0cec8ca3cf3e8302715836d269ca26ed943150907b80ac65b531b866f7e58e2c",
-      "include/game/SceneObjects.h": "c53444874a46defba313c3acc1d4c64f413dd6702b2c3cb1236390874dd4f049",
+      "include/game/SceneObjects.h": "c5eefcff8e420281bd8f6960dfb27a2878f9a30f50616d7f50bf5d2194a63465",
       "include/game/Screen.h": "b4e501afbd3363469c5420dbf4e790d4f0f8a1f98932efc7fee4f7786818cd7c",
       "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
       "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
@@ -3441,7 +3442,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "7595ff321b1a4ee32861dc6450b756e2b0513591ee66c6c81ca8db4160cdbf27",
+      "config/GR8E69/project.json": "1f1badf4e3e2f702d689abea77419eb5c34d86d3248e0d5acea1cd9a8bef44f6",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -3541,6 +3542,7 @@
       "config/GR8E69/scene_SoldierAttachMesh.json": "6592a179174bf6504c68903a4f72163bbad729bcd4a91762901b735cf7235912",
       "config/GR8E69/scene_SoldierAttachObject.json": "33c24fca1806e991a710132cf63e82919443c8bf8e9b7d0055c29e87d7b530e4",
       "config/GR8E69/scene_SoldierBulletEmitter.json": "16053e1d991b9b9f3a8b688dd46b2e906500d3bc2e83a05f58c2c79ee9eaa18a",
+      "config/GR8E69/scene_SoldierBulletHit.json": "8545ca57659c51e17b0c50ddb1887f0dd229f45caa9944aa1691ef3cdf6c1f66",
       "config/GR8E69/scene_SoldierCleanUp.json": "03385d41dd6fd148b6722017e84408167d4d46c66fa6954a73a198340e67ae32",
       "config/GR8E69/scene_SoldierDestroy.json": "ce4a9f42fc79a7d1ec79c57323199fe3ceef76fc09037cff96c225d455a4ebd4",
       "config/GR8E69/scene_SoldierDetach.json": "a699f14bca366462ecf45085189e8684b7143a5dbe8372305d4f4bc2ebbfe503",
@@ -4862,14 +4864,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1043632,
+    "matching_code_bytes": 1046180,
     "total_executable_code_bytes": 2492032,
-    "percent": 41.87875597103087,
+    "percent": 41.98100184909343,
     "categories": {
-      "reconstructed_game": 651416,
+      "reconstructed_game": 653964,
       "restored_library": 392216
     },
-    "matching_functions": 5049
+    "matching_functions": 5050
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -5791,7 +5793,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "7595ff321b1a4ee32861dc6450b756e2b0513591ee66c6c81ca8db4160cdbf27",
+    "config/GR8E69/project.json": "1f1badf4e3e2f702d689abea77419eb5c34d86d3248e0d5acea1cd9a8bef44f6",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -5891,6 +5893,7 @@
     "config/GR8E69/scene_SoldierAttachMesh.json": "6592a179174bf6504c68903a4f72163bbad729bcd4a91762901b735cf7235912",
     "config/GR8E69/scene_SoldierAttachObject.json": "33c24fca1806e991a710132cf63e82919443c8bf8e9b7d0055c29e87d7b530e4",
     "config/GR8E69/scene_SoldierBulletEmitter.json": "16053e1d991b9b9f3a8b688dd46b2e906500d3bc2e83a05f58c2c79ee9eaa18a",
+    "config/GR8E69/scene_SoldierBulletHit.json": "8545ca57659c51e17b0c50ddb1887f0dd229f45caa9944aa1691ef3cdf6c1f66",
     "config/GR8E69/scene_SoldierCleanUp.json": "03385d41dd6fd148b6722017e84408167d4d46c66fa6954a73a198340e67ae32",
     "config/GR8E69/scene_SoldierDestroy.json": "ce4a9f42fc79a7d1ec79c57323199fe3ceef76fc09037cff96c225d455a4ebd4",
     "config/GR8E69/scene_SoldierDetach.json": "a699f14bca366462ecf45085189e8684b7143a5dbe8372305d4f4bc2ebbfe503",
@@ -7118,7 +7121,7 @@
     "include/game/Fog.h": "30a37f01f3f665d1f9b3b0a5ef81ea098194595159c5ff794797541c6bf325c0",
     "include/game/Font.h": "aac3ae3971b2a09911276f89091539c78c3d22be4046eca5d1e65a39c2f82e6b",
     "include/game/Frustum.h": "8b459091729087e5119c39887634fd28825b36e40b7a0efdf9a40c2cf58741fe",
-    "include/game/GameSettings.h": "7bbd20aa30b299fe9f27944664781dc4f618d967c1c8169161f5cb67ad06593d",
+    "include/game/GameSettings.h": "5eb5ccc17567c2a8bebe9c2797c2d866b57b4bc074554c439d2413804e063749",
     "include/game/GrenadeResponse.h": "a26075782a75877dd754799cb73d6fe55e2a6c6597676869bb956ba8cdb2bed4",
     "include/game/HeadsUpDisplay.h": "65c5ba853e8d4d77074ea2381cc5b8ed7991725cf63c1a44011776607680dbc1",
     "include/game/IDestructible.h": "1427a08ba92fefc7fdc63c4ba8fc7aab3ec64bc8d2d1cfb7fe035346b685379f",
@@ -7146,7 +7149,7 @@
     "include/game/PropertyData.h": "952ae5ac78dc17e43053a7b905a8e58499a1faa3c7d0721269329f639095b22a",
     "include/game/Rcmp.h": "9f0b3fe189c690b8ee358797a865f8e6172f48640e9fc998e332061823b08cb2",
     "include/game/SceneNode.h": "0cec8ca3cf3e8302715836d269ca26ed943150907b80ac65b531b866f7e58e2c",
-    "include/game/SceneObjects.h": "c53444874a46defba313c3acc1d4c64f413dd6702b2c3cb1236390874dd4f049",
+    "include/game/SceneObjects.h": "c5eefcff8e420281bd8f6960dfb27a2878f9a30f50616d7f50bf5d2194a63465",
     "include/game/Screen.h": "b4e501afbd3363469c5420dbf4e790d4f0f8a1f98932efc7fee4f7786818cd7c",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
     "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
@@ -8440,6 +8443,7 @@
     "src/scene/SoldierAttachMesh.cpp": "9cc38f1493c3eb00cbee1c042b1ac5f4a74b03756afb89dff025a292bcd81f78",
     "src/scene/SoldierAttachObject.cpp": "ae0e9561debf8c8fc0c3181c0284862fec811489f660d54cb9ef05060e959c0f",
     "src/scene/SoldierBulletEmitter.cpp": "0ba3fa8ab7afa5371e3fdc87acaf67d639c46373ad407754d5c7ed3a7aed05ec",
+    "src/scene/SoldierBulletHit.cpp": "9e0dd9188e7a910f2ecfae783493dac2e89e45ebb6ffb4c6db8bf15632f849af",
     "src/scene/SoldierCleanUp.cpp": "28b0d5d3aa1b436ff916933cc5a63b8e12bfc6aae59409c147cbd6c98967b88d",
     "src/scene/SoldierDestroy.cpp": "d4536faba697530313a673cbe2a7a5b5123f90325e5de7bfa82a627255ad4c23",
     "src/scene/SoldierDetach.cpp": "291c246c0683009a3ded39d97d7606ef2ef32958e42692a6e7d25ef68d984796",
@@ -48917,6 +48921,24 @@
       "discarded_functions": [],
       "object_sha256": "56c6318c8c57eaa8ac3c2ae3052985c988b9f081420186565118ad156134f34d",
       "linked_sha256": "c638ca50e8f1b71ac76049fa3b34317f04ac44c2bf29077c531c8fb8d647c996"
+    },
+    {
+      "id": "scene_SoldierBulletHit",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 2548,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "8a7992b3efdd4a17159ae02e7ac068ba68f665029a030cf4c931790091a0456b",
+      "linked_sha256": "bb36cc8b8c1287cef439f45fbcc28e90ebf4ebccdc4ebffdc05aa9f6e814aaa0"
     }
   ],
   "code_map": {
@@ -59918,13 +59940,6 @@
             "size": 400,
             "kind": "function",
             "name": "Constrain__14CSoldierObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800bed0c",
-            "size": 2548,
-            "kind": "function",
-            "name": "HandleBulletCollision__14CSoldierObjectP7CBulletRC10CCollision",
             "evidence": "adjacent-compiler-markers"
           },
           {

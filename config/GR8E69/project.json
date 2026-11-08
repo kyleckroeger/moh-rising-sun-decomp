@@ -1988,7 +1988,8 @@
     "scene_SoldierOnCollision.json",
     "scene_TankObjectFire.json",
     "ai_AITankChooseTarget.json",
-    "scene_HierObjectSwapOut.json"
+    "scene_HierObjectSwapOut.json",
+    "scene_SoldierBulletHit.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

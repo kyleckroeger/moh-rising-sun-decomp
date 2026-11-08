@@ -449,6 +449,8 @@ class CSoldierObject {
     CStaticObject *DetachObject(char *);
     CStaticMesh *DetachMesh(char *);
     void OnCollision(const CCollision &);
+    void HandleBulletCollision(CBullet *, const CCollision &);
+    int EjectHelmet(CBullet *, const CCollision &);
     void GetBulletEmitterMatrix(CMatrix &);
     int GetAttachPoint(const char *);
     int GetAttachPointMatrix(char *, CMatrix *);
@@ -543,7 +545,9 @@ class CSoldierObject {
     unsigned char localVolumeType2[0x1030 - 0x1010]; // +0x1010
     unsigned char worldVolumeType2[0x1050 - 0x1030]; // +0x1030
     int voiceHandle;        // +0x1050; -12 when no voice is playing.
-    unsigned char unknown_1054[0x1060 - 0x1054];
+    unsigned char unknown_1054[0x1058 - 0x1054];
+    int helmetChance;       // +0x1058; a percentage. Name from Frontline.
+    float helmetDamageScale; // +0x105c; name from Frontline.
     unsigned char fadeStorage[0x1070 - 0x1060]; // +0x1060; a CObjectFadeManager. Extent bounded.
     int weaponsRemoved;     // +0x1070; descriptive.
     int headTrackPlayer;    // +0x1074
@@ -552,7 +556,8 @@ class CSoldierObject {
     CJawController jaw;     // +0x10a8
     unsigned char unknown_10e8[0x10f4 - 0x10e8];
     CWeapon *otherWeapon;   // +0x10f4; destroyed apart from the slot table.
-    unsigned char unknown_10f8[0x1100 - 0x10f8];
+    float hitTimer;         // +0x10f8; name from Frontline.
+    int hitCount;           // +0x10fc; name from Frontline.
     signed char headTransState; // +0x1100
     unsigned char unknown_1101[0x1138 - 0x1101];
     unsigned char aimModifier[0x1148 - 0x1138]; // +0x1138; EALA::Character::AimModifier methods run on it.
