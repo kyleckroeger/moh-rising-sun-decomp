@@ -1904,7 +1904,15 @@
     "sound_path_time.json",
     "sound_path_servicetask.json",
     "sound_path_control.json",
-    "sound_path_ctl.json"
+    "sound_path_ctl.json",
+    "mc_a.json",
+    "mc_h.json",
+    "mc_b.json",
+    "mc_c.json",
+    "mc_d.json",
+    "mc_e.json",
+    "mc_f.json",
+    "mc_g.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

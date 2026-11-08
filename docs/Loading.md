@@ -99,3 +99,9 @@ zeroes each section first, flushes instruction and data caches, and jumps to the
 
 Not reconstructed: `CheckForControllerReset` (function-local statics), the path `LoadModule`, and
 the two compiler-placed destructors, which are declared but emitted far from these units.
+
+## CMemoryCard
+
+`CMemoryCard` (a `EALA::Resource`, with the table pointer at `+4`) loads two localization files at
+construction and creates locale data from each. The small reconstructed accessors read file globals.
+The destructor, `Display` and the rest of the class remain original.

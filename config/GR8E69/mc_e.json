@@ -1,0 +1,64 @@
+{
+  "id": "mc_e",
+  "source": "src/save/mc_e.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a3b58",
+      "size": 48
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetTextDatabase__C11CMemoryCard",
+      "address": "0x801a3b58",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "GetMiscTextDatabase__C11CMemoryCard",
+      "address": "0x801a3b64",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "GetScratchpad__C11CMemoryCard",
+      "address": "0x801a3b70",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "GetScratchpadSize__C11CMemoryCard",
+      "address": "0x801a3b7c",
+      "size": 12,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_pMiscTextDatabase": "0x802c5d60",
+    "g_pScratchpad": "0x802c5d68",
+    "g_pTextDatabase": "0x802c5d5c"
+  },
+  "local_externals": [
+    "g_pScratchpad",
+    "g_pTextDatabase"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "MemoryCard.cpp",
+  "original_file_index": 2083
+}

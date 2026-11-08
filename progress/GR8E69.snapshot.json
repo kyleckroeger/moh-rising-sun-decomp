@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 988388,
+    "matching_code_bytes": 988900,
     "total_executable_code_bytes": 2492032,
-    "percent": 39.661930504905236,
+    "percent": 39.68247598746726,
     "categories": {
-      "reconstructed_game": 596172,
+      "reconstructed_game": 596684,
       "restored_library": 392216
     },
-    "matching_functions": 4900
+    "matching_functions": 4916
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -678,6 +678,14 @@
     "config/GR8E69/matrix_rotations.json": "d9316a52cb8420ec64a5caec9440f9717316a194bcecb7988afc6ef310f6676d",
     "config/GR8E69/matrix_to_euler.json": "0e46e88b7d2f32f74912be15740abd056c3b2d3c6b6d351ba2038794abdf16aa",
     "config/GR8E69/matrix_translation.json": "622a8647279665d8f4caeb887a2966a8719838335416b658bdcb872ddba78fd5",
+    "config/GR8E69/mc_a.json": "aacbd0b11cd7109e5d9866ff72e515203667a753e3b6349470ba4ddb3fc275be",
+    "config/GR8E69/mc_b.json": "fcbc039c2baa79650994398eececcc037e92bf6cbd06d2626c294dd27683acb6",
+    "config/GR8E69/mc_c.json": "fe3977be1fa26fad7c86b3ea4c343bfae473f8a16f6525e34c1bca9942714ba4",
+    "config/GR8E69/mc_d.json": "c77c9bcd6ffb6d2cc662d01b6510cd12192a60dc7f4948c52a9054d183f2de29",
+    "config/GR8E69/mc_e.json": "15859c4721280a839cfba2689b463a45fa4c0c022059241b4cbe29d82d44865a",
+    "config/GR8E69/mc_f.json": "b6365333f1dc1297c28f4aaabd9f9b63a294215b6dc5fb767b66fdb3a442e30d",
+    "config/GR8E69/mc_g.json": "816698e9a4c7b3b3c9a05187f01fb99c16c7ccb916c8b65e2cbd46442a173034",
+    "config/GR8E69/mc_h.json": "b06aa49f3024230543bae090edfc8250f5cc270effd2a85e7ddbb379285184db",
     "config/GR8E69/md5.json": "c8e6e2f4eb9c41f917626bf7924787fa4654c663dd466d4377f67313eee22506",
     "config/GR8E69/memstack_lifecycle.json": "1b733583eefb0f32534fbb7ec55c414a8f61cb7ed1e84f095f839b1054fa0aba",
     "config/GR8E69/mesh_anim.json": "cb64574e1026d550e15df3b0b14aa26ef39854548946f486ae9dd8db9f2f7f58",
@@ -907,7 +915,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "25d47a9c20d187752f525cf024f51135efa701a8b5fd0fcd4b7976c703567571",
+    "config/GR8E69/project.json": "fe20cc62b58bd75290c346058a96d9335c44e47d8d77956a46e034a2a25ac103",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -2188,6 +2196,7 @@
     "include/game/MPWeaponSet.h": "86bcb747bbed525dbf73844a22a156b74e8da90bd482fb541bc707e66cddae2c",
     "include/game/MathFun.h": "d92b6bc49451fbf1b8a55fa0859336cc7b6c7290c687133dda85c3e96d14f5da",
     "include/game/MemStack.h": "e96e48316cab4c90d5f0d26ae33db27bf681687e8f88544d20683150b4bb1606",
+    "include/game/MemoryCard.h": "0ee5f7a90cb880e6e63988b11ff3995598b6c55fb7fc395b06e57b283982f9ee",
     "include/game/MohLoader.h": "9149e28d430ae8e1c9ccab1b19b1b46307c3ac0c50ac5120675eeb2980bd10b4",
     "include/game/ObjCreate.h": "4120fef358b86de9e393703ea5bcb3364230b876f32434ceb371910e141c3f7a",
     "include/game/Objectives.h": "c3f8df7f39a540e1b3d6680d1c0c9d7134deb1d4d596a614e7297e60da55ba99",
@@ -3390,6 +3399,14 @@
     "src/quaternion/get_matrix.cpp": "833c4f1e128f98fd799af7974b65805cd409a2be36d0537e5915f5e23a9b65c2",
     "src/quaternion/normalize.cpp": "6a6d8d3dc0aec56da5bc7e6deea018e478cff41b6aa3ce416ae918e002dcd69b",
     "src/quaternion/slerp.cpp": "5d23dc039a6a7d8246e63aee872ffea35f85911f9e34b3017c97d647bc091bfd",
+    "src/save/mc_a.cpp": "b089cb6e2ac51e1ec63da9e5d5d25e19b2b56a1ea90ecac01e7e3e0f4984de75",
+    "src/save/mc_b.cpp": "0aed402a71dc224e73bba71cffb8b75029260571cd90b6dab5abc7a8ab97bec2",
+    "src/save/mc_c.cpp": "77035ea17ea3af1abd35b32df475ea9279debd24167dfb8e3a2990e9e48258e7",
+    "src/save/mc_d.cpp": "85d9672efc391421681aa0e7eb3c48b895e07c13df405a26a9b0af783ab7c4f9",
+    "src/save/mc_e.cpp": "7350468eef2bdfc314d8e8d18c1bddb3658964c7ae47c002734e6bff9f4e77d7",
+    "src/save/mc_f.cpp": "50e4020433a3cc0f2aa55da4439775e9839dc5eaabf1fadf4801327b6d551d63",
+    "src/save/mc_g.cpp": "fbdf8518cd1505dfbd2e6bb95e482d3ff20b224186411c450923e0b93c109733",
+    "src/save/mc_h.cpp": "745afa13fef0e91e76201a9a7ca47ff119084e10a93888c6a9aa7c3134f32f3b",
     "src/scene/AnimObjFactoryConstructor.cpp": "7c8a885f4433cd8af6efba2b742071f3885f1ecbb454ee2f627910a2dac14a0c",
     "src/scene/AnimObjFactoryRelease.cpp": "1ad8052e8d3c457fc715e1512e952e1d702e532f3b2b2c8fef14f67005750f7a",
     "src/scene/AnimObjFactoryReset.cpp": "02f7ce07d09dcff1319d008e7ab397b366ad1ef531ac4656f30ce0de598a3614",
@@ -42354,6 +42371,150 @@
       "discarded_functions": [],
       "object_sha256": "037aacb89495910fb435dea77214f7676ae4d9aa5137d243c42e144df53af0f1",
       "linked_sha256": "f41d5e7a5056cf776a48eff448ec2f2c4ea9b3891d7cc6960b1806f81479e6c5"
+    },
+    {
+      "id": "mc_a",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 160,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "9eaa96e715153ac9a352ad472bfbceb6ef824a8d6899bfba16c25754509a38a0",
+      "linked_sha256": "793f369030f27244a01cae44683b3310e36b0006e836d03f691346806fd38426"
+    },
+    {
+      "id": "mc_h",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 12,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "2f65f71a5fa6ce3e4a9630db98c44b00c6a3019b2ccb13a796a9ea7d9746d2ab",
+      "linked_sha256": "a0f1c312e4c88682ddf094965f9db5b36d5dceb3f0b03bc0ffafc70408f9f8fb"
+    },
+    {
+      "id": "mc_b",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 4,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "d1c31ca23da0f15914477ea88400b6c491d37b8d2277d34d40196b69a645d4ce",
+      "linked_sha256": "2840fa293b31a50614008b65857363ba7e18bc987922e31ddcd8d9a9ff7abdc2"
+    },
+    {
+      "id": "mc_c",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 104,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "f2d2911f1a876afc24e72b2609a59630ebb22077d2757840ce0732a9faa24152",
+      "linked_sha256": "99a3afaaf9c9186bf17cb026b1eb490ce6e63a0e47bc38344552094d9cedc6f3"
+    },
+    {
+      "id": "mc_d",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 28,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "95d36cb24fffbb67a6b45c5cbe4db02ae8c8accd96ee9ff48cf98bfe1a3f407b",
+      "linked_sha256": "cd675826214278652757a4b6efdd790f2b134a82cf545f6212eb46e0d6d7a2f3"
+    },
+    {
+      "id": "mc_e",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 48,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "204f62fbc729e51796663b9016720055bde48b3cb7e78cedbc7259a30ef22d56",
+      "linked_sha256": "d2590531d1b36b5b9095e529e73ec3e5c706a9ba01bd4723e17d1c723cbcf128"
+    },
+    {
+      "id": "mc_f",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 100,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "4bc25fe939fbad407262511c81fe853079db49a78fdeccfd4097839b81373453",
+      "linked_sha256": "acc37fac8c42d5bb411aabadf7760c6035cd2cc963b281d93a10f9d6693b0f2c"
+    },
+    {
+      "id": "mc_g",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 56,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "c5cd6007f9290a325855f536feb1377b1968f65316ef4a10ddd6a117e376df8a",
+      "linked_sha256": "ef2a7635d99def6092c9c9ea321bc55509c621245f821cf0d6bfd8742fc961c9"
     }
   ],
   "code_map": {
@@ -68831,13 +68992,6 @@
             "evidence": "local-file-symbol"
           },
           {
-            "address": "0x801a3124",
-            "size": 160,
-            "kind": "function",
-            "name": "__11CMemoryCard",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x801a31c4",
             "size": 108,
             "kind": "function",
@@ -68845,24 +68999,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x801a3230",
-            "size": 12,
-            "kind": "function",
-            "name": "IsBusy__C11CMemoryCard",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x801a323c",
             "size": 484,
             "kind": "function",
             "name": "OnStartup__11CMemoryCard",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a3420",
-            "size": 4,
-            "kind": "function",
-            "name": "OnEnterInteractiveMode__11CMemoryCard",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -68887,20 +69027,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x801a3954",
-            "size": 52,
-            "kind": "function",
-            "name": "IssueTRCScan__11CMemoryCardRQ211CMemoryCard8ScanTaskPCQ211CMemoryCard6Device",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a3988",
-            "size": 52,
-            "kind": "function",
-            "name": "CheckTRCScan__11CMemoryCard",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x801a39bc",
             "size": 84,
             "kind": "function",
@@ -68915,52 +69041,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x801a3a98",
-            "size": 16,
-            "kind": "function",
-            "name": "CancelReplyRequest__11CMemoryCard",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a3aa8",
-            "size": 12,
-            "kind": "function",
-            "name": "WaitingForReply__C11CMemoryCard",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x801a3ab4",
             "size": 164,
             "kind": "function",
             "name": "Wait__11CMemoryCard",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a3b58",
-            "size": 12,
-            "kind": "function",
-            "name": "GetTextDatabase__C11CMemoryCard",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a3b64",
-            "size": 12,
-            "kind": "function",
-            "name": "GetMiscTextDatabase__C11CMemoryCard",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a3b70",
-            "size": 12,
-            "kind": "function",
-            "name": "GetScratchpad__C11CMemoryCard",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a3b7c",
-            "size": 12,
-            "kind": "function",
-            "name": "GetScratchpadSize__C11CMemoryCard",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -68971,45 +69055,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x801a3ca0",
-            "size": 32,
-            "kind": "function",
-            "name": "Free__11CMemoryCardPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a3cc0",
-            "size": 32,
-            "kind": "function",
-            "name": "GetDeviceCount__C11CMemoryCard",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a3ce0",
-            "size": 36,
-            "kind": "function",
-            "name": "GetDevice__C11CMemoryCardUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x801a3d04",
             "size": 172,
             "kind": "function",
             "name": "Cache__11CMemoryCardPQ211CMemoryCard6Device",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a3db0",
-            "size": 4,
-            "kind": "function",
-            "name": "TellTheGamecubeToShutUp__11CMemoryCardb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a3db4",
-            "size": 52,
-            "kind": "function",
-            "name": "WasDataWritten__C11CMemoryCard",
             "evidence": "adjacent-compiler-markers"
           }
         ],

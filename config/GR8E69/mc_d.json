@@ -1,0 +1,49 @@
+{
+  "id": "mc_d",
+  "source": "src/save/mc_d.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a3a98",
+      "size": 28
+    }
+  ],
+  "functions": [
+    {
+      "name": "CancelReplyRequest__11CMemoryCard",
+      "address": "0x801a3a98",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "WaitingForReply__C11CMemoryCard",
+      "address": "0x801a3aa8",
+      "size": 12,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_bWaitingForReply": "0x802c5d6c"
+  },
+  "local_externals": [
+    "g_bWaitingForReply"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "MemoryCard.cpp",
+  "original_file_index": 2083
+}
