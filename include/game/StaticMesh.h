@@ -33,7 +33,7 @@ struct StaticMesh {
 
 class CStaticMesh {
 public:
-    CStaticMesh() : mesh(0), lighting(1), fogging(1), animShapes(0), unknown10(-1), unknown14(-1) {}
+    CStaticMesh();
     CStaticMesh(StaticMesh *mesh, bool load);
     void Init();
     void Init(void *mesh, bool load);
@@ -62,6 +62,7 @@ public:
 
 class CStaticAnimMesh : public CStaticMesh {
 public:
+    CStaticAnimMesh() : frames(0), numFrames(0) {}
     void Init(int frameCount, int ticks);
     void Init(int frame, void *mesh, bool load);
     int GetNumFrames() const;
@@ -74,4 +75,7 @@ public:
     int numFrames;       // +0x20
     int ticksPerFrame;   // +0x24
 };
+// Defined after CStaticAnimMesh: that class's inline constructor calls this one out of line in the
+// original, while direct construction inlines it.
+inline CStaticMesh::CStaticMesh() : mesh(0), lighting(1), fogging(1), animShapes(0), unknown10(-1), unknown14(-1) {}
 #endif

@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 997020,
+    "matching_code_bytes": 997520,
     "total_executable_code_bytes": 2492032,
-    "percent": 40.00831449997432,
+    "percent": 40.02837844778879,
     "categories": {
-      "reconstructed_game": 604804,
+      "reconstructed_game": 605304,
       "restored_library": 392216
     },
-    "matching_functions": 4924
+    "matching_functions": 4931
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -916,7 +916,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "57ab666dedd31e6f29ca4ab2f62a903ca202e0f2b8557d0028e0ae40046aa194",
+    "config/GR8E69/project.json": "1c2a7a53f5bb28217ab5fd41d24e460d2d4b7f45f643607040fbff2190c7f8e8",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -941,6 +941,7 @@
     "config/GR8E69/rcmpbase_decoder.json": "f0e7d02835301f05a7293f98aeb871ea4417d91cd4a55b3bb1c06d6536242f0a",
     "config/GR8E69/rcmpbase_frames.json": "56fec82984b72e2691a5734b9f2c899f58b759a77fdbaf3726bf768da94b1a20",
     "config/GR8E69/scene_AnimObjFactoryConstructor.json": "beb4acd60fed40a6b29448a3570117b66a303faa06db9055bf5a291135e2e863",
+    "config/GR8E69/scene_AnimObjFactoryLoaders.json": "69f7b7def6d7e0e4e6e30021635525499f2c9077c3cc34a29e2e5d86b5c189cb",
     "config/GR8E69/scene_AnimObjFactoryRelease.json": "50f6268ac1945950c6610e825a8ca87bee0aba837a50e912bf1e9953ddf16cec",
     "config/GR8E69/scene_AnimObjFactoryReset.json": "f8f158148087c9a55b8d8ed48125111f8afcf668eb6a7f62ce6c610848f0ac57",
     "config/GR8E69/scene_AnimObjectAccess.json": "0f9a1fa701d92f4e3b1396be3b5c06bb6527ee24c437760e2d4da165aded0212",
@@ -2237,7 +2238,7 @@
     "include/game/SoundManager.h": "a82fa61bcff8045c6ba20c986f0501fa1f6326ae2c64097fee51d028af2d3a31",
     "include/game/SoundMixerView.h": "787617bfe14ec7a736949ac46528a91cfe30e6899acd0a9e811d83bf9364059c",
     "include/game/Sphere.h": "4fb7f91c288e5b711e495765718b14847cbb478030509f25cbb7defcbc4a182f",
-    "include/game/StaticMesh.h": "6ef5b7bb904e8466f2dc221962344dbd2695091180d07f6b6c35413cf83c8a54",
+    "include/game/StaticMesh.h": "c032633fd57c73a8daf240c42e655c3e8db477292a81e026f01343d953eac8b1",
     "include/game/StringCRC.h": "3940d0af2ade9e671b10c5bb1ef12705a7322101b231aae92cfd2aab4a07fa31",
     "include/game/StringTable.h": "4249ba9fcf836cdacb806c1fd8e1a93697756e7896c7eb90f222935c6edc2bb4",
     "include/game/TARExtension.h": "895c1de002730e0d0c627a3475a5370287e007f42b34b18a2901ef3465152b59",
@@ -3415,6 +3416,7 @@
     "src/save/mc_g.cpp": "fbdf8518cd1505dfbd2e6bb95e482d3ff20b224186411c450923e0b93c109733",
     "src/save/mc_h.cpp": "745afa13fef0e91e76201a9a7ca47ff119084e10a93888c6a9aa7c3134f32f3b",
     "src/scene/AnimObjFactoryConstructor.cpp": "7c8a885f4433cd8af6efba2b742071f3885f1ecbb454ee2f627910a2dac14a0c",
+    "src/scene/AnimObjFactoryLoaders.cpp": "f9b6e94a774c14277579338ca9f3bec4a379df821271425a464b85ad96026e68",
     "src/scene/AnimObjFactoryRelease.cpp": "1ad8052e8d3c457fc715e1512e952e1d702e532f3b2b2c8fef14f67005750f7a",
     "src/scene/AnimObjFactoryReset.cpp": "02f7ce07d09dcff1319d008e7ab397b366ad1ef531ac4656f30ce0de598a3614",
     "src/scene/AnimObjectAccess.cpp": "8251933c1dc90e1e9d521d3fd184b7e8ec3817565251a66f32c32086d58eff09",
@@ -42636,6 +42638,24 @@
       "discarded_functions": [],
       "object_sha256": "889371a3ceef05df31085108b41700e56696b7c855b9cc725d2aa1e13b80e289",
       "linked_sha256": "b089b92c822bd9b6279c875571d4a5b8e7231b5ce95a9e51aab15c0686cecb3c"
+    },
+    {
+      "id": "scene_AnimObjFactoryLoaders",
+      "category": "reconstructed_game",
+      "functions": 7,
+      "code_bytes": 500,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "a7d32d4f62a91a4521e01d33816f71ad802711e3e3d28b84262f4454b886d880",
+      "linked_sha256": "4cbe3eaf9061698d57ecd0f3ee6ac31ff5583754f470d0525191d59075d3cf9c"
     }
   ],
   "code_map": {
@@ -54734,20 +54754,6 @@
             "kind": "function",
             "name": "AllocateObject__18CAnimObjectFactoryUi12EObjectClass",
             "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800cc6e4",
-            "size": 28,
-            "kind": "function",
-            "name": "AddDynamicLoaderToRelease__18CAnimObjectFactoryPQ24EAGL13DynamicLoader",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800cc700",
-            "size": 104,
-            "kind": "function",
-            "name": "ReleaseDynamicLoaders__18CAnimObjectFactory",
-            "evidence": "adjacent-compiler-markers"
           }
         ],
         "marker_interval": [
@@ -54760,41 +54766,6 @@
         "file_record": 141,
         "file_name": "staticobjfactory.cpp",
         "ranges": [
-          {
-            "address": "0x800cc768",
-            "size": 96,
-            "kind": "function",
-            "name": "InitMesh__14CAnyStaticMeshPvb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800cc7c8",
-            "size": 108,
-            "kind": "function",
-            "name": "InitAnim__14CAnyStaticMeshii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800cc834",
-            "size": 36,
-            "kind": "function",
-            "name": "InitFrame__14CAnyStaticMeshiPvb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800cc858",
-            "size": 64,
-            "kind": "function",
-            "name": "numFrames__C14CAnyStaticMesh",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800cc898",
-            "size": 64,
-            "kind": "function",
-            "name": "ticksPerFrame__C14CAnyStaticMesh",
-            "evidence": "adjacent-compiler-markers"
-          },
           {
             "address": "0x800cc8d8",
             "size": 68,
