@@ -2018,7 +2018,9 @@
     "hud_life.json",
     "scene_AnimObjectOpcode.json",
     "hud_pos.json",
-    "hud_compass.json"
+    "hud_compass.json",
+    "scene_StaticObjectDraw.json",
+    "scene_WorldObjectBorrow.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

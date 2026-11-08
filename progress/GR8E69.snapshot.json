@@ -1162,6 +1162,7 @@
       "src/scene/StaticObjectBullet.cpp": "8d859ad0098713b3d4d7971b9441eefb0800e6ca7c9f42c9d0d5f57b9dbda36e",
       "src/scene/StaticObjectCommit.cpp": "42fe1d30e49414c7147a3e81fe5bd0839fdf993cfa4b377240334a51bc999b7c",
       "src/scene/StaticObjectCommitUpdate.cpp": "a15c1d6d1cc2d9119978f7119facbc25cee138cab7ff00e7410c817014345abd",
+      "src/scene/StaticObjectDraw.cpp": "dea37141ca779b1ccc425f1da05fb5a533d17487a858b2c59d4558aaf90d7aa5",
       "src/scene/StaticObjectHead.cpp": "c0fb66a3a1ff6f5aa09d75a84266915a1350f99a57e71b0543bc3e7e034b0398",
       "src/scene/StaticObjectInit.cpp": "261c714a8f961bcb89a40e8d32bbb2999d08d55fd02043e979aa7e3c0300b8ed",
       "src/scene/StaticObjectMotionAttempt.cpp": "4ff9cd6aaef98c8e928d18de7f796eec080b1796ad110e1eec442e39e73814eb",
@@ -1187,6 +1188,7 @@
       "src/scene/TankObjectSlots.cpp": "cc630019beb483f19ffacf32640fb77e1472210df399189b57ea4d68abc26784",
       "src/scene/TankObjectUpdate.cpp": "3ef052f8a097db2c09166b966002d044e4b7592a8c2df0464afb92dcbe648c95",
       "src/scene/WorldObjectAccess.cpp": "339c610ff164643182e6e57ef381fe617aafa6d06dc90fbec1647b8c65385edf",
+      "src/scene/WorldObjectBorrow.cpp": "995b6309061764a1053270e74642d67f61473771253764d4d5b88e2deb169385",
       "src/scene/WorldObjectCasts.cpp": "13aa2ad4e14f195dac25fdefeacf4eadfaf078a77122d6b6f3879ffb6c6c72b3",
       "src/scene/WorldObjectCompartments.cpp": "b536aa54c3559f94a50841fa2a9f786260c9cd373c98698819de97e8c2c5f216",
       "src/scene/WorldObjectDraw.cpp": "93b5c5fc336b0cdd720869e1c812e753e0bf818a6153032af14765ec5db3842f",
@@ -2374,7 +2376,7 @@
       "include/game/Rcmp.h": "834ed5e660a51a562673ac049b2c39e07ab113426b2bc6002ea385b67fb5e61f",
       "include/game/SceneCollisions.h": "2a1769143eeecf427cad1a013ebf02f6b0d2ee83e011b58e5c62cd141306cd64",
       "include/game/SceneNode.h": "e57802b8a891e60ae5642230d29fea224075a837267cac91413b2a7fae00a560",
-      "include/game/SceneObjects.h": "144d7c7cc31d6715df75cbdc81f25d2a8c5f75e3c062249461681b8d8896fb2a",
+      "include/game/SceneObjects.h": "4aa9faf1353541d50aed771b509f5e3ad0d9469851475738b2916c7c782e0f34",
       "include/game/Screen.h": "86139c54ad8a9fdfa1e0842d665f4cd5699ac216901fab040218e8b7adc2c78a",
       "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
       "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
@@ -2408,7 +2410,7 @@
       "include/game/VideoDriver.h": "dd21c14b75db031804f4dfd4afd30fcaf14e5211ed4c37079e3f6ff3e19ee668",
       "include/game/Volume.h": "cda9e7de972fc28d73bf86418423a8b271c864d60bb53d1eba7d42744622db46",
       "include/game/Weapon.h": "06c961fd954800c1d8766e2d17e71707a250f4de310b30d4c99182c3845d04b9",
-      "include/game/WorldObject.h": "9b5b154c87247d3295950b478724a0abe912e5092504a60bc1ce3c25b313771d",
+      "include/game/WorldObject.h": "8bf6843a362f5e8fe835da2694838943402f9f5013bfb812dcd86ce9915fdde8",
       "include/game/WorldVolume.h": "9acfaf28c317912de14baef7ca50a3d80175ddc31dcf83cea18c80725e688318",
       "include/game-containers/AlgorithmTypes.h": "a4959e24b9ab8edd66054b63ed6d53516aebc500f71f821e27babbf931b8d51a",
       "include/game-containers/ContainerTypes.h": "f6b7f0133646a5eb70ccc5df78ced025919dee88dcd81edc3f565d0b71dd407c",
@@ -3486,7 +3488,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "b3d6e59bdc0b2579dee1314cd39030d26c406cb85a5a84f9eb67d43c53377c76",
+      "config/GR8E69/project.json": "3f3fa3c45c625f778a82a163144252f58ebdd33550b1255afc4d9c5a218367b3",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -3625,6 +3627,7 @@
       "config/GR8E69/scene_StaticObjectBullet.json": "7e66af94a2876ef476cac51feed94583153f7582cd8ca3e47df33e44fc5b9f6b",
       "config/GR8E69/scene_StaticObjectCommit.json": "6e6e445663a0d40cc640f4df2e17647be616b876da71f4469131d75aee7b19bc",
       "config/GR8E69/scene_StaticObjectCommitUpdate.json": "be7af0d31286b5ad337c660a08f1a63006828d33aa43ae2089b3ce8d4f238e20",
+      "config/GR8E69/scene_StaticObjectDraw.json": "9ee8c7ddd82e6975be599fafcf8211bf9e173a62cc5661e58bf5810756f0abf1",
       "config/GR8E69/scene_StaticObjectHead.json": "87f74bca2deaa0b057ba2556d04761151b49b597c28bf84afd1c404f2a8bf10f",
       "config/GR8E69/scene_StaticObjectInit.json": "7d70b52aeb5b03904740d33c60919683f90f5e732ec344edba77a3646c59c11a",
       "config/GR8E69/scene_StaticObjectMotionAttempt.json": "bef8aeb6553ecaa36fc7bec127f30aebe8d2bd69f34614af96859553cee17af3",
@@ -3650,6 +3653,7 @@
       "config/GR8E69/scene_TankObjectSlots.json": "dcf0bb1ec6e2d7849e739993c33c307eb8039f9cf96ea9aff0a96414c801eb5a",
       "config/GR8E69/scene_TankObjectUpdate.json": "09f7e2de1557c8eb5ab28dbc7e9c9a84485a95cbdf2754a32b102dbb58d3dacd",
       "config/GR8E69/scene_WorldObjectAccess.json": "01111fd3cc00232224683840a38964bb6714e6edaec00af525a906cee4d51e6c",
+      "config/GR8E69/scene_WorldObjectBorrow.json": "008adc7195a7ee4605a1d70664222a2ca27f55afa9561082ba54994c06a68857",
       "config/GR8E69/scene_WorldObjectCasts.json": "2a8569cf1c995a02caf0f025ea42aa1d094373904b55037e6e83f5723e0a512e",
       "config/GR8E69/scene_WorldObjectCompartments.json": "c4c0895416df092e4c472f94fc47117272c946531cf9ea81fe24bc10d89efecb",
       "config/GR8E69/scene_WorldObjectDraw.json": "b60226eccd77fe5c9f964d1bc922dbbe1f378f0b0589b85383994dd62b987006",
@@ -4926,14 +4930,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1065608,
+    "matching_code_bytes": 1066936,
     "total_executable_code_bytes": 2492032,
-    "percent": 42.760606605372644,
+    "percent": 42.813896450767885,
     "categories": {
-      "reconstructed_game": 673392,
+      "reconstructed_game": 674720,
       "restored_library": 392216
     },
-    "matching_functions": 5103
+    "matching_functions": 5108
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -5866,7 +5870,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "b3d6e59bdc0b2579dee1314cd39030d26c406cb85a5a84f9eb67d43c53377c76",
+    "config/GR8E69/project.json": "3f3fa3c45c625f778a82a163144252f58ebdd33550b1255afc4d9c5a218367b3",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -6005,6 +6009,7 @@
     "config/GR8E69/scene_StaticObjectBullet.json": "7e66af94a2876ef476cac51feed94583153f7582cd8ca3e47df33e44fc5b9f6b",
     "config/GR8E69/scene_StaticObjectCommit.json": "6e6e445663a0d40cc640f4df2e17647be616b876da71f4469131d75aee7b19bc",
     "config/GR8E69/scene_StaticObjectCommitUpdate.json": "be7af0d31286b5ad337c660a08f1a63006828d33aa43ae2089b3ce8d4f238e20",
+    "config/GR8E69/scene_StaticObjectDraw.json": "9ee8c7ddd82e6975be599fafcf8211bf9e173a62cc5661e58bf5810756f0abf1",
     "config/GR8E69/scene_StaticObjectHead.json": "87f74bca2deaa0b057ba2556d04761151b49b597c28bf84afd1c404f2a8bf10f",
     "config/GR8E69/scene_StaticObjectInit.json": "7d70b52aeb5b03904740d33c60919683f90f5e732ec344edba77a3646c59c11a",
     "config/GR8E69/scene_StaticObjectMotionAttempt.json": "bef8aeb6553ecaa36fc7bec127f30aebe8d2bd69f34614af96859553cee17af3",
@@ -6030,6 +6035,7 @@
     "config/GR8E69/scene_TankObjectSlots.json": "dcf0bb1ec6e2d7849e739993c33c307eb8039f9cf96ea9aff0a96414c801eb5a",
     "config/GR8E69/scene_TankObjectUpdate.json": "09f7e2de1557c8eb5ab28dbc7e9c9a84485a95cbdf2754a32b102dbb58d3dacd",
     "config/GR8E69/scene_WorldObjectAccess.json": "01111fd3cc00232224683840a38964bb6714e6edaec00af525a906cee4d51e6c",
+    "config/GR8E69/scene_WorldObjectBorrow.json": "008adc7195a7ee4605a1d70664222a2ca27f55afa9561082ba54994c06a68857",
     "config/GR8E69/scene_WorldObjectCasts.json": "2a8569cf1c995a02caf0f025ea42aa1d094373904b55037e6e83f5723e0a512e",
     "config/GR8E69/scene_WorldObjectCompartments.json": "c4c0895416df092e4c472f94fc47117272c946531cf9ea81fe24bc10d89efecb",
     "config/GR8E69/scene_WorldObjectDraw.json": "b60226eccd77fe5c9f964d1bc922dbbe1f378f0b0589b85383994dd62b987006",
@@ -7243,7 +7249,7 @@
     "include/game/Rcmp.h": "834ed5e660a51a562673ac049b2c39e07ab113426b2bc6002ea385b67fb5e61f",
     "include/game/SceneCollisions.h": "2a1769143eeecf427cad1a013ebf02f6b0d2ee83e011b58e5c62cd141306cd64",
     "include/game/SceneNode.h": "e57802b8a891e60ae5642230d29fea224075a837267cac91413b2a7fae00a560",
-    "include/game/SceneObjects.h": "144d7c7cc31d6715df75cbdc81f25d2a8c5f75e3c062249461681b8d8896fb2a",
+    "include/game/SceneObjects.h": "4aa9faf1353541d50aed771b509f5e3ad0d9469851475738b2916c7c782e0f34",
     "include/game/Screen.h": "86139c54ad8a9fdfa1e0842d665f4cd5699ac216901fab040218e8b7adc2c78a",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
     "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
@@ -7277,7 +7283,7 @@
     "include/game/VideoDriver.h": "dd21c14b75db031804f4dfd4afd30fcaf14e5211ed4c37079e3f6ff3e19ee668",
     "include/game/Volume.h": "cda9e7de972fc28d73bf86418423a8b271c864d60bb53d1eba7d42744622db46",
     "include/game/Weapon.h": "06c961fd954800c1d8766e2d17e71707a250f4de310b30d4c99182c3845d04b9",
-    "include/game/WorldObject.h": "9b5b154c87247d3295950b478724a0abe912e5092504a60bc1ce3c25b313771d",
+    "include/game/WorldObject.h": "8bf6843a362f5e8fe835da2694838943402f9f5013bfb812dcd86ce9915fdde8",
     "include/game/WorldVolume.h": "9acfaf28c317912de14baef7ca50a3d80175ddc31dcf83cea18c80725e688318",
     "include/game-containers/AlgorithmTypes.h": "a4959e24b9ab8edd66054b63ed6d53516aebc500f71f821e27babbf931b8d51a",
     "include/game-containers/ContainerTypes.h": "f6b7f0133646a5eb70ccc5df78ced025919dee88dcd81edc3f565d0b71dd407c",
@@ -8583,6 +8589,7 @@
     "src/scene/StaticObjectBullet.cpp": "8d859ad0098713b3d4d7971b9441eefb0800e6ca7c9f42c9d0d5f57b9dbda36e",
     "src/scene/StaticObjectCommit.cpp": "42fe1d30e49414c7147a3e81fe5bd0839fdf993cfa4b377240334a51bc999b7c",
     "src/scene/StaticObjectCommitUpdate.cpp": "a15c1d6d1cc2d9119978f7119facbc25cee138cab7ff00e7410c817014345abd",
+    "src/scene/StaticObjectDraw.cpp": "dea37141ca779b1ccc425f1da05fb5a533d17487a858b2c59d4558aaf90d7aa5",
     "src/scene/StaticObjectHead.cpp": "c0fb66a3a1ff6f5aa09d75a84266915a1350f99a57e71b0543bc3e7e034b0398",
     "src/scene/StaticObjectInit.cpp": "261c714a8f961bcb89a40e8d32bbb2999d08d55fd02043e979aa7e3c0300b8ed",
     "src/scene/StaticObjectMotionAttempt.cpp": "4ff9cd6aaef98c8e928d18de7f796eec080b1796ad110e1eec442e39e73814eb",
@@ -8608,6 +8615,7 @@
     "src/scene/TankObjectSlots.cpp": "cc630019beb483f19ffacf32640fb77e1472210df399189b57ea4d68abc26784",
     "src/scene/TankObjectUpdate.cpp": "3ef052f8a097db2c09166b966002d044e4b7592a8c2df0464afb92dcbe648c95",
     "src/scene/WorldObjectAccess.cpp": "339c610ff164643182e6e57ef381fe617aafa6d06dc90fbec1647b8c65385edf",
+    "src/scene/WorldObjectBorrow.cpp": "995b6309061764a1053270e74642d67f61473771253764d4d5b88e2deb169385",
     "src/scene/WorldObjectCasts.cpp": "13aa2ad4e14f195dac25fdefeacf4eadfaf078a77122d6b6f3879ffb6c6c72b3",
     "src/scene/WorldObjectCompartments.cpp": "b536aa54c3559f94a50841fa2a9f786260c9cd373c98698819de97e8c2c5f216",
     "src/scene/WorldObjectDraw.cpp": "93b5c5fc336b0cdd720869e1c812e753e0bf818a6153032af14765ec5db3842f",
@@ -49590,6 +49598,42 @@
       "discarded_functions": [],
       "object_sha256": "e2069325f1512e05c1a3e77ba8499d6f60c509f15e5ab8e3f74ecae4cb945c3e",
       "linked_sha256": "83e8c44b13845f88c9e6a8aafb5c4fe589e383e1196d550fd7a52380e6624b25"
+    },
+    {
+      "id": "scene_StaticObjectDraw",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 1088,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e5145638409c73f2cf1b6de8510ad2b7e61d1ddc2de3b6bfe4e8454df721fd6c",
+      "linked_sha256": "91e29e11a1505bf3c4f6da709c000519179be83d3324edfffad5de07e4a86aca"
+    },
+    {
+      "id": "scene_WorldObjectBorrow",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 240,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "3a768bc9c85a38875f0384feb5dbe980c24019f9d542dcf8f21f13cda06d1974",
+      "linked_sha256": "08c091e70d1758c47dd4838008c26df6d2e9cad61fac92d3c5065b3cc9d9aff7"
     }
   ],
   "code_map": {
@@ -60050,27 +60094,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800a829c",
-            "size": 844,
-            "kind": "function",
-            "name": "Draw__13CStaticObjectR12CDrawContext",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a85e8",
-            "size": 240,
-            "kind": "function",
-            "name": "ExecuteDraw__13CStaticObjectR12CDrawContextPPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800a86d8",
-            "size": 4,
-            "kind": "function",
-            "name": "DrawDebugInfo__13CStaticObjectR12CDrawContext",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800a86dc",
             "size": 1556,
             "kind": "function",
@@ -60809,20 +60832,6 @@
             "size": 388,
             "kind": "function",
             "name": "_._12CWorldObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c48c0",
-            "size": 168,
-            "kind": "function",
-            "name": "Borrow__12CWorldObjectRi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c4968",
-            "size": 72,
-            "kind": "function",
-            "name": "Return__12CWorldObject",
             "evidence": "adjacent-compiler-markers"
           },
           {

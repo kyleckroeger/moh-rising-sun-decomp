@@ -144,6 +144,14 @@ feedback on the owning player's port. Unknown ids format an error message into a
 that nothing reads, and return 0. For the feedback case the binary tests `g_bInMultiplayerMode`
 and `g_bCoopMultiplayer`, yet both paths do the same work; the two-armed source is inferred.
 
+## `CStaticObject` drawing
+
+`CStaticObject::Draw` selects the mesh frame, and in multiplayer a dump object first wraps its
+angle at `+0x288`, doubles its scale and turns about Z. It then queues the mesh's first part in bin
+4 and the second in bin 9, sorted by squared camera distance, both through `ExecuteDraw`, and restores
+frame 0 and the saved model-view pointer. `ExecuteDraw` sets the fade as a global colour scale and
+the light block around `CStaticMesh::DrawMesh`.
+
 ## Parked
 
 These still differ, with instruction differences in brackets; drafts are kept outside the

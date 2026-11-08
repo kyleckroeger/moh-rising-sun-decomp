@@ -135,6 +135,8 @@ class CStaticObject {
     BPDLightVolume *GetLightVolume();
     void MarkForDestruction(int);
     void Draw(CDrawContext &);
+    static void ExecuteDraw(CDrawContext &, void **);
+    void DrawDebugInfo(CDrawContext &);
     void BeginUpdate(float);
     int IsVisible(CDrawContext &) const;
     void AttemptUpdate(float);
