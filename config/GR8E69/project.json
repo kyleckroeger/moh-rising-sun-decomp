@@ -1913,7 +1913,8 @@
     "mc_e.json",
     "mc_f.json",
     "mc_g.json",
-    "scene_ObjCreateGerman.json"
+    "scene_ObjCreateGerman.json",
+    "player_aim_target.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

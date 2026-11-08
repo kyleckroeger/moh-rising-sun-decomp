@@ -115,3 +115,11 @@ its second value at `+0x1090`, `+0x1094` and `+0x1098`, and clears both values f
 camera. Otherwise it writes the yaw as the arctangent of the flattened target direction's side and
 forward components in the camera's flattened axes, and the pitch as the arcsine of the normalized
 target direction against the camera's upward slot.
+
+`AimAdjust::UpdateTarget` builds a 200-unit line along the camera's forward slot. With no subject it
+walks the German list for the soldier nearest the line within 10 units whose AI status variable 0 is
+positive: a soldier on team 2 becomes the subject at once, any other only if no team 2 soldier was
+found. With no target it casts a fiber into the world and aims at the hit point; with a target it
+keeps following the subject until the subject dies or the target leaves the line or strays more than
+20 units. The object begins like an `IObserver`, so the subject link and `AddObserver` use the prefix;
+whether the class really derives from it is unverified.

@@ -277,10 +277,11 @@ class CPlayerObject {
         unsigned char unknown_0[8];
         ObserverLinkBase link;   // +0x08
         unsigned char unknown_10[4];
-        int field_14;            // +0x14
+        ISubject *subject;       // +0x14
         unsigned char unknown_18[0x20 - 0x18];
         CVector3 target;         // +0x20
-        unsigned char unknown_30[0x40 - 0x30];
+        CVector3 lastTarget;     // +0x30
+        bool HasSubject() const { return subject != 0; }
         int field_40;            // +0x40
         int active;              // +0x44
         void Enable();

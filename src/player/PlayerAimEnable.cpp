@@ -6,7 +6,7 @@ void CPlayerObject::AimAdjust::Enable() {
     active = 1;
     int zero = 0;
     link.Unlink();
-    field_14 = zero;
+    subject = (ISubject *)zero;
     field_40 = zero;
     UpdateTarget(g_camera);
 }

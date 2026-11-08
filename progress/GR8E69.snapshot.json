@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 991596,
+    "matching_code_bytes": 993304,
     "total_executable_code_bytes": 2492032,
-    "percent": 39.7906607940829,
+    "percent": 39.859199239817144,
     "categories": {
-      "reconstructed_game": 599380,
+      "reconstructed_game": 601088,
       "restored_library": 392216
     },
-    "matching_functions": 4918
+    "matching_functions": 4919
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -860,6 +860,7 @@
     "config/GR8E69/player_actions.json": "f8b21144b77884abcbd744111a4da60e5e48c0be3ea095252c97245100ec9f61",
     "config/GR8E69/player_add_weapon.json": "a22ba06a1e23037c6a68cffa71e64db840a2e3268e6149588f28b5ad1e626b15",
     "config/GR8E69/player_aim_enable.json": "f90d3168c27f1a1ef57a45d9860689f66e06499cfdd3101d31ef355ff16a1dab",
+    "config/GR8E69/player_aim_target.json": "1971c8eb27e32c76084e915341d21cd8019f08805e4af71e63e108fe0f419310",
     "config/GR8E69/player_aim_update.json": "86052f85c54364bcc4ec9ea959487d14671e8087e80f1d4bd32f2ec82f6683ad",
     "config/GR8E69/player_ammo_counts.json": "a257652b0c26775b4bd139ee3e2ce70525ac451a83048ae2ac4ed4d307b1f9a6",
     "config/GR8E69/player_axes.json": "72bcde7af411244adbde7a5c16a0c663dd22a3b863f1f0852c2e1f5fc9e00fb2",
@@ -915,7 +916,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "e717d5d5f15698b2262f6f312189bbde73e62688702fe13fc206ba9b1c861d3b",
+    "config/GR8E69/project.json": "7ebce636744721db572a21a969c3dfc719e9b0a649715b2e6ff05b143cc518e5",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -2120,7 +2121,7 @@
     "include/game/CSGVolume.h": "4e1b74888a25e46d47449afbc3081c2474e8104e59cfd1ee11c1e5e6b440cb23",
     "include/game/CVector3.h": "0c436c62dba8e3a7f44ca5e6eea6de50ff97e88e4e53545873d5ecca9d648aae",
     "include/game/Camera.h": "c039c4dd37763c5f7980f02f7c88577d9a70f75ff7d329378d64e4c731a12b69",
-    "include/game/CameraShake.h": "7bb6a33dca01032d543a218b27bd7dbac4eb06804fa487afe61549d9922ba73a",
+    "include/game/CameraShake.h": "a540d94e4211b84f09d4a371405ad6443fbd094ba3810845c68cdb2699913786",
     "include/game/Capsule.h": "332dd06329ac7dc3ac5fc01793549a41e2defbe70298018accd2ce79c9e3ce3b",
     "include/game/CharacterShadow.h": "048ae3efc6fd6d3119f4c234f5bacd499c748c55b1573df386f686411e93a67a",
     "include/game/CollisionVolume.h": "26ba5d9a9865a0185f0e87db21b13faf3214b7e213201e825181412f0f9a5b7c",
@@ -3353,7 +3354,8 @@
     "src/player/PlayerActions.cpp": "3fd44978113787e34f3c7fe59e4649d2b84e8f8ff85159fddc9dd17f7ac0b43f",
     "src/player/PlayerAddWeapon.cpp": "adedc4761a7f2746275d352665109e4bc301879c1d3f457083753101933679fd",
     "src/player/PlayerAimAdjustUpdate.cpp": "7bfdf59f8314847ebb426bcf9a0d76265b8dcfd807730ee6ab16b3ecc6db46fc",
-    "src/player/PlayerAimEnable.cpp": "ef343ff1f3d6d22fb69f1ed0982b0224662973d1819c88bb43c1601b720603d5",
+    "src/player/PlayerAimEnable.cpp": "33a73009996917293b34591c2a270413f560f739c724e59567b853a216ff1e65",
+    "src/player/PlayerAimTarget.cpp": "fa8de3f1bec2e97f9b1f927ee3f2de428c2168a79f0733ae6dddbc418ded4309",
     "src/player/PlayerAmmoCounts.cpp": "c2b881a01b860b99bbcb3a3e08d41fd208a524426093e86b414ff884781c8741",
     "src/player/PlayerAxes.cpp": "ab935de6f53f1944e03d689f1d70172f689691ed062aa8593437bcc8c68bfa5e",
     "src/player/PlayerBounds.cpp": "709a78df73517398a553c2a2417de2fa457bd9d8b030505ded28e83bae738891",
@@ -42535,6 +42537,24 @@
       "discarded_functions": [],
       "object_sha256": "fd8438aab4a6845859a5f5a138d43405f3f46e12a986cc7e77f8d19506ab19b1",
       "linked_sha256": "89b26e99f43aa2b8a975436af080cd803929e3c7c395e643f4bac698b29f9a5d"
+    },
+    {
+      "id": "player_aim_target",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 1708,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "392eebe5e160bc926ac9b9e75ccb57c5995751fe35e4355ad2098b73856563f4",
+      "linked_sha256": "d990ff2b651c22e8a28499cc9e5113fb4b93cbdccfbbfe80650d8605dc2a7ad4"
     }
   ],
   "code_map": {
@@ -53482,13 +53502,6 @@
             "size": 1080,
             "kind": "function",
             "name": "EjectMountedMGShell__13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b7eb0",
-            "size": 1708,
-            "kind": "function",
-            "name": "UpdateTarget__Q213CPlayerObject9AimAdjustRC7CCamera",
             "evidence": "adjacent-compiler-markers"
           },
           {
