@@ -1969,7 +1969,9 @@
     "mesh_vis.json",
     "mesh_light.json",
     "sound_spat2hdr.json",
-    "ea_locatbig_locate.json"
+    "ea_locatbig_locate.json",
+    "static_stop.json",
+    "rcmp_alloc.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

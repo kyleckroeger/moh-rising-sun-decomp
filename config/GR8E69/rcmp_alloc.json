@@ -1,0 +1,49 @@
+{
+  "id": "rcmp_alloc",
+  "source": "src/shell/rcmp_alloc.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a1488",
+      "size": 92
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b617c",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "RCMPAlloc__FPCciiii",
+      "address": "0x801a1488",
+      "size": 92,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_allocalign": "0x801a8744",
+    "s_iMemClass": "0x803e8a30"
+  },
+  "local_externals": [
+    "s_iMemClass"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "rcmpplayer.cpp",
+  "original_file_index": 2067
+}

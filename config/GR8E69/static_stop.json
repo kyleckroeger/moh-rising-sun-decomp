@@ -1,0 +1,40 @@
+{
+  "id": "static_stop",
+  "source": "src/shell/static_stop.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a12d0",
+      "size": 96
+    }
+  ],
+  "functions": [
+    {
+      "name": "StopLoading__13CStaticScreen",
+      "address": "0x801a12d0",
+      "size": 96,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_._7CSprite": "0x8005d1f4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "StaticScreen.cpp",
+  "original_file_index": 2065
+}

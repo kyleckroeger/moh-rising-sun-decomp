@@ -1589,6 +1589,8 @@
       "src/script/update_player_stats.cpp": "d9d8f84d4feeb1cc8644074b322bd259f7a65199312f765410b2297db00424b7",
       "src/script/use_binoculars.cpp": "3ab897eb9f47912d8c49df7f82f4b7a2d91baa056756f1b876b6755de43fbca5",
       "src/script/validation_build.cpp": "89251f21f21080d27633ad20ea624b1a8702565a91ab36e5f809b6e5e0ae4255",
+      "src/shell/rcmp_alloc.cpp": "a7c4fd5e35bc1a95d47c4f85b55e5bb6c3b54fff65a813dd7bd2ae4150828f62",
+      "src/shell/static_stop.cpp": "4e0f45cbe22baf974c621e4d2147515a09781c89af3a03e63f31231b92badd01",
       "src/sound/AmbientTrack.cpp": "806bc651699acac158151883251a45c29078a06e4fd195081a3d1d7443a56e52",
       "src/sound/AmbientTrackLocation.cpp": "933b8b3e8cf005a72f8374effa77b8128854c80a1ad55a34b724e440a079ee4e",
       "src/sound/PositionSoundEmitterCopy.cpp": "0fc0f433641f62ec5c339de9a82691fdc664584d55014c0a5bff9e89fc5cd2b8",
@@ -3414,7 +3416,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "326e81c5a6b8b70c12cc4d2ce90a25d26a47485b28c750410f16f00b9048e13e",
+      "config/GR8E69/project.json": "cbc580643c017344991c4e8deb461fc42718409841d6751a46deadd9dfac22d1",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -3436,6 +3438,7 @@
       "config/GR8E69/quaternion_get_matrix.json": "c63fc72dbed2a9d3c604effaada46ecb10afde2020eaadd56e4e7f8ccf114e82",
       "config/GR8E69/quaternion_normalize.json": "d78a8760467d1cff8299eecd55985b34b9908086e277c7814083cb4c65a64fc4",
       "config/GR8E69/quaternion_slerp.json": "1a0f13b162d329331ef995f603d989e695af05bdda0fce3a52b322131c771a16",
+      "config/GR8E69/rcmp_alloc.json": "ba1fb7ef80c20d7eb2a66422a20e1ac2a1de1b1d56680e16a89868783cbafd28",
       "config/GR8E69/rcmpbase_decoder.json": "f0e7d02835301f05a7293f98aeb871ea4417d91cd4a55b3bb1c06d6536242f0a",
       "config/GR8E69/rcmpbase_frames.json": "56fec82984b72e2691a5734b9f2c899f58b759a77fdbaf3726bf768da94b1a20",
       "config/GR8E69/rtc_a.json": "58b96c5751d8582fbe56c80a3b59f768803066e64cb987a784672bc856542275",
@@ -4203,6 +4206,7 @@
       "config/GR8E69/sphere_test_triangle.json": "2a5b8b5ff0e5f0df68069a329e049772042260412a2df8ba5c38283994312972",
       "config/GR8E69/sphere_transformed_copy.json": "025056d6c715db1dad3375b20a1d22067222ae98559bf34ae18cab52a59c09b6",
       "config/GR8E69/sprite_ctor.json": "1a13712a334e19091b8830494644f9b9914e0eed3d8e53ca030cdd8e2f9058dd",
+      "config/GR8E69/static_stop.json": "7894f1fbe7527f0976602d84a2bd1fa89d74914ebf5494dc59363614849c0310",
       "config/GR8E69/stl_80278d64.json": "04dc314cda8644a93aa797638a2f5a3e946a7bc954506e9bb2be731800b7646a",
       "config/GR8E69/stl_80278ea0.json": "784844808dbfcbe4c0b2a360cdd8a5cd6c1115260192d1fa5e52d4a7ae8c4ebf",
       "config/GR8E69/stl_80278eec.json": "e32e4cdf075141acad3a5566b3d28a9cdd34b5cdb5c67b8da65fb91eb6effd05",
@@ -4824,14 +4828,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1036376,
+    "matching_code_bytes": 1036564,
     "total_executable_code_bytes": 2492032,
-    "percent": 41.58758796034722,
+    "percent": 41.595132004725464,
     "categories": {
-      "reconstructed_game": 644160,
+      "reconstructed_game": 644348,
       "restored_library": 392216
     },
-    "matching_functions": 5022
+    "matching_functions": 5024
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -5745,7 +5749,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "326e81c5a6b8b70c12cc4d2ce90a25d26a47485b28c750410f16f00b9048e13e",
+    "config/GR8E69/project.json": "cbc580643c017344991c4e8deb461fc42718409841d6751a46deadd9dfac22d1",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -5767,6 +5771,7 @@
     "config/GR8E69/quaternion_get_matrix.json": "c63fc72dbed2a9d3c604effaada46ecb10afde2020eaadd56e4e7f8ccf114e82",
     "config/GR8E69/quaternion_normalize.json": "d78a8760467d1cff8299eecd55985b34b9908086e277c7814083cb4c65a64fc4",
     "config/GR8E69/quaternion_slerp.json": "1a0f13b162d329331ef995f603d989e695af05bdda0fce3a52b322131c771a16",
+    "config/GR8E69/rcmp_alloc.json": "ba1fb7ef80c20d7eb2a66422a20e1ac2a1de1b1d56680e16a89868783cbafd28",
     "config/GR8E69/rcmpbase_decoder.json": "f0e7d02835301f05a7293f98aeb871ea4417d91cd4a55b3bb1c06d6536242f0a",
     "config/GR8E69/rcmpbase_frames.json": "56fec82984b72e2691a5734b9f2c899f58b759a77fdbaf3726bf768da94b1a20",
     "config/GR8E69/rtc_a.json": "58b96c5751d8582fbe56c80a3b59f768803066e64cb987a784672bc856542275",
@@ -6534,6 +6539,7 @@
     "config/GR8E69/sphere_test_triangle.json": "2a5b8b5ff0e5f0df68069a329e049772042260412a2df8ba5c38283994312972",
     "config/GR8E69/sphere_transformed_copy.json": "025056d6c715db1dad3375b20a1d22067222ae98559bf34ae18cab52a59c09b6",
     "config/GR8E69/sprite_ctor.json": "1a13712a334e19091b8830494644f9b9914e0eed3d8e53ca030cdd8e2f9058dd",
+    "config/GR8E69/static_stop.json": "7894f1fbe7527f0976602d84a2bd1fa89d74914ebf5494dc59363614849c0310",
     "config/GR8E69/stl_80278d64.json": "04dc314cda8644a93aa797638a2f5a3e946a7bc954506e9bb2be731800b7646a",
     "config/GR8E69/stl_80278ea0.json": "784844808dbfcbe4c0b2a360cdd8a5cd6c1115260192d1fa5e52d4a7ae8c4ebf",
     "config/GR8E69/stl_80278eec.json": "e32e4cdf075141acad3a5566b3d28a9cdd34b5cdb5c67b8da65fb91eb6effd05",
@@ -8855,6 +8861,8 @@
     "src/script/update_player_stats.cpp": "d9d8f84d4feeb1cc8644074b322bd259f7a65199312f765410b2297db00424b7",
     "src/script/use_binoculars.cpp": "3ab897eb9f47912d8c49df7f82f4b7a2d91baa056756f1b876b6755de43fbca5",
     "src/script/validation_build.cpp": "89251f21f21080d27633ad20ea624b1a8702565a91ab36e5f809b6e5e0ae4255",
+    "src/shell/rcmp_alloc.cpp": "a7c4fd5e35bc1a95d47c4f85b55e5bb6c3b54fff65a813dd7bd2ae4150828f62",
+    "src/shell/static_stop.cpp": "4e0f45cbe22baf974c621e4d2147515a09781c89af3a03e63f31231b92badd01",
     "src/sound/AmbientTrack.cpp": "806bc651699acac158151883251a45c29078a06e4fd195081a3d1d7443a56e52",
     "src/sound/AmbientTrackLocation.cpp": "933b8b3e8cf005a72f8374effa77b8128854c80a1ad55a34b724e440a079ee4e",
     "src/sound/PositionSoundEmitterCopy.cpp": "0fc0f433641f62ec5c339de9a82691fdc664584d55014c0a5bff9e89fc5cd2b8",
@@ -48497,6 +48505,42 @@
       "discarded_functions": [],
       "object_sha256": "7439e82c2501f2bf2e2cd9123d95d87a960dc716e31c7f7408f5223578f845e5",
       "linked_sha256": "8700ba5299ef75ab37ef11d7b1b8e9ef95a858737fa3265eca40a4078481e61f"
+    },
+    {
+      "id": "static_stop",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 96,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "18b4ee089d624b8cb2353f6f56a949f901bf04efb2c3b15c93bc8e681a95dad1",
+      "linked_sha256": "59a54bedc2ed282aa9520d2def27391486a996170417ddc197b6ddf2962494bb"
+    },
+    {
+      "id": "rcmp_alloc",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 92,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e5b08c8ccd534d86fb09f5d59e2db9ca5b310f6494ebb09afe60c6ab426206c0",
+      "linked_sha256": "aa234b577adb95368f77e0053f900f2f31621bf479b28b8d3a943a1e762c1ce2"
     }
   ],
   "code_map": {
@@ -74127,13 +74171,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x801a12d0",
-            "size": 96,
-            "kind": "function",
-            "name": "StopLoading__13CStaticScreen",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x801a1330",
             "size": 344,
             "kind": "function",
@@ -74151,13 +74188,6 @@
         "file_record": 316,
         "file_name": "rcmpplayer.cpp",
         "ranges": [
-          {
-            "address": "0x801a1488",
-            "size": 92,
-            "kind": "function",
-            "name": "RCMPAlloc__FPCciiii",
-            "evidence": "adjacent-compiler-markers"
-          },
           {
             "address": "0x801a14e4",
             "size": 64,
