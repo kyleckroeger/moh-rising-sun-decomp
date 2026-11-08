@@ -211,3 +211,8 @@ The batch preserves all 906 previously accepted unit records and the complete
 rebuilt analysis-image identity. Runtime and emulator behavior remain untested.
 Pitch/roll/yaw and the matrix/plane transform experiments still have compiler
 output differences and remain ignored research without source credit.
+
+`InitClass`, `ShutdownClass`, `BeginUpdate`, `AttemptUpdate`, `CommitUpdate`, `Draw`,
+`IsDrawEnabled` and `IsVisible` are also reconstructed. `AttemptUpdate` writes position
+components into the `+8` float of the objects held at `+0x20`..`+0x2c`; that slot's purpose
+is not established.

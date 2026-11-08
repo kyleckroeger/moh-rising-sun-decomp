@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 936588,
+    "matching_code_bytes": 937024,
     "total_executable_code_bytes": 2492032,
-    "percent": 37.5833055113257,
+    "percent": 37.60080127381992,
     "categories": {
-      "reconstructed_game": 544372,
+      "reconstructed_game": 544808,
       "restored_library": 392216
     },
-    "matching_functions": 4618
+    "matching_functions": 4621
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -224,8 +224,10 @@
     "config/GR8E69/bullet_init.json": "bf9f537106149fe36a192a3325a02f4c23f021aa546ce2e1e8e0d575f49bd138",
     "config/GR8E69/bullet_sprites_load.json": "6b4635fe9ca5e44f7d26477a301a555d28347d421c2d1439450fcec5d8991d23",
     "config/GR8E69/bullet_weight.json": "8e9dc78b617a4a1a87d96c2fad4d56ca589721c92b9db77836a23509d599c05c",
+    "config/GR8E69/camera_attempt.json": "913c0516d85095b8ac74f1972d91436e5928e1bd890ae109a6816dd6b103c40f",
     "config/GR8E69/camera_axes.json": "28db4af00ca57a333100571e7bdfb74c71c39d8c090ffdd46b5b38e2fb2e4ea2",
     "config/GR8E69/camera_begin.json": "b988ee872733455c96a121cdfba8f21cbd410006057c436428ff9c018fb1e7c3",
+    "config/GR8E69/camera_class.json": "6ec8b57948b256f41eb4b8724d7960727438bad6a56efe4c8dd87c0de811783d",
     "config/GR8E69/camera_commit.json": "4aceeef39d5f1e75f3bf0a35f992aaca0078eb10ab817e20cec3f13ebe187807",
     "config/GR8E69/camera_get_transform.json": "e718b74015c98fc9aa58fe5d2c6de29f40aac11d0ae8d291ca3afe1964bb03b4",
     "config/GR8E69/camera_projection.json": "40155878dbb04c59b1fe9f848d4f00f68d57b05e4d6d50c2213504b4358ab7be",
@@ -853,7 +855,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "29b7bca38318aaad6e6f2bdf8fd0464aa4617e16b7cd2b549524c3e91f95f232",
+    "config/GR8E69/project.json": "1a1b5260560562688fa83d5339f7ac82fe67cd74155c933d0b08087652a03b5d",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -2384,7 +2386,9 @@
     "src/bullets/ThrownSetters.cpp": "53bd8f3d5543f02d514a21a46422d909dc36d86b9f9058bef0b5e99b6b703dd4",
     "src/bullets/ThrownUpdate.cpp": "aff8c3d144bdda27777aaa768f13c97ff87c9afb4e194eb191ab3bd942839a4c",
     "src/camera/axes.cpp": "5f01c8b680d40e8507f99181b64e824f3fd5f74911193154807716a91603286a",
+    "src/camera/camera_attempt.cpp": "ec48bbce4df6ed15b2befbfa4c0ea8598855d4866123ece8268cc5b3394cec48",
     "src/camera/camera_begin.cpp": "c9abdc74721c4613675b5075e1023f328b2b1a7d5d9ca228971cba9b33119a7c",
+    "src/camera/camera_class.cpp": "36e772e50f627a50b211f40af20414ce2bed180950e327e51e1770b1e54a3ab3",
     "src/camera/camera_commit.cpp": "c301e742c236e2656c66233368d4eda3a36d33d1335916a7a8c342a23370bd91",
     "src/camera/camera_visible.cpp": "a22cb50bf6ac6a829a9ff2ea24894e09f0fbe104e67d4edb0de88853a17f13d9",
     "src/camera/frustum_transform.cpp": "4bbe254e923e4c48c9b4468450fa8c93986141f00f98758a32be9071c57a9d7f",
@@ -39903,6 +39907,42 @@
       "discarded_functions": [],
       "object_sha256": "159b71f9ed7d95a5b5cad634fbb97a48a77d7fdfd76e24773d6742bfe9ccf73d",
       "linked_sha256": "9eacf95c9c3af06f0f6e8db7ed5d24637a93941e52881cc9d72569a3fbc4256f"
+    },
+    {
+      "id": "camera_class",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 144,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "12feb8646d66b48e6d1f0919b89c07ba66f4ba2ab24cff78e3c87d5c0d9b16b8",
+      "linked_sha256": "df8bab1ae6834f3a8b121643d24c97295cb65786fda04f8e72b8860522989967"
+    },
+    {
+      "id": "camera_attempt",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 292,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "5206a87da726717658c1b676b1fa993f1cbc1d515c69c4696fc039e8ffac72e7",
+      "linked_sha256": "04050898a8fb47638706f076188bfdc0e0e4488fbc8405aca7f4183fa1061df0"
     }
   ],
   "code_map": {
@@ -58400,27 +58440,6 @@
             "size": 136,
             "kind": "function",
             "name": "_._7CCamera",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012bc04",
-            "size": 80,
-            "kind": "function",
-            "name": "InitClass__7CCamera",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012bc54",
-            "size": 64,
-            "kind": "function",
-            "name": "ShutdownClass__7CCamera",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012bc98",
-            "size": 292,
-            "kind": "function",
-            "name": "AttemptUpdate__7CCameraf",
             "evidence": "adjacent-compiler-markers"
           },
           {

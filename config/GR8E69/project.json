@@ -1783,7 +1783,9 @@
     "cover_flags.json",
     "cover_query.json",
     "cover_occupy.json",
-    "cover_invalidate.json"
+    "cover_invalidate.json",
+    "camera_class.json",
+    "camera_attempt.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
