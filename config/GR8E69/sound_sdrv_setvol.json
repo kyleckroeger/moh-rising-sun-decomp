@@ -1,0 +1,49 @@
+{
+  "id": "sound_sdrv_setvol",
+  "source": "src/sound/ea/sdrv_setvol.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8021d32c",
+      "size": 440
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bf800",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDPLATFORM_setvol__Fi",
+      "address": "0x8021d32c",
+      "size": 440,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDDRV_DSPMixerSetVol__FP6_AXVPBi": "0x80223c94",
+    "SNDMIX_setdrygain": "0x80226264",
+    "snddrv": "0x80410c40",
+    "sndgs": "0x804108fc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "snddrv.c",
+  "original_file_index": 3064
+}

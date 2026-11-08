@@ -1,0 +1,49 @@
+{
+  "id": "sound_sdrv_setpitch",
+  "source": "src/sound/ea/sdrv_setpitch.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8021db38",
+      "size": 344
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bf830",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDPLATFORM_setpitch__Fi",
+      "address": "0x8021db38",
+      "size": 344,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AXSetVoiceSrcRatio": "0x802314cc",
+    "MIXsetpitchfn": "0x8041ee18",
+    "snddrv": "0x80410c40",
+    "sndgs": "0x804108fc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "snddrv.c",
+  "original_file_index": 3064
+}

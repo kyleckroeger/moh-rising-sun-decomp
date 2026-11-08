@@ -326,3 +326,9 @@ inferred. Not reconstructed here: `PATHI_sortprojects` (the struct-swap loop's a
 are hoisted differently), `PATHI_eventstart` and `PATH_addmapfile` (their structure is right but
 their registers are allocated differently), and `PATH_createtrackfrombuf` and `PATH_event` (drafts
 that have not reached a match).
+
+The MicroTalk unpackers (`supmutf.c`, `supmutlf.c`, `supmutpf.c`) drive `Snd::CMTBLKDecf`, a 3,432-byte
+decoder. A state record has its decoder at `+40` (`supmutf.c`), `+28` (`supmutlf.c`) or `+52` (`supmutpf.c`);
+`Snd::MTFSTATE` is a 12-byte record whose `+8` word is set to 1 on a restart. Those offsets are verified;
+the member names are inferred. The driver's per-channel record is 64 bytes with its AX voice at `+60`.
+`SNDPLATFORM_setpitch` scales the voice's rate by `+138` of the voice record.

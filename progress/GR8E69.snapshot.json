@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1002420,
+    "matching_code_bytes": 1004912,
     "total_executable_code_bytes": 2492032,
-    "percent": 40.22500513637064,
+    "percent": 40.32500385227798,
     "categories": {
-      "reconstructed_game": 610204,
+      "reconstructed_game": 612696,
       "restored_library": 392216
     },
-    "matching_functions": 4949
+    "matching_functions": 4961
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -918,7 +918,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "b65493eb3ebe7cded068a1a51a44681136cb95021db517f42ccf52f9c5f5980b",
+    "config/GR8E69/project.json": "9234ea51abb1d48200c98175aa9ae16b2b170033b82528c74c8edca9e5d56c18",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -1555,6 +1555,8 @@
     "config/GR8E69/sound_sdrv_prestore.json": "302e126ebde19a0971895bab6662452c913a7cac1e8be8b35319727a69719f62",
     "config/GR8E69/sound_sdrv_range.json": "172d7d9bd2d4f086aaed38cf0f2cddd373e6aa944ce763f2707f342c3dc3d8b0",
     "config/GR8E69/sound_sdrv_samplechan.json": "587d10245387f1ededc2cd0e4ce54da724b2942dad50285a892391bd15e870a5",
+    "config/GR8E69/sound_sdrv_setpitch.json": "b94c215406481bcdac2c1452b69d7f89879dc8eb791e35eec2c846f2b07953e2",
+    "config/GR8E69/sound_sdrv_setvol.json": "8466c04416c264f61ce6d8b8c0b145029b4b65e57c378a086f65c228fcb6d815",
     "config/GR8E69/sound_sdrv_stop.json": "b5ccfe53371adbe562ffc3c31d01f4c46e10dfd3a9b65e862dbd32c27b3309d0",
     "config/GR8E69/sound_sdrv_timemult.json": "3181118142a52590ba5cef7ee9aa4b65fcdfb337c426ae6ae29a578d87ccd957",
     "config/GR8E69/sound_sdrv_vrange.json": "6c64f58c468a37ed14dfb0d3eaa72e25f3c70f1413d11d3fbda933e83e8a5373",
@@ -1654,7 +1656,9 @@
     "config/GR8E69/sound_stretch.json": "70b099f075e73db324a71327d87672b875373a403db72a1274d02eed7a329c28",
     "config/GR8E69/sound_supf.json": "86839a34c64e7a96d21a8fce18b99fb495af513059d377a324a8189ed85c211a",
     "config/GR8E69/sound_suplf.json": "1275a5fd54404d2235f43088614fff47c7cb0ec9e31d9a4d7ed4d145c155a37e",
-    "config/GR8E69/sound_supmutf.json": "e8fe078e7c6a922ff5744c697db6ad113ae882fc0eac0d26f979a7c4d27da8d7",
+    "config/GR8E69/sound_supmutf.json": "a75c181f64266c8357b744d8d0d1500168b943bb1f5b23487bd3cfebc7cb6300",
+    "config/GR8E69/sound_supmutlf.json": "2e3d2e9c76242a79d4f7467708cacd9d49eea1ca8c88bee693c7a25e239feb0c",
+    "config/GR8E69/sound_supmutpf.json": "8e52cdcd1c4dc8c29e00363098c694eae3e06a87ca0812dfc2c2557ae5b64f80",
     "config/GR8E69/sound_suppf.json": "cb4a211f52240ff521eb4b91bf224e92729feec43292d877f24ca31ce0b443a5",
     "config/GR8E69/sound_supxaf.json": "11ec148801e2438261c70b33ff8bc5bb51f08d818fa1f3eca8061376f33ce210",
     "config/GR8E69/sound_supxalf.json": "467f45302d763e659a3e5131b71e523f1681cafe0de93356333e98470b2576eb",
@@ -4041,6 +4045,8 @@
     "src/sound/ea/sdrv_prestore.cpp": "a7bac5c9a7e071fe3d6b41850470a20ee1a854e5c7e4494342ef91af5f033b3b",
     "src/sound/ea/sdrv_range.cpp": "b90bb61e472893453a04dc53a8eb3c3917a1187202866ddc8c391415ba58a8c5",
     "src/sound/ea/sdrv_samplechan.cpp": "9fe424a94520188efb7e1bc52780d23fad2271fdc10f537359cb13c78430e1fc",
+    "src/sound/ea/sdrv_setpitch.cpp": "21a589010dd3717c60fe4f06de0b42a5bd3de67cb84afa2725e094cbe17d8055",
+    "src/sound/ea/sdrv_setvol.cpp": "b70fb4ff595b07080cb0db6d1407efcd7a6e6dfa3df4430df8201ecaf19e8392",
     "src/sound/ea/sdrv_stop.cpp": "593db79f332bf509ba74fa59fa8221a5665fbf1377de7e8da6c1aa991cbaaddd",
     "src/sound/ea/sdrv_timemult.cpp": "d73f211c42ccba7cc0c63ff56079a0cac256c74e14180df7925d3685fc6d18cb",
     "src/sound/ea/sdrv_vrange.cpp": "01a9ba925252cd9460885ede8f248e15a2b9ab58c0e9edeffe49d4f94b443693",
@@ -4140,7 +4146,9 @@
     "src/sound/ea/stretch.cpp": "a3fa126b7a3209b34b0c970234e64619897895a1ebba0fa6dac0aee8b06be877",
     "src/sound/ea/supf.cpp": "b2a0bb3e826b53d0315d56952dcffd06ba844982a073d14375eacfcdbcc504fa",
     "src/sound/ea/suplf.cpp": "968c578e1fe244e626ed85f129f90f8a320521a20c77ef34cb9e2a01d8330337",
-    "src/sound/ea/supmutf.cpp": "9f7531ef7f69fcdb32675630060b111ee711949f76c736c37141e51cc41728df",
+    "src/sound/ea/supmutf.cpp": "9de2c9fc2ef9c8ce835618f490b20d1ed2323052eff1e52866cc581467c8a5cb",
+    "src/sound/ea/supmutlf.cpp": "7bff9d8a8bc92bf56187cc8a8657a60c75a6b45327581ca22d547468c663ab72",
+    "src/sound/ea/supmutpf.cpp": "79b2cf32996f70457a0c54c5e6f87ddb8419a15166ac016297e28b0c672b8bed",
     "src/sound/ea/suppf.cpp": "555d9dc6d44b64a09523bfd5561bcb62a76f859a6ac3b4686e9d78853180d3b1",
     "src/sound/ea/supxaf.cpp": "1b1831045aab3ae330000ce66ea1b65d01a3d8acfd5dc07635cfd2bf876a37db",
     "src/sound/ea/supxalf.cpp": "2c9177a2f77ad8e67de00e7d112c981ea0b29e8073204541759b743c01c9d0eb",
@@ -38074,8 +38082,8 @@
     {
       "id": "sound_supmutf",
       "category": "reconstructed_game",
-      "functions": 1,
-      "code_bytes": 8,
+      "functions": 4,
+      "code_bytes": 452,
       "compiler_family": "ProDG",
       "compiler_version": "3.8.1",
       "compiler_flags": [
@@ -38087,8 +38095,8 @@
       ],
       "strip_unused": false,
       "discarded_functions": [],
-      "object_sha256": "cf8d35f90ee8e5d6e01b2f91d9e639934a42b4592cf680989d49176e93cdc269",
-      "linked_sha256": "512c281ee66e7ff8034b479363f35c5930e978d8c6adee273e361110eb8a9267"
+      "object_sha256": "de13d2fe298625bc2e8a73c9227abcdd23cd16d39a37067edb2a4058c1031918",
+      "linked_sha256": "e7488257459f7e44539afe7d3a18c6dabf67457d5de4170449bb49308a99974c"
     },
     {
       "id": "sound_spktplay",
@@ -42857,6 +42865,82 @@
       "discarded_functions": [],
       "object_sha256": "b5ac611440e6faf24f986368c0c783a73a6dbba875b1f3c5a63415fe3691076b",
       "linked_sha256": "d044dcfa9e97d321e78788c69392068f874e28de56329497083cd34ce78e2e0b"
+    },
+    {
+      "id": "sound_supmutlf",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 476,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "d9d6e0a3e8b98ce22ae90f5ff6ef5d4ba46dfdf90de0b04f1b69f1b7c2427e50",
+      "linked_sha256": "b071ba89cdb6356fc5808a21817f2540342f039b4166b9ce5bd05d4550ca0e1f"
+    },
+    {
+      "id": "sound_supmutpf",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 788,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "0a2c87a26bf6e21ecc9b17057739dd160031de99ae984aba1bfec531ca654189",
+      "linked_sha256": "c25587665b215fa0f738090de91bff3f74870646f17b8ce72716ab2cfb95808e"
+    },
+    {
+      "id": "sound_sdrv_setpitch",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 344,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "5cb1a99bb814d535de359a6df35d4092062e0e042c604c6c121e35ea66ab7abf",
+      "linked_sha256": "2db77fdc5a6b64530a5f5b33c0b1db7bc63be28b2daaa3ab8b37bad03e3f9a3b"
+    },
+    {
+      "id": "sound_sdrv_setvol",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 440,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "6a74278ce7552fe03eef32c4fb21610fb4dcfcb2716e233ba30e48282c27c747",
+      "linked_sha256": "02e8ef396fe3663472269430652d2646ad090f9cb764099f51f796add2b982c7"
     }
   ],
   "code_map": {
@@ -76476,24 +76560,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8021d32c",
-            "size": 440,
-            "kind": "function",
-            "name": "SNDPLATFORM_setvol__Fi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8021d4e4",
             "size": 1620,
             "kind": "function",
             "name": "SNDPLATFORM_set3dpos__Fi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8021db38",
-            "size": 344,
-            "kind": "function",
-            "name": "SNDPLATFORM_setpitch__Fi",
             "evidence": "adjacent-compiler-markers"
           }
         ],
@@ -77257,109 +77327,6 @@
         "marker_interval": [
           "0x80228c68",
           "0x80228fa4"
-        ]
-      },
-      {
-        "name": "Unmatched files/supmutf.c [inferred file group]",
-        "file_record": 662,
-        "file_name": "supmutf.c",
-        "ranges": [
-          {
-            "address": "0x80229650",
-            "size": 144,
-            "kind": "function",
-            "name": "SFILTER_unpackmtf__FPviT0T0i",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x802296e0",
-            "size": 44,
-            "kind": "function",
-            "name": "SFILTER_unpackmtfrestore__FPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8022970c",
-            "size": 256,
-            "kind": "function",
-            "name": "SFILTER_unpackmtfinit__FPvP16UNPACKINITPARAMS",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x80229648",
-          "0x8022980c"
-        ]
-      },
-      {
-        "name": "Unmatched files/supmutlf.c [inferred file group]",
-        "file_record": 663,
-        "file_name": "supmutlf.c",
-        "ranges": [
-          {
-            "address": "0x8022980c",
-            "size": 8,
-            "kind": "function",
-            "name": "SFILTER_unpackgetframemtlf__FPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80229814",
-            "size": 200,
-            "kind": "function",
-            "name": "SFILTER_unpackmtlf__FPviT0T0i",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x802298dc",
-            "size": 44,
-            "kind": "function",
-            "name": "SFILTER_unpackmtlfrestore__FPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80229908",
-            "size": 224,
-            "kind": "function",
-            "name": "SFILTER_unpackmtlfinit__FPvP16UNPACKINITPARAMS",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x8022980c",
-          "0x802299e8"
-        ]
-      },
-      {
-        "name": "Unmatched files/supmutpf.c [inferred file group]",
-        "file_record": 664,
-        "file_name": "supmutpf.c",
-        "ranges": [
-          {
-            "address": "0x802299e8",
-            "size": 600,
-            "kind": "function",
-            "name": "SFILTER_unpackmtpf__FPviT0T0i",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80229c40",
-            "size": 44,
-            "kind": "function",
-            "name": "SFILTER_unpackmtpfrestore__FPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80229c6c",
-            "size": 144,
-            "kind": "function",
-            "name": "SFILTER_unpackmtpfinit__FPvP16UNPACKINITPARAMS",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x802299e8",
-          "0x80229cfc"
         ]
       },
       {

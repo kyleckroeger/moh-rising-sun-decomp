@@ -1929,7 +1929,11 @@
     "scene_StaticFactoryHelmet.json",
     "ea_stream_queuemem.json",
     "rtc_a.json",
-    "rtc_b.json"
+    "rtc_b.json",
+    "sound_supmutlf.json",
+    "sound_supmutpf.json",
+    "sound_sdrv_setpitch.json",
+    "sound_sdrv_setvol.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
