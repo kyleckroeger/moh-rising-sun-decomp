@@ -102,5 +102,7 @@
     "sprintf": "0x80263a3c"
   },
   "discarded_functions": [],
-  "undefined_in_discarded_code": []
+  "undefined_in_discarded_code": [],
+  "original_file": "anim_obj.cpp",
+  "original_file_index": 831
 }

@@ -40,5 +40,7 @@
     "SetOpcodeHandler__Q34EALA9Character13ChoreographerPQ44EALA9Character6Opcode7Handler": "0x80080f74"
   },
   "discarded_functions": [],
-  "undefined_in_discarded_code": []
+  "undefined_in_discarded_code": [],
+  "original_file": "anim_obj.cpp",
+  "original_file_index": 831
 }
