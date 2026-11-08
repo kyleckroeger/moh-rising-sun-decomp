@@ -1,6 +1,7 @@
 // AI-assisted reconstruction from GR8E69; see docs/Weapons.md.
 #include "Weapon.h"
 #include "AIBehavior.h"
+#include "Toilet.h"
 class CDrawContext;
 struct BSGO_Basic;
 void DestroyBSObject(BSObject *);
@@ -10,16 +11,10 @@ class CBulletFactory {
     void *GetBulletSprite(bool, int);
 };
 extern CBulletFactory *g_pBulletFactory;
-enum TLTResourceID { TLTResourceUnknown = 0 };
-struct LevelFileContentsStruct_;
-// Observed chain from a level resource to the behaviour CRC; names are descriptive.
-struct WeaponAIBehaviorRecord { int unknown_0, unknown_4; int behaviorCRC; };
-struct WeaponAIEntry { int unknown_0, unknown_4, unknown_8; WeaponAIBehaviorRecord *behavior; };
-struct TLTResource { int unknown_0, unknown_4; WeaponAIEntry *entry; };
-TLTResource *TLT_FindNextResourceByTypeAndVal(TLTResourceID, int, int, LevelFileContentsStruct_ *);
 void CWeapon::RegisterWithAI() {
     if (script) {
-        int behaviorCRC = TLT_FindNextResourceByTypeAndVal((TLTResourceID)20, 1, crc, 0)->entry->behavior->behaviorCRC;
+        // Record 3 of the resource found for this weapon holds the behaviour CRC.
+        int behaviorCRC = TLT_FindNextResourceByTypeAndVal((TLTResourceID)20, 1, crc, 0)->data[3]->value;
         CAIObject *ai = ((ISceneNode *)holder->AsSoldierObject())->GetAIObject();
         ((CPistolBehavior *)ai->FindMatchingBehaviorByCRC(behaviorCRC))->SetWeaponScript(script);
     }

@@ -1938,7 +1938,10 @@
     "player_commit.json",
     "sound_snddrv_serve.json",
     "sound_sdrv_packetplay.json",
-    "sound_sserver_100hz.json"
+    "sound_sserver_100hz.json",
+    "scene_exclude.json",
+    "scene_include.json",
+    "scene_closest.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

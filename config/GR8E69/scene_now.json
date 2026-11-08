@@ -18,11 +18,23 @@
   "sections": [
     {
       "name": ".text",
-      "address": "0x80147120",
-      "size": 36
+      "address": "0x80146f30",
+      "size": 1920
     }
   ],
   "functions": [
+    {
+      "name": "AddPlayer_now__6CSceneRQ26CScene11SModCommand",
+      "address": "0x80146f30",
+      "size": 208,
+      "binding": 1
+    },
+    {
+      "name": "SetWorld_now__6CSceneRQ26CScene11SModCommand",
+      "address": "0x80147000",
+      "size": 288,
+      "binding": 1
+    },
     {
       "name": "SetCamera_now__6CSceneRQ26CScene11SModCommand",
       "address": "0x80147120",
@@ -34,11 +46,25 @@
       "address": "0x8014712c",
       "size": 24,
       "binding": 1
+    },
+    {
+      "name": "AddNode_now__6CSceneRQ26CScene11SModCommand",
+      "address": "0x80147144",
+      "size": 544,
+      "binding": 1
+    },
+    {
+      "name": "RemoveNode_now__6CSceneRQ26CScene11SModCommand",
+      "address": "0x80147364",
+      "size": 844,
+      "binding": 1
     }
   ],
-  "externals": {},
+  "externals": {
+    "AddNodeExtents__6CSceneR10ISceneNode": "0x80148a44",
+    "IsNodeInScene__C6CScenePC10ISceneNode": "0x8014ac34",
+    "RemoveNodeExtents__6CSceneR10ISceneNode": "0x80148c18"
+  },
   "discarded_functions": [],
-  "undefined_in_discarded_code": [],
-  "original_file": "scene.cpp",
-  "original_file_index": 1338
+  "undefined_in_discarded_code": []
 }

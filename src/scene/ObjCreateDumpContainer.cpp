@@ -3,14 +3,10 @@
 #include "SceneObjects.h"
 #include "ScriptTimers.h"
 #include "ObjCreate.h"
+#include "Toilet.h"
 #include <string.h>
 
 extern "C" void *DWI_alloc(const char *, int, int);
-struct LevelFileContentsStruct_;
-enum TLTResourceID { TLTResourceUnknown = 0 };
-// Only the chain to the dump-object count is established.
-struct TLTResource;
-TLTResource *TLT_FindNextResourceByType(TLTResourceID, LevelFileContentsStruct_ *);
 
 CDumpObjectContainer::CDumpObjectContainer() {
     first = last = 0;
@@ -25,8 +21,8 @@ CDumpObjectContainer::~CDumpObjectContainer() {
 
 void CDumpObjectContainer::Reset() {
     if (!objects) {
-        TLTResource *resource = TLT_FindNextResourceByType((TLTResourceID)27, 0);
-        capacity = *(int *)(*(char **)(*(char **)((char *)resource + 8) + 232) + 8);
+        LevelFileContentsStruct_ *resource = TLT_FindNextResourceByType((TLTResourceID)27, 0);
+        capacity = resource->data[58]->value;
         if (!capacity)
             capacity = 25;
         objects = (DumpObject *)DWI_alloc("source/ai_script/objcreate.cpp:190", capacity * sizeof(DumpObject), 1024);

@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1013568,
+    "matching_code_bytes": 1016572,
     "total_executable_code_bytes": 2492032,
-    "percent": 40.67235091684216,
+    "percent": 40.792895115311524,
     "categories": {
-      "reconstructed_game": 621352,
+      "reconstructed_game": 624356,
       "restored_library": 392216
     },
-    "matching_functions": 4968
+    "matching_functions": 4975
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -919,7 +919,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "cbce83c5c228b5f462ff136112b449cc140c83a117970b9ecb3aa662fd7da02e",
+    "config/GR8E69/project.json": "63bb2e890e06218f24dff09d64a9afc104c99c840cbf3666a1aab98045685e0d",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -1058,8 +1058,11 @@
     "config/GR8E69/scene_WorldObjectCompartments.json": "c4c0895416df092e4c472f94fc47117272c946531cf9ea81fe24bc10d89efecb",
     "config/GR8E69/scene_WorldObjectDraw.json": "b60226eccd77fe5c9f964d1bc922dbbe1f378f0b0589b85383994dd62b987006",
     "config/GR8E69/scene_WorldObjectFiles.json": "f6658b04cd14d70654d7f448f3a37c57207a406bfa72e4d0146dfcbb410bb092",
+    "config/GR8E69/scene_closest.json": "748a3e9d498f8f5efd1e720342f26df51f8b14e7975f86941ab6e16e71ba9726",
     "config/GR8E69/scene_commands.json": "0ace24af0e29023a9814a064cbd5a9970833aa5f331c46d0c86419c23c536989",
+    "config/GR8E69/scene_exclude.json": "52de59c386ad7d999170eb8791f6ee9796bd73738ad6c3c832069b15a5042736",
     "config/GR8E69/scene_exclusion.json": "22d7aeaeabdf5931671f6e49663c26d2ec05addeaf4bbcd53e5d42c6b57ef589",
+    "config/GR8E69/scene_include.json": "c394b319e87cc231fc38c4469124fb70b362d1d8475c87cb0be6946a874b2e00",
     "config/GR8E69/scene_lock.json": "83e20e2b0f820bc05fedd8a3ce97eba655ab399484a99dddad031a62f43b6cd6",
     "config/GR8E69/scene_node_axis_defaults.json": "092b0d540e402069c588985246b692817db1af99a9d9c2cde0f3b1bfac31d590",
     "config/GR8E69/scene_node_centroid.json": "417789c5857125f62e4595e59f3e52ed74ac434de058b0123549164ceef3cd8b",
@@ -1067,7 +1070,7 @@
     "config/GR8E69/scene_node_query_defaults.json": "49dcc91b41c1ead357a570e138a6aef5abc92e715734bea17b62f13ae24701fd",
     "config/GR8E69/scene_node_update_defaults.json": "4729c9d7a5544381dce61e3c9d13eb325a9518aff6cae14ac7a11d879b867066",
     "config/GR8E69/scene_node_vector_defaults.json": "a63f78ad807c0da81f8582ebc3ef10a5d0e7cf9f0b292fbaf119f45308e762cc",
-    "config/GR8E69/scene_now.json": "2890e05f1e64efa4771e2f1556aa679f5b649365aa4bbe894b31a15a220f0f2f",
+    "config/GR8E69/scene_now.json": "9bf4212d331c5649d55dfb828a4cb2fecd7e009ff6342a8c10f96bef69fa8de5",
     "config/GR8E69/scene_query.json": "c8cf41c1492c1ce5b16f2344f12e7e6074679e506209f66cb884114394862016",
     "config/GR8E69/scene_reorder.json": "32d0b4a692d90dce4c48f2a76f0cd30125e69d5b78c820921101948ae5e8b2d6",
     "config/GR8E69/scene_shutdown.json": "a1364fca272f96ac3ba531dc4bb30b449c6ec3827a43f75a6f24dd4b497919e0",
@@ -2236,7 +2239,7 @@
     "include/game/PopUpMessage.h": "3ba712308420d487fc901d235bd01e828a92eaff7fe9c095eadb933d05ba7737",
     "include/game/PropertyData.h": "952ae5ac78dc17e43053a7b905a8e58499a1faa3c7d0721269329f639095b22a",
     "include/game/Rcmp.h": "9f0b3fe189c690b8ee358797a865f8e6172f48640e9fc998e332061823b08cb2",
-    "include/game/SceneNode.h": "40a259452061449ceea65f58648fc29241bb00478413744071b736513d776c89",
+    "include/game/SceneNode.h": "0cec8ca3cf3e8302715836d269ca26ed943150907b80ac65b531b866f7e58e2c",
     "include/game/SceneObjects.h": "3e4e53e71c3b4349893ca2e0784407251ba188c555cc406cc7dcc77cfea53a1e",
     "include/game/Screen.h": "b4e501afbd3363469c5420dbf4e790d4f0f8a1f98932efc7fee4f7786818cd7c",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
@@ -3487,9 +3490,9 @@
     "src/scene/ObjCreateBSGO.cpp": "20f10c7480d588104a808d67af4b16c1380dd9edfa656569c933062963aeab51",
     "src/scene/ObjCreateBSGODestroy.cpp": "db20f1b22e47c910031b73d90d13b336fd2859730a62de4877b87518555fdee9",
     "src/scene/ObjCreateBoxVolume.cpp": "1fc7d37f463ae683bc22001d134f5153c37e787d21f3f7bf87133fd7c4af1125",
-    "src/scene/ObjCreateCreators.cpp": "623abfd1f4ead0e55024afba125da53df9ab494f3d2aa60b7880b9a6ee6235fd",
+    "src/scene/ObjCreateCreators.cpp": "0eb02d782a483a7ebf88f31374d531ff75bbfd4e64f4582a621c870d7c861cb5",
     "src/scene/ObjCreateDelayDestroy.cpp": "4c2c65f0109b558997f02c93ed8e4c31d601df2366c532ac05c3ac553e1832ac",
-    "src/scene/ObjCreateDumpContainer.cpp": "4f61e18ee943350301763d0c3d16a4913570ab5bf9ff4afddc141fb5b30085fd",
+    "src/scene/ObjCreateDumpContainer.cpp": "54e335c72ad4c58bd856341baa70358b4e53643d4b8f8f9b13094d7d7c5ceba3",
     "src/scene/ObjCreateDumpObject.cpp": "f304afb72af5e79f09fd0404dda364b243cc5dbd1019bf33700ea060812ee3a4",
     "src/scene/ObjCreateDumpObjects.cpp": "a88d6d783b15d26a441e3a4430826bb0f9c08764e36e98920c80cf271dad72ba",
     "src/scene/ObjCreateGerman.cpp": "b1336be3d6b227a6828de91e1a3ffb1bd3efcc615e4a014cbc91bf2352dc133d",
@@ -3564,10 +3567,13 @@
     "src/scene/WorldObjectFiles.cpp": "541e2ec32260ae57af0464c96909d9797473cc6440af92aa7b1965e745fa88a0",
     "src/scene/jaw_controller_ctor.cpp": "d925c4b536ea558fe6c261c9a3f83d4dc65bb6cd3e396224e2ef8e3ef23b2920",
     "src/scene/jaw_controller_motiontype.cpp": "509a33964954db2b09fd38a2c55eecd16285fed2fc2e66d5383ad2b7f9aa71ee",
+    "src/scene/scene_closest.cpp": "03ef03ad17c343e6811960dbd6e6686f2d13a13c799b43f889498fbda9925f06",
     "src/scene/scene_commands.cpp": "a8687c5bba909fd093a2bba7fd5210f16447c38eb0806dee508bdcd6aa2345c8",
+    "src/scene/scene_exclude.cpp": "ec3416ff5587166195db97214b32ab992bd2830bec6d55b68d49075b257951d0",
     "src/scene/scene_exclusion.cpp": "7237b55d019afcfb3adc1502b89ae88227f77be74583b8f75514908f2da98765",
+    "src/scene/scene_include.cpp": "3b7687d33b6d613937410efd73b27268f1df42b83629b7690ec0fb8bc29be368",
     "src/scene/scene_lock.cpp": "d1534b596ca427eac0b94e7689cc710fc1dc4bf22161523987d052c133b52d50",
-    "src/scene/scene_now.cpp": "d73133c40d4c1eded243898711eafd99af2c55c86223b07af6c812456789b891",
+    "src/scene/scene_now.cpp": "c2fa15d58a01defb7cfff2b9b051237a5c735965500a915d6332a7964f054cd4",
     "src/scene/scene_query.cpp": "9ac00d297ad3317e2a935be6140df494ce0774217ea82b785df4ad90a74a2ade",
     "src/scene/scene_reorder.cpp": "d90adcac6e548f272a46a60c24b9b7dcc833d7103e0a19416b4d9806e648805a",
     "src/scene/scene_shutdown.cpp": "96640e25bdea448fd5f2b9d69a333f360c88ad068e49af8a465b0716b7af2c97",
@@ -4417,7 +4423,7 @@
     "src/weapons/ThrownCleanUp.cpp": "b49b4a4a35c1a052308b07dc8594fbd27c9a5762303918fe5119cafd26492333",
     "src/weapons/ThrownMotion.cpp": "b06aa879f26f5fa7be63bcb7ffdc6c0f83bd850a6b0263449ed83a5ad8604d95",
     "src/weapons/WeaponAccessors.cpp": "e76e4dd25e13db388266ca0617cdc5b1b743db308480430a3f61450775c8f4ec",
-    "src/weapons/WeaponAmmo.cpp": "f5d191daf71c30021c99f4842df3978ad0e5d33543a4e3a6d9808fdfac9ffec8",
+    "src/weapons/WeaponAmmo.cpp": "1776be7737d0bb76c0edab89787c327da34d89f3c3875e30694b347d5cafa96d",
     "src/weapons/WeaponFactoryCreate.cpp": "5a986e6f2b800209ac99fb538fc7334125ff406332cfa3fcc87badd20d10a0b7",
     "src/weapons/WeaponFactoryCtor.cpp": "5de5cfa7c00fd54d85f3e567575a26734a5e6e771610a972cfc5955c5487505e",
     "src/weapons/WeaponFactoryDestroy.cpp": "8a2d2063531792d31dab47336f2b5f6eba49de46b3b22c2a1e32f0e532fc603b",
@@ -39646,8 +39652,8 @@
     {
       "id": "scene_now",
       "category": "reconstructed_game",
-      "functions": 2,
-      "code_bytes": 36,
+      "functions": 6,
+      "code_bytes": 1920,
       "compiler_family": "ProDG",
       "compiler_version": "3.8.1",
       "compiler_flags": [
@@ -39658,8 +39664,8 @@
       ],
       "strip_unused": false,
       "discarded_functions": [],
-      "object_sha256": "9e44538adf93040f59950faa7f8e5b41f983265d25b055454fba1ee6e1ac5873",
-      "linked_sha256": "4537d397d2eb8f95bc33824a9251f09d4c41dd5db61d59e2c94336b389929354"
+      "object_sha256": "4167ee9cc28a819b1c765fbea39d68bea4dc1e1fc644a36b07c15a84445424fc",
+      "linked_sha256": "54a6f9dd113b9d44f3e684ea511108c53f910c5fee74574c15f3edffaffc47f7"
     },
     {
       "id": "scene_lock",
@@ -42985,8 +42991,8 @@
       ],
       "strip_unused": false,
       "discarded_functions": [],
-      "object_sha256": "682b95db1ccc0ea8df0cf25952aab409f46e9cc1f9c427465f205f1c72300557",
-      "linked_sha256": "769975229ac39fc175e3b0275ddbe2cb41088178ea5a8ebe3b6bc363f796b295"
+      "object_sha256": "ee44481b194e8786a09127b9ea6d40c19f3fd4db4caff3b8bd8d0ad377ad89e4",
+      "linked_sha256": "57c5198c19cd80ea4238bbe07943cd39525f63f0275252b8d3d4d6129ddfc5a7"
     },
     {
       "id": "sound_snddrv_serve",
@@ -43044,6 +43050,60 @@
       "discarded_functions": [],
       "object_sha256": "acdac33879892161423a3527c698e5cce4cb96cd2753e3627b3d2729c25e2926",
       "linked_sha256": "420de7eb09b927df4428f6c7350ada8f3fd361037aceb45cdb41a773e804ceef"
+    },
+    {
+      "id": "scene_exclude",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 636,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "70e6d777d26c9d669de98e20d4fe95b7644fd0220641bfad2853a66ea623a68a",
+      "linked_sha256": "c8cac9edc4dc947a904ba1cb7a53c8cbcf11410646b8a99816935cde6c156f73"
+    },
+    {
+      "id": "scene_include",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 240,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "07ae3d3a1855bff705665ae21389216175a268dfb386c28c67697eccfe4dc859",
+      "linked_sha256": "4b114b56cf3e8ea7e096bcf41e30b2c74470f98367fac32204c6b4d52c178738"
+    },
+    {
+      "id": "scene_closest",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 244,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "4fad744dde031a027a516a0365ac7fd3cf949edd84e2ae199204896f399c582d",
+      "linked_sha256": "f0733cd0f672bc64e3ce3838c94c34005619a8f6873cee56fba2bba004652526"
     }
   ],
   "code_map": {
@@ -61439,48 +61499,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80146f30",
-            "size": 208,
-            "kind": "function",
-            "name": "AddPlayer_now__6CSceneRQ26CScene11SModCommand",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80147000",
-            "size": 288,
-            "kind": "function",
-            "name": "SetWorld_now__6CSceneRQ26CScene11SModCommand",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80147144",
-            "size": 544,
-            "kind": "function",
-            "name": "AddNode_now__6CSceneRQ26CScene11SModCommand",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80147364",
-            "size": 844,
-            "kind": "function",
-            "name": "RemoveNode_now__6CSceneRQ26CScene11SModCommand",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801476b0",
-            "size": 636,
-            "kind": "function",
-            "name": "ExcludeCollision__6CSceneRC10ISceneNodeT1i",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014792c",
-            "size": 240,
-            "kind": "function",
-            "name": "IncludeCollision__6CSceneRC10ISceneNodeT1",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80147c70",
             "size": 2508,
             "kind": "function",
@@ -61492,13 +61510,6 @@
             "size": 540,
             "kind": "function",
             "name": "Draw__6CSceneR12CDrawContextR4CFog",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80148914",
-            "size": 244,
-            "kind": "function",
-            "name": "FindClosestPlayer__6CSceneRC8CVector3",
             "evidence": "adjacent-compiler-markers"
           },
           {

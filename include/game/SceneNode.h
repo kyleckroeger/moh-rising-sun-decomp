@@ -154,21 +154,51 @@ class CScene {
     CCamera *camera;     // +0x1c
     CSkyBox *skyBox;     // +0x20
     ISceneNode *firstStaticObject; // +0x24
-    unsigned char unknown28[12];
-    ISceneNode *firstLight; // +0x34
-    unsigned char unknown38[0x44 - 0x38];
-    int nodeCount; // +0x44
-    unsigned char unknown48[0x58 - 0x48];
+    ISceneNode *lastStaticObject;  // +0x28
+    ISceneNode *firstAnimObject;   // +0x2c
+    ISceneNode *lastAnimObject;    // +0x30
+    ISceneNode *firstLight;        // +0x34
+    ISceneNode *lastLight;         // +0x38
+    ISceneNode *firstProjector;    // +0x3c
+    ISceneNode *lastProjector;     // +0x40
+    int nodeCount;                 // +0x44
+    int staticObjectCount;         // +0x48
+    int animObjectCount;           // +0x4c
+    int lightCount;                // +0x50
+    int projectorCount;            // +0x54
     int locked; // +0x58: changes queue while set; see Lock and Unlock.
     int playerCount; // +0x5c
-    unsigned char unknown60[0x158 - 0x60];
+    unsigned char unknown60[0x140 - 0x60];
     // An excluded node pair, kept in address order, and a value.
     struct SExclusionEntry {
         SExclusionEntry(const ISceneNode *, const ISceneNode *, float);
         const ISceneNode *low;
         const ISceneNode *high;
         float value;
+        SExclusionEntry &operator=(const SExclusionEntry &other) {
+            low = other.low;
+            high = other.high;
+            value = other.value;
+            return *this;
+        }
+        bool operator==(const SExclusionEntry &other) const { return low == other.low && high == other.high; }
     };
+    // +0x140: the collision exclusions; the capacity word is unread here and its name is inferred.
+    struct SExclusionList {
+        SExclusionEntry *items;
+        int capacity;
+        int count;
+        SExclusionEntry *Begin() { return items; }
+        SExclusionEntry *End() { return items + count; }
+        void Erase(SExclusionEntry *entry) {
+            SExclusionEntry *end = End();
+            SExclusionEntry *to = entry;
+            for (SExclusionEntry *from = entry + 1; from != end;)
+                *to++ = *from++;
+            count--;
+        }
+    } exclusions;
+    unsigned char unknown14c[0x158 - 0x14c];
     // A deferred scene change: the handler to run and its two arguments.
     struct SModCommand {
         void (CScene::*function)(SModCommand &);
@@ -193,6 +223,7 @@ class CScene {
     void AddNode_now(SModCommand &);
     void RemoveNode_now(SModCommand &);
     void AddNodeExtents(ISceneNode &);
+    void RemoveNodeExtents(ISceneNode &);
     // Node list iterator returned by value.
     class NodeIterator {
       public:

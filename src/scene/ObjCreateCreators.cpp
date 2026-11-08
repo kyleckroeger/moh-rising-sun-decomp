@@ -10,12 +10,8 @@
 #include "ParticleClock.h"
 #include "TriggerObject.h"
 #include "ObjCreate.h"
+#include "Toilet.h"
 #include <string.h>
-
-struct LevelFileContentsStruct_;
-enum TLTResourceID { TLTResourceUnknown = 0 };
-struct TLTResource;
-TLTResource *TLT_FindNextResourceByType(TLTResourceID, LevelFileContentsStruct_ *);
 
 void DestroySingleQueueElement();
 void ProcessCreationQueue();
@@ -69,8 +65,8 @@ void InitObjectCreators() {
         g_pDelayDestroyList[i].object = 0;
     }
     g_numActiveSoldiers = 0;
-    TLTResource *resource = TLT_FindNextResourceByType((TLTResourceID)27, 0);
-    g_maxActiveSoldiers = *(int *)(*(char **)(*(char **)((char *)resource + 8) + 184) + 8);
+    LevelFileContentsStruct_ *resource = TLT_FindNextResourceByType((TLTResourceID)27, 0);
+    g_maxActiveSoldiers = resource->data[46]->value;
     g_iNumGermansQueuedThisFrame = 0;
     g_iGermanCreationQueueHeadIndex = 0;
     g_iGermanCreationQueueTailIndex = 0;
@@ -81,7 +77,7 @@ void InitObjectCreators() {
         g_pGermanCreationQueue[j].wait = 0;
     }
     resource = TLT_FindNextResourceByType((TLTResourceID)25, 0);
-    g_fDumpObjectCollisionRadius = *(float *)(*(char **)(*(char **)((char *)resource + 8) + 144) + 8);
+    g_fDumpObjectCollisionRadius = *(float *)&resource->data[36]->value;
     g_DumpObjectContainer.Reset();
     g_iNumberOfEnemiesSpawned = 0;
 }

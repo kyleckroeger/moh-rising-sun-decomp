@@ -136,6 +136,18 @@ vector by value; `GetPosition` zeroes three components) and
 `scene_node_axis_defaults` (`GetRightward`, `GetForward` and `GetUpward` set the
 unit X, Y and Z axes). `GetWorldLinearVelocity` now returns `CVector3`.
 
+## Scene node lists
+
+`CScene` keeps a node list (`+0x00`, `+0x04`, count `+0x44`) and typed lists for
+static objects (`+0x24`), animated objects (`+0x2c`), lights (`+0x34`) and
+projectors (`+0x3c`), with counts at `+0x48`-`+0x54`. Node links are at `+0x18` and
+`+0x1c`; static and animated objects link at `+0x44` and `+0x48`; lights and
+projectors at `+0x38` and `+0x3c`. List and member names are descriptive. The
+insertion path shared by `AddPlayer_now`, `SetWorld_now` and `AddNode_now` updates
+the list tail even when it inserts after another node. `AddNode_now` and
+`RemoveNode_now` skip the extent lists for lights. Collision exclusions are at
+`+0x140`, in a small array container with its count at `+0x148`.
+
 ## Next work
 
 The slot map applies to every class derived from `IMovingSceneNode`; each derived
