@@ -1811,7 +1811,12 @@
     "scene_AnimObjectInitClass.json",
     "ai_AIObjectParameters.json",
     "scene_TankObjectAddWeapon.json",
-    "scene_StaticObjectInit.json"
+    "scene_StaticObjectInit.json",
+    "sound_sbasync.json",
+    "sound_sdfx.json",
+    "sound_smixer_reset.json",
+    "sound_scrsfl.json",
+    "sound_sdrv_samplechan.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

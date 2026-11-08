@@ -1,0 +1,43 @@
+{
+  "id": "sound_smixer_reset",
+  "source": "src/sound/ea/smixer_reset.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80225e70",
+      "size": 44
+    }
+  ],
+  "functions": [
+    {
+      "name": "MIX_reset",
+      "address": "0x80225e70",
+      "size": 44,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "decode16x87": "0x80227658",
+    "mixc": "0x802292a4",
+    "sndmix": "0x8041ec1c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "smixer.c",
+  "original_file_index": 3186
+}

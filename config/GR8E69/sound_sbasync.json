@@ -1,0 +1,117 @@
+{
+  "id": "sound_sbasync",
+  "source": "src/sound/ea/sbasync.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80219a00",
+      "size": 2596
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDBANKI_asynccompletereads__Fv",
+      "address": "0x80219a00",
+      "size": 200,
+      "binding": 1
+    },
+    {
+      "name": "SNDBANKI_asyncissuereads__Fv",
+      "address": "0x80219ac8",
+      "size": 264,
+      "binding": 1
+    },
+    {
+      "name": "SNDBANKI_asyncxferhdr__Fv",
+      "address": "0x80219bd0",
+      "size": 292,
+      "binding": 1
+    },
+    {
+      "name": "SNDBANKI_asynccompletedownload__Fv",
+      "address": "0x80219cf4",
+      "size": 172,
+      "binding": 1
+    },
+    {
+      "name": "SNDBANKI_asyncissuedownloads__Fv",
+      "address": "0x80219da0",
+      "size": 328,
+      "binding": 1
+    },
+    {
+      "name": "SNDBANKI_asyncprocess__Fv",
+      "address": "0x80219ee8",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "SNDBANKI_asyncserver__Fv",
+      "address": "0x80219f18",
+      "size": 184,
+      "binding": 1
+    },
+    {
+      "name": "SNDBANKI_asyncservice__Fv",
+      "address": "0x80219fd0",
+      "size": 496,
+      "binding": 1
+    },
+    {
+      "name": "SNDBANK_asyncloadi__FPciPviPFi_Pvb",
+      "address": "0x8021a1c0",
+      "size": 524,
+      "binding": 1
+    },
+    {
+      "name": "SNDBANK_asyncload",
+      "address": "0x8021a3cc",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "SNDBANK_asyncdone",
+      "address": "0x8021a3f0",
+      "size": 52,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FILESYS_close": "0x8020795c",
+    "FILESYS_completeop": "0x802076f4",
+    "FILESYS_open": "0x802078cc",
+    "FILESYS_opstatus": "0x802072e4",
+    "FILESYS_read": "0x802079e8",
+    "SNDBANKI_abortload__Fv": "0x80219824",
+    "SNDBANKI_asyncresolve__Fv": "0x8021993c",
+    "SNDI_memcpy": "0x8021ab84",
+    "SNDPLATFORM_download__FiPvT1i": "0x8021e1c8",
+    "SNDPLATFORM_downloadcomplete__Fi": "0x8021e21c",
+    "SNDPLATFORM_memalloc__Fii": "0x8021e138",
+    "SNDSYS_add100hzclient": "0x8021a934",
+    "SNDSYS_remove100hzclient": "0x8021a96c",
+    "iSNDserveraddclient__FPFv_v": "0x80221710",
+    "iSNDserverremoveclient__FPFv_v": "0x8022173c",
+    "sndbas": "0x802d5484",
+    "sndgs": "0x804108fc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sbasync.c",
+  "original_file_index": 3035
+}

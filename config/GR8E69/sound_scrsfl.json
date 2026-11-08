@@ -1,0 +1,44 @@
+{
+  "id": "sound_scrsfl",
+  "source": "src/sound/ea/scrsfl.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8022bdec",
+      "size": 196
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bfd78",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "rsflc",
+      "address": "0x8022bdec",
+      "size": 196,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "scrsfl.c",
+  "original_file_index": 3302
+}
