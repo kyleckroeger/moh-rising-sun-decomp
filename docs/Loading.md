@@ -82,7 +82,8 @@ the state. Its progress denominator is 21 for missions 2 through 4 and 22 for th
 Not reconstructed: the class constructor and language and system-file setup,
 `TLT_FindNextResourceByTypeAndVal` (6 differences, all parameter registers), and the two functions
 that use the file-local `s_ignoreLoadFileNormalLocked` (`TLT_ForceLoadFileNormalLocked`,
-`TLT_LoadFileNormal`), plus the repository and extension-search functions after them.
+`TLT_LoadFileNormal`), plus the repository functions after them. The extension search walks the
+level big file with `BIG_locateentry` and compares each entry name's tail case-insensitively.
 
 ## MohLoader
 

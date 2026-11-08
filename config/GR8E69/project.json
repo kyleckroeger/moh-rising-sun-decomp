@@ -1896,7 +1896,8 @@
     "weapon_params_delete.json",
     "player_aim_update.json",
     "toilet_mvd.json",
-    "toilet_ready.json"
+    "toilet_ready.json",
+    "toilet_ext.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 981664,
+    "matching_code_bytes": 982192,
     "total_executable_code_bytes": 2492032,
-    "percent": 39.39211053469619,
+    "percent": 39.41329806358827,
     "categories": {
-      "reconstructed_game": 589448,
+      "reconstructed_game": 589976,
       "restored_library": 392216
     },
-    "matching_functions": 4867
+    "matching_functions": 4871
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -907,7 +907,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "56fd68f72e219c55548bb51489be199c6696e392e9b7fcdfae0524aeb3cd4bf0",
+    "config/GR8E69/project.json": "2d8b60e23d9fe82f41c72a5adebc5bb79d087294548aa8b24545208bb8ff6c23",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -1866,6 +1866,7 @@
     "config/GR8E69/toilet_async.json": "13001f6e269437257b9d05529e80c0fafee722ce1a2d228ef18885c74c1ef545",
     "config/GR8E69/toilet_big.json": "b6ade349c77ee76b052b3e0259e343f9c13e980c74bcd529b4366dabb901a2b5",
     "config/GR8E69/toilet_compartment.json": "30512feb5d11d0305cd1c0d402890f3996e4481641ec26f089e4b21c1795b806",
+    "config/GR8E69/toilet_ext.json": "91f2b9702ddfa82fc54db453a5b80abccfb18d0a26c24266a7655e00b5eeb89c",
     "config/GR8E69/toilet_init.json": "c60d5531a57452af49cfc6aded5f61112c2364c9f498bcae1e25fedbdc0e64f9",
     "config/GR8E69/toilet_lookup.json": "40fbdcc55b300118939e724aa2454f9279186a895cf0ef1df626c76ae0e2a24f",
     "config/GR8E69/toilet_mvd.json": "a2624afbdf307ed9316122f58daefeaab035717199f4edf88d7548f6c9a0147e",
@@ -2966,6 +2967,7 @@
     "src/game/toilet_async.cpp": "7da9cce1c7a779eec8ee902b8669beed1c75965125d60eeca14a42131f5f6e53",
     "src/game/toilet_big.cpp": "f21188f2ea40f582aa9492ba44e35e9da1d5bedee6ffefbc827c9627aceb2b18",
     "src/game/toilet_compartment.cpp": "33ab13e287ad744c1c307e3813c7f3baa19af39927a7ccddf08c6358eaa15371",
+    "src/game/toilet_ext.cpp": "51b729995075201887057e97a15a66f3b2b9c65f4afc0bd73804944d1c86deda",
     "src/game/toilet_init.cpp": "3893dab910eb55bde8a257a7e1430baf3d104cb6c3c1fba15b127cf05f3fbe5b",
     "src/game/toilet_lookup.cpp": "873127e47497820facd9ea3b37b8313365c5e03f9165216d46dc28850014027f",
     "src/game/toilet_mvd.cpp": "98bc3db6dddbb91b1816ddd44465dfd6e371699967780423226b5867a91a5691",
@@ -42193,6 +42195,24 @@
       "discarded_functions": [],
       "object_sha256": "33e710b80fd989394a4e700d14c3f0ac92761abbb371f77d1753bcab6801f8dc",
       "linked_sha256": "e7e237df5e3365c018069d3e120b26b6f360736a3a5d9cc7c513920f1649e3f4"
+    },
+    {
+      "id": "toilet_ext",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 528,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "342624edfdfe74681b2d7ba498280cdd66b8be24f4e176cec0b80b3cc326f369",
+      "linked_sha256": "432467e8e52eae94def97f2cdd04d806901a83bdaf6824379a07a45ee6560d92"
     }
   ],
   "code_map": {
@@ -70076,35 +70096,12 @@
             "kind": "function",
             "name": "TLT_GetRelocationTable__Fi",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801aa054",
-            "size": 148,
-            "kind": "function",
-            "name": "SetExt__15TLT_FindExtDataPc",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801aa0e8",
-            "size": 108,
-            "kind": "function",
-            "name": "MatchExtension__15TLT_FindExtDataPCc",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801aa154",
-            "size": 104,
-            "kind": "function",
-            "name": "TLT_FindFirstExtension__FR15TLT_FindExtDataPc",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801aa1bc",
-            "size": 168,
-            "kind": "function",
-            "name": "TLT_FindNextExtension__FR15TLT_FindExtData",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 801aa264",
+        "ranges": [
           {
             "address": "0x801aa264",
             "size": 144,
