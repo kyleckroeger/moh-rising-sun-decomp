@@ -1950,7 +1950,8 @@
     "sound_bank_play.json",
     "sound_entry_destructor.json",
     "sound_entry_copy.json",
-    "sound_entry_options.json"
+    "sound_entry_options.json",
+    "sound_sdrv_playtimbre.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

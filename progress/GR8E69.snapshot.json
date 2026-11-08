@@ -1651,8 +1651,9 @@
       "src/sound/ea/sdrv_packetplay.cpp": "84c11356434a9acfd5dda15b21a67f41b96bc62bdc268e4e1b7dc615e7f6914d",
       "src/sound/ea/sdrv_pkt.cpp": "cd4ae40b0b66b16dad028f7fa4a8326a4dabb2cd9454ab60039d365cea23a3a1",
       "src/sound/ea/sdrv_pktdestroy.cpp": "dd661c40241590dd7962c636c75e2f2e07aef1fc230af38dfdc3cb7b339c3691",
+      "src/sound/ea/sdrv_playtimbre.cpp": "e4ba6e2cc4cd0a12b3b2cbb3a7d96489487534e50b87bfe0fd40648adf121c93",
       "src/sound/ea/sdrv_prestore.cpp": "a7bac5c9a7e071fe3d6b41850470a20ee1a854e5c7e4494342ef91af5f033b3b",
-      "src/sound/ea/sdrv_range.cpp": "b90bb61e472893453a04dc53a8eb3c3917a1187202866ddc8c391415ba58a8c5",
+      "src/sound/ea/sdrv_range.cpp": "7837019e79edd542023caa5616c395ab83bd0e9184b3ae2732e4fd5eddc2d8cb",
       "src/sound/ea/sdrv_samplechan.cpp": "9fe424a94520188efb7e1bc52780d23fad2271fdc10f537359cb13c78430e1fc",
       "src/sound/ea/sdrv_setpitch.cpp": "21a589010dd3717c60fe4f06de0b42a5bd3de67cb84afa2725e094cbe17d8055",
       "src/sound/ea/sdrv_setvol.cpp": "b70fb4ff595b07080cb0db6d1407efcd7a6e6dfa3df4430df8201ecaf19e8392",
@@ -3391,7 +3392,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "197921c792054f10e5449c4eb31d552aaf67c18af8a1dbc53d29707c93378c39",
+      "config/GR8E69/project.json": "e617086516438adeffe49183e43b462fc75d6269c359a0dab2e22931a62446d6",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -4038,6 +4039,7 @@
       "config/GR8E69/sound_sdrv_packetplay.json": "05826f53e6ebc616e6607aedf00732774f885e4f407c8f43114bf4171d4e445a",
       "config/GR8E69/sound_sdrv_pkt.json": "4661192ed351dc6d8248168b49667e09d6fc90cbdfa70b31945f77e2f0cf9af1",
       "config/GR8E69/sound_sdrv_pktdestroy.json": "88b749804783e115d84d32243518ee4db30375c347076a6421ebed3dec19c1d0",
+      "config/GR8E69/sound_sdrv_playtimbre.json": "7b4c3d410f70b4bbe3e30620c5a97871f74b60d4205a4ad33caa07dfc6b1cd65",
       "config/GR8E69/sound_sdrv_prestore.json": "302e126ebde19a0971895bab6662452c913a7cac1e8be8b35319727a69719f62",
       "config/GR8E69/sound_sdrv_range.json": "172d7d9bd2d4f086aaed38cf0f2cddd373e6aa944ce763f2707f342c3dc3d8b0",
       "config/GR8E69/sound_sdrv_samplechan.json": "587d10245387f1ededc2cd0e4ce54da724b2942dad50285a892391bd15e870a5",
@@ -4786,14 +4788,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1018576,
+    "matching_code_bytes": 1019784,
     "total_executable_code_bytes": 2492032,
-    "percent": 40.873311418151935,
+    "percent": 40.921785916071705,
     "categories": {
-      "reconstructed_game": 626360,
+      "reconstructed_game": 627568,
       "restored_library": 392216
     },
-    "matching_functions": 4995
+    "matching_functions": 4996
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -5703,7 +5705,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "197921c792054f10e5449c4eb31d552aaf67c18af8a1dbc53d29707c93378c39",
+    "config/GR8E69/project.json": "e617086516438adeffe49183e43b462fc75d6269c359a0dab2e22931a62446d6",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -6350,6 +6352,7 @@
     "config/GR8E69/sound_sdrv_packetplay.json": "05826f53e6ebc616e6607aedf00732774f885e4f407c8f43114bf4171d4e445a",
     "config/GR8E69/sound_sdrv_pkt.json": "4661192ed351dc6d8248168b49667e09d6fc90cbdfa70b31945f77e2f0cf9af1",
     "config/GR8E69/sound_sdrv_pktdestroy.json": "88b749804783e115d84d32243518ee4db30375c347076a6421ebed3dec19c1d0",
+    "config/GR8E69/sound_sdrv_playtimbre.json": "7b4c3d410f70b4bbe3e30620c5a97871f74b60d4205a4ad33caa07dfc6b1cd65",
     "config/GR8E69/sound_sdrv_prestore.json": "302e126ebde19a0971895bab6662452c913a7cac1e8be8b35319727a69719f62",
     "config/GR8E69/sound_sdrv_range.json": "172d7d9bd2d4f086aaed38cf0f2cddd373e6aa944ce763f2707f342c3dc3d8b0",
     "config/GR8E69/sound_sdrv_samplechan.json": "587d10245387f1ededc2cd0e4ce54da724b2942dad50285a892391bd15e870a5",
@@ -8860,8 +8863,9 @@
     "src/sound/ea/sdrv_packetplay.cpp": "84c11356434a9acfd5dda15b21a67f41b96bc62bdc268e4e1b7dc615e7f6914d",
     "src/sound/ea/sdrv_pkt.cpp": "cd4ae40b0b66b16dad028f7fa4a8326a4dabb2cd9454ab60039d365cea23a3a1",
     "src/sound/ea/sdrv_pktdestroy.cpp": "dd661c40241590dd7962c636c75e2f2e07aef1fc230af38dfdc3cb7b339c3691",
+    "src/sound/ea/sdrv_playtimbre.cpp": "e4ba6e2cc4cd0a12b3b2cbb3a7d96489487534e50b87bfe0fd40648adf121c93",
     "src/sound/ea/sdrv_prestore.cpp": "a7bac5c9a7e071fe3d6b41850470a20ee1a854e5c7e4494342ef91af5f033b3b",
-    "src/sound/ea/sdrv_range.cpp": "b90bb61e472893453a04dc53a8eb3c3917a1187202866ddc8c391415ba58a8c5",
+    "src/sound/ea/sdrv_range.cpp": "7837019e79edd542023caa5616c395ab83bd0e9184b3ae2732e4fd5eddc2d8cb",
     "src/sound/ea/sdrv_samplechan.cpp": "9fe424a94520188efb7e1bc52780d23fad2271fdc10f537359cb13c78430e1fc",
     "src/sound/ea/sdrv_setpitch.cpp": "21a589010dd3717c60fe4f06de0b42a5bd3de67cb84afa2725e094cbe17d8055",
     "src/sound/ea/sdrv_setvol.cpp": "b70fb4ff595b07080cb0db6d1407efcd7a6e6dfa3df4430df8201ecaf19e8392",
@@ -48071,6 +48075,25 @@
       "discarded_functions": [],
       "object_sha256": "273d2b41c6c59379a4364dded77528c01fb923eabcf37f12f4917cda1c67bdff",
       "linked_sha256": "9656a633dfdfee8f8c5f2cfffce0e103911f1f3e8d7c7bdd7d2211f831e60763"
+    },
+    {
+      "id": "sound_sdrv_playtimbre",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 1208,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "82aef5b7a1b5023bf87e0149fa45840c7d1035af648eb08bcce39e8ca48c16e3",
+      "linked_sha256": "fade2fc8939e86c33e3510c4878cf8ab1858bc4919fef557b4582af030d2fa79"
     }
   ],
   "code_map": {
@@ -81470,13 +81493,6 @@
             "size": 776,
             "kind": "function",
             "name": "SNDPLATFORM_init__Fv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8021c9bc",
-            "size": 1208,
-            "kind": "function",
-            "name": "SNDPLATFORM_playtimbre__FP15SNDIPATCHHEADERPviiiii",
             "evidence": "adjacent-compiler-markers"
           },
           {
