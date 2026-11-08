@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 978748,
+    "matching_code_bytes": 980152,
     "total_executable_code_bytes": 2492032,
-    "percent": 39.27509759104217,
+    "percent": 39.33143715650521,
     "categories": {
-      "reconstructed_game": 586532,
+      "reconstructed_game": 587936,
       "restored_library": 392216
     },
-    "matching_functions": 4831
+    "matching_functions": 4852
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -685,6 +685,8 @@
     "config/GR8E69/mesh_head.json": "7b689c457b1390497631d30f59952e992be67ddf16d8ac54f676dd0ad0fc6a22",
     "config/GR8E69/mesh_particle_placement.json": "09675fa3d42007e283a71f282f3d3f2f890f1c087cb10c2c20f3a3231e955dc0",
     "config/GR8E69/mesh_update.json": "619d13465d30053774dac2c1b826958c65c73b3bdb8fd1a1d4f6a6f282208b55",
+    "config/GR8E69/moh_boot.json": "2775340b4b22670a410b07b1668f0b326bbf529254223c83ce0e65a2102660f1",
+    "config/GR8E69/moh_loader.json": "624fb3e655c8afa065ed00c994061d5c1f2571935873f5104e35b0dbe2437f3c",
     "config/GR8E69/moving_node_light_defaults.json": "11326888dd025f649beae1650cf3b91bb0d5b68dccce9fd75c058f2ea24ca33f",
     "config/GR8E69/moving_node_reset.json": "67a3713a8a1e1b7b5f0e00297a1a9e11dc4da80179665d43f5e0580a62913d96",
     "config/GR8E69/moving_node_transform_defaults.json": "bf036bd61b867754c63869e74af221f9ffb6d0f51aa4cb01a2c4fbc2c685b122",
@@ -899,7 +901,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "576c88f3f9985285697b91e7f945ab4509a4b7c7131fba02487c21abeb19e5b6",
+    "config/GR8E69/project.json": "f1229454fc3c4828b8b3cdc25656935ac0a0d2dd1af1cf7111b856b92e69428f",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -2169,6 +2171,7 @@
     "include/game/MPWeaponSet.h": "86bcb747bbed525dbf73844a22a156b74e8da90bd482fb541bc707e66cddae2c",
     "include/game/MathFun.h": "d92b6bc49451fbf1b8a55fa0859336cc7b6c7290c687133dda85c3e96d14f5da",
     "include/game/MemStack.h": "e96e48316cab4c90d5f0d26ae33db27bf681687e8f88544d20683150b4bb1606",
+    "include/game/MohLoader.h": "9149e28d430ae8e1c9ccab1b19b1b46307c3ac0c50ac5120675eeb2980bd10b4",
     "include/game/ObjCreate.h": "4120fef358b86de9e393703ea5bcb3364230b876f32434ceb371910e141c3f7a",
     "include/game/Objectives.h": "c3f8df7f39a540e1b3d6680d1c0c9d7134deb1d4d596a614e7297e60da55ba99",
     "include/game/ObserverTypes.h": "687dfc07deb4adc23a1d0247270d6ab04c34b758bd88846bf5e4b6ef33e7cc1f",
@@ -2933,6 +2936,8 @@
     "src/game/input_ports.cpp": "c8e073d6d9e25381539ae8de570e54222add652af5b1400642cfc9159c14f36e",
     "src/game/input_state.cpp": "c875939ff44d67e321e0e286ebddc6e5880d2dc966559b8b2d9d23194da84de1",
     "src/game/input_tail.cpp": "3a03d39cf2824ead24e4e228c4b05c680c5b657609186cad161af73edb4987bf",
+    "src/game/moh_boot.cpp": "1ba85a974ab861bb6b899025f7979c871890d299de7649f604ac1468b9ec0c01",
+    "src/game/moh_loader.cpp": "eb5a65068e81a7d792ef4a16f8dffb817e5b4965e2534956940d449f4676cd2e",
     "src/game/screen_init.cpp": "e0b48e8fa9140cb37b4791db75e8676370f877f67c8a9fe3b33c65350173e00d",
     "src/game/screen_setclear.cpp": "d1db021539edc57bb1519e4596aab8d380728cc7d63785d3446a80d48edfd416",
     "src/game/screen_tail.cpp": "f1a0401e50a6b75d185547ab60bcf96e3a4b68e64ef64a96c5cb4b579d3922ad",
@@ -41972,6 +41977,42 @@
       "discarded_functions": [],
       "object_sha256": "13ed7fab563f7aaaa8c32bde5457cd42efb18a75f988172c01a4f655e05a7d31",
       "linked_sha256": "d2c094eecf294c1843a21a886f6daa3cd1288419aa26bd49bce2f222add1e161"
+    },
+    {
+      "id": "moh_loader",
+      "category": "reconstructed_game",
+      "functions": 17,
+      "code_bytes": 896,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "d4517ac0ebcd463627daaea50adcac073139b631fa02d1e2fba595f264668b0c",
+      "linked_sha256": "14943d2ff3400a70e58f1604186ee93a23d923310a816003c805095df002c9f7"
+    },
+    {
+      "id": "moh_boot",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 508,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "66f2aee74caebe3704a481cff4e4773123623b9af0f45ad209a7b3df420b1202",
+      "linked_sha256": "8a0070bb9ce1c0e3491ce9ccdb80a10b8695e8c9b14f2aff7619ebfc45b3b9c5"
     }
   ],
   "code_map": {
@@ -45112,125 +45153,6 @@
         "file_name": "Moh3.cpp",
         "ranges": [
           {
-            "address": "0x80059380",
-            "size": 148,
-            "kind": "function",
-            "name": "__9MohLoaderb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80059414",
-            "size": 32,
-            "kind": "function",
-            "name": "Instance__9MohLoader",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80059434",
-            "size": 32,
-            "kind": "function",
-            "name": "GameData__9MohLoader",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80059454",
-            "size": 24,
-            "kind": "function",
-            "name": "SetReturningFlag__11MohLoaderGc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8005946c",
-            "size": 20,
-            "kind": "function",
-            "name": "ClearReturningFlag__11MohLoaderGc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80059480",
-            "size": 148,
-            "kind": "function",
-            "name": "InstanceGc__11MohLoaderGc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80059514",
-            "size": 68,
-            "kind": "function",
-            "name": "__11MohLoaderGcb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80059558",
-            "size": 72,
-            "kind": "function",
-            "name": "Initialize__11MohLoaderGc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800595a0",
-            "size": 4,
-            "kind": "function",
-            "name": "InitVideo__11MohLoaderGc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800595a4",
-            "size": 16,
-            "kind": "function",
-            "name": "GameDataGc__11MohLoaderGc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800595b4",
-            "size": 24,
-            "kind": "function",
-            "name": "ValidateGameData__11MohLoaderGc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800595cc",
-            "size": 20,
-            "kind": "function",
-            "name": "InvalidateGameData__11MohLoaderGc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800595e0",
-            "size": 12,
-            "kind": "function",
-            "name": "RequestReset__11MohLoaderGc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800595ec",
-            "size": 16,
-            "kind": "function",
-            "name": "WasResetButtonPressed__11MohLoaderGc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800595fc",
-            "size": 16,
-            "kind": "function",
-            "name": "ResetButtonPressed__11MohLoaderGcb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8005960c",
-            "size": 184,
-            "kind": "function",
-            "name": "IsResetConsoleRequested__11MohLoaderGc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800596c4",
-            "size": 60,
-            "kind": "function",
-            "name": "ResetConsole__11MohLoaderGc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80059700",
             "size": 284,
             "kind": "function",
@@ -45242,34 +45164,6 @@
             "size": 448,
             "kind": "function",
             "name": "LoadModule__11MohLoaderGcPCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800599dc",
-            "size": 244,
-            "kind": "function",
-            "name": "LoadModule__11MohLoaderGcPCvUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80059ad0",
-            "size": 72,
-            "kind": "function",
-            "name": "GcDisplayLoadingScreen__FPCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80059b18",
-            "size": 136,
-            "kind": "function",
-            "name": "InitREAL__Fv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80059ba0",
-            "size": 56,
-            "kind": "function",
-            "name": "ShutdownREAL__Fv",
             "evidence": "adjacent-compiler-markers"
           },
           {

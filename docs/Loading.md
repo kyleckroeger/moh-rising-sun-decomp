@@ -83,3 +83,18 @@ Not reconstructed: the class constructor and language and system-file setup,
 `TLT_FindNextResourceByTypeAndVal` (6 differences, all parameter registers), and the two functions
 that use the file-local `s_ignoreLoadFileNormalLocked` (`TLT_ForceLoadFileNormalLocked`,
 `TLT_LoadFileNormal`), plus the repository and extension-search functions after them.
+
+## MohLoader
+
+`MohLoader` and `MohLoaderGc` hold the console-side start-up state. `g_pPersistent` points to a
+block that survives a module reload: game data magic `0xc0de0101` at `+0`, returning magic
+`0xc0de0bac` at `+4`, a reset button flag at `+8` and the game settings at `+0xc`. Without the
+returning magic, `InstanceGc` clears the game data magic and reset flag first. The constructor
+clears the game settings unless the game data magic is valid.
+
+`LoadModule(const void *, unsigned long)` copies a loaded module's sections from its section table,
+zeroes each section first, flushes instruction and data caches, and jumps to the entry point at
+`+0x18`.
+
+Not reconstructed: `CheckForControllerReset` (function-local statics), the path `LoadModule`, and
+the two compiler-placed destructors, which are declared but emitted far from these units.
