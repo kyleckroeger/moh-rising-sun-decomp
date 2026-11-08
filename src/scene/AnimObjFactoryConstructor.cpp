@@ -1,7 +1,7 @@
 // AI-assisted reconstruction from GR8E69, with Medal of Honor: Frontline as a semantic
 // reference. Part of the original AnimObjFactory.cpp; member names are descriptive.
 extern "C" void *DWI_allocalign(const char *, unsigned int, int, int);
-extern "C" void DWI_free(void *);
+extern "C" int DWI_free(void *);
 
 class CGameObjectFactory {
   public:

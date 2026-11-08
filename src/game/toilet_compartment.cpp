@@ -3,7 +3,7 @@
 #include "Toilet.h"
 #include <stdio.h>
 
-extern "C" void DWI_free(void *);
+extern "C" int DWI_free(void *);
 extern "C" void *BIG_locateentryz(void *, const char *, int, int *, int *);
 
 void TLT_CloseFile(void *file) {

@@ -22,7 +22,7 @@ void SYNCTASK_del(void (*task)());
 void PAD_init();
 void PAD_update();
 void *DWI_alloc(const char *, int, int);
-void DWI_free(void *);
+int DWI_free(void *);
 void FILESYS_setmemcallbacks(void *(*alloc)(const char *, int, int), int (*release)(void *));
 int FILESYS_init(int handles, int bufferSize, int operations);
 void ASYNCFILE_init(int count, int flags);
@@ -112,7 +112,7 @@ void InitREAL() {
     SYNCTASK_add(CheckDiscDriveSyncTask, -1, 0);
     PAD_init();
     SYNCTASK_del(PAD_update);
-    FILESYS_setmemcallbacks(DWI_alloc, (int (*)(void *))DWI_free);
+    FILESYS_setmemcallbacks(DWI_alloc, DWI_free);
     FILESYS_init(0, 1200, 0);
     ASYNCFILE_init(6, 0);
     CMoviePlayer::InitClass();

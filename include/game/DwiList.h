@@ -6,7 +6,7 @@
 #include "PlacementNew.h"
 
 extern "C" void *DWI_allocalign(const char *, unsigned int, int, int);
-extern "C" void DWI_free(void *);
+extern "C" int DWI_free(void *);
 
 namespace dwi {
 

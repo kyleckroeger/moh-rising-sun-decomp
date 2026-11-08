@@ -19,7 +19,7 @@
     {
       "name": ".text",
       "address": "0x801a1488",
-      "size": 92
+      "size": 156
     },
     {
       "name": ".rodata",
@@ -33,10 +33,17 @@
       "address": "0x801a1488",
       "size": 92,
       "binding": 1
+    },
+    {
+      "name": "RCMPFree__FPv",
+      "address": "0x801a14e4",
+      "size": 64,
+      "binding": 1
     }
   ],
   "externals": {
     "DWI_allocalign": "0x801a8744",
+    "DWI_free": "0x801a8894",
     "s_iMemClass": "0x803e8a30"
   },
   "local_externals": [
