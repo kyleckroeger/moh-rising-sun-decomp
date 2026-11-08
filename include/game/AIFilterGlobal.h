@@ -8,6 +8,7 @@ class CAISplinePath;
 class IVolume;
 class ISceneNode;
 class CVector3;
+class CAIFilterObject;
 class CAIFilterGlobal {
 public:
     unsigned int frameCount;
@@ -21,6 +22,7 @@ public:
     void EnableAllAStarPathNodes();
     static int CheckVisionLineToEnvironment(const CVector3 &, const CVector3 &, ISceneNode *, ISceneNode *);
     static int CheckCollisionLineToEnvironment(const CVector3 &, const CVector3 &, ISceneNode *, ISceneNode *);
+    static float GetCollisionDistLineToEnvironment(const CVector3 &, const CVector3 &, CAIFilterObject *, float);
     void DisableCollidingAStarPathNodes(const IVolume *);
     void CreateSplinePathManager(void *, BPDPolyPath *, int);
     void ResetSplinePathManager(void *, BPDPolyPath *, int);

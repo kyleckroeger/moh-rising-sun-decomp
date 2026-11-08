@@ -9,6 +9,7 @@
       "src/ai/AIFilterAStarStubs.cpp": "7af8f9ec9b517960c208e4382dab77fcb88e8a594145284cf9d4061dd728ac7f",
       "src/ai/AIFilterAccess.cpp": "4f3b357c06ed7897c863b68d866e79ec0082d93b562058846b08d25ddd5cedb2",
       "src/ai/AIFilterHead.cpp": "3a9e84d66eb2a48fef0b10e1a1121aa157fb1fb1f885252e2b2ee22364de421f",
+      "src/ai/AIFilterLineChecks.cpp": "8c4a9749bd35052284ba11a28ad418e64afd24db67a9f8582d84541ee0b92b26",
       "src/ai/AIFilterPlayer.cpp": "268af5a1c74b71c56da493f82103f3746c29f16b06478d3d37d8dc518df976a9",
       "src/ai/AIFilterPlayerVars.cpp": "bc94f76bb72a6f6dc726fa11d1db5655e145cf58e25acccc3e495e1a2fdf2f19",
       "src/ai/AIFilterTank.cpp": "977bd9bbf589e74e00e7b09aaf9f31164ded18b3ab9804b593ebe96cd4edae65",
@@ -2221,7 +2222,7 @@
       "include/dolphin-sn/dolphin/types.h": "ca31e0bbb97e93ca4713654367df29578f6392f3acaf40ca68bc1de1c913af93",
       "include/game/AIBehavior.h": "8f08b6611587af141301687dc1df0da3aabe3561fc7f9795f4d4f2898a6d0262",
       "include/game/AIDoodad.h": "5a8328fd7c55b6f602742adb79faabaeb4466fbaa44292b3a32fd0d0ad10aca9",
-      "include/game/AIFilterGlobal.h": "344877aed1d2938ab6a0ab0eef531481adc62fd71f0329cf835ec5e85894c95a",
+      "include/game/AIFilterGlobal.h": "8206508036a820ab1075f5e290d849293a434e49041b0d700337c523bc915738",
       "include/game/AIMovement.h": "143e409a2e3b38c72b2a667b1781a10c9af5ce7cc9cf5bd75ac43f142192d484",
       "include/game/AISplinePath.h": "b099db9f3b62cd89d875d5fcaf42b91b7b23a8d20085288a26f1f94c37bd89df",
       "include/game/AITargeting.h": "73feafc918493ae7bc10e8f240e07ae56fa7bd62695845a0cea87d74b64b6c67",
@@ -2612,6 +2613,7 @@
       "config/GR8E69/ai_AIFilterAStarStubs.json": "a438094f6e7b0d6fb11a6b9fcb360ed3903952bc7f6354de34f114ff6fcd7012",
       "config/GR8E69/ai_AIFilterAccess.json": "b4aa6ccd0d536390a2fbe233696b27bd15914ebf90759dbde576445a54bfca1c",
       "config/GR8E69/ai_AIFilterHead.json": "eeb196fcc1a0c3511cbfa7d74a41e589b841bf8863e4b5b4584d1b719583012f",
+      "config/GR8E69/ai_AIFilterLineChecks.json": "4d823cacab5fa856cd42d9ad6e3bc11773cd143b883a8e461b4caedd20dd7571",
       "config/GR8E69/ai_AIFilterPlayer.json": "67444c297f0b80cdf43d542d5a628e1aa019ff4928c07c1103ce186178a0a2a8",
       "config/GR8E69/ai_AIFilterPlayerVars.json": "3926a7cb19854b199b42bcb3a632aa0f29198d127c23a315669f48919516b864",
       "config/GR8E69/ai_AIFilterTank.json": "f00434e8d19008765bb603dcb4b91d0e0bae489665acd87a55a70735e4a6e63e",
@@ -3432,7 +3434,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "5e127203bb10f3ed3d30309af28eb14ff40923ecc180a4e3188f74b5c429df8a",
+      "config/GR8E69/project.json": "f2259c3b59a895873193cff1d4c5a01e1f7666eea882c5e93d3332c62837a56f",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -4848,14 +4850,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1038852,
+    "matching_code_bytes": 1040308,
     "total_executable_code_bytes": 2492032,
-    "percent": 41.6869446299245,
+    "percent": 41.745370845960245,
     "categories": {
-      "reconstructed_game": 646636,
+      "reconstructed_game": 648092,
       "restored_library": 392216
     },
-    "matching_functions": 5040
+    "matching_functions": 5043
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -4955,6 +4957,7 @@
     "config/GR8E69/ai_AIFilterAStarStubs.json": "a438094f6e7b0d6fb11a6b9fcb360ed3903952bc7f6354de34f114ff6fcd7012",
     "config/GR8E69/ai_AIFilterAccess.json": "b4aa6ccd0d536390a2fbe233696b27bd15914ebf90759dbde576445a54bfca1c",
     "config/GR8E69/ai_AIFilterHead.json": "eeb196fcc1a0c3511cbfa7d74a41e589b841bf8863e4b5b4584d1b719583012f",
+    "config/GR8E69/ai_AIFilterLineChecks.json": "4d823cacab5fa856cd42d9ad6e3bc11773cd143b883a8e461b4caedd20dd7571",
     "config/GR8E69/ai_AIFilterPlayer.json": "67444c297f0b80cdf43d542d5a628e1aa019ff4928c07c1103ce186178a0a2a8",
     "config/GR8E69/ai_AIFilterPlayerVars.json": "3926a7cb19854b199b42bcb3a632aa0f29198d127c23a315669f48919516b864",
     "config/GR8E69/ai_AIFilterTank.json": "f00434e8d19008765bb603dcb4b91d0e0bae489665acd87a55a70735e4a6e63e",
@@ -5775,7 +5778,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "5e127203bb10f3ed3d30309af28eb14ff40923ecc180a4e3188f74b5c429df8a",
+    "config/GR8E69/project.json": "f2259c3b59a895873193cff1d4c5a01e1f7666eea882c5e93d3332c62837a56f",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7012,7 +7015,7 @@
     "include/dolphin-sn/dolphin/types.h": "ca31e0bbb97e93ca4713654367df29578f6392f3acaf40ca68bc1de1c913af93",
     "include/game/AIBehavior.h": "8f08b6611587af141301687dc1df0da3aabe3561fc7f9795f4d4f2898a6d0262",
     "include/game/AIDoodad.h": "5a8328fd7c55b6f602742adb79faabaeb4466fbaa44292b3a32fd0d0ad10aca9",
-    "include/game/AIFilterGlobal.h": "344877aed1d2938ab6a0ab0eef531481adc62fd71f0329cf835ec5e85894c95a",
+    "include/game/AIFilterGlobal.h": "8206508036a820ab1075f5e290d849293a434e49041b0d700337c523bc915738",
     "include/game/AIMovement.h": "143e409a2e3b38c72b2a667b1781a10c9af5ce7cc9cf5bd75ac43f142192d484",
     "include/game/AISplinePath.h": "b099db9f3b62cd89d875d5fcaf42b91b7b23a8d20085288a26f1f94c37bd89df",
     "include/game/AITargeting.h": "73feafc918493ae7bc10e8f240e07ae56fa7bd62695845a0cea87d74b64b6c67",
@@ -7311,6 +7314,7 @@
     "src/ai/AIFilterAStarStubs.cpp": "7af8f9ec9b517960c208e4382dab77fcb88e8a594145284cf9d4061dd728ac7f",
     "src/ai/AIFilterAccess.cpp": "4f3b357c06ed7897c863b68d866e79ec0082d93b562058846b08d25ddd5cedb2",
     "src/ai/AIFilterHead.cpp": "3a9e84d66eb2a48fef0b10e1a1121aa157fb1fb1f885252e2b2ee22364de421f",
+    "src/ai/AIFilterLineChecks.cpp": "8c4a9749bd35052284ba11a28ad418e64afd24db67a9f8582d84541ee0b92b26",
     "src/ai/AIFilterPlayer.cpp": "268af5a1c74b71c56da493f82103f3746c29f16b06478d3d37d8dc518df976a9",
     "src/ai/AIFilterPlayerVars.cpp": "bc94f76bb72a6f6dc726fa11d1db5655e145cf58e25acccc3e495e1a2fdf2f19",
     "src/ai/AIFilterTank.cpp": "977bd9bbf589e74e00e7b09aaf9f31164ded18b3ab9804b593ebe96cd4edae65",
@@ -48762,6 +48766,24 @@
       "discarded_functions": [],
       "object_sha256": "e7664e72442aec3ad5707dd302bb36b0174d8fc380c53c575ae18da4d77cfcda",
       "linked_sha256": "ae171f5881d1ef6da906b02da5c0d4e45652f586ba3280b3e088c91861d38009"
+    },
+    {
+      "id": "ai_AIFilterLineChecks",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 1456,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "07ed7575cb6597efe9d6a98cdd4ed65d2e068c4b0a0809c85c215afb17982963",
+      "linked_sha256": "0e3a371abb9323dbc0ac93a1e6e3abdb246eabbc2857a0539a4981a3febb5872"
     }
   ],
   "code_map": {
@@ -61222,27 +61244,6 @@
             "size": 380,
             "kind": "function",
             "name": "Visit__24MechanicCollisionCheckerR10ISceneNode",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d88a4",
-            "size": 480,
-            "kind": "function",
-            "name": "CheckVisionLineToEnvironment__15CAIFilterGlobalRC8CVector3T1P10ISceneNodeT3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d8a84",
-            "size": 468,
-            "kind": "function",
-            "name": "CheckCollisionLineToEnvironment__15CAIFilterGlobalRC8CVector3T1P10ISceneNodeT3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d8c58",
-            "size": 508,
-            "kind": "function",
-            "name": "GetCollisionDistLineToEnvironment__15CAIFilterGlobalRC8CVector3T1P15CAIFilterObjectf",
             "evidence": "adjacent-compiler-markers"
           },
           {
