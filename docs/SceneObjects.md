@@ -130,7 +130,7 @@ tree and a later reader should expect them to be close rather than solved.
 - `CStaticObject::CalculateMovementTime` (27): register allocation of the three times.
 - `CStaticObject::AnimUpdate`: one missing `fmr`, which shifts the rest; the period and its
   conversion share a register in this build.
-- `CAnimObject::BeginUpdate`, `DetectGround` and `Yaw`: a local's address stays in a saved
+- `CAnimObject::DetectGround` and `Yaw`: a local's address stays in a saved
   register where the original rematerializes it.
 - `CHierObject::GetWorldLinearVelocity` (19): register choice.
 - `BumpType`, private to `Soldier_object.cpp`: the first search step appears twice with the index folded to 0, including the hit path; the loop forms tried reproduce everything but that. `CSoldierObject::OnCollision` calls it through `local_externals`.

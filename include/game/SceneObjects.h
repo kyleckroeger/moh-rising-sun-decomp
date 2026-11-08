@@ -351,10 +351,17 @@ class CAnimObject {
     void Pitch(float);
     void Roll(float);
     void SetBasis(const CVector3 &, const CVector3 &, const CVector3 &);
-    unsigned char unknown_0[0x4c];
+    struct ExtentNode {
+        unsigned char unknown_0[8];
+        float value;
+    };
+    unsigned char unknown_0[0x20];
+    ExtentNode *sortMinX, *sortMaxX, *sortMinY, *sortMaxY; // +0x20
+    unsigned char unknown_30[0x4c - 0x30];
     float scale;         // +0x4c; multiplies the animation's motion and bounds. Descriptive.
     unsigned char unknown_50[4];
     unsigned char choreographer[0x88 - 0x54]; // +0x54; EALA::Character::Choreographer methods run on it. Extent unknown.
+    CMatrix *JointMatrices() const { return *(CMatrix **)(skeleton + 0x34); } // +0xbc
     unsigned char skeleton[0xd0 - 0x88]; // +0x88; GetSkeleton returns this address. Extent unknown.
     CMatrix transform;   // +0xd0
     IVolume *localVolumeType3; // +0x110
