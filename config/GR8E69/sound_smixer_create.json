@@ -1,0 +1,55 @@
+{
+  "id": "sound_smixer_create",
+  "source": "src/sound/ea/smixer_create.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80225b98",
+      "size": 516
+    }
+  ],
+  "functions": [
+    {
+      "name": "MIX_create",
+      "address": "0x80225b98",
+      "size": 516,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CODASetDelete__3SndPFPv_v": "0x802276bc",
+    "CODASetNew__3SndPFUi_Pv": "0x802276b0",
+    "MIXI_initunpack16": "0x802291b4",
+    "MIXI_initunpackmt": "0x802291fc",
+    "MIXI_initunpackxa": "0x8022925c",
+    "MIX_reset": "0x80225e70",
+    "SFILTER_add": "0x80227e6c",
+    "SFILTER_ft24_32init__FP12FT24_32STATE": "0x80227cfc",
+    "SNDI_Delete__FPv": "0x80225b78",
+    "SNDI_New__FUi": "0x80225b58",
+    "SNDMEMI_allocz__Fi": "0x8021ae30",
+    "SNDSYS_entercritical": "0x8021f948",
+    "SNDSYS_leavecritical": "0x8021f988",
+    "memset": "0x80266778",
+    "sndmix": "0x8041ec1c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "smixer.c",
+  "original_file_index": 3186
+}

@@ -1,0 +1,73 @@
+{
+  "id": "ea_locatbig_tail",
+  "source": "src/ea/locatbig_tail.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8020bf40",
+      "size": 424
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIG_locateentry",
+      "address": "0x8020bf40",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "BIG_locateoffset",
+      "address": "0x8020bf60",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "BIG_locateoffsetz",
+      "address": "0x8020bfa0",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "BIG_locate",
+      "address": "0x8020bfe0",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "BIG_locatez",
+      "address": "0x8020c020",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "BIG_count",
+      "address": "0x8020c060",
+      "size": 136,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BIG_locateentryz": "0x8020bb00",
+    "BIG_typeofheader": "0x8020b8f0"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "locatbig.cpp",
+  "original_file_index": 2876
+}

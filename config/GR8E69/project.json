@@ -1844,7 +1844,17 @@
     "toilet_async.json",
     "toilet_lookup.json",
     "toilet_compartment.json",
-    "toilet_big.json"
+    "toilet_big.json",
+    "sound_smixfx_modlap.json",
+    "sound_smix_restorefx2.json",
+    "sound_smix_restorereverb.json",
+    "sound_smixer_create.json",
+    "sound_smixer_playf.json",
+    "sound_ssysopts.json",
+    "ea_locatbig.json",
+    "ea_locatbig_tail.json",
+    "sound_srandom.json",
+    "sound_sdspmix_auxbus.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
