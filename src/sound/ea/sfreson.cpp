@@ -8,8 +8,8 @@
    and filter history. SFILTER_modifyRESON sets the resonator from the
    frequency, rate, bandwidth and gain parameters (radius 1 - pi *
    bandwidth / rate, the two coefficients through SNDI_cos and
-   SNDI_rootof1plusx). The file is compiled with -inline on (no automatic
-   inlining), as SFILTER_reson calls resonx87 out of line. RESONSTATE and
+   SNDI_rootof1plusx). SFILTER_reson calls resonx87 out of line; the unit's
+   -O2 profile does not inline it automatically. RESONSTATE and
    the functions are named by the mangled symbols; the state layout and the
    plug-in view are inferred. */
 struct SFILTERPLUGINVIEW {
