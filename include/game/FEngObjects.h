@@ -4,17 +4,7 @@
 #include "FEngLists.h"
 #include "FEngStrings.h"
 #include "ShellManager.h"
-// A script node: its name is tested against "Show" and its hash by FindScript.
-class FEScript : public FEMinNode {
-  public:
-    unsigned char unknown_c[0x10 - 0xc];
-    int time;                 // +0x10; SetScript restarts it.
-    unsigned char unknown_14[0x2c - 0x14];
-    const char *name;         // +0x2c
-    unsigned char unknown_30[0x30 - 0x30];
-    unsigned long hash;       // +0x30
-};
-
+#include "FEScript.h"
 // The object fields the string objects add.
 class FEStringObject : public FEObject {
   public:

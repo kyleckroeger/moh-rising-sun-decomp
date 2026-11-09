@@ -2276,7 +2276,11 @@
     "object_fade.json",
     "search_node_lifetime.json",
     "search_node_pool.json",
-    "search_node_direct.json"
+    "search_node_direct.json",
+    "femessageresponse.json",
+    "fescript_init.json",
+    "fescript_pool.json",
+    "feslotpool.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

@@ -48,9 +48,6 @@ FEMinNode *FERefList::RemHead() {
 }
 int FERefList::GetNumElements() {
     int n = 0;
-    FEMinNode *node;
-    if (isReference) node = ((FERefList *)head)->GetHead();
-    else node = head;
-    for (; node; node = node->next) n++;
+    for (FEMinNode *node = GetHead(); node; node = node->next) n++;
     return n;
 }

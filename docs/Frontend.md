@@ -69,6 +69,20 @@ they share a string with `EnableButton` across it.
 entries of three 64-byte strings, a demo entry and a credits entry, starting at `+0x84`. It ends at
 `+0x2304`, which fixes the position of `ShellManager`'s following members.
 
+`FEMessageResponse` objects come from a static pool. `FEPoolNode`'s name and arguments are in its
+table symbols, and `source/FEngine/ObjectPool.h:87` labels its allocation; the methods and members in
+`FEObjectPool.h` are descriptive. `FEMinNode` and `FEMinList` construct inline; `FEngLists.h` and
+`FEMessageResponse.h` use `#pragma interface` so that the inline destructors reproduce their callers
+without emitting weak copies. Static pool objects (`NodePool`) are declared but not defined yet: the original
+static initializers have no destructor arm, and defining the object here gives one.
+
+`FESlotPool.h` holds the block allocator: an `FEMultiPool` is a list of `FESlotPool`s by block size, and
+each pool a list of `FESlotNode`s of 32 blocks tracked in a 4-byte mask. `FEScript.h` holds
+`FEScript` (pooled like `FEMessageResponse`), `FEKeyTrack` and `FEKeyNode`, whose sizes come from their
+pools and allocations. `FEKeyTrack`'s members are inferred from `FEScript`'s track array construction.
+`FEScriptEventList` is a descriptive name for the two words at `FEScript+0x24` that its destructor releases.
+`FERefList::GetHead` is inline, recursive through a reference, which is why it has an out-of-line copy.
+
 `FEObject`'s flag word at `+0x1c`, data block at `+0x2c`, response and script lists and current
 script at `+0x54` are verified by its methods and `PackageHandler`'s. Its data comes from the file-local
 pool `ObjDataPool`.

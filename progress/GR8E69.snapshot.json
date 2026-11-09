@@ -721,7 +721,8 @@
       "src/frontend/fe_fewidestring.cpp": "f7761c00db804aa4a8e7de7bef594fa871556235cd44ae89187ff25d47b93a57",
       "src/frontend/fe_findchild.cpp": "3006814fc242a6cc26f470caaaa3445e08e4abc1ff9947055aff2284f9c496a0",
       "src/frontend/fe_generateescapesequence.cpp": "f72477ed5288e84ce4e22224343f50ffc3e549510881941258c322e23b3b390a",
-      "src/frontend/fe_referencelist.cpp": "b094ce25115a8dca044742a73143575cd6106c1cfd4b742ab59a9c90b1928578",
+      "src/frontend/fe_referencelist.cpp": "8695bb2d7b711a1450cd833c4ec517a37f94cbe4ba0c458956726f95ed6f78a7",
+      "src/frontend/femessageresponse.cpp": "8383de6e6ca5707957b27223878c529b4e430c5d2663e4707217fb73176070cd",
       "src/frontend/fengine_addtoidlelist.cpp": "79853aec42c20268dd2b09ca07ad06ab00180016046f55219a96e8edb270e31f",
       "src/frontend/fengine_clearpackagemarkers.cpp": "c53ffb148f7e384281510157164b9264b6f863c833dab85e4a2aafd7caded283",
       "src/frontend/fengine_recordlastpackagebutton.cpp": "def967d88c4b012513e6cc2e0fc3eccd576394e000086eae084dd306c86e1719",
@@ -730,6 +731,9 @@
       "src/frontend/feobj_setcurrentscript.cpp": "b90076a1eae423e1fbd55f98891b56427c89afc2795034826960e8b723882b2c",
       "src/frontend/feobj_setdatasize.cpp": "2402e3d657e09d4316eb1db6f746e750e9509a8d5ce7932d2331066321aecf01",
       "src/frontend/feobj_setscript.cpp": "b0d4e885805696fc315444476456a387857c8ff6bf746bf4eb5bc0c0ebfe15d8",
+      "src/frontend/fescript_init.cpp": "acca2ac0e2fdddac0893017f3bc8c3149a48f34039ca67c6c002a362b86e66e8",
+      "src/frontend/fescript_pool.cpp": "462ba70b9980a98bfbecab1ffc5ee5b2e103e16ebd541daad3df72b0b5cb4fc8",
+      "src/frontend/feslotpool.cpp": "16006d3616e75c42e460305edd0935c44f5ffaf272dd92127e442f24a7dc5405",
       "src/frontend/hash.cpp": "6d1834f84056ea091ae722973283ab6edc0b53f73938a4866d969db56d62d55b",
       "src/frontend/mc_getname.cpp": "117e60c8a600ab7d5eb1733d4c259ba7cf2c65a94b0ff58dd99ecc1a0ceb515e",
       "src/frontend/pkgh_enablebutton.cpp": "5ff3dc80fc2a45f9c12efb01442fd7eae7730f036da08cec041446b4c4a5b566",
@@ -2658,8 +2662,12 @@
       "include/game/EAGLViewPort.h": "696db5236385f6c780a7eaf83a79a088ab55672ebedbaca22f3cdfa84f9bab91",
       "include/game/Endian.h": "6f3a06aca2ed749c09949cedff932c6e9a8db1272b5393bdc9a46185a384387b",
       "include/game/FEHash.h": "5d2777480e94ab65796f9850193722c7585a884299d6b68b610c5b3ce6a08757",
-      "include/game/FEngLists.h": "5720781cb7d24b546e880aa86d70617475e848368a66e18f22588b6b793bd42f",
-      "include/game/FEngObjects.h": "d2a91c3ced09c8a6554257fa60c3534dedee38c10df81debbe27f88f53de89ca",
+      "include/game/FEMessageResponse.h": "61a8d2f2e476029cde734cf9498ee8748fdcc79963bdfc36ab98a4c84eb7d20c",
+      "include/game/FEObjectPool.h": "b89812c3ff027e7a3de82fe707e58d4ef1cea3b39f598919dc6bee573580a278",
+      "include/game/FEScript.h": "e92d571a5847a52aad16aa66ba449a2cd5610f070f0ed45bf9bcf19dbac7ea45",
+      "include/game/FESlotPool.h": "fe27a4a356873ad71d8f66bb85a594ef2170c08f3ce299ea30ed288e398e5bf6",
+      "include/game/FEngLists.h": "45dbb33296fa08f8a4e6ba366dc7e0ec8d1e599715125bac7324eabf6592cb68",
+      "include/game/FEngObjects.h": "02f629e8c69f1dea4e6856d5dc097102793ef9994758a331698c381b6d1d0df7",
       "include/game/FEngStrings.h": "3fb38fb321893a9cc7e83396ced3500fb9dfbf859a210f4e470c2961e735cc86",
       "include/game/FEngine.h": "4c04173be7902558548e17533ea9eea20e93970df39fcc467e5df02edd563d26",
       "include/game/Fader.h": "5e6a829b80a545618de960a1fcb77e1c59c1ea1ba2f2e0fee87d54c2e7c73143",
@@ -3608,6 +3616,7 @@
       "config/GR8E69/fe_hash_upper.json": "c9e6dff86f6763a1c5f4962057e5c6f58bd9587b9ea3b31fb71bf0e49f6bb451",
       "config/GR8E69/fe_referencelist.json": "46e7f8e3d478905bd2ea9ac697d1e4ab5478fceeb3420d02a74d760cb0b27808",
       "config/GR8E69/fe_upper_case.json": "db8afcb483244836c37cf2af7fedcc32bef682ca25f38e27ced5d4cf99978174",
+      "config/GR8E69/femessageresponse.json": "11725a584c60179ec85bcacc3b273562a6c1881e595a38e93a163219cf28bc1c",
       "config/GR8E69/fengine_addtoidlelist.json": "8ff963f5da0e4b12de907be8324a9e996ae48ab9ef835d0564153919adca2afb",
       "config/GR8E69/fengine_clearpackagemarkers.json": "b3b060147b271056c700d7bc87441a26a15aaae2bf71b707fc51916e90340b3c",
       "config/GR8E69/fengine_recordlastpackagebutton.json": "f0cb28686d3bb495fb37eec0dfbfbb3e4aa7d192408ef17456abdf53ed09364b",
@@ -3616,6 +3625,9 @@
       "config/GR8E69/feobj_setcurrentscript.json": "0a319121daa6fa3a581409a88c5ce5cb74ddb8b75bf2ec3f3c3a4141a20cf665",
       "config/GR8E69/feobj_setdatasize.json": "6aa3b0fee9e8546df04e7d85b3bac85dc9e4196264b5531daea81579dff442aa",
       "config/GR8E69/feobj_setscript.json": "706cd34603f8d8ab8e28e87c5da3d371efb68c6c48eaf40dee15b2373ad49d3b",
+      "config/GR8E69/fescript_init.json": "35f03d5d05a9bcd335de4af45174a07e61d2bc2419bddcbb4989ac2a010f6b19",
+      "config/GR8E69/fescript_pool.json": "e7799132a3cff2e90073baaf6c68f4fcbb28e4e8d09db114193f0b8cf1184ea6",
+      "config/GR8E69/feslotpool.json": "d61dbac7aab0651cf3d365a1a89de47931aefd72b4d064c3df6efc9eb138118d",
       "config/GR8E69/fiber_construct.json": "9a6c883516c846241681107ecb034969838fcb1246adcc5dbf2f09e654c198cc",
       "config/GR8E69/fiber_create.json": "335dad58eb6eabbb0cae658c8c8f6e03a6c8991484a47e3f7fb85a9df19c7293",
       "config/GR8E69/fiber_destructor.json": "71c81500260de67a85ab268fa51cfb02e713685c92f32a402b5ffd67bfe1f63b",
@@ -4056,7 +4068,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "13042f90ab570c256319a84fc6bfdb1e6fb4bb48742df6ccc3ac690d47f72698",
+      "config/GR8E69/project.json": "9a77fe57b3ad6597aeac54a32aca440e90ff6e0eac333db52f2d884a84b86a15",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -6752,14 +6764,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1173132,
+    "matching_code_bytes": 1177104,
     "total_executable_code_bytes": 2492032,
-    "percent": 47.07531845497971,
+    "percent": 47.2347064564179,
     "categories": {
-      "reconstructed_game": 780916,
+      "reconstructed_game": 784888,
       "restored_library": 392216
     },
-    "matching_functions": 6052
+    "matching_functions": 6075
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -7477,6 +7489,7 @@
     "config/GR8E69/fe_hash_upper.json": "c9e6dff86f6763a1c5f4962057e5c6f58bd9587b9ea3b31fb71bf0e49f6bb451",
     "config/GR8E69/fe_referencelist.json": "46e7f8e3d478905bd2ea9ac697d1e4ab5478fceeb3420d02a74d760cb0b27808",
     "config/GR8E69/fe_upper_case.json": "db8afcb483244836c37cf2af7fedcc32bef682ca25f38e27ced5d4cf99978174",
+    "config/GR8E69/femessageresponse.json": "11725a584c60179ec85bcacc3b273562a6c1881e595a38e93a163219cf28bc1c",
     "config/GR8E69/fengine_addtoidlelist.json": "8ff963f5da0e4b12de907be8324a9e996ae48ab9ef835d0564153919adca2afb",
     "config/GR8E69/fengine_clearpackagemarkers.json": "b3b060147b271056c700d7bc87441a26a15aaae2bf71b707fc51916e90340b3c",
     "config/GR8E69/fengine_recordlastpackagebutton.json": "f0cb28686d3bb495fb37eec0dfbfbb3e4aa7d192408ef17456abdf53ed09364b",
@@ -7485,6 +7498,9 @@
     "config/GR8E69/feobj_setcurrentscript.json": "0a319121daa6fa3a581409a88c5ce5cb74ddb8b75bf2ec3f3c3a4141a20cf665",
     "config/GR8E69/feobj_setdatasize.json": "6aa3b0fee9e8546df04e7d85b3bac85dc9e4196264b5531daea81579dff442aa",
     "config/GR8E69/feobj_setscript.json": "706cd34603f8d8ab8e28e87c5da3d371efb68c6c48eaf40dee15b2373ad49d3b",
+    "config/GR8E69/fescript_init.json": "35f03d5d05a9bcd335de4af45174a07e61d2bc2419bddcbb4989ac2a010f6b19",
+    "config/GR8E69/fescript_pool.json": "e7799132a3cff2e90073baaf6c68f4fcbb28e4e8d09db114193f0b8cf1184ea6",
+    "config/GR8E69/feslotpool.json": "d61dbac7aab0651cf3d365a1a89de47931aefd72b4d064c3df6efc9eb138118d",
     "config/GR8E69/fiber_construct.json": "9a6c883516c846241681107ecb034969838fcb1246adcc5dbf2f09e654c198cc",
     "config/GR8E69/fiber_create.json": "335dad58eb6eabbb0cae658c8c8f6e03a6c8991484a47e3f7fb85a9df19c7293",
     "config/GR8E69/fiber_destructor.json": "71c81500260de67a85ab268fa51cfb02e713685c92f32a402b5ffd67bfe1f63b",
@@ -7925,7 +7941,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "13042f90ab570c256319a84fc6bfdb1e6fb4bb48742df6ccc3ac690d47f72698",
+    "config/GR8E69/project.json": "9a77fe57b3ad6597aeac54a32aca440e90ff6e0eac333db52f2d884a84b86a15",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -9354,8 +9370,12 @@
     "include/game/EAGLViewPort.h": "696db5236385f6c780a7eaf83a79a088ab55672ebedbaca22f3cdfa84f9bab91",
     "include/game/Endian.h": "6f3a06aca2ed749c09949cedff932c6e9a8db1272b5393bdc9a46185a384387b",
     "include/game/FEHash.h": "5d2777480e94ab65796f9850193722c7585a884299d6b68b610c5b3ce6a08757",
-    "include/game/FEngLists.h": "5720781cb7d24b546e880aa86d70617475e848368a66e18f22588b6b793bd42f",
-    "include/game/FEngObjects.h": "d2a91c3ced09c8a6554257fa60c3534dedee38c10df81debbe27f88f53de89ca",
+    "include/game/FEMessageResponse.h": "61a8d2f2e476029cde734cf9498ee8748fdcc79963bdfc36ab98a4c84eb7d20c",
+    "include/game/FEObjectPool.h": "b89812c3ff027e7a3de82fe707e58d4ef1cea3b39f598919dc6bee573580a278",
+    "include/game/FEScript.h": "e92d571a5847a52aad16aa66ba449a2cd5610f070f0ed45bf9bcf19dbac7ea45",
+    "include/game/FESlotPool.h": "fe27a4a356873ad71d8f66bb85a594ef2170c08f3ce299ea30ed288e398e5bf6",
+    "include/game/FEngLists.h": "45dbb33296fa08f8a4e6ba366dc7e0ec8d1e599715125bac7324eabf6592cb68",
+    "include/game/FEngObjects.h": "02f629e8c69f1dea4e6856d5dc097102793ef9994758a331698c381b6d1d0df7",
     "include/game/FEngStrings.h": "3fb38fb321893a9cc7e83396ced3500fb9dfbf859a210f4e470c2961e735cc86",
     "include/game/FEngine.h": "4c04173be7902558548e17533ea9eea20e93970df39fcc467e5df02edd563d26",
     "include/game/Fader.h": "5e6a829b80a545618de960a1fcb77e1c59c1ea1ba2f2e0fee87d54c2e7c73143",
@@ -10306,7 +10326,8 @@
     "src/frontend/fe_fewidestring.cpp": "f7761c00db804aa4a8e7de7bef594fa871556235cd44ae89187ff25d47b93a57",
     "src/frontend/fe_findchild.cpp": "3006814fc242a6cc26f470caaaa3445e08e4abc1ff9947055aff2284f9c496a0",
     "src/frontend/fe_generateescapesequence.cpp": "f72477ed5288e84ce4e22224343f50ffc3e549510881941258c322e23b3b390a",
-    "src/frontend/fe_referencelist.cpp": "b094ce25115a8dca044742a73143575cd6106c1cfd4b742ab59a9c90b1928578",
+    "src/frontend/fe_referencelist.cpp": "8695bb2d7b711a1450cd833c4ec517a37f94cbe4ba0c458956726f95ed6f78a7",
+    "src/frontend/femessageresponse.cpp": "8383de6e6ca5707957b27223878c529b4e430c5d2663e4707217fb73176070cd",
     "src/frontend/fengine_addtoidlelist.cpp": "79853aec42c20268dd2b09ca07ad06ab00180016046f55219a96e8edb270e31f",
     "src/frontend/fengine_clearpackagemarkers.cpp": "c53ffb148f7e384281510157164b9264b6f863c833dab85e4a2aafd7caded283",
     "src/frontend/fengine_recordlastpackagebutton.cpp": "def967d88c4b012513e6cc2e0fc3eccd576394e000086eae084dd306c86e1719",
@@ -10315,6 +10336,9 @@
     "src/frontend/feobj_setcurrentscript.cpp": "b90076a1eae423e1fbd55f98891b56427c89afc2795034826960e8b723882b2c",
     "src/frontend/feobj_setdatasize.cpp": "2402e3d657e09d4316eb1db6f746e750e9509a8d5ce7932d2331066321aecf01",
     "src/frontend/feobj_setscript.cpp": "b0d4e885805696fc315444476456a387857c8ff6bf746bf4eb5bc0c0ebfe15d8",
+    "src/frontend/fescript_init.cpp": "acca2ac0e2fdddac0893017f3bc8c3149a48f34039ca67c6c002a362b86e66e8",
+    "src/frontend/fescript_pool.cpp": "462ba70b9980a98bfbecab1ffc5ee5b2e103e16ebd541daad3df72b0b5cb4fc8",
+    "src/frontend/feslotpool.cpp": "16006d3616e75c42e460305edd0935c44f5ffaf272dd92127e442f24a7dc5405",
     "src/frontend/hash.cpp": "6d1834f84056ea091ae722973283ab6edc0b53f73938a4866d969db56d62d55b",
     "src/frontend/mc_getname.cpp": "117e60c8a600ab7d5eb1733d4c259ba7cf2c65a94b0ff58dd99ecc1a0ceb515e",
     "src/frontend/pkgh_enablebutton.cpp": "5ff3dc80fc2a45f9c12efb01442fd7eae7730f036da08cec041446b4c4a5b566",
@@ -56741,6 +56765,78 @@
       "discarded_functions": [],
       "object_sha256": "d9ca2c8990dbb035fb9ce75efe959670168a447522e4ec8a991052439351a33d",
       "linked_sha256": "e988872bb3c7481af42444105944046dcbce41ee36812c470c74873edce16e9a"
+    },
+    {
+      "id": "femessageresponse",
+      "category": "reconstructed_game",
+      "functions": 10,
+      "code_bytes": 1548,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "d7a40c1aa6f66a4de94afb31e3a1eed0a9255b9790c4d392ea1ce952a7716157",
+      "linked_sha256": "5120f6c93e1912f2d627181e06721bd1204ba54c38508de462776887cd68a1fe"
+    },
+    {
+      "id": "fescript_init",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 284,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "9f510bc4d5b90090662ecf11f4dc64183be1f2bcc72447c85faea8e138380733",
+      "linked_sha256": "aa2a2cb3a3959e7d83430e4a66f57be4caa4ac86f2dd4ade0355d96c88d8caef"
+    },
+    {
+      "id": "fescript_pool",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 1128,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "4a918c651dd06123477c0006c437147a1760f40ab9a964df36be63d3135909f5",
+      "linked_sha256": "65f0f7c017cb918dc357b7dc66ebffca63b7da2b4da6ef532801bf42e53da0bb"
+    },
+    {
+      "id": "feslotpool",
+      "category": "reconstructed_game",
+      "functions": 6,
+      "code_bytes": 1012,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "fa415e6c5f7f1fe78dc099655cae41e0654abab152d5263eda81554887a93d5b",
+      "linked_sha256": "bfc4557f03f9fccfb2fc0c9dca37806fa8528adfec10508fc533f57c9bbd7345"
     }
   ],
   "code_map": {
@@ -57724,76 +57820,6 @@
         "file_name": "FEMessageResponse.cpp",
         "ranges": [
           {
-            "address": "0x8004be7c",
-            "size": 64,
-            "kind": "function",
-            "name": "_._10FEResponse",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004bebc",
-            "size": 128,
-            "kind": "function",
-            "name": "__as__10FEResponseR10FEResponse",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004bf3c",
-            "size": 100,
-            "kind": "function",
-            "name": "SetParam__10FEResponsePCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004bfa0",
-            "size": 104,
-            "kind": "function",
-            "name": "ReleaseParam__10FEResponse",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004c008",
-            "size": 88,
-            "kind": "function",
-            "name": "_._17FEMessageResponse",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004c060",
-            "size": 340,
-            "kind": "function",
-            "name": "__nw__17FEMessageResponseUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004c1b4",
-            "size": 228,
-            "kind": "function",
-            "name": "__dl__17FEMessageResponsePv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004c298",
-            "size": 124,
-            "kind": "function",
-            "name": "PurgeResponses__17FEMessageResponse",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004c314",
-            "size": 304,
-            "kind": "function",
-            "name": "SetCount__17FEMessageResponseUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004c444",
-            "size": 68,
-            "kind": "function",
-            "name": "FindResponse__C17FEMessageResponseUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8004c488",
             "size": 144,
             "kind": "function",
@@ -58486,59 +58512,10 @@
         "file_name": "FEScript.cpp",
         "ranges": [
           {
-            "address": "0x80055208",
-            "size": 36,
-            "kind": "function",
-            "name": "Init__8FEScript",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8005522c",
-            "size": 248,
-            "kind": "function",
-            "name": "_._8FEScript",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80055324",
             "size": 556,
             "kind": "function",
             "name": "__8FEScriptR8FEScriptb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80055550",
-            "size": 344,
-            "kind": "function",
-            "name": "__nw__8FEScriptUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800556a8",
-            "size": 228,
-            "kind": "function",
-            "name": "__dl__8FEScriptPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8005578c",
-            "size": 140,
-            "kind": "function",
-            "name": "SetName__8FEScriptPCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80055818",
-            "size": 336,
-            "kind": "function",
-            "name": "SetTrackCount__8FEScriptl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80055968",
-            "size": 80,
-            "kind": "function",
-            "name": "FindTrack__C8FEScript18FEKeyTrack_Indices",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -58559,59 +58536,6 @@
         "marker_interval": [
           "0x80055208",
           "0x80055a24"
-        ]
-      },
-      {
-        "name": "Unmatched files/FESlotPool.cpp [inferred file group]",
-        "file_record": 50,
-        "file_name": "FESlotPool.cpp",
-        "ranges": [
-          {
-            "address": "0x80055a24",
-            "size": 172,
-            "kind": "function",
-            "name": "AllocBlock__10FESlotNode",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80055ad0",
-            "size": 64,
-            "kind": "function",
-            "name": "FreeBlock__10FESlotNodePUc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80055b10",
-            "size": 224,
-            "kind": "function",
-            "name": "Alloc__10FESlotPool",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80055bf0",
-            "size": 180,
-            "kind": "function",
-            "name": "Free__10FESlotPoolPUc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80055ca4",
-            "size": 212,
-            "kind": "function",
-            "name": "Alloc__11FEMultiPoolUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80055d78",
-            "size": 160,
-            "kind": "function",
-            "name": "Free__11FEMultiPoolPUc",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x80055a24",
-          "0x80055e18"
         ]
       },
       {

@@ -2,12 +2,14 @@
 // member names describe what the code does with them.
 #ifndef GAME_FENG_LISTS_H
 #define GAME_FENG_LISTS_H
+#pragma interface
 
 class FEMinNode {
   public:
     FEMinNode *next; // +0x0
     FEMinNode *prev; // +0x4
-    virtual ~FEMinNode(); // table at +0x8
+    FEMinNode() { prev = next = (FEMinNode *)0xabadcafe; }
+    virtual ~FEMinNode() {} // table at +0x8
 };
 
 class FENode : public FEMinNode {
@@ -21,6 +23,7 @@ class FEMinList {
     int count;       // +0x0
     FEMinNode *head; // +0x4
     FEMinNode *tail; // +0x8
+    FEMinList() { head = 0; tail = 0; count = 0; }
     virtual ~FEMinList(); // table at +0xc
     void AddTail(FEMinNode *node) { AddNode(tail, node); }
     void AddNode(FEMinNode *, FEMinNode *);
@@ -41,12 +44,15 @@ class FERefList {
     int isReference;  // +0x0
     FEMinNode *head;  // +0x4; the referenced FERefList when isReference is set.
     FEMinNode *tail;  // +0x8
+    FERefList() { head = 0; tail = 0; isReference = 0; }
+    virtual ~FERefList() { if (!isReference) Purge(); } // table at +0xc
+    void Purge();
     void ReferenceList(FERefList *);
     void AddNode(FEMinNode *, FEMinNode *);
     FEMinNode *RemNode(FEMinNode *);
     FEMinNode *RemHead();
     int GetNumElements();
-    FEMinNode *GetHead() const;
+    FEMinNode *GetHead() const { return isReference ? ((FERefList *)head)->GetHead() : head; }
 };
 
 class FEWideString;
@@ -128,7 +134,7 @@ class FEPackageList : public FEMinList {
     void ReplaceParentLinks(const FEPackage *, const FEPackage *);
 };
 
-unsigned long FEHashUpper(const char *);
+unsigned int FEHashUpper(const char *);
 int FEStricmp(const char *, const char *);
 
 #endif
