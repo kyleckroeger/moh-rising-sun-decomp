@@ -2281,7 +2281,10 @@
     "fescript_init.json",
     "fescript_pool.json",
     "feslotpool.json",
-    "meshparticle_alloc.json"
+    "meshparticle_alloc.json",
+    "soundbussman_update.json",
+    "soundbussman_retrofit.json",
+    "soundbussman_apply.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

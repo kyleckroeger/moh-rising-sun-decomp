@@ -491,8 +491,14 @@ inline destructor: `delete chunk` tests for null, which it does not for a class 
 with eight 24-byte events from `+4`. The clock at `+208` advances on each update, and when it passes
 the current event's time the buss moves on or stops and takes that event's level as its volume. Member
 names in [`SoundBuss.h`](../include/game/SoundBuss.h) are inferred from use. `InsertSoundBus`,
-`SetSoundBuss`, `UpdateBussEntry`, `RetroFit` and the `cSoundBussMan` methods other than
-`InitSoundBussFreeList` are not reconstructed.
+`SetSoundBuss`, `UpdateBussEntry` and `RetroFit` are not reconstructed.
+
+`cSoundBussMan` is 76 bytes, bounded by `soundZone` after the schedule in `g_SoundMan`: an active count at `+4`,
+a buss list linked through `next` at `+8`, and the `dwi::list`s of inactive (`+0xc`) and active (`+0x2c`) busses.
+A new sound takes the inactive busses it names by CRC in `bussCRCs` and then each active buss's retrofit.
+Member names are inferred. `Update`, `FindBuss`, `RetroFitNewSound` and `ApplyActiveBusses` are reconstructed;
+the constructor, `Init`, `Shutdown`, `AddBuss`, `ActivateBuss`, `AddInactiveRetroFit`, `ApplyInactiveBusses` and
+`AddActiveBusses` are not.
 
 ## Sound manager
 

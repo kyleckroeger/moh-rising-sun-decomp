@@ -2131,6 +2131,9 @@
       "src/sound/soundbuss_clock.cpp": "b8ea7799d5f6d788d2c63244ff3778ed8d2245f190dde4098e96a26aadefb669",
       "src/sound/soundbuss_ctor.cpp": "bd1f259721df42d927b6bc646c5151d791201555b3b5771e5e3401c7d0eb66c8",
       "src/sound/soundbuss_freelist.cpp": "1c942cb64c51fcd8c8128a20af99329a93cce52859e6a656ec2c93995a0654be",
+      "src/sound/soundbussman_apply.cpp": "31c8293dabb940a745bd7909a5c22d12cbc98b86cacc727d3b3221d663a79341",
+      "src/sound/soundbussman_retrofit.cpp": "c8966bace68ef6ed5608be4e9baf21e2aaa44b6a3c77a0a451703cf62ae2ee72",
+      "src/sound/soundbussman_update.cpp": "fecf9831bf0e726116498fb1dbd8fb1a1d146c8b16b348806e212f6b945425ba",
       "src/staticmesh/mesh_anim.cpp": "bc53058cd0b86525ae610a1140974878b3c697be7235945cdc4534bb27a29b72",
       "src/staticmesh/mesh_animframe.cpp": "2e7aabfc03739176d8e549b9f4ded922cc54b375f3c61809510da51ea940ec54",
       "src/staticmesh/mesh_center.cpp": "b9feb4826bf5e9d55ac8ad8daa01c5dec76d274ac4285ecff9f71727c50c8753",
@@ -2732,11 +2735,11 @@
       "include/game/SndMicroTalk.h": "47d54f16635c2a64944419af8564ee38901f410b5dc9d139ed973fb87d8ff937",
       "include/game/SndSystem.h": "7766ae7c6fbd1228ce2c309bb0f61588c2862828adbeea8e059134e149bacb6f",
       "include/game/SoundAmbience.h": "a8ffdd3a842aa24e0d8511216e05fd27625c8c2e96c7db19d7557afa729b1fb5",
-      "include/game/SoundBuss.h": "75b881885a01592151ee125c282bb1239dbdb7035ddd48aa27497ed12a3e1e21",
+      "include/game/SoundBuss.h": "368e5c913a308fb4b9aef169cb08bd19127c5dbcaf995a7d4591c15e170c97af",
       "include/game/SoundEntryPool.h": "3766b906852ceb49985a2e376f46077c2e739f8dc17ca0f16a47b60b79eb0d59",
       "include/game/SoundEvents.h": "d20e7b3d30760633777ae0551fa0af9a18a358637d8ab674e20c4494961f05ed",
       "include/game/SoundGlobals.h": "4a5636157b8b056e91d9701d0b5c2a82294d372e9b2a3c7f436fa15e3ace5c27",
-      "include/game/SoundManager.h": "56385d217f3e38db067a8c415c02d29fa1580fbe5543ea41e00fa4b444889520",
+      "include/game/SoundManager.h": "32d61afb7a484bac25abad1edfb0bcd912e293801ecc1d34e30c923338a288e6",
       "include/game/SoundMixerView.h": "787617bfe14ec7a736949ac46528a91cfe30e6899acd0a9e811d83bf9364059c",
       "include/game/SoundPlayOptions.h": "270f5edef5fadf459bd2a9cb074a56226fa6bfde36e98d08a858e8a68c1d5ad8",
       "include/game/Sphere.h": "4fb7f91c288e5b711e495765718b14847cbb478030509f25cbb7defcbc4a182f",
@@ -4070,7 +4073,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "1ebd6d639241986ef6b4b572d50f10d65fa40bd8e03100ee3c31a50f154ae07e",
+      "config/GR8E69/project.json": "0da2b8925bae5b0e5e0b51df63bbd0ce07eefa303628b43eadd2b096265695bc",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -4933,6 +4936,9 @@
       "config/GR8E69/soundbuss_clock.json": "b616c3c4074c5ba3b326ec22b5bcf06657831a2a6409eaa57bdec4b694ceaa6a",
       "config/GR8E69/soundbuss_ctor.json": "173e8e7b3eb07d68467e27ae7222e8451a8df680cfee269559dbf007c6f1905f",
       "config/GR8E69/soundbuss_freelist.json": "61f61c1495b34e363f45da017b091f7b7d85141eed8ec4a207d0dc48d0671e57",
+      "config/GR8E69/soundbussman_apply.json": "8d814c785a39b27623924e22b48368f0ba7bcccd0025af4ab8ff296a1dd09f8b",
+      "config/GR8E69/soundbussman_retrofit.json": "e39493f8921cd3209630df244711ae25fe75b007ef3dd7aa85dff089d7db585f",
+      "config/GR8E69/soundbussman_update.json": "0cd78ec29bb748d5f0ecac8c40e48a0e7bffb9992e54684ee44fde6a29a064eb",
       "config/GR8E69/soundman_columns.json": "ba2d83d1783513f2213003a4d3c4dcf896845a132b3338973f8108995aefa8bc",
       "config/GR8E69/soundman_ctor.json": "76baa1a3b42f8f4b4a49e166abcee80251dcbc8b182706e658ee6d08bc1c4db4",
       "config/GR8E69/soundman_remove.json": "7b6c899b19eb8b454821d9a6e6b55c09cea3248ffc397502a6bb8db3fa129192",
@@ -6766,14 +6772,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1177248,
+    "matching_code_bytes": 1177792,
     "total_executable_code_bytes": 2492032,
-    "percent": 47.24048487338846,
+    "percent": 47.26231444861061,
     "categories": {
-      "reconstructed_game": 785032,
+      "reconstructed_game": 785576,
       "restored_library": 392216
     },
-    "matching_functions": 6076
+    "matching_functions": 6080
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -7944,7 +7950,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "1ebd6d639241986ef6b4b572d50f10d65fa40bd8e03100ee3c31a50f154ae07e",
+    "config/GR8E69/project.json": "0da2b8925bae5b0e5e0b51df63bbd0ce07eefa303628b43eadd2b096265695bc",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -8807,6 +8813,9 @@
     "config/GR8E69/soundbuss_clock.json": "b616c3c4074c5ba3b326ec22b5bcf06657831a2a6409eaa57bdec4b694ceaa6a",
     "config/GR8E69/soundbuss_ctor.json": "173e8e7b3eb07d68467e27ae7222e8451a8df680cfee269559dbf007c6f1905f",
     "config/GR8E69/soundbuss_freelist.json": "61f61c1495b34e363f45da017b091f7b7d85141eed8ec4a207d0dc48d0671e57",
+    "config/GR8E69/soundbussman_apply.json": "8d814c785a39b27623924e22b48368f0ba7bcccd0025af4ab8ff296a1dd09f8b",
+    "config/GR8E69/soundbussman_retrofit.json": "e39493f8921cd3209630df244711ae25fe75b007ef3dd7aa85dff089d7db585f",
+    "config/GR8E69/soundbussman_update.json": "0cd78ec29bb748d5f0ecac8c40e48a0e7bffb9992e54684ee44fde6a29a064eb",
     "config/GR8E69/soundman_columns.json": "ba2d83d1783513f2213003a4d3c4dcf896845a132b3338973f8108995aefa8bc",
     "config/GR8E69/soundman_ctor.json": "76baa1a3b42f8f4b4a49e166abcee80251dcbc8b182706e658ee6d08bc1c4db4",
     "config/GR8E69/soundman_remove.json": "7b6c899b19eb8b454821d9a6e6b55c09cea3248ffc397502a6bb8db3fa129192",
@@ -9442,11 +9451,11 @@
     "include/game/SndMicroTalk.h": "47d54f16635c2a64944419af8564ee38901f410b5dc9d139ed973fb87d8ff937",
     "include/game/SndSystem.h": "7766ae7c6fbd1228ce2c309bb0f61588c2862828adbeea8e059134e149bacb6f",
     "include/game/SoundAmbience.h": "a8ffdd3a842aa24e0d8511216e05fd27625c8c2e96c7db19d7557afa729b1fb5",
-    "include/game/SoundBuss.h": "75b881885a01592151ee125c282bb1239dbdb7035ddd48aa27497ed12a3e1e21",
+    "include/game/SoundBuss.h": "368e5c913a308fb4b9aef169cb08bd19127c5dbcaf995a7d4591c15e170c97af",
     "include/game/SoundEntryPool.h": "3766b906852ceb49985a2e376f46077c2e739f8dc17ca0f16a47b60b79eb0d59",
     "include/game/SoundEvents.h": "d20e7b3d30760633777ae0551fa0af9a18a358637d8ab674e20c4494961f05ed",
     "include/game/SoundGlobals.h": "4a5636157b8b056e91d9701d0b5c2a82294d372e9b2a3c7f436fa15e3ace5c27",
-    "include/game/SoundManager.h": "56385d217f3e38db067a8c415c02d29fa1580fbe5543ea41e00fa4b444889520",
+    "include/game/SoundManager.h": "32d61afb7a484bac25abad1edfb0bcd912e293801ecc1d34e30c923338a288e6",
     "include/game/SoundMixerView.h": "787617bfe14ec7a736949ac46528a91cfe30e6899acd0a9e811d83bf9364059c",
     "include/game/SoundPlayOptions.h": "270f5edef5fadf459bd2a9cb074a56226fa6bfde36e98d08a858e8a68c1d5ad8",
     "include/game/Sphere.h": "4fb7f91c288e5b711e495765718b14847cbb478030509f25cbb7defcbc4a182f",
@@ -11739,6 +11748,9 @@
     "src/sound/soundbuss_clock.cpp": "b8ea7799d5f6d788d2c63244ff3778ed8d2245f190dde4098e96a26aadefb669",
     "src/sound/soundbuss_ctor.cpp": "bd1f259721df42d927b6bc646c5151d791201555b3b5771e5e3401c7d0eb66c8",
     "src/sound/soundbuss_freelist.cpp": "1c942cb64c51fcd8c8128a20af99329a93cce52859e6a656ec2c93995a0654be",
+    "src/sound/soundbussman_apply.cpp": "31c8293dabb940a745bd7909a5c22d12cbc98b86cacc727d3b3221d663a79341",
+    "src/sound/soundbussman_retrofit.cpp": "c8966bace68ef6ed5608be4e9baf21e2aaa44b6a3c77a0a451703cf62ae2ee72",
+    "src/sound/soundbussman_update.cpp": "fecf9831bf0e726116498fb1dbd8fb1a1d146c8b16b348806e212f6b945425ba",
     "src/staticmesh/mesh_anim.cpp": "bc53058cd0b86525ae610a1140974878b3c697be7235945cdc4534bb27a29b72",
     "src/staticmesh/mesh_animframe.cpp": "2e7aabfc03739176d8e549b9f4ded922cc54b375f3c61809510da51ea940ec54",
     "src/staticmesh/mesh_center.cpp": "b9feb4826bf5e9d55ac8ad8daa01c5dec76d274ac4285ecff9f71727c50c8753",
@@ -56859,6 +56871,60 @@
       "discarded_functions": [],
       "object_sha256": "949758e282b29f2af222a3ef211aa781379ab1788c1eefa8f2cba4397d2388c3",
       "linked_sha256": "946c3fbfdcbb7696c9441c3e941928ef64328345d16eaa308fe240d3a152d15d"
+    },
+    {
+      "id": "soundbussman_update",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 248,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "35d3b2bb9d0bd72621b00d45e99c8468920949ca6e040c86217447fecfc1b02f",
+      "linked_sha256": "2a9a6a8b83fea7921d1b9c79214737e8e5a217be9959b3d5d170f9e2bfc8887d"
+    },
+    {
+      "id": "soundbussman_retrofit",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 152,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "ff54ef9496cbf2cc4007da85c4280d3bec9ad1a7cf5ee68a3c8c8867bfec0f9b",
+      "linked_sha256": "808bbdecc0749eec03a44ce8655bdb00ab658c46a73cb212cb380fbc63c5d8c9"
+    },
+    {
+      "id": "soundbussman_apply",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 144,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "c1e73ff920d881598e0d464453262816322c0c7e6ffca4081f11a1b4bfc48231",
+      "linked_sha256": "008b8dd3bf32bfd468545a2ebbc824b435496908e27c8eee09513a224ce913e6"
     }
   ],
   "code_map": {
@@ -71446,31 +71512,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8015f6f8",
-            "size": 204,
-            "kind": "function",
-            "name": "Update__13cSoundBussManf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8015f7c4",
-            "size": 44,
-            "kind": "function",
-            "name": "FindBuss__13cSoundBussManUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8015f7f0",
             "size": 108,
             "kind": "function",
             "name": "ActivateBuss__13cSoundBussManUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8015f85c",
-            "size": 152,
-            "kind": "function",
-            "name": "RetroFitNewSound__13cSoundBussManP10SoundEntry",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -71492,13 +71537,6 @@
             "size": 272,
             "kind": "function",
             "name": "AddActiveBusses__13cSoundBussManP10cSoundBuss",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8015fb60",
-            "size": 144,
-            "kind": "function",
-            "name": "ApplyActiveBusses__13cSoundBussManP10SoundEntry",
             "evidence": "adjacent-compiler-markers"
           },
           {

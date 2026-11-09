@@ -4,6 +4,7 @@
 #pragma interface
 // Keep out-of-line constructors and virtual tables in their original units.
 
+#include "DwiContainers.h"
 class SoundEntryPool;
 struct SNDPLAYOPTS;
 // Only the type name is recovered; zero is a descriptive placeholder.
@@ -12,10 +13,25 @@ class SoundEmitter;
 
 class SoundEntry;
 struct ColumnMap;
+class cSoundBuss;
+struct BussEvent;
+// Member names are inferred. The size is bounded by soundZone, which follows the schedule in cSoundMan.
 class cSoundBussMan {
   public:
+    unsigned char unknown_0[4];
+    int activeCount;                     // +4
+    cSoundBuss *busses;                  // +8; singly linked through the buss's next.
+    dwi::list<cSoundBuss *> inactive;    // +0xc; at most three retrofits.
+    dwi::list<cSoundBuss *> active;      // +0x2c
     static void InitSoundBussFreeList();
     void RetroFitNewSound(SoundEntry *);
+    void Update(float);
+    cSoundBuss *FindBuss(unsigned int);
+    int ActivateBuss(unsigned int);
+    void AddInactiveRetroFit(cSoundBuss *);
+    void ApplyInactiveBusses(SoundEntry *);
+    void AddActiveBusses(cSoundBuss *);
+    void ApplyActiveBusses(SoundEntry *);
 };
 // Scoped prefix of the embedded sound schedule.
 class SoundSchedule {
@@ -45,7 +61,8 @@ class SoundEntry {
     short pitch;
     unsigned char unknown_1a[2];
     float volume, volumeLimit, attenuation; // +0x1c, +0x20, +0x24; names descriptive.
-    unsigned char unknown_28[0x4c - 0x28];
+    unsigned char unknown_28[4];
+    unsigned int bussCRCs[8]; // +0x2c; the busses this entry answers to.
     int field_4c; // Set to 1 for a looping entry with a missing scene emitter.
     SoundEmitter *emitter;
     float distance;
@@ -91,7 +108,7 @@ class SoundEntry {
     virtual void SetSndPitch(int) = 0;
 };
 typedef char SoundEntrySizeCheck[sizeof(SoundEntry) == 0xd8 ? 1 : -1];
-typedef char SoundSchedulePrefixSizeCheck[sizeof(SoundSchedule) == 0x230 ? 1 : -1];
+typedef char SoundSchedulePrefixSizeCheck[sizeof(SoundSchedule) == 0x278 ? 1 : -1];
 
 // Bank-backed entry; the original constructor and destructor are inline.
 class SoundEntryBank : public SoundEntry {
@@ -178,7 +195,6 @@ class cSoundMan {
     SoundRowEntry bussAliases[50]; // +0x80d4
     BankMan bankMan;           // +0x8264
     SoundSchedule schedule;    // +0x837c
-    unsigned char unknown_85ac[0x85f4 - 0x85ac]; // Remainder of schedule and following fields.
     int soundZone;             // +0x85f4; set by BIFunc_SetSoundZone.
     unsigned char *streamBuffers[4]; // +0x85f8
     unsigned char streamCount; // +0x8608
@@ -225,6 +241,8 @@ extern cSoundMan g_SoundMan;
 // Method-only view of the NPC vocal manager singleton.
 class NPCVocalMan {
   public:
+    unsigned char unknown_0[0x44];
+    int paused; // 0x44; set by Moh3SoundEvent::Pause.
     void RemoveVocal(void *, int);
 };
 extern NPCVocalMan g_npcVocalMan;

@@ -2,6 +2,7 @@
 #define GAME_SOUND_BUSS_H
 // AI-assisted runtime view of the sound buss; see docs/Sound.md. Class and method names come from the
 // symbol table; member names are inferred from use. The 216-byte record size comes from the free list.
+class SoundEntry;
 struct BussEvent {
     int time;          // +0: compared with the clock.
     short timeValue;   // +4: copied into time on insertion.
@@ -23,6 +24,8 @@ class cSoundBuss {
     bool ActivateBuss();
     void IncrementClock(float);
     void DeactivateBuss();
+    void RetroFit(SoundEntry *);
+    void UpdateBussEntry(SoundEntry *);
 };
 void ShutdownSoundBussMan();
 cSoundBuss *GetFreeSoundBuss();
