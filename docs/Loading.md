@@ -79,6 +79,15 @@ file. A missing compartment big file or entry makes the size queries return -1.
 `TLT_Async_Load` runs one of 20 state functions from `g_ToiletLoadStates` and adds its result to
 the state. Its progress denominator is 21 for missions 2 through 4 and 22 for the others.
 
+The local symbols of the load states name the file `toilet.cpp`. The load states read the relocation file, the level big file, the pause big file, the animation
+bank and the optional MVD file through the asynchronous file calls. The animation bank and MVD are
+copied up to `VMStartLoc`; the bank then advances it by the size rounded past the next 32-byte
+boundary. `+0x194` indexes the sound banks while they load and also feeds the progress percentage.
+`TLT_Sound_GetCurrentAbk` returns null past the second bank. `TLT_Load_InitContent` checks version 2
+and checksum 0xa5658, then rebases the entries and name tables of resource types 0 and 4; the types'
+meanings are inferred. `TLT_Load_StartPause`, `TLT_Load_StartAnimation` and `TLT_Load_InitRepository`
+share strings with code outside these units and remain unreconstructed.
+
 Not reconstructed: the class constructor and language and system-file setup,
 `TLT_FindNextResourceByTypeAndVal` (6 differences, all parameter registers), and the two functions
 that use the file-local `s_ignoreLoadFileNormalLocked` (`TLT_ForceLoadFileNormalLocked`,

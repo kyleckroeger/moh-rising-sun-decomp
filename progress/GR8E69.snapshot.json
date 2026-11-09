@@ -907,7 +907,10 @@
       "src/game/toilet_big.cpp": "f21188f2ea40f582aa9492ba44e35e9da1d5bedee6ffefbc827c9627aceb2b18",
       "src/game/toilet_compartment.cpp": "abd974c8962100fbdf12c35438078bf0a3a798a5c78cc150eaf6fa0757200bf0",
       "src/game/toilet_ext.cpp": "51b729995075201887057e97a15a66f3b2b9c65f4afc0bd73804944d1c86deda",
-      "src/game/toilet_init.cpp": "3893dab910eb55bde8a257a7e1430baf3d104cb6c3c1fba15b127cf05f3fbe5b",
+      "src/game/toilet_init.cpp": "8e5911d3896f6a38f5d5d9b57a2a4e0fea1556ac65ca38b301d41b04ddf580a6",
+      "src/game/toilet_load_level.cpp": "f5679efb7f73b2a66d7c4ddc3ce5e90e1010a480360f1e75816bf8e7f219ff49",
+      "src/game/toilet_load_pause.cpp": "c00e276c08ef6f689aa5c35f93c95ed8f4b15763edcfa8674eff7d608872c8d4",
+      "src/game/toilet_load_states.cpp": "67a19bf7ec3fee7b72b81d3b80c6c257f227c351e38d73aeca8d28b27a41058e",
       "src/game/toilet_lookup.cpp": "873127e47497820facd9ea3b37b8313365c5e03f9165216d46dc28850014027f",
       "src/game/toilet_mvd.cpp": "98bc3db6dddbb91b1816ddd44465dfd6e371699967780423226b5867a91a5691",
       "src/game/toilet_ready.cpp": "be118f233cf670737ae40a0a4bdcb3d960654cbd62c87da06c0331070f97f931",
@@ -2901,7 +2904,7 @@
       "include/game/TevStage.h": "47aaf3de5425dace0c30e2852896a9494f78ab4a4dcaad6be03d4aa4204d7466",
       "include/game/TevStageInlines.h": "03b19716c4d88b4eb2f3c74cdf2040ca0bb6c43e842d1eefc2c8bd148a278645",
       "include/game/Thrown.h": "62c70dfcb9ad0243eba5bdf633073bb2563d3fe2b4da6bdcae42452c547912db",
-      "include/game/Toilet.h": "b27bc0400a4cbf1f67514badf4ef5b96d641221956758e0b6c709ef6bff761ac",
+      "include/game/Toilet.h": "6c2af65f77e0509cbcdc2b1955f0bacf23110cc840f93775ab933eb5f0f12d63",
       "include/game/TriggerObject.h": "73e70d537a184c92ad5f8f0e10b773f5efe3306ce871a82852a3c41398f7418b",
       "include/game/VideoDriver.h": "dd21c14b75db031804f4dfd4afd30fcaf14e5211ed4c37079e3f6ff3e19ee668",
       "include/game/VolFrustum.h": "37c448d54fc001d7c0a6fc093e4b951b465db57504b97cac2bbe2bd59caaf269",
@@ -4337,7 +4340,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "17abda4aa46b65ecc2ab0cc1ef396f0916cf7240bee730f08cdedd682122a5bf",
+      "config/GR8E69/project.json": "7b3f5c4004a79567fb6cf4695aa581c8ea08f3ecb87dad5eba271e23c278d368",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -5479,6 +5482,9 @@
       "config/GR8E69/toilet_compartment.json": "30512feb5d11d0305cd1c0d402890f3996e4481641ec26f089e4b21c1795b806",
       "config/GR8E69/toilet_ext.json": "91f2b9702ddfa82fc54db453a5b80abccfb18d0a26c24266a7655e00b5eeb89c",
       "config/GR8E69/toilet_init.json": "c60d5531a57452af49cfc6aded5f61112c2364c9f498bcae1e25fedbdc0e64f9",
+      "config/GR8E69/toilet_load_level.json": "dd93118f89a85da5638474531a91f7440823835d594b7978e60488e66f10ee94",
+      "config/GR8E69/toilet_load_pause.json": "11bdefd924fe5edeeba9b1c45e6dcdb7f1527e189abc7b84c7f7bc0e68808f85",
+      "config/GR8E69/toilet_load_states.json": "6754820f5da78371285bb671db1f062504326abf2580b14ed2ece463e8e24ff9",
       "config/GR8E69/toilet_lookup.json": "40fbdcc55b300118939e724aa2454f9279186a895cf0ef1df626c76ae0e2a24f",
       "config/GR8E69/toilet_mvd.json": "a2624afbdf307ed9316122f58daefeaab035717199f4edf88d7548f6c9a0147e",
       "config/GR8E69/toilet_ready.json": "4f11e7a0cea5701e57394dea8efb10e943225bb98160c5b9e604e74dfe8cfcc9",
@@ -7060,14 +7066,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1238832,
+    "matching_code_bytes": 1241380,
     "total_executable_code_bytes": 2492032,
-    "percent": 49.71172119780163,
+    "percent": 49.81396707586419,
     "categories": {
-      "reconstructed_game": 846616,
+      "reconstructed_game": 849164,
       "restored_library": 392216
     },
-    "matching_functions": 6505
+    "matching_functions": 6525
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -8351,7 +8357,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "17abda4aa46b65ecc2ab0cc1ef396f0916cf7240bee730f08cdedd682122a5bf",
+    "config/GR8E69/project.json": "7b3f5c4004a79567fb6cf4695aa581c8ea08f3ecb87dad5eba271e23c278d368",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -9493,6 +9499,9 @@
     "config/GR8E69/toilet_compartment.json": "30512feb5d11d0305cd1c0d402890f3996e4481641ec26f089e4b21c1795b806",
     "config/GR8E69/toilet_ext.json": "91f2b9702ddfa82fc54db453a5b80abccfb18d0a26c24266a7655e00b5eeb89c",
     "config/GR8E69/toilet_init.json": "c60d5531a57452af49cfc6aded5f61112c2364c9f498bcae1e25fedbdc0e64f9",
+    "config/GR8E69/toilet_load_level.json": "dd93118f89a85da5638474531a91f7440823835d594b7978e60488e66f10ee94",
+    "config/GR8E69/toilet_load_pause.json": "11bdefd924fe5edeeba9b1c45e6dcdb7f1527e189abc7b84c7f7bc0e68808f85",
+    "config/GR8E69/toilet_load_states.json": "6754820f5da78371285bb671db1f062504326abf2580b14ed2ece463e8e24ff9",
     "config/GR8E69/toilet_lookup.json": "40fbdcc55b300118939e724aa2454f9279186a895cf0ef1df626c76ae0e2a24f",
     "config/GR8E69/toilet_mvd.json": "a2624afbdf307ed9316122f58daefeaab035717199f4edf88d7548f6c9a0147e",
     "config/GR8E69/toilet_ready.json": "4f11e7a0cea5701e57394dea8efb10e943225bb98160c5b9e604e74dfe8cfcc9",
@@ -9905,7 +9914,7 @@
     "include/game/TevStage.h": "47aaf3de5425dace0c30e2852896a9494f78ab4a4dcaad6be03d4aa4204d7466",
     "include/game/TevStageInlines.h": "03b19716c4d88b4eb2f3c74cdf2040ca0bb6c43e842d1eefc2c8bd148a278645",
     "include/game/Thrown.h": "62c70dfcb9ad0243eba5bdf633073bb2563d3fe2b4da6bdcae42452c547912db",
-    "include/game/Toilet.h": "b27bc0400a4cbf1f67514badf4ef5b96d641221956758e0b6c709ef6bff761ac",
+    "include/game/Toilet.h": "6c2af65f77e0509cbcdc2b1955f0bacf23110cc840f93775ab933eb5f0f12d63",
     "include/game/TriggerObject.h": "73e70d537a184c92ad5f8f0e10b773f5efe3306ce871a82852a3c41398f7418b",
     "include/game/VideoDriver.h": "dd21c14b75db031804f4dfd4afd30fcaf14e5211ed4c37079e3f6ff3e19ee668",
     "include/game/VolFrustum.h": "37c448d54fc001d7c0a6fc093e4b951b465db57504b97cac2bbe2bd59caaf269",
@@ -10963,7 +10972,10 @@
     "src/game/toilet_big.cpp": "f21188f2ea40f582aa9492ba44e35e9da1d5bedee6ffefbc827c9627aceb2b18",
     "src/game/toilet_compartment.cpp": "abd974c8962100fbdf12c35438078bf0a3a798a5c78cc150eaf6fa0757200bf0",
     "src/game/toilet_ext.cpp": "51b729995075201887057e97a15a66f3b2b9c65f4afc0bd73804944d1c86deda",
-    "src/game/toilet_init.cpp": "3893dab910eb55bde8a257a7e1430baf3d104cb6c3c1fba15b127cf05f3fbe5b",
+    "src/game/toilet_init.cpp": "8e5911d3896f6a38f5d5d9b57a2a4e0fea1556ac65ca38b301d41b04ddf580a6",
+    "src/game/toilet_load_level.cpp": "f5679efb7f73b2a66d7c4ddc3ce5e90e1010a480360f1e75816bf8e7f219ff49",
+    "src/game/toilet_load_pause.cpp": "c00e276c08ef6f689aa5c35f93c95ed8f4b15763edcfa8674eff7d608872c8d4",
+    "src/game/toilet_load_states.cpp": "67a19bf7ec3fee7b72b81d3b80c6c257f227c351e38d73aeca8d28b27a41058e",
     "src/game/toilet_lookup.cpp": "873127e47497820facd9ea3b37b8313365c5e03f9165216d46dc28850014027f",
     "src/game/toilet_mvd.cpp": "98bc3db6dddbb91b1816ddd44465dfd6e371699967780423226b5867a91a5691",
     "src/game/toilet_ready.cpp": "be118f233cf670737ae40a0a4bdcb3d960654cbd62c87da06c0331070f97f931",
@@ -59975,6 +59987,60 @@
       "discarded_functions": [],
       "object_sha256": "fb52aa32d53f792e5824a7f30bb4f865f9379cff13fda10a2d3c1500ba3b0e7a",
       "linked_sha256": "cabaa6aa34af894f7018466515568237994007ab3dee9247661999f9bc40aa51"
+    },
+    {
+      "id": "toilet_load_level",
+      "category": "reconstructed_game",
+      "functions": 7,
+      "code_bytes": 424,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "2c505e2ae85c9f67eb0f7b23ddbf8f551d82f5f8ddf9c7b561c712a76fdb81c1",
+      "linked_sha256": "bb2303125edb9c5ffe62870533171d868d6d6cd14b05a63bbef5484546042a20"
+    },
+    {
+      "id": "toilet_load_pause",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 84,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "44db08330314f30ea78f47ead242bea3e0a93db09c28b0fc7b2f757778584137",
+      "linked_sha256": "ada141557f27484cdd1e2cd09506d4ad3d894202b4ddbf960a780ba0b9e99742"
+    },
+    {
+      "id": "toilet_load_states",
+      "category": "reconstructed_game",
+      "functions": 12,
+      "code_bytes": 2040,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "03283e4110ec97581181a9e06d63cb0f5db1a420cb59a46408f6b33978dfe897",
+      "linked_sha256": "a81a6a84071d3bed34a9c55411fbf31d52afd029fb0680799e3c0c13168d2728"
     }
   ],
   "code_map": {
@@ -77940,55 +78006,6 @@
         "file_name": "toilet.cpp",
         "ranges": [
           {
-            "address": "0x801aa310",
-            "size": 8,
-            "kind": "function",
-            "name": "TLT_Load_Begin__Fv",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x801aa318",
-            "size": 92,
-            "kind": "function",
-            "name": "TLT_Load_StartRelo__Fv",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x801aa374",
-            "size": 132,
-            "kind": "function",
-            "name": "TLT_Load_WaitRelo__Fv",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x801aa3f8",
-            "size": 8,
-            "kind": "function",
-            "name": "TLT_Load_StartDebug__Fv",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x801aa400",
-            "size": 8,
-            "kind": "function",
-            "name": "TLT_Load_WaitDebug__Fv",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x801aa408",
-            "size": 92,
-            "kind": "function",
-            "name": "TLT_Load_StartLevel__Fv",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x801aa464",
-            "size": 84,
-            "kind": "function",
-            "name": "TLT_Load_WaitLevel__Fv",
-            "evidence": "local-file-symbol"
-          },
-          {
             "address": "0x801aa4b8",
             "size": 148,
             "kind": "function",
@@ -77996,73 +78013,10 @@
             "evidence": "local-file-symbol"
           },
           {
-            "address": "0x801aa54c",
-            "size": 84,
-            "kind": "function",
-            "name": "TLT_Load_WaitPause__Fv",
-            "evidence": "local-file-symbol"
-          },
-          {
             "address": "0x801aa5a0",
             "size": 92,
             "kind": "function",
             "name": "TLT_Load_StartAnimation__Fv",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x801aa5fc",
-            "size": 168,
-            "kind": "function",
-            "name": "TLT_Load_WaitAnimation__Fv",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x801aa6bc",
-            "size": 136,
-            "kind": "function",
-            "name": "TLT_Load_StartMVD__Fv",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x801aa744",
-            "size": 144,
-            "kind": "function",
-            "name": "TLT_Load_WaitMVD__Fv",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x801aa9a4",
-            "size": 60,
-            "kind": "function",
-            "name": "TLT_Load_StartSound__Fv",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x801aa9e0",
-            "size": 104,
-            "kind": "function",
-            "name": "TLT_Load_StartSoundBank__Fv",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x801aaa48",
-            "size": 284,
-            "kind": "function",
-            "name": "TLT_Load_WaitSoundBank__Fv",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x801aab64",
-            "size": 152,
-            "kind": "function",
-            "name": "TLT_Load_SoundModules__Fv",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x801aabfc",
-            "size": 504,
-            "kind": "function",
-            "name": "TLT_Load_InitContent__Fv",
             "evidence": "local-file-symbol"
           },
           {
@@ -78092,44 +78046,6 @@
             "kind": "function",
             "name": "_GLOBAL_.I.g_ToiletLoadStates",
             "evidence": "local-file-symbol"
-          }
-        ]
-      },
-      {
-        "name": "Unknown file/.text @ 801aa6a4",
-        "ranges": [
-          {
-            "address": "0x801aa6a4",
-            "size": 12,
-            "kind": "function",
-            "name": "TLT_GetAnimationBank__Fv",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801aa6b0",
-            "size": 12,
-            "kind": "function",
-            "name": "TLT_GetAnimationBankSize__Fv",
-            "evidence": "unknown-file"
-          }
-        ]
-      },
-      {
-        "name": "Unknown file/.text @ 801aa7d4",
-        "ranges": [
-          {
-            "address": "0x801aa7d4",
-            "size": 172,
-            "kind": "function",
-            "name": "TLT_Sound_GetCurrentPath__Fv",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801aa880",
-            "size": 292,
-            "kind": "function",
-            "name": "TLT_Sound_GetCurrentAbk__Fv",
-            "evidence": "unknown-file"
           }
         ]
       },

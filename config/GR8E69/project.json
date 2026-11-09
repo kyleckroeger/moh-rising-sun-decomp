@@ -2421,7 +2421,10 @@
     "fereader_findreferencedobject.json",
     "fenode_fenode.json",
     "fengine_fengine.json",
-    "fengine_loadpackage.json"
+    "fengine_loadpackage.json",
+    "toilet_load_level.json",
+    "toilet_load_pause.json",
+    "toilet_load_states.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
