@@ -29,3 +29,13 @@ search only reordered existing statements.
 
 Unit and fragment file names are project choices, because functions that are not
 contiguous can't share a unit. No Dolphin or game runtime test was performed.
+
+## Second batch
+
+A follow-up adds 720 exact, linked functions covering 131,840 code bytes: 1,206,564
+to 1,338,404 of 2,492,032 (48.416874% to 53.707336%). Again only 5 functions (1,432
+bytes) have a Frontline counterpart; the same pinned revision applies. The rest come
+from the executable. The evidence rules above apply, and [Frontend](../Frontend.md),
+[Behaviors](../Behaviors.md), [Animation](../Animation.md), [Loading](../Loading.md),
+[Sound](../Sound.md), [Rendering](../Rendering.md) and [Memory](../Memory.md) record
+what is verified and inferred. No Dolphin or game runtime test was performed.
