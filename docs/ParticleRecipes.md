@@ -196,3 +196,7 @@ to 21) rotated into the system's local frame. `MeshParticleSystem::Init` randomi
 that only units that use it need the container. `MeshParticle` is 112 bytes by the out-of-line copy constructor's
 reads; its list node puts it at `+16` of a 128-byte allocation, which is why it is declared with an inferred 16-byte
 alignment. `AllocParticle` refuses past 100 live particles, counted in `g_numActiveMeshParticles`.
+
+`MeshParticleSystem::BeginUpdate` scales the time step by 1/60, follows the attached node through the attach matrix
+and the offset at `+128`, updates the particles, then runs down `deactivationTicks` to call `Terminate` once dying or
+`DeActivate` otherwise.

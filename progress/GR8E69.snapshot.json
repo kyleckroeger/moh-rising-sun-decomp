@@ -294,8 +294,10 @@
       "src/camera/transforms.cpp": "4f1d6ff74f4f9d296d64a95495ab90f53f98010031fde9b051b8a5be89c7278a",
       "src/camera/update_projection.cpp": "fd6857c4d808bd67914b5c1041d239ff9219b03f7d8a7bbe579e7d846583f4f7",
       "src/camera/viewport.cpp": "280c610501e88f6cedc6d8ab86186067423ed8b0e974e1905c9b0a385fb48912",
+      "src/camera/volfrustum_box_sphere.cpp": "410275eff729978da8054a0ea406bf5e218dbeac5373bb82d1bf4b6da8c52c52",
       "src/camera/volfrustum_copy.cpp": "ed8020536c042aeaef3556951945834ca87dd460e685467e1c18cd9f7a6e605b",
       "src/camera/volfrustum_sphere_tests.cpp": "188de492e1ea40a10a9335e970f3389101ee612cd96005796b8ebec05027be2f",
+      "src/camera/volfrustum_transform.cpp": "b7a9a2fdedb9977c4bb5290cee1ee952ae68f1d66c6d7e2043d0bee053c3df06",
       "src/camera/volfrustum_transformed_copy.cpp": "701193103bd0400b04ae19b386abe8c97ef02811e813f543886e3acc28c0f4c6",
       "src/camera/world_to_camera.cpp": "9c8631b1a6b92af8fece7a1b109bb61c516f6bc69bd7eccee0c678bbf1b8c1c3",
       "src/camera/world_to_clip.cpp": "291ee3d9b216585f1d3a9a710fa8a283765d8f07a257d59bc0317e4ba92137e3",
@@ -1361,6 +1363,7 @@
       "src/particles/meshparticle_release.cpp": "908b004bd72a6a63407c9009c5412d109a1ae54d44273142c94d2fdd5f88cd59",
       "src/particles/meshparticle_shutdown.cpp": "e43066f24bf5effa30fca8cd7f7e2f87bc964f7254a918eff7060f1b248d3ad7",
       "src/particles/meshparticle_state.cpp": "f8b89f8820ee0173682f99bd173f9fe474ec6a110b7d085c4cc4e601ba40f05e",
+      "src/particles/meshparticle_update.cpp": "d907c4839cb0c8ddfa08f020709d481b2ad1112faddea621818477447310d757",
       "src/particles/meshparticle_visible.cpp": "65e4e1aef9a5c23389cec8615bdbf39b1a62283b5c9a8113c3fc0c85238508c4",
       "src/particles/particledef_base_proc.cpp": "b5f399a06a1573451826715b0d5865c621d4b2cb31a99f8abf382950bdbbbf42",
       "src/particles/particledef_inlines.cpp": "fcfede5f3625c258c128793069e6c4dce8c40e8ba3103a3caafa44a87923865c",
@@ -2918,7 +2921,7 @@
       "include/game/PackageHandlers.h": "b7fce1bd657b9a83f98ec7d78aff5772ae050a1799c45b375ca09a5bb8676a58",
       "include/game/ParticleClock.h": "7784d24bb307ac0a9e2b796c228584fe306f5781575650f1896038426c80dc0b",
       "include/game/ParticleDef.h": "3cfc6be658b04adb177616a7dec68bbf8c785ccd0a24dd847c44177f5bd3e53b",
-      "include/game/ParticleRecipe.h": "28b998f22095db651513949138c0a49717baa6ebf769668fe4d9d09c3d853139",
+      "include/game/ParticleRecipe.h": "ee622276d4add4f03da5a3540416be1d0284bd411d2735ed31c7999adfb7efeb",
       "include/game/PathTrack.h": "15fa2d9c336c67c1315921cef67cce813061a193dc51fac3417b482ddd345182",
       "include/game/PathxTrack.h": "f46f02824655f05c7a0c47d71481dfbe5c5845b6b73ae17d5f8f3453b5c4298a",
       "include/game/PauseMenu.h": "d5eb24cc0a4ff00a237ce0013f7e349f18a1eb3e8fba544e46689d078860576a",
@@ -2971,7 +2974,7 @@
       "include/game/Toilet.h": "6c2af65f77e0509cbcdc2b1955f0bacf23110cc840f93775ab933eb5f0f12d63",
       "include/game/TriggerObject.h": "73e70d537a184c92ad5f8f0e10b773f5efe3306ce871a82852a3c41398f7418b",
       "include/game/VideoDriver.h": "dd21c14b75db031804f4dfd4afd30fcaf14e5211ed4c37079e3f6ff3e19ee668",
-      "include/game/VolFrustum.h": "37c448d54fc001d7c0a6fc093e4b951b465db57504b97cac2bbe2bd59caaf269",
+      "include/game/VolFrustum.h": "1578f0cdde5caf5f5f2640af9f68493e2a7cdd620962447c42a1bc241c9a6d0a",
       "include/game/Volume.h": "cda9e7de972fc28d73bf86418423a8b271c864d60bb53d1eba7d42744622db46",
       "include/game/Weapon.h": "06c961fd954800c1d8766e2d17e71707a250f4de310b30d4c99182c3845d04b9",
       "include/game/WorldObject.h": "8bf6843a362f5e8fe835da2694838943402f9f5013bfb812dcd86ce9915fdde8",
@@ -4196,6 +4199,7 @@
       "config/GR8E69/meshparticle_release.json": "8b52e415b56637bd1105aec861e817851a5f320214bd1bc85b6a275c23cc7cf7",
       "config/GR8E69/meshparticle_shutdown.json": "afc77003199febc6686a50868dda0d295a0327e473a1b34ffd9bdfa24ec19366",
       "config/GR8E69/meshparticle_state.json": "531a61701ba7c56b328756c347ebcf24ef9d0f14dbe65ac6248f04c7866ef091",
+      "config/GR8E69/meshparticle_update.json": "ce9c478d0be7ea0de10289315debaa5815c7bf7479547eddf84fd781f13886e4",
       "config/GR8E69/meshparticle_visible.json": "8689c1f66fa236a87f0b196e8694ce0b04d03d5881734a859a7357ef2f2a5581",
       "config/GR8E69/moh3soundevent_pause.json": "0ebc189f833e8b651073c8461e8c357e4b0bcb5fc1e332c89f78ecd1cc8e9175",
       "config/GR8E69/moh_boot.json": "2775340b4b22670a410b07b1668f0b326bbf529254223c83ce0e65a2102660f1",
@@ -4460,7 +4464,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "b1c7d095f94c035261203e1c836323d4e55fb87d5810554c10e3b6ac7c9b06ee",
+      "config/GR8E69/project.json": "6b8d56a0d23cc5a236e7feae14180f1fc47c51d9807fafc0be0574ad1dc994fe",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -5637,8 +5641,10 @@
       "config/GR8E69/vector_methods.json": "912ec9c6f429286eddc371a4eb9c495967c3be2239f5254be03ef35402d749e5",
       "config/GR8E69/vi.json": "dd95046e01890cb33bdb0006c936ff713366f21401f267c9cf268a70ac8b8833",
       "config/GR8E69/viewport.json": "6a801b98a150a54773ae5eb7717398fb7e8d4813f1204ea9810f555e4e844a38",
+      "config/GR8E69/volfrustum_box_sphere.json": "972841085465020f2c152206b3135c1aa825d7764452c744ed4e9b07701b8b48",
       "config/GR8E69/volfrustum_copy.json": "5c75decbd5dad0947277b7fffb40b30aa8e21ecfc2a2ee9efcf9228c2d414b6b",
       "config/GR8E69/volfrustum_sphere_tests.json": "969d268a2b60819a8f2a55153951ce6db15efd825e0bcc4051ea4f5e68365090",
+      "config/GR8E69/volfrustum_transform.json": "fa56fb792f96ff269cb6e42d52d67a4806fa2dbffa1c2f0d5535f1db328d4f9f",
       "config/GR8E69/volfrustum_transformed_copy.json": "6fcae8a416fcee9b381fb7542a04334a675ce1207a9a77d794259944abd7c1d8",
       "config/GR8E69/volume_defaults.json": "ec1834b402ae07ad4d233082ab460cb579890c27c953532ce02d216062910d69",
       "config/GR8E69/weak_8028147c.json": "cc02f4fbc0e20dc88c9cad44b86e59ef5362235032a4832a6a740921f10cfc1d",
@@ -7189,14 +7195,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1281856,
+    "matching_code_bytes": 1283644,
     "total_executable_code_bytes": 2492032,
-    "percent": 51.438183779341514,
+    "percent": 51.50993245672608,
     "categories": {
-      "reconstructed_game": 889640,
+      "reconstructed_game": 891428,
       "restored_library": 392216
     },
-    "matching_functions": 6758
+    "matching_functions": 6762
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -8272,6 +8278,7 @@
     "config/GR8E69/meshparticle_release.json": "8b52e415b56637bd1105aec861e817851a5f320214bd1bc85b6a275c23cc7cf7",
     "config/GR8E69/meshparticle_shutdown.json": "afc77003199febc6686a50868dda0d295a0327e473a1b34ffd9bdfa24ec19366",
     "config/GR8E69/meshparticle_state.json": "531a61701ba7c56b328756c347ebcf24ef9d0f14dbe65ac6248f04c7866ef091",
+    "config/GR8E69/meshparticle_update.json": "ce9c478d0be7ea0de10289315debaa5815c7bf7479547eddf84fd781f13886e4",
     "config/GR8E69/meshparticle_visible.json": "8689c1f66fa236a87f0b196e8694ce0b04d03d5881734a859a7357ef2f2a5581",
     "config/GR8E69/moh3soundevent_pause.json": "0ebc189f833e8b651073c8461e8c357e4b0bcb5fc1e332c89f78ecd1cc8e9175",
     "config/GR8E69/moh_boot.json": "2775340b4b22670a410b07b1668f0b326bbf529254223c83ce0e65a2102660f1",
@@ -8536,7 +8543,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "b1c7d095f94c035261203e1c836323d4e55fb87d5810554c10e3b6ac7c9b06ee",
+    "config/GR8E69/project.json": "6b8d56a0d23cc5a236e7feae14180f1fc47c51d9807fafc0be0574ad1dc994fe",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -9713,8 +9720,10 @@
     "config/GR8E69/vector_methods.json": "912ec9c6f429286eddc371a4eb9c495967c3be2239f5254be03ef35402d749e5",
     "config/GR8E69/vi.json": "dd95046e01890cb33bdb0006c936ff713366f21401f267c9cf268a70ac8b8833",
     "config/GR8E69/viewport.json": "6a801b98a150a54773ae5eb7717398fb7e8d4813f1204ea9810f555e4e844a38",
+    "config/GR8E69/volfrustum_box_sphere.json": "972841085465020f2c152206b3135c1aa825d7764452c744ed4e9b07701b8b48",
     "config/GR8E69/volfrustum_copy.json": "5c75decbd5dad0947277b7fffb40b30aa8e21ecfc2a2ee9efcf9228c2d414b6b",
     "config/GR8E69/volfrustum_sphere_tests.json": "969d268a2b60819a8f2a55153951ce6db15efd825e0bcc4051ea4f5e68365090",
+    "config/GR8E69/volfrustum_transform.json": "fa56fb792f96ff269cb6e42d52d67a4806fa2dbffa1c2f0d5535f1db328d4f9f",
     "config/GR8E69/volfrustum_transformed_copy.json": "6fcae8a416fcee9b381fb7542a04334a675ce1207a9a77d794259944abd7c1d8",
     "config/GR8E69/volume_defaults.json": "ec1834b402ae07ad4d233082ab460cb579890c27c953532ce02d216062910d69",
     "config/GR8E69/weak_8028147c.json": "cc02f4fbc0e20dc88c9cad44b86e59ef5362235032a4832a6a740921f10cfc1d",
@@ -10051,7 +10060,7 @@
     "include/game/PackageHandlers.h": "b7fce1bd657b9a83f98ec7d78aff5772ae050a1799c45b375ca09a5bb8676a58",
     "include/game/ParticleClock.h": "7784d24bb307ac0a9e2b796c228584fe306f5781575650f1896038426c80dc0b",
     "include/game/ParticleDef.h": "3cfc6be658b04adb177616a7dec68bbf8c785ccd0a24dd847c44177f5bd3e53b",
-    "include/game/ParticleRecipe.h": "28b998f22095db651513949138c0a49717baa6ebf769668fe4d9d09c3d853139",
+    "include/game/ParticleRecipe.h": "ee622276d4add4f03da5a3540416be1d0284bd411d2735ed31c7999adfb7efeb",
     "include/game/PathTrack.h": "15fa2d9c336c67c1315921cef67cce813061a193dc51fac3417b482ddd345182",
     "include/game/PathxTrack.h": "f46f02824655f05c7a0c47d71481dfbe5c5845b6b73ae17d5f8f3453b5c4298a",
     "include/game/PauseMenu.h": "d5eb24cc0a4ff00a237ce0013f7e349f18a1eb3e8fba544e46689d078860576a",
@@ -10104,7 +10113,7 @@
     "include/game/Toilet.h": "6c2af65f77e0509cbcdc2b1955f0bacf23110cc840f93775ab933eb5f0f12d63",
     "include/game/TriggerObject.h": "73e70d537a184c92ad5f8f0e10b773f5efe3306ce871a82852a3c41398f7418b",
     "include/game/VideoDriver.h": "dd21c14b75db031804f4dfd4afd30fcaf14e5211ed4c37079e3f6ff3e19ee668",
-    "include/game/VolFrustum.h": "37c448d54fc001d7c0a6fc093e4b951b465db57504b97cac2bbe2bd59caaf269",
+    "include/game/VolFrustum.h": "1578f0cdde5caf5f5f2640af9f68493e2a7cdd620962447c42a1bc241c9a6d0a",
     "include/game/Volume.h": "cda9e7de972fc28d73bf86418423a8b271c864d60bb53d1eba7d42744622db46",
     "include/game/Weapon.h": "06c961fd954800c1d8766e2d17e71707a250f4de310b30d4c99182c3845d04b9",
     "include/game/WorldObject.h": "8bf6843a362f5e8fe835da2694838943402f9f5013bfb812dcd86ce9915fdde8",
@@ -10546,8 +10555,10 @@
     "src/camera/transforms.cpp": "4f1d6ff74f4f9d296d64a95495ab90f53f98010031fde9b051b8a5be89c7278a",
     "src/camera/update_projection.cpp": "fd6857c4d808bd67914b5c1041d239ff9219b03f7d8a7bbe579e7d846583f4f7",
     "src/camera/viewport.cpp": "280c610501e88f6cedc6d8ab86186067423ed8b0e974e1905c9b0a385fb48912",
+    "src/camera/volfrustum_box_sphere.cpp": "410275eff729978da8054a0ea406bf5e218dbeac5373bb82d1bf4b6da8c52c52",
     "src/camera/volfrustum_copy.cpp": "ed8020536c042aeaef3556951945834ca87dd460e685467e1c18cd9f7a6e605b",
     "src/camera/volfrustum_sphere_tests.cpp": "188de492e1ea40a10a9335e970f3389101ee612cd96005796b8ebec05027be2f",
+    "src/camera/volfrustum_transform.cpp": "b7a9a2fdedb9977c4bb5290cee1ee952ae68f1d66c6d7e2043d0bee053c3df06",
     "src/camera/volfrustum_transformed_copy.cpp": "701193103bd0400b04ae19b386abe8c97ef02811e813f543886e3acc28c0f4c6",
     "src/camera/world_to_camera.cpp": "9c8631b1a6b92af8fece7a1b109bb61c516f6bc69bd7eccee0c678bbf1b8c1c3",
     "src/camera/world_to_clip.cpp": "291ee3d9b216585f1d3a9a710fa8a283765d8f07a257d59bc0317e4ba92137e3",
@@ -11613,6 +11624,7 @@
     "src/particles/meshparticle_release.cpp": "908b004bd72a6a63407c9009c5412d109a1ae54d44273142c94d2fdd5f88cd59",
     "src/particles/meshparticle_shutdown.cpp": "e43066f24bf5effa30fca8cd7f7e2f87bc964f7254a918eff7060f1b248d3ad7",
     "src/particles/meshparticle_state.cpp": "f8b89f8820ee0173682f99bd173f9fe474ec6a110b7d085c4cc4e601ba40f05e",
+    "src/particles/meshparticle_update.cpp": "d907c4839cb0c8ddfa08f020709d481b2ad1112faddea621818477447310d757",
     "src/particles/meshparticle_visible.cpp": "65e4e1aef9a5c23389cec8615bdbf39b1a62283b5c9a8113c3fc0c85238508c4",
     "src/particles/particledef_base_proc.cpp": "b5f399a06a1573451826715b0d5865c621d4b2cb31a99f8abf382950bdbbbf42",
     "src/particles/particledef_inlines.cpp": "fcfede5f3625c258c128793069e6c4dce8c40e8ba3103a3caafa44a87923865c",
@@ -61349,6 +61361,60 @@
       "discarded_functions": [],
       "object_sha256": "6c0ce0d437cafc443632d85b9c023ae233bbe43bd2b4af1ac8b2fe25f40ce410",
       "linked_sha256": "094fe4d01ddcaf645892b6735d533c6e4c51cac6a2c1a474d8300658ed8551e5"
+    },
+    {
+      "id": "volfrustum_transform",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 696,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "8da6198db4a583782c01b93c084a44c38a3ef7d2735840fd7b53c8a4b89b27bb",
+      "linked_sha256": "991082e70dd56dcfd8417ac342bbbee7b09f12900262d88ebae7bba7bb15b32e"
+    },
+    {
+      "id": "volfrustum_box_sphere",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 680,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "564a4511ab3a7de506b5cad0c07097296a74a83a292dc0c07e8da62ad901268b",
+      "linked_sha256": "96428c571efdddcc0f2d4b4e256d5c805d5cfcc86b65f77060415b1c8b578633"
+    },
+    {
+      "id": "meshparticle_update",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 412,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "5acaf03d4c2644e5a6f64e0f8b1ad6a8eff8af24e50bd353d0ff599077668c73",
+      "linked_sha256": "1d6eab9a7502a0cf1965cc20731d8a24aa7b21c731dd511e74d63b29f8a250e3"
     }
   ],
   "code_map": {
@@ -63292,13 +63358,6 @@
             "size": 464,
             "kind": "function",
             "name": "DrawParticles__18MeshParticleSystemR12CDrawContextPPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80065b68",
-            "size": 412,
-            "kind": "function",
-            "name": "BeginUpdate__18MeshParticleSystemf",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -71680,31 +71739,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8013f3c4",
-            "size": 696,
-            "kind": "function",
-            "name": "Transform__11CVolFrustumRC7CMatrix",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8013f67c",
             "size": 112,
             "kind": "function",
             "name": "Create__C11CVolFrustum",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8013f7cc",
-            "size": 464,
-            "kind": "function",
-            "name": "TestCollision__C11CVolFrustumRC7CVolBoxR10CCollisionb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8013f99c",
-            "size": 216,
-            "kind": "function",
-            "name": "TestCollision__C11CVolFrustumRC10CVolSphereR10CCollisionb",
             "evidence": "adjacent-compiler-markers"
           }
         ],

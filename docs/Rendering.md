@@ -484,6 +484,9 @@ are not reconstructed.
 `CVolFrustum` is 304 bytes (`Create` allocates that size). Its copy constructor, `operator=` and `TransformedCopy` copy only the six planes at `+80`. Ten collision tests, `TestVisibility` and
 `GetExtents` build a `CVolSphere` from its bounding centre at `+64` and radius at `+272`, set the radius
 through the table, and delegate to the sphere. See [`VolFrustum.h`](../include/game/VolFrustum.h).
+`Transform` moves the six planes, then recomputes two points from `(0,0,0)` and `(0,1,0)` and the bounding center from
+the point at `+48`. The box and sphere tests walk the planes: a box compares the center's distance with its half
+extents projected on the normal, and a sphere reports contact as soon as it straddles one plane.
 
 ## Viewport
 

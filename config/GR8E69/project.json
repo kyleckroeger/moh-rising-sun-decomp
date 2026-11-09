@@ -2483,7 +2483,10 @@
     "ai_OperationEval.json",
     "ai_OperationStreams.json",
     "ai_OperationTurnDuration.json",
-    "ai_OperationInlines.json"
+    "ai_OperationInlines.json",
+    "volfrustum_transform.json",
+    "volfrustum_box_sphere.json",
+    "meshparticle_update.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

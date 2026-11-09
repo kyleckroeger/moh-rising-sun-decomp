@@ -94,6 +94,8 @@ class CParticleSystem : public IParticleSystem {
     CParticleSystem();
     void Init(CParticleDef *);
     void Reload();
+    void BeginUpdate(float);
+    void UpdateBoundingBox();
     static void ResetSystem();
     void Draw(CDrawContext &);
     static CParticleSystem *AllocSystem(int);
@@ -189,7 +191,7 @@ class MeshParticleSystem : public IParticleSystem {
   public:
     unsigned char unknown_18[0x40 - 0x18];
     CMatrix localToWorld;       // +64
-    unsigned char unknown_80[192 - 128];
+    CMatrix attachOffset;       // +128: applied after the attach matrix. Name inferred.
     float center[3];            // +192
     unsigned char unknown_cc[4];
     unsigned char particles[8]; // +208: an _STL::list<MeshParticle>, held as storage so this header needs no STL.
@@ -224,6 +226,9 @@ class MeshParticleSystem : public IParticleSystem {
     void DeActivate();
     void Terminate();
     void ReleaseParticles();
+    void BeginUpdate(float);
+    void AddParticles(float);
+    void UpdateParticles(float);
     static MeshParticle *AllocParticle(MeshParticleList &);
     static void ReleaseParticle(MeshParticleList &, MeshParticleIterator &);
     void Stop();

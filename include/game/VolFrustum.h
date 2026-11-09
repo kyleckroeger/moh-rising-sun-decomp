@@ -18,6 +18,7 @@ class CVolFrustum : public IVolume {
     virtual ~CVolFrustum();
     virtual void TransformedCopy(const IVolume &, const CMatrix &);
     virtual EClsnState TestCollision(const IVolume &, CCollision &, bool) const;
+    virtual EClsnState TestCollision(const CVolSphere &, CCollision &, bool) const;
     CVolFrustum() {}
     CVolFrustum(const CVolFrustum &);
     CVolFrustum &operator=(const CVolFrustum &);
