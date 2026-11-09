@@ -112,3 +112,11 @@ The unit's helpers `FECopyString`, `ItoA` and the rest are private symbols of th
 which the symbol table names beside them and which the DWI labels in `SetNumLanguages`, `AllocStrings` and
 `SetString` repeat as `source/FEngine/FELocalizer.cpp`. The fragments that call them record that file. The helpers
 themselves, `ReadLocaleData` and `ReadString` are not reconstructed yet: their other callers are not in this unit.
+
+### FEPackageReader
+
+`FEPackageReader` builds an `FEPackage` from a package file whose values are little-endian. Verified: the chunk
+identifiers tested in `ReadHeaderChunk`, `ReadResourceChunk` and `ReadObjectChunk`, the header version check, the
+DWI labels, and the sizes `CreateObject` allocates for each object type. Inferred: reader member names, and the
+`FEngElements.h` constructors that take a type, from the store to `FEObject::type` repeated before the reader's own
+store. `FEngine::LoadPackage`, `FENode` and the object tag readers use the same classes. `FECodeListBox` derives from `FEObject`, not `FEListBox`: its constructor calls `FEObject`'s directly.

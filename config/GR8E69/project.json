@@ -2412,7 +2412,16 @@
     "volfrustum_transformed_copy.json",
     "shell_ListBoxEdit.json",
     "sound_emitter_scene_node.json",
-    "sound_emitter_scene_node_tail.json"
+    "sound_emitter_scene_node_tail.json",
+    "fereader_load.json",
+    "fereader_readheaderchunk.json",
+    "fereader_readlibraryrefschunk.json",
+    "fereader_readobjecttags.json",
+    "fereader_readmessageresponsetags.json",
+    "fereader_findreferencedobject.json",
+    "fenode_fenode.json",
+    "fengine_fengine.json",
+    "fengine_loadpackage.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

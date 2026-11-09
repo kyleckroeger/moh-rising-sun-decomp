@@ -8,7 +8,7 @@
 #include "FEngine.h"
 
 class FEMatrix4 { public: void Identify(); };
-class FEMouseInfo;
+struct FEMouseInfo;
 struct FEObjectListEntry { void *object; int unknown_4; };
 class ShellLoader {
   public:
@@ -46,11 +46,11 @@ struct SCoopJoinInfo {
 };
 class FEGameInterface {
   public:
-    virtual void Slot0();
-    virtual void Slot1();
+    virtual int GetPackageData(const char *, unsigned char **, bool &);
+    virtual int LocalizePackage(FEPackage *);
     virtual int LoadResources(FEPackage *, long, FEResourceRequest *);
     virtual int UnloadResources(FEPackage *, long, FEResourceRequest *);
-    virtual void Slot4();
+    virtual void PackageWasLoaded(FEPackage *);
     virtual int PackageWillUnload(FEPackage *);
     virtual int CanUnloadPackages(); // Name inferred from its one use.
     virtual void NotificationMessage(unsigned long, FEObject *, unsigned long, unsigned long);
