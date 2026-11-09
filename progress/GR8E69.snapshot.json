@@ -168,7 +168,8 @@
       "src/bpd/property_read_wayPoint.cpp": "150380940973a205a18bf03774d7748a1dfa154e02ccd5b08cfbc82c4d0150b8",
       "src/bullets/BulletBase.cpp": "de919c365b4a23044f2996c4fa3f3f082f72d669bd28abd699741a58af15b38a",
       "src/bullets/BulletDefaults.cpp": "4a4f7513a432cccdf3ef03fa86ea740e75f99397054dde976b3e6e3050c8a678",
-      "src/bullets/BulletFactory.cpp": "2d2569b0698d5de36a0b44275d5634237291cb86a630ebd94632c962af36d840",
+      "src/bullets/BulletFactory.cpp": "8047f7a01fc0b95a510599b2de3aab07970c9938e6bcc0febd36f7c915f0ce27",
+      "src/bullets/BulletFactoryHelper.cpp": "53b7ea75ac4e3ade6a39fe43bbae23cbeeadbdb8bee36f7030f5b8641481cec3",
       "src/bullets/BulletInit.cpp": "511e941347722371a72fcba542f0e0a53d835e8e9fb9371acc6b3ac5b95844fe",
       "src/bullets/BulletSpritesLoad.cpp": "6b7d7b2d6207aa971040074d548dbf7da4578bf70d8d3bc634185336b518bb4a",
       "src/bullets/BulletWeight.cpp": "9c74f0697e36d9ef28480ed1e200d46083a53d3bc317f77498ea1ad0a0f27899",
@@ -2498,7 +2499,7 @@
       "include/game/BSGameObject.h": "51c5d3ea0adf00a425207d089ccc822373e80cc78b511d39bc7b5756ce9f884d",
       "include/game/Box.h": "7c189d79a5e3f0d1404deb702ae90a8ffea1973ff6e2b9335ad177afa8dcced1",
       "include/game/BoxSetters.h": "26767b5ffc1d3ea577d5fab9dcbdcdb9fc00b15151d33e340145a677fb958622",
-      "include/game/Bullet.h": "a9ca3b51c01133102103234cbf909922da88ae0c66478c34424362124e610ba7",
+      "include/game/Bullet.h": "9f7b7a440988445ec9f0c6609f2382b277b97c9ff5b2b2b62648631e916b1969",
       "include/game/CDBCollisionAxis.h": "2431ed2e25e4b39bba3860500499a0371f0ca5dbedbb574e4c454fb8932cd84f",
       "include/game/CDBCollisionInternals.h": "ae4df1ca344aa71a7f87ae9530dff985fdff71a74d1a491d9bed4f920ff52325",
       "include/game/CDBGeom.h": "52cc6684854d7d274db12c9e545f56e9add679d6133fc2f612c5d9c3f822d29b",
@@ -3075,6 +3076,7 @@
       "config/GR8E69/bullet_base.json": "d8ad4b0b2ecf97d51aea4435cd18856d706c669ebf8a50c3091accaab524bc15",
       "config/GR8E69/bullet_defaults.json": "9afaed1670e7097d3e6ca0bdaeb6cb1f737a23e4bcead4d865fa070882d62d14",
       "config/GR8E69/bullet_factory.json": "de158c916e5a842175be118f9f46ea9f3a7e5f6a58c283c3c0fc2037f86d2b6b",
+      "config/GR8E69/bullet_factory_helper.json": "127b6397f0aaff1eef67585225b35683819d08318bd9a29889866468177f12e9",
       "config/GR8E69/bullet_init.json": "bf9f537106149fe36a192a3325a02f4c23f021aa546ce2e1e8e0d575f49bd138",
       "config/GR8E69/bullet_sprites_load.json": "6b4635fe9ca5e44f7d26477a301a555d28347d421c2d1439450fcec5d8991d23",
       "config/GR8E69/bullet_weight.json": "8e9dc78b617a4a1a87d96c2fad4d56ca589721c92b9db77836a23509d599c05c",
@@ -3912,7 +3914,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "f0b075a57c2f3a63a6d3a107e96f2d05abe117e89de532993690ad20fc1d0f09",
+      "config/GR8E69/project.json": "d425463a17171c6fa89175475bb1dea68c844f77f02fdc975041233059b18d3e",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -6593,14 +6595,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1136804,
+    "matching_code_bytes": 1138484,
     "total_executable_code_bytes": 2492032,
-    "percent": 45.617552262571266,
+    "percent": 45.6849671272279,
     "categories": {
-      "reconstructed_game": 744588,
+      "reconstructed_game": 746268,
       "restored_library": 392216
     },
-    "matching_functions": 5841
+    "matching_functions": 5853
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -6867,6 +6869,7 @@
     "config/GR8E69/bullet_base.json": "d8ad4b0b2ecf97d51aea4435cd18856d706c669ebf8a50c3091accaab524bc15",
     "config/GR8E69/bullet_defaults.json": "9afaed1670e7097d3e6ca0bdaeb6cb1f737a23e4bcead4d865fa070882d62d14",
     "config/GR8E69/bullet_factory.json": "de158c916e5a842175be118f9f46ea9f3a7e5f6a58c283c3c0fc2037f86d2b6b",
+    "config/GR8E69/bullet_factory_helper.json": "127b6397f0aaff1eef67585225b35683819d08318bd9a29889866468177f12e9",
     "config/GR8E69/bullet_init.json": "bf9f537106149fe36a192a3325a02f4c23f021aa546ce2e1e8e0d575f49bd138",
     "config/GR8E69/bullet_sprites_load.json": "6b4635fe9ca5e44f7d26477a301a555d28347d421c2d1439450fcec5d8991d23",
     "config/GR8E69/bullet_weight.json": "8e9dc78b617a4a1a87d96c2fad4d56ca589721c92b9db77836a23509d599c05c",
@@ -7704,7 +7707,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "f0b075a57c2f3a63a6d3a107e96f2d05abe117e89de532993690ad20fc1d0f09",
+    "config/GR8E69/project.json": "d425463a17171c6fa89175475bb1dea68c844f77f02fdc975041233059b18d3e",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -9035,7 +9038,7 @@
     "include/game/BSGameObject.h": "51c5d3ea0adf00a425207d089ccc822373e80cc78b511d39bc7b5756ce9f884d",
     "include/game/Box.h": "7c189d79a5e3f0d1404deb702ae90a8ffea1973ff6e2b9335ad177afa8dcced1",
     "include/game/BoxSetters.h": "26767b5ffc1d3ea577d5fab9dcbdcdb9fc00b15151d33e340145a677fb958622",
-    "include/game/Bullet.h": "a9ca3b51c01133102103234cbf909922da88ae0c66478c34424362124e610ba7",
+    "include/game/Bullet.h": "9f7b7a440988445ec9f0c6609f2382b277b97c9ff5b2b2b62648631e916b1969",
     "include/game/CDBCollisionAxis.h": "2431ed2e25e4b39bba3860500499a0371f0ca5dbedbb574e4c454fb8932cd84f",
     "include/game/CDBCollisionInternals.h": "ae4df1ca344aa71a7f87ae9530dff985fdff71a74d1a491d9bed4f920ff52325",
     "include/game/CDBGeom.h": "52cc6684854d7d274db12c9e545f56e9add679d6133fc2f612c5d9c3f822d29b",
@@ -9512,7 +9515,8 @@
     "src/bpd/property_read_wayPoint.cpp": "150380940973a205a18bf03774d7748a1dfa154e02ccd5b08cfbc82c4d0150b8",
     "src/bullets/BulletBase.cpp": "de919c365b4a23044f2996c4fa3f3f082f72d669bd28abd699741a58af15b38a",
     "src/bullets/BulletDefaults.cpp": "4a4f7513a432cccdf3ef03fa86ea740e75f99397054dde976b3e6e3050c8a678",
-    "src/bullets/BulletFactory.cpp": "2d2569b0698d5de36a0b44275d5634237291cb86a630ebd94632c962af36d840",
+    "src/bullets/BulletFactory.cpp": "8047f7a01fc0b95a510599b2de3aab07970c9938e6bcc0febd36f7c915f0ce27",
+    "src/bullets/BulletFactoryHelper.cpp": "53b7ea75ac4e3ade6a39fe43bbae23cbeeadbdb8bee36f7030f5b8641481cec3",
     "src/bullets/BulletInit.cpp": "511e941347722371a72fcba542f0e0a53d835e8e9fb9371acc6b3ac5b95844fe",
     "src/bullets/BulletSpritesLoad.cpp": "6b7d7b2d6207aa971040074d548dbf7da4578bf70d8d3bc634185336b518bb4a",
     "src/bullets/BulletWeight.cpp": "9c74f0697e36d9ef28480ed1e200d46083a53d3bc317f77498ea1ad0a0f27899",
@@ -55026,6 +55030,24 @@
       "discarded_functions": [],
       "object_sha256": "fbda7ccf1918cda0496ebe6d9aef1e3474c30febc70344035f4972da95b4df3e",
       "linked_sha256": "324fee82240ad293de9e57557fd65772e68e3bd67a1480c371340b8f716c6b62"
+    },
+    {
+      "id": "bullet_factory_helper",
+      "category": "reconstructed_game",
+      "functions": 12,
+      "code_bytes": 1680,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "73d8dc20bc8c3e158112d6b24ea409a3762a6dc5d742767806cd3f3c470b978f",
+      "linked_sha256": "25c7aac3c148a092bb31c68dc9e0816ffb53ac99964d911aef11d5e1e4fc084a"
     }
   ],
   "code_map": {
@@ -87630,92 +87652,8 @@
         ]
       },
       {
-        "name": "Unknown file/.text @ 8028b218",
+        "name": "Unknown file/.text @ 8028b8a8",
         "ranges": [
-          {
-            "address": "0x8028b218",
-            "size": 68,
-            "kind": "function",
-            "name": "__t20CBulletFactoryHelper3Z17CProjectileBulletZ33ProjectileBulletProperties_structZ22EProjectileBulletTypes",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8028b25c",
-            "size": 68,
-            "kind": "function",
-            "name": "__t20CBulletFactoryHelper3Z13CThrownBulletZ29ThrownBulletProperties_structZ18EThrownBulletTypes",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8028b2a0",
-            "size": 84,
-            "kind": "function",
-            "name": "Init__t20CBulletFactoryHelper3Z17CProjectileBulletZ33ProjectileBulletProperties_structZ22EProjectileBulletTypesP33ProjectileBulletProperties_struct",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8028b2f4",
-            "size": 84,
-            "kind": "function",
-            "name": "Init__t20CBulletFactoryHelper3Z13CThrownBulletZ29ThrownBulletProperties_structZ18EThrownBulletTypesP29ThrownBulletProperties_struct",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8028b348",
-            "size": 44,
-            "kind": "function",
-            "name": "Reset__t20CBulletFactoryHelper3Z17CProjectileBulletZ33ProjectileBulletProperties_structZ22EProjectileBulletTypes",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8028b374",
-            "size": 44,
-            "kind": "function",
-            "name": "Reset__t20CBulletFactoryHelper3Z13CThrownBulletZ29ThrownBulletProperties_structZ18EThrownBulletTypes",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8028b3a0",
-            "size": 60,
-            "kind": "function",
-            "name": "Shutdown__t20CBulletFactoryHelper3Z17CProjectileBulletZ33ProjectileBulletProperties_structZ22EProjectileBulletTypes",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8028b3dc",
-            "size": 60,
-            "kind": "function",
-            "name": "Shutdown__t20CBulletFactoryHelper3Z13CThrownBulletZ29ThrownBulletProperties_structZ18EThrownBulletTypes",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8028b418",
-            "size": 472,
-            "kind": "function",
-            "name": "CreateBullet__t20CBulletFactoryHelper3Z17CProjectileBulletZ33ProjectileBulletProperties_structZ22EProjectileBulletTypes22EProjectileBulletTypesRC8CVector3T2f7EClsnIdfP10ISceneNode",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8028b5f0",
-            "size": 472,
-            "kind": "function",
-            "name": "CreateBullet__t20CBulletFactoryHelper3Z13CThrownBulletZ29ThrownBulletProperties_structZ18EThrownBulletTypes18EThrownBulletTypesRC8CVector3T2f7EClsnIdfP10ISceneNode",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8028b7c8",
-            "size": 112,
-            "kind": "function",
-            "name": "DestroyBullet__t20CBulletFactoryHelper3Z17CProjectileBulletZ33ProjectileBulletProperties_structZ22EProjectileBulletTypesP17CProjectileBullet",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8028b838",
-            "size": 112,
-            "kind": "function",
-            "name": "DestroyBullet__t20CBulletFactoryHelper3Z13CThrownBulletZ29ThrownBulletProperties_structZ18EThrownBulletTypesP13CThrownBullet",
-            "evidence": "unknown-file"
-          },
           {
             "address": "0x8028b8a8",
             "size": 88,

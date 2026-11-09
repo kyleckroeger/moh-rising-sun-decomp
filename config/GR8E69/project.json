@@ -2199,7 +2199,8 @@
     "soundbuss_activate.json",
     "soundbuss_clock.json",
     "soundbuss_freelist.json",
-    "scene_GameObjectFactory.json"
+    "scene_GameObjectFactory.json",
+    "bullet_factory_helper.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
