@@ -477,6 +477,7 @@
       "src/ea/threads.cpp": "60e5e4a5f53edea6d305588d9860403c91e306524deff60d8efbdf2b7319d951",
       "src/ea/timer_tail.cpp": "9924675f9ecc8fe7d4d9c692d9f3d917d1395c4a1a735b2f973e2d81dff05fae",
       "src/ea/timerthread.cpp": "20cae02efd81691bf08a6c1e883b2df0059457929220cab81bb80a2b605cb50a",
+      "src/eagl/device_cmn.cpp": "ba409a2854b7422459fd3d818e71a07befd380a30761a7798a8592b5ed215593",
       "src/eagl/eagl_common_state_strings.cpp": "77d62062b069735a6f417ea2a70af129c6c8a18d87c7ab771dbdd531c6beb753",
       "src/eagl/eagl_cpt_color.cpp": "aa4f541f224ab98ddd4e58dbe1134876cbad6a34b5bc8b6797d39bf7b666ce7f",
       "src/eagl/eagl_cpt_color_render.cpp": "f21039dd78d676b5b944e7a8dbb866c233d07091d662e300e3f8dd927bdcc404",
@@ -3648,6 +3649,7 @@
       "config/GR8E69/eagl_cpt_texture2_render.json": "37c491f3bfe07e173153e331e50e98055f498e98263b2b0fb58cbd8348e796fc",
       "config/GR8E69/eagl_cpt_texture2envmap_render.json": "ee55e4a7fc47ca1c4f3a4ce67d81128f6b1c224c83ea1587aed9d43844d0f9d2",
       "config/GR8E69/eagl_cpt_texture2lightmap_render.json": "75176b9115616902181b8ea586dc093ab46d39c866bb0e0a44db5f9b2c01567f",
+      "config/GR8E69/eagl_device_cmn.json": "2460b553e202f8e3f7f0cc38100893534f7954966c2edef221857890caa0878e",
       "config/GR8E69/eagl_draw_gouraud.json": "d6d6134f6e6e05988743cf3739cc5f652889575c8ca08f37f772d6bbbb717ca6",
       "config/GR8E69/eagl_draw_gouraud_render.json": "922e8eacb178a31045b16b85af803637ece90ff364be92b4feb05a23569a85cb",
       "config/GR8E69/eagl_draw_particle.json": "4d42a77e18547da4b068aec7bd705acb3ee1782058679fced67c573f78c96396",
@@ -4292,7 +4294,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "b2f571c3562277358f1ebe8b6d4770026fc63813f606dbdc98539cbd39bb56f6",
+      "config/GR8E69/project.json": "73c51783a8c10eb8f3a576da69ceea1a7542f76f1760d9d79d17a79a936f5672",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7005,14 +7007,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1223796,
+    "matching_code_bytes": 1224340,
     "total_executable_code_bytes": 2492032,
-    "percent": 49.10835815912476,
+    "percent": 49.13018773434691,
     "categories": {
-      "reconstructed_game": 831580,
+      "reconstructed_game": 832124,
       "restored_library": 392216
     },
-    "matching_functions": 6434
+    "matching_functions": 6444
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -7637,6 +7639,7 @@
     "config/GR8E69/eagl_cpt_texture2_render.json": "37c491f3bfe07e173153e331e50e98055f498e98263b2b0fb58cbd8348e796fc",
     "config/GR8E69/eagl_cpt_texture2envmap_render.json": "ee55e4a7fc47ca1c4f3a4ce67d81128f6b1c224c83ea1587aed9d43844d0f9d2",
     "config/GR8E69/eagl_cpt_texture2lightmap_render.json": "75176b9115616902181b8ea586dc093ab46d39c866bb0e0a44db5f9b2c01567f",
+    "config/GR8E69/eagl_device_cmn.json": "2460b553e202f8e3f7f0cc38100893534f7954966c2edef221857890caa0878e",
     "config/GR8E69/eagl_draw_gouraud.json": "d6d6134f6e6e05988743cf3739cc5f652889575c8ca08f37f772d6bbbb717ca6",
     "config/GR8E69/eagl_draw_gouraud_render.json": "922e8eacb178a31045b16b85af803637ece90ff364be92b4feb05a23569a85cb",
     "config/GR8E69/eagl_draw_particle.json": "4d42a77e18547da4b068aec7bd705acb3ee1782058679fced67c573f78c96396",
@@ -8281,7 +8284,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "b2f571c3562277358f1ebe8b6d4770026fc63813f606dbdc98539cbd39bb56f6",
+    "config/GR8E69/project.json": "73c51783a8c10eb8f3a576da69ceea1a7542f76f1760d9d79d17a79a936f5672",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -10448,6 +10451,7 @@
     "src/ea/threads.cpp": "60e5e4a5f53edea6d305588d9860403c91e306524deff60d8efbdf2b7319d951",
     "src/ea/timer_tail.cpp": "9924675f9ecc8fe7d4d9c692d9f3d917d1395c4a1a735b2f973e2d81dff05fae",
     "src/ea/timerthread.cpp": "20cae02efd81691bf08a6c1e883b2df0059457929220cab81bb80a2b605cb50a",
+    "src/eagl/device_cmn.cpp": "ba409a2854b7422459fd3d818e71a07befd380a30761a7798a8592b5ed215593",
     "src/eagl/eagl_common_state_strings.cpp": "77d62062b069735a6f417ea2a70af129c6c8a18d87c7ab771dbdd531c6beb753",
     "src/eagl/eagl_cpt_color.cpp": "aa4f541f224ab98ddd4e58dbe1134876cbad6a34b5bc8b6797d39bf7b666ce7f",
     "src/eagl/eagl_cpt_color_render.cpp": "f21039dd78d676b5b944e7a8dbb866c233d07091d662e300e3f8dd927bdcc404",
@@ -59411,6 +59415,24 @@
       "discarded_functions": [],
       "object_sha256": "25a404b5331ee1db8738260e810ca86f2ad017b3b876cbff4af819c26bea5075",
       "linked_sha256": "ac59803e8eaff5a8b933fa96e379010f7608189edc55278e47804a3a492d71de"
+    },
+    {
+      "id": "eagl_device_cmn",
+      "category": "reconstructed_game",
+      "functions": 10,
+      "code_bytes": 544,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "8f417a230b32b609be8dc334c80f47c2c750c53d3b8749561eff0faef277d6be",
+      "linked_sha256": "4ceaef2cdb857b9335988098160f75b30f9d09f836f8c35a5199b660c9890df0"
     }
   ],
   "code_map": {
@@ -79917,7 +79939,7 @@
         ]
       },
       {
-        "name": "Unmatched files/device_cmn.cpp [inferred file group]",
+        "name": "Unmatched files/device_cmn.cpp [local symbols only]",
         "file_record": 395,
         "file_name": "device_cmn.cpp",
         "ranges": [
@@ -79927,76 +79949,6 @@
             "kind": "function",
             "name": "__static_initialization_and_destruction_0",
             "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x801db26c",
-            "size": 104,
-            "kind": "function",
-            "name": "NewRenderContext__Q24EAGL6Device",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801db2d4",
-            "size": 108,
-            "kind": "function",
-            "name": "DeleteRenderContext__Q24EAGL6DevicePQ24EAGL13RenderContext",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801db340",
-            "size": 20,
-            "kind": "function",
-            "name": "AddRenderContext__Q24EAGL6DevicePQ24EAGL17RenderContextBase",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801db354",
-            "size": 232,
-            "kind": "function",
-            "name": "RemoveRenderContext__Q24EAGL6DevicePQ24EAGL17RenderContextBase",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801db43c",
-            "size": 12,
-            "kind": "function",
-            "name": "GetCurrentRenderContext__CQ24EAGL6Device",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801db448",
-            "size": 12,
-            "kind": "function",
-            "name": "GetCurrentContext__CQ24EAGL6Device",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801db454",
-            "size": 20,
-            "kind": "function",
-            "name": "SetCurrentRenderContext__Q212EAGLInternal13DevicePrivatePQ24EAGL13RenderContext",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801db468",
-            "size": 12,
-            "kind": "function",
-            "name": "SetNewOverride__Q24EAGL6DevicePFUiPCc_Pv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801db474",
-            "size": 12,
-            "kind": "function",
-            "name": "SetDeleteOverride__Q24EAGL6DevicePFPvUi_v",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801db480",
-            "size": 12,
-            "kind": "function",
-            "name": "Get__Q24EAGL6Device",
-            "evidence": "adjacent-compiler-markers"
           },
           {
             "address": "0x801db48c",
