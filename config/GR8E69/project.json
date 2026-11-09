@@ -2409,7 +2409,8 @@
     "projector_detach.json",
     "projector_visible.json",
     "volfrustum_copy.json",
-    "volfrustum_transformed_copy.json"
+    "volfrustum_transformed_copy.json",
+    "shell_ListBoxEdit.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
