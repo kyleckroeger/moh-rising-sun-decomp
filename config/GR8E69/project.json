@@ -2333,7 +2333,17 @@
     "fereader_fepackagereader.json",
     "fereader_gettypesize.json",
     "skeletondata_bones.json",
-    "skeletondata_excluded.json"
+    "skeletondata_excluded.json",
+    "anim_factory_init_weapon.json",
+    "scene_TankObjectCommonInit.json",
+    "scene_AttachableObjectAlign.json",
+    "scene_SoldierInitClass.json",
+    "scene_StaticFactoryShutdown.json",
+    "compartment_update.json",
+    "compartment_instance_loaders.json",
+    "compartment_instance_type.json",
+    "compartment_instance_model.json",
+    "compartment_primers.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

@@ -920,6 +920,11 @@
       "src/geometry/collisionvolume_ctor.cpp": "4ab70a7c5ad8f859389e3c0173d0261031e5de57257c00ee243c7820e26ff2b4",
       "src/geometry/compartment_draw_enabled.cpp": "11baa4fea51c36e1fccf657ce678a83f00c2f809702f44dfef8f948f1470509c",
       "src/geometry/compartment_init.cpp": "b0fe2ddfbda8275f886d0ed826c3899dbf4583e804a875038e2dfe7da037ac7a",
+      "src/geometry/compartment_instance_loaders.cpp": "fb9610d67501a7fdb78cc0938249be7945ce5105889bb07e60d2aeca0aceb9dd",
+      "src/geometry/compartment_instance_model.cpp": "3140de64f63411fb00376d61a26101c9466076663602238548b93f81ebb6a7f8",
+      "src/geometry/compartment_instance_type.cpp": "74c7082dd48b2981c692a7a7f1de3e89488764f9b767920e8303dce1b95b2c24",
+      "src/geometry/compartment_primers.cpp": "ead70b920f35ec50b2ed34cc46bcc49a9695f6e99c4b57483e04c0776f81e61a",
+      "src/geometry/compartment_update.cpp": "9661ac8fa9c7d5af5920059e6fb05f392eb01317c97f66e9ab0ed1c21ba077b4",
       "src/geometry/compartment_world_volume.cpp": "a2a3e8e996dffef6329dd54637e0df9029eedabd734a26df725c53ba8609d936",
       "src/geometry/csg_volume.cpp": "8637cf2d285bf054a22b3ebafef0e499272a970488e5cbf670b6555cfb5538f5",
       "src/geometry/fiber_construct.cpp": "edbf7a8d499b49c6395fdc4c046456354f870e9db63754e8df4b3246ae2eda0f",
@@ -1320,6 +1325,7 @@
       "src/save/mc_g.cpp": "e639a05147fc56af84f8654a1a60c618fd32f0600b6ac95f8c5bd35211da4e75",
       "src/save/mc_h.cpp": "6d4ea2cd72568b3250cba3ce64dba6c3bae2ea478598f0df6c60cc4521015303",
       "src/scene/AnimObjFactoryConstructor.cpp": "74d86ee9bb07110eb11aa5361a683e4cd3164e50b3ce1b16a066cfcc8cebf9d8",
+      "src/scene/AnimObjFactoryInitWeapon.cpp": "c1cd69a9e7fe0373d0e397582b9e4850c58be2cec51eb1c5f5c42d19f050b9cc",
       "src/scene/AnimObjFactoryLoad.cpp": "5dbf4979bcfc1422fbee8cdb835e64bbd28db48c48907cc64fe00064e44e89e9",
       "src/scene/AnimObjFactoryLoadWeapon.cpp": "775fa75f4820802b1928d0045ac10cdfa69199621e800b15300a7690c532662b",
       "src/scene/AnimObjFactoryLoaders.cpp": "f9b6e94a774c14277579338ca9f3bec4a379df821271425a464b85ad96026e68",
@@ -1353,6 +1359,7 @@
       "src/scene/AnimObjectVisible.cpp": "380a912acd1b0c59139a91b62a0e620adf4ab346e59eb8e611e4953dda1328a4",
       "src/scene/AnimObjectVolumes.cpp": "da4b685af96884e598375982a044940b87f663edd6143d787a7beae2fc860d4e",
       "src/scene/AttachableObjectA.cpp": "72deef8d7c8dd87b1804ecf6d4d562606b86f6f612e61869d74fd1448aea66d4",
+      "src/scene/AttachableObjectAlign.cpp": "2803af6553dfbc57e407b17ff3509c466b36c6a94b531a6a6525c82c417e6b71",
       "src/scene/AttachableObjectAttach.cpp": "55f0da4fe313f5f7887d0b1d0f926106e09d4ccafbd8821c81fa25bdfa2f7564",
       "src/scene/AttachableObjectB.cpp": "96f9d0b60a7cbe2777084971aa74470168d825cde7723184d83d4960d7176d39",
       "src/scene/AttachableObjectC.cpp": "4ba057f86eeeead5950370eb21bf7605d1bde0ff73ccc6b263b2d597cd40ea3f",
@@ -1433,6 +1440,7 @@
       "src/scene/SoldierFade.cpp": "86ee08176d76986c82f7a597f69139f89a25ecce907744c1569bfa79eb1a608f",
       "src/scene/SoldierGag.cpp": "56f9895ace50b4581882e46c99ff281ea33e6cb5bc9c2d5fec8f5ca8994c6708",
       "src/scene/SoldierGagFilter.cpp": "d3510f55dae43aaeac73be3e183885f9e03aad3600f057a115cf61c8613a666e",
+      "src/scene/SoldierInitClass.cpp": "fa6b8e3319a14299fabd6b991c9b83e4241e7ce79b9b0ca328e2b4440d7f0597",
       "src/scene/SoldierLipSyncDef.cpp": "63f33520bde6e562307afb22a754dc4611bd7a0eb0d342ca761992a1a4e0b1e0",
       "src/scene/SoldierLipsync.cpp": "d6b2233028a4f8452cf2ad494fd5406e75442149dd6cb1f6d20b0351eea3b418",
       "src/scene/SoldierLocomotion.cpp": "d0dfb05a2a6301e7ecfab1531d45b276ade8a014d0553a3f1ad2c821906cd017",
@@ -1446,6 +1454,7 @@
       "src/scene/SoldierWeapons.cpp": "97cca0c9c31f68256d98a373b12353076d64d16f2ab03012c8c47a706c0895af",
       "src/scene/StaticFactoryHelmet.cpp": "ff084d7eafcaffce9661725d6440309ff4d6961de6f8a6efa4687e33d8f5ebe4",
       "src/scene/StaticFactoryLookup.cpp": "b1f3e3d38d9117b19ac3af7fc6bc4be4aac0fe822b70fc0e489fa0c79d7ac1ec",
+      "src/scene/StaticFactoryShutdown.cpp": "50ee9a54693ac68729bbb9d72fb277ba74b96f1c33f2e86cebc78cf1436ea958",
       "src/scene/StaticObjectAccess.cpp": "4226693d4a5aa5a32cce548b3f45086dcf07cf59dcbbdfab749188794913d0fb",
       "src/scene/StaticObjectAnimBegin.cpp": "e4e9f124ece578fc2cc3f9581b4956db10658767d241ba8dd18be902bd887783",
       "src/scene/StaticObjectAttachedLight.cpp": "ea79e7b7b90fba02effed2b77927e4abe661b535a878658f99e63d767c518437",
@@ -1473,6 +1482,7 @@
       "src/scene/TankObjectAI.cpp": "1efd4e80de3c27efa70916a921a737a561baae8ae75c38153db5673975649ec9",
       "src/scene/TankObjectAddWeapon.cpp": "713bc5013a47b5a56379e727b0bbf02c17530f76d0dbb41d79243a5253ba4b88",
       "src/scene/TankObjectBullet.cpp": "2b443e0f6e7344ca4fe602a49858dbf249194c9410788d285716f7994f695a19",
+      "src/scene/TankObjectCommonInit.cpp": "5f9504b2c9808b5865cc1a34334acd2f3adc081c2843bd3a110dc685bf2b9bab",
       "src/scene/TankObjectDoodad.cpp": "97144efefd9321e93b0c56c2dd0ddbacde39c7d59a792c83859a1b8baf3306b7",
       "src/scene/TankObjectFire.cpp": "ce68c34e855517154b5ad8d2229e4928f12c05e63ea855e41c4c85a9a62b5c36",
       "src/scene/TankObjectInit.cpp": "2dc0dba3911b219ef87eef48af04b75a87fc48cc88736215159cad28ef448e3f",
@@ -2656,7 +2666,7 @@
       "include/game/CollisionProjection.h": "5efc5439936194866e0ee58e43061509d1252ca7ed70983b652f4919a3159332",
       "include/game/CollisionVolume.h": "26ba5d9a9865a0185f0e87db21b13faf3214b7e213201e825181412f0f9a5b7c",
       "include/game/Color.h": "de545de60e69ea1ed6449833872b54d60ac164fa2d0fa76cc8deb25dc2b58be1",
-      "include/game/Compartment.h": "42673c10c8ec7d752aa83871afd544971852c0901840b4643627c8f4d5f29e03",
+      "include/game/Compartment.h": "ff79f1aca586a177fc4c83ebda653bb6cae9d4bd59f13bcdfcc9d0e93fbbb9cf",
       "include/game/ConfigFile.h": "66b42170189b79ebbcd591331641c46e2c117025db240e767a3b76ac031ffe0a",
       "include/game/DestructorQueue.h": "434ec17ba96007c8368db0dc62c9454d1650bc2c4d5615a13aad40969412bda8",
       "include/game/DrawContext.h": "646a671aa97643c9e91809cc0ca1980de395bd2895d9111035b5b8b03d1581f5",
@@ -2767,7 +2777,7 @@
       "include/game/Rcmp.h": "938e4965d3c2b0d0f48d815f17eaf162b3fb5b491ec3dfd4bcc5814197bfa6ee",
       "include/game/SceneCollisions.h": "2a1769143eeecf427cad1a013ebf02f6b0d2ee83e011b58e5c62cd141306cd64",
       "include/game/SceneNode.h": "e57802b8a891e60ae5642230d29fea224075a837267cac91413b2a7fae00a560",
-      "include/game/SceneObjects.h": "16fda2efada07a844f1e4083d63d4dac46572feaa2fec252468f4fafd427cc3c",
+      "include/game/SceneObjects.h": "dd045643eb65ae01140f6cc6dc439501905b8b2fd77c922601ac4cfdf6a7d870",
       "include/game/Screen.h": "86139c54ad8a9fdfa1e0842d665f4cd5699ac216901fab040218e8b7adc2c78a",
       "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
       "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
@@ -3206,6 +3216,7 @@
       "config/GR8E69/ai_targeting_update.json": "a43d0b595f7aea069b47939e3555dbccc71ed0811278060a364b909b9c874f5f",
       "config/GR8E69/ambient_track.json": "a0e649c1f923a48f87645de3f5d54aadb4db1db43872d0a7376af7a7406ab4fd",
       "config/GR8E69/ambient_track_location.json": "12f454bd3ebed794c46407c0cd1a158fa22ad409d61b7847a70849566d7557bd",
+      "config/GR8E69/anim_factory_init_weapon.json": "8b2824c1de28fd86d6a63f354eedbf4899803370e7ef7d008b97764ad1de6da6",
       "config/GR8E69/anim_factory_load.json": "a8acb5997b7f9521f24922446225fe46c054d909d8f3daef38b2dd408f4d9fba",
       "config/GR8E69/anim_factory_load_weapon.json": "ab42276dae15dbe20348cca66752c1b34017b44cd293541634a93202dc4e7df6",
       "config/GR8E69/anim_light.json": "9ffbd37f12a017d9299881ad77528bd7b94bc35a5e4970c59fb96ce107610dfb",
@@ -3367,6 +3378,11 @@
       "config/GR8E69/comparisons.json": "562eb97fcd350a3780e89d21d8601bf81afa9a3625784ae3b22bbe68fe66292b",
       "config/GR8E69/compartment_draw_enabled.json": "730b38a0998449f373a9662e21aca81719a2c97d3343655dd4bdbf108cf66b4e",
       "config/GR8E69/compartment_init.json": "c81d407c5a80e7637234adc8c653bb20d536159d7c6b2a164ec1cc43f40f1a7c",
+      "config/GR8E69/compartment_instance_loaders.json": "823865f150f0812ae043dcb98a095dea11de008524e96be32931e73f394fa31c",
+      "config/GR8E69/compartment_instance_model.json": "30a855d2569867955082fae35f4e24d0ae8e566c6afd84a38970acab5f5d1742",
+      "config/GR8E69/compartment_instance_type.json": "e9c627e28e3772f42b25ac0e4cc7803afb43aeed8408cf3fb69ec8fa8373f637",
+      "config/GR8E69/compartment_primers.json": "ca70fb7545a8bbaadfb3655e18df5eb907d290ab77116aaa81edf515cc059ee4",
+      "config/GR8E69/compartment_update.json": "808c120bf963981c95095039e448ab3bcb8a389f8c7830029b9c808e0583e5cc",
       "config/GR8E69/compartment_world_volume.json": "71def021fb15bf3854ec3741d80859e072ad197ebdecb6d4a2930523362f855f",
       "config/GR8E69/configfile.json": "816f617ef89dfb0785d03617a0cc28dba036126ca63533b3e33e646cbf78520f",
       "config/GR8E69/cover_flags.json": "daa5728b880b7c0e45de51cf28bde940ebb67883771a2b770a61f947a26772eb",
@@ -4170,7 +4186,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "cce70b9d31a47e96e277db129a8933439c62097643dde065a3e5df86ca01bc77",
+      "config/GR8E69/project.json": "05fb83ed79f6f0cb657cd1b2cb1ab70bda733d1b7461eeb0fa897ea1e802958c",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -4254,6 +4270,7 @@
       "config/GR8E69/scene_AnimObjectVisible.json": "8e40bd467502ac935a0a9736e5b01b6d528d96abdcb1ee22f2874c486e0bce90",
       "config/GR8E69/scene_AnimObjectVolumes.json": "10ad011f639b6f24d962237099036c9fa0f26f0058cb9a11c7e7dcf07ad8b17b",
       "config/GR8E69/scene_AttachableObjectA.json": "c3e2b9a32e7040c1deeb440a9c3123b41398d074fe7a93c4f5fb897de385b2c1",
+      "config/GR8E69/scene_AttachableObjectAlign.json": "2c1ed9654d0b4f3814a70f0f77b145dadd8dea2651e327e14ec2cdc51e11f5ec",
       "config/GR8E69/scene_AttachableObjectAttach.json": "5a80394d36a319d7c4b5a63a54619aa52da3a05257f21792d0b46154f48c4db4",
       "config/GR8E69/scene_AttachableObjectB.json": "06c8e5cb4b989be36b3bc118de23ce315684abe48f28b0a7168d76747810489f",
       "config/GR8E69/scene_AttachableObjectC.json": "921a6e2635ca182465002db6373bc5f1ef5c82fb774db5befb51de4171c030f3",
@@ -4323,6 +4340,7 @@
       "config/GR8E69/scene_SoldierFade.json": "c03a22c5ea1bdfcad3b3d869daa003bf2da46506885175e2112d756ed26a61e9",
       "config/GR8E69/scene_SoldierGag.json": "f0e1d4e256060d1d9192900896d1aa42f9f1b436ecfb5605d0b8c0c968d3266f",
       "config/GR8E69/scene_SoldierGagFilter.json": "ee18a7b83200ea3d1f2cc46007771457a8dafee1a020b8c8e2d4da26fb9a0d26",
+      "config/GR8E69/scene_SoldierInitClass.json": "9c2959c912f395d2b72fc421668f4ec4dc88c46a0c19b24bafa81df556f9a729",
       "config/GR8E69/scene_SoldierLipSyncDef.json": "f96e41b367d383be6c20d4e0eeb23edf1979ec8a2f2a64d9daa0966e812952fd",
       "config/GR8E69/scene_SoldierLipsync.json": "52fe3dea9826e84b29b295ff891c63b49c4b2d370edb3d65a8b78643ff5bc7c2",
       "config/GR8E69/scene_SoldierLocomotion.json": "e0066b3b23ae3d04b4448083f393012f9deb139ee4b706b0832dfb4e0cc7f20b",
@@ -4336,6 +4354,7 @@
       "config/GR8E69/scene_SoldierWeapons.json": "7bba8922322199afa0f9c92dffdde7994fd91c628390517e110ed4f4993fab79",
       "config/GR8E69/scene_StaticFactoryHelmet.json": "a83de3ff3dcccc988ad62a4a625a135b5db95730e82708bce68db5b4bc1854be",
       "config/GR8E69/scene_StaticFactoryLookup.json": "ed24c612b9bc8bcc1f742b63be0da9214d538c873cff0c71f1eac051c18740ec",
+      "config/GR8E69/scene_StaticFactoryShutdown.json": "34fb530e20690e9c376c68b3820daaa77e0ea3bc6fd9a8fda9a3e2c405e27d12",
       "config/GR8E69/scene_StaticObjectAccess.json": "18b4299dfbcd360de3492e1e678113d6a340ac80c2b52111cac031fae788a90a",
       "config/GR8E69/scene_StaticObjectAnimBegin.json": "ba470a41d5243eb23155a03d9e9c2c8b77af2153bbc13838b3ae479b9d79b6a2",
       "config/GR8E69/scene_StaticObjectAttachedLight.json": "e50794d3d13fd901e01d342c36172d7d258e0b4966afa2af388442509d29c197",
@@ -4363,6 +4382,7 @@
       "config/GR8E69/scene_TankObjectAI.json": "5cbe92bc381b64b15c9afc20951370511a86fb748c83d64b315012203b5db908",
       "config/GR8E69/scene_TankObjectAddWeapon.json": "bb278c4218bb37adbc25da4e528f3d0fffd7bc68ca0dd86579cb41b7b30c51c8",
       "config/GR8E69/scene_TankObjectBullet.json": "0366675801ec27a56671f66baf98c4a373765b3ea01a8ab8148dd18805957ba2",
+      "config/GR8E69/scene_TankObjectCommonInit.json": "2726ee8fa8eccb454fcbc752b7feeca7a953a5dafbd7504dc698be6217c29aaf",
       "config/GR8E69/scene_TankObjectDoodad.json": "3397bce3283dcd58ac46e1318fb84263064b00ef6b2bc64a0fec4676221693b5",
       "config/GR8E69/scene_TankObjectFire.json": "3d8cfb2b1b68f9341baa48a0632d4e563377f846f15bda6e2ac039fab2da7b1f",
       "config/GR8E69/scene_TankObjectInit.json": "1fc2eb3883c1ecffb57a5e8b938d49e354580c2412e21ab57eebf339e920eb9c",
@@ -6872,14 +6892,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1190048,
+    "matching_code_bytes": 1191500,
     "total_executable_code_bytes": 2492032,
-    "percent": 47.754121937439,
+    "percent": 47.812387641892236,
     "categories": {
-      "reconstructed_game": 797832,
+      "reconstructed_game": 799284,
       "restored_library": 392216
     },
-    "matching_functions": 6188
+    "matching_functions": 6200
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -7132,6 +7152,7 @@
     "config/GR8E69/ai_targeting_update.json": "a43d0b595f7aea069b47939e3555dbccc71ed0811278060a364b909b9c874f5f",
     "config/GR8E69/ambient_track.json": "a0e649c1f923a48f87645de3f5d54aadb4db1db43872d0a7376af7a7406ab4fd",
     "config/GR8E69/ambient_track_location.json": "12f454bd3ebed794c46407c0cd1a158fa22ad409d61b7847a70849566d7557bd",
+    "config/GR8E69/anim_factory_init_weapon.json": "8b2824c1de28fd86d6a63f354eedbf4899803370e7ef7d008b97764ad1de6da6",
     "config/GR8E69/anim_factory_load.json": "a8acb5997b7f9521f24922446225fe46c054d909d8f3daef38b2dd408f4d9fba",
     "config/GR8E69/anim_factory_load_weapon.json": "ab42276dae15dbe20348cca66752c1b34017b44cd293541634a93202dc4e7df6",
     "config/GR8E69/anim_light.json": "9ffbd37f12a017d9299881ad77528bd7b94bc35a5e4970c59fb96ce107610dfb",
@@ -7293,6 +7314,11 @@
     "config/GR8E69/comparisons.json": "562eb97fcd350a3780e89d21d8601bf81afa9a3625784ae3b22bbe68fe66292b",
     "config/GR8E69/compartment_draw_enabled.json": "730b38a0998449f373a9662e21aca81719a2c97d3343655dd4bdbf108cf66b4e",
     "config/GR8E69/compartment_init.json": "c81d407c5a80e7637234adc8c653bb20d536159d7c6b2a164ec1cc43f40f1a7c",
+    "config/GR8E69/compartment_instance_loaders.json": "823865f150f0812ae043dcb98a095dea11de008524e96be32931e73f394fa31c",
+    "config/GR8E69/compartment_instance_model.json": "30a855d2569867955082fae35f4e24d0ae8e566c6afd84a38970acab5f5d1742",
+    "config/GR8E69/compartment_instance_type.json": "e9c627e28e3772f42b25ac0e4cc7803afb43aeed8408cf3fb69ec8fa8373f637",
+    "config/GR8E69/compartment_primers.json": "ca70fb7545a8bbaadfb3655e18df5eb907d290ab77116aaa81edf515cc059ee4",
+    "config/GR8E69/compartment_update.json": "808c120bf963981c95095039e448ab3bcb8a389f8c7830029b9c808e0583e5cc",
     "config/GR8E69/compartment_world_volume.json": "71def021fb15bf3854ec3741d80859e072ad197ebdecb6d4a2930523362f855f",
     "config/GR8E69/configfile.json": "816f617ef89dfb0785d03617a0cc28dba036126ca63533b3e33e646cbf78520f",
     "config/GR8E69/cover_flags.json": "daa5728b880b7c0e45de51cf28bde940ebb67883771a2b770a61f947a26772eb",
@@ -8096,7 +8122,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "cce70b9d31a47e96e277db129a8933439c62097643dde065a3e5df86ca01bc77",
+    "config/GR8E69/project.json": "05fb83ed79f6f0cb657cd1b2cb1ab70bda733d1b7461eeb0fa897ea1e802958c",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -8180,6 +8206,7 @@
     "config/GR8E69/scene_AnimObjectVisible.json": "8e40bd467502ac935a0a9736e5b01b6d528d96abdcb1ee22f2874c486e0bce90",
     "config/GR8E69/scene_AnimObjectVolumes.json": "10ad011f639b6f24d962237099036c9fa0f26f0058cb9a11c7e7dcf07ad8b17b",
     "config/GR8E69/scene_AttachableObjectA.json": "c3e2b9a32e7040c1deeb440a9c3123b41398d074fe7a93c4f5fb897de385b2c1",
+    "config/GR8E69/scene_AttachableObjectAlign.json": "2c1ed9654d0b4f3814a70f0f77b145dadd8dea2651e327e14ec2cdc51e11f5ec",
     "config/GR8E69/scene_AttachableObjectAttach.json": "5a80394d36a319d7c4b5a63a54619aa52da3a05257f21792d0b46154f48c4db4",
     "config/GR8E69/scene_AttachableObjectB.json": "06c8e5cb4b989be36b3bc118de23ce315684abe48f28b0a7168d76747810489f",
     "config/GR8E69/scene_AttachableObjectC.json": "921a6e2635ca182465002db6373bc5f1ef5c82fb774db5befb51de4171c030f3",
@@ -8249,6 +8276,7 @@
     "config/GR8E69/scene_SoldierFade.json": "c03a22c5ea1bdfcad3b3d869daa003bf2da46506885175e2112d756ed26a61e9",
     "config/GR8E69/scene_SoldierGag.json": "f0e1d4e256060d1d9192900896d1aa42f9f1b436ecfb5605d0b8c0c968d3266f",
     "config/GR8E69/scene_SoldierGagFilter.json": "ee18a7b83200ea3d1f2cc46007771457a8dafee1a020b8c8e2d4da26fb9a0d26",
+    "config/GR8E69/scene_SoldierInitClass.json": "9c2959c912f395d2b72fc421668f4ec4dc88c46a0c19b24bafa81df556f9a729",
     "config/GR8E69/scene_SoldierLipSyncDef.json": "f96e41b367d383be6c20d4e0eeb23edf1979ec8a2f2a64d9daa0966e812952fd",
     "config/GR8E69/scene_SoldierLipsync.json": "52fe3dea9826e84b29b295ff891c63b49c4b2d370edb3d65a8b78643ff5bc7c2",
     "config/GR8E69/scene_SoldierLocomotion.json": "e0066b3b23ae3d04b4448083f393012f9deb139ee4b706b0832dfb4e0cc7f20b",
@@ -8262,6 +8290,7 @@
     "config/GR8E69/scene_SoldierWeapons.json": "7bba8922322199afa0f9c92dffdde7994fd91c628390517e110ed4f4993fab79",
     "config/GR8E69/scene_StaticFactoryHelmet.json": "a83de3ff3dcccc988ad62a4a625a135b5db95730e82708bce68db5b4bc1854be",
     "config/GR8E69/scene_StaticFactoryLookup.json": "ed24c612b9bc8bcc1f742b63be0da9214d538c873cff0c71f1eac051c18740ec",
+    "config/GR8E69/scene_StaticFactoryShutdown.json": "34fb530e20690e9c376c68b3820daaa77e0ea3bc6fd9a8fda9a3e2c405e27d12",
     "config/GR8E69/scene_StaticObjectAccess.json": "18b4299dfbcd360de3492e1e678113d6a340ac80c2b52111cac031fae788a90a",
     "config/GR8E69/scene_StaticObjectAnimBegin.json": "ba470a41d5243eb23155a03d9e9c2c8b77af2153bbc13838b3ae479b9d79b6a2",
     "config/GR8E69/scene_StaticObjectAttachedLight.json": "e50794d3d13fd901e01d342c36172d7d258e0b4966afa2af388442509d29c197",
@@ -8289,6 +8318,7 @@
     "config/GR8E69/scene_TankObjectAI.json": "5cbe92bc381b64b15c9afc20951370511a86fb748c83d64b315012203b5db908",
     "config/GR8E69/scene_TankObjectAddWeapon.json": "bb278c4218bb37adbc25da4e528f3d0fffd7bc68ca0dd86579cb41b7b30c51c8",
     "config/GR8E69/scene_TankObjectBullet.json": "0366675801ec27a56671f66baf98c4a373765b3ea01a8ab8148dd18805957ba2",
+    "config/GR8E69/scene_TankObjectCommonInit.json": "2726ee8fa8eccb454fcbc752b7feeca7a953a5dafbd7504dc698be6217c29aaf",
     "config/GR8E69/scene_TankObjectDoodad.json": "3397bce3283dcd58ac46e1318fb84263064b00ef6b2bc64a0fec4676221693b5",
     "config/GR8E69/scene_TankObjectFire.json": "3d8cfb2b1b68f9341baa48a0632d4e563377f846f15bda6e2ac039fab2da7b1f",
     "config/GR8E69/scene_TankObjectInit.json": "1fc2eb3883c1ecffb57a5e8b938d49e354580c2412e21ab57eebf339e920eb9c",
@@ -9472,7 +9502,7 @@
     "include/game/CollisionProjection.h": "5efc5439936194866e0ee58e43061509d1252ca7ed70983b652f4919a3159332",
     "include/game/CollisionVolume.h": "26ba5d9a9865a0185f0e87db21b13faf3214b7e213201e825181412f0f9a5b7c",
     "include/game/Color.h": "de545de60e69ea1ed6449833872b54d60ac164fa2d0fa76cc8deb25dc2b58be1",
-    "include/game/Compartment.h": "42673c10c8ec7d752aa83871afd544971852c0901840b4643627c8f4d5f29e03",
+    "include/game/Compartment.h": "ff79f1aca586a177fc4c83ebda653bb6cae9d4bd59f13bcdfcc9d0e93fbbb9cf",
     "include/game/ConfigFile.h": "66b42170189b79ebbcd591331641c46e2c117025db240e767a3b76ac031ffe0a",
     "include/game/DestructorQueue.h": "434ec17ba96007c8368db0dc62c9454d1650bc2c4d5615a13aad40969412bda8",
     "include/game/DrawContext.h": "646a671aa97643c9e91809cc0ca1980de395bd2895d9111035b5b8b03d1581f5",
@@ -9583,7 +9613,7 @@
     "include/game/Rcmp.h": "938e4965d3c2b0d0f48d815f17eaf162b3fb5b491ec3dfd4bcc5814197bfa6ee",
     "include/game/SceneCollisions.h": "2a1769143eeecf427cad1a013ebf02f6b0d2ee83e011b58e5c62cd141306cd64",
     "include/game/SceneNode.h": "e57802b8a891e60ae5642230d29fea224075a837267cac91413b2a7fae00a560",
-    "include/game/SceneObjects.h": "16fda2efada07a844f1e4083d63d4dac46572feaa2fec252468f4fafd427cc3c",
+    "include/game/SceneObjects.h": "dd045643eb65ae01140f6cc6dc439501905b8b2fd77c922601ac4cfdf6a7d870",
     "include/game/Screen.h": "86139c54ad8a9fdfa1e0842d665f4cd5699ac216901fab040218e8b7adc2c78a",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
     "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
@@ -10688,6 +10718,11 @@
     "src/geometry/collisionvolume_ctor.cpp": "4ab70a7c5ad8f859389e3c0173d0261031e5de57257c00ee243c7820e26ff2b4",
     "src/geometry/compartment_draw_enabled.cpp": "11baa4fea51c36e1fccf657ce678a83f00c2f809702f44dfef8f948f1470509c",
     "src/geometry/compartment_init.cpp": "b0fe2ddfbda8275f886d0ed826c3899dbf4583e804a875038e2dfe7da037ac7a",
+    "src/geometry/compartment_instance_loaders.cpp": "fb9610d67501a7fdb78cc0938249be7945ce5105889bb07e60d2aeca0aceb9dd",
+    "src/geometry/compartment_instance_model.cpp": "3140de64f63411fb00376d61a26101c9466076663602238548b93f81ebb6a7f8",
+    "src/geometry/compartment_instance_type.cpp": "74c7082dd48b2981c692a7a7f1de3e89488764f9b767920e8303dce1b95b2c24",
+    "src/geometry/compartment_primers.cpp": "ead70b920f35ec50b2ed34cc46bcc49a9695f6e99c4b57483e04c0776f81e61a",
+    "src/geometry/compartment_update.cpp": "9661ac8fa9c7d5af5920059e6fb05f392eb01317c97f66e9ab0ed1c21ba077b4",
     "src/geometry/compartment_world_volume.cpp": "a2a3e8e996dffef6329dd54637e0df9029eedabd734a26df725c53ba8609d936",
     "src/geometry/csg_volume.cpp": "8637cf2d285bf054a22b3ebafef0e499272a970488e5cbf670b6555cfb5538f5",
     "src/geometry/fiber_construct.cpp": "edbf7a8d499b49c6395fdc4c046456354f870e9db63754e8df4b3246ae2eda0f",
@@ -11088,6 +11123,7 @@
     "src/save/mc_g.cpp": "e639a05147fc56af84f8654a1a60c618fd32f0600b6ac95f8c5bd35211da4e75",
     "src/save/mc_h.cpp": "6d4ea2cd72568b3250cba3ce64dba6c3bae2ea478598f0df6c60cc4521015303",
     "src/scene/AnimObjFactoryConstructor.cpp": "74d86ee9bb07110eb11aa5361a683e4cd3164e50b3ce1b16a066cfcc8cebf9d8",
+    "src/scene/AnimObjFactoryInitWeapon.cpp": "c1cd69a9e7fe0373d0e397582b9e4850c58be2cec51eb1c5f5c42d19f050b9cc",
     "src/scene/AnimObjFactoryLoad.cpp": "5dbf4979bcfc1422fbee8cdb835e64bbd28db48c48907cc64fe00064e44e89e9",
     "src/scene/AnimObjFactoryLoadWeapon.cpp": "775fa75f4820802b1928d0045ac10cdfa69199621e800b15300a7690c532662b",
     "src/scene/AnimObjFactoryLoaders.cpp": "f9b6e94a774c14277579338ca9f3bec4a379df821271425a464b85ad96026e68",
@@ -11121,6 +11157,7 @@
     "src/scene/AnimObjectVisible.cpp": "380a912acd1b0c59139a91b62a0e620adf4ab346e59eb8e611e4953dda1328a4",
     "src/scene/AnimObjectVolumes.cpp": "da4b685af96884e598375982a044940b87f663edd6143d787a7beae2fc860d4e",
     "src/scene/AttachableObjectA.cpp": "72deef8d7c8dd87b1804ecf6d4d562606b86f6f612e61869d74fd1448aea66d4",
+    "src/scene/AttachableObjectAlign.cpp": "2803af6553dfbc57e407b17ff3509c466b36c6a94b531a6a6525c82c417e6b71",
     "src/scene/AttachableObjectAttach.cpp": "55f0da4fe313f5f7887d0b1d0f926106e09d4ccafbd8821c81fa25bdfa2f7564",
     "src/scene/AttachableObjectB.cpp": "96f9d0b60a7cbe2777084971aa74470168d825cde7723184d83d4960d7176d39",
     "src/scene/AttachableObjectC.cpp": "4ba057f86eeeead5950370eb21bf7605d1bde0ff73ccc6b263b2d597cd40ea3f",
@@ -11201,6 +11238,7 @@
     "src/scene/SoldierFade.cpp": "86ee08176d76986c82f7a597f69139f89a25ecce907744c1569bfa79eb1a608f",
     "src/scene/SoldierGag.cpp": "56f9895ace50b4581882e46c99ff281ea33e6cb5bc9c2d5fec8f5ca8994c6708",
     "src/scene/SoldierGagFilter.cpp": "d3510f55dae43aaeac73be3e183885f9e03aad3600f057a115cf61c8613a666e",
+    "src/scene/SoldierInitClass.cpp": "fa6b8e3319a14299fabd6b991c9b83e4241e7ce79b9b0ca328e2b4440d7f0597",
     "src/scene/SoldierLipSyncDef.cpp": "63f33520bde6e562307afb22a754dc4611bd7a0eb0d342ca761992a1a4e0b1e0",
     "src/scene/SoldierLipsync.cpp": "d6b2233028a4f8452cf2ad494fd5406e75442149dd6cb1f6d20b0351eea3b418",
     "src/scene/SoldierLocomotion.cpp": "d0dfb05a2a6301e7ecfab1531d45b276ade8a014d0553a3f1ad2c821906cd017",
@@ -11214,6 +11252,7 @@
     "src/scene/SoldierWeapons.cpp": "97cca0c9c31f68256d98a373b12353076d64d16f2ab03012c8c47a706c0895af",
     "src/scene/StaticFactoryHelmet.cpp": "ff084d7eafcaffce9661725d6440309ff4d6961de6f8a6efa4687e33d8f5ebe4",
     "src/scene/StaticFactoryLookup.cpp": "b1f3e3d38d9117b19ac3af7fc6bc4be4aac0fe822b70fc0e489fa0c79d7ac1ec",
+    "src/scene/StaticFactoryShutdown.cpp": "50ee9a54693ac68729bbb9d72fb277ba74b96f1c33f2e86cebc78cf1436ea958",
     "src/scene/StaticObjectAccess.cpp": "4226693d4a5aa5a32cce548b3f45086dcf07cf59dcbbdfab749188794913d0fb",
     "src/scene/StaticObjectAnimBegin.cpp": "e4e9f124ece578fc2cc3f9581b4956db10658767d241ba8dd18be902bd887783",
     "src/scene/StaticObjectAttachedLight.cpp": "ea79e7b7b90fba02effed2b77927e4abe661b535a878658f99e63d767c518437",
@@ -11241,6 +11280,7 @@
     "src/scene/TankObjectAI.cpp": "1efd4e80de3c27efa70916a921a737a561baae8ae75c38153db5673975649ec9",
     "src/scene/TankObjectAddWeapon.cpp": "713bc5013a47b5a56379e727b0bbf02c17530f76d0dbb41d79243a5253ba4b88",
     "src/scene/TankObjectBullet.cpp": "2b443e0f6e7344ca4fe602a49858dbf249194c9410788d285716f7994f695a19",
+    "src/scene/TankObjectCommonInit.cpp": "5f9504b2c9808b5865cc1a34334acd2f3adc081c2843bd3a110dc685bf2b9bab",
     "src/scene/TankObjectDoodad.cpp": "97144efefd9321e93b0c56c2dd0ddbacde39c7d59a792c83859a1b8baf3306b7",
     "src/scene/TankObjectFire.cpp": "ce68c34e855517154b5ad8d2229e4928f12c05e63ea855e41c4c85a9a62b5c36",
     "src/scene/TankObjectInit.cpp": "2dc0dba3911b219ef87eef48af04b75a87fc48cc88736215159cad28ef448e3f",
@@ -58007,6 +58047,186 @@
       "discarded_functions": [],
       "object_sha256": "78d5dcd1d4f4a641e119a72c06a7039fda6c26cd115fea95b9e33f886a5de0fe",
       "linked_sha256": "7e3364d82fe3932fa07db14d4a397607d5ff295b3b12cd166f89e4e83eccbd28"
+    },
+    {
+      "id": "anim_factory_init_weapon",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 140,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "dbc023f20e65980a97d3bb685a4e6f4187e79bf32903fd8b167cd17df8bd8b9a",
+      "linked_sha256": "6a5ea3eb67468ad0834b361db4197e25a7d241f84d535678de19fc2609d5fb9d"
+    },
+    {
+      "id": "scene_TankObjectCommonInit",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 96,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "4f13f055d298104a34910018f045637fccd7beae41bb99afb65395019a83468d",
+      "linked_sha256": "c6eef644d3e538ebc7ed1414509900b29ba1c74ee5f7c5cd9a21dcbf9f73269e"
+    },
+    {
+      "id": "scene_AttachableObjectAlign",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 208,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "130a08d76d38dbb5d67b262c9205bca8bb25b8ac2f32d4101b734831262fae52",
+      "linked_sha256": "43d19ced6e24d0304678ce25f04cee8dea3ee42ac5c019a09799fdc496f80340"
+    },
+    {
+      "id": "scene_SoldierInitClass",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 164,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "968c8818be44e096786271ffe62df6ce69dc051270cc98a4a1dbf71d1e9d9db2",
+      "linked_sha256": "744e10f1a59ecf3c1e7fdf7c1641b019fadab66412f61f1f20d8657c32d920ab"
+    },
+    {
+      "id": "scene_StaticFactoryShutdown",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 272,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "ee2a512b421798cc70904db0bd276acf857cfa15549ffec026d69ca5ba046636",
+      "linked_sha256": "169650bfd8d63ef3fdb9123d52aeb74be5eaa3e96d4861b495a7fe848c4dd2c6"
+    },
+    {
+      "id": "compartment_update",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 344,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "314acc9d1a5ce979a06ac5976fcef14e22d74ba6ced8b627e93c13f6bf37f3fc",
+      "linked_sha256": "95939a098f6136740c5812d04cc56a8fe47c76e16f1add791cfa81fc083b7998"
+    },
+    {
+      "id": "compartment_instance_loaders",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 100,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "4bb3a294bd6f9b44bf8246bdb3706d8b39484a66a59f31c98f5bcd328a895c2d",
+      "linked_sha256": "90de2418b95c1e7f998ff55a1018ed507fe1119188a70a31aca1f7a734550248"
+    },
+    {
+      "id": "compartment_instance_type",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 28,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "b3da7aee0df37502d24ce8b7a5a058a737029cca784dd0dad52b6954cef6e7c1",
+      "linked_sha256": "79193e73d1fe60ed891e9ffb28015b41cb72e76ab0e457da66bfd03bf62c958a"
+    },
+    {
+      "id": "compartment_instance_model",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 96,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e9006709d6ca0656ac8840dc40d61c54a6ec7e80f314abdf047e082720cd7ea6",
+      "linked_sha256": "73447fcf3920f0e94893d0bf60fcfe8facfbe7b644f7d65e790cbf4bc2ec69a8"
+    },
+    {
+      "id": "compartment_primers",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 4,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "4dc636f778f5c3d23fc5e9f9274b8ca0e4c58e9a923ca5f292f9554f5326ff81",
+      "linked_sha256": "517459171240ac514b792828e1bd4797a9d6b1c2a04d3db2c4728f0587ec8f35"
     }
   ],
   "code_map": {
@@ -61423,28 +61643,12 @@
             "kind": "function",
             "name": "GetShared__12CCompartment",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80070acc",
-            "size": 152,
-            "kind": "function",
-            "name": "DoTextureSwap__12CCompartmenti",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80070b64",
-            "size": 4,
-            "kind": "function",
-            "name": "HandleExplosion__12CCompartmentRC10CExplosion",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80070b68",
-            "size": 188,
-            "kind": "function",
-            "name": "BeginUpdate__12CCompartmentf",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 80070c24",
+        "ranges": [
           {
             "address": "0x80070c24",
             "size": 300,
@@ -61498,28 +61702,24 @@
             "kind": "function",
             "name": "IsVisible__C12CCompartmentR12CDrawContext",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80072014",
-            "size": 100,
-            "kind": "function",
-            "name": "DeleteInstanceLoaders__12CCompartment",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 80072078",
+        "ranges": [
           {
             "address": "0x80072078",
             "size": 636,
             "kind": "function",
             "name": "InitInstances__12CCompartmentP8CRtcFile",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800722f4",
-            "size": 28,
-            "kind": "function",
-            "name": "GetInstanceType__12CCompartmenti",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 80072310",
+        "ranges": [
           {
             "address": "0x80072310",
             "size": 44,
@@ -61540,14 +61740,12 @@
             "kind": "function",
             "name": "DeleteLoaders__Q212CCompartment14CInstanceModel",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80072400",
-            "size": 96,
-            "kind": "function",
-            "name": "GetInstanceModel__12CCompartmentii",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 80072460",
+        "ranges": [
           {
             "address": "0x80072460",
             "size": 1060,
@@ -61579,15 +61777,8 @@
         ]
       },
       {
-        "name": "Unknown file/.text @ 800729b4",
+        "name": "Unknown file/.text @ 800729b8",
         "ranges": [
-          {
-            "address": "0x800729b4",
-            "size": 4,
-            "kind": "function",
-            "name": "EnableOrDisablePrimers__12CCompartmenti",
-            "evidence": "unknown-file"
-          },
           {
             "address": "0x800729b8",
             "size": 592,
@@ -66257,13 +66448,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800ba6f4",
-            "size": 208,
-            "kind": "function",
-            "name": "AttachAndAlignObject__17CAttachableObjectP11CAnimObjecti",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800baaf8",
             "size": 1276,
             "kind": "function",
@@ -66281,13 +66465,6 @@
         "file_record": 132,
         "file_name": "Soldier_object.cpp",
         "ranges": [
-          {
-            "address": "0x800bb260",
-            "size": 164,
-            "kind": "function",
-            "name": "InitClass__14CSoldierObject",
-            "evidence": "adjacent-compiler-markers"
-          },
           {
             "address": "0x800bb304",
             "size": 872,
@@ -66474,13 +66651,6 @@
         "file_record": 133,
         "file_name": "Tank_object.cpp",
         "ranges": [
-          {
-            "address": "0x800c31ec",
-            "size": 96,
-            "kind": "function",
-            "name": "CommonInit__11CTankObject",
-            "evidence": "adjacent-compiler-markers"
-          },
           {
             "address": "0x800c324c",
             "size": 128,
@@ -66849,13 +67019,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800cbc68",
-            "size": 140,
-            "kind": "function",
-            "name": "InitPlayerWeapon__18CAnimObjectFactoryP24LevelFileContentsStruct_i",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800cbcf4",
             "size": 2420,
             "kind": "function",
@@ -66913,13 +67076,6 @@
             "size": 2636,
             "kind": "function",
             "name": "Init__20CStaticObjectFactory",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800cea08",
-            "size": 272,
-            "kind": "function",
-            "name": "Shutdown__20CStaticObjectFactory",
             "evidence": "adjacent-compiler-markers"
           },
           {

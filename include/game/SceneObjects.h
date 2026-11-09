@@ -479,6 +479,7 @@ class CAnimObject {
 class CAISoldierObject;
 class CSoldierObject {
   public:
+    static void InitClass();
     // A short list reset by clearing the count at +8; the name is descriptive.
     struct VolumeList {
         unsigned char unknown_0[8];
@@ -982,6 +983,7 @@ class CAITankObject;
 class CAIDoodad;
 class CTankObject : public CHierObject {
   public:
+    void CommonInit();
     void InitAI();
     void CleanUp();
     void BeginUpdate(float);
