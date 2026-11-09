@@ -1,6 +1,6 @@
 {
-  "id": "ai_BotStrafe",
-  "source": "src/ai/BotStrafe.cpp",
+  "id": "ai_BotManMMGFind",
+  "source": "src/ai/BotManMMGFind.cpp",
   "category": "reconstructed_game",
   "compiler_version": "3.8.1",
   "compiler_flags": [
@@ -18,28 +18,30 @@
   "sections": [
     {
       "name": ".text",
-      "address": "0x80098324",
-      "size": 148
+      "address": "0x80091f04",
+      "size": 300
     },
     {
       "name": ".rodata",
-      "address": "0x8029dc30",
-      "size": 12
+      "address": "0x8029d368",
+      "size": 8
     }
   ],
   "functions": [
     {
-      "name": "WantToStrafe__10CBotObject",
-      "address": "0x80098324",
-      "size": 148,
+      "name": "FindMMG__7CBotManP10CBotObject",
+      "address": "0x80091f04",
+      "size": 300,
       "binding": 1
     }
   ],
   "externals": {
-    "GetIdealRange__10CBotWeaponP13CBotCharacter": "0x800927c0",
-    "MathFunRandomReal__Fff": "0x80133a54",
-    "WithinGrenadeBlastRadius__10CBotObject": "0x800993b4"
+    "DistanceSquaredXY__C8CVector3RC8CVector3": "0x8007be08",
+    "IsInUse__8MMG_Info": "0x80091ea4",
+    "g_BotMan": "0x803032f0"
   },
   "discarded_functions": [],
-  "undefined_in_discarded_code": []
+  "undefined_in_discarded_code": [],
+  "original_file": "BotMan.cpp",
+  "original_file_index": 670
 }

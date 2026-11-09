@@ -44,13 +44,20 @@ class CBotWeapon {
     CWeapon *weapon;   // +0x24
 };
 // One tracked enemy (eighty bytes, from the array stride).
+// Candidate cover positions and the choice among them; the tag comes from FindCover2's symbol, the members are inferred.
+struct sCoverData {
+    CVector3 positions[5];     // +0x00
+    unsigned short pathNode;   // +0x50
+    int index;                 // +0x54
+};
 struct EnemyInfo {
     int inView;         // +0x00; tested by EnemyInView.
     unsigned char unknown04[0x10 - 4];
     CVector3 position;  // +0x10
     unsigned char unknown20[0x30 - 0x20];
     float lastSeenTime; // +0x30
-    unsigned char unknown34[0x3c - 0x34];
+    unsigned char unknown34[0x38 - 0x34];
+    CAIObject *ai;      // +0x38
     float distance;     // +0x3c
     unsigned char unknown40[80 - 0x40];
 };
@@ -94,6 +101,7 @@ class CBotMan {
     float FindClosestHealthPack(CBotObject *, CVector3 &);
     float CalcMMGScore(CBotObject *, unsigned long, CVector3 &);
     int FindMMG(CBotObject *);
+    MMG_Info *GetMMG(int index) { return &mmgs[index]; }
     CBotObject *enemies[1];            // +0x000; indexed by GetEnemyAI, extent not established.
     unsigned char unknown004[0x40 - 4];
     CBotObject *bots[1];               // +0x40; extent not established.
@@ -179,6 +187,8 @@ class CBotObject {
     void UpdateLookDir();
     int WantToStrafe();
     int DirectChase(CVector3 &);
+    int ChaseDecision(bool);
+    int CoverPointChase(CVector3 &, float, float);
     void RateWeapons();
     void ChangeWeapon(int);
     unsigned char unknown0000[0xd0 - 0x0];
@@ -212,7 +222,10 @@ class CBotObject {
     unsigned char unknown1b30[0x1b40 - 0x1b30];
     CVector3 lookTarget; // +0x1b40
     CVector3 moveTarget; // +0x1b50
-    unsigned char unknown1b60[0x1bd2 - 0x1b60];
+    unsigned char unknown1b60[0x1b70 - 0x1b60];
+    sCoverData cover;   // +0x1b70; filled by FindCover2.
+    int coverPending;   // +0x1bc8; set when a chase goes to cover.
+    unsigned char unknown1bcc[0x1bd2 - 0x1bcc];
     short pathStep; // +0x1bd2; -1 when a state starts a new path
     unsigned char unknown1bd4[0x1be0 - 0x1bd4];
     CVector3 threatPositions[5]; // +0x1be0; read by UpdateLookDir; extent from the count at +0x1c30
@@ -223,7 +236,7 @@ class CBotObject {
     float fireDelay; // +0x1c50
     float reloadEndTime; // +0x1c54
     float respawnTime; // +0x1c58
-    unsigned char unknown1c5c[0x1c68 - 0x1c5c];
+    float coverTimers[3]; // +0x1c5c; cleared when a chase goes to cover. Meaning inferred from that only.
     int fireAtEnemy; // +0x1c68
     int lookAlongPath; // +0x1c6c
     int jump; // +0x1c70

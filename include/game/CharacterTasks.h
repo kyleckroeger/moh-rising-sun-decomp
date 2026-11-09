@@ -62,6 +62,24 @@ class Sequence : public Task {
     unsigned int count;                // +0x74
     Resource::Pointer<Task> last;      // +0x78; the task that was promoted.
 };
+// Plays a task while turning the character at the rate that covers the wrapped angle in the given time.
+class Turn : public Task {
+  public:
+    static Resource::Pointer<Turn> Create(Resource::Pointer<State> &state, unsigned int substate, Task *parent);
+    Turn(Resource::Pointer<State> &state, unsigned int substate, Task *parent);
+    virtual ~Turn();
+    virtual int Busy();
+    virtual void EvalPose(float time, float *pose);
+    virtual void Dump(unsigned int depth);
+    void Assign(Resource::Pointer<Task> &task, float to, float from, float duration);
+    void *operator new(unsigned int size);
+    void operator delete(void *p, unsigned int size);
+    Resource::Pointer<Task> task; // +0x34
+    unsigned char unknown_38[8];
+    int started;                  // +0x40
+    float unknown_44;             // +0x44
+    float rate;                   // +0x48
+};
 // Blends from one task into another over a fixed time, then promotes the target into its parent.
 class Transition : public Task {
   public:

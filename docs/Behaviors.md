@@ -89,14 +89,19 @@ byte, with their native tables and literal pools. There is no Frontline counterp
   stop, trim and step functions, and the on-network test in `Update`. Its member names are
   inferred from these uses; `CAIPhysics` is at `+0x1c` and the solution list at `+0x88`.
 
+The mounted machine gun's registries are three file-private maps: guns and feeders by link code, and one `MMGBidInfo`
+(best bid and bidder) per trigger flagged as a gun point. `RegisterGun` and `RegisterFeeder` perform a lookup whose result
+is unused before assigning; that is what the target does.
+
+`WantToStrafe`, `ChaseDecision`, `DirectChase` and `CoverPointChase` share one unit because their literal pool holds a
+double that must sit on an eight-byte boundary.
+
 ## Not reconstructed yet
 
 - `CAreaPathNode::LineEndsAtLinkEdge` and `GetNextNode`, `CAreaEdge::GetEdgeVector` and
   `GetMidPoint`: near misses (register allocation; the last two inline `GetEdgePoints`).
 - `BS_Enter_Retreat`, `BS_Enter_Chase` and `BS_Camp`: their strings are shared with neighbors in
   the same pool that are not reconstructed yet.
-- `CBotObject::DirectChase`: drafted, but its literal pool has a double at 4 mod 8 and needs
-  `ChaseDecision` and `CoverPointChase` in the same unit.
 - `CAIAreaPathFinding::PathDistance`: a near miss (a register for the first node).
 - `GetBestPath`: a private function called only by `ComputeAStarPath`, so it waits for that unit.
 - `ShrinkAreaMesh`: an empty body with a 224-byte frame; the locals behind that frame are unknown.

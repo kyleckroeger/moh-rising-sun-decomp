@@ -2296,7 +2296,6 @@
     "ai_PathWalkNext.json",
     "ai_BotCampLookat.json",
     "ai_BotLookDir.json",
-    "ai_BotStrafe.json",
     "motion_blur.json",
     "motion_blur_pause.json",
     "gba_object_list.json",
@@ -2443,7 +2442,19 @@
     "fecode_setcellcolor.json",
     "festring_copy.json",
     "fengine_rendergroup.json",
-    "fengine_processmessagequeue.json"
+    "fengine_processmessagequeue.json",
+    "ai_MMGBids.json",
+    "ai_MMGGuns.json",
+    "ai_MMGTriggers.json",
+    "ai_CoverpointList.json",
+    "ai_AStarVolumes.json",
+    "ai_PathNetwork.json",
+    "ai_BotManCamp.json",
+    "ai_BotManMMGFind.json",
+    "ai_BotChase.json",
+    "ai_BuddyCheckpoints.json",
+    "ai_TurnCtor.json",
+    "ai_TurnB.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
