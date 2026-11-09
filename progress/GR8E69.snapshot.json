@@ -1155,6 +1155,7 @@
       "src/player/PlayerMountedGun.cpp": "6b60c5d4252f8213196b5f7fca8750ba415bd47d6fa6b1be3aca03b8374e9302",
       "src/player/PlayerMove.cpp": "399f77d94f7facf7b30a9385c45156225b29abd69c052f976fbf4d4cd93937fd",
       "src/player/PlayerMovePath.cpp": "3c4b8a6ee46920a0b3abd64a58f5fcadb2af0c771fdf4c8ea2b37f7baba0eb7f",
+      "src/player/PlayerNew.cpp": "f294eb4192198750cbc0d722386d168fb98810acc47df6a434a3264f8609aea7",
       "src/player/PlayerPeek.cpp": "f377a3d2ccd4c0d13b7a9b43b3adb961a142e226eec0fdc4831c38a091c71c63",
       "src/player/PlayerPostUpdate.cpp": "00e6413cf1ecf99c77035c5d283477036124dfee787d1b941aaf308a99aa2e2e",
       "src/player/PlayerReset.cpp": "f48f770c419891d8881abb511527e00a073fc30aae440043f26d9b083a685526",
@@ -2467,7 +2468,7 @@
       "include/game/CTriangle.h": "09bcd72b2b76ffdac4a6be541c441936f2178ae5ae44a66515a8430bbaaf5e25",
       "include/game/CVector3.h": "0c436c62dba8e3a7f44ca5e6eea6de50ff97e88e4e53545873d5ecca9d648aae",
       "include/game/Camera.h": "d2a5039c6f0c09da0be76e78c92b9e11c53f5c9900aac3c2239fe9c8c2fee623",
-      "include/game/CameraShake.h": "39a9d930ba63c3d04f49cf64c0c08c855ab7ef49133938e5751db394a5d2232b",
+      "include/game/CameraShake.h": "9a35526b5b806abeb9b501b7d2864ab782436821078fb1cad73ab82b32d3f8d4",
       "include/game/Capsule.h": "332dd06329ac7dc3ac5fc01793549a41e2defbe70298018accd2ce79c9e3ce3b",
       "include/game/CharacterShadow.h": "048ae3efc6fd6d3119f4c234f5bacd499c748c55b1573df386f686411e93a67a",
       "include/game/CollisionMath.h": "a9a8ee2674ee845e1549d3f906d34a2c02543fe5d4f8fbc40d42c4fdd0f22f2d",
@@ -3799,6 +3800,7 @@
       "config/GR8E69/player_mounted_gun.json": "525bf992ebe390fcb1776216870882345c9bd82bb91709673a08e1c0b704e47f",
       "config/GR8E69/player_move.json": "bfef674e38cfb7a3b88021bc7f173228c8813e2db9d9a4548ba18f99ca91885e",
       "config/GR8E69/player_move_path.json": "7e1ba310f80427384c2cfe91c6b131479095ad0c2b44715bd79dd2843f105a6e",
+      "config/GR8E69/player_new.json": "855caba3e2a9b838f5ddde58d4813daba645978443f776e147e4379754dfd406",
       "config/GR8E69/player_path_controls.json": "a5a585ed38c40cd299ab995320748f8e6777003f8cc885f5376c7e440dc2b3b7",
       "config/GR8E69/player_peek.json": "9acf67c6525c8d9ac013bdc309a350721a02242e8ab4825f43c1e6759f3279a3",
       "config/GR8E69/player_post_update.json": "30d2a1a50fadbabd6c2283b23f1bb7c8ffef92ceb8aa7e48d0f6d96b095b4799",
@@ -3826,7 +3828,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "803a96427d36f1d478900190bfe618c9e82b8b9bd6db2046b780eb51622cc0d2",
+      "config/GR8E69/project.json": "ea1fc53b7aec8f9a127878eae6d937dabfd4ef020fb9708436d08513d988b8cb",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -6509,14 +6511,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1115588,
+    "matching_code_bytes": 1115668,
     "total_executable_code_bytes": 2492032,
-    "percent": 44.76619882890749,
+    "percent": 44.76940906055781,
     "categories": {
-      "reconstructed_game": 723372,
+      "reconstructed_game": 723452,
       "restored_library": 392216
     },
-    "matching_functions": 5650
+    "matching_functions": 5652
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -7559,6 +7561,7 @@
     "config/GR8E69/player_mounted_gun.json": "525bf992ebe390fcb1776216870882345c9bd82bb91709673a08e1c0b704e47f",
     "config/GR8E69/player_move.json": "bfef674e38cfb7a3b88021bc7f173228c8813e2db9d9a4548ba18f99ca91885e",
     "config/GR8E69/player_move_path.json": "7e1ba310f80427384c2cfe91c6b131479095ad0c2b44715bd79dd2843f105a6e",
+    "config/GR8E69/player_new.json": "855caba3e2a9b838f5ddde58d4813daba645978443f776e147e4379754dfd406",
     "config/GR8E69/player_path_controls.json": "a5a585ed38c40cd299ab995320748f8e6777003f8cc885f5376c7e440dc2b3b7",
     "config/GR8E69/player_peek.json": "9acf67c6525c8d9ac013bdc309a350721a02242e8ab4825f43c1e6759f3279a3",
     "config/GR8E69/player_post_update.json": "30d2a1a50fadbabd6c2283b23f1bb7c8ffef92ceb8aa7e48d0f6d96b095b4799",
@@ -7586,7 +7589,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "803a96427d36f1d478900190bfe618c9e82b8b9bd6db2046b780eb51622cc0d2",
+    "config/GR8E69/project.json": "ea1fc53b7aec8f9a127878eae6d937dabfd4ef020fb9708436d08513d988b8cb",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -8920,7 +8923,7 @@
     "include/game/CTriangle.h": "09bcd72b2b76ffdac4a6be541c441936f2178ae5ae44a66515a8430bbaaf5e25",
     "include/game/CVector3.h": "0c436c62dba8e3a7f44ca5e6eea6de50ff97e88e4e53545873d5ecca9d648aae",
     "include/game/Camera.h": "d2a5039c6f0c09da0be76e78c92b9e11c53f5c9900aac3c2239fe9c8c2fee623",
-    "include/game/CameraShake.h": "39a9d930ba63c3d04f49cf64c0c08c855ab7ef49133938e5751db394a5d2232b",
+    "include/game/CameraShake.h": "9a35526b5b806abeb9b501b7d2864ab782436821078fb1cad73ab82b32d3f8d4",
     "include/game/Capsule.h": "332dd06329ac7dc3ac5fc01793549a41e2defbe70298018accd2ce79c9e3ce3b",
     "include/game/CharacterShadow.h": "048ae3efc6fd6d3119f4c234f5bacd499c748c55b1573df386f686411e93a67a",
     "include/game/CollisionMath.h": "a9a8ee2674ee845e1549d3f906d34a2c02543fe5d4f8fbc40d42c4fdd0f22f2d",
@@ -10363,6 +10366,7 @@
     "src/player/PlayerMountedGun.cpp": "6b60c5d4252f8213196b5f7fca8750ba415bd47d6fa6b1be3aca03b8374e9302",
     "src/player/PlayerMove.cpp": "399f77d94f7facf7b30a9385c45156225b29abd69c052f976fbf4d4cd93937fd",
     "src/player/PlayerMovePath.cpp": "3c4b8a6ee46920a0b3abd64a58f5fcadb2af0c771fdf4c8ea2b37f7baba0eb7f",
+    "src/player/PlayerNew.cpp": "f294eb4192198750cbc0d722386d168fb98810acc47df6a434a3264f8609aea7",
     "src/player/PlayerPeek.cpp": "f377a3d2ccd4c0d13b7a9b43b3adb961a142e226eec0fdc4831c38a091c71c63",
     "src/player/PlayerPostUpdate.cpp": "00e6413cf1ecf99c77035c5d283477036124dfee787d1b941aaf308a99aa2e2e",
     "src/player/PlayerReset.cpp": "f48f770c419891d8881abb511527e00a073fc30aae440043f26d9b083a685526",
@@ -54016,6 +54020,24 @@
       "discarded_functions": [],
       "object_sha256": "58645e45decc5c6b41cc894bbb238ccc2e32e0a5ec7e493d12aa91531b8ecd27",
       "linked_sha256": "d60ee867e43e1625602ce0ed63318830731d35a37d2a891eb64d78ab7a960442"
+    },
+    {
+      "id": "player_new",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 80,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "c6899ef1f60bcdd4cb000ac505de489339dcb056fe76147b2b4caf1f0c4bc3e2",
+      "linked_sha256": "f859f3c5f9005a969119035ca01eead30e9888df0bf073a6edbee47cf41c4f02"
     }
   ],
   "code_map": {
@@ -63701,20 +63723,6 @@
         "file_record": 130,
         "file_name": "player.cpp",
         "ranges": [
-          {
-            "address": "0x800aac6c",
-            "size": 48,
-            "kind": "function",
-            "name": "__nw__13CPlayerObjectUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800aac9c",
-            "size": 32,
-            "kind": "function",
-            "name": "__dl__13CPlayerObjectPv",
-            "evidence": "adjacent-compiler-markers"
-          },
           {
             "address": "0x800aacbc",
             "size": 64,

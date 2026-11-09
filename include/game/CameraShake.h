@@ -237,6 +237,8 @@ struct BS_STRUCT_HitByBulletInfo_struct;
 struct SMPPlayerData;
 class CPlayerObject {
   public:
+    static void *operator new(unsigned int);
+    static void operator delete(void *);
     void SetPlayersMountedMGPositions(CMatrix *);
     // Member-only view of the target search at +0x1ca0; the class name is original,
     // member names and the inline's name are descriptive.

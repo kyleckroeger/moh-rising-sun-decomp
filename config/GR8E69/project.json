@@ -2153,7 +2153,8 @@
     "shell_docoopcontrollerchecks.json",
     "shell_iscoopontop.json",
     "shell_getdeviceindexfromcontrolmask.json",
-    "shell_getnumcoopplayers.json"
+    "shell_getnumcoopplayers.json",
+    "player_new.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
