@@ -1108,6 +1108,7 @@
       "src/libgcc/machmode.h": "23e978f62f9b1376677035581c3a1ae3aea5cdca88aff96934b4aa45a6e2e14b",
       "src/libgcc/tconfig.h": "cb653912c0d78e81398d7ea015acd2622696a9b5022e710bcc0a4142e2088da3",
       "src/lighting/AnimLight.cpp": "8def4baf13e6bce46675282a6c6d99ee4f65fa180f3320cb09dc50e73aa137cf",
+      "src/lighting/AnimLightManager.cpp": "6ae36701989592ed1b3c84c0fd91a9445ffd773cf383e3a79327f1b4a6698abb",
       "src/lighting/AnimLightPools.cpp": "b5913877a604f0043a5f8684267faab30f3a3ebc23f1f12b8a791db31da036b4",
       "src/lighting/InstancedAnimLight.cpp": "b751faa7c2ad99ca2291d3c349951ccfd902461c791f06feaa5a8f55b086e51a",
       "src/lighting/LightAxes.cpp": "307d4b43648d47b7347f6642992208540c85a61b4fa6b76665753204d860e6ff",
@@ -2937,7 +2938,7 @@
       "include/game/IVolume.h": "95911ba145df993a5c74b9b441c050754f2084de085a7d62b324f66e4479f2bc",
       "include/game/LegacyField.h": "95883bc2693fd14b7014d3f1e6a6e514ed5126af239699aa46d05f565bce5afe",
       "include/game/LegacyFieldInfo.h": "bb18c3680e0a67e1a775b5bc35547c3ceb0fa3a880ca2530dfeee4568a2ba52b",
-      "include/game/Light.h": "bec6001412a618bb57e2654bce1b5afbdb8f385dd150732cbd01bd897b24f003",
+      "include/game/Light.h": "172b01ccf73273de5b08b87c27b95acad4187c7e0dc6924a330b13e2c1b7ca78",
       "include/game/LightVolumeManager.h": "f86744d00d312738c23085d84d513fbd05c495194b97a10bf4cde2011dbaf958",
       "include/game/LinkedList.h": "e7b4b7ed5a4f76d2630b7a7f9433e8b92b34d63a0efbb47ad4a2d9ec918f5c92",
       "include/game/LocationTargetInfo.h": "75bd41dde997f0961c4b85aa90f04c2627e540a09034104b9070eec5922e8868",
@@ -4184,6 +4185,7 @@
       "config/GR8E69/light_transforms.json": "89e40f5f3228cb0dd14ccb3f586ad84e9bdd87a7b23f105a9af98c74c173dd41",
       "config/GR8E69/light_volume_manager.json": "a1020b4f836e05cc516687609a15be559ca43ece249e7a1abfa2ed9adb4a1b8b",
       "config/GR8E69/light_volume_transition.json": "6dd24de125e3978833dba0ac54a2f0af965db4cac5faeaf057d813f5150e5cc3",
+      "config/GR8E69/lighting_AnimLightManager.json": "58df8f58c6f7fdb43b4379fa4405b141dacbf960ef709f37f0d37a96abcc7fd1",
       "config/GR8E69/line2_closest_point.json": "7a2a98a7c78c631e969b011d220afd1424fe1821e61f0f7155cfc0b0739698e7",
       "config/GR8E69/line3_degenerate.json": "734287694f2531b7bfd1327c5a94f2efd36428640ac74b07926bb8712f2940bd",
       "config/GR8E69/line3_length_squared.json": "f01db7bb74004b2d6dd3b79a6f3abd6cf9340458c8d4664b95d7e403412806b6",
@@ -4530,7 +4532,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "0cb33e4468538899ffbe5160c75aac6e48a9504619516d527e547994173484b5",
+      "config/GR8E69/project.json": "6f8dff4a0afcdc2a0216156f27c7196322b91c2054a5486e0fb7567c8432a8eb",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7262,14 +7264,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1305844,
+    "matching_code_bytes": 1307100,
     "total_executable_code_bytes": 2492032,
-    "percent": 52.400771739688736,
+    "percent": 52.4511723765987,
     "categories": {
-      "reconstructed_game": 913628,
+      "reconstructed_game": 914884,
       "restored_library": 392216
     },
-    "matching_functions": 6840
+    "matching_functions": 6845
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -8296,6 +8298,7 @@
     "config/GR8E69/light_transforms.json": "89e40f5f3228cb0dd14ccb3f586ad84e9bdd87a7b23f105a9af98c74c173dd41",
     "config/GR8E69/light_volume_manager.json": "a1020b4f836e05cc516687609a15be559ca43ece249e7a1abfa2ed9adb4a1b8b",
     "config/GR8E69/light_volume_transition.json": "6dd24de125e3978833dba0ac54a2f0af965db4cac5faeaf057d813f5150e5cc3",
+    "config/GR8E69/lighting_AnimLightManager.json": "58df8f58c6f7fdb43b4379fa4405b141dacbf960ef709f37f0d37a96abcc7fd1",
     "config/GR8E69/line2_closest_point.json": "7a2a98a7c78c631e969b011d220afd1424fe1821e61f0f7155cfc0b0739698e7",
     "config/GR8E69/line3_degenerate.json": "734287694f2531b7bfd1327c5a94f2efd36428640ac74b07926bb8712f2940bd",
     "config/GR8E69/line3_length_squared.json": "f01db7bb74004b2d6dd3b79a6f3abd6cf9340458c8d4664b95d7e403412806b6",
@@ -8642,7 +8645,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "0cb33e4468538899ffbe5160c75aac6e48a9504619516d527e547994173484b5",
+    "config/GR8E69/project.json": "6f8dff4a0afcdc2a0216156f27c7196322b91c2054a5486e0fb7567c8432a8eb",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -10143,7 +10146,7 @@
     "include/game/IVolume.h": "95911ba145df993a5c74b9b441c050754f2084de085a7d62b324f66e4479f2bc",
     "include/game/LegacyField.h": "95883bc2693fd14b7014d3f1e6a6e514ed5126af239699aa46d05f565bce5afe",
     "include/game/LegacyFieldInfo.h": "bb18c3680e0a67e1a775b5bc35547c3ceb0fa3a880ca2530dfeee4568a2ba52b",
-    "include/game/Light.h": "bec6001412a618bb57e2654bce1b5afbdb8f385dd150732cbd01bd897b24f003",
+    "include/game/Light.h": "172b01ccf73273de5b08b87c27b95acad4187c7e0dc6924a330b13e2c1b7ca78",
     "include/game/LightVolumeManager.h": "f86744d00d312738c23085d84d513fbd05c495194b97a10bf4cde2011dbaf958",
     "include/game/LinkedList.h": "e7b4b7ed5a4f76d2630b7a7f9433e8b92b34d63a0efbb47ad4a2d9ec918f5c92",
     "include/game/LocationTargetInfo.h": "75bd41dde997f0961c4b85aa90f04c2627e540a09034104b9070eec5922e8868",
@@ -11470,6 +11473,7 @@
     "src/libgcc/machmode.h": "23e978f62f9b1376677035581c3a1ae3aea5cdca88aff96934b4aa45a6e2e14b",
     "src/libgcc/tconfig.h": "cb653912c0d78e81398d7ea015acd2622696a9b5022e710bcc0a4142e2088da3",
     "src/lighting/AnimLight.cpp": "8def4baf13e6bce46675282a6c6d99ee4f65fa180f3320cb09dc50e73aa137cf",
+    "src/lighting/AnimLightManager.cpp": "6ae36701989592ed1b3c84c0fd91a9445ffd773cf383e3a79327f1b4a6698abb",
     "src/lighting/AnimLightPools.cpp": "b5913877a604f0043a5f8684267faab30f3a3ebc23f1f12b8a791db31da036b4",
     "src/lighting/InstancedAnimLight.cpp": "b751faa7c2ad99ca2291d3c349951ccfd902461c791f06feaa5a8f55b086e51a",
     "src/lighting/LightAxes.cpp": "307d4b43648d47b7347f6642992208540c85a61b4fa6b76665753204d860e6ff",
@@ -62149,6 +62153,24 @@
       "discarded_functions": [],
       "object_sha256": "ab3e4458f70287fe578ea89bb0b0f723fbfa8c5e962c111b1255819e67690fa6",
       "linked_sha256": "e259a5ea0bbadc55cbbc1d2714ffd034a70bf55abde2af5c6bb69106867c69d4"
+    },
+    {
+      "id": "lighting_AnimLightManager",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 1256,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e2a18ed5c381bede9179dfd9974fab77796baef5fcaa9d6401c8f0ddd5c8bad2",
+      "linked_sha256": "01ae1fffdf6629c49937932f97afe2ef5e1567d57c5963557573ee9322607eb6"
     }
   ],
   "code_map": {
@@ -72073,41 +72095,6 @@
             "size": 140,
             "kind": "function",
             "name": "__17CAnimLightManager",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801310c8",
-            "size": 344,
-            "kind": "function",
-            "name": "InitClass__17CAnimLightManagerP6CScene",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80131220",
-            "size": 188,
-            "kind": "function",
-            "name": "ShutdownClass__17CAnimLightManager",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801312dc",
-            "size": 352,
-            "kind": "function",
-            "name": "ResetClass__17CAnimLightManager",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8013143c",
-            "size": 224,
-            "kind": "function",
-            "name": "Create__17CAnimLightManagerUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8013151c",
-            "size": 148,
-            "kind": "function",
-            "name": "Create__17CAnimLightManagerP24MOH_animatedLight_Struct",
             "evidence": "adjacent-compiler-markers"
           },
           {

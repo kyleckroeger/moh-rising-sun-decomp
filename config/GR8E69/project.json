@@ -2519,7 +2519,8 @@
     "handler_statsscreen_pearl.json",
     "handler_loadslotselect_accept.json",
     "handler_passwordentry.json",
-    "handler_levelmenu_ctor.json"
+    "handler_levelmenu_ctor.json",
+    "lighting_AnimLightManager.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
