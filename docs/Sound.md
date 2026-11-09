@@ -485,6 +485,16 @@ reconstructed here: `Init`, `GetFirstFrame` and `GetRCMPChunk`, which have small
 matches but whose `.rodata` holds a second, unreferenced copy of the 2^31 literal at `0x802b8560`. `CHUNK` has an empty
 inline destructor: `delete chunk` tests for null, which it does not for a class without one.
 
+## Scene-node sound emitter
+
+`SceneNodeSoundEmitter` (`GameSoundEmitter.cpp`) follows a scene node through a `WeakPtr<ISceneNode, 8>` at
+`+4`; the member name is inferred. Distance is from the node, or from the emitter's fixed position for
+`PositionSoundEmitter`, to the closest player in multiplayer and to player 0 otherwise; with no node it is the
+largest float. `GetFilterDef` returns the soldier's lip-sync filter. The destructor and the `GetObjRef` and
+`GetType` bodies are class-body functions emitted with the table at the end of the file. The local cast from
+`CPlayerObject` to `ISceneNode` stands in for a base class the shared view does not declare. Not reconstructed:
+`CalculateAzimuth`, which is complete but for the registers of the two literal loads after `atan2f`.
+
 ## Sound busses and event destructors
 
 `cSoundBuss` records are 216 bytes: the free list threads `g_AllBusses` (32 records) through `+0`,

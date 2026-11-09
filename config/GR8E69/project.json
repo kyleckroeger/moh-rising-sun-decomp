@@ -2410,7 +2410,9 @@
     "projector_visible.json",
     "volfrustum_copy.json",
     "volfrustum_transformed_copy.json",
-    "shell_ListBoxEdit.json"
+    "shell_ListBoxEdit.json",
+    "sound_emitter_scene_node.json",
+    "sound_emitter_scene_node_tail.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
