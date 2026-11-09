@@ -874,10 +874,22 @@ class CFader {
 };
 
 // Static motion-blur control.
-class MotionBlur {
-  public:
-    static void SetFrameBlur(float, float, float, float);
-};
+namespace MotionBlur {
+void SetFrameBlur(float, float, float, float);
+void StopFrameBlur();
+void Update(float);
+void Pause();
+extern float gPrevAmount;
+extern float gCurrentAmount;
+extern float gTransitionTimer;
+extern float gDeltaAmount;
+extern float gAmount;
+extern float gRampIn;
+extern float gRampOut;
+extern float gDuration;
+extern int gState;
+extern int gPaused;
+}
 
 // Virtual-interface view of the animated-object tables (slots 89-113 after the
 // IMovingSceneNode slots), in the order of the original CSoldierObject table.

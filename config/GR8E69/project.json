@@ -2297,7 +2297,10 @@
     "ai_PathWalkNext.json",
     "ai_BotCampLookat.json",
     "ai_BotLookDir.json",
-    "ai_BotStrafe.json"
+    "ai_BotStrafe.json",
+    "motion_blur.json",
+    "motion_blur_pause.json",
+    "gba_object_list.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

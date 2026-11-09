@@ -522,3 +522,11 @@ queue with the same members. `ExecCommands` swaps bins 8 and 9 when
 setup and shutdown. Inferred: member names and the small `Rebuild` helper. Not reconstructed:
 the two destructors, whose base body is emitted weak, `GetFogValue` (one `fmr` of a known
 zero not reproduced), `SetCamera` and `SetViewport`.
+
+## Motion blur
+
+`MotionBlur` is a namespace, shown by its function and static symbols. `SetFrameBlur` starts a
+ramp to an amount; `Update` runs state 1 (ramp up), 2 (hold) and 3 (ramp down). `Update`'s empty
+`case 0` gives the decision tree its root and is inferred. The state numbers' meanings are
+inferred from the code. An unreferenced zero word at `0x8029a5c8` sits between `Update`'s and
+`Pause`'s literals; no source for it is known, so `Pause` is its own fragment.
