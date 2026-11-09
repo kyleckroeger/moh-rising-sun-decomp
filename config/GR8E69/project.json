@@ -2284,7 +2284,8 @@
     "meshparticle_alloc.json",
     "soundbussman_update.json",
     "soundbussman_retrofit.json",
-    "soundbussman_apply.json"
+    "soundbussman_apply.json",
+    "moh3soundevent_pause.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

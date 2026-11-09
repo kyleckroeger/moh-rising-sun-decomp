@@ -534,3 +534,7 @@ samples, introduced by the marker byte `0xEE`, that `Decode` copies over the out
 Member names are inferred. `readsamples` and `decodemut` are not reconstructed; `Snd::CEAXABLKDecf`'s
 `process_raw_block`, `decodexac` and `Decode` are not either. All of these units use `-G0
 -fno-strength-reduce`, like the other new units in this library.
+
+`Moh3SoundEvent::Pause` stores its argument in the static `s_paused` and in `g_npcVocalMan` at `+0x44`;
+`EndEvent` removes the event's sound from the schedule. The class is a method-only view so far: its table
+and its data members are not reconstructed, and the `+0x44` member name is inferred.

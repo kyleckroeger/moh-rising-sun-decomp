@@ -1918,6 +1918,7 @@
       "src/shell/static_text.cpp": "5a4217333e2ae2759f0c67cfd72be2f4b00390a47c31c6fba360be1bff988ae8",
       "src/sound/AmbientTrack.cpp": "806bc651699acac158151883251a45c29078a06e4fd195081a3d1d7443a56e52",
       "src/sound/AmbientTrackLocation.cpp": "933b8b3e8cf005a72f8374effa77b8128854c80a1ad55a34b724e440a079ee4e",
+      "src/sound/Moh3SoundEventPause.cpp": "bff04644009c44738926b4ca22cd8449d7933f8f808414001b22824864b8e9db",
       "src/sound/PositionSoundEmitterCopy.cpp": "0fc0f433641f62ec5c339de9a82691fdc664584d55014c0a5bff9e89fc5cd2b8",
       "src/sound/PositionSoundEmitterDefaults.cpp": "0ec29ce3a9210d78894ad14064f130697aba351cf6d858b563e6d6110039e377",
       "src/sound/SoundAliasDestructor.cpp": "b3325933ec4e146e60906ee80afb2bc497a9451a15f118b30d00a8199b9c7a55",
@@ -3827,6 +3828,7 @@
       "config/GR8E69/meshparticle_shutdown.json": "afc77003199febc6686a50868dda0d295a0327e473a1b34ffd9bdfa24ec19366",
       "config/GR8E69/meshparticle_state.json": "531a61701ba7c56b328756c347ebcf24ef9d0f14dbe65ac6248f04c7866ef091",
       "config/GR8E69/meshparticle_visible.json": "8689c1f66fa236a87f0b196e8694ce0b04d03d5881734a859a7357ef2f2a5581",
+      "config/GR8E69/moh3soundevent_pause.json": "0ebc189f833e8b651073c8461e8c357e4b0bcb5fc1e332c89f78ecd1cc8e9175",
       "config/GR8E69/moh_boot.json": "2775340b4b22670a410b07b1668f0b326bbf529254223c83ce0e65a2102660f1",
       "config/GR8E69/moh_ld.json": "32a76032d8d9ae6095f28c2abe6cdcbb4b07aff805698b97085e7b9b5b14158f",
       "config/GR8E69/moh_loader.json": "624fb3e655c8afa065ed00c994061d5c1f2571935873f5104e35b0dbe2437f3c",
@@ -4073,7 +4075,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "0da2b8925bae5b0e5e0b51df63bbd0ce07eefa303628b43eadd2b096265695bc",
+      "config/GR8E69/project.json": "d3e6a3f9208e625c17f3c9127fedd24be70d6366b56f3798ffb8729400409f86",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -6772,14 +6774,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1177792,
+    "matching_code_bytes": 1177864,
     "total_executable_code_bytes": 2492032,
-    "percent": 47.26231444861061,
+    "percent": 47.265203657095896,
     "categories": {
-      "reconstructed_game": 785576,
+      "reconstructed_game": 785648,
       "restored_library": 392216
     },
-    "matching_functions": 6080
+    "matching_functions": 6082
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -7704,6 +7706,7 @@
     "config/GR8E69/meshparticle_shutdown.json": "afc77003199febc6686a50868dda0d295a0327e473a1b34ffd9bdfa24ec19366",
     "config/GR8E69/meshparticle_state.json": "531a61701ba7c56b328756c347ebcf24ef9d0f14dbe65ac6248f04c7866ef091",
     "config/GR8E69/meshparticle_visible.json": "8689c1f66fa236a87f0b196e8694ce0b04d03d5881734a859a7357ef2f2a5581",
+    "config/GR8E69/moh3soundevent_pause.json": "0ebc189f833e8b651073c8461e8c357e4b0bcb5fc1e332c89f78ecd1cc8e9175",
     "config/GR8E69/moh_boot.json": "2775340b4b22670a410b07b1668f0b326bbf529254223c83ce0e65a2102660f1",
     "config/GR8E69/moh_ld.json": "32a76032d8d9ae6095f28c2abe6cdcbb4b07aff805698b97085e7b9b5b14158f",
     "config/GR8E69/moh_loader.json": "624fb3e655c8afa065ed00c994061d5c1f2571935873f5104e35b0dbe2437f3c",
@@ -7950,7 +7953,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "0da2b8925bae5b0e5e0b51df63bbd0ce07eefa303628b43eadd2b096265695bc",
+    "config/GR8E69/project.json": "d3e6a3f9208e625c17f3c9127fedd24be70d6366b56f3798ffb8729400409f86",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -11535,6 +11538,7 @@
     "src/shell/static_text.cpp": "5a4217333e2ae2759f0c67cfd72be2f4b00390a47c31c6fba360be1bff988ae8",
     "src/sound/AmbientTrack.cpp": "806bc651699acac158151883251a45c29078a06e4fd195081a3d1d7443a56e52",
     "src/sound/AmbientTrackLocation.cpp": "933b8b3e8cf005a72f8374effa77b8128854c80a1ad55a34b724e440a079ee4e",
+    "src/sound/Moh3SoundEventPause.cpp": "bff04644009c44738926b4ca22cd8449d7933f8f808414001b22824864b8e9db",
     "src/sound/PositionSoundEmitterCopy.cpp": "0fc0f433641f62ec5c339de9a82691fdc664584d55014c0a5bff9e89fc5cd2b8",
     "src/sound/PositionSoundEmitterDefaults.cpp": "0ec29ce3a9210d78894ad14064f130697aba351cf6d858b563e6d6110039e377",
     "src/sound/SoundAliasDestructor.cpp": "b3325933ec4e146e60906ee80afb2bc497a9451a15f118b30d00a8199b9c7a55",
@@ -56925,6 +56929,24 @@
       "discarded_functions": [],
       "object_sha256": "c1e73ff920d881598e0d464453262816322c0c7e6ffca4081f11a1b4bfc48231",
       "linked_sha256": "008b8dd3bf32bfd468545a2ebbc824b435496908e27c8eee09513a224ce913e6"
+    },
+    {
+      "id": "moh3soundevent_pause",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 72,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "b513b7a4d47b5f475e06b915345a793bcb625d62dff23044b18cc8a5e6745d0a",
+      "linked_sha256": "0674b689ab05f1b9e6c6fb0aab9b66ff2e28cbbb0e27af6fd558f70dfc1285dc"
     }
   ],
   "code_map": {
@@ -71643,20 +71665,6 @@
             "size": 428,
             "kind": "function",
             "name": "InitStaticData__14Moh3SoundEvent",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80160224",
-            "size": 20,
-            "kind": "function",
-            "name": "Pause__14Moh3SoundEventb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80160238",
-            "size": 52,
-            "kind": "function",
-            "name": "EndEvent__14Moh3SoundEventUi",
             "evidence": "adjacent-compiler-markers"
           },
           {
