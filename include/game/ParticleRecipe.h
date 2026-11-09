@@ -9,30 +9,7 @@
 // Names of data members and helper types are descriptive. These are prefixes,
 // not complete class declarations or allocation sizes; see docs/ParticleRecipes.md.
 // A recipe-entry prefix: the value at +8 is accessed as an int or float.
-struct ParticleRecipeValue {
-    unsigned int unknown_0, unknown_4;
-    union {
-        int integer;
-        float scalar;
-    } value;
-};
-struct LevelFileContentsStruct_ {
-    unsigned int unknown_0, unknown_4;
-    ParticleRecipeValue **entries;
-};
-class CProcParticleDef {
-  public:
-    unsigned int unknown_0;
-    LevelFileContentsStruct_ *contents;
-    bool IsValid();
-    void SetEmitDelay(int);
-    void SetEmitRate(int);
-    void SetPartLifetime(float);
-    void SetLocMin(float, float, float);
-    void SetLocMax(float, float, float);
-    void SetVelMin(float, float, float);
-    void SetVelMax(float, float, float);
-};
+#include "ParticleDef.h"
 // Bit positions are established by the matching accessors; names are descriptive.
 // This view relies on the target compiler's big-endian bitfield layout.
 struct ParticleFlags {
@@ -50,7 +27,6 @@ struct ParticleFlags {
 };
 // Only a packed four-byte color prefix is accessed; full CColor remains opaque.
 class CColor;
-class CParticleDef;
 class CParticleSystem;
 class MeshParticleSystem;
 // Virtual slots 89-107, in the order of the original IParticleSystem table at
@@ -94,7 +70,7 @@ class CParticleSystem : public IParticleSystem {
     float deactivationTicks;
     unsigned char unknown_154[12];
     unsigned int seed;
-    unsigned char unknown_164[12];
+    float fadeInScale, fadeOutScale, fadeOutOffset; // +0x164: inferred from SetupAlphaFade.
     ParticleFlags flags;
     unsigned char unknown_174[12];
     CParticleSystem *next;
@@ -123,6 +99,15 @@ class CParticleSystem : public IParticleSystem {
     void SetLocalToWorld(const CMatrix &);
     void GetTMLocalToWorld(CMatrix &) const;
     void SetTMLocalToWorld(const CMatrix &);
+    void PreTransform(const CMatrix &);
+    void Transform(const CMatrix &);
+    void Move(const CVector3 &);
+    void Rotate(const CVector3 &, float);
+    void Pitch(float);
+    void Roll(float);
+    void Yaw(float);
+    void SetPosition(const CVector3 &);
+    void SetBasis(const CVector3 &, const CVector3 &, const CVector3 &);
     void Orthonormalize();
     void GetParticleAlpha(float &, float &, float &) const;
     void GetParticleColor(CColor &, CColor &, CColor &, CColor &) const;
@@ -135,6 +120,8 @@ class CParticleSystem : public IParticleSystem {
     float GetParticleLifetime() const;
     void GetParticleRotation(float &, float &) const;
     void GetParticleFade(float &, float &) const;
+    void SetupAlphaFade();
+    void HandleEvent(ISubject *, ESubjectEvent);
     void GetParticlePosition(CVector3 &, CVector3 &) const;
     void GetParticleVelocity(CVector3 &, CVector3 &) const;
     void GetSystemInitialVelocity(CVector3 &) const;

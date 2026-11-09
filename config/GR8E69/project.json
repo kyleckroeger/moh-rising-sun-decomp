@@ -2154,7 +2154,13 @@
     "shell_iscoopontop.json",
     "shell_getdeviceindexfromcontrolmask.json",
     "shell_getnumcoopplayers.json",
-    "player_new.json"
+    "player_new.json",
+    "particlesystem_event.json",
+    "particlesystem_fade.json",
+    "particlesystem_transforms.json",
+    "particledef_base_proc.json",
+    "particledef_mesh.json",
+    "particledef_inlines.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
