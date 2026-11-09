@@ -154,3 +154,7 @@ twelve bytes `HandlerControllerOptions` copies whole, with fields named for the 
 Not yet exact: `HandlerPauseBriefingOverlay::HandleEvent` and `HandlerPauseOutro::HandleEvent` (address registers),
 `HandlerLoadGame::OnAccept` (register allocation), `HandlerNameEntry::HandleEvent` (two copies) and
 `HandlerBonusOptions::HandleEvent`.
+
+The handlers' smaller methods follow the same layout. `HandlerVirtualKeyboard`'s two extra table slots return its string and
+its length, which is why `ClearStringField` and `AddLetterToString` call through the table. `HandlerStatsScreen`'s
+`specialPearlStats` is named after `CheckToSeeIfSpecialPearlStatsAreNeeded`, the only method that sets it.

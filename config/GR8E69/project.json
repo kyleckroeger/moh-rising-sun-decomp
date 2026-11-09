@@ -2508,7 +2508,15 @@
     "handler_loadgame.json",
     "handler_nameentry_init.json",
     "handler_nameentry_string.json",
-    "handler_coopgameoptions_init.json"
+    "handler_coopgameoptions_init.json",
+    "handler_saveslotbase.json",
+    "handler_saveslotbase_valid.json",
+    "handler_saveslotselect.json",
+    "handler_saveslotselect_pop.json",
+    "handler_loadslotselect_cancel.json",
+    "handler_virtualkeyboard_string.json",
+    "handler_leaderboard_fill.json",
+    "handler_statsscreen_pearl.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
