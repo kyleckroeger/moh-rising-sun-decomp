@@ -2088,7 +2088,10 @@
     "ai_AIThreatsList.json",
     "ai_AIThreatsReaction.json",
     "ai_AIThreatsClear.json",
-    "ai_BotObjectAccessors.json"
+    "ai_BotObjectAccessors.json",
+    "scene_SoldierGagFilter.json",
+    "scene_SoldierLipSyncDef.json",
+    "scene_SoldierConstrain.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

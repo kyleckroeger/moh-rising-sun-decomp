@@ -627,10 +627,13 @@ class CSoldierObject {
     unsigned char headTrackModifier[0x157c - 0x1410]; // +0x1410; first bytes an AimModifier. Extent bounded.
     int turnAnglePending;   // +0x157c
     float turnAngle;        // +0x1580
-    unsigned char unknown_1584[0x1594 - 0x1584];
+    int savedGagState[3];   // +0x1584; filled by SaveGagState from the choreographer client.
+    float savedGagTime;     // +0x1590
     int currentGag;         // +0x1594
     int currentGagType;     // +0x1598
-    unsigned char unknown_159c[0x15a8 - 0x159c];
+    float lipSyncSum;       // +0x159c; absolute sample values since the last update.
+    float lipSyncSamples;   // +0x15a0; samples since the last update.
+    unsigned char unknown_15a4[0x15a8 - 0x15a4];
     CAISoldierObject *aiObject; // +0x15a8
     // Two state-done records like CAnimObject's stateTask/stateValue/stateOwner: one for the
     // lower partition and one for the upper.
@@ -661,10 +664,12 @@ class CSoldierObject {
     static unsigned char m_partitionLower[0x30], m_partitionUpper[0x30];
     void SetLipsynchBlendWeight(float);
     void *GetLipSyncFilterDef();
+    static int LipSyncFilterUpdate(void *, int, void *, void *, int);
     static void LipSyncFilterInit(void *, int, int);
     static void LipSyncFilterRestore(void *);
     int EvaluateScript(const char *, unsigned int, const char *);
     void UpdateCollisionVolumes();
+    int Constrain(float);
     int SetAnimationState(const char *, int);
     int SetAnimationState(const char *, EALA::Task *);
     void SetHeadTrackPlayer(bool);
