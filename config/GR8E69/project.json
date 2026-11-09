@@ -2369,7 +2369,11 @@
     "felocalizer_widetoescape.json",
     "felocalizer_readnextstring.json",
     "sound_BankMan.json",
-    "system_thread.json"
+    "system_thread.json",
+    "shell_ListBoxCtor.json",
+    "shell_ListBoxScroll.json",
+    "shell_ListBoxRows.json",
+    "shell_ListBoxRowDtor.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

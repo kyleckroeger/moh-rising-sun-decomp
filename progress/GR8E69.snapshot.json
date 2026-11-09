@@ -1954,6 +1954,10 @@
       "src/script/use_binoculars.cpp": "3ab897eb9f47912d8c49df7f82f4b7a2d91baa056756f1b876b6755de43fbca5",
       "src/script/validation_build.cpp": "89251f21f21080d27633ad20ea624b1a8702565a91ab36e5f809b6e5e0ae4255",
       "src/script/vibration_partial.cpp": "29c765c0f143dab8c71ddb417edde951f88a66595192f026be5920461c5b9ec6",
+      "src/shell/ListBoxCtor.cpp": "32b06c4be6c215da1bc9fd5efe5f2e20d9db6e461d67206b93d9d6645a4ed56c",
+      "src/shell/ListBoxRowDtor.cpp": "ba6bfb1c7d8b4e9e5b0c87987319bfa46ef6768ce6532465f42b9ed6a094c667",
+      "src/shell/ListBoxRows.cpp": "a5e634a8b45b0c9dbb1c23b009e11bd2f68ba7535c7de3235bc05a3d2836fad2",
+      "src/shell/ListBoxScroll.cpp": "c35e99a4c774da30d0dfcfda68f1602175000db9adaa3f579e0442bf8a2541e5",
       "src/shell/MoviePlayerHeap.cpp": "febd0bd90633a0c962990afef60bd35e9f6288bd33b22c60039510d338647b22",
       "src/shell/MoviePlayerTail.cpp": "70e15d83c05ac1116563e0f59a56b9b1b1283c56eed681af3571da397ad35900",
       "src/shell/gamesettings_activatecheatnamed_beatthelevel.cpp": "5299be749a6d1e8052adf798501aae9945e58da4c5f5d765413dd19115d22ba2",
@@ -4241,7 +4245,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "f6563f6b7384db7ac1cc619cf346559cd918e143d712e3e3e37abc47eba6d293",
+      "config/GR8E69/project.json": "d3c4f3248bac6208e05a42e6c58e7ce55f66b15c4f72de3f53731c49d252526b",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -4896,6 +4900,10 @@
       "config/GR8E69/shadow_ctor.json": "eb6578130fce1291c6e416d50babce9804748315e7bfe35ae0b192f3489225ba",
       "config/GR8E69/shadow_enabled.json": "50baaa0d93b7fb1707e7c75ba80764ef3968e921bf7fd9601e39836905829363",
       "config/GR8E69/shadow_init.json": "d71042b90fb79cfce1ba7a46ff752d179976bdb0f7a7d69193bd31fd0699251a",
+      "config/GR8E69/shell_ListBoxCtor.json": "5d811734f4b1c80d60d616b8d6b82fd6130284b80bd3e0d1d6289592328285ee",
+      "config/GR8E69/shell_ListBoxRowDtor.json": "b35d5eba65baed0bd51982e24f438a8b6e35a2c072853f919f5fbf71a386ad81",
+      "config/GR8E69/shell_ListBoxRows.json": "8108ddb5541370a85ad8b4a9161f3338d04b200f8609b6c17e2474f58ea13277",
+      "config/GR8E69/shell_ListBoxScroll.json": "7c535fe7782cfa3ff0ea47beab0ff7d3b94705dae8cb3b4ae767df0f732c2cda",
       "config/GR8E69/shell_beginpackagerendering.json": "5c081296524e22206a3748f0fe0e85c3ac83b9919c5f50916d73b15950025a58",
       "config/GR8E69/shell_cshellmoviesettings.json": "1051d2a404082bd7515b6e9efcd3e5b515fa0fcc5e359442dc2adb395bb7fadc",
       "config/GR8E69/shell_debugmessagequeued.json": "fc9aa9c0ad0bb0d61e15f858f602c6381f8ce78e08f87b5ccf1232d54c69c173",
@@ -6950,14 +6958,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1212012,
+    "matching_code_bytes": 1213392,
     "total_executable_code_bytes": 2492032,
-    "percent": 48.63549103703323,
+    "percent": 48.69086753300118,
     "categories": {
-      "reconstructed_game": 819796,
+      "reconstructed_game": 821176,
       "restored_library": 392216
     },
-    "matching_functions": 6359
+    "matching_functions": 6372
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -8203,7 +8211,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "f6563f6b7384db7ac1cc619cf346559cd918e143d712e3e3e37abc47eba6d293",
+    "config/GR8E69/project.json": "d3c4f3248bac6208e05a42e6c58e7ce55f66b15c4f72de3f53731c49d252526b",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -8858,6 +8866,10 @@
     "config/GR8E69/shadow_ctor.json": "eb6578130fce1291c6e416d50babce9804748315e7bfe35ae0b192f3489225ba",
     "config/GR8E69/shadow_enabled.json": "50baaa0d93b7fb1707e7c75ba80764ef3968e921bf7fd9601e39836905829363",
     "config/GR8E69/shadow_init.json": "d71042b90fb79cfce1ba7a46ff752d179976bdb0f7a7d69193bd31fd0699251a",
+    "config/GR8E69/shell_ListBoxCtor.json": "5d811734f4b1c80d60d616b8d6b82fd6130284b80bd3e0d1d6289592328285ee",
+    "config/GR8E69/shell_ListBoxRowDtor.json": "b35d5eba65baed0bd51982e24f438a8b6e35a2c072853f919f5fbf71a386ad81",
+    "config/GR8E69/shell_ListBoxRows.json": "8108ddb5541370a85ad8b4a9161f3338d04b200f8609b6c17e2474f58ea13277",
+    "config/GR8E69/shell_ListBoxScroll.json": "7c535fe7782cfa3ff0ea47beab0ff7d3b94705dae8cb3b4ae767df0f732c2cda",
     "config/GR8E69/shell_beginpackagerendering.json": "5c081296524e22206a3748f0fe0e85c3ac83b9919c5f50916d73b15950025a58",
     "config/GR8E69/shell_cshellmoviesettings.json": "1051d2a404082bd7515b6e9efcd3e5b515fa0fcc5e359442dc2adb395bb7fadc",
     "config/GR8E69/shell_debugmessagequeued.json": "fc9aa9c0ad0bb0d61e15f858f602c6381f8ce78e08f87b5ccf1232d54c69c173",
@@ -11842,6 +11854,10 @@
     "src/script/use_binoculars.cpp": "3ab897eb9f47912d8c49df7f82f4b7a2d91baa056756f1b876b6755de43fbca5",
     "src/script/validation_build.cpp": "89251f21f21080d27633ad20ea624b1a8702565a91ab36e5f809b6e5e0ae4255",
     "src/script/vibration_partial.cpp": "29c765c0f143dab8c71ddb417edde951f88a66595192f026be5920461c5b9ec6",
+    "src/shell/ListBoxCtor.cpp": "32b06c4be6c215da1bc9fd5efe5f2e20d9db6e461d67206b93d9d6645a4ed56c",
+    "src/shell/ListBoxRowDtor.cpp": "ba6bfb1c7d8b4e9e5b0c87987319bfa46ef6768ce6532465f42b9ed6a094c667",
+    "src/shell/ListBoxRows.cpp": "a5e634a8b45b0c9dbb1c23b009e11bd2f68ba7535c7de3235bc05a3d2836fad2",
+    "src/shell/ListBoxScroll.cpp": "c35e99a4c774da30d0dfcfda68f1602175000db9adaa3f579e0442bf8a2541e5",
     "src/shell/MoviePlayerHeap.cpp": "febd0bd90633a0c962990afef60bd35e9f6288bd33b22c60039510d338647b22",
     "src/shell/MoviePlayerTail.cpp": "70e15d83c05ac1116563e0f59a56b9b1b1283c56eed681af3571da397ad35900",
     "src/shell/gamesettings_activatecheatnamed_beatthelevel.cpp": "5299be749a6d1e8052adf798501aae9945e58da4c5f5d765413dd19115d22ba2",
@@ -58815,6 +58831,78 @@
       "discarded_functions": [],
       "object_sha256": "5226cb0dfd0c62aa8f822a27c8aea7c168d27d7966b11b514d038f9d8077daed",
       "linked_sha256": "82315a19b61162374042442aa4fac03bd63d177185479632324db1a0d99e43a2"
+    },
+    {
+      "id": "shell_ListBoxCtor",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 240,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "9cee0ae21e4109d6e12d3179d564b0b448e57449e64fb4161fb85127c0b2a67c",
+      "linked_sha256": "8e78284a4b4f43e266f05d67dafb2819b121f891cc3f83fc78aaf2a9dfbd4b2e"
+    },
+    {
+      "id": "shell_ListBoxScroll",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 644,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "ebc07cf7bfd0b4caacff2701774ac7080df8a41f7a1a41cccfcbb4024c03da7b",
+      "linked_sha256": "2de853d79a0e9065bbb2fb80b7e6ba57e1d5f4beed8493aae58d8541586991ce"
+    },
+    {
+      "id": "shell_ListBoxRows",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 336,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "9ca063c859c4d39c8fe3ca45027b8a2e06ecbfec62e7e4a8bb342ea730d58250",
+      "linked_sha256": "df2f8407afb68262a16bd79e96bcc08dd06e65d09b495b28d8a9bf1e17d1f1a5"
+    },
+    {
+      "id": "shell_ListBoxRowDtor",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 160,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "db8f385e6b9d20f6212efda3e29e84ce4c0e4e866aa7fa4452c5c807f2729099",
+      "linked_sha256": "8ce8595d7720ef83a735555333ca171d421ec1d2266bab7b3cba5e2e6111cdc9"
     }
   ],
   "code_map": {
@@ -74481,59 +74569,10 @@
         "file_name": "dListBox.cpp",
         "ranges": [
           {
-            "address": "0x80186078",
-            "size": 144,
-            "kind": "function",
-            "name": "__7ListBoxP7FEngine",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80186108",
-            "size": 96,
-            "kind": "function",
-            "name": "_._7ListBox",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80186168",
             "size": 812,
             "kind": "function",
             "name": "Update__7ListBox",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80186494",
-            "size": 172,
-            "kind": "function",
-            "name": "Clear__7ListBox",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80186540",
-            "size": 96,
-            "kind": "function",
-            "name": "ScrollUp__7ListBox",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801865a0",
-            "size": 184,
-            "kind": "function",
-            "name": "ScrollDown__7ListBox",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80186658",
-            "size": 100,
-            "kind": "function",
-            "name": "GetSelectedRow__7ListBox",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801866bc",
-            "size": 92,
-            "kind": "function",
-            "name": "SetSelectedRowById__7ListBoxl",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -74551,41 +74590,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80186bb0",
-            "size": 92,
-            "kind": "function",
-            "name": "GetRowByIndex__7ListBoxl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80186c0c",
-            "size": 96,
-            "kind": "function",
-            "name": "GetRowIndexById__7ListBoxl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80186c6c",
-            "size": 20,
-            "kind": "function",
-            "name": "GetNumRows__7ListBox",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80186c80",
-            "size": 64,
-            "kind": "function",
-            "name": "GetNumScreenRows__7ListBox",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80186cc0",
-            "size": 64,
-            "kind": "function",
-            "name": "GetRowFieldWidth__7ListBoxUc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80186d00",
             "size": 288,
             "kind": "function",
@@ -74597,13 +74601,6 @@
             "size": 400,
             "kind": "function",
             "name": "CountRows__7ListBox",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80186fb0",
-            "size": 160,
-            "kind": "function",
-            "name": "_._Q27ListBox3Row",
             "evidence": "adjacent-compiler-markers"
           }
         ],
