@@ -41,14 +41,21 @@
       "src/ai/AITankObjectB.cpp": "49e0d1c0c80d2c4002097438ad0d77c84a73790d821490d7e49698bbe55dedfe",
       "src/ai/AITankObjectC.cpp": "3a017317124cc3af0802c29a7344830e4110956dd30c48cf6b55a6ea99c37ea2",
       "src/ai/AITankObjectD.cpp": "1d48f7210ac6083554bb04559b38da035c0101862b0202ce9e65b5ef7df36f7f",
+      "src/ai/AIThreatRecord.cpp": "96979840af05eb64f3e5865b6e2b85b81301ce75fac785ffaba8af3c5580c023",
+      "src/ai/AIThreatsClear.cpp": "b155b9500312f284b32dd64a14d82d1ac30fd346b77a7e4d89439867e59b7bc6",
+      "src/ai/AIThreatsList.cpp": "f847325159e75da6766bf9434d9b7e604299a18229fe8cc26c5aed53b29e83bb",
       "src/ai/AIThreatsMakeNoise.cpp": "7bee718b455cdad488a5bd94fe4b89a14920f44fae951c91f5e2d53dc40f5c7a",
       "src/ai/AIThreatsNoiseEvent.cpp": "d2e839aac6237e303a88e27ee5996125f76cf10713ebc8ef02bf8e5e0d7ae2cb",
+      "src/ai/AIThreatsReaction.cpp": "1bcc9af7673c903b15a271d70bc9772d532895d771f07cc6c1b9bc43c05fd990",
       "src/ai/Behavior.cpp": "085db5cd1f8fe7c991c04156eac45718b95e4938cebc97ebdf5f2eef3674b970",
+      "src/ai/BotObjectAccessors.cpp": "26230c8f2f6d38f502ebc37e07bfb468718896db20ca2a1f5bb4a56072b2e546",
+      "src/ai/BuddyFollowBehavior.cpp": "057e6a09a3d436b73da6bd873f38d17b151b25352dc707f668037944b9e0ff20",
       "src/ai/GrenadeResponseQueries.cpp": "c69240fd532d35c3cd178969bbafd94bb6c3202d155ba8437e716d4f7ee4b2c9",
       "src/ai/NullWeaponBehavior.cpp": "73e48f23e4a8e7963c1f5fd241186ea823189254e2fb72cb103336975c9f7592",
       "src/ai/PistolBehavior.cpp": "52bbbfdcf25027a20f6dccb47bee3647d3a2d5c6195cfbdc570a2b1529d0dc4b",
       "src/ai/PolemineBehavior.cpp": "d5a2845cb2cf8466791a8170691fd2be4addf548d1e2e4bc7a16177eae66b4a2",
       "src/ai/RifleBehavior.cpp": "69fed157b0314f5b3f78d01825c1ff73e0938411cc643f8fb263f7653584b9bf",
+      "src/ai/ScriptedBehavior.cpp": "db25aa8173a68f3f7c25275d8cbd8cc2cad6074ca6bd4cd37b97c452a2445ac0",
       "src/ai/SwordBehavior.cpp": "cf8d0527eba6217f7a4683bb2334bc522390462426d1eb3117ae6f104e34fc01",
       "src/ai/cover_flags.cpp": "70759f9875d7c34dbd0bae1737558f8bb0b0ff16498366b6528906e461242cb2",
       "src/ai/cover_invalidate.cpp": "59768695622932fd51e91523bfc0248c905726f09bd5fc168ef28150df4c7dc8",
@@ -2366,11 +2373,12 @@
       "include/dolphin-sdk/macros.inc": "4e92f656bb511fbb45d66081291371c47ceba7bce9c55f86871116203cf38a46",
       "include/dolphin-sn/dolphin/types.h": "ca31e0bbb97e93ca4713654367df29578f6392f3acaf40ca68bc1de1c913af93",
       "include/game/AIBehavior.h": "c8f0b7a5ee8c578421cd095b85068eb9dc5e748e2cb3a63085fcf25e2479f2d6",
+      "include/game/AIBot.h": "4ea15408aca37119347dccad6a1264360f7ca2ce5980316bfd7b7d8a6e20dd4d",
       "include/game/AIDoodad.h": "5a8328fd7c55b6f602742adb79faabaeb4466fbaa44292b3a32fd0d0ad10aca9",
       "include/game/AIFilterGlobal.h": "8206508036a820ab1075f5e290d849293a434e49041b0d700337c523bc915738",
       "include/game/AIMovement.h": "143e409a2e3b38c72b2a667b1781a10c9af5ce7cc9cf5bd75ac43f142192d484",
       "include/game/AISplinePath.h": "b099db9f3b62cd89d875d5fcaf42b91b7b23a8d20085288a26f1f94c37bd89df",
-      "include/game/AITargeting.h": "fedc5915212000b4944aee07532ff8e27bbb61d320ff2b8455db3f9836aa2780",
+      "include/game/AITargeting.h": "842e4be1b3245c271492db351479613f29eb4b089241d4eb9ecd7f4e7df1cae8",
       "include/game/AnimShape.h": "eb3d8e24b295f937a6524701d5d87c8b8b4e052c8bbb2bafd8fb764c3318e87e",
       "include/game/AnimatedVolume.h": "527918576e64cf9296cbb9164eefaf3fc8b7a0f96894e342d2da9e847df4cf25",
       "include/game/AvPlayer.h": "ee5373fca262bf54fd66e19125fe4c512d5a3ff3ce27f97ea7d292b46204a6a1",
@@ -2805,13 +2813,20 @@
       "config/GR8E69/ai_AITankObjectB.json": "86ca57c24e19d4f2de9f1b998906e699515aaa5d74e42714215d84ecd5613dda",
       "config/GR8E69/ai_AITankObjectC.json": "833fd5caca4fc8577ab77c8f11b76950b04942162058f6d56392b08423370865",
       "config/GR8E69/ai_AITankObjectD.json": "5c92c1ea302426601af352e931c5823c744898a4032b45f381ca6666d5d12a70",
+      "config/GR8E69/ai_AIThreatRecord.json": "ad78721deee7461a9d4881b67653de1c3fca3135e560a13ebfe2292153009e89",
+      "config/GR8E69/ai_AIThreatsClear.json": "ac232053584fa800658a1f29af80718bbd76a3338b93136bd3de67b6c9bd8534",
+      "config/GR8E69/ai_AIThreatsList.json": "c93940f7b901714a22696cd1a2a67d9dbfbf7db88c19d1ce3b0bda7a5f4940eb",
       "config/GR8E69/ai_AIThreatsMakeNoise.json": "b06c11964d7ac075ffc0cb708f944422c029373acdefbf93b664fb0fe46dc290",
       "config/GR8E69/ai_AIThreatsNoiseEvent.json": "f1926faf7a7b46c026848b4f3693067c9cb15971933ded3220769db7eea1a84f",
+      "config/GR8E69/ai_AIThreatsReaction.json": "6cc2cc5f9f3e0738ca5d0273b953237e6cbb8080d729541386d2b2a36b75a09b",
       "config/GR8E69/ai_Behavior.json": "5e5efe1d0bf7f05574e75618e1b8e6b045feca44fa885170b947d8ad4a4c2381",
+      "config/GR8E69/ai_BotObjectAccessors.json": "41bc97f695d2cf488ede127e96bc9963d080b9b913fef160fe1c49662e5def1c",
+      "config/GR8E69/ai_BuddyFollowBehavior.json": "cbbfff677e02708e9a8316c80cafed21c1558b16d030d7a8d1fbfc13e2d2655d",
       "config/GR8E69/ai_NullWeaponBehavior.json": "cf42b3058125a789f6b44c78b488755e338f60dccc9715e162d9b6220e0e6ffc",
       "config/GR8E69/ai_PistolBehavior.json": "dde1e548afe69c91e77cea98367d95cb2beb8d5be9f21f46bafa6516b54e0212",
       "config/GR8E69/ai_PolemineBehavior.json": "e1649ae5303f1eb384dd28825a7fd97cb68efecf3b5251b60f4fdaff9413cbbc",
       "config/GR8E69/ai_RifleBehavior.json": "2dbc34c425e032263dc153292249b04c0f8f54bfbf6f7162823a4954dbc8faf4",
+      "config/GR8E69/ai_ScriptedBehavior.json": "c0a89f04738609d34dcb7babfc4a42dac2dd54b5706f7f22ae953bb672ecaf17",
       "config/GR8E69/ai_SwordBehavior.json": "f83d9ad360c79f28c46140ceab34e9c3b1db19a75f1b9ef0b5c248db3ee7dcfe",
       "config/GR8E69/ai_filter_clock.json": "f2034db8752a041debc3e5f86662b062dae08812cf71d3c95f66f339dbd705b1",
       "config/GR8E69/ai_filter_splines.json": "26b024e231fa1eb564b501c3108a8fb71d50e76cdc7ad97470e83b7b39b7fbde",
@@ -3694,7 +3709,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "c2ad2b2785c2ca6ce37c9d443a283eea51c9417a78d65d90cab41260edb52411",
+      "config/GR8E69/project.json": "b0d7e257abb566cbb756505f3555207b67a54bce16cb05800fb1d4b1a00d6294",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -6354,14 +6369,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1090200,
+    "matching_code_bytes": 1094816,
     "total_executable_code_bytes": 2492032,
-    "percent": 43.74743181467975,
+    "percent": 43.93266218090297,
     "categories": {
-      "reconstructed_game": 697984,
+      "reconstructed_game": 702600,
       "restored_library": 392216
     },
-    "matching_functions": 5319
+    "matching_functions": 5396
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -6493,13 +6508,20 @@
     "config/GR8E69/ai_AITankObjectB.json": "86ca57c24e19d4f2de9f1b998906e699515aaa5d74e42714215d84ecd5613dda",
     "config/GR8E69/ai_AITankObjectC.json": "833fd5caca4fc8577ab77c8f11b76950b04942162058f6d56392b08423370865",
     "config/GR8E69/ai_AITankObjectD.json": "5c92c1ea302426601af352e931c5823c744898a4032b45f381ca6666d5d12a70",
+    "config/GR8E69/ai_AIThreatRecord.json": "ad78721deee7461a9d4881b67653de1c3fca3135e560a13ebfe2292153009e89",
+    "config/GR8E69/ai_AIThreatsClear.json": "ac232053584fa800658a1f29af80718bbd76a3338b93136bd3de67b6c9bd8534",
+    "config/GR8E69/ai_AIThreatsList.json": "c93940f7b901714a22696cd1a2a67d9dbfbf7db88c19d1ce3b0bda7a5f4940eb",
     "config/GR8E69/ai_AIThreatsMakeNoise.json": "b06c11964d7ac075ffc0cb708f944422c029373acdefbf93b664fb0fe46dc290",
     "config/GR8E69/ai_AIThreatsNoiseEvent.json": "f1926faf7a7b46c026848b4f3693067c9cb15971933ded3220769db7eea1a84f",
+    "config/GR8E69/ai_AIThreatsReaction.json": "6cc2cc5f9f3e0738ca5d0273b953237e6cbb8080d729541386d2b2a36b75a09b",
     "config/GR8E69/ai_Behavior.json": "5e5efe1d0bf7f05574e75618e1b8e6b045feca44fa885170b947d8ad4a4c2381",
+    "config/GR8E69/ai_BotObjectAccessors.json": "41bc97f695d2cf488ede127e96bc9963d080b9b913fef160fe1c49662e5def1c",
+    "config/GR8E69/ai_BuddyFollowBehavior.json": "cbbfff677e02708e9a8316c80cafed21c1558b16d030d7a8d1fbfc13e2d2655d",
     "config/GR8E69/ai_NullWeaponBehavior.json": "cf42b3058125a789f6b44c78b488755e338f60dccc9715e162d9b6220e0e6ffc",
     "config/GR8E69/ai_PistolBehavior.json": "dde1e548afe69c91e77cea98367d95cb2beb8d5be9f21f46bafa6516b54e0212",
     "config/GR8E69/ai_PolemineBehavior.json": "e1649ae5303f1eb384dd28825a7fd97cb68efecf3b5251b60f4fdaff9413cbbc",
     "config/GR8E69/ai_RifleBehavior.json": "2dbc34c425e032263dc153292249b04c0f8f54bfbf6f7162823a4954dbc8faf4",
+    "config/GR8E69/ai_ScriptedBehavior.json": "c0a89f04738609d34dcb7babfc4a42dac2dd54b5706f7f22ae953bb672ecaf17",
     "config/GR8E69/ai_SwordBehavior.json": "f83d9ad360c79f28c46140ceab34e9c3b1db19a75f1b9ef0b5c248db3ee7dcfe",
     "config/GR8E69/ai_filter_clock.json": "f2034db8752a041debc3e5f86662b062dae08812cf71d3c95f66f339dbd705b1",
     "config/GR8E69/ai_filter_splines.json": "26b024e231fa1eb564b501c3108a8fb71d50e76cdc7ad97470e83b7b39b7fbde",
@@ -7382,7 +7404,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "c2ad2b2785c2ca6ce37c9d443a283eea51c9417a78d65d90cab41260edb52411",
+    "config/GR8E69/project.json": "b0d7e257abb566cbb756505f3555207b67a54bce16cb05800fb1d4b1a00d6294",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -8664,11 +8686,12 @@
     "include/dolphin-sdk/macros.inc": "4e92f656bb511fbb45d66081291371c47ceba7bce9c55f86871116203cf38a46",
     "include/dolphin-sn/dolphin/types.h": "ca31e0bbb97e93ca4713654367df29578f6392f3acaf40ca68bc1de1c913af93",
     "include/game/AIBehavior.h": "c8f0b7a5ee8c578421cd095b85068eb9dc5e748e2cb3a63085fcf25e2479f2d6",
+    "include/game/AIBot.h": "4ea15408aca37119347dccad6a1264360f7ca2ce5980316bfd7b7d8a6e20dd4d",
     "include/game/AIDoodad.h": "5a8328fd7c55b6f602742adb79faabaeb4466fbaa44292b3a32fd0d0ad10aca9",
     "include/game/AIFilterGlobal.h": "8206508036a820ab1075f5e290d849293a434e49041b0d700337c523bc915738",
     "include/game/AIMovement.h": "143e409a2e3b38c72b2a667b1781a10c9af5ce7cc9cf5bd75ac43f142192d484",
     "include/game/AISplinePath.h": "b099db9f3b62cd89d875d5fcaf42b91b7b23a8d20085288a26f1f94c37bd89df",
-    "include/game/AITargeting.h": "fedc5915212000b4944aee07532ff8e27bbb61d320ff2b8455db3f9836aa2780",
+    "include/game/AITargeting.h": "842e4be1b3245c271492db351479613f29eb4b089241d4eb9ecd7f4e7df1cae8",
     "include/game/AnimShape.h": "eb3d8e24b295f937a6524701d5d87c8b8b4e052c8bbb2bafd8fb764c3318e87e",
     "include/game/AnimatedVolume.h": "527918576e64cf9296cbb9164eefaf3fc8b7a0f96894e342d2da9e847df4cf25",
     "include/game/AvPlayer.h": "ee5373fca262bf54fd66e19125fe4c512d5a3ff3ce27f97ea7d292b46204a6a1",
@@ -9011,14 +9034,21 @@
     "src/ai/AITankObjectB.cpp": "49e0d1c0c80d2c4002097438ad0d77c84a73790d821490d7e49698bbe55dedfe",
     "src/ai/AITankObjectC.cpp": "3a017317124cc3af0802c29a7344830e4110956dd30c48cf6b55a6ea99c37ea2",
     "src/ai/AITankObjectD.cpp": "1d48f7210ac6083554bb04559b38da035c0101862b0202ce9e65b5ef7df36f7f",
+    "src/ai/AIThreatRecord.cpp": "96979840af05eb64f3e5865b6e2b85b81301ce75fac785ffaba8af3c5580c023",
+    "src/ai/AIThreatsClear.cpp": "b155b9500312f284b32dd64a14d82d1ac30fd346b77a7e4d89439867e59b7bc6",
+    "src/ai/AIThreatsList.cpp": "f847325159e75da6766bf9434d9b7e604299a18229fe8cc26c5aed53b29e83bb",
     "src/ai/AIThreatsMakeNoise.cpp": "7bee718b455cdad488a5bd94fe4b89a14920f44fae951c91f5e2d53dc40f5c7a",
     "src/ai/AIThreatsNoiseEvent.cpp": "d2e839aac6237e303a88e27ee5996125f76cf10713ebc8ef02bf8e5e0d7ae2cb",
+    "src/ai/AIThreatsReaction.cpp": "1bcc9af7673c903b15a271d70bc9772d532895d771f07cc6c1b9bc43c05fd990",
     "src/ai/Behavior.cpp": "085db5cd1f8fe7c991c04156eac45718b95e4938cebc97ebdf5f2eef3674b970",
+    "src/ai/BotObjectAccessors.cpp": "26230c8f2f6d38f502ebc37e07bfb468718896db20ca2a1f5bb4a56072b2e546",
+    "src/ai/BuddyFollowBehavior.cpp": "057e6a09a3d436b73da6bd873f38d17b151b25352dc707f668037944b9e0ff20",
     "src/ai/GrenadeResponseQueries.cpp": "c69240fd532d35c3cd178969bbafd94bb6c3202d155ba8437e716d4f7ee4b2c9",
     "src/ai/NullWeaponBehavior.cpp": "73e48f23e4a8e7963c1f5fd241186ea823189254e2fb72cb103336975c9f7592",
     "src/ai/PistolBehavior.cpp": "52bbbfdcf25027a20f6dccb47bee3647d3a2d5c6195cfbdc570a2b1529d0dc4b",
     "src/ai/PolemineBehavior.cpp": "d5a2845cb2cf8466791a8170691fd2be4addf548d1e2e4bc7a16177eae66b4a2",
     "src/ai/RifleBehavior.cpp": "69fed157b0314f5b3f78d01825c1ff73e0938411cc643f8fb263f7653584b9bf",
+    "src/ai/ScriptedBehavior.cpp": "db25aa8173a68f3f7c25275d8cbd8cc2cad6074ca6bd4cd37b97c452a2445ac0",
     "src/ai/SwordBehavior.cpp": "cf8d0527eba6217f7a4683bb2334bc522390462426d1eb3117ae6f104e34fc01",
     "src/ai/cover_flags.cpp": "70759f9875d7c34dbd0bae1737558f8bb0b0ff16498366b6528906e461242cb2",
     "src/ai/cover_invalidate.cpp": "59768695622932fd51e91523bfc0248c905726f09bd5fc168ef28150df4c7dc8",
@@ -52410,6 +52440,132 @@
       "discarded_functions": [],
       "object_sha256": "b4ae50a3809f228288936c42617a965ea786c13260cb2bd53f543eb7ecc7864e",
       "linked_sha256": "a7b908afbfa8711adfe3d5be58075897b357504828aec891b0c311a5f850d2bc"
+    },
+    {
+      "id": "ai_BuddyFollowBehavior",
+      "category": "reconstructed_game",
+      "functions": 22,
+      "code_bytes": 1492,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "5fec37d28bbffe39d147e5f7318dc2b788603ff69b369b7af0e5a3b356a7ec5e",
+      "linked_sha256": "849c331e9c9d7760c8cbc620d20bf0fa7fc608ac8de705124de963fc7d32a726"
+    },
+    {
+      "id": "ai_ScriptedBehavior",
+      "category": "reconstructed_game",
+      "functions": 15,
+      "code_bytes": 808,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "ffb51a40a0ab4b2c4605121fde47347d737b1e1aec5feece6a09c4ed614f512a",
+      "linked_sha256": "6e3a70422fdd049a4c9677d43cc83e685c187fe179cdc2955c4a40d21a6c92ed"
+    },
+    {
+      "id": "ai_AIThreatRecord",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 136,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "8f77c91ef5e7323d76164796a335eaf64482d122b8db4b746b4a81dcdd6e812a",
+      "linked_sha256": "cbb6c361782836c1f30af81475eb9e23a5bd08d5ba86250be3142396c55f7dec"
+    },
+    {
+      "id": "ai_AIThreatsList",
+      "category": "reconstructed_game",
+      "functions": 14,
+      "code_bytes": 1272,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "af06dd214e9d8117e0c384e8a95fd8a41e4f25af8eba079414617e758cfdea94",
+      "linked_sha256": "a4d23a6b6ec5d38ed87728258756831d38943239bae620d8b06b18bd07a35647"
+    },
+    {
+      "id": "ai_AIThreatsReaction",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 216,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "b671682f09141a7dba3717344184d0efdc83e6ecb4a256258a9f9bbcac153628",
+      "linked_sha256": "d6ea4a4966c44d088f6ab3545cf525f5d96d076b1d333dabca258dd749bcedc0"
+    },
+    {
+      "id": "ai_AIThreatsClear",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 88,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "caa573712c6b3dfc9453468191cfcea35577118eda9e4c2a75a0f50979d68840",
+      "linked_sha256": "2e8a22737b30ebfb06abd07d96ae2345ac60310ae057240d35b59b9c605d70bb"
+    },
+    {
+      "id": "ai_BotObjectAccessors",
+      "category": "reconstructed_game",
+      "functions": 20,
+      "code_bytes": 604,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e8405eea60f406f207fbb9945e2928f4a9b9901c861fc4168a755614f39ab6f7",
+      "linked_sha256": "d9e9e815e7b7688fd31c97c5f166cbd6ad1be76f5ffffdda2b11a0145e46b52a"
     }
   ],
   "code_map": {
@@ -61761,148 +61917,8 @@
         ]
       },
       {
-        "name": "Unknown file/.text @ 800991dc",
+        "name": "Unknown file/.text @ 80099438",
         "ranges": [
-          {
-            "address": "0x800991dc",
-            "size": 12,
-            "kind": "function",
-            "name": "GetClock__10CBotObject",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800991e8",
-            "size": 20,
-            "kind": "function",
-            "name": "GetEnemyAI__10CBotObjectUi",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800991fc",
-            "size": 16,
-            "kind": "function",
-            "name": "GetEnemyInfo__10CBotObjectUi",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8009920c",
-            "size": 16,
-            "kind": "function",
-            "name": "GetpEnemyInfo__10CBotObjectUi",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8009921c",
-            "size": 44,
-            "kind": "function",
-            "name": "EnemyInView__10CBotObject",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80099248",
-            "size": 12,
-            "kind": "function",
-            "name": "GetHealth__10CBotObject",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80099254",
-            "size": 8,
-            "kind": "function",
-            "name": "GetName__10CBotObject",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8009925c",
-            "size": 8,
-            "kind": "function",
-            "name": "GetPlayerIndex__10CBotObject",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80099264",
-            "size": 12,
-            "kind": "function",
-            "name": "GetTeam__10CBotObject",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80099270",
-            "size": 32,
-            "kind": "function",
-            "name": "GetHealthPercent__10CBotObject",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80099290",
-            "size": 164,
-            "kind": "function",
-            "name": "SetLookTarget__10CBotObjectRC8CVector3",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80099334",
-            "size": 76,
-            "kind": "function",
-            "name": "SetMoveTarget__10CBotObjectRC8CVector3",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80099380",
-            "size": 12,
-            "kind": "function",
-            "name": "LookAlongPath__10CBotObject",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8009938c",
-            "size": 24,
-            "kind": "function",
-            "name": "FollowingAStar__10CBotObject",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800993a4",
-            "size": 16,
-            "kind": "function",
-            "name": "StopAStar__10CBotObject",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800993b4",
-            "size": 52,
-            "kind": "function",
-            "name": "WithinGrenadeBlastRadius__10CBotObject",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800993e8",
-            "size": 12,
-            "kind": "function",
-            "name": "GetCurrentPathNode__10CBotObject",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800993f4",
-            "size": 24,
-            "kind": "function",
-            "name": "GetCurrentCampingPoint__10CBotObject",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8009940c",
-            "size": 8,
-            "kind": "function",
-            "name": "SetPlayerIndex__10CBotObjectUc",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80099414",
-            "size": 36,
-            "kind": "function",
-            "name": "SetName__10CBotObjectPCc",
-            "evidence": "unknown-file"
-          },
           {
             "address": "0x80099438",
             "size": 1688,
@@ -65603,171 +65619,6 @@
         ]
       },
       {
-        "name": "Unmatched files/BuddyFollowBehavior.cpp [inferred file group]",
-        "file_record": 174,
-        "file_name": "BuddyFollowBehavior.cpp",
-        "ranges": [
-          {
-            "address": "0x800e5188",
-            "size": 120,
-            "kind": "function",
-            "name": "__20CBuddyFollowBehaviorP15CAIActivityZone",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5200",
-            "size": 48,
-            "kind": "function",
-            "name": "_._20CBuddyFollowBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5230",
-            "size": 72,
-            "kind": "function",
-            "name": "Enable__20CBuddyFollowBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5278",
-            "size": 48,
-            "kind": "function",
-            "name": "Disable__20CBuddyFollowBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e52a8",
-            "size": 8,
-            "kind": "function",
-            "name": "GetCurrentHeuristicScore__20CBuddyFollowBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e52b0",
-            "size": 8,
-            "kind": "function",
-            "name": "GetHeuristicUpdateFrequency__20CBuddyFollowBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e52b8",
-            "size": 348,
-            "kind": "function",
-            "name": "UpdateHeuristicScore__20CBuddyFollowBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5414",
-            "size": 108,
-            "kind": "function",
-            "name": "StartBehavior__20CBuddyFollowBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5480",
-            "size": 104,
-            "kind": "function",
-            "name": "StopBehavior__20CBuddyFollowBehaviorb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e54e8",
-            "size": 16,
-            "kind": "function",
-            "name": "GetCapabilities__20CBuddyFollowBehavior11ECapability",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e54f8",
-            "size": 108,
-            "kind": "function",
-            "name": "CantReachTarget__20CBuddyFollowBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5564",
-            "size": 44,
-            "kind": "function",
-            "name": "RegisterBuddyFollowObject__20CBuddyFollowBehaviorP8BSObjectffff",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5590",
-            "size": 28,
-            "kind": "function",
-            "name": "SetDistances__20CBuddyFollowBehaviorffff",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e55ac",
-            "size": 92,
-            "kind": "function",
-            "name": "UpdateDistanceToPlayer__20CBuddyFollowBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5608",
-            "size": 20,
-            "kind": "function",
-            "name": "EnterBuddyTeleportArea__20CBuddyFollowBehaviori",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e561c",
-            "size": 40,
-            "kind": "function",
-            "name": "ExitBuddyTeleportArea__20CBuddyFollowBehaviori",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5644",
-            "size": 20,
-            "kind": "function",
-            "name": "IsBuddyInArea__20CBuddyFollowBehaviori",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5658",
-            "size": 32,
-            "kind": "function",
-            "name": "GetStopDistance__20CBuddyFollowBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5678",
-            "size": 32,
-            "kind": "function",
-            "name": "GetStartDistance__20CBuddyFollowBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5698",
-            "size": 112,
-            "kind": "function",
-            "name": "BumpPlayer__20CBuddyFollowBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5708",
-            "size": 76,
-            "kind": "function",
-            "name": "FinishedMovingAway__20CBuddyFollowBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5754",
-            "size": 8,
-            "kind": "function",
-            "name": "GetType__20CBuddyFollowBehavior",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x800e5188",
-          "0x800e575c"
-        ]
-      },
-      {
         "name": "Unmatched files/ScriptedGag.cpp [inferred file group]",
         "file_record": 180,
         "file_name": "ScriptedGag.cpp",
@@ -65867,122 +65718,6 @@
         "marker_interval": [
           "0x800e6408",
           "0x800e6fa8"
-        ]
-      },
-      {
-        "name": "Unmatched files/ScriptedBehavior.cpp [inferred file group]",
-        "file_record": 181,
-        "file_name": "ScriptedBehavior.cpp",
-        "ranges": [
-          {
-            "address": "0x800e6fa8",
-            "size": 112,
-            "kind": "function",
-            "name": "__17CScriptedBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e7018",
-            "size": 48,
-            "kind": "function",
-            "name": "_._17CScriptedBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e7048",
-            "size": 72,
-            "kind": "function",
-            "name": "GetCurrentHeuristicScore__17CScriptedBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e7090",
-            "size": 8,
-            "kind": "function",
-            "name": "GetHeuristicUpdateFrequency__17CScriptedBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e7098",
-            "size": 40,
-            "kind": "function",
-            "name": "UpdateHeuristicScore__17CScriptedBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e70c0",
-            "size": 120,
-            "kind": "function",
-            "name": "StartBehavior__17CScriptedBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e7138",
-            "size": 168,
-            "kind": "function",
-            "name": "StopBehavior__17CScriptedBehaviorb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e71e0",
-            "size": 16,
-            "kind": "function",
-            "name": "GetCapabilities__17CScriptedBehavior11ECapability",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e71f0",
-            "size": 4,
-            "kind": "function",
-            "name": "ReleaseResources__17CScriptedBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e71f4",
-            "size": 104,
-            "kind": "function",
-            "name": "StartScript__17CScriptedBehaviorP8BSObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e725c",
-            "size": 32,
-            "kind": "function",
-            "name": "StopScript__17CScriptedBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e727c",
-            "size": 16,
-            "kind": "function",
-            "name": "SetCapability__17CScriptedBehavior11ECapabilityb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e728c",
-            "size": 52,
-            "kind": "function",
-            "name": "SetAllowedHighLevelState__17CScriptedBehavior17EAIHighLevelState",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e72c0",
-            "size": 8,
-            "kind": "function",
-            "name": "GetType__17CScriptedBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e72c8",
-            "size": 8,
-            "kind": "function",
-            "name": "GetScriptObject__17CScriptedBehavior",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x800e6fa8",
-          "0x800e72d0"
         ]
       },
       {
@@ -67231,122 +66966,10 @@
         "file_name": "AIThreats.cpp",
         "ranges": [
           {
-            "address": "0x800f3860",
-            "size": 56,
-            "kind": "function",
-            "name": "__9CAIThreat",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f3898",
-            "size": 80,
-            "kind": "function",
-            "name": "__9CAIThreatQ29CAIThreat10ThreatTypeRC8CVector3P8BSObjectb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800f38e8",
             "size": 152,
             "kind": "function",
             "name": "__19CAIThreatEvaluationP16CAISoldierObjectP10CAIPhysicsP8BSObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f3980",
-            "size": 64,
-            "kind": "function",
-            "name": "AddThreat__19CAIThreatEvaluationRC9CAIThreat",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f39c0",
-            "size": 76,
-            "kind": "function",
-            "name": "Reevaluate__19CAIThreatEvaluation",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f3a0c",
-            "size": 164,
-            "kind": "function",
-            "name": "AIDied__19CAIThreatEvaluationP8BSObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f3ab0",
-            "size": 24,
-            "kind": "function",
-            "name": "HaveThreat__19CAIThreatEvaluation",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f3ac8",
-            "size": 12,
-            "kind": "function",
-            "name": "GetPositionOfMostImportantThreat__19CAIThreatEvaluation",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f3ad4",
-            "size": 140,
-            "kind": "function",
-            "name": "Update__19CAIThreatEvaluationf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f3b60",
-            "size": 96,
-            "kind": "function",
-            "name": "FinishedInvestigation__19CAIThreatEvaluation",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f3bc0",
-            "size": 4,
-            "kind": "function",
-            "name": "AddCorpseThreat__19CAIThreatEvaluationP8BSObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f3bc4",
-            "size": 84,
-            "kind": "function",
-            "name": "OnStateChange__19CAIThreatEvaluation17EAIHighLevelStateT1",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f3c18",
-            "size": 164,
-            "kind": "function",
-            "name": "InsertThreat__19CAIThreatEvaluationRC9CAIThreat",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f3cbc",
-            "size": 144,
-            "kind": "function",
-            "name": "InitializeSlot__19CAIThreatEvaluationiRC9CAIThreat",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f3d4c",
-            "size": 44,
-            "kind": "function",
-            "name": "CompareThreats__FPCvT0",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x800f3d78",
-            "size": 120,
-            "kind": "function",
-            "name": "RankThreats__19CAIThreatEvaluation",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f3df0",
-            "size": 136,
-            "kind": "function",
-            "name": "GetScoreStartByType__FQ29CAIThreat10ThreatType",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -67357,38 +66980,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800f3f24",
-            "size": 100,
-            "kind": "function",
-            "name": "GetReactionByType__FQ29CAIThreat10ThreatType17EAIHighLevelState",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f3f88",
-            "size": 116,
-            "kind": "function",
-            "name": "ReactToThreat__19CAIThreatEvaluationPQ219CAIThreatEvaluation10ThreatInfo",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800f4260",
             "size": 516,
             "kind": "function",
             "name": "PropagateSoundToMe__19CAIThreatEvaluationifRC8CVector3P9CAIObjectb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f4464",
-            "size": 84,
-            "kind": "function",
-            "name": "ClearSlot__19CAIThreatEvaluationi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f44b8",
-            "size": 4,
-            "kind": "function",
-            "name": "DebugDraw__19CAIThreatEvaluation",
             "evidence": "adjacent-compiler-markers"
           }
         ],

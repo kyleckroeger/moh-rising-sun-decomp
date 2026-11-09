@@ -352,13 +352,56 @@ public:
     void Init();
     CAIFilterObject *filter;
 };
-// Member view of the soldier AI object returned by CAIObject slot 2.
+// A stimulus reported to a soldier. Method, class and enum names are original; member
+// names and the enumerators' meanings are inferred (see docs/Behaviors.md). The 16-byte
+// alignment is inferred too: it gives the observed gaps before and after the embedded
+// threat in ThreatInfo (+0x4 to +0x10, +0x2c to +0x30) and the slot address forms.
+class CAIThreat {
+public:
+    enum ThreatType { ThreatNone = 0 };
+    CAIThreat();
+    CAIThreat(ThreatType, const CVector3 &, BSObject *, bool);
+    CVector3 position;
+    ThreatType type;   // +0x10
+    BSObject *source;  // +0x14
+    bool directed;     // +0x18; a directed threat's score is not capped when scored.
+} __attribute__((aligned(16)));
+// Member view of the soldier AI object returned by CAIObject slot 2: the table pointer at
+// +0 and the fifteen threat slots. The class's complete extent is not established.
 class CAIThreatEvaluation {
 public:
+    struct ThreatInfo {
+        int used;
+        CAIThreat threat;   // +0x10
+        int rank;           // +0x30; position after RankThreats.
+        int reacted;        // +0x34; set once the owner has been told.
+        float initialTime;  // +0x38; cleared with the slot and never read in these functions.
+        float score;        // +0x3c
+    };
+    void AddThreat(const CAIThreat &);
+    void Reevaluate();
+    void AIDied(BSObject *);
+    int HaveThreat();
+    CVector3 &GetPositionOfMostImportantThreat();
     void PropagateSoundToMe(int, float, const CVector3 &, CAIObject *, bool);
     void Update(float);
     void FinishedInvestigation();
     void AddCorpseThreat(BSObject *);
+    void OnStateChange(EAIHighLevelState, EAIHighLevelState);
+    int InsertThreat(const CAIThreat &);
+    void InitializeSlot(int, const CAIThreat &);
+    void RankThreats();
+    void ScoreInitialThreat(int);
+    void ReactToThreat(ThreatInfo *);
+    void ClearSlot(int);
+    void DebugDraw();
+    unsigned char unknown00[4];
+    CAIObject *aiObject;     // +0x04
+    CAIPhysics *physics;     // +0x08
+    BSObject *scriptObject;  // +0x0c
+    ThreatInfo slots[15];    // +0x10
+    int count;               // +0x3d0
+    ThreatInfo *mostImportant; // +0x3d4
 };
 class CSoldierObject;
 class CAISoldierObject {
@@ -386,7 +429,7 @@ public:
     CAISnap snap; // +0x770
     unsigned char unknown_79c[0x7b0 - 0x79c];
     CAIThreatEvaluation threatEvaluation; // +0x7b0
-    unsigned char unknown_7b1[0xd10 - 0x7b1];
+    unsigned char unknown_after_threats[0xd10 - 0x7b0 - sizeof(CAIThreatEvaluation)];
     unsigned char coverpointStorage[3536 - 0xd10]; // +0xd10; a CCoverpointBehavior. The allocation is 3536 bytes.
 };
 class IMovingSceneNode;

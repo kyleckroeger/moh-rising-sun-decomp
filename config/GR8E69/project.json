@@ -2081,7 +2081,14 @@
     "gamesettings_hasmedal.json",
     "gamesettings_getprofileindexfromplayerid.json",
     "hud_update.json",
-    "camera_shake.json"
+    "camera_shake.json",
+    "ai_BuddyFollowBehavior.json",
+    "ai_ScriptedBehavior.json",
+    "ai_AIThreatRecord.json",
+    "ai_AIThreatsList.json",
+    "ai_AIThreatsReaction.json",
+    "ai_AIThreatsClear.json",
+    "ai_BotObjectAccessors.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
