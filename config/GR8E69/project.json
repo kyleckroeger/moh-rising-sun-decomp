@@ -2194,7 +2194,11 @@
     "meshparticle_visible.json",
     "meshparticle_shutdown.json",
     "meshparticle_state.json",
-    "character_skeleton_joints.json"
+    "character_skeleton_joints.json",
+    "soundbuss_ctor.json",
+    "soundbuss_activate.json",
+    "soundbuss_clock.json",
+    "soundbuss_freelist.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

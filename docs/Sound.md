@@ -484,3 +484,12 @@ with it. The name also belongs to a different function near `0x801b1448`.
 reconstructed here: `Init`, `GetFirstFrame` and `GetRCMPChunk`, which have small differences, and `GetFrame`, whose code
 matches but whose `.rodata` holds a second, unreferenced copy of the 2^31 literal at `0x802b8560`. `CHUNK` has an empty
 inline destructor: `delete chunk` tests for null, which it does not for a class without one.
+
+## Sound busses and event destructors
+
+`cSoundBuss` records are 216 bytes: the free list threads `g_AllBusses` (32 records) through `+0`,
+with eight 24-byte events from `+4`. The clock at `+208` advances on each update, and when it passes
+the current event's time the buss moves on or stops and takes that event's level as its volume. Member
+names in [`SoundBuss.h`](../include/game/SoundBuss.h) are inferred from use. `InsertSoundBus`,
+`SetSoundBuss`, `UpdateBussEntry`, `RetroFit` and the `cSoundBussMan` methods other than
+`InitSoundBussFreeList` are not reconstructed.

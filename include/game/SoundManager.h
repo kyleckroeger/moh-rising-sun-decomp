@@ -13,6 +13,7 @@ class SoundEmitter;
 class SoundEntry;
 class cSoundBussMan {
   public:
+    static void InitSoundBussFreeList();
     void RetroFitNewSound(SoundEntry *);
 };
 // Scoped prefix of the embedded sound schedule.
