@@ -1,0 +1,40 @@
+{
+  "id": "game_font_drawf",
+  "source": "src/game/font_drawf.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80067420",
+      "size": 216
+    }
+  ],
+  "functions": [
+    {
+      "name": "DrawTextF__5CFontffPCce",
+      "address": "0x80067420",
+      "size": 216,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "ComputeJustification__5CFontRfT1PCc": "0x80067628",
+    "DrawText__5CFontffPCc": "0x80067338",
+    "vsprintf": "0x80264dfc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

@@ -2492,7 +2492,10 @@
     "ea_subtitle_setters.json",
     "ea_subtitle_display.json",
     "ea_subtitle_display_init.json",
-    "ea_subtitle_display_access.json"
+    "ea_subtitle_display_access.json",
+    "game_font_drawf.json",
+    "game_font_justify.json",
+    "game_sprite_stq.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

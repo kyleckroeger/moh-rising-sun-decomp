@@ -911,6 +911,8 @@
       "src/game/font_attrs.cpp": "17a5dcba14710a5625b373dba980f883f4491d208bf930ab9eb0cec07b5f3fe7",
       "src/game/font_ctor.cpp": "58553ab744e9e2326e145ad958eb12bdd904aa92453a41030f63035cd506348f",
       "src/game/font_draw.cpp": "7d13587aadc975b86a92737e78cb108dcb191bf6a1c64973d98b2f70e746015a",
+      "src/game/font_drawf.cpp": "9529af35e10f281d252feff83336cdd4452920ae2b9bd675d778d91b14db13c3",
+      "src/game/font_justify.cpp": "73f00cbdb4272f99f4d47dfbd06ca70cded4f0162885a7bdb810f7c4e9793b9f",
       "src/game/font_setcolor.cpp": "732885f73107c33c308a7d324faee714a86aff80f40bdc94707aa90305335a81",
       "src/game/framecount.cpp": "7b76621f1a2f5b452b4ee73c31317598062c4e3c5a4b7693d71b5f1371ef7931",
       "src/game/gba_object_list.cpp": "c1f37f7f3ed2dffff76a178fedc4d4465b72ce9a9d1d35f421e2955073ca875a",
@@ -945,6 +947,7 @@
       "src/game/skybox_class.cpp": "838c453a03ec151b70f404c2067b990fd3671d434f29800d2872a536db5a4e7d",
       "src/game/skybox_dtor.cpp": "79cd2c149b6a96728b91d9c1cc9efad78acd5eb4b5a263517946e0818d940a36",
       "src/game/sprite_ctor.cpp": "aa94e157dcb92e33c29ee871e1f9ffcec9e7f09d5430a2b94654088a59ece6dc",
+      "src/game/sprite_stq.cpp": "187a75d079ce00d296bf09ff24258484d52c4372a06c922d655a2c7488032a09",
       "src/game/string_80277f18.cpp": "b6c79191f3a19d54855216cdbc6cf512f4fa474cc60d95837b45a4acec64016c",
       "src/game/surfacetype.cpp": "88645588850e3802162963971edbe8af8607679de8260f145fa4e8c30fb03399",
       "src/game/sys_memory_dwi.cpp": "734d54b445abd8a9172e15bf85b8613c97a4b5f5ef97d730495ce2ae097eb9b2",
@@ -2898,7 +2901,7 @@
       "include/game/FlexProp.h": "d4b492f690451a27c03371aa71637f8b6a4109c07ed8ba55de69ae5f256414ff",
       "include/game/FlexPropDatabase.h": "e3bb33faf5cff3877d051efc3335ff33c373c9d228a7afcb8b2c16f4ee97c767",
       "include/game/Fog.h": "30a37f01f3f665d1f9b3b0a5ef81ea098194595159c5ff794797541c6bf325c0",
-      "include/game/Font.h": "aac3ae3971b2a09911276f89091539c78c3d22be4046eca5d1e65a39c2f82e6b",
+      "include/game/Font.h": "1ea56ae770a2110bb30a33136d83be17e8acd2ab4bdcedc1e158ae172c5c52ce",
       "include/game/Frustum.h": "b20644e56866216aaa1770d07acf29e35a2990343f72aba0caf9c451f77a2016",
       "include/game/GameSettings.h": "142bebdefa5d889f1b6cf3e495b9e8178a53eb3536a2708c42e36da9de44bd17",
       "include/game/GameSettingsViews.h": "a6d5c2e791c7cc3ac2f6eb6a48657040afab504341288204796a51edf6fe97fd",
@@ -4024,7 +4027,10 @@
       "config/GR8E69/game_drivecheck_font.json": "bd3f5b665899ad48cc2df91be167c20721f6727b3abd1be7ad3a4ff94ad9c7e2",
       "config/GR8E69/game_drivecheck_read.json": "c06fa9603eb5209583fae6f22e5aef646e4d786a105f48464fdb90ef1a955df2",
       "config/GR8E69/game_drivecheck_status.json": "da8b6c2388db425236dae89296c02e57879f662c29f032f6de97d752ea870cfd",
+      "config/GR8E69/game_font_drawf.json": "bf076e34a34ccb2d5ea13e9c558e9f5a2c3ae9fad3251984fa9ed462e01b6db9",
+      "config/GR8E69/game_font_justify.json": "890342ed60ad70af57ae2128ed5e27686fb265327d8ea56ebc80394a8374d4f0",
       "config/GR8E69/game_locale.json": "660eadd84d9e49632c2a42595aef8ca6d557b198b51bef3d3a3bba9558e4514e",
+      "config/GR8E69/game_sprite_stq.json": "c5facf20723a5853e16dfc0e1565a2aa3dd13f4481d0fdb344d87f2869c4b2e1",
       "config/GR8E69/game_sys_memory_dwi.json": "af6b28229efc2adad9f987e767f2772ebe56093b9e8dedd5cc5b55c6da45b0e6",
       "config/GR8E69/gamesettings_activatecheatnamed_beatthelevel.json": "d2ed6ab790652c9734686b7676bd44d302055843906ad37f619f5cbfa03d56f7",
       "config/GR8E69/gamesettings_activatecheatnamed_hugearms.json": "1a5212cff62406bb097fded87a75d7cc51c850d33df8d4ca1e9da23d6c1ee059",
@@ -4476,7 +4482,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "f701d4748b58815a1f7155a52c8c7b395bc3fc6ccb8f8ec8a042e9521e9c450e",
+      "config/GR8E69/project.json": "cf7e218c82b2fa002c72c57d0f3339c14b7bc15b3231983cab234198c4270364",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7207,14 +7213,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1284816,
+    "matching_code_bytes": 1285408,
     "total_executable_code_bytes": 2492032,
-    "percent": 51.556962350403204,
+    "percent": 51.580718064615546,
     "categories": {
-      "reconstructed_game": 892600,
+      "reconstructed_game": 893192,
       "restored_library": 392216
     },
-    "matching_functions": 6789
+    "matching_functions": 6793
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -8109,7 +8115,10 @@
     "config/GR8E69/game_drivecheck_font.json": "bd3f5b665899ad48cc2df91be167c20721f6727b3abd1be7ad3a4ff94ad9c7e2",
     "config/GR8E69/game_drivecheck_read.json": "c06fa9603eb5209583fae6f22e5aef646e4d786a105f48464fdb90ef1a955df2",
     "config/GR8E69/game_drivecheck_status.json": "da8b6c2388db425236dae89296c02e57879f662c29f032f6de97d752ea870cfd",
+    "config/GR8E69/game_font_drawf.json": "bf076e34a34ccb2d5ea13e9c558e9f5a2c3ae9fad3251984fa9ed462e01b6db9",
+    "config/GR8E69/game_font_justify.json": "890342ed60ad70af57ae2128ed5e27686fb265327d8ea56ebc80394a8374d4f0",
     "config/GR8E69/game_locale.json": "660eadd84d9e49632c2a42595aef8ca6d557b198b51bef3d3a3bba9558e4514e",
+    "config/GR8E69/game_sprite_stq.json": "c5facf20723a5853e16dfc0e1565a2aa3dd13f4481d0fdb344d87f2869c4b2e1",
     "config/GR8E69/game_sys_memory_dwi.json": "af6b28229efc2adad9f987e767f2772ebe56093b9e8dedd5cc5b55c6da45b0e6",
     "config/GR8E69/gamesettings_activatecheatnamed_beatthelevel.json": "d2ed6ab790652c9734686b7676bd44d302055843906ad37f619f5cbfa03d56f7",
     "config/GR8E69/gamesettings_activatecheatnamed_hugearms.json": "1a5212cff62406bb097fded87a75d7cc51c850d33df8d4ca1e9da23d6c1ee059",
@@ -8561,7 +8570,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "f701d4748b58815a1f7155a52c8c7b395bc3fc6ccb8f8ec8a042e9521e9c450e",
+    "config/GR8E69/project.json": "cf7e218c82b2fa002c72c57d0f3339c14b7bc15b3231983cab234198c4270364",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -10049,7 +10058,7 @@
     "include/game/FlexProp.h": "d4b492f690451a27c03371aa71637f8b6a4109c07ed8ba55de69ae5f256414ff",
     "include/game/FlexPropDatabase.h": "e3bb33faf5cff3877d051efc3335ff33c373c9d228a7afcb8b2c16f4ee97c767",
     "include/game/Fog.h": "30a37f01f3f665d1f9b3b0a5ef81ea098194595159c5ff794797541c6bf325c0",
-    "include/game/Font.h": "aac3ae3971b2a09911276f89091539c78c3d22be4046eca5d1e65a39c2f82e6b",
+    "include/game/Font.h": "1ea56ae770a2110bb30a33136d83be17e8acd2ab4bdcedc1e158ae172c5c52ce",
     "include/game/Frustum.h": "b20644e56866216aaa1770d07acf29e35a2990343f72aba0caf9c451f77a2016",
     "include/game/GameSettings.h": "142bebdefa5d889f1b6cf3e495b9e8178a53eb3536a2708c42e36da9de44bd17",
     "include/game/GameSettingsViews.h": "a6d5c2e791c7cc3ac2f6eb6a48657040afab504341288204796a51edf6fe97fd",
@@ -11190,6 +11199,8 @@
     "src/game/font_attrs.cpp": "17a5dcba14710a5625b373dba980f883f4491d208bf930ab9eb0cec07b5f3fe7",
     "src/game/font_ctor.cpp": "58553ab744e9e2326e145ad958eb12bdd904aa92453a41030f63035cd506348f",
     "src/game/font_draw.cpp": "7d13587aadc975b86a92737e78cb108dcb191bf6a1c64973d98b2f70e746015a",
+    "src/game/font_drawf.cpp": "9529af35e10f281d252feff83336cdd4452920ae2b9bd675d778d91b14db13c3",
+    "src/game/font_justify.cpp": "73f00cbdb4272f99f4d47dfbd06ca70cded4f0162885a7bdb810f7c4e9793b9f",
     "src/game/font_setcolor.cpp": "732885f73107c33c308a7d324faee714a86aff80f40bdc94707aa90305335a81",
     "src/game/framecount.cpp": "7b76621f1a2f5b452b4ee73c31317598062c4e3c5a4b7693d71b5f1371ef7931",
     "src/game/gba_object_list.cpp": "c1f37f7f3ed2dffff76a178fedc4d4465b72ce9a9d1d35f421e2955073ca875a",
@@ -11224,6 +11235,7 @@
     "src/game/skybox_class.cpp": "838c453a03ec151b70f404c2067b990fd3671d434f29800d2872a536db5a4e7d",
     "src/game/skybox_dtor.cpp": "79cd2c149b6a96728b91d9c1cc9efad78acd5eb4b5a263517946e0818d940a36",
     "src/game/sprite_ctor.cpp": "aa94e157dcb92e33c29ee871e1f9ffcec9e7f09d5430a2b94654088a59ece6dc",
+    "src/game/sprite_stq.cpp": "187a75d079ce00d296bf09ff24258484d52c4372a06c922d655a2c7488032a09",
     "src/game/string_80277f18.cpp": "b6c79191f3a19d54855216cdbc6cf512f4fa474cc60d95837b45a4acec64016c",
     "src/game/surfacetype.cpp": "88645588850e3802162963971edbe8af8607679de8260f145fa4e8c30fb03399",
     "src/game/sys_memory_dwi.cpp": "734d54b445abd8a9172e15bf85b8613c97a4b5f5ef97d730495ce2ae097eb9b2",
@@ -61553,6 +61565,60 @@
       "discarded_functions": [],
       "object_sha256": "26af18feda361df27cf0ac5b74cd209339f3bfc7c9ed04b17fa299658d2f8ba8",
       "linked_sha256": "9c2727064344910bcbf2d2c4781cc3178318fdfb51175011509d063cf3d3d992"
+    },
+    {
+      "id": "game_font_drawf",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 216,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "39feb3f4806e5f58c0a4d519841c8c52944132c3fb286b3bc28033e210f99054",
+      "linked_sha256": "b7281549cd3e754704454dae90aa7f70fbffe6acd2b286e089cb21c7e07b08ea"
+    },
+    {
+      "id": "game_font_justify",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 184,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "2ee84afb4ca792e4c055f8ebad408cd9b9bf179622b5590122a252ff555f5c86",
+      "linked_sha256": "e333b7e84aa217de899a243c9e8d52397a7ef55c2229347b9bbe7a8995cdf2ac"
+    },
+    {
+      "id": "game_sprite_stq",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 192,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "4054c42bff69851242e07c2ebaf730198e94a862ce8c68a643ffaec912d04012",
+      "linked_sha256": "3fe23249449f44265ac0c7d792d4af2b16027533a74b833fd416c957c908b179"
     }
   ],
   "code_map": {
@@ -63291,25 +63357,6 @@
         ]
       },
       {
-        "name": "Unknown file/.text @ 8005d4f8",
-        "ranges": [
-          {
-            "address": "0x8005d4f8",
-            "size": 92,
-            "kind": "function",
-            "name": "STQ__C7CSpriteff",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8005d554",
-            "size": 100,
-            "kind": "function",
-            "name": "STQ__C7CSpriteRC15_spritepolyvert",
-            "evidence": "unknown-file"
-          }
-        ]
-      },
-      {
         "name": "Unknown file/.text @ 8005d644",
         "ranges": [
           {
@@ -63814,18 +63861,6 @@
         ]
       },
       {
-        "name": "Unknown file/.text @ 80067420",
-        "ranges": [
-          {
-            "address": "0x80067420",
-            "size": 216,
-            "kind": "function",
-            "name": "DrawTextF__5CFontffPCce",
-            "evidence": "unknown-file"
-          }
-        ]
-      },
-      {
         "name": "Unknown file/.text @ 80067508",
         "ranges": [
           {
@@ -63833,18 +63868,6 @@
             "size": 88,
             "kind": "function",
             "name": "GetColor__5CFont",
-            "evidence": "unknown-file"
-          }
-        ]
-      },
-      {
-        "name": "Unknown file/.text @ 80067628",
-        "ranges": [
-          {
-            "address": "0x80067628",
-            "size": 184,
-            "kind": "function",
-            "name": "ComputeJustification__5CFontRfT1PCc",
             "evidence": "unknown-file"
           }
         ]
