@@ -179,3 +179,9 @@ does when an enum's range ends there. `FEObjData::pivot` and `position` were the
 the first, and `GenerateXformMatrix` translates by the second.
 
 Not yet exact: `CFengInterface::NotificationMessage` and `NotifySoundMessage`, where the iterator's end stays in a register.
+
+`CSaveGamePopup` screens are `CUIObject`s run from inside the save and load flow; the virtual tables name `Update`, `Draw` and the event slots.
+`CMemoryCardPopup`'s and the other popups' member names are inferred from their methods. `SoundAliasEvent`'s `SetAlias` helper in these units is
+local to them: the alias store goes through a reference, as its inline body shows. `CMemoryCardPopup::OnPush` shares its empty string with the
+constructor across `OnUIEvent`, which needs a guarded static, and `Display` and `SetString` take a pointer the source spelling for which
+is unknown (`PCUw`), so they stay out.

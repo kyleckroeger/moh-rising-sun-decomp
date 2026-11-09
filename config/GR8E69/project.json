@@ -2583,7 +2583,14 @@
     "fenginterface_render.json",
     "fenginterface_files.json",
     "fenginterface_debug.json",
-    "fenginterface_stubs.json"
+    "fenginterface_stubs.json",
+    "memcardpopup_class.json",
+    "memcardpopup_reply.json",
+    "keyboardpopup_class.json",
+    "keyboardpopup_name.json",
+    "languagescreen_ctor.json",
+    "languagescreen_tables.json",
+    "memcardpopup_events.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

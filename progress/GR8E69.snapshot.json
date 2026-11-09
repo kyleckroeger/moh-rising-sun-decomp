@@ -945,7 +945,14 @@
       "src/frontend/handler_statsscreen_pearl.cpp": "be52bb0036abbc3d111ebec3827d2c7dc9e1c7e490d6e63d171df26d16c2e1e9",
       "src/frontend/handler_virtualkeyboard_string.cpp": "8b301cfd9e4f86ec74565de222bc3b88b491487b041940c5b47685f4df60ca07",
       "src/frontend/hash.cpp": "6d1834f84056ea091ae722973283ab6edc0b53f73938a4866d969db56d62d55b",
+      "src/frontend/keyboardpopup_class.cpp": "76228f81af804104824f1aefeb717e01ab658a5018a293228793b8c5488a2876",
+      "src/frontend/keyboardpopup_name.cpp": "77357d2a8477938032bef2e20da6eea73647b919c9badd706dc62060984df009",
+      "src/frontend/languagescreen_ctor.cpp": "8bcc23e22bd92940dfcff42b931330bcd2f67d6daa9b3d6799b64b7adb0aba1b",
+      "src/frontend/languagescreen_tables.cpp": "75820fa7dd1febdb1fa5112b6688b97442de3ae49a918a8317e88c3cb4ddd049",
       "src/frontend/mc_getname.cpp": "117e60c8a600ab7d5eb1733d4c259ba7cf2c65a94b0ff58dd99ecc1a0ceb515e",
+      "src/frontend/memcardpopup_class.cpp": "37a900e680332d260a39098ce66b427501d56decd22e7ff0254db96b8b01896c",
+      "src/frontend/memcardpopup_events.cpp": "2afeff6a66c4df1724dd9ede1e5322d961cc83c36e0fb4201102b520e2c9ae5c",
+      "src/frontend/memcardpopup_reply.cpp": "354aba7911fc8c62b93fe6ffd6ef445d0731f8cb4473aa9bfc5e5a9affb124ec",
       "src/frontend/pkgh_enablebutton.cpp": "5ff3dc80fc2a45f9c12efb01442fd7eae7730f036da08cec041446b4c4a5b566",
       "src/frontend/pkgh_enablebutton_2.cpp": "49b4ab2f5b0fdaaf0add80a0b6a9526d2fd81e3a88f56388f8623727ef523c1f",
       "src/frontend/pkgh_getcurrentlanguage.cpp": "7165274b079c48489b18eace83d793cc411d9129b2e982e371540f3e2ae8882c",
@@ -4289,6 +4296,10 @@
       "config/GR8E69/instanced_anim_light.json": "73759e82b3bf6870d54d6fbf2ef1b64ec4c688cb847000881824fb8fb3d00093",
       "config/GR8E69/jaw_controller_ctor.json": "34ebd750d88f565421a7d8012ca30fca77ea5efe75bb9e81dac1017627be8d5c",
       "config/GR8E69/jaw_controller_motiontype.json": "f0998e4aa079cdafca1320e57a5a25cfa166bd3d71de883cd2a74cc2c599e4a1",
+      "config/GR8E69/keyboardpopup_class.json": "a876b8a8f0a30406e6b66527a6286b3397263abbabeb0acbeda7aec4aa781c9f",
+      "config/GR8E69/keyboardpopup_name.json": "6870c126e004475e32c452e7e0bb87bd452bfef5b1dcefa89b6cb44af81a2a26",
+      "config/GR8E69/languagescreen_ctor.json": "fe2dcc9fc02c84838300fd2fa84342ed531fd5be4fb10a85a54f7b475f29b74e",
+      "config/GR8E69/languagescreen_tables.json": "7c0c5f44bb8005eed24eda82c32d0c4e9500bab2d9ee0bc4137a8dc0ca0ddd77",
       "config/GR8E69/lapi.json": "d4d026e1a8397f43593a65d06dadf3a619f11d021cbfd8a7759fec9804f0da35",
       "config/GR8E69/lauxlib.json": "954c02e3cf91c26a7e1cd13537a99e479d8113b8b3cecb4e214332cc4e315d1b",
       "config/GR8E69/lcode.json": "162f9b95c02e2deadb9bd20fb8f981fadb822e69f034df9ef9e3470a7bd133f8",
@@ -4379,6 +4390,9 @@
       "config/GR8E69/mc_task_manager_start.json": "94ec5d9dea80dbc4a17e29ac13353f6637dca312522a902ddcba856e158e0c3f",
       "config/GR8E69/mc_task_trc_init.json": "ef08d22147397b0c1b9c0ae84f6166dbea37eebc682a2d8eb6198c3af5d156a5",
       "config/GR8E69/md5.json": "c8e6e2f4eb9c41f917626bf7924787fa4654c663dd466d4377f67313eee22506",
+      "config/GR8E69/memcardpopup_class.json": "2fa21572e1b48b05c27efdb227138a732aaec7c97f314bb1a58120e73744f5bf",
+      "config/GR8E69/memcardpopup_events.json": "13493817ccfae6fab65cbb7b2a5559e88c0114b1110f8164db55698944fd93eb",
+      "config/GR8E69/memcardpopup_reply.json": "2c5628e6f282c3b60d19c58c404f68aae61b1ecc8fb84d4d4f83d2bec9cbb2af",
       "config/GR8E69/memstack_lifecycle.json": "1b733583eefb0f32534fbb7ec55c414a8f61cb7ed1e84f095f839b1054fa0aba",
       "config/GR8E69/mesh_anim.json": "cb64574e1026d550e15df3b0b14aa26ef39854548946f486ae9dd8db9f2f7f58",
       "config/GR8E69/mesh_animframe.json": "aba2eacd5f286c2238f747176e509dfaa674403e63a0d72e60cc81ec8eb26ebb",
@@ -4667,7 +4681,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "bbf41b49c57e7202d812ab0bbb1dfdd4fe9be165f70759c7f416533499fd6c78",
+      "config/GR8E69/project.json": "e39783c9192db98ec825db59e33a5e0cfd9ec89752c36cba5f677a1b239b9f8e",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7403,14 +7417,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1334704,
+    "matching_code_bytes": 1336900,
     "total_executable_code_bytes": 2492032,
-    "percent": 53.558862807540194,
+    "percent": 53.64698366634136,
     "categories": {
-      "reconstructed_game": 942488,
+      "reconstructed_game": 944684,
       "restored_library": 392216
     },
-    "matching_functions": 7007
+    "matching_functions": 7028
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -8465,6 +8479,10 @@
     "config/GR8E69/instanced_anim_light.json": "73759e82b3bf6870d54d6fbf2ef1b64ec4c688cb847000881824fb8fb3d00093",
     "config/GR8E69/jaw_controller_ctor.json": "34ebd750d88f565421a7d8012ca30fca77ea5efe75bb9e81dac1017627be8d5c",
     "config/GR8E69/jaw_controller_motiontype.json": "f0998e4aa079cdafca1320e57a5a25cfa166bd3d71de883cd2a74cc2c599e4a1",
+    "config/GR8E69/keyboardpopup_class.json": "a876b8a8f0a30406e6b66527a6286b3397263abbabeb0acbeda7aec4aa781c9f",
+    "config/GR8E69/keyboardpopup_name.json": "6870c126e004475e32c452e7e0bb87bd452bfef5b1dcefa89b6cb44af81a2a26",
+    "config/GR8E69/languagescreen_ctor.json": "fe2dcc9fc02c84838300fd2fa84342ed531fd5be4fb10a85a54f7b475f29b74e",
+    "config/GR8E69/languagescreen_tables.json": "7c0c5f44bb8005eed24eda82c32d0c4e9500bab2d9ee0bc4137a8dc0ca0ddd77",
     "config/GR8E69/lapi.json": "d4d026e1a8397f43593a65d06dadf3a619f11d021cbfd8a7759fec9804f0da35",
     "config/GR8E69/lauxlib.json": "954c02e3cf91c26a7e1cd13537a99e479d8113b8b3cecb4e214332cc4e315d1b",
     "config/GR8E69/lcode.json": "162f9b95c02e2deadb9bd20fb8f981fadb822e69f034df9ef9e3470a7bd133f8",
@@ -8555,6 +8573,9 @@
     "config/GR8E69/mc_task_manager_start.json": "94ec5d9dea80dbc4a17e29ac13353f6637dca312522a902ddcba856e158e0c3f",
     "config/GR8E69/mc_task_trc_init.json": "ef08d22147397b0c1b9c0ae84f6166dbea37eebc682a2d8eb6198c3af5d156a5",
     "config/GR8E69/md5.json": "c8e6e2f4eb9c41f917626bf7924787fa4654c663dd466d4377f67313eee22506",
+    "config/GR8E69/memcardpopup_class.json": "2fa21572e1b48b05c27efdb227138a732aaec7c97f314bb1a58120e73744f5bf",
+    "config/GR8E69/memcardpopup_events.json": "13493817ccfae6fab65cbb7b2a5559e88c0114b1110f8164db55698944fd93eb",
+    "config/GR8E69/memcardpopup_reply.json": "2c5628e6f282c3b60d19c58c404f68aae61b1ecc8fb84d4d4f83d2bec9cbb2af",
     "config/GR8E69/memstack_lifecycle.json": "1b733583eefb0f32534fbb7ec55c414a8f61cb7ed1e84f095f839b1054fa0aba",
     "config/GR8E69/mesh_anim.json": "cb64574e1026d550e15df3b0b14aa26ef39854548946f486ae9dd8db9f2f7f58",
     "config/GR8E69/mesh_animframe.json": "aba2eacd5f286c2238f747176e509dfaa674403e63a0d72e60cc81ec8eb26ebb",
@@ -8843,7 +8864,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "bbf41b49c57e7202d812ab0bbb1dfdd4fe9be165f70759c7f416533499fd6c78",
+    "config/GR8E69/project.json": "e39783c9192db98ec825db59e33a5e0cfd9ec89752c36cba5f677a1b239b9f8e",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -11525,7 +11546,14 @@
     "src/frontend/handler_statsscreen_pearl.cpp": "be52bb0036abbc3d111ebec3827d2c7dc9e1c7e490d6e63d171df26d16c2e1e9",
     "src/frontend/handler_virtualkeyboard_string.cpp": "8b301cfd9e4f86ec74565de222bc3b88b491487b041940c5b47685f4df60ca07",
     "src/frontend/hash.cpp": "6d1834f84056ea091ae722973283ab6edc0b53f73938a4866d969db56d62d55b",
+    "src/frontend/keyboardpopup_class.cpp": "76228f81af804104824f1aefeb717e01ab658a5018a293228793b8c5488a2876",
+    "src/frontend/keyboardpopup_name.cpp": "77357d2a8477938032bef2e20da6eea73647b919c9badd706dc62060984df009",
+    "src/frontend/languagescreen_ctor.cpp": "8bcc23e22bd92940dfcff42b931330bcd2f67d6daa9b3d6799b64b7adb0aba1b",
+    "src/frontend/languagescreen_tables.cpp": "75820fa7dd1febdb1fa5112b6688b97442de3ae49a918a8317e88c3cb4ddd049",
     "src/frontend/mc_getname.cpp": "117e60c8a600ab7d5eb1733d4c259ba7cf2c65a94b0ff58dd99ecc1a0ceb515e",
+    "src/frontend/memcardpopup_class.cpp": "37a900e680332d260a39098ce66b427501d56decd22e7ff0254db96b8b01896c",
+    "src/frontend/memcardpopup_events.cpp": "2afeff6a66c4df1724dd9ede1e5322d961cc83c36e0fb4201102b520e2c9ae5c",
+    "src/frontend/memcardpopup_reply.cpp": "354aba7911fc8c62b93fe6ffd6ef445d0731f8cb4473aa9bfc5e5a9affb124ec",
     "src/frontend/pkgh_enablebutton.cpp": "5ff3dc80fc2a45f9c12efb01442fd7eae7730f036da08cec041446b4c4a5b566",
     "src/frontend/pkgh_enablebutton_2.cpp": "49b4ab2f5b0fdaaf0add80a0b6a9526d2fd81e3a88f56388f8623727ef523c1f",
     "src/frontend/pkgh_getcurrentlanguage.cpp": "7165274b079c48489b18eace83d793cc411d9129b2e982e371540f3e2ae8882c",
@@ -63597,6 +63625,132 @@
       "discarded_functions": [],
       "object_sha256": "75a17ca838f8bd1714bc1b114fcb8f0c4055292004d252323df80def1f9ff92c",
       "linked_sha256": "44edd402da9342552b190b4c87d6e5a17f38f4478e59962d1cd6e3659dcc3a56"
+    },
+    {
+      "id": "memcardpopup_class",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 480,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "8a66009183d77d8d23ce7273dde6f7006254b82dbb69de8285091befb6ceccd7",
+      "linked_sha256": "b0d652900c93366125cdcc11ec81db31cf1138e376f84caf7ad9239e09813bdf"
+    },
+    {
+      "id": "memcardpopup_reply",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 108,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "91cd4ddf67aaf4719c4b3d56ff18f1b14ceac35c5b3d40da3190dee00d82b6ef",
+      "linked_sha256": "dcc9d938f9af083926c329eb61611a9dc200ba99982702d1705aca1435ec94bb"
+    },
+    {
+      "id": "keyboardpopup_class",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 296,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "b9d0579732bec057157f33afe84ef49287fc697a564afe9a3316a4912589dd0a",
+      "linked_sha256": "eda72f7d276fa25fb0230b5c55ad9c3577e5647bce2c1ed1faa549c75f8fb7fb"
+    },
+    {
+      "id": "keyboardpopup_name",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 512,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "56c3171acce481cee1619e65be44de21bb67ec4301c4542c47ef2fd1cf6b2d6b",
+      "linked_sha256": "33fffe3fb083eaef049c9bfed1ae2054f749aa17baa6088231961e959a0a588b"
+    },
+    {
+      "id": "languagescreen_ctor",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 240,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "5ccdcfd49d680673174c3681e52472bf46535751d34722f97787c7329ce1b7a1",
+      "linked_sha256": "cd9f6bf13d2716fafe5fc5bae982456588d2d499705b7294cb783d43183ee4bc"
+    },
+    {
+      "id": "languagescreen_tables",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 260,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "48351b288f585cc989371584aa76f1b90dc3b23a43c694ff9f38519a59e93b4d",
+      "linked_sha256": "cddbdf31c6759e43bb919667bcb2046c67890d1bbe5e93e7274479cf63f87435"
+    },
+    {
+      "id": "memcardpopup_events",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 300,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "ab9a83b3e14a07f3db3f44c245bf9b5081c4d6acddd2ab4b92cba1ca5a779298",
+      "linked_sha256": "cef9f00f133dc1112fd8ab6a09cef9397401aaca8611d156f58ee198fab644b1"
     }
   ],
   "code_map": {
@@ -78013,52 +78167,10 @@
         "file_name": "MemoryCardPopup.cpp",
         "ranges": [
           {
-            "address": "0x801a3de8",
-            "size": 68,
-            "kind": "function",
-            "name": "InitClass__16CMemoryCardPopup",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a3e2c",
-            "size": 88,
-            "kind": "function",
-            "name": "ShutdownClass__16CMemoryCardPopup",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a3e84",
-            "size": 12,
-            "kind": "function",
-            "name": "Instance__16CMemoryCardPopup",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a3e90",
-            "size": 264,
-            "kind": "function",
-            "name": "__16CMemoryCardPopup",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a3f98",
-            "size": 48,
-            "kind": "function",
-            "name": "_._16CMemoryCardPopup",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x801a3fc8",
             "size": 232,
             "kind": "function",
             "name": "OnUIEvent__16CMemoryCardPopupUiP8FEObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a40b0",
-            "size": 300,
-            "kind": "function",
-            "name": "OnSoundEvent__16CMemoryCardPopupUiP8FEObject",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -78073,20 +78185,6 @@
             "size": 340,
             "kind": "function",
             "name": "Display__16CMemoryCardPopupPCUwN41",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a4434",
-            "size": 84,
-            "kind": "function",
-            "name": "RequestReply__16CMemoryCardPopup",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a4488",
-            "size": 24,
-            "kind": "function",
-            "name": "GetReply__16CMemoryCardPopup",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -78115,34 +78213,6 @@
         "file_name": "SaveGameKeyboardPopup.cpp",
         "ranges": [
           {
-            "address": "0x801a46d8",
-            "size": 84,
-            "kind": "function",
-            "name": "Instance__22CSaveGameKeyboardPopup",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a472c",
-            "size": 88,
-            "kind": "function",
-            "name": "Shutdown__22CSaveGameKeyboardPopup",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a4784",
-            "size": 76,
-            "kind": "function",
-            "name": "__22CSaveGameKeyboardPopup",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a47d0",
-            "size": 48,
-            "kind": "function",
-            "name": "_._22CSaveGameKeyboardPopup",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x801a4800",
             "size": 192,
             "kind": "function",
@@ -78154,34 +78224,6 @@
             "size": 2132,
             "kind": "function",
             "name": "OnUIEvent__22CSaveGameKeyboardPopupUiP8FEObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a5114",
-            "size": 244,
-            "kind": "function",
-            "name": "OnSoundEvent__22CSaveGameKeyboardPopupUiP8FEObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a5208",
-            "size": 100,
-            "kind": "function",
-            "name": "AddToNameString__22CSaveGameKeyboardPopupPcc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a526c",
-            "size": 68,
-            "kind": "function",
-            "name": "BackspaceNameString__22CSaveGameKeyboardPopupPc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a52b0",
-            "size": 100,
-            "kind": "function",
-            "name": "LocalizeString__22CSaveGameKeyboardPopupPCcT1",
             "evidence": "adjacent-compiler-markers"
           }
         ],
@@ -78210,20 +78252,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x801a539c",
-            "size": 192,
-            "kind": "function",
-            "name": "__23CSaveGameLanguageScreen",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a545c",
-            "size": 48,
-            "kind": "function",
-            "name": "_._23CSaveGameLanguageScreen",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x801a548c",
             "size": 140,
             "kind": "function",
@@ -78235,27 +78263,6 @@
             "size": 632,
             "kind": "function",
             "name": "OnUIEvent__23CSaveGameLanguageScreenUiP8FEObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a5790",
-            "size": 4,
-            "kind": "function",
-            "name": "OnSoundEvent__23CSaveGameLanguageScreenUiP8FEObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a5794",
-            "size": 128,
-            "kind": "function",
-            "name": "GetLocaleID__23CSaveGameLanguageScreeni",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801a5814",
-            "size": 128,
-            "kind": "function",
-            "name": "GetButtonName__23CSaveGameLanguageScreeni",
             "evidence": "adjacent-compiler-markers"
           }
         ],
