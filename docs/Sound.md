@@ -493,3 +493,20 @@ the current event's time the buss moves on or stops and takes that event's level
 names in [`SoundBuss.h`](../include/game/SoundBuss.h) are inferred from use. `InsertSoundBus`,
 `SetSoundBuss`, `UpdateBussEntry`, `RetroFit` and the `cSoundBussMan` methods other than
 `InitSoundBussFreeList` are not reconstructed.
+
+## Sound manager
+
+`g_SoundMan` (`cSoundMan`, 0x8700 bytes) loads the level's sound table and bus table and owns the
+stream pool. The table offsets come from `LoadLevelUbr` and `LoadLevelBus`. A file is a 32-byte
+`UberFileHeader`, an array of 12-byte `ColumnMap` records, and fixed-size rows; the sound table is then
+followed by the slot map and, when the header word at `+0xc` is set, a 132-byte bank table.
+`GetUbrCRC` and `GetBussCRC` find the column of type 6 and read each row's alias CRC from it, which fills
+the two sorted row tables. Their extents are inferred from their neighbors: 4096 sound rows at `+0xb0`,
+50 bus rows at `+0x80d4`. Names of members, header fields and `ESoundUberTask` enumerators are inferred
+from use; `UberFileHeader`, `ColumnMap`, `ESoundUberTask` and `BankMan` are symbol-table names.
+
+Observed quirks, kept as they are: `RemoveLevelStreamFile` passes the stream handle word where
+`FILESYS_delbigsync` takes a name, and `VerifyLevelBanks` builds its bank file names and never uses them.
+Not reconstructed: `SetSfxVol`, `ServiceStreams` and `PauseBankSounds` (they own the
+`source/tl/dwi_memory.h:56` literal in this file's shared header strings), `GetMultSettings` and
+`GetSoundEntries` (inlined `SoundEntryBank` destructor), `LoadLevelBus` and `SearchForAlias`.

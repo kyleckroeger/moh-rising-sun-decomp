@@ -2204,7 +2204,13 @@
     "feobj_setdatasize.json",
     "feobj_findscript.json",
     "feobj_setcurrentscript.json",
-    "feobj_setscript.json"
+    "feobj_setscript.json",
+    "soundman_ctor.json",
+    "soundman_ubr.json",
+    "soundman_columns.json",
+    "soundman_streams.json",
+    "soundman_verify.json",
+    "soundman_remove.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
