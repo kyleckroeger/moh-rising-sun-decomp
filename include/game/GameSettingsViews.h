@@ -7,6 +7,7 @@
 #include "GameSettings.h"
 #include "MohLoader.h"
 #include "SceneNode.h"
+#include "ShellManager.h"
 #include <stdio.h>
 #include <string.h>
 
@@ -17,9 +18,8 @@ void SoundSetVolumes(float, float);
 void AmbientTrack_Select(int);
 void MUSIC_SendEvent(int);
 bool APlayerStartExistsForSavePoint(int);
-// Scoped view of the shell manager: two flags tested with the multiplayer globals.
-struct ShellManagerView { unsigned char unknown_0[0x18b8]; int coopA; int coopB; };
-extern ShellManagerView g_Shell;
+extern int g_bTeamDM;
+extern int g_NumPlayers;
 extern "C" unsigned int OSGetSoundMode(void);
 extern "C" void OSSetSoundMode(unsigned int);
 extern int g_uSavePointID[32];
@@ -33,6 +33,6 @@ extern CPauseMenu g_PauseScreen;
 // Absolute linker symbol: the loader's reservation for SCoreGameSettings.
 extern char GameSettingReserve[];
 extern "C" unsigned char OSGetLanguage(void);
-#define IsCoop() (g_Shell.coopA || g_bCoopMultiplayer)
+#define IsCoop() (g_Shell.inCoop || g_bCoopMultiplayer)
 
 #endif

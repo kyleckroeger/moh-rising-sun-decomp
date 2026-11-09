@@ -13,7 +13,7 @@ struct SCRC_Ammo {
     unsigned short ammoB;  // +0x6
     unsigned int selectable : 1; // +0x8, top bit
     SCRC_Ammo() { Reset(); }
-    void Reset() { weaponId = 0; ammoA = 0; selectable = 0; ammoB = 0; }
+    void Reset();
 };
 
 struct SPlayerStatsEntry {
@@ -97,7 +97,8 @@ struct SPlayerProfile {
     float volumeB;                   // +0x0018; second SoundSetVolumes argument.
     unsigned char soundMode;         // +0x001c
     unsigned char unknown_1d[0x2c - 0x1d];
-    unsigned int unknownBits : 4;    // +0x002c; the upper half of this word holds option bits.
+    unsigned int languageSelected : 1; // +0x002c; the upper half of this word holds option bits.
+    unsigned int unknownBits : 3;
     unsigned int hudOption : 1;      // InitHUDFromOptions copies it to the player.
     unsigned int saveNamed : 1;      // Tested before the save screen; the keyboard popup runs otherwise.
     unsigned int optionBits : 10;
@@ -138,6 +139,8 @@ struct SMPPlayerData {
 };
 struct SMPPlayerSlot { int unknown_0; SMPPlayerData data; };
 
+struct SUnknown32140 { unsigned char unknown_0; unsigned char unknown_1; unsigned char unknown_2[18]; };
+
 struct SDMStats {
     int unknown[6];
 };
@@ -148,13 +151,13 @@ struct SCoreGameSettings {
     SPlayerProfile profiles[4];         // +0x00004
     SSaveData saveData;                 // +0x31664
     SPlayerStats levelStats;            // +0x31fb8
-    unsigned char unknown_3201c[0x32020 - 0x3201c];
+    unsigned char unknown_3201c[4];     // +0x3201c; [0] is the last player count.
     SMPPlayerSlot players[4];           // +0x32020; indexed by the player's slot (count inferred).
-    int unknown_32070;                  // +0x32070
+    int unknown_32070;                  // +0x32070; TotalReset writes it as a fifth entry's leading word.
     int field_32074;                    // +0x32074; a team setting CPlayerObject::HandleBulletCollision requires non-negative for friendly fire protection.
     SDMStats dmStats[8];                // +0x32078
     int unknown_32138[2];               // +0x32138
-    unsigned char unknown_32140[0x321e0 - 0x32140];
+    SUnknown32140 table_32140[8];       // +0x32140
     signed char profileIndex[4];        // +0x321e0; indexed by player.
     signed char unknown_321e4;          // +0x321e4
     unsigned char unknown_321e5;
@@ -213,6 +216,8 @@ class CGameSettings {
     void PerformTotalReset(const char *);
     void PerformTotalReset();
     void Init();
+    void SetSkuType(CConfigFile &);
+    void InitControllerFromOptions(int);
     void InvalidateSlotBackup();
     void PerformLevelReset();
     void SetPrevMissionAndLevel(unsigned int, unsigned int);
@@ -345,7 +350,8 @@ inline bool CurrentRecordHasReplayItem(int item) {
 
 // Observed field of the 0x14-byte game-flow global.
 struct GameFlowView {
-    unsigned char unknown_0[8];
+    int unknown_0;
+    int levelIsShell; // +0x4; Init stores CurrentLevelIsShell.
     int levelEnding; // +0x8; set by BIFunc_EndLevel and CPauseMenu::RestartLevel.
     unsigned char unknown_c[0x14 - 0xc];
 };

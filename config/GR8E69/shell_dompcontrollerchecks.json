@@ -1,6 +1,6 @@
 {
-  "id": "gamesettings_invalidateslotbackup",
-  "source": "src/shell/gamesettings_invalidateslotbackup.cpp",
+  "id": "shell_dompcontrollerchecks",
+  "source": "src/frontend/shell_dompcontrollerchecks.cpp",
   "category": "reconstructed_game",
   "compiler_version": "3.8.1",
   "compiler_flags": [
@@ -18,21 +18,21 @@
   "sections": [
     {
       "name": ".text",
-      "address": "0x8016d758",
-      "size": 12
+      "address": "0x80182178",
+      "size": 4
     }
   ],
   "functions": [
     {
-      "name": "InvalidateSlotBackup__13CGameSettings",
-      "address": "0x8016d758",
-      "size": 12,
+      "name": "DoMPControllerChecks__12ShellManager",
+      "address": "0x80182178",
+      "size": 4,
       "binding": 1
     }
   ],
   "externals": {},
   "discarded_functions": [],
   "undefined_in_discarded_code": [],
-  "original_file": "GameSettings.cpp",
-  "original_file_index": 1479
+  "original_file": "shellManager.cpp",
+  "original_file_index": 1580
 }

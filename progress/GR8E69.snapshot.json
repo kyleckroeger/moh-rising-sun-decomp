@@ -649,9 +649,43 @@
       "src/flexprop/UnloadProperties.cpp": "7546bb039937779365ae93f9ae2f85382be45012af5f946ae74235f4aa6d8946",
       "src/flexprop/database_internal.h": "ac7ab80c8f21dcda7bda4ed5ea88929358f9e58c47f693b6b44a2a84015e6489",
       "src/flexprop/matrix.cpp": "96805490c5ab57a3e2dc9005c54d3988a1c734e4c824c093e931ef3717dfa779",
+      "src/frontend/fe_addnode.cpp": "e5a7700160270368d89647b87a32600c245ce474d76da00d3599dbf959d19f7b",
+      "src/frontend/fe_addpackage.cpp": "c3c23bed61c4b56a2d5b9d52edb9c58cbfaf4c3d484ae0005705689bb3d636f4",
+      "src/frontend/fe_allocate.cpp": "c424db0b2f3cfb008e581b2d928aee9368b2cad624d9c83be2a9fd0ce307a6cf",
+      "src/frontend/fe_fecolorul.cpp": "60babb7e564c90ddcc3bab61f4dc7d08b2628a8b541bffdf3f6496ef45da74e6",
+      "src/frontend/fe_fejoypad.cpp": "38ec9c7044103dfb5d54166d752a624ccd1e3a62e6b760092fa2108c58cf26dc",
+      "src/frontend/fe_femouse.cpp": "904d76ad1e545a69713e7254b036739fc8af05b7ec9c4acc2ca05f701e84818f",
+      "src/frontend/fe_fewidestring.cpp": "f7761c00db804aa4a8e7de7bef594fa871556235cd44ae89187ff25d47b93a57",
+      "src/frontend/fe_findchild.cpp": "3006814fc242a6cc26f470caaaa3445e08e4abc1ff9947055aff2284f9c496a0",
+      "src/frontend/fe_generateescapesequence.cpp": "f72477ed5288e84ce4e22224343f50ffc3e549510881941258c322e23b3b390a",
+      "src/frontend/fe_referencelist.cpp": "b094ce25115a8dca044742a73143575cd6106c1cfd4b742ab59a9c90b1928578",
+      "src/frontend/fengine_addtoidlelist.cpp": "79853aec42c20268dd2b09ca07ad06ab00180016046f55219a96e8edb270e31f",
+      "src/frontend/fengine_clearpackagemarkers.cpp": "c53ffb148f7e384281510157164b9264b6f863c833dab85e4a2aafd7caded283",
+      "src/frontend/fengine_recordlastpackagebutton.cpp": "def967d88c4b012513e6cc2e0fc3eccd576394e000086eae084dd306c86e1719",
+      "src/frontend/fengine_resetjoypad.cpp": "84fabc3c164ba48aaccdc0e354b3d45757c69a94368f07955ed12383c8aa93e8",
       "src/frontend/hash.cpp": "6d1834f84056ea091ae722973283ab6edc0b53f73938a4866d969db56d62d55b",
+      "src/frontend/pkgh_enablebutton.cpp": "5ff3dc80fc2a45f9c12efb01442fd7eae7730f036da08cec041446b4c4a5b566",
+      "src/frontend/pkgh_enablebutton_2.cpp": "49b4ab2f5b0fdaaf0add80a0b6a9526d2fd81e3a88f56388f8623727ef523c1f",
+      "src/frontend/pkgh_getcurrentlanguage.cpp": "19ded70a2c1e7173224cad72c65933edab227e4b795da00640f1eb23c126a8b0",
+      "src/frontend/pkgh_setgroupshowonly.cpp": "db4a682b2702aabbef0ffee0847e9a85e0624901c595a3f9d5db9d0fccd80c11",
+      "src/frontend/pkgh_setscript.cpp": "3353769869623bc033317a96e7408a759deea868a87ad900148cbf53b8e4b603",
       "src/frontend/popup_message.cpp": "6b62ed9879ae5d79a68fa9fbbe750817b3d737f27ccc04be2c671d1fc1eb39af",
       "src/frontend/popup_message_dtor.cpp": "b0fa8b929b9341635239ac8359ca62485761cb69af3ae611c660b69221771b0f",
+      "src/frontend/shell_beginpackagerendering.cpp": "c22a7a2acfc1cc0fa8d4263951398625495d55a845cc332c987d244c40b5fb85",
+      "src/frontend/shell_debugmessagequeued.cpp": "66c31a28249ee686b60e4df3ae9ffadb475598316b50da68a3f4549000b990ab",
+      "src/frontend/shell_docoopcontrollerchecks.cpp": "355c7bcd0330a31a89bc0b7c86e46d99ef20d85ebdbd9aff8f9d79275384c941",
+      "src/frontend/shell_dompcontrollerchecks.cpp": "b42abda4bfbe64a0faf5f00cbc1d4752a4fe3636f6619889f13134bed10099b1",
+      "src/frontend/shell_draw.cpp": "c5d616a1840c7bfc8775cf206feff3056cc20ed4f278d9b3b2256e2d6df23ff2",
+      "src/frontend/shell_endpackagerendering.cpp": "47cf0973a81235190ae2d4b82357dbd79558e6881f8d04ce17ebe5c03e4d067b",
+      "src/frontend/shell_getcombinedjoypadactivemask.cpp": "38edeb34f8d3396cc636ed863d03bbdb8c81e4dcdff8cc15dbf9ec8afd913e26",
+      "src/frontend/shell_getdeviceindexfromcontrolmask.cpp": "53d4afa2c6798a841218d00e035e8691571324d637bf6a7bcbe97d847bc1adb6",
+      "src/frontend/shell_getnumcoopplayers.cpp": "f39c8446399d07fa0425074c2122671c3241b28fbd7f5fb6a098220b283d49e1",
+      "src/frontend/shell_getviewtransformation.cpp": "2167d1861f83a697e8c59946f51111d12335e3ab157d8baf15dfd8e4f11bd4c5",
+      "src/frontend/shell_hasscreen.cpp": "7c5d3731f92a9f6c968a06d663c15b3a88cc105e81588b0b547e30d51971d505",
+      "src/frontend/shell_iscoopontop.cpp": "91c16978b7d29178527938763419c0dab512e05569b796381c5bcb110925452f",
+      "src/frontend/shell_playmovie.cpp": "4315dfb7828d32ae8ee03af7e20e6eec6d92c30839b8664058a8417d615154de",
+      "src/frontend/shell_push.cpp": "41af18cdf93a4eb2b21ae2620ec77a7ff9cc690f93699907faa8b433fac08c2e",
+      "src/frontend/shell_resetactivecontrollerindicies.cpp": "05109f2ff9baf09f9eb2f1d634cdcdb06ac64a5833badfcd3510a9d02533d6d7",
       "src/frontend/uppercase.cpp": "58d80513a4f76209e1895c6943d7e05837625be3bd2687efe32159afd23f70dd",
       "src/frontend/usermessages_access.cpp": "41716b6c646c0838ec302212e35f8ece4f43914f5a10cbdd6fec31ad50f4081a",
       "src/frontend/usermessages_lifetime.cpp": "250e5edf14476401ba9fd4c26cd2a8fb96303b302f127109a29647323be7b017",
@@ -1750,16 +1784,15 @@
       "src/script/validation_build.cpp": "89251f21f21080d27633ad20ea624b1a8702565a91ab36e5f809b6e5e0ae4255",
       "src/script/vibration_partial.cpp": "29c765c0f143dab8c71ddb417edde951f88a66595192f026be5920461c5b9ec6",
       "src/shell/gamesettings_activatecheatnamed_hugearms.cpp": "7cfb523e1b05e92df9fb6c89c91a273875607a5aca10cd0b22f36aa5f7163a51",
+      "src/shell/gamesettings_cmoviesettings.cpp": "a67aef7a0748496f82fae32aee5466aea0e196b55436d205434a850e6a9b8cff",
       "src/shell/gamesettings_getifcurrentweaponselectable.cpp": "434c0b3b9cfaf0916814176410613e97fb800423c68368621ea074b30e7cb8df",
-      "src/shell/gamesettings_getprofileindexfromplayerid.cpp": "1ca6be741becd97d2b45907f68b313f59b8867469bf76374092832a0433d8055",
+      "src/shell/gamesettings_getprofileindexfromplayerid.cpp": "d9837a83f65ece3bcdb241df932331666cac08b13c5394fd83c9cfd92540636f",
       "src/shell/gamesettings_getsavedata.cpp": "44f7b097052aa1b13f3593b4031f4f9b8a5fd8bf91ddaf4b9966a52c006febd8",
       "src/shell/gamesettings_getsoundmodevalue.cpp": "f27941e11c076eae147ebf71bdc5c48e84d322cd1d7ad01d8ef8b2de4c5feb76",
       "src/shell/gamesettings_hasbeenunlocked.cpp": "84e160db9999b76d57a536e655e36379913c56eb1fcf9e7ff6d361346c875c12",
       "src/shell/gamesettings_hasmedal.cpp": "0bc0b5e44584cf2edce97562c438719fc253bf23ef2ed73185cf2b64e05a59d5",
       "src/shell/gamesettings_inithudfromoptions.cpp": "70cee48d5031229230296c59e8680959a27d456c71f8bde1b2dce405c433ff31",
-      "src/shell/gamesettings_invalidateslotbackup.cpp": "64f6395713dc5e3edef69f2262a5d9d1ab4ae9308339c62c3799f5abeb8fba26",
-      "src/shell/gamesettings_reset.cpp": "5d4747695bb170e2f4b2b156e7768ec26d2b19f748f0efc5d771e2f486a3b974",
-      "src/shell/gamesettings_resetcurrentlevelstats.cpp": "02656b7219d8331abca3dd90f849bed1d77446eb698b77415361763b31f17468",
+      "src/shell/gamesettings_reset.cpp": "d27598eb8b8f1740ec7bbe2372ac45ef7deb3ed21be6f5ce78f3309e3cdc1876",
       "src/shell/gamesettings_resetleveltimer.cpp": "3aacffde4bfe0a26b631fa34c1be2e1413aa762d8403361640209384cbced3e8",
       "src/shell/gamesettings_restorelevelaudio.cpp": "74e18a579e429e1ea821af16373cb68fff4e2584ff7a5591b71490da65dc5781",
       "src/shell/gamesettings_restoresavedata.cpp": "65ab6126d5c0d687f9123abb9d8cb36e791830d81438bd98beaff7ff72adbf8c",
@@ -1768,7 +1801,6 @@
       "src/shell/gamesettings_serializingin.cpp": "4701840686e449203078ef132deadecbb2488bc110b9767e6a3b732e452e54a1",
       "src/shell/gamesettings_setcontrollerbuttons.cpp": "7881abe5b8b8ab47de752f3a24493462d76696951ac75362b548e2d7443742e5",
       "src/shell/gamesettings_setplayersfinishedlevelsuccessfu.cpp": "480530acffcf042dd9042d9c14e1f7cdc03d408a7bb1ec5169dd1f4477074938",
-      "src/shell/gamesettings_setprevmissionandlevel.cpp": "cd2ed565b9b810b91c11e49a015e9ad3457780d185357a5002b7fbc81760f6fb",
       "src/shell/gamesettings_validate.cpp": "e0d8f6c1c427bd389ec1bbf26dd2267be784518b084bed317701aaac5d9e1633",
       "src/shell/rcmp_alloc.cpp": "ea747ae393fea94d2f4e761be754f711c91a8fd0904a45dc0142c8f5de43a8bf",
       "src/shell/static_draw.cpp": "5c31cd87db7e8acba89ef9c6e6878e17ee2e38e1e74a2569d004e19d66421be5",
@@ -2500,6 +2532,10 @@
       "include/game/EAGLTransform.h": "c8b8d8e4397d16d893d6b080bfa5a7a1a9e4fd35bd0d98096d75f3d00e64d433",
       "include/game/Endian.h": "6f3a06aca2ed749c09949cedff932c6e9a8db1272b5393bdc9a46185a384387b",
       "include/game/FEHash.h": "5d2777480e94ab65796f9850193722c7585a884299d6b68b610c5b3ce6a08757",
+      "include/game/FEngLists.h": "84f30ae7c68a4efbdd062bb4053b3a86a0aa4ba0c4e8376abb3304c3c6a267cb",
+      "include/game/FEngObjects.h": "1fdc64abf31054c97354a37bc8e2d2f6bb2b6812859b5041d4ecef088d1b26e1",
+      "include/game/FEngStrings.h": "3fb38fb321893a9cc7e83396ced3500fb9dfbf859a210f4e470c2961e735cc86",
+      "include/game/FEngine.h": "4169a997f1a720bfc37d1fb7cc2e0132ae1366b8b43167928567cb9b76c8feff",
       "include/game/Fader.h": "5e6a829b80a545618de960a1fcb77e1c59c1ea1ba2f2e0fee87d54c2e7c73143",
       "include/game/Fiber.h": "86a5b88a4e003f050e9a365b1a5c582c8d0163426b18fff783e17a465ddbb045",
       "include/game/FlexProp.h": "d4b492f690451a27c03371aa71637f8b6a4109c07ed8ba55de69ae5f256414ff",
@@ -2507,8 +2543,8 @@
       "include/game/Fog.h": "30a37f01f3f665d1f9b3b0a5ef81ea098194595159c5ff794797541c6bf325c0",
       "include/game/Font.h": "aac3ae3971b2a09911276f89091539c78c3d22be4046eca5d1e65a39c2f82e6b",
       "include/game/Frustum.h": "8b459091729087e5119c39887634fd28825b36e40b7a0efdf9a40c2cf58741fe",
-      "include/game/GameSettings.h": "6b5ac7cd1bdc4ee3677cb697bdfdc9dc44259cc077320533b0bb6de2c3f18818",
-      "include/game/GameSettingsViews.h": "daf4a7107f3e7027773ccedbd05e2e2c0a49229fc912e54f973475be30fc98a3",
+      "include/game/GameSettings.h": "e2ca45c4d2866082d832fbd05982db5eac54cf00f102b3b53a45b38b5a1aabe1",
+      "include/game/GameSettingsViews.h": "a55550e5c7f8fc35bd8db34da42fa8ee804c7d81612634677308a869ec9eb474",
       "include/game/GrenadeResponse.h": "a26075782a75877dd754799cb73d6fe55e2a6c6597676869bb956ba8cdb2bed4",
       "include/game/HeadsUpDisplay.h": "23f906aea051f1148504c63cb883c629affb72f857288563152b2e49ad89ff84",
       "include/game/HearingVolume.h": "76a0cf1b1778be270e3b56ac1143a43032c1c3ef9643d510e277c89b7c8757c2",
@@ -2552,6 +2588,7 @@
       "include/game/ScriptStartup.h": "ca298798406d593bc47296e17ca3c8778cde7e69bb465f05962cc05fc2eb40cc",
       "include/game/ScriptTimers.h": "a81f3399ff20908469a289229ed0f0aae2c28aa3a9889629e62049e8bb16705b",
       "include/game/Shell.h": "db84b21f4281a41ca239238d55dbbd4531255dccebe64ad20d0edbc301e71e13",
+      "include/game/ShellManager.h": "cc0966dbc389a1c370120249fe74897699ddfbf35e450e63d91f90e475a2d613",
       "include/game/SkyBox.h": "810947bbc2ecf7cb4d69dfa350c055b05d446c04b904abfadaf4828c7be01a55",
       "include/game/SoundAmbience.h": "a8ffdd3a842aa24e0d8511216e05fd27625c8c2e96c7db19d7557afa729b1fb5",
       "include/game/SoundEntryPool.h": "3766b906852ceb49985a2e376f46077c2e739f8dc17ca0f16a47b60b79eb0d59",
@@ -3371,8 +3408,22 @@
       "config/GR8E69/explosion_constructor.json": "23ced4ead134e230d87770045cab3792930c80b58c2e9f3e7259886ccd378a1f",
       "config/GR8E69/explosion_visit.json": "2cc8e7f5328098153ab906a1d679c04e8016c97fdec294b7494d7312bc417ec4",
       "config/GR8E69/fader.json": "a511bee84e26a44b06b85880decce92b40617cf2aac02191146f6a4a062adc7e",
+      "config/GR8E69/fe_addnode.json": "18d1641aa191701d3db7674f9c8fd39bba35330c50282840c61a3c043cbb6ed0",
+      "config/GR8E69/fe_addpackage.json": "f1857f9701e1e546ff294475b6bfe578786a04187966f49b3d89e49402c215af",
+      "config/GR8E69/fe_allocate.json": "cf1adcece59d1fa7f51797783f4446fda2c9abc7a25c450abf4a90e54f683f01",
+      "config/GR8E69/fe_fecolorul.json": "5aafd656fdbe731f02334b5a96d06ee15b96ef1cfbc8f0ea82fed90d7914bb22",
+      "config/GR8E69/fe_fejoypad.json": "5ad3e79d9db19588cc5491d454da8b06abb0d180361f8f5298b2e617d6af4907",
+      "config/GR8E69/fe_femouse.json": "5696b10d7074ebee43e48ed7735abcd6a75c4f911afd69fb2265d6c3b442b3cc",
+      "config/GR8E69/fe_fewidestring.json": "06d4529c9a0543a6e1c2d1fc12a7f2a6bf7b90c7716d79e477ca1edf41e09b5a",
+      "config/GR8E69/fe_findchild.json": "5f41e204e9860b9279eafd992642723c32363bdd1219b52027e413a3413bdfed",
+      "config/GR8E69/fe_generateescapesequence.json": "e16f91ceac0ac4317b58f8de06a070c2074912c4e3b76cd1206a37ff252b9f92",
       "config/GR8E69/fe_hash_upper.json": "c9e6dff86f6763a1c5f4962057e5c6f58bd9587b9ea3b31fb71bf0e49f6bb451",
+      "config/GR8E69/fe_referencelist.json": "46e7f8e3d478905bd2ea9ac697d1e4ab5478fceeb3420d02a74d760cb0b27808",
       "config/GR8E69/fe_upper_case.json": "db8afcb483244836c37cf2af7fedcc32bef682ca25f38e27ced5d4cf99978174",
+      "config/GR8E69/fengine_addtoidlelist.json": "8ff963f5da0e4b12de907be8324a9e996ae48ab9ef835d0564153919adca2afb",
+      "config/GR8E69/fengine_clearpackagemarkers.json": "b3b060147b271056c700d7bc87441a26a15aaae2bf71b707fc51916e90340b3c",
+      "config/GR8E69/fengine_recordlastpackagebutton.json": "f0cb28686d3bb495fb37eec0dfbfbb3e4aa7d192408ef17456abdf53ed09364b",
+      "config/GR8E69/fengine_resetjoypad.json": "8d56eaa52459d1d5bc5801b0e702de4c82764d9d1c7b7ce03235095acab8aff5",
       "config/GR8E69/fiber_construct.json": "9a6c883516c846241681107ecb034969838fcb1246adcc5dbf2f09e654c198cc",
       "config/GR8E69/fiber_create.json": "335dad58eb6eabbb0cae658c8c8f6e03a6c8991484a47e3f7fb85a9df19c7293",
       "config/GR8E69/fiber_destructor.json": "71c81500260de67a85ab268fa51cfb02e713685c92f32a402b5ffd67bfe1f63b",
@@ -3412,6 +3463,7 @@
       "config/GR8E69/frustum_transform.json": "35766529dbd85ffd05cf8d34adb7010b3b10b02c04d1d097811dde2dfc2ef057",
       "config/GR8E69/fstload.json": "d49e84fe0d1e9af1dd569811065db3c015f596b540ac5988c5078fa2f9c5dd5e",
       "config/GR8E69/gamesettings_activatecheatnamed_hugearms.json": "1a5212cff62406bb097fded87a75d7cc51c850d33df8d4ca1e9da23d6c1ee059",
+      "config/GR8E69/gamesettings_cmoviesettings.json": "5674ce0dbcdf9706cfc6b1d52486ddcf9448e17e8d567cad12b775a4aed808bb",
       "config/GR8E69/gamesettings_getifcurrentweaponselectable.json": "0dde371947c62af667bd73e4dfeb6b8ef71e6c7e780379b7750edb17992d0f37",
       "config/GR8E69/gamesettings_getprofileindexfromplayerid.json": "fcfe5f6b5d90cffe68f34b0875cb1a9681bf11fb48f15a8e80dc96bed559504d",
       "config/GR8E69/gamesettings_getsavedata.json": "9a136ab4b15981df0e163112862278173fe0bc82b2bb7f526f121a2abe239c78",
@@ -3419,9 +3471,7 @@
       "config/GR8E69/gamesettings_hasbeenunlocked.json": "9a8663d92bf9be5f6e2f55a66c01c11cf11a92f5561113d7f0f33e9932b07a2f",
       "config/GR8E69/gamesettings_hasmedal.json": "9f6811f64e6e51173774f5160b50444c59e9f99e1c26e63806368ccefaf4b942",
       "config/GR8E69/gamesettings_inithudfromoptions.json": "11de24ec062db62e6bf7e5a1674d8477fb4f2b25da6ebe2485232fdcffc4d889",
-      "config/GR8E69/gamesettings_invalidateslotbackup.json": "11eba1ed69de8d79adadb1d71df7b6ceafaecf0c7865c958ef0b5274c2f8ef2d",
-      "config/GR8E69/gamesettings_reset.json": "32646f4a9d13d95211e79c25bec6ea3a6c3f6e7854aa308203a1675bd720fc2e",
-      "config/GR8E69/gamesettings_resetcurrentlevelstats.json": "64a8dce8562280423f505353b541ed53991ab4fd0e959e14dcf94432d25cea48",
+      "config/GR8E69/gamesettings_reset.json": "be77e2a62f0aeda4e1704839cdcba0d3e19209bff32873edc2bbe089185c4a27",
       "config/GR8E69/gamesettings_resetleveltimer.json": "1a6d75572d293046d1ffde1ac331cea2254985e75f6dd86d369ebb68efc3ae4f",
       "config/GR8E69/gamesettings_restorelevelaudio.json": "86daf22b25da1c2bed18f52fd70af0cec754263fdbb13c1472f9e4feee10e187",
       "config/GR8E69/gamesettings_restoresavedata.json": "02381ab02e4e072c918a041c31c3b1995743f0b6a106265736e4fd1216d5d3f3",
@@ -3430,7 +3480,6 @@
       "config/GR8E69/gamesettings_serializingin.json": "b4c0e53c07cf89cce72e138923f6b1f340351be2b26e6aa6443176846ac63f53",
       "config/GR8E69/gamesettings_setcontrollerbuttons.json": "ecbb7e2b5f3ded3a2cc12fde812fffc9755d833156ea32dd4f155bb7fc83be8c",
       "config/GR8E69/gamesettings_setplayersfinishedlevelsuccessfu.json": "3baf76798ff6aa3a4286b5c711e147b8f4fccaabb8995b095456a6cb87135675",
-      "config/GR8E69/gamesettings_setprevmissionandlevel.json": "44e3873c42f4799987398762d8c2e3caecb465604639ae50f1be38d1d36d1e3f",
       "config/GR8E69/gamesettings_validate.json": "112fdb9de71471339d701e4917ecb721e9e80836a2f5665f2bc98744ca5087eb",
       "config/GR8E69/gchw_vd_draw.json": "8240cd2ce5d0a0f00cae88ddb2fbd1c1a198a12246488f9b6cebd10604e92e3b",
       "config/GR8E69/gchw_vd_setters.json": "34856555c8f331dcd604dd04eb40e58713689ec5a0bdc6c685507364dc3fbc70",
@@ -3708,6 +3757,11 @@
       "config/GR8E69/particle_terminate.json": "a86b85ccc5b1c04cc5f96524f3f4aee0e0605b48bdb06a2997185d7dad795f87",
       "config/GR8E69/particle_tm_local_to_world.json": "8857f22743da7deaf073d151e725db0f9a853e07de836188155d521797832301",
       "config/GR8E69/particle_velocity.json": "0e01a076771a973ea3070d16303239017aecb9fe38ed3185d094fff6f62a21b9",
+      "config/GR8E69/pkgh_enablebutton.json": "327fb847811060d10c8fed7f1e60782eca254d4e7e264a9a8964bf8255979b11",
+      "config/GR8E69/pkgh_enablebutton_2.json": "63f11ecd3c566934966c972e61dfe44fe739ffa15f56adada4722132fcca1c90",
+      "config/GR8E69/pkgh_getcurrentlanguage.json": "5fb17d6aad407052dbcfb4f78af439466a170e2e0d67b6f4abb921762c44ddf5",
+      "config/GR8E69/pkgh_setgroupshowonly.json": "2f64696e6ae8bac6375943e600b37c4e7ba72b4e2c86f5485bf41971a5fd8c08",
+      "config/GR8E69/pkgh_setscript.json": "239e9edf68a9f51dd30769ca178dfe2ed50b2280a4075e7ccc13a7c808ef3f92",
       "config/GR8E69/plane_transform_intersect.json": "a9d6d8fbd00fd7c137f81a216f6b95ddb3e8b7738a241f61469e0dd7389a21c5",
       "config/GR8E69/player_accessors.json": "78bc1825debdcabaf5a9ab0a70fe1641cc05093cd95668a51e9153c9d0478c40",
       "config/GR8E69/player_actions.json": "f8b21144b77884abcbd744111a4da60e5e48c0be3ea095252c97245100ec9f61",
@@ -3772,7 +3826,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "8d10407aa377101391bd827eada42aa574c6fde3ed855f38c9b613ffea9b3a90",
+      "config/GR8E69/project.json": "803a96427d36f1d478900190bfe618c9e82b8b9bd6db2046b780eb51622cc0d2",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -4411,6 +4465,21 @@
       "config/GR8E69/shadow_ctor.json": "eb6578130fce1291c6e416d50babce9804748315e7bfe35ae0b192f3489225ba",
       "config/GR8E69/shadow_enabled.json": "50baaa0d93b7fb1707e7c75ba80764ef3968e921bf7fd9601e39836905829363",
       "config/GR8E69/shadow_init.json": "d71042b90fb79cfce1ba7a46ff752d179976bdb0f7a7d69193bd31fd0699251a",
+      "config/GR8E69/shell_beginpackagerendering.json": "5c081296524e22206a3748f0fe0e85c3ac83b9919c5f50916d73b15950025a58",
+      "config/GR8E69/shell_debugmessagequeued.json": "fc9aa9c0ad0bb0d61e15f858f602c6381f8ce78e08f87b5ccf1232d54c69c173",
+      "config/GR8E69/shell_docoopcontrollerchecks.json": "39d58b72c616753144f7c0afae17736e7aff4e73e8748a55c4cce1a5c18870f1",
+      "config/GR8E69/shell_dompcontrollerchecks.json": "bfa719b943bc766e07ed786213ca14ac9b83e55b3cb028293a236ffd98154d52",
+      "config/GR8E69/shell_draw.json": "2548080ea04710a117559003d0d56453f8d480273a379927fdcc050b3dd00ed9",
+      "config/GR8E69/shell_endpackagerendering.json": "d0e1673953a9844c34608df15c69d5559c62eecde267d42ecf4e690d2ad15714",
+      "config/GR8E69/shell_getcombinedjoypadactivemask.json": "f1e8d8545bb3444936c3a0af9c26f327db6b844b99eef66d52c5712dd2a1fcf0",
+      "config/GR8E69/shell_getdeviceindexfromcontrolmask.json": "df1cc042d5e280ddadca03199b8b45501ebe3101e66ef66b58bd813d99da22ee",
+      "config/GR8E69/shell_getnumcoopplayers.json": "8c2678f3a4b4ac9ac5b0939682222db715669d8e1124a8944270d67f9de92f3a",
+      "config/GR8E69/shell_getviewtransformation.json": "3992ce0867cc93e7433abd0c8bf7876c4d57f9722e0e96ae85575e872dd286ab",
+      "config/GR8E69/shell_hasscreen.json": "128ca7df7c41e75213762d643fd33bae86e53d426ae3e483a10b857794271c84",
+      "config/GR8E69/shell_iscoopontop.json": "90f026a8291669cd2c3ec562654120080704809fba4e809c1e3685811d07bac1",
+      "config/GR8E69/shell_playmovie.json": "7a0c29fc7fea9fc038de748a20ce58667473ce2a8ddbeca09abb193ecf71c960",
+      "config/GR8E69/shell_push.json": "2d4fc2f3ed224436060e5d9ebe9f600f667f2501678bfe579655e13f42344760",
+      "config/GR8E69/shell_resetactivecontrollerindicies.json": "4520b65b8abdf8d8b3baa1256bd9f08fcbc78443e4b4f2decb3711c48ba50cb6",
       "config/GR8E69/skybox_class.json": "6382327bdfd3308c3364c6cd96a02b3c8d1e82af96f09447f12c14cac9db21ea",
       "config/GR8E69/skybox_dtor.json": "d67d7fc8b0aebb0429903e6dcdaa65bf32a5f1930b319afc4a4bf8063f1d5e6b",
       "config/GR8E69/sn-library-source.json": "606ef80cd17599d3b7c2833a01c483622529485e2455c15ac76c975ba20507dc",
@@ -6440,14 +6509,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1104572,
+    "matching_code_bytes": 1115588,
     "total_executable_code_bytes": 2492032,
-    "percent": 44.324149930659,
+    "percent": 44.76619882890749,
     "categories": {
-      "reconstructed_game": 712356,
+      "reconstructed_game": 723372,
       "restored_library": 392216
     },
-    "matching_functions": 5522
+    "matching_functions": 5650
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -7099,8 +7168,22 @@
     "config/GR8E69/explosion_constructor.json": "23ced4ead134e230d87770045cab3792930c80b58c2e9f3e7259886ccd378a1f",
     "config/GR8E69/explosion_visit.json": "2cc8e7f5328098153ab906a1d679c04e8016c97fdec294b7494d7312bc417ec4",
     "config/GR8E69/fader.json": "a511bee84e26a44b06b85880decce92b40617cf2aac02191146f6a4a062adc7e",
+    "config/GR8E69/fe_addnode.json": "18d1641aa191701d3db7674f9c8fd39bba35330c50282840c61a3c043cbb6ed0",
+    "config/GR8E69/fe_addpackage.json": "f1857f9701e1e546ff294475b6bfe578786a04187966f49b3d89e49402c215af",
+    "config/GR8E69/fe_allocate.json": "cf1adcece59d1fa7f51797783f4446fda2c9abc7a25c450abf4a90e54f683f01",
+    "config/GR8E69/fe_fecolorul.json": "5aafd656fdbe731f02334b5a96d06ee15b96ef1cfbc8f0ea82fed90d7914bb22",
+    "config/GR8E69/fe_fejoypad.json": "5ad3e79d9db19588cc5491d454da8b06abb0d180361f8f5298b2e617d6af4907",
+    "config/GR8E69/fe_femouse.json": "5696b10d7074ebee43e48ed7735abcd6a75c4f911afd69fb2265d6c3b442b3cc",
+    "config/GR8E69/fe_fewidestring.json": "06d4529c9a0543a6e1c2d1fc12a7f2a6bf7b90c7716d79e477ca1edf41e09b5a",
+    "config/GR8E69/fe_findchild.json": "5f41e204e9860b9279eafd992642723c32363bdd1219b52027e413a3413bdfed",
+    "config/GR8E69/fe_generateescapesequence.json": "e16f91ceac0ac4317b58f8de06a070c2074912c4e3b76cd1206a37ff252b9f92",
     "config/GR8E69/fe_hash_upper.json": "c9e6dff86f6763a1c5f4962057e5c6f58bd9587b9ea3b31fb71bf0e49f6bb451",
+    "config/GR8E69/fe_referencelist.json": "46e7f8e3d478905bd2ea9ac697d1e4ab5478fceeb3420d02a74d760cb0b27808",
     "config/GR8E69/fe_upper_case.json": "db8afcb483244836c37cf2af7fedcc32bef682ca25f38e27ced5d4cf99978174",
+    "config/GR8E69/fengine_addtoidlelist.json": "8ff963f5da0e4b12de907be8324a9e996ae48ab9ef835d0564153919adca2afb",
+    "config/GR8E69/fengine_clearpackagemarkers.json": "b3b060147b271056c700d7bc87441a26a15aaae2bf71b707fc51916e90340b3c",
+    "config/GR8E69/fengine_recordlastpackagebutton.json": "f0cb28686d3bb495fb37eec0dfbfbb3e4aa7d192408ef17456abdf53ed09364b",
+    "config/GR8E69/fengine_resetjoypad.json": "8d56eaa52459d1d5bc5801b0e702de4c82764d9d1c7b7ce03235095acab8aff5",
     "config/GR8E69/fiber_construct.json": "9a6c883516c846241681107ecb034969838fcb1246adcc5dbf2f09e654c198cc",
     "config/GR8E69/fiber_create.json": "335dad58eb6eabbb0cae658c8c8f6e03a6c8991484a47e3f7fb85a9df19c7293",
     "config/GR8E69/fiber_destructor.json": "71c81500260de67a85ab268fa51cfb02e713685c92f32a402b5ffd67bfe1f63b",
@@ -7140,6 +7223,7 @@
     "config/GR8E69/frustum_transform.json": "35766529dbd85ffd05cf8d34adb7010b3b10b02c04d1d097811dde2dfc2ef057",
     "config/GR8E69/fstload.json": "d49e84fe0d1e9af1dd569811065db3c015f596b540ac5988c5078fa2f9c5dd5e",
     "config/GR8E69/gamesettings_activatecheatnamed_hugearms.json": "1a5212cff62406bb097fded87a75d7cc51c850d33df8d4ca1e9da23d6c1ee059",
+    "config/GR8E69/gamesettings_cmoviesettings.json": "5674ce0dbcdf9706cfc6b1d52486ddcf9448e17e8d567cad12b775a4aed808bb",
     "config/GR8E69/gamesettings_getifcurrentweaponselectable.json": "0dde371947c62af667bd73e4dfeb6b8ef71e6c7e780379b7750edb17992d0f37",
     "config/GR8E69/gamesettings_getprofileindexfromplayerid.json": "fcfe5f6b5d90cffe68f34b0875cb1a9681bf11fb48f15a8e80dc96bed559504d",
     "config/GR8E69/gamesettings_getsavedata.json": "9a136ab4b15981df0e163112862278173fe0bc82b2bb7f526f121a2abe239c78",
@@ -7147,9 +7231,7 @@
     "config/GR8E69/gamesettings_hasbeenunlocked.json": "9a8663d92bf9be5f6e2f55a66c01c11cf11a92f5561113d7f0f33e9932b07a2f",
     "config/GR8E69/gamesettings_hasmedal.json": "9f6811f64e6e51173774f5160b50444c59e9f99e1c26e63806368ccefaf4b942",
     "config/GR8E69/gamesettings_inithudfromoptions.json": "11de24ec062db62e6bf7e5a1674d8477fb4f2b25da6ebe2485232fdcffc4d889",
-    "config/GR8E69/gamesettings_invalidateslotbackup.json": "11eba1ed69de8d79adadb1d71df7b6ceafaecf0c7865c958ef0b5274c2f8ef2d",
-    "config/GR8E69/gamesettings_reset.json": "32646f4a9d13d95211e79c25bec6ea3a6c3f6e7854aa308203a1675bd720fc2e",
-    "config/GR8E69/gamesettings_resetcurrentlevelstats.json": "64a8dce8562280423f505353b541ed53991ab4fd0e959e14dcf94432d25cea48",
+    "config/GR8E69/gamesettings_reset.json": "be77e2a62f0aeda4e1704839cdcba0d3e19209bff32873edc2bbe089185c4a27",
     "config/GR8E69/gamesettings_resetleveltimer.json": "1a6d75572d293046d1ffde1ac331cea2254985e75f6dd86d369ebb68efc3ae4f",
     "config/GR8E69/gamesettings_restorelevelaudio.json": "86daf22b25da1c2bed18f52fd70af0cec754263fdbb13c1472f9e4feee10e187",
     "config/GR8E69/gamesettings_restoresavedata.json": "02381ab02e4e072c918a041c31c3b1995743f0b6a106265736e4fd1216d5d3f3",
@@ -7158,7 +7240,6 @@
     "config/GR8E69/gamesettings_serializingin.json": "b4c0e53c07cf89cce72e138923f6b1f340351be2b26e6aa6443176846ac63f53",
     "config/GR8E69/gamesettings_setcontrollerbuttons.json": "ecbb7e2b5f3ded3a2cc12fde812fffc9755d833156ea32dd4f155bb7fc83be8c",
     "config/GR8E69/gamesettings_setplayersfinishedlevelsuccessfu.json": "3baf76798ff6aa3a4286b5c711e147b8f4fccaabb8995b095456a6cb87135675",
-    "config/GR8E69/gamesettings_setprevmissionandlevel.json": "44e3873c42f4799987398762d8c2e3caecb465604639ae50f1be38d1d36d1e3f",
     "config/GR8E69/gamesettings_validate.json": "112fdb9de71471339d701e4917ecb721e9e80836a2f5665f2bc98744ca5087eb",
     "config/GR8E69/gchw_vd_draw.json": "8240cd2ce5d0a0f00cae88ddb2fbd1c1a198a12246488f9b6cebd10604e92e3b",
     "config/GR8E69/gchw_vd_setters.json": "34856555c8f331dcd604dd04eb40e58713689ec5a0bdc6c685507364dc3fbc70",
@@ -7436,6 +7517,11 @@
     "config/GR8E69/particle_terminate.json": "a86b85ccc5b1c04cc5f96524f3f4aee0e0605b48bdb06a2997185d7dad795f87",
     "config/GR8E69/particle_tm_local_to_world.json": "8857f22743da7deaf073d151e725db0f9a853e07de836188155d521797832301",
     "config/GR8E69/particle_velocity.json": "0e01a076771a973ea3070d16303239017aecb9fe38ed3185d094fff6f62a21b9",
+    "config/GR8E69/pkgh_enablebutton.json": "327fb847811060d10c8fed7f1e60782eca254d4e7e264a9a8964bf8255979b11",
+    "config/GR8E69/pkgh_enablebutton_2.json": "63f11ecd3c566934966c972e61dfe44fe739ffa15f56adada4722132fcca1c90",
+    "config/GR8E69/pkgh_getcurrentlanguage.json": "5fb17d6aad407052dbcfb4f78af439466a170e2e0d67b6f4abb921762c44ddf5",
+    "config/GR8E69/pkgh_setgroupshowonly.json": "2f64696e6ae8bac6375943e600b37c4e7ba72b4e2c86f5485bf41971a5fd8c08",
+    "config/GR8E69/pkgh_setscript.json": "239e9edf68a9f51dd30769ca178dfe2ed50b2280a4075e7ccc13a7c808ef3f92",
     "config/GR8E69/plane_transform_intersect.json": "a9d6d8fbd00fd7c137f81a216f6b95ddb3e8b7738a241f61469e0dd7389a21c5",
     "config/GR8E69/player_accessors.json": "78bc1825debdcabaf5a9ab0a70fe1641cc05093cd95668a51e9153c9d0478c40",
     "config/GR8E69/player_actions.json": "f8b21144b77884abcbd744111a4da60e5e48c0be3ea095252c97245100ec9f61",
@@ -7500,7 +7586,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "8d10407aa377101391bd827eada42aa574c6fde3ed855f38c9b613ffea9b3a90",
+    "config/GR8E69/project.json": "803a96427d36f1d478900190bfe618c9e82b8b9bd6db2046b780eb51622cc0d2",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -8139,6 +8225,21 @@
     "config/GR8E69/shadow_ctor.json": "eb6578130fce1291c6e416d50babce9804748315e7bfe35ae0b192f3489225ba",
     "config/GR8E69/shadow_enabled.json": "50baaa0d93b7fb1707e7c75ba80764ef3968e921bf7fd9601e39836905829363",
     "config/GR8E69/shadow_init.json": "d71042b90fb79cfce1ba7a46ff752d179976bdb0f7a7d69193bd31fd0699251a",
+    "config/GR8E69/shell_beginpackagerendering.json": "5c081296524e22206a3748f0fe0e85c3ac83b9919c5f50916d73b15950025a58",
+    "config/GR8E69/shell_debugmessagequeued.json": "fc9aa9c0ad0bb0d61e15f858f602c6381f8ce78e08f87b5ccf1232d54c69c173",
+    "config/GR8E69/shell_docoopcontrollerchecks.json": "39d58b72c616753144f7c0afae17736e7aff4e73e8748a55c4cce1a5c18870f1",
+    "config/GR8E69/shell_dompcontrollerchecks.json": "bfa719b943bc766e07ed786213ca14ac9b83e55b3cb028293a236ffd98154d52",
+    "config/GR8E69/shell_draw.json": "2548080ea04710a117559003d0d56453f8d480273a379927fdcc050b3dd00ed9",
+    "config/GR8E69/shell_endpackagerendering.json": "d0e1673953a9844c34608df15c69d5559c62eecde267d42ecf4e690d2ad15714",
+    "config/GR8E69/shell_getcombinedjoypadactivemask.json": "f1e8d8545bb3444936c3a0af9c26f327db6b844b99eef66d52c5712dd2a1fcf0",
+    "config/GR8E69/shell_getdeviceindexfromcontrolmask.json": "df1cc042d5e280ddadca03199b8b45501ebe3101e66ef66b58bd813d99da22ee",
+    "config/GR8E69/shell_getnumcoopplayers.json": "8c2678f3a4b4ac9ac5b0939682222db715669d8e1124a8944270d67f9de92f3a",
+    "config/GR8E69/shell_getviewtransformation.json": "3992ce0867cc93e7433abd0c8bf7876c4d57f9722e0e96ae85575e872dd286ab",
+    "config/GR8E69/shell_hasscreen.json": "128ca7df7c41e75213762d643fd33bae86e53d426ae3e483a10b857794271c84",
+    "config/GR8E69/shell_iscoopontop.json": "90f026a8291669cd2c3ec562654120080704809fba4e809c1e3685811d07bac1",
+    "config/GR8E69/shell_playmovie.json": "7a0c29fc7fea9fc038de748a20ce58667473ce2a8ddbeca09abb193ecf71c960",
+    "config/GR8E69/shell_push.json": "2d4fc2f3ed224436060e5d9ebe9f600f667f2501678bfe579655e13f42344760",
+    "config/GR8E69/shell_resetactivecontrollerindicies.json": "4520b65b8abdf8d8b3baa1256bd9f08fcbc78443e4b4f2decb3711c48ba50cb6",
     "config/GR8E69/skybox_class.json": "6382327bdfd3308c3364c6cd96a02b3c8d1e82af96f09447f12c14cac9db21ea",
     "config/GR8E69/skybox_dtor.json": "d67d7fc8b0aebb0429903e6dcdaa65bf32a5f1930b319afc4a4bf8063f1d5e6b",
     "config/GR8E69/sn-library-source.json": "606ef80cd17599d3b7c2833a01c483622529485e2455c15ac76c975ba20507dc",
@@ -8884,6 +8985,10 @@
     "include/game/EAGLTransform.h": "c8b8d8e4397d16d893d6b080bfa5a7a1a9e4fd35bd0d98096d75f3d00e64d433",
     "include/game/Endian.h": "6f3a06aca2ed749c09949cedff932c6e9a8db1272b5393bdc9a46185a384387b",
     "include/game/FEHash.h": "5d2777480e94ab65796f9850193722c7585a884299d6b68b610c5b3ce6a08757",
+    "include/game/FEngLists.h": "84f30ae7c68a4efbdd062bb4053b3a86a0aa4ba0c4e8376abb3304c3c6a267cb",
+    "include/game/FEngObjects.h": "1fdc64abf31054c97354a37bc8e2d2f6bb2b6812859b5041d4ecef088d1b26e1",
+    "include/game/FEngStrings.h": "3fb38fb321893a9cc7e83396ced3500fb9dfbf859a210f4e470c2961e735cc86",
+    "include/game/FEngine.h": "4169a997f1a720bfc37d1fb7cc2e0132ae1366b8b43167928567cb9b76c8feff",
     "include/game/Fader.h": "5e6a829b80a545618de960a1fcb77e1c59c1ea1ba2f2e0fee87d54c2e7c73143",
     "include/game/Fiber.h": "86a5b88a4e003f050e9a365b1a5c582c8d0163426b18fff783e17a465ddbb045",
     "include/game/FlexProp.h": "d4b492f690451a27c03371aa71637f8b6a4109c07ed8ba55de69ae5f256414ff",
@@ -8891,8 +8996,8 @@
     "include/game/Fog.h": "30a37f01f3f665d1f9b3b0a5ef81ea098194595159c5ff794797541c6bf325c0",
     "include/game/Font.h": "aac3ae3971b2a09911276f89091539c78c3d22be4046eca5d1e65a39c2f82e6b",
     "include/game/Frustum.h": "8b459091729087e5119c39887634fd28825b36e40b7a0efdf9a40c2cf58741fe",
-    "include/game/GameSettings.h": "6b5ac7cd1bdc4ee3677cb697bdfdc9dc44259cc077320533b0bb6de2c3f18818",
-    "include/game/GameSettingsViews.h": "daf4a7107f3e7027773ccedbd05e2e2c0a49229fc912e54f973475be30fc98a3",
+    "include/game/GameSettings.h": "e2ca45c4d2866082d832fbd05982db5eac54cf00f102b3b53a45b38b5a1aabe1",
+    "include/game/GameSettingsViews.h": "a55550e5c7f8fc35bd8db34da42fa8ee804c7d81612634677308a869ec9eb474",
     "include/game/GrenadeResponse.h": "a26075782a75877dd754799cb73d6fe55e2a6c6597676869bb956ba8cdb2bed4",
     "include/game/HeadsUpDisplay.h": "23f906aea051f1148504c63cb883c629affb72f857288563152b2e49ad89ff84",
     "include/game/HearingVolume.h": "76a0cf1b1778be270e3b56ac1143a43032c1c3ef9643d510e277c89b7c8757c2",
@@ -8936,6 +9041,7 @@
     "include/game/ScriptStartup.h": "ca298798406d593bc47296e17ca3c8778cde7e69bb465f05962cc05fc2eb40cc",
     "include/game/ScriptTimers.h": "a81f3399ff20908469a289229ed0f0aae2c28aa3a9889629e62049e8bb16705b",
     "include/game/Shell.h": "db84b21f4281a41ca239238d55dbbd4531255dccebe64ad20d0edbc301e71e13",
+    "include/game/ShellManager.h": "cc0966dbc389a1c370120249fe74897699ddfbf35e450e63d91f90e475a2d613",
     "include/game/SkyBox.h": "810947bbc2ecf7cb4d69dfa350c055b05d446c04b904abfadaf4828c7be01a55",
     "include/game/SoundAmbience.h": "a8ffdd3a842aa24e0d8511216e05fd27625c8c2e96c7db19d7557afa729b1fb5",
     "include/game/SoundEntryPool.h": "3766b906852ceb49985a2e376f46077c2e739f8dc17ca0f16a47b60b79eb0d59",
@@ -9751,9 +9857,43 @@
     "src/flexprop/UnloadProperties.cpp": "7546bb039937779365ae93f9ae2f85382be45012af5f946ae74235f4aa6d8946",
     "src/flexprop/database_internal.h": "ac7ab80c8f21dcda7bda4ed5ea88929358f9e58c47f693b6b44a2a84015e6489",
     "src/flexprop/matrix.cpp": "96805490c5ab57a3e2dc9005c54d3988a1c734e4c824c093e931ef3717dfa779",
+    "src/frontend/fe_addnode.cpp": "e5a7700160270368d89647b87a32600c245ce474d76da00d3599dbf959d19f7b",
+    "src/frontend/fe_addpackage.cpp": "c3c23bed61c4b56a2d5b9d52edb9c58cbfaf4c3d484ae0005705689bb3d636f4",
+    "src/frontend/fe_allocate.cpp": "c424db0b2f3cfb008e581b2d928aee9368b2cad624d9c83be2a9fd0ce307a6cf",
+    "src/frontend/fe_fecolorul.cpp": "60babb7e564c90ddcc3bab61f4dc7d08b2628a8b541bffdf3f6496ef45da74e6",
+    "src/frontend/fe_fejoypad.cpp": "38ec9c7044103dfb5d54166d752a624ccd1e3a62e6b760092fa2108c58cf26dc",
+    "src/frontend/fe_femouse.cpp": "904d76ad1e545a69713e7254b036739fc8af05b7ec9c4acc2ca05f701e84818f",
+    "src/frontend/fe_fewidestring.cpp": "f7761c00db804aa4a8e7de7bef594fa871556235cd44ae89187ff25d47b93a57",
+    "src/frontend/fe_findchild.cpp": "3006814fc242a6cc26f470caaaa3445e08e4abc1ff9947055aff2284f9c496a0",
+    "src/frontend/fe_generateescapesequence.cpp": "f72477ed5288e84ce4e22224343f50ffc3e549510881941258c322e23b3b390a",
+    "src/frontend/fe_referencelist.cpp": "b094ce25115a8dca044742a73143575cd6106c1cfd4b742ab59a9c90b1928578",
+    "src/frontend/fengine_addtoidlelist.cpp": "79853aec42c20268dd2b09ca07ad06ab00180016046f55219a96e8edb270e31f",
+    "src/frontend/fengine_clearpackagemarkers.cpp": "c53ffb148f7e384281510157164b9264b6f863c833dab85e4a2aafd7caded283",
+    "src/frontend/fengine_recordlastpackagebutton.cpp": "def967d88c4b012513e6cc2e0fc3eccd576394e000086eae084dd306c86e1719",
+    "src/frontend/fengine_resetjoypad.cpp": "84fabc3c164ba48aaccdc0e354b3d45757c69a94368f07955ed12383c8aa93e8",
     "src/frontend/hash.cpp": "6d1834f84056ea091ae722973283ab6edc0b53f73938a4866d969db56d62d55b",
+    "src/frontend/pkgh_enablebutton.cpp": "5ff3dc80fc2a45f9c12efb01442fd7eae7730f036da08cec041446b4c4a5b566",
+    "src/frontend/pkgh_enablebutton_2.cpp": "49b4ab2f5b0fdaaf0add80a0b6a9526d2fd81e3a88f56388f8623727ef523c1f",
+    "src/frontend/pkgh_getcurrentlanguage.cpp": "19ded70a2c1e7173224cad72c65933edab227e4b795da00640f1eb23c126a8b0",
+    "src/frontend/pkgh_setgroupshowonly.cpp": "db4a682b2702aabbef0ffee0847e9a85e0624901c595a3f9d5db9d0fccd80c11",
+    "src/frontend/pkgh_setscript.cpp": "3353769869623bc033317a96e7408a759deea868a87ad900148cbf53b8e4b603",
     "src/frontend/popup_message.cpp": "6b62ed9879ae5d79a68fa9fbbe750817b3d737f27ccc04be2c671d1fc1eb39af",
     "src/frontend/popup_message_dtor.cpp": "b0fa8b929b9341635239ac8359ca62485761cb69af3ae611c660b69221771b0f",
+    "src/frontend/shell_beginpackagerendering.cpp": "c22a7a2acfc1cc0fa8d4263951398625495d55a845cc332c987d244c40b5fb85",
+    "src/frontend/shell_debugmessagequeued.cpp": "66c31a28249ee686b60e4df3ae9ffadb475598316b50da68a3f4549000b990ab",
+    "src/frontend/shell_docoopcontrollerchecks.cpp": "355c7bcd0330a31a89bc0b7c86e46d99ef20d85ebdbd9aff8f9d79275384c941",
+    "src/frontend/shell_dompcontrollerchecks.cpp": "b42abda4bfbe64a0faf5f00cbc1d4752a4fe3636f6619889f13134bed10099b1",
+    "src/frontend/shell_draw.cpp": "c5d616a1840c7bfc8775cf206feff3056cc20ed4f278d9b3b2256e2d6df23ff2",
+    "src/frontend/shell_endpackagerendering.cpp": "47cf0973a81235190ae2d4b82357dbd79558e6881f8d04ce17ebe5c03e4d067b",
+    "src/frontend/shell_getcombinedjoypadactivemask.cpp": "38edeb34f8d3396cc636ed863d03bbdb8c81e4dcdff8cc15dbf9ec8afd913e26",
+    "src/frontend/shell_getdeviceindexfromcontrolmask.cpp": "53d4afa2c6798a841218d00e035e8691571324d637bf6a7bcbe97d847bc1adb6",
+    "src/frontend/shell_getnumcoopplayers.cpp": "f39c8446399d07fa0425074c2122671c3241b28fbd7f5fb6a098220b283d49e1",
+    "src/frontend/shell_getviewtransformation.cpp": "2167d1861f83a697e8c59946f51111d12335e3ab157d8baf15dfd8e4f11bd4c5",
+    "src/frontend/shell_hasscreen.cpp": "7c5d3731f92a9f6c968a06d663c15b3a88cc105e81588b0b547e30d51971d505",
+    "src/frontend/shell_iscoopontop.cpp": "91c16978b7d29178527938763419c0dab512e05569b796381c5bcb110925452f",
+    "src/frontend/shell_playmovie.cpp": "4315dfb7828d32ae8ee03af7e20e6eec6d92c30839b8664058a8417d615154de",
+    "src/frontend/shell_push.cpp": "41af18cdf93a4eb2b21ae2620ec77a7ff9cc690f93699907faa8b433fac08c2e",
+    "src/frontend/shell_resetactivecontrollerindicies.cpp": "05109f2ff9baf09f9eb2f1d634cdcdb06ac64a5833badfcd3510a9d02533d6d7",
     "src/frontend/uppercase.cpp": "58d80513a4f76209e1895c6943d7e05837625be3bd2687efe32159afd23f70dd",
     "src/frontend/usermessages_access.cpp": "41716b6c646c0838ec302212e35f8ece4f43914f5a10cbdd6fec31ad50f4081a",
     "src/frontend/usermessages_lifetime.cpp": "250e5edf14476401ba9fd4c26cd2a8fb96303b302f127109a29647323be7b017",
@@ -10852,16 +10992,15 @@
     "src/script/validation_build.cpp": "89251f21f21080d27633ad20ea624b1a8702565a91ab36e5f809b6e5e0ae4255",
     "src/script/vibration_partial.cpp": "29c765c0f143dab8c71ddb417edde951f88a66595192f026be5920461c5b9ec6",
     "src/shell/gamesettings_activatecheatnamed_hugearms.cpp": "7cfb523e1b05e92df9fb6c89c91a273875607a5aca10cd0b22f36aa5f7163a51",
+    "src/shell/gamesettings_cmoviesettings.cpp": "a67aef7a0748496f82fae32aee5466aea0e196b55436d205434a850e6a9b8cff",
     "src/shell/gamesettings_getifcurrentweaponselectable.cpp": "434c0b3b9cfaf0916814176410613e97fb800423c68368621ea074b30e7cb8df",
-    "src/shell/gamesettings_getprofileindexfromplayerid.cpp": "1ca6be741becd97d2b45907f68b313f59b8867469bf76374092832a0433d8055",
+    "src/shell/gamesettings_getprofileindexfromplayerid.cpp": "d9837a83f65ece3bcdb241df932331666cac08b13c5394fd83c9cfd92540636f",
     "src/shell/gamesettings_getsavedata.cpp": "44f7b097052aa1b13f3593b4031f4f9b8a5fd8bf91ddaf4b9966a52c006febd8",
     "src/shell/gamesettings_getsoundmodevalue.cpp": "f27941e11c076eae147ebf71bdc5c48e84d322cd1d7ad01d8ef8b2de4c5feb76",
     "src/shell/gamesettings_hasbeenunlocked.cpp": "84e160db9999b76d57a536e655e36379913c56eb1fcf9e7ff6d361346c875c12",
     "src/shell/gamesettings_hasmedal.cpp": "0bc0b5e44584cf2edce97562c438719fc253bf23ef2ed73185cf2b64e05a59d5",
     "src/shell/gamesettings_inithudfromoptions.cpp": "70cee48d5031229230296c59e8680959a27d456c71f8bde1b2dce405c433ff31",
-    "src/shell/gamesettings_invalidateslotbackup.cpp": "64f6395713dc5e3edef69f2262a5d9d1ab4ae9308339c62c3799f5abeb8fba26",
-    "src/shell/gamesettings_reset.cpp": "5d4747695bb170e2f4b2b156e7768ec26d2b19f748f0efc5d771e2f486a3b974",
-    "src/shell/gamesettings_resetcurrentlevelstats.cpp": "02656b7219d8331abca3dd90f849bed1d77446eb698b77415361763b31f17468",
+    "src/shell/gamesettings_reset.cpp": "d27598eb8b8f1740ec7bbe2372ac45ef7deb3ed21be6f5ce78f3309e3cdc1876",
     "src/shell/gamesettings_resetleveltimer.cpp": "3aacffde4bfe0a26b631fa34c1be2e1413aa762d8403361640209384cbced3e8",
     "src/shell/gamesettings_restorelevelaudio.cpp": "74e18a579e429e1ea821af16373cb68fff4e2584ff7a5591b71490da65dc5781",
     "src/shell/gamesettings_restoresavedata.cpp": "65ab6126d5c0d687f9123abb9d8cb36e791830d81438bd98beaff7ff72adbf8c",
@@ -10870,7 +11009,6 @@
     "src/shell/gamesettings_serializingin.cpp": "4701840686e449203078ef132deadecbb2488bc110b9767e6a3b732e452e54a1",
     "src/shell/gamesettings_setcontrollerbuttons.cpp": "7881abe5b8b8ab47de752f3a24493462d76696951ac75362b548e2d7443742e5",
     "src/shell/gamesettings_setplayersfinishedlevelsuccessfu.cpp": "480530acffcf042dd9042d9c14e1f7cdc03d408a7bb1ec5169dd1f4477074938",
-    "src/shell/gamesettings_setprevmissionandlevel.cpp": "cd2ed565b9b810b91c11e49a015e9ad3457780d185357a5002b7fbc81760f6fb",
     "src/shell/gamesettings_validate.cpp": "e0d8f6c1c427bd389ec1bbf26dd2267be784518b084bed317701aaac5d9e1633",
     "src/shell/rcmp_alloc.cpp": "ea747ae393fea94d2f4e761be754f711c91a8fd0904a45dc0142c8f5de43a8bf",
     "src/shell/static_draw.cpp": "5c31cd87db7e8acba89ef9c6e6878e17ee2e38e1e74a2569d004e19d66421be5",
@@ -52169,78 +52307,6 @@
       "linked_sha256": "6d03495cdf998a7698873468fb211dc3a55be5847d463ad2990e718e42707160"
     },
     {
-      "id": "gamesettings_reset",
-      "category": "reconstructed_game",
-      "functions": 1,
-      "code_bytes": 108,
-      "compiler_family": "ProDG",
-      "compiler_version": "3.8.1",
-      "compiler_flags": [
-        "-O2",
-        "-G0",
-        "-fno-exceptions",
-        "-fno-implicit-templates"
-      ],
-      "strip_unused": false,
-      "discarded_functions": [],
-      "object_sha256": "a4bbaff010ebdd29a699ac98a05a263c45c7a6d756d62acb8f77d49cd5130e24",
-      "linked_sha256": "dc1545076cdc2c9ec48428fcaf781132c9eabb25433b3456ee0419973d431f22"
-    },
-    {
-      "id": "gamesettings_invalidateslotbackup",
-      "category": "reconstructed_game",
-      "functions": 1,
-      "code_bytes": 12,
-      "compiler_family": "ProDG",
-      "compiler_version": "3.8.1",
-      "compiler_flags": [
-        "-O2",
-        "-G0",
-        "-fno-exceptions",
-        "-fno-implicit-templates"
-      ],
-      "strip_unused": false,
-      "discarded_functions": [],
-      "object_sha256": "b56281422c6a116f33da5fe18729ab9118cf0c4fe733f37baecb65c00a0861bd",
-      "linked_sha256": "63f3dc096c8c5e0e1c4dc4adf0f3e877facf338aee7d186db98de2b470d00283"
-    },
-    {
-      "id": "gamesettings_setprevmissionandlevel",
-      "category": "reconstructed_game",
-      "functions": 3,
-      "code_bytes": 228,
-      "compiler_family": "ProDG",
-      "compiler_version": "3.8.1",
-      "compiler_flags": [
-        "-O2",
-        "-G0",
-        "-fno-exceptions",
-        "-fno-implicit-templates"
-      ],
-      "strip_unused": false,
-      "discarded_functions": [],
-      "object_sha256": "edff2687c44165b2e595673db7f3769b4d4322be87343e1b8eebf317ae5a5f41",
-      "linked_sha256": "ac5a3f5c4d6cc45fcab5edd17ae4df2fc344f4de5d3632b87cb4b562a3d3f0ae"
-    },
-    {
-      "id": "gamesettings_resetcurrentlevelstats",
-      "category": "reconstructed_game",
-      "functions": 6,
-      "code_bytes": 280,
-      "compiler_family": "ProDG",
-      "compiler_version": "3.8.1",
-      "compiler_flags": [
-        "-O2",
-        "-G0",
-        "-fno-exceptions",
-        "-fno-implicit-templates"
-      ],
-      "strip_unused": false,
-      "discarded_functions": [],
-      "object_sha256": "6ffe5a45534b6cf6db08c1478c189fd738b0d6d9a4733a03a7135b237a770329",
-      "linked_sha256": "2bb3037c77d4a42e66268a496bd2862849e3359b13391082851e558dabec3bb6"
-    },
-    {
       "id": "gamesettings_setplayersfinishedlevelsuccessfu",
       "category": "reconstructed_game",
       "functions": 8,
@@ -53302,6 +53368,654 @@
       "discarded_functions": [],
       "object_sha256": "2f40e5bd9eb4001daca1482ab3b42a93eb5c6ff985de2dc42c5b0bbf25bf498f",
       "linked_sha256": "95c5ef8879f733bc91ec5db7db1d7c6738062d1097ccfcf6afba7f4da80fad38"
+    },
+    {
+      "id": "fe_fecolorul",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 256,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "cae302bf97310b3b4b4df5ed73981211839c1d49cc73295bb0064eb3f0acf476",
+      "linked_sha256": "fd1c4c1740488f760f52defb92d87426a612838a2dcfd4da4bd3357fb1b082b2"
+    },
+    {
+      "id": "fe_findchild",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 112,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "843925ba30ee574282f812a49486f5bcd487d73cf44a4ddeedaa8c2c2be576d6",
+      "linked_sha256": "e06b9f40fe1ed3d4cf35f942a8a563b6f592265691ac4423c8e46dc42b80662b"
+    },
+    {
+      "id": "fe_fejoypad",
+      "category": "reconstructed_game",
+      "functions": 8,
+      "code_bytes": 484,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "2d4feaf1f53bc5b1a0564fc5f40a65b53ec225deeac769b5e1a435507a9efd20",
+      "linked_sha256": "c56cc92689e25f04c782cb72a01a5355c12ea2844b8b90453d3d29d8bce9eb10"
+    },
+    {
+      "id": "fe_addnode",
+      "category": "reconstructed_game",
+      "functions": 6,
+      "code_bytes": 532,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "b9d2f186c0746531a811ce348df1d13e9712bb517488d838df69deb2cbec5ac8",
+      "linked_sha256": "b1e9ea73a9bf80f5a31d519a7e28872a70387dfbed2319a900ee928ea7f35fa2"
+    },
+    {
+      "id": "fe_femouse",
+      "category": "reconstructed_game",
+      "functions": 7,
+      "code_bytes": 476,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "068d8716b6c6b48e8dff1905834ff8716400c78fe411a357a776e1004deb23cb",
+      "linked_sha256": "45b4d55d94cd3675258fc7b6ff706d17e67636f11b671e60136c56efc090c891"
+    },
+    {
+      "id": "fe_allocate",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 352,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "acb424d523ce6d24b6c0d9931ed56aed06b5fd08e029b317963a9a7f1f4eaa5a",
+      "linked_sha256": "b04cb9620369474e59eb492c2d39c59374fd8900a54d130dc5896ef5d6320f19"
+    },
+    {
+      "id": "fengine_resetjoypad",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 172,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "a46dcd55f17fb40314ca5a538a0bdc6ca6fc6960d765b7dcbc2a07263baef92e",
+      "linked_sha256": "bbb970a81ed1b443fafe862dbb34ba18fabe9918487706a4f1ce7c01c96359fd"
+    },
+    {
+      "id": "fengine_addtoidlelist",
+      "category": "reconstructed_game",
+      "functions": 9,
+      "code_bytes": 472,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "a350276f6501b7395a2f7764015836e43d1862a66c3e18245be812470e147a91",
+      "linked_sha256": "291c31fe859cee25fe7d74504e63d13a615869f32bc284c5b1b6e50f886bbaba"
+    },
+    {
+      "id": "fengine_recordlastpackagebutton",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 160,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "221afcc1abfc67afcd51074bee99f111c4406e8f9774146c830e5a31f50942af",
+      "linked_sha256": "c798c7c88eec2a67a06b1105b9aa4ff22cbae6b9e83a615363d3aadf5ea223cd"
+    },
+    {
+      "id": "fengine_clearpackagemarkers",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 40,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "57ef6300a74b7d9ed1181f89214139f2bf91303e31052b6e6592e1ee30a087cb",
+      "linked_sha256": "7d1c8476b3951c9e0c32959832cf8905460a72de06db3e420d2bcc1249ef4759"
+    },
+    {
+      "id": "fe_addpackage",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 404,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "302ac42eed9c3814c13570af4c6b87c6c8c64991de7c9211ff3585ae42df0494",
+      "linked_sha256": "aefdea027dba0a24fbd3ff26b39f450cd8729826d73d861ff12455c423d8b14d"
+    },
+    {
+      "id": "fe_referencelist",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 496,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "a6385b2140bbf10bad63aae9850e8622db5401867084a63260e68c1643d5e9c9",
+      "linked_sha256": "98d243bbc36c1abb088f2526464317f55f884a71e14429f3f2540d10ccfe9686"
+    },
+    {
+      "id": "fe_generateescapesequence",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 140,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "148efc0a4cb2e41b84d624df5d10eae1c7d93274d7d9ed810b6e2a784239a3fa",
+      "linked_sha256": "4d26410d9247eda71f4445a446774be70a1c96c2333a517e687a9dfc8fd781b6"
+    },
+    {
+      "id": "fe_fewidestring",
+      "category": "reconstructed_game",
+      "functions": 12,
+      "code_bytes": 1208,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "fbcfbf51f233f044c5c30b17e930cadcaef494d13bcf1a95ede8185331bf48c9",
+      "linked_sha256": "29401aabb2c465dbb798efc0f895f328e795960b638eb5335809c03bf0d0c38d"
+    },
+    {
+      "id": "gamesettings_reset",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 620,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "f428da6380991e8ddd3af9a6cc1176774cbc43e8609bdb6ef8f7fb766e1d4eba",
+      "linked_sha256": "63f15bd688cf1bd8065cec6e00ddb573f202c4fd9b9bf5bbb5b4d81ac2f229ea"
+    },
+    {
+      "id": "gamesettings_cmoviesettings",
+      "category": "reconstructed_game",
+      "functions": 20,
+      "code_bytes": 3076,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "2a378e6baa580755d16c6700adfb4e4ccf7c0889e897502ee96385c1ea9db7de",
+      "linked_sha256": "8809a7eaf7759e62dea1866dfe482892300ed41ec61a883cac517e6a2c6cae84"
+    },
+    {
+      "id": "pkgh_enablebutton",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 224,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "7004d9245d587235a0528ea7304376d047c4a75a8d50b30eab5f6ad703db6e03",
+      "linked_sha256": "cbe5149f67358460fa8a249d0706978cd7943560dd1fe6ec6911b0a5a133b3c6"
+    },
+    {
+      "id": "pkgh_enablebutton_2",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 192,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "4122efeb515d678177d57043fef3323e0e032149bab6a0c3b5a26bd2d970d104",
+      "linked_sha256": "0fc3ed431195a86679254c5ac6ff1a0aa9b2cd0337c893886d6600f95e2374f8"
+    },
+    {
+      "id": "pkgh_setscript",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 240,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "22720f9564edacddb8c88370ff7da00c12e0ebbc8209d4c032f8f9d9b1775829",
+      "linked_sha256": "afb7a54d13e925361728bc5b32ac33cb5007b76fcd8ee4414363df6ecc103dd3"
+    },
+    {
+      "id": "pkgh_getcurrentlanguage",
+      "category": "reconstructed_game",
+      "functions": 6,
+      "code_bytes": 588,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "a2fa9d7fc49c82b4183abb93dbed21427fb74ea80a76145145b2cdfe00fdc3ce",
+      "linked_sha256": "04c5f85888596fdf944b074718e728c147bb97165a6c6214cf19fe6fb50f6560"
+    },
+    {
+      "id": "pkgh_setgroupshowonly",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 204,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "fd26c29a8291a2f9e32d3a5c8bd2f617e4d1afbed4af68c69f8ae131b360da80",
+      "linked_sha256": "37939a1551e25d88e427b90747a0617edadcfc629e8e235e482c11f19292cdb3"
+    },
+    {
+      "id": "shell_draw",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 168,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e6436fca6079a3b3656c909019189420c557ee0d1d1e16abd58c48e3ab4e7b1c",
+      "linked_sha256": "eda48b163454ccf9083cd3c7d7b0167e497ed569983a31662d0a6192bcab2118"
+    },
+    {
+      "id": "shell_beginpackagerendering",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 4,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "515b7c3c2e82acd168fb90cd8c3c92d51aea06922d7b84f0a68355c62354cd73",
+      "linked_sha256": "4c6b2ce3f5b64007a378e13e7dfd4f0141c71f5a4d5404486eca138c91f8ff3c"
+    },
+    {
+      "id": "shell_endpackagerendering",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 4,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "228beeaee95c2673a6b6f3cf6ecc7bbe0d82f365274bd62bcaec1ac73d584885",
+      "linked_sha256": "49f7243c2aae3ec96ba5caaf5dfc2ea8d075b135667c3315de668f05489f070b"
+    },
+    {
+      "id": "shell_getviewtransformation",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 36,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "94e3481a03542a37a05d0aa183eeec5d503a9ad10fd47ca52239f135e79c539e",
+      "linked_sha256": "55a46e3e1831e5d2a067cb9bbda97fedcaf65a307a35feb9836d21b2a8dbc9bb"
+    },
+    {
+      "id": "shell_getcombinedjoypadactivemask",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 64,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "8af7edfb9b5273373e504d0d8b0f1ffd2599737c23808b97e9f54f53814e3bab",
+      "linked_sha256": "5bd46e0cffa0f9d04efd55db5b8431bf968b9cdb304c6b5994044b0844f590ac"
+    },
+    {
+      "id": "shell_playmovie",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 232,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "638f1fc14674289a1055b97a543c6a25c0b5f17841509c74da8958b7b83af508",
+      "linked_sha256": "78db1ec7908e12b2abee3112b5fc5128998114a616c7855c44458b6e582c2d12"
+    },
+    {
+      "id": "shell_debugmessagequeued",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 112,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "fd6803c43d7fea5de2a88a4b8093c6dafca08b4b7697371eac14a3a3c01d8c3d",
+      "linked_sha256": "0796a7a63b15f95858a10323ccaa1d4868d2d5f64d3eb9eae42877e71ae29327"
+    },
+    {
+      "id": "shell_hasscreen",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 192,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "db626abc469d61b030137f58a2d16edfc4730d6f421553fc309def9fb913aeaa",
+      "linked_sha256": "451b711e4c4c80f455c78136691905042825989198858fc63ea7f20b5ab44b58"
+    },
+    {
+      "id": "shell_push",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 88,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "8d812e0b29be8ce1ecdb60a56da69a93f072ea6f7010fb035080cf99d011e7c5",
+      "linked_sha256": "386fcc45f3d995312669115fdc871c20c754b11158779a8593ab24960559e762"
+    },
+    {
+      "id": "shell_dompcontrollerchecks",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 4,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "8e3d6800d149e70c9c6f22ea74a84dd4c7b3648c2ff4db80bdc9b25e1d09eb5c",
+      "linked_sha256": "52f7ab5726c9c75ad67af5655d3a942fdb9e979bfe1433fea6fc0148ce58d327"
+    },
+    {
+      "id": "shell_resetactivecontrollerindicies",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 32,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "01f28a20a05dd941af619e621f2ba5f22cba516dc602973654fe0fa5e22a5f9a",
+      "linked_sha256": "ac69e2e26059fe2116d35b423ae4f778adf20b03d599d67360cf6d8e11969dc9"
+    },
+    {
+      "id": "shell_docoopcontrollerchecks",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 4,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "c938d8aaeb16b7b66296f3d562dc14491532e88b6166af2c26df0606ae599cc7",
+      "linked_sha256": "d67c805ee7d681377c519f1e8f6b5e1607f058279422cd0245092acfd1636a64"
+    },
+    {
+      "id": "shell_iscoopontop",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 92,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e85de39d1ad44b9e817446dfec6a523b9a38cf7207c55b2c6a8d6707c148feba",
+      "linked_sha256": "c20b97970e4645e987127d8bfd1003ea53c2e7fa876c767afd7d4b02d5d0d438"
+    },
+    {
+      "id": "shell_getdeviceindexfromcontrolmask",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 116,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "a529310c97d9ef72ee3769886ce04bb48414ffcb81b8f89cfd18a48c67e3e200",
+      "linked_sha256": "d2e123827ef5e6d9250262da314b37b37c6db20cf456dd60b5329d408f6a7331"
+    },
+    {
+      "id": "shell_getnumcoopplayers",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 48,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "58645e45decc5c6b41cc894bbb238ccc2e32e0a5ec7e493d12aa91531b8ecd27",
+      "linked_sha256": "d60ee867e43e1625602ce0ed63318830731d35a37d2a891eb64d78ab7a960442"
     }
   ],
   "code_map": {
@@ -53665,92 +54379,11 @@
             "kind": "function",
             "name": "__7FEGroupRC7FEGroupbT2",
             "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80047b38",
-            "size": 52,
-            "kind": "function",
-            "name": "FindChild__C7FEGroupUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80047b6c",
-            "size": 60,
-            "kind": "function",
-            "name": "FindChild__C7FEGroupPCc",
-            "evidence": "adjacent-compiler-markers"
           }
         ],
         "marker_interval": [
           "0x80047a7c",
           "0x80047ba8"
-        ]
-      },
-      {
-        "name": "Unmatched files/FEJoyPad.cpp [inferred file group]",
-        "file_record": 28,
-        "file_name": "FEJoyPad.cpp",
-        "ranges": [
-          {
-            "address": "0x80047ba8",
-            "size": 48,
-            "kind": "function",
-            "name": "__8FEJoyPad",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80047bd8",
-            "size": 40,
-            "kind": "function",
-            "name": "Reset__8FEJoyPad",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80047c00",
-            "size": 88,
-            "kind": "function",
-            "name": "Update__8FEJoyPadUlUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80047c58",
-            "size": 52,
-            "kind": "function",
-            "name": "WasPressed__8FEJoyPadUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80047c8c",
-            "size": 48,
-            "kind": "function",
-            "name": "WasHeld__8FEJoyPadUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80047cbc",
-            "size": 76,
-            "kind": "function",
-            "name": "HeldFor__8FEJoyPadUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80047d08",
-            "size": 48,
-            "kind": "function",
-            "name": "WasReleased__8FEJoyPadUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80047d38",
-            "size": 84,
-            "kind": "function",
-            "name": "DecrementHold__8FEJoyPadUlUl",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x80047ba8",
-          "0x80047d8c"
         ]
       },
       {
@@ -53984,48 +54617,6 @@
             "size": 144,
             "kind": "function",
             "name": "SetName__6FENodePCc",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80049790",
-            "size": 108,
-            "kind": "function",
-            "name": "AddNode__9FEMinListP9FEMinNodeT1",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800497fc",
-            "size": 124,
-            "kind": "function",
-            "name": "RemNode__9FEMinListP9FEMinNode",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80049878",
-            "size": 60,
-            "kind": "function",
-            "name": "RemHead__9FEMinList",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800498b4",
-            "size": 52,
-            "kind": "function",
-            "name": "FindNode__C9FEMinListUl",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800498e8",
-            "size": 152,
-            "kind": "function",
-            "name": "FindNode__C6FEListPCcP6FENode",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80049980",
-            "size": 36,
-            "kind": "function",
-            "name": "FindNode__C6FEListPCc",
             "evidence": "unknown-file"
           }
         ]
@@ -54505,98 +55096,6 @@
         ]
       },
       {
-        "name": "Unmatched files/FEMsgTargetList.cpp [inferred file group]",
-        "file_record": 41,
-        "file_name": "FEMsgTargetList.cpp",
-        "ranges": [
-          {
-            "address": "0x8004c584",
-            "size": 188,
-            "kind": "function",
-            "name": "Allocate__15FEMsgTargetListUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004c640",
-            "size": 92,
-            "kind": "function",
-            "name": "AppendTarget__15FEMsgTargetListP8FEObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004c69c",
-            "size": 72,
-            "kind": "function",
-            "name": "GetMessageTargets__9FEPackageUl",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x8004c584",
-          "0x8004c6e4"
-        ]
-      },
-      {
-        "name": "Unmatched files/FEMouse.cpp [inferred file group]",
-        "file_record": 42,
-        "file_name": "FEMouse.cpp",
-        "ranges": [
-          {
-            "address": "0x8004c6e4",
-            "size": 48,
-            "kind": "function",
-            "name": "__7FEMouse",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004c714",
-            "size": 48,
-            "kind": "function",
-            "name": "Reset__7FEMouse",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004c744",
-            "size": 160,
-            "kind": "function",
-            "name": "Update__7FEMouseR11FEMouseInfoUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004c7e4",
-            "size": 52,
-            "kind": "function",
-            "name": "WasPressed__7FEMouseUs",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004c818",
-            "size": 48,
-            "kind": "function",
-            "name": "WasHeld__7FEMouseUs",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004c848",
-            "size": 72,
-            "kind": "function",
-            "name": "HeldFor__7FEMouseUs",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004c890",
-            "size": 48,
-            "kind": "function",
-            "name": "WasReleased__7FEMouseUs",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x8004c6e4",
-          "0x8004c8c0"
-        ]
-      },
-      {
         "name": "Unmatched files/FEngine.cpp [inferred file group]",
         "file_record": 43,
         "file_name": "FEngine.cpp",
@@ -54630,27 +55129,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8004cd48",
-            "size": 68,
-            "kind": "function",
-            "name": "ResetJoyPad__7FEngine",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004cd8c",
-            "size": 64,
-            "kind": "function",
-            "name": "GetCombinedJoyPadActiveMask__C7FEngine",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004cdcc",
-            "size": 40,
-            "kind": "function",
-            "name": "SetExecution__7FEngineb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8004cdf4",
             "size": 132,
             "kind": "function",
@@ -54676,69 +55154,6 @@
             "size": 460,
             "kind": "function",
             "name": "PushPackage__7FEnginePCcUcUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004d2a8",
-            "size": 44,
-            "kind": "function",
-            "name": "AddToIdleList__7FEngineP9FEPackage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004d2d4",
-            "size": 36,
-            "kind": "function",
-            "name": "FindIdlePackage__C7FEnginePCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004d2f8",
-            "size": 8,
-            "kind": "function",
-            "name": "GetFirstLibrary__C7FEngine",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004d300",
-            "size": 44,
-            "kind": "function",
-            "name": "AddToLibraryList__7FEngineP9FEPackage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004d32c",
-            "size": 36,
-            "kind": "function",
-            "name": "RemoveFromLibraryList__7FEngineP9FEPackage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004d350",
-            "size": 96,
-            "kind": "function",
-            "name": "FindLibraryPackage__C7FEngineUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004d3b0",
-            "size": 128,
-            "kind": "function",
-            "name": "FindObject__C7FEngineUlPCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004d430",
-            "size": 68,
-            "kind": "function",
-            "name": "FindObject__C7FEnginePCcT1",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004d474",
-            "size": 12,
-            "kind": "function",
-            "name": "StartCheckMovieDemoScreen__7FEngine",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -54882,20 +55297,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8004fe2c",
-            "size": 112,
-            "kind": "function",
-            "name": "RecordLastPackageButton__7FEngineUlUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004fe9c",
-            "size": 48,
-            "kind": "function",
-            "name": "RecallLastPackageButton__7FEngineUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8004fecc",
             "size": 80,
             "kind": "function",
@@ -54907,13 +55308,6 @@
             "size": 48,
             "kind": "function",
             "name": "RecallPackageMarker__7FEngine",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004ff4c",
-            "size": 40,
-            "kind": "function",
-            "name": "ClearPackageMarkers__7FEngine",
             "evidence": "adjacent-compiler-markers"
           }
         ],
@@ -55232,52 +55626,6 @@
         ]
       },
       {
-        "name": "Unmatched files/FEPackageList.cpp [inferred file group]",
-        "file_record": 46,
-        "file_name": "FEPackageList.cpp",
-        "ranges": [
-          {
-            "address": "0x80052044",
-            "size": 88,
-            "kind": "function",
-            "name": "AddPackage__13FEPackageListP9FEPackage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8005209c",
-            "size": 144,
-            "kind": "function",
-            "name": "FindPackage__C13FEPackageListPCcUc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8005212c",
-            "size": 48,
-            "kind": "function",
-            "name": "FindPackage__C13FEPackageListUc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8005215c",
-            "size": 80,
-            "kind": "function",
-            "name": "RemovePackage__13FEPackageListP9FEPackage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800521ac",
-            "size": 44,
-            "kind": "function",
-            "name": "ReplaceParentLinks__13FEPackageListPC9FEPackageT1",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x80052044",
-          "0x800521d8"
-        ]
-      },
-      {
         "name": "Unmatched files/FEPackageReader.cpp [inferred file group]",
         "file_record": 47,
         "file_name": "FEPackageReader.cpp",
@@ -55447,52 +55795,6 @@
         "marker_interval": [
           "0x800521d8",
           "0x80055018"
-        ]
-      },
-      {
-        "name": "Unmatched files/FERefList.cpp [inferred file group]",
-        "file_record": 48,
-        "file_name": "FERefList.cpp",
-        "ranges": [
-          {
-            "address": "0x80055018",
-            "size": 136,
-            "kind": "function",
-            "name": "ReferenceList__9FERefListP9FERefList",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800550a0",
-            "size": 96,
-            "kind": "function",
-            "name": "AddNode__9FERefListP9FEMinNodeT1",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80055100",
-            "size": 112,
-            "kind": "function",
-            "name": "RemNode__9FERefListP9FEMinNode",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80055170",
-            "size": 60,
-            "kind": "function",
-            "name": "RemHead__9FERefList",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800551ac",
-            "size": 92,
-            "kind": "function",
-            "name": "GetNumElements__9FERefList",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x80055018",
-          "0x80055208"
         ]
       },
       {
@@ -55738,27 +56040,6 @@
         "file_name": "FETypes.cpp",
         "ranges": [
           {
-            "address": "0x800566b4",
-            "size": 40,
-            "kind": "function",
-            "name": "__7FEColorUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800566dc",
-            "size": 176,
-            "kind": "function",
-            "name": "__opUl__C7FEColor",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8005678c",
-            "size": 40,
-            "kind": "function",
-            "name": "__as__7FEColorRC7FEColor",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800567b4",
             "size": 120,
             "kind": "function",
@@ -55777,101 +56058,10 @@
         "file_name": "FEWideString.cpp",
         "ranges": [
           {
-            "address": "0x8005682c",
-            "size": 140,
-            "kind": "function",
-            "name": "GenerateEscapeSequence__FPcPCcUl",
-            "evidence": "local-file-symbol"
-          },
-          {
             "address": "0x800568b8",
             "size": 52,
             "kind": "function",
             "name": "GetStringLength__FPCs",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800568ec",
-            "size": 64,
-            "kind": "function",
-            "name": "__12FEWideString",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8005692c",
-            "size": 72,
-            "kind": "function",
-            "name": "__12FEWideStringPCs",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80056974",
-            "size": 72,
-            "kind": "function",
-            "name": "__12FEWideStringRC12FEWideString",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800569bc",
-            "size": 76,
-            "kind": "function",
-            "name": "_._12FEWideString",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80056a08",
-            "size": 88,
-            "kind": "function",
-            "name": "__as__12FEWideStringRC12FEWideString",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80056a60",
-            "size": 88,
-            "kind": "function",
-            "name": "__as__12FEWideStringPCs",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80056ab8",
-            "size": 136,
-            "kind": "function",
-            "name": "__as__12FEWideStringPCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80056b40",
-            "size": 36,
-            "kind": "function",
-            "name": "Length__C12FEWideString",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80056b64",
-            "size": 116,
-            "kind": "function",
-            "name": "SetLength__12FEWideStringUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80056bd8",
-            "size": 120,
-            "kind": "function",
-            "name": "Convert__C12FEWideStringPc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80056c50",
-            "size": 60,
-            "kind": "function",
-            "name": "AllocateString__12FEWideStringUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80056c8c",
-            "size": 280,
-            "kind": "function",
-            "name": "ConvertFromSpecial__12FEWideStringPc",
             "evidence": "adjacent-compiler-markers"
           }
         ],
@@ -71853,27 +72043,6 @@
         "file_name": "GameSettings.cpp",
         "ranges": [
           {
-            "address": "0x8016cb10",
-            "size": 292,
-            "kind": "function",
-            "name": "__9SSaveData",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016cc34",
-            "size": 48,
-            "kind": "function",
-            "name": "TotalReset__9SSaveData",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016cc64",
-            "size": 172,
-            "kind": "function",
-            "name": "LevelReset__9SSaveData",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8016cd10",
             "size": 348,
             "kind": "function",
@@ -71885,76 +72054,6 @@
             "size": 84,
             "kind": "function",
             "name": "ResetDMStats__17SCoreGameSettings",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016cec0",
-            "size": 4,
-            "kind": "function",
-            "name": "__14CMovieSettings",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016cec4",
-            "size": 60,
-            "kind": "function",
-            "name": "Reset__14CMovieSettings",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016cf00",
-            "size": 180,
-            "kind": "function",
-            "name": "Load__14CMovieSettingsR11CConfigFileii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016cfb4",
-            "size": 592,
-            "kind": "function",
-            "name": "LoadSection__14CMovieSettingsR11CConfigFilePCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016d204",
-            "size": 152,
-            "kind": "function",
-            "name": "__13CGameSettings",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016d29c",
-            "size": 64,
-            "kind": "function",
-            "name": "PerformTotalReset__13CGameSettingsPCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016d2dc",
-            "size": 236,
-            "kind": "function",
-            "name": "PerformTotalReset__13CGameSettings",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016d3c8",
-            "size": 912,
-            "kind": "function",
-            "name": "Init__13CGameSettings",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016d764",
-            "size": 200,
-            "kind": "function",
-            "name": "PerformLevelReset__13CGameSettings",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016d910",
-            "size": 156,
-            "kind": "function",
-            "name": "Set_Language__13CGameSettings10ELanguages",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -73139,41 +73238,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8017f994",
-            "size": 56,
-            "kind": "function",
-            "name": "Draw__12ShellManager",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017f9cc",
-            "size": 4,
-            "kind": "function",
-            "name": "DrawUnplugged__12ShellManager",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017f9d0",
-            "size": 36,
-            "kind": "function",
-            "name": "GetPackageData__12ShellManagerPCcPPUcRb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017f9f4",
-            "size": 36,
-            "kind": "function",
-            "name": "LoadResources__12ShellManagerP9FEPackagelP17FEResourceRequest",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017fa18",
-            "size": 36,
-            "kind": "function",
-            "name": "UnloadResources__12ShellManagerP9FEPackagelP17FEResourceRequest",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8017fa3c",
             "size": 156,
             "kind": "function",
@@ -73202,24 +73266,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8017fd40",
-            "size": 4,
-            "kind": "function",
-            "name": "BeginPackageRendering__12ShellManagerP9FEPackage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8017fd44",
             "size": 128,
             "kind": "function",
             "name": "PerformPostDrawUpdates__12ShellManager",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017fdc4",
-            "size": 4,
-            "kind": "function",
-            "name": "EndPackageRendering__12ShellManagerP9FEPackage",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -73286,13 +73336,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8018114c",
-            "size": 36,
-            "kind": "function",
-            "name": "GetViewTransformation__12ShellManagerP9FEMatrix4",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80181170",
             "size": 68,
             "kind": "function",
@@ -73304,27 +73347,6 @@
             "size": 292,
             "kind": "function",
             "name": "GetJoyPadMask__12ShellManagerUc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801812d8",
-            "size": 56,
-            "kind": "function",
-            "name": "GetCombinedJoyPadActiveMask__C12ShellManager",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80181310",
-            "size": 4,
-            "kind": "function",
-            "name": "GetMouseInfo__12ShellManagerR11FEMouseInfo",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80181314",
-            "size": 4,
-            "kind": "function",
-            "name": "SetMovieName__12ShellManageriPc",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -73342,34 +73364,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80181520",
-            "size": 68,
-            "kind": "function",
-            "name": "PlayMovie__12ShellManager10EMovieTypeib",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80181564",
-            "size": 64,
-            "kind": "function",
-            "name": "GetPauseScreen__12ShellManager",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801815a4",
-            "size": 60,
-            "kind": "function",
-            "name": "SetNumberJoyPads__12ShellManagerUc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801815e0",
-            "size": 40,
-            "kind": "function",
-            "name": "LocalizePackage__12ShellManagerP9FEPackage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80181608",
             "size": 364,
             "kind": "function",
@@ -73384,20 +73378,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8018187c",
-            "size": 52,
-            "kind": "function",
-            "name": "DebugMessageQueued__12ShellManagerUlP8FEObjectP9FEPackageT2Ul",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801818b0",
-            "size": 60,
-            "kind": "function",
-            "name": "DebugMessageProcessed__12ShellManagerUlP8FEObjectT2P9FEPackageUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x801818ec",
             "size": 152,
             "kind": "function",
@@ -73405,38 +73385,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80181984",
-            "size": 100,
-            "kind": "function",
-            "name": "HasScreen__12ShellManagerPCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801819e8",
-            "size": 92,
-            "kind": "function",
-            "name": "InitMovies__12ShellManager",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80181a44",
             "size": 584,
             "kind": "function",
             "name": "PlayShellSound__12ShellManager15EShellSoundType",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80181c8c",
-            "size": 52,
-            "kind": "function",
-            "name": "Push__12ShellManagerPCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80181cc0",
-            "size": 36,
-            "kind": "function",
-            "name": "Swap__12ShellManagerPCcP9FEPackage",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -73468,24 +73420,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80182178",
-            "size": 4,
-            "kind": "function",
-            "name": "DoMPControllerChecks__12ShellManager",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8018217c",
             "size": 176,
             "kind": "function",
             "name": "RemoveMPViewPorts__12ShellManager",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8018222c",
-            "size": 32,
-            "kind": "function",
-            "name": "ResetActiveControllerIndicies__12ShellManager",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -73500,13 +73438,6 @@
             "size": 352,
             "kind": "function",
             "name": "DoCoopJoinScreenUpdate__12ShellManager",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8018243c",
-            "size": 4,
-            "kind": "function",
-            "name": "DoCoopControllerChecks__12ShellManager",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -73531,20 +73462,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80182600",
-            "size": 68,
-            "kind": "function",
-            "name": "IsCoopOnTop__12ShellManagerUc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80182644",
-            "size": 24,
-            "kind": "function",
-            "name": "IsCoopOnTopFromPortNum__12ShellManagerUc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8018265c",
             "size": 456,
             "kind": "function",
@@ -73552,38 +73469,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80182824",
-            "size": 24,
-            "kind": "function",
-            "name": "GetDeviceIndexFromControlMask__12ShellManagerUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8018283c",
-            "size": 52,
-            "kind": "function",
-            "name": "GetPortNumFromControlMask__12ShellManagerUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80182870",
-            "size": 40,
-            "kind": "function",
-            "name": "SetKeyboardString__12ShellManagerPCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80182898",
             "size": 124,
             "kind": "function",
             "name": "SetStartMPDataFromShell__12ShellManager",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80182914",
-            "size": 48,
-            "kind": "function",
-            "name": "GetNumCoopPlayers__12ShellManager",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -73967,48 +73856,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x801877ec",
-            "size": 16,
-            "kind": "function",
-            "name": "EnableButton__14PackageHandlerP8FEObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801877fc",
-            "size": 16,
-            "kind": "function",
-            "name": "DisableButton__14PackageHandlerP8FEObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8018780c",
-            "size": 96,
-            "kind": "function",
-            "name": "EnableButton__14PackageHandlerP9FEPackagePCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8018786c",
-            "size": 96,
-            "kind": "function",
-            "name": "DisableButton__14PackageHandlerP9FEPackagePCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801878cc",
-            "size": 96,
-            "kind": "function",
-            "name": "EnableButton__14PackageHandlerP9FEPackageUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8018792c",
-            "size": 96,
-            "kind": "function",
-            "name": "DisableButton__14PackageHandlerP9FEPackageUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8018798c",
             "size": 224,
             "kind": "function",
@@ -74034,20 +73881,6 @@
             "size": 144,
             "kind": "function",
             "name": "GetObjectListIndex__14PackageHandlerPc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80187d54",
-            "size": 120,
-            "kind": "function",
-            "name": "SetScript__14PackageHandlerP9FEPackagePCcT2",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80187dcc",
-            "size": 120,
-            "kind": "function",
-            "name": "SetScript__14PackageHandlerP9FEPackageUlPCc",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -74086,80 +73919,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80188c8c",
-            "size": 8,
-            "kind": "function",
-            "name": "GetCurrentLanguage__14PackageHandler",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80188c94",
-            "size": 80,
-            "kind": "function",
-            "name": "SetProfileNameOnScreen__14PackageHandleri",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80188ce4",
-            "size": 124,
-            "kind": "function",
-            "name": "Set2ProfileNamesOnScreen__14PackageHandler",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80188d60",
-            "size": 96,
-            "kind": "function",
-            "name": "SetGroupString__14PackageHandlerP7FEGroupPCcPc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80188dc0",
-            "size": 136,
-            "kind": "function",
-            "name": "SetGroupString__14PackageHandlerUiUiP12FEWideString",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80188e48",
-            "size": 144,
-            "kind": "function",
-            "name": "SetGroupString__14PackageHandlerUiUiPCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80188ed8",
             "size": 216,
             "kind": "function",
             "name": "SetGroupShowOnly__14PackageHandlerP7FEGroupUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80188fb0",
-            "size": 68,
-            "kind": "function",
-            "name": "SetGroupShowOnly__14PackageHandlerP7FEGroupPCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80188ff4",
-            "size": 80,
-            "kind": "function",
-            "name": "SetGroupShowOnly__14PackageHandlerUlUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80189044",
-            "size": 52,
-            "kind": "function",
-            "name": "QueueMessage__14PackageHandlerUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80189078",
-            "size": 4,
-            "kind": "function",
-            "name": "HandleTick__14PackageHandler",
             "evidence": "adjacent-compiler-markers"
           }
         ],
