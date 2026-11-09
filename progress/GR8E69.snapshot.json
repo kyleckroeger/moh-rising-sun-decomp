@@ -944,6 +944,9 @@
       "src/game/font_setcolor.cpp": "732885f73107c33c308a7d324faee714a86aff80f40bdc94707aa90305335a81",
       "src/game/framecount.cpp": "7b76621f1a2f5b452b4ee73c31317598062c4e3c5a4b7693d71b5f1371ef7931",
       "src/game/gba_object_list.cpp": "c1f37f7f3ed2dffff76a178fedc4d4465b72ce9a9d1d35f421e2955073ca875a",
+      "src/game/glare_execute.cpp": "4d6f6616374923968ca1ff17aabebd9df11733967be4de5b4d4963f7ba046178",
+      "src/game/glare_manager.cpp": "d438127df1363d68bb4a784592c103557c8213b1913bab97f7107bd83357cdbf",
+      "src/game/glare_static.cpp": "95579662e15dfe3cc9fa5c0a6ad2577ee4c0ffa98551d250ca158fd97b8ecc9c",
       "src/game/idebug_msg.cpp": "f0ffa7cb1598e285b7800d2f98fe3e5d111219257969b8b838b54a32117abd71",
       "src/game/input_any_device.cpp": "352511ab62d7aad2c422610ddbd42614da4e4106ad7e7b8f190093cb39aadaa8",
       "src/game/input_init.cpp": "92834b6924093f7ebc540f41b5eac7db9cfc3741eb2018ccbb066b14b2f5a952",
@@ -2935,6 +2938,7 @@
       "include/game/GameSettings.h": "39a11099f90823df2b9b7d8b622e30ebee5eda04890b49da249af72ea3c1d46a",
       "include/game/GameSettingsViews.h": "07d9ab4207c39820ef7b3dd33d1cd36943446048239a2bb5c9b69b580632bc36",
       "include/game/GameSoundEmitter.h": "573b3af975d31eb107bde129a24f57c5d70c9896f974319b2dcc4d06ce35ddaa",
+      "include/game/GlareManager.h": "bfadb22d535c6b638365ed812a4d0b4ba6b5b48b35fefdaab9d47e52eabecba4",
       "include/game/GrenadeResponse.h": "a26075782a75877dd754799cb73d6fe55e2a6c6597676869bb956ba8cdb2bed4",
       "include/game/HeadsUpDisplay.h": "23f906aea051f1148504c63cb883c629affb72f857288563152b2e49ad89ff84",
       "include/game/HearingVolume.h": "76a0cf1b1778be270e3b56ac1143a43032c1c3ef9643d510e277c89b7c8757c2",
@@ -4061,6 +4065,9 @@
       "config/GR8E69/game_drivecheck_status.json": "da8b6c2388db425236dae89296c02e57879f662c29f032f6de97d752ea870cfd",
       "config/GR8E69/game_font_drawf.json": "bf076e34a34ccb2d5ea13e9c558e9f5a2c3ae9fad3251984fa9ed462e01b6db9",
       "config/GR8E69/game_font_justify.json": "890342ed60ad70af57ae2128ed5e27686fb265327d8ea56ebc80394a8374d4f0",
+      "config/GR8E69/game_glare_execute.json": "d95b289854d3fce7ff4e3e89e2db566e6cafedd860d332568f1a27d9cd122d86",
+      "config/GR8E69/game_glare_manager.json": "b5aebb19cbe04324ffd755f57d2f550f69d0ea39a320e5606ddc40abbc63e326",
+      "config/GR8E69/game_glare_static.json": "a7e30bb094c380ab94e99c596dc6f9513f2f2ffc3a0afa22a574cdf0c2b280d0",
       "config/GR8E69/game_locale.json": "660eadd84d9e49632c2a42595aef8ca6d557b198b51bef3d3a3bba9558e4514e",
       "config/GR8E69/game_sprite_stq.json": "c5facf20723a5853e16dfc0e1565a2aa3dd13f4481d0fdb344d87f2869c4b2e1",
       "config/GR8E69/game_sys_memory_dwi.json": "af6b28229efc2adad9f987e767f2772ebe56093b9e8dedd5cc5b55c6da45b0e6",
@@ -4540,7 +4547,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "4a00a81ac2abe0666d2c2dade5c706c08b936555a99c26f14c0e8ab5031c3c67",
+      "config/GR8E69/project.json": "b1fc70f5fffcc92c2db067b01c9497f281f91220885334918db3da8e0fb0c293",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7272,14 +7279,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1307660,
+    "matching_code_bytes": 1308936,
     "total_executable_code_bytes": 2492032,
-    "percent": 52.473643998150905,
+    "percent": 52.524847192973446,
     "categories": {
-      "reconstructed_game": 915444,
+      "reconstructed_game": 916720,
       "restored_library": 392216
     },
-    "matching_functions": 6849
+    "matching_functions": 6862
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -8178,6 +8185,9 @@
     "config/GR8E69/game_drivecheck_status.json": "da8b6c2388db425236dae89296c02e57879f662c29f032f6de97d752ea870cfd",
     "config/GR8E69/game_font_drawf.json": "bf076e34a34ccb2d5ea13e9c558e9f5a2c3ae9fad3251984fa9ed462e01b6db9",
     "config/GR8E69/game_font_justify.json": "890342ed60ad70af57ae2128ed5e27686fb265327d8ea56ebc80394a8374d4f0",
+    "config/GR8E69/game_glare_execute.json": "d95b289854d3fce7ff4e3e89e2db566e6cafedd860d332568f1a27d9cd122d86",
+    "config/GR8E69/game_glare_manager.json": "b5aebb19cbe04324ffd755f57d2f550f69d0ea39a320e5606ddc40abbc63e326",
+    "config/GR8E69/game_glare_static.json": "a7e30bb094c380ab94e99c596dc6f9513f2f2ffc3a0afa22a574cdf0c2b280d0",
     "config/GR8E69/game_locale.json": "660eadd84d9e49632c2a42595aef8ca6d557b198b51bef3d3a3bba9558e4514e",
     "config/GR8E69/game_sprite_stq.json": "c5facf20723a5853e16dfc0e1565a2aa3dd13f4481d0fdb344d87f2869c4b2e1",
     "config/GR8E69/game_sys_memory_dwi.json": "af6b28229efc2adad9f987e767f2772ebe56093b9e8dedd5cc5b55c6da45b0e6",
@@ -8657,7 +8667,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "4a00a81ac2abe0666d2c2dade5c706c08b936555a99c26f14c0e8ab5031c3c67",
+    "config/GR8E69/project.json": "b1fc70f5fffcc92c2db067b01c9497f281f91220885334918db3da8e0fb0c293",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -10151,6 +10161,7 @@
     "include/game/GameSettings.h": "39a11099f90823df2b9b7d8b622e30ebee5eda04890b49da249af72ea3c1d46a",
     "include/game/GameSettingsViews.h": "07d9ab4207c39820ef7b3dd33d1cd36943446048239a2bb5c9b69b580632bc36",
     "include/game/GameSoundEmitter.h": "573b3af975d31eb107bde129a24f57c5d70c9896f974319b2dcc4d06ce35ddaa",
+    "include/game/GlareManager.h": "bfadb22d535c6b638365ed812a4d0b4ba6b5b48b35fefdaab9d47e52eabecba4",
     "include/game/GrenadeResponse.h": "a26075782a75877dd754799cb73d6fe55e2a6c6597676869bb956ba8cdb2bed4",
     "include/game/HeadsUpDisplay.h": "23f906aea051f1148504c63cb883c629affb72f857288563152b2e49ad89ff84",
     "include/game/HearingVolume.h": "76a0cf1b1778be270e3b56ac1143a43032c1c3ef9643d510e277c89b7c8757c2",
@@ -11321,6 +11332,9 @@
     "src/game/font_setcolor.cpp": "732885f73107c33c308a7d324faee714a86aff80f40bdc94707aa90305335a81",
     "src/game/framecount.cpp": "7b76621f1a2f5b452b4ee73c31317598062c4e3c5a4b7693d71b5f1371ef7931",
     "src/game/gba_object_list.cpp": "c1f37f7f3ed2dffff76a178fedc4d4465b72ce9a9d1d35f421e2955073ca875a",
+    "src/game/glare_execute.cpp": "4d6f6616374923968ca1ff17aabebd9df11733967be4de5b4d4963f7ba046178",
+    "src/game/glare_manager.cpp": "d438127df1363d68bb4a784592c103557c8213b1913bab97f7107bd83357cdbf",
+    "src/game/glare_static.cpp": "95579662e15dfe3cc9fa5c0a6ad2577ee4c0ffa98551d250ca158fd97b8ecc9c",
     "src/game/idebug_msg.cpp": "f0ffa7cb1598e285b7800d2f98fe3e5d111219257969b8b838b54a32117abd71",
     "src/game/input_any_device.cpp": "352511ab62d7aad2c422610ddbd42614da4e4106ad7e7b8f190093cb39aadaa8",
     "src/game/input_init.cpp": "92834b6924093f7ebc540f41b5eac7db9cfc3741eb2018ccbb066b14b2f5a952",
@@ -62261,6 +62275,60 @@
       "discarded_functions": [],
       "object_sha256": "0759e335e15d509992a61ce71e45b975106e8ef10992a98b2a2f68be9339545c",
       "linked_sha256": "d2806c7bb341c9dd0a23bc92ef8d612d1d0a465564c355530feddc1b4ee98eb2"
+    },
+    {
+      "id": "game_glare_static",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 280,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "63262cc6b745f83aa20feb753be2ef2677dc1d6851f7e81c2326395e1a362b84",
+      "linked_sha256": "4cb73704c5ce4483e83d765895cf2bfab2f5ad0aa27a7296873e2ef8ddf555dd"
+    },
+    {
+      "id": "game_glare_manager",
+      "category": "reconstructed_game",
+      "functions": 7,
+      "code_bytes": 992,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "20a95a98b0fcfca6772ee04e7a33c1fff9300dbc4ad98e9211ff9e9e3cc18f0e",
+      "linked_sha256": "cb5d8a29c87dd85a6e901803a06dcec972fa70d3fd55eedf4ba20b6462277f7d"
+    },
+    {
+      "id": "game_glare_execute",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 4,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "834961392947132269ac961a76cfbb1816c491bdc869a8cff79c76fd2071d46f",
+      "linked_sha256": "7870ffc105e0cf930d4aa75b2a84e994deeef2b08b4fb2b003f963b0a57eb1cf"
     }
   ],
   "code_map": {
@@ -64838,110 +64906,29 @@
             "kind": "function",
             "name": "_._6CGlare",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8006cc68",
-            "size": 40,
-            "kind": "function",
-            "name": "InitClass__6CGlare",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8006cc90",
-            "size": 40,
-            "kind": "function",
-            "name": "ResetClass__6CGlare",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8006ccb8",
-            "size": 40,
-            "kind": "function",
-            "name": "ShutdownClass__6CGlare",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8006cce0",
-            "size": 100,
-            "kind": "function",
-            "name": "Create__6CGlareib",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8006cd44",
-            "size": 60,
-            "kind": "function",
-            "name": "Draw__6CGlareR12CDrawContext",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 8006cd80",
+        "ranges": [
           {
             "address": "0x8006cd80",
             "size": 168,
             "kind": "function",
             "name": "IsVisible__C6CGlareR12CDrawContext",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8006ce28",
-            "size": 56,
-            "kind": "function",
-            "name": "__13CGlareManager",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8006ce60",
-            "size": 384,
-            "kind": "function",
-            "name": "Init__13CGlareManager",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8006cfe0",
-            "size": 120,
-            "kind": "function",
-            "name": "Reset__13CGlareManager",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8006d058",
-            "size": 116,
-            "kind": "function",
-            "name": "Shutdown__13CGlareManager",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8006d0cc",
-            "size": 140,
-            "kind": "function",
-            "name": "Create__13CGlareManageri",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8006d158",
-            "size": 120,
-            "kind": "function",
-            "name": "Find__13CGlareManageri",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8006d1d0",
-            "size": 56,
-            "kind": "function",
-            "name": "__14CGlareResource",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 8006d208",
+        "ranges": [
           {
             "address": "0x8006d208",
             "size": 396,
             "kind": "function",
             "name": "Init__14CGlareResourceP24LevelFileContentsStruct_",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8006d394",
-            "size": 4,
-            "kind": "function",
-            "name": "ExecuteDraw__13CGlareManagerR12CDrawContextPPv",
             "evidence": "unknown-file"
           }
         ]

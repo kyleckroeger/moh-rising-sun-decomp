@@ -2524,7 +2524,10 @@
     "handler_moviemenu_ctor.json",
     "handler_customcontroller_ctor.json",
     "handler_bonusoptions_ctor.json",
-    "ea_mad_codec_getframe.json"
+    "ea_mad_codec_getframe.json",
+    "game_glare_static.json",
+    "game_glare_manager.json",
+    "game_glare_execute.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
