@@ -28,8 +28,7 @@ struct KEYMAP { unsigned short key; unsigned short event; };
 class CPlayerHudView { public: unsigned char unknown_0[0x1c18]; int hudOption; };
 class CPlayerTimerView { public: unsigned char unknown_0[0xd4c]; unsigned int unknown_top : 1; unsigned int timerPaused : 1; };
 class CSaveGameKeyboardPopup { public: static CSaveGameKeyboardPopup *Instance(); void CreateName(); };
-class CPauseMenu { public: unsigned char unknown_0[0x10]; int unknown_10; void PushSaveScreen(); };
-extern CPauseMenu g_PauseScreen;
+#include "PauseMenu.h"
 // Absolute linker symbol: the loader's reservation for SCoreGameSettings.
 extern char GameSettingReserve[];
 extern "C" unsigned char OSGetLanguage(void);

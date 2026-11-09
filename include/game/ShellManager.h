@@ -2,6 +2,7 @@
 // Only the members and virtual slots reconstructed code touches are named.
 #ifndef GAME_SHELL_MANAGER_H
 #define GAME_SHELL_MANAGER_H
+#pragma interface
 #include "ConfigFile.h"
 #include "FEngLists.h"
 #include "FEngine.h"
@@ -9,7 +10,6 @@
 class FEMatrix4 { public: void Identify(); };
 class FEMouseInfo;
 struct FEObjectListEntry { void *object; int unknown_4; };
-struct FEResourceRequest;
 class ShellLoader {
   public:
     int LoadPackage(const char *, unsigned char **, bool &);
@@ -48,12 +48,12 @@ class FEGameInterface {
   public:
     virtual void Slot0();
     virtual void Slot1();
-    virtual void Slot2();
-    virtual void Slot3();
+    virtual int LoadResources(FEPackage *, long, FEResourceRequest *);
+    virtual int UnloadResources(FEPackage *, long, FEResourceRequest *);
     virtual void Slot4();
-    virtual void Slot5();
-    virtual void Slot6();
-    virtual void Slot7();
+    virtual int PackageWillUnload(FEPackage *);
+    virtual int CanUnloadPackages(); // Name inferred from its one use.
+    virtual void NotificationMessage(unsigned long, FEObject *, unsigned long, unsigned long);
     virtual void Slot8();
     virtual void Slot9();
     virtual void Slot10();
@@ -61,9 +61,18 @@ class FEGameInterface {
     virtual void Slot12();
     virtual void Slot13();
     virtual void RenderObject(void *); // +0x78 in the table.
+    virtual void Slot15();
+    virtual void Slot16();
+    virtual void Slot17();
+    virtual void Slot18();
+    virtual void Slot19();
+    virtual void Slot20();
+    virtual void Slot21();
+    virtual void DebugMessageQueued(unsigned long, FEObject *, FEPackage *, FEObject *, unsigned long);
 };
 class ShellManager : public FEGameInterface {
   public:
+    int Startup(char *);
     void Draw();
     void DrawUnplugged();
     int GetPackageData(const char *, unsigned char **, bool &);
@@ -95,6 +104,11 @@ class ShellManager : public FEGameInterface {
     void RemoveMPViewPorts();
     void UpdateUnplugged();
     void ResetCoopJoinInfo(signed char);
+    void SetCoopJoinInfo(FEPackage *, unsigned long);
+    void DoCoopJoinInfoUpdating();
+    void SetStartMPDataFromShell();
+    void Reset(const char *);
+    void Process(unsigned int);
     void ResetCoopJoinInfoFromPortNum(unsigned char);
     void DoCoopControllerChecks();
     int IsCoopOnTop(unsigned char);
@@ -110,9 +124,12 @@ class ShellManager : public FEGameInterface {
     unsigned char unknown_28[0x3c - 0x28];
     ShellLoader *loader;              // +0x3c
     FEngine *engine;                  // +0x40
-    unsigned char unknown_44[0x18a1 - 0x44];
+    unsigned char unknown_44[0x18a0 - 0x44];
+    unsigned char mpPlayerCount;      // +0x18a0; copied to the settings when the match starts. Name inferred.
     unsigned char coopJoinBits;       // +0x18a1; bit n per player.
-    unsigned char unknown_18a2[0x18b8 - 0x18a2];
+    unsigned char unknown_18a2[0x18a8 - 0x18a2];
+    int coopPausePlayer;              // +0x18a8; set when a co-op game opens the save screen. Name inferred.
+    unsigned char unknown_18ac[0x18b8 - 0x18ac];
     int inCoop;                       // +0x18b8; UpdateUnplugged picks the co-op controller checks.
     int inMultiplayer;                // +0x18bc; UpdateUnplugged picks the multiplayer checks.
     unsigned char unknown_18c0[0x18c4 - 0x18c0];

@@ -736,15 +736,38 @@
       "src/frontend/fe_findchild.cpp": "3006814fc242a6cc26f470caaaa3445e08e4abc1ff9947055aff2284f9c496a0",
       "src/frontend/fe_generateescapesequence.cpp": "f72477ed5288e84ce4e22224343f50ffc3e549510881941258c322e23b3b390a",
       "src/frontend/fe_referencelist.cpp": "8695bb2d7b711a1450cd833c4ec517a37f94cbe4ba0c458956726f95ed6f78a7",
+      "src/frontend/febuttonmap_setcount.cpp": "a945e4cae5f896d5634d44f0fe4cbac41491c373782e1c8764ca39ace1cc1e4c",
+      "src/frontend/feevent_assign.cpp": "494643092a9e75e09122bd565946d5f39c426be533f628626c8fc99cdcc18bf1",
+      "src/frontend/fekey_createkeyat.cpp": "529774e667903cb78e59a9d358fd650434984cb4f00bd9af16903b01f8d23909",
+      "src/frontend/fekeynode_pool.cpp": "8d63867f60d947760cc20b0e2023f881a6a206f687d3462c4ec484be83607ba6",
+      "src/frontend/felistbox_cleanupcolumns.cpp": "d1fc349dc5be066b9a748f25b2e2dfd544ddee8facfd278a291619900b8cb59a",
+      "src/frontend/felistbox_dtor.cpp": "ef35ed0d4c2291986f146c62be7cf7c555a637979b30106a76f09ce015cde7d7",
+      "src/frontend/felistbox_setautowrap.cpp": "c130b792c16ea6bedf4da9ebfb9bf4be0226be8c6cfaeba79748a1a676da09b3",
+      "src/frontend/felistbox_setcelltype.cpp": "6e3d515fab585be9543f8078b575157b93e7aa0e91d049abee11b3dc576f7273",
       "src/frontend/femessageresponse.cpp": "8383de6e6ca5707957b27223878c529b4e430c5d2663e4707217fb73176070cd",
       "src/frontend/fengine_addtoidlelist.cpp": "79853aec42c20268dd2b09ca07ad06ab00180016046f55219a96e8edb270e31f",
+      "src/frontend/fengine_checkmoviedemoscreen.cpp": "aa105cd84f3b85923003f77af7368683c015e32771c149061a3aabb6f5f62893",
       "src/frontend/fengine_clearpackagemarkers.cpp": "c53ffb148f7e384281510157164b9264b6f863c833dab85e4a2aafd7caded283",
+      "src/frontend/fengine_processlistboxresponses.cpp": "a9e8698ebbd759fa87703f16c848025c919fa90c7093c8037a86ed596a810779",
+      "src/frontend/fengine_queuemessage.cpp": "a9ea960129c10504dd96ef9148519cee4e75f7d816ccfed443be938ca9934ec0",
+      "src/frontend/fengine_recallpackagemarker.cpp": "e5b05c32666b67d70833448b224b8c49542fa96bbc83e6b0d5f6b644575952a3",
       "src/frontend/fengine_recordlastpackagebutton.cpp": "def967d88c4b012513e6cc2e0fc3eccd576394e000086eae084dd306c86e1719",
       "src/frontend/fengine_resetjoypad.cpp": "84fabc3c164ba48aaccdc0e354b3d45757c69a94368f07955ed12383c8aa93e8",
-      "src/frontend/feobj_findscript.cpp": "24b62cdefc2b1541ebfee1b8a9206fac27b7389cc46643736748320c64581748",
-      "src/frontend/feobj_setcurrentscript.cpp": "b90076a1eae423e1fbd55f98891b56427c89afc2795034826960e8b723882b2c",
+      "src/frontend/fengine_setnumjoypads.cpp": "19e87aa8be04927a7905d5ad4b46215d276cd267615e16505e670ad8f408e98c",
+      "src/frontend/feobj_findscript.cpp": "2ce175736ebf456c961a9f787f0a4d0e332ea3cf1cf3f0ba8c8ff711ebb88257",
+      "src/frontend/feobj_setcurrentscript.cpp": "73cfa9586980642accee98e5703ebbbabafdeff6a03de1ae5d63587beac804ad",
       "src/frontend/feobj_setdatasize.cpp": "2402e3d657e09d4316eb1db6f746e750e9509a8d5ce7932d2331066321aecf01",
       "src/frontend/feobj_setscript.cpp": "b0d4e885805696fc315444476456a387857c8ff6bf746bf4eb5bc0c0ebfe15d8",
+      "src/frontend/feobject_dtor.cpp": "5410db4cf63a68d9224e12681547ac788287defd7ff98089fa693541bab89082",
+      "src/frontend/feobject_getdataoffset.cpp": "d80a6a314982e743470b8b70576a91bb61f6975e0f33b27b35ad4d685b48804c",
+      "src/frontend/feobject_setname.cpp": "513c87ab60f904679f22e3186c2f6fda08e82a0fd30a920b892cb75787e6f303",
+      "src/frontend/fepackage_callback.cpp": "af03a447e40ddc1fc640db7f82c583689fca456f375e37ef21f0d4c2119203d6",
+      "src/frontend/fepackage_connectobjectresources.cpp": "52293e6e90699e9f366e2edac30c5bc6763542dd6a79af51ece3a577d5972e61",
+      "src/frontend/fepackage_setfilename.cpp": "2704f2ba038151a354b702073a4a5f9b4fdf20830663a04de665d66dd4b92c00",
+      "src/frontend/fepackage_update.cpp": "4f20f2954b321d1f5de7bbc4c0146d684c0e6309dd2ce548079c4e5e31e5f607",
+      "src/frontend/fepackage_updategroup.cpp": "f53eb15886f5b52092adad9ba4a81949da77a3a0d49ba5ef71cc65dfce685ee9",
+      "src/frontend/fereader_fepackagereader.cpp": "cddd9475dc5e1d57af1be1cdda095d23b798c15333e77ecdc4d3b99cace36d8c",
+      "src/frontend/fereader_gettypesize.cpp": "b591bfe4ecfd66a2a6940c57e8511b53ad01a04c2bfdaa319a965b0fc13e8958",
       "src/frontend/fescript_init.cpp": "acca2ac0e2fdddac0893017f3bc8c3149a48f34039ca67c6c002a362b86e66e8",
       "src/frontend/fescript_pool.cpp": "462ba70b9980a98bfbecab1ffc5ee5b2e103e16ebd541daad3df72b0b5cb4fc8",
       "src/frontend/feslotpool.cpp": "16006d3616e75c42e460305edd0935c44f5ffaf272dd92127e442f24a7dc5405",
@@ -771,6 +794,7 @@
       "src/frontend/shell_iscoopontop.cpp": "fd1065e627cd0b02f7460a7088c28703ee1e94ebf8510d601014a263bdf0c57c",
       "src/frontend/shell_playmovie.cpp": "4315dfb7828d32ae8ee03af7e20e6eec6d92c30839b8664058a8417d615154de",
       "src/frontend/shell_push.cpp": "41af18cdf93a4eb2b21ae2620ec77a7ff9cc690f93699907faa8b433fac08c2e",
+      "src/frontend/shell_reset.cpp": "3bca8761e976580f8f330ecf7fc3eeaaa9679cda21fea9c82dfd1c82081c9c6c",
       "src/frontend/shell_updateunplugged.cpp": "5dec5ac7b519a96f0eb0c3873ec45129c96689b2b79a3ab8b1ef42decd2bf078",
       "src/frontend/uppercase.cpp": "58d80513a4f76209e1895c6943d7e05837625be3bd2687efe32159afd23f70dd",
       "src/frontend/usermessages_access.cpp": "41716b6c646c0838ec302212e35f8ece4f43914f5a10cbdd6fec31ad50f4081a",
@@ -2395,6 +2419,11 @@
       "src/ui/hud_state.cpp": "f5f5944c66068c0b4c68b6010929e965058bec5229538e55eb885d12760dce44",
       "src/ui/hud_target.cpp": "cda7f687b59790c0323c40360afae9b4c21fdcdd7ed4ed96087d85c87b83a9dd",
       "src/ui/hud_update.cpp": "e863deecb7975c603d502aa0acc33a2e7929e47bc13f2bdeb615eff8700e8569",
+      "src/ui/pausemenu_cpausemenu.cpp": "96d42644125c9c6272aa63ce149c42fdc81dfad8e031b17ffb516780dd7694ef",
+      "src/ui/pausemenu_processuievent.cpp": "cb89bb40218ff0ea7d64aa17383c3eb911ec4ef80e5c04876df998168dc0b742",
+      "src/ui/pausemenu_pushsavescreen.cpp": "a4d12445bee6e60ccb71bb860145e849e672c0105d4384d2e193eeccf590cab9",
+      "src/ui/pausemenu_reset.cpp": "2171d4a180cf4bfcbeda5e12cd6cc176f8b0b73b3f5a224182fb0f49d1187535",
+      "src/ui/pausemenu_update.cpp": "95069132838e3d88c329be4dd5e28169faa78b63de6af6e83e086c100fd975a5",
       "src/ui/pum_a.cpp": "e93aea8e4a9dbb0ea6c0ffba3f5452d54e8a8bfbf7b494f052f96fec9dc06b0b",
       "src/ui/pum_b.cpp": "88811cd79a6f1a76cfc7fc8d47ea21ff13cc6f567ee474fa93f8263ad1cad5f4",
       "src/ui/pum_c.cpp": "4dee207934fa40fc0bbd9de25846a602ab7073d14a5c9fa9147eb3c42b0bc847",
@@ -2684,14 +2713,15 @@
       "include/game/EAGLViewPort.h": "696db5236385f6c780a7eaf83a79a088ab55672ebedbaca22f3cdfa84f9bab91",
       "include/game/Endian.h": "6f3a06aca2ed749c09949cedff932c6e9a8db1272b5393bdc9a46185a384387b",
       "include/game/FEHash.h": "5d2777480e94ab65796f9850193722c7585a884299d6b68b610c5b3ce6a08757",
+      "include/game/FEListBox.h": "8b0979c6f8377646f28764742a07aadf1b1152556be7d4b5d9f42938a65eca41",
       "include/game/FEMessageResponse.h": "61a8d2f2e476029cde734cf9498ee8748fdcc79963bdfc36ab98a4c84eb7d20c",
       "include/game/FEObjectPool.h": "b89812c3ff027e7a3de82fe707e58d4ef1cea3b39f598919dc6bee573580a278",
-      "include/game/FEScript.h": "e92d571a5847a52aad16aa66ba449a2cd5610f070f0ed45bf9bcf19dbac7ea45",
+      "include/game/FEScript.h": "3994a8396b947a1bac8e16a716ee21091121d6ce85294dcc24f14cec7baafb90",
       "include/game/FESlotPool.h": "fe27a4a356873ad71d8f66bb85a594ef2170c08f3ce299ea30ed288e398e5bf6",
-      "include/game/FEngLists.h": "45dbb33296fa08f8a4e6ba366dc7e0ec8d1e599715125bac7324eabf6592cb68",
+      "include/game/FEngLists.h": "cab27e601d6402414b649a5fb1664b2853bd87b600d20ece3db47a4a1db003e3",
       "include/game/FEngObjects.h": "02f629e8c69f1dea4e6856d5dc097102793ef9994758a331698c381b6d1d0df7",
       "include/game/FEngStrings.h": "3fb38fb321893a9cc7e83396ced3500fb9dfbf859a210f4e470c2961e735cc86",
-      "include/game/FEngine.h": "4c04173be7902558548e17533ea9eea20e93970df39fcc467e5df02edd563d26",
+      "include/game/FEngine.h": "2d7c4eeb9090e38959eb1782867529cae0dc69fb0b78621c5b476fb90fd49ed1",
       "include/game/Fader.h": "5e6a829b80a545618de960a1fcb77e1c59c1ea1ba2f2e0fee87d54c2e7c73143",
       "include/game/Fiber.h": "86a5b88a4e003f050e9a365b1a5c582c8d0163426b18fff783e17a465ddbb045",
       "include/game/FlexProp.h": "d4b492f690451a27c03371aa71637f8b6a4109c07ed8ba55de69ae5f256414ff",
@@ -2699,8 +2729,8 @@
       "include/game/Fog.h": "30a37f01f3f665d1f9b3b0a5ef81ea098194595159c5ff794797541c6bf325c0",
       "include/game/Font.h": "aac3ae3971b2a09911276f89091539c78c3d22be4046eca5d1e65a39c2f82e6b",
       "include/game/Frustum.h": "8b459091729087e5119c39887634fd28825b36e40b7a0efdf9a40c2cf58741fe",
-      "include/game/GameSettings.h": "00f5fddd61611735d53cce5773c519e9bd0aee6f24e6ab29731a8a641bca3687",
-      "include/game/GameSettingsViews.h": "a55550e5c7f8fc35bd8db34da42fa8ee804c7d81612634677308a869ec9eb474",
+      "include/game/GameSettings.h": "61bee9694f867cd9c128285396f4160fd9694d647b38dd012d0cd058e11a914b",
+      "include/game/GameSettingsViews.h": "a6d5c2e791c7cc3ac2f6eb6a48657040afab504341288204796a51edf6fe97fd",
       "include/game/GrenadeResponse.h": "a26075782a75877dd754799cb73d6fe55e2a6c6597676869bb956ba8cdb2bed4",
       "include/game/HeadsUpDisplay.h": "23f906aea051f1148504c63cb883c629affb72f857288563152b2e49ad89ff84",
       "include/game/HearingVolume.h": "76a0cf1b1778be270e3b56ac1143a43032c1c3ef9643d510e277c89b7c8757c2",
@@ -2726,6 +2756,7 @@
       "include/game/ParticleRecipe.h": "4d90b1113f2b2bb337559c32abcbf99c5a9a0418d3e404cc8ab814b6b7a64fea",
       "include/game/PathTrack.h": "15fa2d9c336c67c1315921cef67cce813061a193dc51fac3417b482ddd345182",
       "include/game/PathxTrack.h": "f46f02824655f05c7a0c47d71481dfbe5c5845b6b73ae17d5f8f3453b5c4298a",
+      "include/game/PauseMenu.h": "d5eb24cc0a4ff00a237ce0013f7e349f18a1eb3e8fba544e46689d078860576a",
       "include/game/PlacementNew.h": "49819284bb2cc2ffb2039d459ce855bd5a233bcfff0a6412ffe0bda02cd616c5",
       "include/game/PopUpMessage.h": "3ba712308420d487fc901d235bd01e828a92eaff7fe9c095eadb933d05ba7737",
       "include/game/Projector.h": "7d3945fd8c8bf01ed6945d204fa4934da58371aa70da7a28bd39fd2a63f3e90b",
@@ -2747,7 +2778,7 @@
       "include/game/ScriptTimers.h": "a81f3399ff20908469a289229ed0f0aae2c28aa3a9889629e62049e8bb16705b",
       "include/game/ScriptedGag.h": "41ce2a7f909e292930c5279c0ec536596c3b6bc35d11bb27ad6be5d51b9a0235",
       "include/game/Shell.h": "03c36affd7c0f616996096b426e82b2efd08e39aecafbde166641edbd4ccd210",
-      "include/game/ShellManager.h": "e2923227eb223f506831fd2f15441e6251b3d419998fedeb7d5a32e7bcd1af04",
+      "include/game/ShellManager.h": "dc1545769bbcb657858ae6b1be625cb095fdebb54b54d346ecbaed971863553a",
       "include/game/SkyBox.h": "810947bbc2ecf7cb4d69dfa350c055b05d446c04b904abfadaf4828c7be01a55",
       "include/game/SndEAXA.h": "462f6c63008084b8cb5b525d5029b804e760f3859ba6e5676a4d36461906da13",
       "include/game/SndMicroTalk.h": "47d54f16635c2a64944419af8564ee38901f410b5dc9d139ed973fb87d8ff937",
@@ -3652,15 +3683,38 @@
       "config/GR8E69/fe_hash_upper.json": "c9e6dff86f6763a1c5f4962057e5c6f58bd9587b9ea3b31fb71bf0e49f6bb451",
       "config/GR8E69/fe_referencelist.json": "46e7f8e3d478905bd2ea9ac697d1e4ab5478fceeb3420d02a74d760cb0b27808",
       "config/GR8E69/fe_upper_case.json": "db8afcb483244836c37cf2af7fedcc32bef682ca25f38e27ced5d4cf99978174",
+      "config/GR8E69/febuttonmap_setcount.json": "9161d1fbd9fb53a9f46f6c7e4c3a14909376e255e40f529a0f0f365b84b591c0",
+      "config/GR8E69/feevent_assign.json": "6f3f463003668acc72c09d6ed7ef99e46603a90a2dfeb1bbe38e6171d2cac5a9",
+      "config/GR8E69/fekey_createkeyat.json": "c1462124d19a8e6cd4c80715b33d367141c0761ea4388e42e03367a7215fd5dc",
+      "config/GR8E69/fekeynode_pool.json": "87d00b5533df833e16ae32e3bafb88b978cdef6de3e0440256f3c619b96e97a3",
+      "config/GR8E69/felistbox_cleanupcolumns.json": "fffb6a0bd5da525cd6e343d68e106aa6549e01fe81f3a2520a192a08b4f00b6d",
+      "config/GR8E69/felistbox_dtor.json": "89ef5046e796152af8ce12c5bf406b74829245f588da30807771e7790ba3b62a",
+      "config/GR8E69/felistbox_setautowrap.json": "c65ede89a9778e6502d63ae705d59e7df3889956aaf38654826ffd91bfebe066",
+      "config/GR8E69/felistbox_setcelltype.json": "0fa47e3d6bc40e5ad486986cb67fc6f7471776b56b717b02a35b8217279b66f6",
       "config/GR8E69/femessageresponse.json": "11725a584c60179ec85bcacc3b273562a6c1881e595a38e93a163219cf28bc1c",
       "config/GR8E69/fengine_addtoidlelist.json": "8ff963f5da0e4b12de907be8324a9e996ae48ab9ef835d0564153919adca2afb",
+      "config/GR8E69/fengine_checkmoviedemoscreen.json": "00dd9d9f510e1254018ff2aa1700228b17616db66dc2e37a9cd5dbc252543f9c",
       "config/GR8E69/fengine_clearpackagemarkers.json": "b3b060147b271056c700d7bc87441a26a15aaae2bf71b707fc51916e90340b3c",
+      "config/GR8E69/fengine_processlistboxresponses.json": "4b3a731a324e82e9618681131d87fa9165829ec66bcd20f1883de6854e0a6fc8",
+      "config/GR8E69/fengine_queuemessage.json": "dab839b0ce1b2f2c76c628e304d07511b3f2d6da825c75c47c3e6d97f6aeff26",
+      "config/GR8E69/fengine_recallpackagemarker.json": "05451e6d206f2ceb9c176362491fe6305debaa61656cffaa136d808834f18ab7",
       "config/GR8E69/fengine_recordlastpackagebutton.json": "f0cb28686d3bb495fb37eec0dfbfbb3e4aa7d192408ef17456abdf53ed09364b",
       "config/GR8E69/fengine_resetjoypad.json": "8d56eaa52459d1d5bc5801b0e702de4c82764d9d1c7b7ce03235095acab8aff5",
+      "config/GR8E69/fengine_setnumjoypads.json": "3bc91bb280e174297295cc0dd6cb298aa5f37c6606b8eef0bf4edf0ad5e5e690",
       "config/GR8E69/feobj_findscript.json": "71e594bd52f4d216945586f4a748e966c3badf7ab8344225d9d270503d3a1e5a",
       "config/GR8E69/feobj_setcurrentscript.json": "0a319121daa6fa3a581409a88c5ce5cb74ddb8b75bf2ec3f3c3a4141a20cf665",
       "config/GR8E69/feobj_setdatasize.json": "6aa3b0fee9e8546df04e7d85b3bac85dc9e4196264b5531daea81579dff442aa",
       "config/GR8E69/feobj_setscript.json": "706cd34603f8d8ab8e28e87c5da3d371efb68c6c48eaf40dee15b2373ad49d3b",
+      "config/GR8E69/feobject_dtor.json": "6e37d031c6dc7ba406eb02296957bfc4e3f368b5c164a74fa1c21d338979157f",
+      "config/GR8E69/feobject_getdataoffset.json": "907179fbec79d4fe0b8bfe79108daf47395580ebb5ae0fde898e51a5bea11a4b",
+      "config/GR8E69/feobject_setname.json": "bc5b0632ea71cecbcff5c8199b1d4fb340db72300399a63adf6f9571417dae6e",
+      "config/GR8E69/fepackage_callback.json": "be4bac529ae1e82945d49c29b88bb2bb27705b7f2a40848d774db559700746a3",
+      "config/GR8E69/fepackage_connectobjectresources.json": "b1b8f0f8ec020590646c709f0b0a27b3b2db4c97b4657ee505b3cc0a14bb7a0b",
+      "config/GR8E69/fepackage_setfilename.json": "d484ad355fb193fb636e945b9e3a8a203fdc16d4a443a202c983db1df5d6daaa",
+      "config/GR8E69/fepackage_update.json": "038f4e167ed85ce2d6592215971a63ab2e02b5bde21f4ff829d7667e3688cfdd",
+      "config/GR8E69/fepackage_updategroup.json": "c3ff8313f911f29cc7addebf4f42033d565fc5fcb333595f32efd55011027e4e",
+      "config/GR8E69/fereader_fepackagereader.json": "ffce28a680579a6d2782df48b11dfc322fc56408be14f3f3c48c6c959df3ae89",
+      "config/GR8E69/fereader_gettypesize.json": "82e284406db9404428c97f150bdc223db1724ed478e17f97ba7060641a6c1a3a",
       "config/GR8E69/fescript_init.json": "35f03d5d05a9bcd335de4af45174a07e61d2bc2419bddcbb4989ac2a010f6b19",
       "config/GR8E69/fescript_pool.json": "e7799132a3cff2e90073baaf6c68f4fcbb28e4e8d09db114193f0b8cf1184ea6",
       "config/GR8E69/feslotpool.json": "d61dbac7aab0651cf3d365a1a89de47931aefd72b4d064c3df6efc9eb138118d",
@@ -4039,6 +4093,11 @@
       "config/GR8E69/particlesystem_executedraw.json": "4b4c8071fd4ca1c24a69d8fe70b8266a4b0daea4d95aee78d954b4ed7cdb22c7",
       "config/GR8E69/particlesystem_fade.json": "44efb08287dd2c757a2a1bad6b5a454b358fc3dc3198557099506b249c1c1706",
       "config/GR8E69/particlesystem_transforms.json": "a484ade964b87bb43b977c8a3c7094cac268d66ba358f4dffffedfa94039426f",
+      "config/GR8E69/pausemenu_cpausemenu.json": "1bc496bd6b8f75035d21f4dbb1b52ea5ccc654510f8b823cde1cfa929f5041d1",
+      "config/GR8E69/pausemenu_processuievent.json": "ff2b7f97606a7548f2a53946503f1d4b413419933fed9e9ccc0d9b0e83bb6c52",
+      "config/GR8E69/pausemenu_pushsavescreen.json": "e3656a8425c3210f77053cc7fb8fc8ad791fb4d590e3c25a644f6dcbe8747786",
+      "config/GR8E69/pausemenu_reset.json": "6e11db8ee38901c385ba717e62a6d6d644ec02b5e263df87a0249f96341ef23d",
+      "config/GR8E69/pausemenu_update.json": "ae070affc751ad954fb62409d53a0abbb813ab95bb360121e13fed34e7bef9b7",
       "config/GR8E69/pkgh_enablebutton.json": "327fb847811060d10c8fed7f1e60782eca254d4e7e264a9a8964bf8255979b11",
       "config/GR8E69/pkgh_enablebutton_2.json": "63f11ecd3c566934966c972e61dfe44fe739ffa15f56adada4722132fcca1c90",
       "config/GR8E69/pkgh_getcurrentlanguage.json": "5fb17d6aad407052dbcfb4f78af439466a170e2e0d67b6f4abb921762c44ddf5",
@@ -4109,7 +4168,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "c2e744f402047494b7a7632f86ba7f7bc5cabd972dacc76de4ca9bcc06cf037c",
+      "config/GR8E69/project.json": "374614784658da5fe72bb7abf8c4f7aa1811f1fd36ecdd2de4efe39fc1e86c18",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -4773,6 +4832,7 @@
       "config/GR8E69/shell_iscoopontop.json": "90f026a8291669cd2c3ec562654120080704809fba4e809c1e3685811d07bac1",
       "config/GR8E69/shell_playmovie.json": "7a0c29fc7fea9fc038de748a20ce58667473ce2a8ddbeca09abb193ecf71c960",
       "config/GR8E69/shell_push.json": "2d4fc2f3ed224436060e5d9ebe9f600f667f2501678bfe579655e13f42344760",
+      "config/GR8E69/shell_reset.json": "d8c370097e1352d1d704e0e3fbe877f5e705e0ec8448253a4a26136ca360cc39",
       "config/GR8E69/shell_updateunplugged.json": "550dc905e337655814ce4b1c61e048ea4fb17446e2dcc0f8df344047f0933335",
       "config/GR8E69/skybox_class.json": "6382327bdfd3308c3364c6cd96a02b3c8d1e82af96f09447f12c14cac9db21ea",
       "config/GR8E69/skybox_dtor.json": "d67d7fc8b0aebb0429903e6dcdaa65bf32a5f1930b319afc4a4bf8063f1d5e6b",
@@ -6808,14 +6868,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1181428,
+    "matching_code_bytes": 1189960,
     "total_executable_code_bytes": 2492032,
-    "percent": 47.40821947711747,
+    "percent": 47.75059068262366,
     "categories": {
-      "reconstructed_game": 789212,
+      "reconstructed_game": 797744,
       "restored_library": 392216
     },
-    "matching_functions": 6114
+    "matching_functions": 6186
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -7547,15 +7607,38 @@
     "config/GR8E69/fe_hash_upper.json": "c9e6dff86f6763a1c5f4962057e5c6f58bd9587b9ea3b31fb71bf0e49f6bb451",
     "config/GR8E69/fe_referencelist.json": "46e7f8e3d478905bd2ea9ac697d1e4ab5478fceeb3420d02a74d760cb0b27808",
     "config/GR8E69/fe_upper_case.json": "db8afcb483244836c37cf2af7fedcc32bef682ca25f38e27ced5d4cf99978174",
+    "config/GR8E69/febuttonmap_setcount.json": "9161d1fbd9fb53a9f46f6c7e4c3a14909376e255e40f529a0f0f365b84b591c0",
+    "config/GR8E69/feevent_assign.json": "6f3f463003668acc72c09d6ed7ef99e46603a90a2dfeb1bbe38e6171d2cac5a9",
+    "config/GR8E69/fekey_createkeyat.json": "c1462124d19a8e6cd4c80715b33d367141c0761ea4388e42e03367a7215fd5dc",
+    "config/GR8E69/fekeynode_pool.json": "87d00b5533df833e16ae32e3bafb88b978cdef6de3e0440256f3c619b96e97a3",
+    "config/GR8E69/felistbox_cleanupcolumns.json": "fffb6a0bd5da525cd6e343d68e106aa6549e01fe81f3a2520a192a08b4f00b6d",
+    "config/GR8E69/felistbox_dtor.json": "89ef5046e796152af8ce12c5bf406b74829245f588da30807771e7790ba3b62a",
+    "config/GR8E69/felistbox_setautowrap.json": "c65ede89a9778e6502d63ae705d59e7df3889956aaf38654826ffd91bfebe066",
+    "config/GR8E69/felistbox_setcelltype.json": "0fa47e3d6bc40e5ad486986cb67fc6f7471776b56b717b02a35b8217279b66f6",
     "config/GR8E69/femessageresponse.json": "11725a584c60179ec85bcacc3b273562a6c1881e595a38e93a163219cf28bc1c",
     "config/GR8E69/fengine_addtoidlelist.json": "8ff963f5da0e4b12de907be8324a9e996ae48ab9ef835d0564153919adca2afb",
+    "config/GR8E69/fengine_checkmoviedemoscreen.json": "00dd9d9f510e1254018ff2aa1700228b17616db66dc2e37a9cd5dbc252543f9c",
     "config/GR8E69/fengine_clearpackagemarkers.json": "b3b060147b271056c700d7bc87441a26a15aaae2bf71b707fc51916e90340b3c",
+    "config/GR8E69/fengine_processlistboxresponses.json": "4b3a731a324e82e9618681131d87fa9165829ec66bcd20f1883de6854e0a6fc8",
+    "config/GR8E69/fengine_queuemessage.json": "dab839b0ce1b2f2c76c628e304d07511b3f2d6da825c75c47c3e6d97f6aeff26",
+    "config/GR8E69/fengine_recallpackagemarker.json": "05451e6d206f2ceb9c176362491fe6305debaa61656cffaa136d808834f18ab7",
     "config/GR8E69/fengine_recordlastpackagebutton.json": "f0cb28686d3bb495fb37eec0dfbfbb3e4aa7d192408ef17456abdf53ed09364b",
     "config/GR8E69/fengine_resetjoypad.json": "8d56eaa52459d1d5bc5801b0e702de4c82764d9d1c7b7ce03235095acab8aff5",
+    "config/GR8E69/fengine_setnumjoypads.json": "3bc91bb280e174297295cc0dd6cb298aa5f37c6606b8eef0bf4edf0ad5e5e690",
     "config/GR8E69/feobj_findscript.json": "71e594bd52f4d216945586f4a748e966c3badf7ab8344225d9d270503d3a1e5a",
     "config/GR8E69/feobj_setcurrentscript.json": "0a319121daa6fa3a581409a88c5ce5cb74ddb8b75bf2ec3f3c3a4141a20cf665",
     "config/GR8E69/feobj_setdatasize.json": "6aa3b0fee9e8546df04e7d85b3bac85dc9e4196264b5531daea81579dff442aa",
     "config/GR8E69/feobj_setscript.json": "706cd34603f8d8ab8e28e87c5da3d371efb68c6c48eaf40dee15b2373ad49d3b",
+    "config/GR8E69/feobject_dtor.json": "6e37d031c6dc7ba406eb02296957bfc4e3f368b5c164a74fa1c21d338979157f",
+    "config/GR8E69/feobject_getdataoffset.json": "907179fbec79d4fe0b8bfe79108daf47395580ebb5ae0fde898e51a5bea11a4b",
+    "config/GR8E69/feobject_setname.json": "bc5b0632ea71cecbcff5c8199b1d4fb340db72300399a63adf6f9571417dae6e",
+    "config/GR8E69/fepackage_callback.json": "be4bac529ae1e82945d49c29b88bb2bb27705b7f2a40848d774db559700746a3",
+    "config/GR8E69/fepackage_connectobjectresources.json": "b1b8f0f8ec020590646c709f0b0a27b3b2db4c97b4657ee505b3cc0a14bb7a0b",
+    "config/GR8E69/fepackage_setfilename.json": "d484ad355fb193fb636e945b9e3a8a203fdc16d4a443a202c983db1df5d6daaa",
+    "config/GR8E69/fepackage_update.json": "038f4e167ed85ce2d6592215971a63ab2e02b5bde21f4ff829d7667e3688cfdd",
+    "config/GR8E69/fepackage_updategroup.json": "c3ff8313f911f29cc7addebf4f42033d565fc5fcb333595f32efd55011027e4e",
+    "config/GR8E69/fereader_fepackagereader.json": "ffce28a680579a6d2782df48b11dfc322fc56408be14f3f3c48c6c959df3ae89",
+    "config/GR8E69/fereader_gettypesize.json": "82e284406db9404428c97f150bdc223db1724ed478e17f97ba7060641a6c1a3a",
     "config/GR8E69/fescript_init.json": "35f03d5d05a9bcd335de4af45174a07e61d2bc2419bddcbb4989ac2a010f6b19",
     "config/GR8E69/fescript_pool.json": "e7799132a3cff2e90073baaf6c68f4fcbb28e4e8d09db114193f0b8cf1184ea6",
     "config/GR8E69/feslotpool.json": "d61dbac7aab0651cf3d365a1a89de47931aefd72b4d064c3df6efc9eb138118d",
@@ -7934,6 +8017,11 @@
     "config/GR8E69/particlesystem_executedraw.json": "4b4c8071fd4ca1c24a69d8fe70b8266a4b0daea4d95aee78d954b4ed7cdb22c7",
     "config/GR8E69/particlesystem_fade.json": "44efb08287dd2c757a2a1bad6b5a454b358fc3dc3198557099506b249c1c1706",
     "config/GR8E69/particlesystem_transforms.json": "a484ade964b87bb43b977c8a3c7094cac268d66ba358f4dffffedfa94039426f",
+    "config/GR8E69/pausemenu_cpausemenu.json": "1bc496bd6b8f75035d21f4dbb1b52ea5ccc654510f8b823cde1cfa929f5041d1",
+    "config/GR8E69/pausemenu_processuievent.json": "ff2b7f97606a7548f2a53946503f1d4b413419933fed9e9ccc0d9b0e83bb6c52",
+    "config/GR8E69/pausemenu_pushsavescreen.json": "e3656a8425c3210f77053cc7fb8fc8ad791fb4d590e3c25a644f6dcbe8747786",
+    "config/GR8E69/pausemenu_reset.json": "6e11db8ee38901c385ba717e62a6d6d644ec02b5e263df87a0249f96341ef23d",
+    "config/GR8E69/pausemenu_update.json": "ae070affc751ad954fb62409d53a0abbb813ab95bb360121e13fed34e7bef9b7",
     "config/GR8E69/pkgh_enablebutton.json": "327fb847811060d10c8fed7f1e60782eca254d4e7e264a9a8964bf8255979b11",
     "config/GR8E69/pkgh_enablebutton_2.json": "63f11ecd3c566934966c972e61dfe44fe739ffa15f56adada4722132fcca1c90",
     "config/GR8E69/pkgh_getcurrentlanguage.json": "5fb17d6aad407052dbcfb4f78af439466a170e2e0d67b6f4abb921762c44ddf5",
@@ -8004,7 +8092,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "c2e744f402047494b7a7632f86ba7f7bc5cabd972dacc76de4ca9bcc06cf037c",
+    "config/GR8E69/project.json": "374614784658da5fe72bb7abf8c4f7aa1811f1fd36ecdd2de4efe39fc1e86c18",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -8668,6 +8756,7 @@
     "config/GR8E69/shell_iscoopontop.json": "90f026a8291669cd2c3ec562654120080704809fba4e809c1e3685811d07bac1",
     "config/GR8E69/shell_playmovie.json": "7a0c29fc7fea9fc038de748a20ce58667473ce2a8ddbeca09abb193ecf71c960",
     "config/GR8E69/shell_push.json": "2d4fc2f3ed224436060e5d9ebe9f600f667f2501678bfe579655e13f42344760",
+    "config/GR8E69/shell_reset.json": "d8c370097e1352d1d704e0e3fbe877f5e705e0ec8448253a4a26136ca360cc39",
     "config/GR8E69/shell_updateunplugged.json": "550dc905e337655814ce4b1c61e048ea4fb17446e2dcc0f8df344047f0933335",
     "config/GR8E69/skybox_class.json": "6382327bdfd3308c3364c6cd96a02b3c8d1e82af96f09447f12c14cac9db21ea",
     "config/GR8E69/skybox_dtor.json": "d67d7fc8b0aebb0429903e6dcdaa65bf32a5f1930b319afc4a4bf8063f1d5e6b",
@@ -9436,14 +9525,15 @@
     "include/game/EAGLViewPort.h": "696db5236385f6c780a7eaf83a79a088ab55672ebedbaca22f3cdfa84f9bab91",
     "include/game/Endian.h": "6f3a06aca2ed749c09949cedff932c6e9a8db1272b5393bdc9a46185a384387b",
     "include/game/FEHash.h": "5d2777480e94ab65796f9850193722c7585a884299d6b68b610c5b3ce6a08757",
+    "include/game/FEListBox.h": "8b0979c6f8377646f28764742a07aadf1b1152556be7d4b5d9f42938a65eca41",
     "include/game/FEMessageResponse.h": "61a8d2f2e476029cde734cf9498ee8748fdcc79963bdfc36ab98a4c84eb7d20c",
     "include/game/FEObjectPool.h": "b89812c3ff027e7a3de82fe707e58d4ef1cea3b39f598919dc6bee573580a278",
-    "include/game/FEScript.h": "e92d571a5847a52aad16aa66ba449a2cd5610f070f0ed45bf9bcf19dbac7ea45",
+    "include/game/FEScript.h": "3994a8396b947a1bac8e16a716ee21091121d6ce85294dcc24f14cec7baafb90",
     "include/game/FESlotPool.h": "fe27a4a356873ad71d8f66bb85a594ef2170c08f3ce299ea30ed288e398e5bf6",
-    "include/game/FEngLists.h": "45dbb33296fa08f8a4e6ba366dc7e0ec8d1e599715125bac7324eabf6592cb68",
+    "include/game/FEngLists.h": "cab27e601d6402414b649a5fb1664b2853bd87b600d20ece3db47a4a1db003e3",
     "include/game/FEngObjects.h": "02f629e8c69f1dea4e6856d5dc097102793ef9994758a331698c381b6d1d0df7",
     "include/game/FEngStrings.h": "3fb38fb321893a9cc7e83396ced3500fb9dfbf859a210f4e470c2961e735cc86",
-    "include/game/FEngine.h": "4c04173be7902558548e17533ea9eea20e93970df39fcc467e5df02edd563d26",
+    "include/game/FEngine.h": "2d7c4eeb9090e38959eb1782867529cae0dc69fb0b78621c5b476fb90fd49ed1",
     "include/game/Fader.h": "5e6a829b80a545618de960a1fcb77e1c59c1ea1ba2f2e0fee87d54c2e7c73143",
     "include/game/Fiber.h": "86a5b88a4e003f050e9a365b1a5c582c8d0163426b18fff783e17a465ddbb045",
     "include/game/FlexProp.h": "d4b492f690451a27c03371aa71637f8b6a4109c07ed8ba55de69ae5f256414ff",
@@ -9451,8 +9541,8 @@
     "include/game/Fog.h": "30a37f01f3f665d1f9b3b0a5ef81ea098194595159c5ff794797541c6bf325c0",
     "include/game/Font.h": "aac3ae3971b2a09911276f89091539c78c3d22be4046eca5d1e65a39c2f82e6b",
     "include/game/Frustum.h": "8b459091729087e5119c39887634fd28825b36e40b7a0efdf9a40c2cf58741fe",
-    "include/game/GameSettings.h": "00f5fddd61611735d53cce5773c519e9bd0aee6f24e6ab29731a8a641bca3687",
-    "include/game/GameSettingsViews.h": "a55550e5c7f8fc35bd8db34da42fa8ee804c7d81612634677308a869ec9eb474",
+    "include/game/GameSettings.h": "61bee9694f867cd9c128285396f4160fd9694d647b38dd012d0cd058e11a914b",
+    "include/game/GameSettingsViews.h": "a6d5c2e791c7cc3ac2f6eb6a48657040afab504341288204796a51edf6fe97fd",
     "include/game/GrenadeResponse.h": "a26075782a75877dd754799cb73d6fe55e2a6c6597676869bb956ba8cdb2bed4",
     "include/game/HeadsUpDisplay.h": "23f906aea051f1148504c63cb883c629affb72f857288563152b2e49ad89ff84",
     "include/game/HearingVolume.h": "76a0cf1b1778be270e3b56ac1143a43032c1c3ef9643d510e277c89b7c8757c2",
@@ -9478,6 +9568,7 @@
     "include/game/ParticleRecipe.h": "4d90b1113f2b2bb337559c32abcbf99c5a9a0418d3e404cc8ab814b6b7a64fea",
     "include/game/PathTrack.h": "15fa2d9c336c67c1315921cef67cce813061a193dc51fac3417b482ddd345182",
     "include/game/PathxTrack.h": "f46f02824655f05c7a0c47d71481dfbe5c5845b6b73ae17d5f8f3453b5c4298a",
+    "include/game/PauseMenu.h": "d5eb24cc0a4ff00a237ce0013f7e349f18a1eb3e8fba544e46689d078860576a",
     "include/game/PlacementNew.h": "49819284bb2cc2ffb2039d459ce855bd5a233bcfff0a6412ffe0bda02cd616c5",
     "include/game/PopUpMessage.h": "3ba712308420d487fc901d235bd01e828a92eaff7fe9c095eadb933d05ba7737",
     "include/game/Projector.h": "7d3945fd8c8bf01ed6945d204fa4934da58371aa70da7a28bd39fd2a63f3e90b",
@@ -9499,7 +9590,7 @@
     "include/game/ScriptTimers.h": "a81f3399ff20908469a289229ed0f0aae2c28aa3a9889629e62049e8bb16705b",
     "include/game/ScriptedGag.h": "41ce2a7f909e292930c5279c0ec536596c3b6bc35d11bb27ad6be5d51b9a0235",
     "include/game/Shell.h": "03c36affd7c0f616996096b426e82b2efd08e39aecafbde166641edbd4ccd210",
-    "include/game/ShellManager.h": "e2923227eb223f506831fd2f15441e6251b3d419998fedeb7d5a32e7bcd1af04",
+    "include/game/ShellManager.h": "dc1545769bbcb657858ae6b1be625cb095fdebb54b54d346ecbaed971863553a",
     "include/game/SkyBox.h": "810947bbc2ecf7cb4d69dfa350c055b05d446c04b904abfadaf4828c7be01a55",
     "include/game/SndEAXA.h": "462f6c63008084b8cb5b525d5029b804e760f3859ba6e5676a4d36461906da13",
     "include/game/SndMicroTalk.h": "47d54f16635c2a64944419af8564ee38901f410b5dc9d139ed973fb87d8ff937",
@@ -10407,15 +10498,38 @@
     "src/frontend/fe_findchild.cpp": "3006814fc242a6cc26f470caaaa3445e08e4abc1ff9947055aff2284f9c496a0",
     "src/frontend/fe_generateescapesequence.cpp": "f72477ed5288e84ce4e22224343f50ffc3e549510881941258c322e23b3b390a",
     "src/frontend/fe_referencelist.cpp": "8695bb2d7b711a1450cd833c4ec517a37f94cbe4ba0c458956726f95ed6f78a7",
+    "src/frontend/febuttonmap_setcount.cpp": "a945e4cae5f896d5634d44f0fe4cbac41491c373782e1c8764ca39ace1cc1e4c",
+    "src/frontend/feevent_assign.cpp": "494643092a9e75e09122bd565946d5f39c426be533f628626c8fc99cdcc18bf1",
+    "src/frontend/fekey_createkeyat.cpp": "529774e667903cb78e59a9d358fd650434984cb4f00bd9af16903b01f8d23909",
+    "src/frontend/fekeynode_pool.cpp": "8d63867f60d947760cc20b0e2023f881a6a206f687d3462c4ec484be83607ba6",
+    "src/frontend/felistbox_cleanupcolumns.cpp": "d1fc349dc5be066b9a748f25b2e2dfd544ddee8facfd278a291619900b8cb59a",
+    "src/frontend/felistbox_dtor.cpp": "ef35ed0d4c2291986f146c62be7cf7c555a637979b30106a76f09ce015cde7d7",
+    "src/frontend/felistbox_setautowrap.cpp": "c130b792c16ea6bedf4da9ebfb9bf4be0226be8c6cfaeba79748a1a676da09b3",
+    "src/frontend/felistbox_setcelltype.cpp": "6e3d515fab585be9543f8078b575157b93e7aa0e91d049abee11b3dc576f7273",
     "src/frontend/femessageresponse.cpp": "8383de6e6ca5707957b27223878c529b4e430c5d2663e4707217fb73176070cd",
     "src/frontend/fengine_addtoidlelist.cpp": "79853aec42c20268dd2b09ca07ad06ab00180016046f55219a96e8edb270e31f",
+    "src/frontend/fengine_checkmoviedemoscreen.cpp": "aa105cd84f3b85923003f77af7368683c015e32771c149061a3aabb6f5f62893",
     "src/frontend/fengine_clearpackagemarkers.cpp": "c53ffb148f7e384281510157164b9264b6f863c833dab85e4a2aafd7caded283",
+    "src/frontend/fengine_processlistboxresponses.cpp": "a9e8698ebbd759fa87703f16c848025c919fa90c7093c8037a86ed596a810779",
+    "src/frontend/fengine_queuemessage.cpp": "a9ea960129c10504dd96ef9148519cee4e75f7d816ccfed443be938ca9934ec0",
+    "src/frontend/fengine_recallpackagemarker.cpp": "e5b05c32666b67d70833448b224b8c49542fa96bbc83e6b0d5f6b644575952a3",
     "src/frontend/fengine_recordlastpackagebutton.cpp": "def967d88c4b012513e6cc2e0fc3eccd576394e000086eae084dd306c86e1719",
     "src/frontend/fengine_resetjoypad.cpp": "84fabc3c164ba48aaccdc0e354b3d45757c69a94368f07955ed12383c8aa93e8",
-    "src/frontend/feobj_findscript.cpp": "24b62cdefc2b1541ebfee1b8a9206fac27b7389cc46643736748320c64581748",
-    "src/frontend/feobj_setcurrentscript.cpp": "b90076a1eae423e1fbd55f98891b56427c89afc2795034826960e8b723882b2c",
+    "src/frontend/fengine_setnumjoypads.cpp": "19e87aa8be04927a7905d5ad4b46215d276cd267615e16505e670ad8f408e98c",
+    "src/frontend/feobj_findscript.cpp": "2ce175736ebf456c961a9f787f0a4d0e332ea3cf1cf3f0ba8c8ff711ebb88257",
+    "src/frontend/feobj_setcurrentscript.cpp": "73cfa9586980642accee98e5703ebbbabafdeff6a03de1ae5d63587beac804ad",
     "src/frontend/feobj_setdatasize.cpp": "2402e3d657e09d4316eb1db6f746e750e9509a8d5ce7932d2331066321aecf01",
     "src/frontend/feobj_setscript.cpp": "b0d4e885805696fc315444476456a387857c8ff6bf746bf4eb5bc0c0ebfe15d8",
+    "src/frontend/feobject_dtor.cpp": "5410db4cf63a68d9224e12681547ac788287defd7ff98089fa693541bab89082",
+    "src/frontend/feobject_getdataoffset.cpp": "d80a6a314982e743470b8b70576a91bb61f6975e0f33b27b35ad4d685b48804c",
+    "src/frontend/feobject_setname.cpp": "513c87ab60f904679f22e3186c2f6fda08e82a0fd30a920b892cb75787e6f303",
+    "src/frontend/fepackage_callback.cpp": "af03a447e40ddc1fc640db7f82c583689fca456f375e37ef21f0d4c2119203d6",
+    "src/frontend/fepackage_connectobjectresources.cpp": "52293e6e90699e9f366e2edac30c5bc6763542dd6a79af51ece3a577d5972e61",
+    "src/frontend/fepackage_setfilename.cpp": "2704f2ba038151a354b702073a4a5f9b4fdf20830663a04de665d66dd4b92c00",
+    "src/frontend/fepackage_update.cpp": "4f20f2954b321d1f5de7bbc4c0146d684c0e6309dd2ce548079c4e5e31e5f607",
+    "src/frontend/fepackage_updategroup.cpp": "f53eb15886f5b52092adad9ba4a81949da77a3a0d49ba5ef71cc65dfce685ee9",
+    "src/frontend/fereader_fepackagereader.cpp": "cddd9475dc5e1d57af1be1cdda095d23b798c15333e77ecdc4d3b99cace36d8c",
+    "src/frontend/fereader_gettypesize.cpp": "b591bfe4ecfd66a2a6940c57e8511b53ad01a04c2bfdaa319a965b0fc13e8958",
     "src/frontend/fescript_init.cpp": "acca2ac0e2fdddac0893017f3bc8c3149a48f34039ca67c6c002a362b86e66e8",
     "src/frontend/fescript_pool.cpp": "462ba70b9980a98bfbecab1ffc5ee5b2e103e16ebd541daad3df72b0b5cb4fc8",
     "src/frontend/feslotpool.cpp": "16006d3616e75c42e460305edd0935c44f5ffaf272dd92127e442f24a7dc5405",
@@ -10442,6 +10556,7 @@
     "src/frontend/shell_iscoopontop.cpp": "fd1065e627cd0b02f7460a7088c28703ee1e94ebf8510d601014a263bdf0c57c",
     "src/frontend/shell_playmovie.cpp": "4315dfb7828d32ae8ee03af7e20e6eec6d92c30839b8664058a8417d615154de",
     "src/frontend/shell_push.cpp": "41af18cdf93a4eb2b21ae2620ec77a7ff9cc690f93699907faa8b433fac08c2e",
+    "src/frontend/shell_reset.cpp": "3bca8761e976580f8f330ecf7fc3eeaaa9679cda21fea9c82dfd1c82081c9c6c",
     "src/frontend/shell_updateunplugged.cpp": "5dec5ac7b519a96f0eb0c3873ec45129c96689b2b79a3ab8b1ef42decd2bf078",
     "src/frontend/uppercase.cpp": "58d80513a4f76209e1895c6943d7e05837625be3bd2687efe32159afd23f70dd",
     "src/frontend/usermessages_access.cpp": "41716b6c646c0838ec302212e35f8ece4f43914f5a10cbdd6fec31ad50f4081a",
@@ -12066,6 +12181,11 @@
     "src/ui/hud_state.cpp": "f5f5944c66068c0b4c68b6010929e965058bec5229538e55eb885d12760dce44",
     "src/ui/hud_target.cpp": "cda7f687b59790c0323c40360afae9b4c21fdcdd7ed4ed96087d85c87b83a9dd",
     "src/ui/hud_update.cpp": "e863deecb7975c603d502aa0acc33a2e7929e47bc13f2bdeb615eff8700e8569",
+    "src/ui/pausemenu_cpausemenu.cpp": "96d42644125c9c6272aa63ce149c42fdc81dfad8e031b17ffb516780dd7694ef",
+    "src/ui/pausemenu_processuievent.cpp": "cb89bb40218ff0ea7d64aa17383c3eb911ec4ef80e5c04876df998168dc0b742",
+    "src/ui/pausemenu_pushsavescreen.cpp": "a4d12445bee6e60ccb71bb860145e849e672c0105d4384d2e193eeccf590cab9",
+    "src/ui/pausemenu_reset.cpp": "2171d4a180cf4bfcbeda5e12cd6cc176f8b0b73b3f5a224182fb0f49d1187535",
+    "src/ui/pausemenu_update.cpp": "95069132838e3d88c329be4dd5e28169faa78b63de6af6e83e086c100fd975a5",
     "src/ui/pum_a.cpp": "e93aea8e4a9dbb0ea6c0ffba3f5452d54e8a8bfbf7b494f052f96fec9dc06b0b",
     "src/ui/pum_b.cpp": "88811cd79a6f1a76cfc7fc8d47ea21ff13cc6f567ee474fa93f8263ad1cad5f4",
     "src/ui/pum_c.cpp": "4dee207934fa40fc0bbd9de25846a602ab7073d14a5c9fa9147eb3c42b0bc847",
@@ -57321,6 +57441,528 @@
       "discarded_functions": [],
       "object_sha256": "f06a76d729731417d5344bb4a4e0da36f7d02c5868d851275e3704172535d59c",
       "linked_sha256": "bf15b595aedafb9fb80bd208881c29ca77b4fb36ca771fbc4a9ca16f5cc8a80b"
+    },
+    {
+      "id": "fepackage_callback",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 96,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "ad4428ba5b1f7fd4065032a54026d63e83dedd651af9581d10bd8033335a9d2f",
+      "linked_sha256": "a396a0d0c4f651cb662096ee3b5d28e5a3f80dc7c63a92401c533d062fe04c1e"
+    },
+    {
+      "id": "fepackage_setfilename",
+      "category": "reconstructed_game",
+      "functions": 9,
+      "code_bytes": 880,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "c647e79d5e2d73322a2bf0f01c963483a5ee5c6401b96c3493b24ced0e959702",
+      "linked_sha256": "ca344cd0566bf988300b027c455df77f5e75594f02eb96bae994b97e1d2c422b"
+    },
+    {
+      "id": "fepackage_updategroup",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 108,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "410cccbbc6b55ea4164f4859b08d061d7a1c8acf71c5b225e3d7d84e095e676f",
+      "linked_sha256": "03b3ab17a545f5636b2d6095f09f931a5207a1374d31f034370e231c69a83fdf"
+    },
+    {
+      "id": "fepackage_update",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 428,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "211f1ed632e68130649bbe5f1db0029d999f416d1a1e6a4e05256cf0854288f8",
+      "linked_sha256": "309ee5c4645948dff48a6e438a46ab785d01f0b892f1727f671ca317bbaf566f"
+    },
+    {
+      "id": "fepackage_connectobjectresources",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 372,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "94a544bc2509b21060066362be6d6048ebdef8dddfe835153adaed5425609af0",
+      "linked_sha256": "3177c9fda10db784e4abf91dd12d5f750868b7d4ebbbfa45817e7bd162fcefd8"
+    },
+    {
+      "id": "fengine_setnumjoypads",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 228,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "103040a04421f30d9ffcd5ecb04a82d734f21fe9475f4d0ced4ed3778740c2c3",
+      "linked_sha256": "27a6e3fa33b111adaf9f59bed1fa7fc5491fa1eb77b30a8cdb0c13fb2bc1d959"
+    },
+    {
+      "id": "fengine_checkmoviedemoscreen",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 108,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "a896b6355a1a4900ff91e7bcea0251e857edac53709a246d8a923f37e0a728c4",
+      "linked_sha256": "fa3e077ad72276a7099f166463c8d1213bafb07bc87984cfa8d67251f9e2b890"
+    },
+    {
+      "id": "fengine_queuemessage",
+      "category": "reconstructed_game",
+      "functions": 6,
+      "code_bytes": 868,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "52557bd7264f25c99e76c3e756f63d9256f4707a53bc319b66a23fab5f4f6cca",
+      "linked_sha256": "9cc04efd91c016d4cf67ada3ce9be2a846eaa2a927d07778758d706ccffb0fdf"
+    },
+    {
+      "id": "fengine_processlistboxresponses",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 592,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "0e00ba3f9823457999b9618a3df39b72915bf3555318dd3dbbbd7eef118d4b3f",
+      "linked_sha256": "bf34c9e012e480f59e6093bb3969728bba65f9bba382cb0b84858870d26fd5cd"
+    },
+    {
+      "id": "fengine_recallpackagemarker",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 48,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "62bf4519d3d9b7fbf089997ab93ed6fa0fd497db56757ad907cc8d8e640da45f",
+      "linked_sha256": "26e2851fdca80083edaed520d6c270a134269a62d4c84df1cafb4c8b491431ba"
+    },
+    {
+      "id": "feobject_dtor",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 196,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "9b3ffc40116bdbada681e9b5126b2df8621ac0048258e59769989ba1d77bbfb2",
+      "linked_sha256": "10d857b884c17e7f88f571c091c6a6ae16dd840503a7c1a12262c4127f9bc313"
+    },
+    {
+      "id": "feobject_setname",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 140,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "8af2636b6823342cd67269db5ee8985ba6bc562324b7bf2a90530b374af58b93",
+      "linked_sha256": "5ce532c8b969b744078ea7be1b35cf72b88a1635a370090b8d702eb3f9d575cc"
+    },
+    {
+      "id": "feobject_getdataoffset",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 288,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "bcf8b9c2d16782f11808ae68dbedc4b91f6d218be0d06120b99ec0fc2e89a3ef",
+      "linked_sha256": "622c086abb4ce9f491fc2a340bd02615bc93388b56947d38e1b813e31658b5e1"
+    },
+    {
+      "id": "febuttonmap_setcount",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 104,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "21e0256fac23d9064d50706ee4d2973ba62c97ef1ff6d73df0dcd50c1ea09d30",
+      "linked_sha256": "96bd03838b195b36f8e383d09d4a742c0ce93a00fd36a5baf1ba24cde9b131bc"
+    },
+    {
+      "id": "feevent_assign",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 72,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "9b76dd6638b9f0830780015b5b23efa3b1727f265cc1c317bdeba951362dc8fe",
+      "linked_sha256": "fc3c5358a97c9d31d7b627db817a90f26fff80d84cfefbbcfeb36073724fdfdf"
+    },
+    {
+      "id": "fekeynode_pool",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 528,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "8ea4452e20ec9425efe48625904d4fc6041767a2d35c340cd38400b228f11bcb",
+      "linked_sha256": "4bde2e516347218b26ce4f3748815d63e109eb72db4c15d9f6a72c97c311ede4"
+    },
+    {
+      "id": "fekey_createkeyat",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 192,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "cedffe6ddda5f769e2c471c0750f00f781bd309a822c87580ddea4beaa976932",
+      "linked_sha256": "ced1153945e3f911710331d66902428d55014a2996cbc3f590f7cf8087c22c6b"
+    },
+    {
+      "id": "pausemenu_cpausemenu",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 236,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "de6e3b0432a095803d1f41177946d19110f5f09d61273507c3856bde774d6daa",
+      "linked_sha256": "fd4971dc77f7c02be725b7d63e190ff5ef1570fd8987e655d9a6bbec39bd61ec"
+    },
+    {
+      "id": "pausemenu_reset",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 536,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "35dd537b14700c21121c01b14adb849b42ef3e8570fe19971fd523fdb2410438",
+      "linked_sha256": "d2b5faefbc0a73ca62eb5ab38819b9292c7e721d2acd5f277a5ba57377de1c08"
+    },
+    {
+      "id": "pausemenu_processuievent",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 76,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "557858edd9fea1bc5ac71bafd623cb6145c91deb27829b275ff541db79d6c68f",
+      "linked_sha256": "9e1821f7d6139bcc7e119285fd06d8cb74731e5159f0aa9d531cf6de1d28ae71"
+    },
+    {
+      "id": "pausemenu_update",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 696,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "5d9f9b8ff7bf28bdbe08e07160b352bb321d5c28ce8122da3c11f378dddf16fc",
+      "linked_sha256": "23dcad76b99b5be3281dee9a40b71e86307804b02fd75969b1b6986163c69c09"
+    },
+    {
+      "id": "pausemenu_pushsavescreen",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 168,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "36873fabe3af01f076e624d4c59e0a0e9b700f3f4cca94d4dc5635e75236c03c",
+      "linked_sha256": "c341a2ae3b4f6410d9389a8b0880ed7200d9fdb97c14c5bc84fd4c6a57f18916"
+    },
+    {
+      "id": "felistbox_dtor",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 156,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "edf35f4979f60298854c22f9bfdf810f41ad0f2fd9a0c176353c43712dded6a2",
+      "linked_sha256": "f1db537087a78e2343bd41d2181e610a6563e49ea59d2ffc328ae1985cc9267b"
+    },
+    {
+      "id": "felistbox_setcelltype",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 340,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "ef44c19048387aabe39c025cdd93c492a6946185dbd6872616b3b861d73fdd59",
+      "linked_sha256": "2f53ea67cf886f24bed850ca112db7d843b2304c0548f89d3249dd8f637b92fd"
+    },
+    {
+      "id": "felistbox_setautowrap",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 80,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e86460666883f4052e94a2f3a9a0fe5fa1ca3adf1b3297c38af4c6c733af35ca",
+      "linked_sha256": "71437c8c684df6665b7ca3182b1c43183556005e558a8aba8248c222186809e6"
+    },
+    {
+      "id": "felistbox_cleanupcolumns",
+      "category": "reconstructed_game",
+      "functions": 6,
+      "code_bytes": 580,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "9e296b67d95de1aa27796dedee7822783f96bad3699f196a1fe2987dad735dfa",
+      "linked_sha256": "8933f68500d026dbca48a6d4eb399526c9799e48d85daab9933b2d3f917b234f"
+    },
+    {
+      "id": "shell_reset",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 152,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "852a9eb64e94128f2edf4d4f7d8f0016c43d68ee7829243fa034c171edb287c2",
+      "linked_sha256": "652c83ee29e6a0f033b1f3a0ca79cab35e529cfdbe1f10e88ecd3553134824e0"
+    },
+    {
+      "id": "fereader_fepackagereader",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 140,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "bbad6ce3fe2a7a9afd93d7bf7363f05f299134bda6e102317cc99da3f78fc99b",
+      "linked_sha256": "adbe791bda84f12b1b0fb6efab90112361cd21f9ecf20f5c9e4e97fc56dac2d3"
+    },
+    {
+      "id": "fereader_gettypesize",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 124,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "41c0a9c446fd05275fdb0cc7a7d2d3961e55db1f3d8aec5e7ca5961c0b30ce92",
+      "linked_sha256": "1623356b22e4dd5204aa7dde37b3c65ec1edeafbf309d9f2fd03e81053727197"
     }
   ],
   "code_map": {
@@ -57434,13 +58076,6 @@
         "file_record": 23,
         "file_name": "FEButtonMap.cpp",
         "ranges": [
-          {
-            "address": "0x80045808",
-            "size": 104,
-            "kind": "function",
-            "name": "SetCount__11FEButtonMapUl",
-            "evidence": "adjacent-compiler-markers"
-          },
           {
             "address": "0x80045870",
             "size": 624,
@@ -57654,13 +58289,6 @@
         "file_name": "FEEvent.cpp",
         "ranges": [
           {
-            "address": "0x8004795c",
-            "size": 72,
-            "kind": "function",
-            "name": "__as__11FEEventListR11FEEventList",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800479a4",
             "size": 216,
             "kind": "function",
@@ -57813,21 +58441,12 @@
             "kind": "function",
             "name": "__as__10FEKeyTrackR10FEKeyTrack",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80048f5c",
-            "size": 300,
-            "kind": "function",
-            "name": "__nw__9FEKeyNodeUi",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80049088",
-            "size": 228,
-            "kind": "function",
-            "name": "__dl__9FEKeyNodePv",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 8004916c",
+        "ranges": [
           {
             "address": "0x8004916c",
             "size": 148,
@@ -57848,14 +58467,12 @@
             "kind": "function",
             "name": "InsertKey__10FEKeyTrackP9FEKeyNode",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80049338",
-            "size": 192,
-            "kind": "function",
-            "name": "CreateKeyAt__10FEKeyTrackl",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 800493f8",
+        "ranges": [
           {
             "address": "0x800493f8",
             "size": 228,
@@ -57935,21 +58552,12 @@
             "kind": "function",
             "name": "__9FEListBox",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80049ab8",
-            "size": 72,
-            "kind": "function",
-            "name": "_._9FEListBox",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80049b00",
-            "size": 84,
-            "kind": "function",
-            "name": "Terminate__9FEListBox",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 80049b54",
+        "ranges": [
           {
             "address": "0x80049b54",
             "size": 456,
@@ -57963,28 +58571,12 @@
             "kind": "function",
             "name": "SetNumRows__9FEListBoxUl",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80049ea0",
-            "size": 120,
-            "kind": "function",
-            "name": "SetCellType__9FEListBoxUl",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80049f18",
-            "size": 156,
-            "kind": "function",
-            "name": "SetCellString__9FEListBoxPCs",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80049fb4",
-            "size": 64,
-            "kind": "function",
-            "name": "IncrementCellByColumn__9FEListBox",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 80049ff4",
+        "ranges": [
           {
             "address": "0x80049ff4",
             "size": 1160,
@@ -57998,68 +58590,17 @@
             "kind": "function",
             "name": "Update__9FEListBoxf",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8004a5cc",
-            "size": 40,
-            "kind": "function",
-            "name": "SetAutoWrap__9FEListBoxb",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8004a5f4",
-            "size": 40,
-            "kind": "function",
-            "name": "InitializeListEntry__9FEListBoxP15FEListEntryDataUl",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 8004a61c",
+        "ranges": [
           {
             "address": "0x8004a61c",
             "size": 132,
             "kind": "function",
             "name": "InitializeCell__9FEListBoxP13FEListBoxCellUl",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8004a6a0",
-            "size": 80,
-            "kind": "function",
-            "name": "CleanupColumns__9FEListBox",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8004a6f0",
-            "size": 80,
-            "kind": "function",
-            "name": "CleanupRows__9FEListBox",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8004a740",
-            "size": 164,
-            "kind": "function",
-            "name": "CleanupCells__9FEListBox",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8004a7e4",
-            "size": 124,
-            "kind": "function",
-            "name": "RecalculateCummulative__9FEListBox",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8004a860",
-            "size": 104,
-            "kind": "function",
-            "name": "CompleteScroll__9FEListBox",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8004a8c8",
-            "size": 28,
-            "kind": "function",
-            "name": "GetPCellData__9FEListBoxUlUl",
             "evidence": "unknown-file"
           }
         ]
@@ -58357,13 +58898,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8004cc64",
-            "size": 228,
-            "kind": "function",
-            "name": "SetNumJoyPads__7FEngineUc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8004cdf4",
             "size": 132,
             "kind": "function",
@@ -58389,13 +58923,6 @@
             "size": 460,
             "kind": "function",
             "name": "PushPackage__7FEnginePCcUcUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004d480",
-            "size": 108,
-            "kind": "function",
-            "name": "CheckMovieDemoScreen__7FEnginePc",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -58441,80 +58968,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8004eda8",
-            "size": 208,
-            "kind": "function",
-            "name": "QueueMessage__7FEngineUlP8FEObjectP9FEPackageT2Ul",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004ee78",
-            "size": 68,
-            "kind": "function",
-            "name": "SendMessageToGame__7FEngineUlP8FEObjectP9FEPackageUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004eebc",
-            "size": 156,
-            "kind": "function",
-            "name": "QueuePackageSwitch__7FEnginePCcP9FEPackage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004ef58",
-            "size": 160,
-            "kind": "function",
-            "name": "QueuePackagePush__7FEnginePCcP9FEPackageUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004eff8",
-            "size": 132,
-            "kind": "function",
-            "name": "QueuePackagePop__7FEngineP9FEPackage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004f07c",
-            "size": 144,
-            "kind": "function",
-            "name": "QueuePackageUserTransfer__7FEngineP9FEPackagebUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8004f10c",
             "size": 868,
             "kind": "function",
             "name": "ProcessMessageQueue__7FEngine",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004f470",
-            "size": 172,
-            "kind": "function",
-            "name": "ProcessListBoxResponses__7FEngineP8FEObjectP9FEPackageUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004f51c",
-            "size": 172,
-            "kind": "function",
-            "name": "ProcessCodeListBoxResponses__7FEngineP8FEObjectP9FEPackageUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004f5c8",
-            "size": 160,
-            "kind": "function",
-            "name": "ProcessObjectMessage__7FEngineP8FEObjectP9FEPackageUlUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004f668",
-            "size": 88,
-            "kind": "function",
-            "name": "ProcessGlobalMessage__7FEngineP9FEPackageUlUl",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -58536,13 +58993,6 @@
             "size": 80,
             "kind": "function",
             "name": "RecordPackageMarker__7FEnginePCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8004ff1c",
-            "size": 48,
-            "kind": "function",
-            "name": "RecallPackageMarker__7FEngine",
             "evidence": "adjacent-compiler-markers"
           }
         ],
@@ -58578,20 +59028,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80050280",
-            "size": 196,
-            "kind": "function",
-            "name": "_._8FEObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8005039c",
-            "size": 140,
-            "kind": "function",
-            "name": "SetName__8FEObjectPCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8005045c",
             "size": 856,
             "kind": "function",
@@ -58610,20 +59046,6 @@
             "size": 304,
             "kind": "function",
             "name": "SetPosition__8FEObjectRC9FEVector3b",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80050b28",
-            "size": 212,
-            "kind": "function",
-            "name": "GetDataOffset__8FEObject18FEKeyTrack_Indices",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80050bfc",
-            "size": 76,
-            "kind": "function",
-            "name": "Clone__8FEObjectb",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -58652,13 +59074,6 @@
         "file_name": "FEPackage.cpp",
         "ranges": [
           {
-            "address": "0x80050cd8",
-            "size": 96,
-            "kind": "function",
-            "name": "Callback__18PackageInitStateCBP8FEObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80050d38",
             "size": 256,
             "kind": "function",
@@ -58673,80 +59088,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80050fac",
-            "size": 116,
-            "kind": "function",
-            "name": "SetFilename__9FEPackagePCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80051020",
-            "size": 108,
-            "kind": "function",
-            "name": "Startup__9FEPackageP15FEGameInterface",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8005108c",
-            "size": 72,
-            "kind": "function",
-            "name": "Shutdown__9FEPackageP15FEGameInterface",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800510d4",
-            "size": 52,
-            "kind": "function",
-            "name": "FindResponse__9FEPackageUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80051108",
-            "size": 152,
-            "kind": "function",
-            "name": "ForAllChildren__9FEPackageP7FEGroupR16FEObjectCallback",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800511a0",
-            "size": 152,
-            "kind": "function",
-            "name": "ForAllObjects__9FEPackageR16FEObjectCallback",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80051238",
-            "size": 60,
-            "kind": "function",
-            "name": "FindObjectByName__9FEPackagePCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80051274",
-            "size": 84,
-            "kind": "function",
-            "name": "FindObjectByHash__9FEPackageUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800512c8",
-            "size": 84,
-            "kind": "function",
-            "name": "FindObjectByGUID__9FEPackageUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8005131c",
             "size": 516,
             "kind": "function",
             "name": "IssueScriptMessages__9FEPackageP7FEngineP8FEObjectP8FEScriptll",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80051520",
-            "size": 108,
-            "kind": "function",
-            "name": "UpdateGroup__9FEPackageP7FEGroupl",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -58764,52 +59109,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80051be8",
-            "size": 92,
-            "kind": "function",
-            "name": "Update__9FEPackageP7FEnginel",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80051c44",
-            "size": 204,
-            "kind": "function",
-            "name": "SetCurrentButton__9FEPackageP7FEngineP8FEObjectb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80051d10",
-            "size": 132,
-            "kind": "function",
-            "name": "Callback__17ResourceConnectorP8FEObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80051d94",
             "size": 316,
             "kind": "function",
             "name": "ConnectListBoxResources__17ResourceConnectorP9FEListBox",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80051ed0",
-            "size": 84,
-            "kind": "function",
-            "name": "ConnectObjectResources__9FEPackage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80051f24",
-            "size": 216,
-            "kind": "function",
-            "name": "SetNumLibraryRefs__9FEPackageUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80051ffc",
-            "size": 72,
-            "kind": "function",
-            "name": "FindLibraryReference__C9FEPackageUl",
             "evidence": "adjacent-compiler-markers"
           }
         ],
@@ -58824,27 +59127,6 @@
         "file_name": "FEPackageReader.cpp",
         "ranges": [
           {
-            "address": "0x800521d8",
-            "size": 48,
-            "kind": "function",
-            "name": "__15FEPackageReader",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80052208",
-            "size": 40,
-            "kind": "function",
-            "name": "_._15FEPackageReader",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80052230",
-            "size": 52,
-            "kind": "function",
-            "name": "Reset__15FEPackageReader",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80052264",
             "size": 320,
             "kind": "function",
@@ -58856,13 +59138,6 @@
             "size": 216,
             "kind": "function",
             "name": "FindChild__15FEPackageReaderP7FEChunkUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8005247c",
-            "size": 124,
-            "kind": "function",
-            "name": "GetTypeSize__15FEPackageReaderUl",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -73706,120 +73981,44 @@
         ]
       },
       {
-        "name": "Unknown file/.text @ 8017deb0",
+        "name": "Unknown file/.text @ 8017df9c",
         "ranges": [
-          {
-            "address": "0x8017deb0",
-            "size": 76,
-            "kind": "function",
-            "name": "__10CPauseMenu",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8017defc",
-            "size": 88,
-            "kind": "function",
-            "name": "_._10CPauseMenu",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8017df54",
-            "size": 72,
-            "kind": "function",
-            "name": "Shutdown__10CPauseMenu",
-            "evidence": "unknown-file"
-          },
           {
             "address": "0x8017df9c",
             "size": 244,
             "kind": "function",
             "name": "Init__10CPauseMenu",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8017e090",
-            "size": 228,
-            "kind": "function",
-            "name": "Reset__10CPauseMenuPCcb",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8017e174",
-            "size": 128,
-            "kind": "function",
-            "name": "QuitToShell__10CPauseMenub",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8017e1f4",
-            "size": 60,
-            "kind": "function",
-            "name": "RestartLevel__10CPauseMenu",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8017e230",
-            "size": 76,
-            "kind": "function",
-            "name": "MPRestartLevel__10CPauseMenu",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8017e27c",
-            "size": 44,
-            "kind": "function",
-            "name": "UnpauseGame__10CPauseMenu",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 8017e2a8",
+        "ranges": [
           {
             "address": "0x8017e2a8",
             "size": 712,
             "kind": "function",
             "name": "DoGameloop__10CPauseMenuPCc",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8017e570",
-            "size": 4,
-            "kind": "function",
-            "name": "ProcessUIEvent__10CPauseMenuUiUiP8FEObjectP9FEPackage",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8017e574",
-            "size": 72,
-            "kind": "function",
-            "name": "ProcessSoundEvent__10CPauseMenuUiUiP8FEObjectP9FEPackage",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 8017e5bc",
+        "ranges": [
           {
             "address": "0x8017e5bc",
             "size": 580,
             "kind": "function",
             "name": "UpdateUnplugged__10CPauseMenu",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8017e800",
-            "size": 348,
-            "kind": "function",
-            "name": "Update__10CPauseMenuf",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8017e95c",
-            "size": 156,
-            "kind": "function",
-            "name": "DrawUnplugged__10CPauseMenu",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8017e9f8",
-            "size": 192,
-            "kind": "function",
-            "name": "Draw__10CPauseMenu",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 8017eab8",
+        "ranges": [
           {
             "address": "0x8017eab8",
             "size": 908,
@@ -73839,20 +74038,6 @@
             "size": 40,
             "kind": "function",
             "name": "PlayLettersMovie__10CPauseMenu",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8017ee94",
-            "size": 156,
-            "kind": "function",
-            "name": "PushSaveScreen__10CPauseMenu",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8017ef30",
-            "size": 12,
-            "kind": "function",
-            "name": "BeginSaving__10CPauseMenu",
             "evidence": "unknown-file"
           }
         ]
@@ -74035,13 +74220,6 @@
             "size": 264,
             "kind": "function",
             "name": "InitLocalizer__12ShellManagerPCcT1",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801818ec",
-            "size": 152,
-            "kind": "function",
-            "name": "Reset__12ShellManagerPCc",
             "evidence": "adjacent-compiler-markers"
           },
           {

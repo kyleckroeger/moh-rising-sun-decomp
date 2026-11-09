@@ -71,6 +71,7 @@ struct SSaveData {
     unsigned int savePointID : 6;    // Top six bits of the half word at +0x002.
     unsigned int levelWon : 1;       // Mask 0x200 of the word at +0x000.
     unsigned int unknownBits : 8;
+    unsigned int quitFlag : 1;       // Low bit of the word at +0x000; set by CPauseMenu::QuitToShell.
     int ambientTrack;                // +0x004
     int oneShotBank;                 // +0x008
     int musicEvent;                  // +0x00c
@@ -417,7 +418,8 @@ struct GameFlowView {
     int unknown_0;
     int levelIsShell; // +0x4; Init stores CurrentLevelIsShell.
     int levelEnding; // +0x8; set by BIFunc_EndLevel and CPauseMenu::RestartLevel.
-    unsigned char unknown_c[0x14 - 0xc];
+    int startingMP; // +0xc; set by SetStartMPDataFromShell. Name inferred.
+    unsigned char unknown_10[0x14 - 0x10];
 };
 extern GameFlowView g_GameFlow;
 

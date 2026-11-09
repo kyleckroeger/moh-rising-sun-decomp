@@ -30,7 +30,6 @@ class FEKeyNode : public FEMinNode {
     void operator delete(void *);
 };
 
-enum FEKeyTrack_Indices { FEKeyTrackIndex0 = 0 };
 
 class FEKeyTrack {
   public:

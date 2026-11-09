@@ -83,8 +83,18 @@ pools and allocations. `FEKeyTrack`'s members are inferred from `FEScript`'s tra
 `FEScriptEventList` is a descriptive name for the two words at `FEScript+0x24` that its destructor releases.
 `FERefList::GetHead` is inline, recursive through a reference, which is why it has an out-of-line copy.
 
-`FEObject`'s flag word at `+0x1c`, data block at `+0x2c`, response and script lists and current
-script at `+0x54` are verified by its methods and `PackageHandler`'s. Its data comes from the file-local
+`CPauseMenu` derives from `CUIObject` (tables at `_vt.10CPauseMenu` and `_vt.9CUIObject`); `PauseMenu.h` holds the
+members its methods touch. `FEListBox` holds rows and columns of 48-byte cells; the meanings of most cell
+members are not known. `FEPackageReader` reads little-endian chunk files; only its reset fields and type-size
+table are modeled so far.
+
+`FEObject` derives from `FEMinNode`, not `FENode`: its constructor stores the minimal node's table directly,
+and its name and hash sit at `+0x14` and `+0x10`, with a GUID from `FEngine::SysGUID` at `+0xc`. Its flag
+word at `+0x1c`, resource fields at `+0x22` to `+0x28`, data block at `+0x2c`, response and script lists
+at `+0x34` and `+0x44`, and current script at `+0x54` are verified by its methods and `PackageHandler`'s.
+`FEMessageNode` and `FEPackageCommand` are the queued messages and package commands; `FEngine` holds
+them at `+0x4128` and `+0x4138`. The game interface slots named in `ShellManager.h` follow the calls that
+use them; `CanUnloadPackages` is a descriptive name, from its one call. Its data comes from the file-local
 pool `ObjDataPool`.
 
 Not yet exact: `Close` (FEObject.cpp, a float range test), `GetStringLength` (register allocation), `FEColor::operator-` (load order),

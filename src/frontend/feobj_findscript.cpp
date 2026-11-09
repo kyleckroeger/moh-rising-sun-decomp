@@ -12,7 +12,7 @@ class FEMessageResponse : public FEMinNode {
 };
 
 FEScript *FEObject::FindScript(unsigned long hash) const {
-    FEScript *script = scripts;
+    FEScript *script = (FEScript *)scriptList.head;
     while (script && script->hash != hash) script = (FEScript *)script->next;
     return script;
 }

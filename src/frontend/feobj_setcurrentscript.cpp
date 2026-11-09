@@ -16,7 +16,7 @@ void FEObject::SetCurrentScript(FEScript *script) {
     if (script) SetupMoveToTracks();
 }
 FEMessageResponse *FEObject::FindResponse(unsigned long message) const {
-    FEMessageResponse *response = responses;
+    FEMessageResponse *response = (FEMessageResponse *)responseList.head;
     while (response && response->message != message) response = (FEMessageResponse *)response->next;
     return response;
 }
