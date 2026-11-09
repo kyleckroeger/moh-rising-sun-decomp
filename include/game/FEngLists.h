@@ -85,6 +85,7 @@ class FEObject : public FEMinNode {
     FEScript *FindScript(unsigned long) const;
     void SetCurrentScript(FEScript *);
     void SetupMoveToTracks();
+    void SetPosition(const struct FEVector3 &, bool);
     void SetDataSize(unsigned long);
     FEMessageResponse *FindResponse(unsigned long) const;
     void SetScript(unsigned long, bool);

@@ -158,3 +158,9 @@ Not yet exact: `HandlerPauseBriefingOverlay::HandleEvent` and `HandlerPauseOutro
 The handlers' smaller methods follow the same layout. `HandlerVirtualKeyboard`'s two extra table slots return its string and
 its length, which is why `ClearStringField` and `AddLetterToString` call through the table. `HandlerStatsScreen`'s
 `specialPearlStats` is named after `CheckToSeeIfSpecialPearlStatsAreNeeded`, the only method that sets it.
+
+The handlers that scan memory cards derive from `CMemoryCard::ScanTask` as well, so `+0x50` holds its table and their members start
+at `+0x54`. Each `Execute` copies a file's name and size into a table of `SProfileScanEntry`, whose name is inferred;
+`HandlerCoopProfile`'s copy leaves the terminator to the zeroed table. `HandlerProfileSelect` keeps its table in the object, the others
+in a static. `keyboardAllowsEmpty` in `ShellManager` is inferred from `HandlerOnlineKeyboard`, which rejects an empty string only while it
+is clear.

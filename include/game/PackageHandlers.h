@@ -13,8 +13,13 @@ class ShellFactory {
 };
 // The second table of the handlers that scan memory cards.
 struct CMemoryCard::ScanTask {
-    virtual ~ScanTask();
+    virtual ~ScanTask() {}
     virtual void Execute(const char *, unsigned int);
+};
+// One file a card scan reports. Name inferred; the handlers fill and read a table of these.
+struct SProfileScanEntry {
+    char name[9];       // +0x0; eight characters and a terminator.
+    unsigned int size;  // +0xc
 };
 class HandlerVirtualKeyboard : public PackageHandler {
   public:
@@ -69,25 +74,45 @@ class HandlerAudioConfig : public PackageHandler {
 };
 class HandlerCoopProfile : public PackageHandler, public CMemoryCard::ScanTask {
   public:
+    ~HandlerCoopProfile();
+    int Init(const char *);
     int HandleEvent(unsigned int, FEObject *, unsigned long);
-    unsigned char unknown_54[0x5c - 0x54];
+    void Execute(const char *, unsigned int);
+    static int m_player1_profile_index;
+    static int m_player2_profile_index;
+    static int m_create_player1;
+    static int m_create_player2;
+    static unsigned int m_numProfiles;
+    static SProfileScanEntry m_profiles[];
+    int selection;   // +0x54; Init sets it to -1. Name inferred.
+    int controlMask; // +0x58; the package's mask on Init. Name inferred.
 };
-class HandlerProfileSelect : public PackageHandler {
+class HandlerProfileSelect : public PackageHandler, public CMemoryCard::ScanTask {
   public:
     HandlerProfileSelect();
     static int InSelection();
     static int InKeyboard();
     int HandleEvent(unsigned int, FEObject *, unsigned long);
-    unsigned char unknown_50[4212 - 0x50];
+    void Execute(const char *, unsigned int);
+    int profileCount;                // +0x54; the entries Execute has filled.
+    int unknown_58;                  // +0x58; the constructor clears it.
+    SProfileScanEntry profiles[256]; // +0x5c
+    unsigned long groupHashes[6];    // +0x105c; "Profile Group %d".
 };
-class HandlerMPProfile : public PackageHandler {
+class HandlerMPProfile : public PackageHandler, public CMemoryCard::ScanTask {
   public:
     HandlerMPProfile();
+    ~HandlerMPProfile();
+    int Init(const char *);
     static int InSelection();
     static int InKeyboard();
     static int m_lastProfile;
+    static SProfileScanEntry m_profiles[];
     int HandleEvent(unsigned int, FEObject *, unsigned long);
-    unsigned char unknown_50[100 - 0x50];
+    void Execute(const char *, unsigned int);
+    int unknown_54;               // +0x54; Init clears it.
+    int unknown_58;               // +0x58; Init clears it.
+    unsigned long groupHashes[2]; // +0x5c; "Profile Group %d".
 };
 class HandlerQuadrantGroup : public PackageHandler {
   public:
@@ -122,11 +147,41 @@ class HandlerDifficulty : public PackageHandler {
     int HandleEvent(unsigned int, FEObject *, unsigned long);
     unsigned long buttonHashes[3]; // +0x50; hashes of the three difficulty buttons' names.
 };
+enum EShellButtonType { EShellButtonDigital = 0, EShellButtonAnalog = 1, EShellButtonStick = 2 };
+// One assignable game function; the type name is from AreButtonsEqual's symbol, the member names are inferred.
+struct SFunctionNames {
+    int button;            // +0x00; index into the screen's button table.
+    int keyIndex;          // +0x04
+    const char *name;      // +0x08
+    int unknown_c[2];
+    EShellButtonType type; // +0x14
+};
+// A key table entry. Name inferred.
+struct SKeyName {
+    short key;        // +0x0
+    const char *name; // +0x4
+};
+extern SFunctionNames controllerFunctionNames[];
+extern SKeyName controllerKeyNames[];
+extern SKeyName analogKeyNames[];
+extern SKeyName analogStickNames[];
+// Pairs of an analog key and the digital key that counts as the same. Name from its symbol; the member names are inferred.
+struct SAnalogEquivalence {
+    short analog;  // +0x0
+    short digital; // +0x2
+};
+extern SAnalogEquivalence analogEquivalence[];
 class HandlerCustomController : public PackageHandler {
   public:
     HandlerCustomController();
     int HandleEvent(unsigned int, FEObject *, unsigned long);
-    unsigned char unknown_50[112 - 0x50];
+    int FindKeyIndex(short, EShellButtonType);
+    int FindButtonIndex(unsigned int);
+    int GetNumKeyNames(EShellButtonType);
+    int GetNumAssignableFunctions();
+    int AssignToNextKeyIndex(int, int);
+    int AreButtonsEqual(SFunctionNames *, SFunctionNames *);
+    short buttons[16]; // +0x50; one key per function, -1 when unassigned.
 };
 class HandlerSplitScreen : public PackageHandler {
   public:
@@ -139,13 +194,16 @@ class HandlerSplitScreen : public PackageHandler {
 };
 class HandlerMPGameOptions : public PackageHandler {
   public:
+    int Init(const char *);
     int HandleEvent(unsigned int, FEObject *, unsigned long);
+    static void BalanceTeam();
     unsigned char unknown_50[92 - 0x50];
 };
-class HandlerMPGameGlobalOptions : public PackageHandler {
+class HandlerMPGameGlobalOptions : public HandlerMPGameOptions {
   public:
+    int Init(const char *);
     int HandleEvent(unsigned int, FEObject *, unsigned long);
-    unsigned char unknown_50[96 - 0x50];
+    int character; // +0x5c; the profile's character. Name inferred.
 };
 class HandlerMPJoin : public PackageHandler {
   public:
@@ -160,6 +218,8 @@ class HandlerMPWaiting : public PackageHandler {
 class HandlerMPBots : public PackageHandler {
   public:
     int HandleEvent(unsigned int, FEObject *, unsigned long);
+    static int IsSkinUnlocked(int, int);
+    static void ValidateSkin(char *, int, PackageHandler *, int);
     unsigned char unknown_50[160 - 0x50];
 };
 class HandlerMPBotChild : public PackageHandler {
@@ -181,7 +241,9 @@ class HandlerControllerLayout : public PackageHandler {
   public:
     HandlerControllerLayout();
     int HandleEvent(unsigned int, FEObject *, unsigned long);
-    unsigned char unknown_50[112 - 0x50];
+    unsigned long buttonHashes[5]; // +0x50; "Preset %d" then "Custom %d".
+    unsigned char unknown_64[0x6c - 0x64];
+    int unknown_6c;                // +0x6c; the constructor clears it.
 };
 class HandlerCoopTempLaunch : public PackageHandler {
   public:
@@ -264,11 +326,16 @@ class HandlerOnlineOptions : public PackageHandler {
   public:
     HandlerOnlineOptions();
     int HandleEvent(unsigned int, FEObject *, unsigned long);
-    unsigned char unknown_50[204 - 0x50];
+    int IsSkinUnlocked(int);
+    char FindNextUnlockedSkin(char, char, char, char);
+    unsigned char unknown_50[0x54 - 0x50];
+    unsigned long americanHashes[15]; // +0x54; "AmericanA%d".
+    unsigned long japaneseHashes[15]; // +0x90; "JapaneseA%d".
 };
 class HandlerSaveProfile : public PackageHandler {
   public:
     HandlerSaveProfile();
+    ~HandlerSaveProfile();
     int HandleEvent(unsigned int, FEObject *, unsigned long);
     int unknown_50;                        // +0x50; the constructor sets it to 1.
     int unknown_54;                        // +0x54; likewise.
@@ -277,17 +344,28 @@ class HandlerSaveProfile : public PackageHandler {
 class HandlerOnlineKeyboard : public HandlerVirtualKeyboard {
   public:
     int HandleEvent(unsigned int, FEObject *, unsigned long);
-    unsigned char unknown_50[104 - 0x50];
+    char *GetMyString();
+    int GetStringLength();
+    int cursor;    // +0x50
+    char text[20]; // +0x54
 };
+class ListBox;
 class HandlerOnlineFavorites : public PackageHandler {
   public:
     HandlerOnlineFavorites();
+    ~HandlerOnlineFavorites();
     int HandleEvent(unsigned int, FEObject *, unsigned long);
-    unsigned char unknown_50[88 - 0x50];
+    void UpdateFavListBox();
+    void SetFavorite(const char *);
+    void ToggleButton(unsigned long, bool);
+    void SetButton(unsigned long);
+    ListBox *listBox; // +0x50; a scrolling list of favorites. Name inferred.
+    int unknown_54;   // +0x54; the constructor clears it.
 };
 class HandlerOnlineNetConfWarning : public PackageHandler {
   public:
     int HandleEvent(unsigned int, FEObject *, unsigned long);
+    void LaunchNetConfigUtility();
 };
 class HandlerHUDPreferences : public PackageHandler {
   public:

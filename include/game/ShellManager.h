@@ -123,7 +123,9 @@ class ShellManager : public FEGameInterface {
     unsigned char GetNumCoopPlayers();
     signed char GetIndexPadLastPressedAccept();
 
-    char keyboardString[0x20];        // +0x04; the extent past the 17 bytes copied is unknown.
+    char keyboardString[0x14];        // +0x04; the extent past the 17 bytes copied is unknown.
+    int keyboardAllowsEmpty;          // +0x18; HandlerOnlineKeyboard refuses an empty string while clear. Name inferred.
+    unsigned char unknown_1c[8];
     int selectedLevel;                // +0x24; CGameSettings reads per-level stats at this - 1.
     unsigned char unknown_28[0x3c - 0x28];
     ShellLoader *loader;              // +0x3c

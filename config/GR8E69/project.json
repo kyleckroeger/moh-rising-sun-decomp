@@ -2530,7 +2530,20 @@
     "game_glare_execute.json",
     "ea_mad_frame.json",
     "ea_mad_codec_chunks.json",
-    "decal_set.json"
+    "decal_set.json",
+    "handler_mpprofile_init.json",
+    "handler_mpprofile_scan.json",
+    "handler_profileselect_ctor.json",
+    "handler_profileselect_scan.json",
+    "handler_coopprofile_init.json",
+    "handler_coopprofile_scan.json",
+    "handler_coopprofile_dtor.json",
+    "handler_saveprofile.json",
+    "handler_onlineoptions_ctor.json",
+    "handler_onlinefavorites_add.json",
+    "handler_onlinefavorites_buttons.json",
+    "handler_netconfwarning.json",
+    "handler_onlinekeyboard.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
