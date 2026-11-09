@@ -182,6 +182,15 @@ declares. An eight-entry `TargetInfo` array at `+0x30` with its count at `+0x1b0
 target; the source models them in the unit. The view's placement inside `CPlayerObject` and
 the array's relation to that view's `+0x40` fields are not settled here.
 
+## Hearing volume
+
+`CHearingVolume` is a moving scene node with two spheres, which `Init` places at a given height
+above an owner it then follows each update. Its table is original; field names are descriptive.
+`CCheckedMatrix` in `HearingVolume.h` is a project name: the original `CMatrix` default constructor
+checks that the class is initialized, which the shared header writes out at each local, and a
+member needs the check to run in member order. `HandleBulletCollision`, `PlayBulletWhizBys` and
+the destructor are not reconstructed; the destructor differs only in `r10` and `r11`.
+
 ## Parked
 
 These still differ, with instruction differences in brackets; drafts are kept outside the

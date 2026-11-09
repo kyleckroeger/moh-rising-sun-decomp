@@ -2111,7 +2111,10 @@
     "ai_AISoldierDeath.json",
     "scene_SoldierAimClients.json",
     "scene_SoldierShouldDrawFlag.json",
-    "player_target_find.json"
+    "player_target_find.json",
+    "scene_HearingVolumeCtor.json",
+    "scene_HearingVolume.json",
+    "scene_HearingVolumeId.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

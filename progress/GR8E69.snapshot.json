@@ -1183,6 +1183,9 @@
       "src/scene/AttachableObjectC.cpp": "4ba057f86eeeead5950370eb21bf7605d1bde0ff73ccc6b263b2d597cd40ea3f",
       "src/scene/AttachableObjectDetach.cpp": "848bbabd8f8c3a159cff387d0d797a766204e0c5fe9f9926a8bac53cfb142590",
       "src/scene/AttachableObjectUpdate.cpp": "717a2967860405f49ea24eec6f4fb30e2079b7b6411fbd49ee1dd14bcdda1a48",
+      "src/scene/HearingVolume.cpp": "59e119f5fa973a743d98951084f9c6d00a724b0fe2d4f1ef42782d22f7dc1e00",
+      "src/scene/HearingVolumeCtor.cpp": "916f7119904114395d56b2e6b1613a0f83cc3e9454fb7e7cb70875a897663c85",
+      "src/scene/HearingVolumeId.cpp": "c0541ceb9e4412264de4885574baaa1e3e8aed2dd44f85f41d013caf645d220e",
       "src/scene/HierAnimObjectA.cpp": "9283de5ba8b3bbbf79faa444b5cbd2c62ac8c35c30c4e16b5ecc716e10fb833a",
       "src/scene/HierAnimObjectB.cpp": "d8b064cd3066c42bf07322989e993ab0ab51fa24246d5622adb2e802355f1efc",
       "src/scene/HierObjectAnimCommit.cpp": "8f068b35ea12f9344d0f0af66b3e0814ba323e5b388f97a7ec159e0df633215a",
@@ -2500,6 +2503,7 @@
       "include/game/GameSettingsViews.h": "daf4a7107f3e7027773ccedbd05e2e2c0a49229fc912e54f973475be30fc98a3",
       "include/game/GrenadeResponse.h": "a26075782a75877dd754799cb73d6fe55e2a6c6597676869bb956ba8cdb2bed4",
       "include/game/HeadsUpDisplay.h": "23f906aea051f1148504c63cb883c629affb72f857288563152b2e49ad89ff84",
+      "include/game/HearingVolume.h": "76a0cf1b1778be270e3b56ac1143a43032c1c3ef9643d510e277c89b7c8757c2",
       "include/game/IDestructible.h": "1427a08ba92fefc7fdc63c4ba8fc7aab3ec64bc8d2d1cfb7fe035346b685379f",
       "include/game/IVolume.h": "95911ba145df993a5c74b9b441c050754f2084de085a7d62b324f66e4479f2bc",
       "include/game/LegacyField.h": "95883bc2693fd14b7014d3f1e6a6e514ed5126af239699aa46d05f565bce5afe",
@@ -3753,7 +3757,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "835dc3c44c472051e0b77b81265d93c8778c7989a846de8d900fe389f5b2cb86",
+      "config/GR8E69/project.json": "4078e517000c89a9694832e18d02da5cc83bd03a636b3c0de0d3166186960ced",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -3836,6 +3840,9 @@
       "config/GR8E69/scene_AttachableObjectC.json": "921a6e2635ca182465002db6373bc5f1ef5c82fb774db5befb51de4171c030f3",
       "config/GR8E69/scene_AttachableObjectDetach.json": "b6047e294a73ca1d2d3fb160f56b0f3ba205ed9f73e8a28a002217d51ec85beb",
       "config/GR8E69/scene_AttachableObjectUpdate.json": "22767829235bfc73e8bc59a7c6752a3471838a1bf9a7423bc1abc491b2329c4d",
+      "config/GR8E69/scene_HearingVolume.json": "2bca1897fa954e489c3fa0c0a7baf11aa2c4b6d442b7989a540ba4c03659427b",
+      "config/GR8E69/scene_HearingVolumeCtor.json": "32d1465ec83e30ff981a4982dcb99ed445dfff604e4865af5cf273571f30f576",
+      "config/GR8E69/scene_HearingVolumeId.json": "6506685dbec15b0e6d32529f1d55f3927c23ef73a9d045089071c3286db5d5d7",
       "config/GR8E69/scene_HierAnimObjectA.json": "00ee093c8b03a969ce54c1512e76ff68d33b4d3d11ded5a29d221c4dd470ea7f",
       "config/GR8E69/scene_HierAnimObjectB.json": "df33d0da021654a581a21e996765155a734679b84e6e104ff3208500ab1cc097",
       "config/GR8E69/scene_HierObjectAnimCommit.json": "ed6416626240be41842c198751e0bf5ec8d1812b0add732fab38f67d41b46db6",
@@ -6418,14 +6425,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1101800,
+    "matching_code_bytes": 1103152,
     "total_executable_code_bytes": 2492032,
-    "percent": 44.21291540397555,
+    "percent": 44.26716831886589,
     "categories": {
-      "reconstructed_game": 709584,
+      "reconstructed_game": 710936,
       "restored_library": 392216
     },
-    "matching_functions": 5485
+    "matching_functions": 5499
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -7471,7 +7478,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "835dc3c44c472051e0b77b81265d93c8778c7989a846de8d900fe389f5b2cb86",
+    "config/GR8E69/project.json": "4078e517000c89a9694832e18d02da5cc83bd03a636b3c0de0d3166186960ced",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7554,6 +7561,9 @@
     "config/GR8E69/scene_AttachableObjectC.json": "921a6e2635ca182465002db6373bc5f1ef5c82fb774db5befb51de4171c030f3",
     "config/GR8E69/scene_AttachableObjectDetach.json": "b6047e294a73ca1d2d3fb160f56b0f3ba205ed9f73e8a28a002217d51ec85beb",
     "config/GR8E69/scene_AttachableObjectUpdate.json": "22767829235bfc73e8bc59a7c6752a3471838a1bf9a7423bc1abc491b2329c4d",
+    "config/GR8E69/scene_HearingVolume.json": "2bca1897fa954e489c3fa0c0a7baf11aa2c4b6d442b7989a540ba4c03659427b",
+    "config/GR8E69/scene_HearingVolumeCtor.json": "32d1465ec83e30ff981a4982dcb99ed445dfff604e4865af5cf273571f30f576",
+    "config/GR8E69/scene_HearingVolumeId.json": "6506685dbec15b0e6d32529f1d55f3927c23ef73a9d045089071c3286db5d5d7",
     "config/GR8E69/scene_HierAnimObjectA.json": "00ee093c8b03a969ce54c1512e76ff68d33b4d3d11ded5a29d221c4dd470ea7f",
     "config/GR8E69/scene_HierAnimObjectB.json": "df33d0da021654a581a21e996765155a734679b84e6e104ff3208500ab1cc097",
     "config/GR8E69/scene_HierObjectAnimCommit.json": "ed6416626240be41842c198751e0bf5ec8d1812b0add732fab38f67d41b46db6",
@@ -8862,6 +8872,7 @@
     "include/game/GameSettingsViews.h": "daf4a7107f3e7027773ccedbd05e2e2c0a49229fc912e54f973475be30fc98a3",
     "include/game/GrenadeResponse.h": "a26075782a75877dd754799cb73d6fe55e2a6c6597676869bb956ba8cdb2bed4",
     "include/game/HeadsUpDisplay.h": "23f906aea051f1148504c63cb883c629affb72f857288563152b2e49ad89ff84",
+    "include/game/HearingVolume.h": "76a0cf1b1778be270e3b56ac1143a43032c1c3ef9643d510e277c89b7c8757c2",
     "include/game/IDestructible.h": "1427a08ba92fefc7fdc63c4ba8fc7aab3ec64bc8d2d1cfb7fe035346b685379f",
     "include/game/IVolume.h": "95911ba145df993a5c74b9b441c050754f2084de085a7d62b324f66e4479f2bc",
     "include/game/LegacyField.h": "95883bc2693fd14b7014d3f1e6a6e514ed5126af239699aa46d05f565bce5afe",
@@ -10251,6 +10262,9 @@
     "src/scene/AttachableObjectC.cpp": "4ba057f86eeeead5950370eb21bf7605d1bde0ff73ccc6b263b2d597cd40ea3f",
     "src/scene/AttachableObjectDetach.cpp": "848bbabd8f8c3a159cff387d0d797a766204e0c5fe9f9926a8bac53cfb142590",
     "src/scene/AttachableObjectUpdate.cpp": "717a2967860405f49ea24eec6f4fb30e2079b7b6411fbd49ee1dd14bcdda1a48",
+    "src/scene/HearingVolume.cpp": "59e119f5fa973a743d98951084f9c6d00a724b0fe2d4f1ef42782d22f7dc1e00",
+    "src/scene/HearingVolumeCtor.cpp": "916f7119904114395d56b2e6b1613a0f83cc3e9454fb7e7cb70875a897663c85",
+    "src/scene/HearingVolumeId.cpp": "c0541ceb9e4412264de4885574baaa1e3e8aed2dd44f85f41d013caf645d220e",
     "src/scene/HierAnimObjectA.cpp": "9283de5ba8b3bbbf79faa444b5cbd2c62ac8c35c30c4e16b5ecc716e10fb833a",
     "src/scene/HierAnimObjectB.cpp": "d8b064cd3066c42bf07322989e993ab0ab51fa24246d5622adb2e802355f1efc",
     "src/scene/HierObjectAnimCommit.cpp": "8f068b35ea12f9344d0f0af66b3e0814ba323e5b388f97a7ec159e0df633215a",
@@ -53078,6 +53092,60 @@
       "discarded_functions": [],
       "object_sha256": "ced9a5c5c8c8585c557e8d23404bdf4a65e29bf5073cf60714f664478c17bb02",
       "linked_sha256": "098c5bf8c022d0886a740e6083407734c05e0a6bf6e1a4dbcff82b88630fa658"
+    },
+    {
+      "id": "scene_HearingVolumeCtor",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 188,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "7119782adb36fbf969bc522365c4f2f28d077233c33a0ddf4613226b25a2966a",
+      "linked_sha256": "f4fe47bc2a6bb5b26edccdefccb73df6803975cb13ad73bbbfff41a465e4a5ef"
+    },
+    {
+      "id": "scene_HearingVolume",
+      "category": "reconstructed_game",
+      "functions": 11,
+      "code_bytes": 1148,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "8a721e1b4e8af4696c2420b21ebaf22afc4e32720202c6e539174b3afa7d43a5",
+      "linked_sha256": "ddd7b29b9a27a53f5740026b42cffe69fe7ef1e2295fb23fc6228d967b056db9"
+    },
+    {
+      "id": "scene_HearingVolumeId",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 16,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "175f98eb6514a74f77e53cec3e3f2be21e3ca7baded6258efb1969b936d698df",
+      "linked_sha256": "22e23d4b9ff0ae2d66094b8dbf117b84b48a67b55d9c0b5bc16b772c3e2db8fb"
     }
   ],
   "code_map": {
@@ -63879,94 +63947,10 @@
         "file_name": "hearingvolume.cpp",
         "ranges": [
           {
-            "address": "0x800c7128",
-            "size": 188,
-            "kind": "function",
-            "name": "__14CHearingVolume",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800c71e4",
             "size": 64,
             "kind": "function",
             "name": "_._14CHearingVolume",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c7224",
-            "size": 224,
-            "kind": "function",
-            "name": "Init__14CHearingVolumeP16IMovingSceneNode7EClsnIdffPFP16IMovingSceneNodeP7CBullet_v",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c7304",
-            "size": 44,
-            "kind": "function",
-            "name": "GetTMLocalToWorld__C14CHearingVolumeR7CMatrix",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c7330",
-            "size": 80,
-            "kind": "function",
-            "name": "GetPosition__C14CHearingVolumeR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c7380",
-            "size": 80,
-            "kind": "function",
-            "name": "GetRightward__C14CHearingVolumeR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c73d0",
-            "size": 80,
-            "kind": "function",
-            "name": "GetForward__C14CHearingVolumeR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c7420",
-            "size": 80,
-            "kind": "function",
-            "name": "GetUpward__C14CHearingVolumeR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c7470",
-            "size": 8,
-            "kind": "function",
-            "name": "GetLocalBoundingVolume__C14CHearingVolumeQ210ISceneNode11EVolumeType",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c7478",
-            "size": 8,
-            "kind": "function",
-            "name": "GetWorldBoundingVolume__C14CHearingVolumeQ210ISceneNode11EVolumeType",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c7480",
-            "size": 168,
-            "kind": "function",
-            "name": "BeginUpdate__14CHearingVolumef",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c7528",
-            "size": 276,
-            "kind": "function",
-            "name": "AttemptUpdate__14CHearingVolumef",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c763c",
-            "size": 100,
-            "kind": "function",
-            "name": "CommitUpdate__14CHearingVolume",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -63981,20 +63965,6 @@
             "size": 216,
             "kind": "function",
             "name": "PlayBulletWhizBys__FP16IMovingSceneNodeP7CBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c7c0c",
-            "size": 8,
-            "kind": "function",
-            "name": "GetCollisionId__C14CHearingVolume",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800c7c14",
-            "size": 8,
-            "kind": "function",
-            "name": "SetCollisionId__14CHearingVolume7EClsnId",
             "evidence": "adjacent-compiler-markers"
           }
         ],
