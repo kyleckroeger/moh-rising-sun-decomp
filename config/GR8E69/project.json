@@ -2361,7 +2361,10 @@
     "ai_StateB.json",
     "game_BitBuffer.json",
     "game_sys_memory_dwi.json",
-    "scene_StaticFactoryMeshData.json"
+    "scene_StaticFactoryMeshData.json",
+    "animshape_register.json",
+    "compartment_instance_storage.json",
+    "compartment_model_matrix.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
