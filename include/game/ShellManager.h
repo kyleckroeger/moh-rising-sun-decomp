@@ -7,9 +7,8 @@
 #include "FEngLists.h"
 #include "FEngine.h"
 
-class FEMatrix4 { public: void Identify(); };
+class FEMatrix4;
 struct FEMouseInfo;
-struct FEObjectListEntry { void *object; int unknown_4; };
 class ShellLoader {
   public:
     int LoadPackage(const char *, unsigned char **, bool &);
@@ -54,21 +53,22 @@ class FEGameInterface {
     virtual int PackageWillUnload(FEPackage *);
     virtual int CanUnloadPackages(); // Name inferred from its one use.
     virtual void NotificationMessage(unsigned long, FEObject *, unsigned long, unsigned long);
-    virtual void Slot8();
-    virtual void Slot9();
-    virtual void Slot10();
-    virtual void Slot11();
+    virtual void NotifySoundMessage(unsigned long, FEObject *, unsigned long, unsigned long);
+    virtual void BeginPackageRendering(FEPackage *);
+    virtual void EndPackageRendering(FEPackage *);
+    virtual void GenerateRenderContext(unsigned short, FEObject *);
     virtual void Slot12();
-    virtual void Slot13();
+    virtual void RenderObjectList(FEObjectListEntry *, unsigned long);
     virtual void RenderObject(void *); // +0x78 in the table.
     virtual void Slot15();
-    virtual void Slot16();
+    virtual void GetViewTransformation(FEMatrix4 *);
     virtual void Slot17();
     virtual void Slot18();
     virtual void Slot19();
     virtual void Slot20();
     virtual void Slot21();
     virtual void DebugMessageQueued(unsigned long, FEObject *, FEPackage *, FEObject *, unsigned long);
+    virtual void DebugMessageProcessed(unsigned long, FEObject *, FEObject *, FEPackage *, unsigned long);
 };
 class ShellManager : public FEGameInterface {
   public:

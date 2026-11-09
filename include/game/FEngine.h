@@ -4,6 +4,7 @@
 #include "FEMouse.h"
 #pragma interface
 #include "FEngLists.h"
+#include "FEngMath.h"
 
 class FEGameInterface;
 class FEMessageResponse;
@@ -47,6 +48,8 @@ class FEngine {
     void ResetJoyPad();
     void SetExecution(bool);
     FEngine();
+    void RenderGroup(FEGroup *, FEMatrix4 &, FEMatrix4 &, unsigned short);
+    void RenderObject(FEObject *, FEMatrix4 &, unsigned short);
     ~FEngine();
     void ReleaseAll();
     FEPackage *PushPackage(const char *, unsigned char, unsigned long);
@@ -73,6 +76,7 @@ class FEngine {
     int ProcessCodeListBoxResponses(FEObject *, FEPackage *, unsigned long);
     void ProcessObjectMessage(FEObject *, FEPackage *, unsigned long, unsigned long);
     void ProcessGlobalMessage(FEPackage *, unsigned long, unsigned long);
+    void ProcessMessageQueue();
     void ProcessResponses(FEMessageResponse *, FEObject *, FEPackage *, unsigned long);
     void RecordLastPackageButton(unsigned long, unsigned long);
     unsigned long RecallLastPackageButton(unsigned long);
@@ -96,13 +100,12 @@ class FEngine {
     int unknown_e4;              // +0x00e4
     int joyPadCount;             // +0x00e8
     unsigned short activeMask;   // +0x00ec
-    unsigned char unknown_ee[0xf0 - 0xee];
+    unsigned short renderContextCount; // +0x00ee
     FEList packages;             // +0x00f0
     FEList idlePackages;         // +0x0100
     FEList libraries;            // +0x0110
     FEGameInterface *game;       // +0x0120
-    int unknown_124;             // +0x0124
-    unsigned char unknown_128[0x4128 - 0x128];
+    FEObjectSorter<1024> sorter; // +0x0124
     FEMinList messageQueue;      // +0x4128
     FEList commandQueue;         // +0x4138
     FETypeLib typeLib;           // +0x4148

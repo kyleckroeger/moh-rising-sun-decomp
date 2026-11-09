@@ -120,3 +120,9 @@ identifiers tested in `ReadHeaderChunk`, `ReadResourceChunk` and `ReadObjectChun
 DWI labels, and the sizes `CreateObject` allocates for each object type. Inferred: reader member names, and the
 `FEngElements.h` constructors that take a type, from the store to `FEObject::type` repeated before the reader's own
 store. `FEngine::LoadPackage`, `FENode` and the object tag readers use the same classes. `FECodeListBox` derives from `FEObject`, not `FEListBox`: its constructor calls `FEObject`'s directly.
+
+### FECodeListBox and rendering
+
+`FECodeListBox` is a 196-byte `FEObject`, per `CreateObject` and `Clone`; member names come from use and are inferred.
+`FEngine::RenderGroup` walks children with a world and combined matrix; `FEObjectSorter<1024>` is a symbol, its second
+array is inferred from the size of the space before `messageQueue`.

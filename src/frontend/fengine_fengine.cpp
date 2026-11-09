@@ -4,7 +4,7 @@
 #include "ShellManager.h"
 #include <string.h>
 
-FEngine::FEngine() : unknown_124(0) {
+FEngine::FEngine() {
     executing = 1;
     resetRequested = 1;
     unknown_5264 = 0;

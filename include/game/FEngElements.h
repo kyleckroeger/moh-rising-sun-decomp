@@ -5,6 +5,8 @@
 #define GAME_FENG_ELEMENTS_H
 #include "FEngLists.h"
 #include "FEngStrings.h"
+#include "FEListBox.h"
+#include "FEColor.h"
 #pragma interface
 
 // Called when a string's label hash is read; the class name is inferred, FEString::pLabelCallback is a symbol.
@@ -14,16 +16,17 @@ class FEStringLabelCallback {
 };
 class FEString : public FEObject {
   public:
-    FEString(unsigned long objectType) : unknown_58(0), labelHash(-1) {
+    FEString(unsigned long objectType) : label(0), labelHash(-1) {
         unknown_68 = 0;
         unknown_6c = 0;
         unknown_70 = 0;
         type = objectType;
     }
+    FEString(const FEString &, bool);
     virtual ~FEString();
     void SetLabel(const char *);
     static FEStringLabelCallback *pLabelCallback;
-    unsigned long unknown_58; // +0x58
+    char *label;              // +0x58
     long labelHash;           // +0x5c
     FEWideString text;        // +0x60
     unsigned long unknown_68; // +0x68
@@ -59,13 +62,54 @@ class FESimpleImage : public FEObject {
     FESimpleImage(unsigned long objectType) { type = objectType; }
     virtual ~FESimpleImage();
 };
-// 196 bytes: CreateObject and Clone both allocate that much. Only the members used so far are named.
+// 196 bytes: CreateObject and Clone both allocate that much. Member names are inferred from use.
 class FECodeListBox : public FEObject {
   public:
+    typedef void (*SelectCallback)(FECodeListBox *);
+    static SelectCallback mpDefaultCallback;
     FECodeListBox();
+    FECodeListBox(const FECodeListBox &, bool);
     virtual ~FECodeListBox();
     void FillAllCells();
-    FEGameInterface *game; // +0x58
-    unsigned char unknown_5c[196 - 0x5c];
+    FEObject *Clone(bool);
+    void CopyProperties(const FECodeListBox &);
+    void SetTotalNumColumns(unsigned long);
+    void SetTotalNumRows(unsigned long);
+    void ScrollSelection(long, long);
+    void ScrollSelection(long, unsigned long &, unsigned long &, unsigned long, unsigned long, bool);
+    void Update(float);
+    static void DefaultSelectCallback(FECodeListBox *);
+    short *AllocateString();
+    void DeallocateString(short *);
+    unsigned long CalculateCurrentFromTarget(unsigned long, unsigned long, unsigned long);
+    long GetRealColumn(long) const;
+    long GetRealRow(long) const;
+    void SetCellColor(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long);
+    void SetCellScale(unsigned long, unsigned long, const FEPoint &, unsigned long, unsigned long);
+    void SetCellJustification(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long);
+    FEGameInterface *game;       // +0x58
+    unsigned long numColumns;    // +0x5c
+    unsigned long numRows;       // +0x60
+    unsigned long listFlags;     // +0x64; bit 8 wraps.
+    unsigned long totalColumns;  // +0x68
+    unsigned long totalRows;     // +0x6c
+    unsigned long currentColumn; // +0x70
+    unsigned long currentRow;    // +0x74
+    unsigned long targetColumn;  // +0x78
+    unsigned long targetRow;     // +0x7c
+    float unknown_80;            // +0x80
+    float unknown_84;            // +0x84
+    FEListBoxCell *cells;        // +0x88
+    unsigned long unknown_8c;    // +0x8c
+    unsigned long unknown_90;    // +0x90
+    unsigned long stringsInUse;  // +0x94
+    short **strings;             // +0x98
+    short *stringBlock;          // +0x9c
+    float blink;                 // +0xa0
+    float blinkRate;             // +0xa4
+    FEColor selectColor;         // +0xa8
+    SelectCallback selectCallback; // +0xb8
+    unsigned long unknown_bc;    // +0xbc
+    unsigned long unknown_c0;    // +0xc0
 };
 #endif

@@ -2433,7 +2433,17 @@
     "particlesystem_ctor.json",
     "particlesystem_reset.json",
     "meshparticle_draw.json",
-    "particlesystem_draw.json"
+    "particlesystem_draw.json",
+    "fecode_fecodelistbox.json",
+    "fecode_dtor.json",
+    "fecode_clone.json",
+    "fecode_settotalnumcolumns.json",
+    "fecode_update.json",
+    "fecode_allocatestring.json",
+    "fecode_setcellcolor.json",
+    "festring_copy.json",
+    "fengine_rendergroup.json",
+    "fengine_processmessagequeue.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
