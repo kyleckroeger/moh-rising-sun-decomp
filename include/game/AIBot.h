@@ -62,7 +62,10 @@ class MMG_Info {
     void SetInUse(bool);
     void *gun;              // +0x00
     TriggerObject *trigger; // +0x04
-    unsigned char unknown08[80 - 8];
+    unsigned char unknown08[32 - 8];
+    CVector3 firstAxis;     // +0x20; the score needs the enemy on the positive side of both axes.
+    CVector3 secondAxis;    // +0x30
+    CVector3 position;      // +0x40
 };
 // A camping point's look target (32 bytes, from the array stride). The fourth word of the position
 // scales the look time in SetCampingLookat.
@@ -74,7 +77,8 @@ struct CampingLookat {
 class CampingPoint {
   public:
     CVector3 *GetLookat(unsigned char);
-    unsigned char unknown00[0x11];
+    CVector3 position;
+    unsigned char group;                    // +0x10; the point a bot just left rules out its group.
     unsigned char type;                     // +0x11; 0 and 2 decide the crouch in BS_Enter_Camp.
     unsigned char lookatCount;              // +0x12
     unsigned char unknown13[0x16 - 0x13];
@@ -83,14 +87,27 @@ class CampingPoint {
 class CBotMan {
   public:
     void SetupCampingPoints();
+    void Init();
+    void Update(float);
+    int FindCampingPoint(CBotObject *);
+    int CampingPointInUseByTeammate(CBotObject *, int);
+    float FindClosestHealthPack(CBotObject *, CVector3 &);
+    float CalcMMGScore(CBotObject *, unsigned long, CVector3 &);
+    int FindMMG(CBotObject *);
     CBotObject *enemies[1];            // +0x000; indexed by GetEnemyAI, extent not established.
-    unsigned char unknown004[0x60 - 4];
+    unsigned char unknown004[0x40 - 4];
+    CBotObject *bots[1];               // +0x40; extent not established.
+    unsigned char unknown044[0x60 - 0x44];
     MMG_Info mmgs[1];                  // +0x60; extent not established.
     unsigned char unknownb0[0x2e0 - 0xb0];
     CampingPoint campingPoints[1];  // +0x2e0; extent not established.
     unsigned char unknown310[0x8e0 - 0x310];
     CampingLookat lookats[1];          // +0x8e0; extent not established.
-    unsigned char unknown900[0x1a2c - 0x900];
+    unsigned char unknown900[0x18e4 - 0x900];
+    unsigned int campingPointCount;    // +0x18e4
+    unsigned char unknown18e8[0x18f0 - 0x18e8];
+    unsigned int mmgCount;             // +0x18f0
+    unsigned char unknown18f4[0x1a2c - 0x18f4];
     float clock;                       // +0x1a2c
     int resetFlag;                     // +0x1a30; cleared by BotSetup.
 };

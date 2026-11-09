@@ -230,7 +230,7 @@ class CCoverpointBehavior : public CBehavior { // Type 4.
     void EndCoverpoint();
     void ForceToCoverPoint();
     static void InvalidateCoverPointByID(int);
-    static void RegisterCoverpoint(TriggerObject *);
+    static int RegisterCoverpoint(TriggerObject *);
     static void ResetCoverpoints();
     float heuristicScore;      // +0x10
     unsigned char unknown14[4];

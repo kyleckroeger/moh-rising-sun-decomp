@@ -2390,7 +2390,13 @@
     "ai_SequenceA.json",
     "ai_SequenceB.json",
     "ai_TransitionCtor.json",
-    "ai_TransitionB.json"
+    "ai_TransitionB.json",
+    "ai_AITacticsCtor.json",
+    "ai_AITactics.json",
+    "ai_AITargetCtor.json",
+    "ai_AITargetOffset.json",
+    "ai_AITargetSet.json",
+    "ai_AITargetLocation.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

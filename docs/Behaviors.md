@@ -119,3 +119,16 @@ byte, with their native tables and literal pools. There is no Frontline counterp
   slot address forms in six functions. The threat type values have no recovered names.
 - The inline-virtual methods that the original emits at the end of each file (`GetType`,
   `GetScriptObject`) are written as ordinary out-of-line definitions in that order.
+
+## Tactical scoring and targeting
+
+`CAITactics` is an AI module that scores candidate positions: it rejects a point off the path network, too close to or
+beyond the engagement range of the target, or outside the field of view, and otherwise sums an aggression term, an allies
+term and an angle-from-target term. The term names come from the symbol table; the range and aggression fields of the
+script data are inferred. `FindTacticalPoint` is not reconstructed yet.
+
+`CAITargeting`'s location targets are a global map of `_LocationTargetInfo` records, keyed by id or, for id -1, by the
+script object's address. `GetLocationTarget` returns an uninitialized record with a null object when the id is absent; that
+is the target's behavior. `SetTarget` keeps a count of targeters on each AI object and exposes it to scripts capped at 15.
+`CAIModule` is the base these modules share; only its table pointer and destructor are known, and the modules' destructors
+are declared but not reconstructed yet.
