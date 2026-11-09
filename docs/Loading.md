@@ -166,11 +166,20 @@ order), the subtitle script parser (`AV_SUBTITLE_ARRAY::Init` and its helpers), 
 
 ## MAD movie codec
 
-`rcmp_mad_codec.cpp` hands out frames from a free list to a used list, through a link inside each frame. `GetFrame`'s
-loop is unreduced, so the file's fragments build with `-fno-strength-reduce`; that describes the code, not necessarily the
-original setting. Verified: the frame's construction and destruction, chunk stepping, `CreateKorM`, `CreateE`,
-`ReleaseFrame` and `GetFrame`. Inferred: member names and what the chunk tags mean. Not reconstructed: `GetChunkType`,
-`DecodeChunk`, the class's constructor and destructor and `MAD_CODEC_create`.
+`rcmp_mad_codec.cpp` is whole: one unit, in the original's order, with the codec's table. It hands out frames from a free
+list to a used list, through a link inside each frame; `DecodeChunk` reads a chunk's header on the first chunk, makes the
+decoder's frames and then decodes each 16x16 macroblock against the held frame. `rcmp_mad_codec_chunk_types.cpp` holds the
+three chunk tags and the test for them. Both files' `.rodata` start with the empty allocation label of the codec's
+`operator new`. Verified: all of both files' code. Inferred: member, local and helper names, and what the chunk tags mean.
+`CODEC` is declared with plain virtuals so that its table stays outside these units; the original's slots are pure.
+
+## RCMP flags
+
+`-fno-strength-reduce` holds for the RCMP library's code: `GetFrame` and `DecodeChunk` here and the subtitle display show
+unreduced loops, and every other RCMP unit (`audioplayer`, the `AV_PLAYER` fragments, `DECODER`, `GCHW_VD`, `rcmp2real`)
+compiles identically with or without it, so they all pass it. `rcmpplayer.cpp` is the game's `CMoviePlayer`, not part of the
+library, and keeps the game's flags; its fragments also compile identically with the flag. The flag describes the code,
+not necessarily the original setting.
 
 ## MohLoader
 

@@ -2500,7 +2500,6 @@
     "handler_audioconfig.json",
     "handler_pausepreferences.json",
     "handler_gameoptions.json",
-    "ea_mad_codec_frames.json",
     "handler_controlleroptions.json",
     "handler_mpwaiting.json",
     "handler_mainmenu.json",
@@ -2524,12 +2523,9 @@
     "handler_moviemenu_ctor.json",
     "handler_customcontroller_ctor.json",
     "handler_bonusoptions_ctor.json",
-    "ea_mad_codec_getframe.json",
     "game_glare_static.json",
     "game_glare_manager.json",
     "game_glare_execute.json",
-    "ea_mad_frame.json",
-    "ea_mad_codec_chunks.json",
     "decal_set.json",
     "handler_mpprofile_init.json",
     "handler_mpprofile_scan.json",
@@ -2576,7 +2572,9 @@
     "ai_StateSerial.json",
     "ai_BotManUpdate.json",
     "ai_BotStateGoal.json",
-    "ai_BotPowerups.json"
+    "ai_BotPowerups.json",
+    "ea_rcmp_mad_codec.json",
+    "ea_rcmp_mad_chunk_types.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

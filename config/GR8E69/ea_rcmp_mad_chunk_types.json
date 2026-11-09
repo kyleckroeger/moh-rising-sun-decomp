@@ -1,6 +1,6 @@
 {
-  "id": "ea_mad_frame",
-  "source": "src/ea/mad_frame.cpp",
+  "id": "ea_rcmp_mad_chunk_types",
+  "source": "src/ea/rcmp_mad_codec_chunk_types.cpp",
   "category": "reconstructed_game",
   "compiler_version": "3.8.1",
   "compiler_flags": [
@@ -19,35 +19,26 @@
   "sections": [
     {
       "name": ".text",
-      "address": "0x80272f4c",
-      "size": 308
+      "address": "0x802739a8",
+      "size": 56
     },
     {
       "name": ".rodata",
-      "address": "0x802c0544",
-      "size": 20
+      "address": "0x802c0630",
+      "size": 16
     }
   ],
   "functions": [
     {
-      "name": "__9MAD_FRAMEUiUi",
-      "address": "0x80272f4c",
-      "size": 188,
-      "binding": 1
-    },
-    {
-      "name": "_._9MAD_FRAME",
-      "address": "0x80273008",
-      "size": 120,
+      "name": "MAD_CODEC_is_chunk_for_codec__4RCMPUi",
+      "address": "0x802739a8",
+      "size": 56,
       "binding": 1
     }
   ],
-  "externals": {
-    "MEM_fill": "0x8021866c",
-    "_4RCMP.rcmp_sys": "0x803fef20"
-  },
+  "externals": {},
   "discarded_functions": [],
   "undefined_in_discarded_code": [],
-  "original_file": "rcmp_mad_codec.cpp",
-  "original_file_index": 5037
+  "original_file": "rcmp_mad_codec_chunk_types.cpp",
+  "original_file_index": 5040
 }
