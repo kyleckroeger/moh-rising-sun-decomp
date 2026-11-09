@@ -117,6 +117,14 @@ object's table at `+0x38`. `BeginHurtling` reports `StartScriptDeath`'s argument
 image. Verified: the code. Inferred: the script data's member names at `+0x8c` to `+0x9c`, and the
 meanings of the event numbers `StartScriptDeath` sends.
 
+## Locale files
+
+The original `locale.cpp` reads little-endian string files: a table of per-language offsets at
+`+0x10`, each language holding offsets to its strings at `+0x10` with a count at `+0xc`. With bit 0 of
+the flags at `+8`, `LOCALE_getstr` first turns the id into an index through a sorted id table found at
+the offset at `+4`. `LOCALE_create` byte-swaps each string's 16-bit characters when asked. Verified:
+the code. Inferred: all member names.
+
 ## MohLoader
 
 `MohLoader` and `MohLoaderGc` hold the console-side start-up state. `g_pPersistent` points to a

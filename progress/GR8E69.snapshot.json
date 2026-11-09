@@ -861,6 +861,7 @@
       "src/game/input_ports.cpp": "c8e073d6d9e25381539ae8de570e54222add652af5b1400642cfc9159c14f36e",
       "src/game/input_state.cpp": "c875939ff44d67e321e0e286ebddc6e5880d2dc966559b8b2d9d23194da84de1",
       "src/game/input_tail.cpp": "3a03d39cf2824ead24e4e228c4b05c680c5b657609186cad161af73edb4987bf",
+      "src/game/locale.cpp": "d8e11f2bec1cbaa8cb1d2eb1c72f1ab04c6197bb01e0ce782ec4d9330c6b2296",
       "src/game/moh_boot.cpp": "76020b8073461dad019ff9996286629044e11c772c3bbd5926123de484d3f505",
       "src/game/moh_ld.cpp": "81ac57022ce25bb564ee521fe14a00e58a21a7a2ff7f482a7bed4d7a24806c43",
       "src/game/moh_loader.cpp": "eb5a65068e81a7d792ef4a16f8dffb817e5b4965e2534956940d449f4676cd2e",
@@ -1988,6 +1989,7 @@
       "src/shell/ListBoxScroll.cpp": "c35e99a4c774da30d0dfcfda68f1602175000db9adaa3f579e0442bf8a2541e5",
       "src/shell/MoviePlayerHeap.cpp": "febd0bd90633a0c962990afef60bd35e9f6288bd33b22c60039510d338647b22",
       "src/shell/MoviePlayerTail.cpp": "70e15d83c05ac1116563e0f59a56b9b1b1283c56eed681af3571da397ad35900",
+      "src/shell/VolumeKnobs.cpp": "1ea20143d6befc08abd7f5aa3a1dc5b6215af931487271d2db3832ee0e789f6f",
       "src/shell/gamesettings_activatecheatnamed_beatthelevel.cpp": "5299be749a6d1e8052adf798501aae9945e58da4c5f5d765413dd19115d22ba2",
       "src/shell/gamesettings_activatecheatnamed_hugearms.cpp": "7cfb523e1b05e92df9fb6c89c91a273875607a5aca10cd0b22f36aa5f7163a51",
       "src/shell/gamesettings_add_mpplayerkilled.cpp": "f2ea9e5071db289b681d9ff774ba286b1014476de163a308129648d6b51e0ed9",
@@ -3880,6 +3882,7 @@
       "config/GR8E69/frustum_transform.json": "35766529dbd85ffd05cf8d34adb7010b3b10b02c04d1d097811dde2dfc2ef057",
       "config/GR8E69/fstload.json": "d49e84fe0d1e9af1dd569811065db3c015f596b540ac5988c5078fa2f9c5dd5e",
       "config/GR8E69/game_BitBuffer.json": "0ce2a9795f7d9046d1f3e6909562986dc6f612e4aa88cb07d18b514e0b986702",
+      "config/GR8E69/game_locale.json": "660eadd84d9e49632c2a42595aef8ca6d557b198b51bef3d3a3bba9558e4514e",
       "config/GR8E69/game_sys_memory_dwi.json": "af6b28229efc2adad9f987e767f2772ebe56093b9e8dedd5cc5b55c6da45b0e6",
       "config/GR8E69/gamesettings_activatecheatnamed_beatthelevel.json": "d2ed6ab790652c9734686b7676bd44d302055843906ad37f619f5cbfa03d56f7",
       "config/GR8E69/gamesettings_activatecheatnamed_hugearms.json": "1a5212cff62406bb097fded87a75d7cc51c850d33df8d4ca1e9da23d6c1ee059",
@@ -4303,7 +4306,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "a10792901687b3505fca7351ac47aa7187be76c52c1a586c8f83ae4b63af1f76",
+      "config/GR8E69/project.json": "a934aaa64516816a64fdee5db26a65ddac2cc678e0808ff1dad00aaba4c1138f",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -4962,6 +4965,7 @@
       "config/GR8E69/shell_ListBoxRowDtor.json": "b35d5eba65baed0bd51982e24f438a8b6e35a2c072853f919f5fbf71a386ad81",
       "config/GR8E69/shell_ListBoxRows.json": "8108ddb5541370a85ad8b4a9161f3338d04b200f8609b6c17e2474f58ea13277",
       "config/GR8E69/shell_ListBoxScroll.json": "7c535fe7782cfa3ff0ea47beab0ff7d3b94705dae8cb3b4ae767df0f732c2cda",
+      "config/GR8E69/shell_VolumeKnobs.json": "07e5c928b50f14d34f6c7799651d1eb90a34eaba2ec4acb403cf75d2baf51708",
       "config/GR8E69/shell_beginpackagerendering.json": "5c081296524e22206a3748f0fe0e85c3ac83b9919c5f50916d73b15950025a58",
       "config/GR8E69/shell_cshellmoviesettings.json": "1051d2a404082bd7515b6e9efcd3e5b515fa0fcc5e359442dc2adb395bb7fadc",
       "config/GR8E69/shell_debugmessagequeued.json": "fc9aa9c0ad0bb0d61e15f858f602c6381f8ce78e08f87b5ccf1232d54c69c173",
@@ -7016,14 +7020,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1225916,
+    "matching_code_bytes": 1227412,
     "total_executable_code_bytes": 2492032,
-    "percent": 49.19342929785813,
+    "percent": 49.253460629719044,
     "categories": {
-      "reconstructed_game": 833700,
+      "reconstructed_game": 835196,
       "restored_library": 392216
     },
-    "matching_functions": 6455
+    "matching_functions": 6464
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -7874,6 +7878,7 @@
     "config/GR8E69/frustum_transform.json": "35766529dbd85ffd05cf8d34adb7010b3b10b02c04d1d097811dde2dfc2ef057",
     "config/GR8E69/fstload.json": "d49e84fe0d1e9af1dd569811065db3c015f596b540ac5988c5078fa2f9c5dd5e",
     "config/GR8E69/game_BitBuffer.json": "0ce2a9795f7d9046d1f3e6909562986dc6f612e4aa88cb07d18b514e0b986702",
+    "config/GR8E69/game_locale.json": "660eadd84d9e49632c2a42595aef8ca6d557b198b51bef3d3a3bba9558e4514e",
     "config/GR8E69/game_sys_memory_dwi.json": "af6b28229efc2adad9f987e767f2772ebe56093b9e8dedd5cc5b55c6da45b0e6",
     "config/GR8E69/gamesettings_activatecheatnamed_beatthelevel.json": "d2ed6ab790652c9734686b7676bd44d302055843906ad37f619f5cbfa03d56f7",
     "config/GR8E69/gamesettings_activatecheatnamed_hugearms.json": "1a5212cff62406bb097fded87a75d7cc51c850d33df8d4ca1e9da23d6c1ee059",
@@ -8297,7 +8302,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "a10792901687b3505fca7351ac47aa7187be76c52c1a586c8f83ae4b63af1f76",
+    "config/GR8E69/project.json": "a934aaa64516816a64fdee5db26a65ddac2cc678e0808ff1dad00aaba4c1138f",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -8956,6 +8961,7 @@
     "config/GR8E69/shell_ListBoxRowDtor.json": "b35d5eba65baed0bd51982e24f438a8b6e35a2c072853f919f5fbf71a386ad81",
     "config/GR8E69/shell_ListBoxRows.json": "8108ddb5541370a85ad8b4a9161f3338d04b200f8609b6c17e2474f58ea13277",
     "config/GR8E69/shell_ListBoxScroll.json": "7c535fe7782cfa3ff0ea47beab0ff7d3b94705dae8cb3b4ae767df0f732c2cda",
+    "config/GR8E69/shell_VolumeKnobs.json": "07e5c928b50f14d34f6c7799651d1eb90a34eaba2ec4acb403cf75d2baf51708",
     "config/GR8E69/shell_beginpackagerendering.json": "5c081296524e22206a3748f0fe0e85c3ac83b9919c5f50916d73b15950025a58",
     "config/GR8E69/shell_cshellmoviesettings.json": "1051d2a404082bd7515b6e9efcd3e5b515fa0fcc5e359442dc2adb395bb7fadc",
     "config/GR8E69/shell_debugmessagequeued.json": "fc9aa9c0ad0bb0d61e15f858f602c6381f8ce78e08f87b5ccf1232d54c69c173",
@@ -10849,6 +10855,7 @@
     "src/game/input_ports.cpp": "c8e073d6d9e25381539ae8de570e54222add652af5b1400642cfc9159c14f36e",
     "src/game/input_state.cpp": "c875939ff44d67e321e0e286ebddc6e5880d2dc966559b8b2d9d23194da84de1",
     "src/game/input_tail.cpp": "3a03d39cf2824ead24e4e228c4b05c680c5b657609186cad161af73edb4987bf",
+    "src/game/locale.cpp": "d8e11f2bec1cbaa8cb1d2eb1c72f1ab04c6197bb01e0ce782ec4d9330c6b2296",
     "src/game/moh_boot.cpp": "76020b8073461dad019ff9996286629044e11c772c3bbd5926123de484d3f505",
     "src/game/moh_ld.cpp": "81ac57022ce25bb564ee521fe14a00e58a21a7a2ff7f482a7bed4d7a24806c43",
     "src/game/moh_loader.cpp": "eb5a65068e81a7d792ef4a16f8dffb817e5b4965e2534956940d449f4676cd2e",
@@ -11976,6 +11983,7 @@
     "src/shell/ListBoxScroll.cpp": "c35e99a4c774da30d0dfcfda68f1602175000db9adaa3f579e0442bf8a2541e5",
     "src/shell/MoviePlayerHeap.cpp": "febd0bd90633a0c962990afef60bd35e9f6288bd33b22c60039510d338647b22",
     "src/shell/MoviePlayerTail.cpp": "70e15d83c05ac1116563e0f59a56b9b1b1283c56eed681af3571da397ad35900",
+    "src/shell/VolumeKnobs.cpp": "1ea20143d6befc08abd7f5aa3a1dc5b6215af931487271d2db3832ee0e789f6f",
     "src/shell/gamesettings_activatecheatnamed_beatthelevel.cpp": "5299be749a6d1e8052adf798501aae9945e58da4c5f5d765413dd19115d22ba2",
     "src/shell/gamesettings_activatecheatnamed_hugearms.cpp": "7cfb523e1b05e92df9fb6c89c91a273875607a5aca10cd0b22f36aa5f7163a51",
     "src/shell/gamesettings_add_mpplayerkilled.cpp": "f2ea9e5071db289b681d9ff774ba286b1014476de163a308129648d6b51e0ed9",
@@ -59527,6 +59535,42 @@
       "discarded_functions": [],
       "object_sha256": "3687b1d8983864d15d324e43aaaaf42f0817dd34cd8e2da1c4fd7341f5648430",
       "linked_sha256": "1fbe615d595387a0887d2ce5fe997904a42234f44d068d9892936df5ab313f5b"
+    },
+    {
+      "id": "shell_VolumeKnobs",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 500,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "cda43a6f5d9770247a0428bbfe80c968217353dd7adcf89bd0b9c4fcb587cc40",
+      "linked_sha256": "81b5717923c30978de3b5be7cde8fcb5155e69c72f6905784590af37664ffcfe"
+    },
+    {
+      "id": "game_locale",
+      "category": "reconstructed_game",
+      "functions": 6,
+      "code_bytes": 996,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "ad57be0034baf943bf4d4abb9b823f6b50796ac492c49bdfbae1dfe378f9d93e",
+      "linked_sha256": "02de9ff8fd1ac4ca5e10e78108e560927d7b0bc7c9711238b239afb11a55d3f8"
     }
   ],
   "code_map": {
@@ -74354,38 +74398,6 @@
         ]
       },
       {
-        "name": "Unmatched files/VolumeKnobs.cpp [inferred file group]",
-        "file_record": 261,
-        "file_name": "VolumeKnobs.cpp",
-        "ranges": [
-          {
-            "address": "0x8017dcbc",
-            "size": 124,
-            "kind": "function",
-            "name": "Setup__12CVolumeKnobs11EVolumeKnobP8FEObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017dd38",
-            "size": 188,
-            "kind": "function",
-            "name": "Increase__12CVolumeKnobs11EVolumeKnob",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017ddf4",
-            "size": 188,
-            "kind": "function",
-            "name": "Decrease__12CVolumeKnobs11EVolumeKnob",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x8017dcbc",
-          "0x8017deb0"
-        ]
-      },
-      {
         "name": "Unknown file/.text @ 8017df9c",
         "ranges": [
           {
@@ -82591,59 +82603,6 @@
         "marker_interval": [
           "0x80216f48",
           "0x802171e0"
-        ]
-      },
-      {
-        "name": "Unmatched files/locale.cpp [file record 518] [inferred file group]",
-        "file_record": 518,
-        "file_name": "locale.cpp",
-        "ranges": [
-          {
-            "address": "0x802171e0",
-            "size": 216,
-            "kind": "function",
-            "name": "LOCALE_getstate",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x802172b8",
-            "size": 28,
-            "kind": "function",
-            "name": "LOCALE_setstate",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x802172d4",
-            "size": 28,
-            "kind": "function",
-            "name": "compare__FPCvT0",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x802172f0",
-            "size": 136,
-            "kind": "function",
-            "name": "getstringidbyindex__FUsPC12LOCALE_INDEX",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x80217378",
-            "size": 312,
-            "kind": "function",
-            "name": "LOCALE_getstr",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x802174b0",
-            "size": 276,
-            "kind": "function",
-            "name": "LOCALE_create",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x802171e0",
-          "0x802175c4"
         ]
       },
       {

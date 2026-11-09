@@ -2401,7 +2401,9 @@
     "gc_interface_create.json",
     "gc_interface_thread.json",
     "gc_interface_messages.json",
-    "gc_interface_access.json"
+    "gc_interface_access.json",
+    "shell_VolumeKnobs.json",
+    "game_locale.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
