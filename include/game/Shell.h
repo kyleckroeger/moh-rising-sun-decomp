@@ -73,7 +73,8 @@ class CInputManager : public CDeviceManager {
     KEYMAP *portKeymaps[4];
     int blockVibrations[4];
     int masterBlockVibrations[4];
-    unsigned char unknown23f4[8];
+    int padOption;              // +0x23f4; the profile's byte at +0x28 sets it. Meaning unknown.
+    unsigned char unknown23f8[4];
     signed char controllers[16];
     int badControllerSet;
     unsigned char badControllerPort;

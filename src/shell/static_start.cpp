@@ -17,7 +17,7 @@ class CStaticScreen {
 };
 
 void CStaticScreen::StartLoading(int level, int mission, ELanguages language, bool flag) {
-    if (g_GameSettings.unknown_b0 == 1) {
+    if (g_GameSettings.skuType == 1) {
         switch (*(int *)g_GameSettings.profile) {
         case 2:
             if (level == 1 && mission == 16 && !flag)

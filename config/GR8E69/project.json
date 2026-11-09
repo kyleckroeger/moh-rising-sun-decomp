@@ -2242,7 +2242,19 @@
     "ai_BotAreaJump.json",
     "ai_BotAreaHeight.json",
     "ai_BotAreaLink.json",
-    "ai_BotAreaContain.json"
+    "ai_BotAreaContain.json",
+    "gamesettings_add_mpplayerkilled.json",
+    "gamesettings_activatecheatnamed_beatthelevel.json",
+    "gamesettings_addmedal.json",
+    "gamesettings_calculatelevelstats.json",
+    "gamesettings_loaddata.json",
+    "gamesettings_playerleveldataindex.json",
+    "gamesettings_initcontrollerfromoptions.json",
+    "gamesettings_initcheatsfromoptions.json",
+    "gamesettings_buttonarraytokeymap.json",
+    "gamesettings_restorelevelstartdata.json",
+    "gamesettings_getprofilescrcvalue.json",
+    "gamesettings_storesavedata.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

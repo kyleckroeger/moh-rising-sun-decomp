@@ -97,7 +97,7 @@ void CGameSettings::Init() {
         SetSkuType(config);
     }
     if (profile->language == -1) {
-        switch (unknown_b0) {
+        switch (skuType) {
         case 0: Set_Language((ELanguages)0); break;
         case 2: Set_Language((ELanguages)5); break;
         case 3: Set_Language((ELanguages)4); break;
@@ -106,7 +106,7 @@ void CGameSettings::Init() {
         case 5: Set_Language((ELanguages)9); break;
         case 4: Set_Language((ELanguages)2); break;
         case 1:
-            profile->profiles[profile->profileIndex[0]].languageSelected = unknown_b0;
+            profile->profiles[profile->profileIndex[0]].languageSelected = skuType;
             switch (OSGetLanguage()) {
             case 3: Set_Language((ELanguages)2); break;
             case 4: Set_Language((ELanguages)3); break;

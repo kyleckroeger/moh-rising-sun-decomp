@@ -27,13 +27,26 @@ Runtime remains untested.
 Each accepted fragment shares `GameSettingsViews.h`, whose views of the player, shell and
 pause objects hold only the members these methods touch.
 
+`SPlayerProfile` keeps one `SPlayerStats` per level at `+0xbafc` and a co-op set at `+0xbf68`,
+eleven each, indexed by level minus one; `CalculateCumulativeStats` adds the level's deltas to them,
+and it names the two counters at `+4` and `+6` of `SPlayerStats` as completed main and bonus
+objectives. `Add_MPPlayerKilled` names the death-match counters and the team scores at `+0x32138`, and
+ends the match when a byte at `+0x32021` is reached. `SLevelStatsSummary` is a descriptive name for
+the 52-byte value `GetLevelStats` and `GetTotalStatsForLevel` return; the original's name is not in
+the symbols. `PerformanceStars` is an original tag, and its values are observed as star counts from
+zero to three. `CalculatePerformanceRating` reads its thresholds from level resource 27, records 71
+to 79, and defaults its top bonus threshold to the level's bonus objective count.
+`Timestamp` is the save time's class, per `Now__9Timestamp`.
+
 Not yet exact: `SetIfCurrentWeaponSelectable` (5 differences), `ActivateCheatNamed_All`,
 `ActivateCheatNamed_Unlock` (register allocation only), `PerformSavePointResponse` (one
 threaded branch), `Set_currentDifficulty` (two scheduled instructions), `ResetDMStats` (an
 unreduced multiply in its loop) and `SCoreGameSettings::TotalReset`, whose loop treats the word
 before each player's data as belonging to the entry being set up. The landed
 `SMPPlayerSlot` view places that word first because `Respawn` and `SetHealthMax` compile
-to that form; the two views have not been reconciled.
+to that form; the two views have not been reconciled. `SetSkuType` and
+`SPlayerProfile::TotalReset` use the strings `game` and `DEFAULT`, which the movie settings
+fragment owns, so they wait until the fragments can be combined into one unit.
 
 ## FEng library
 

@@ -25,7 +25,8 @@ struct SPlayerStatsEntry {
 struct SPlayerStats {
     unsigned short shotsFired;      // +0x00
     unsigned short hits;            // +0x02
-    unsigned short unknown_4[2];    // +0x04
+    unsigned short objectives;      // +0x04; completed objectives, per CalculateCumulativeStats.
+    unsigned short bonusObjectives; // +0x06; completed bonus objectives.
     unsigned short hitsTaken;       // +0x08
     unsigned short unknown_a;       // +0x0a
     unsigned short enemiesKilled;   // +0x0c
@@ -40,20 +41,27 @@ struct SPlayerStats {
 // Bit-packed store for SerializeValue; 0x800 bytes per its position in SSaveData.
 class BitBuffer {
   public:
+    void SaveBegin();
+    void SaveEnd();
+    void LoadBegin();
+    void LoadEnd();
+    int Used() const;
     unsigned int Load(unsigned int);
     void Save(unsigned int, unsigned int);
     unsigned char storage[0x800];
 };
 
-// Named from the field widths: 16, 4, 6, 5, 6 and 6 bits.
-struct SSaveTime {
+// Class name and Now from symbols; ToString takes one. Member names follow the field widths and
+// the order Now copies OSCalendarTime's members into them.
+struct Timestamp {
     unsigned short year;     // +0x0
     unsigned int month : 4;  // +0x2
     unsigned int day : 6;
     unsigned int hour : 5;
     unsigned int minute : 6; // +0x4
     unsigned int second : 6;
-    SSaveTime() { int zero = 0; year = zero; month = zero; day = zero; hour = zero; minute = zero; second = zero; }
+    static Timestamp Now();
+    Timestamp() { int zero = 0; year = zero; month = zero; day = zero; hour = zero; minute = zero; second = zero; }
 };
 
 // The level state kept in the shared settings and in each profile's save slots.
@@ -73,7 +81,7 @@ struct SSaveData {
     int unknown_144;                 // +0x144
     unsigned char compartmentID[4];  // +0x148; indexed by player.
     BitBuffer buffer;                // +0x14c; holds the serialized scene.
-    SSaveTime saveTime;              // +0x94c
+    Timestamp saveTime;              // +0x94c
     SSaveData();
     void TotalReset();
     void LevelReset();
@@ -96,20 +104,28 @@ struct SPlayerProfile {
     float volumeA;                   // +0x0014; first SoundSetVolumes argument.
     float volumeB;                   // +0x0018; second SoundSetVolumes argument.
     unsigned char soundMode;         // +0x001c
-    unsigned char unknown_1d[0x2c - 0x1d];
+    unsigned char unknown_1d[3];
+    float unknown_20;                // +0x0020; set to 0.3 by TotalReset.
+    float unknown_24;                // +0x0024; set to 0.5 by TotalReset.
+    unsigned char unknown_28;        // +0x0028; copied to g_inputMgr as a flag by InitControllerFromOptions.
+    unsigned char unknown_29;        // +0x0029
+    unsigned char noVibration;       // +0x002a; SetMasterBlockVibrations gets its inverse.
+    unsigned char unknown_2b;
     unsigned int languageSelected : 1; // +0x002c; the upper half of this word holds option bits.
-    unsigned int unknownBits : 3;
+    unsigned int unknownBit1 : 1;
+    unsigned int unknownBit2 : 1;
+    unsigned int unknownBit3 : 1;
     unsigned int hudOption : 1;      // InitHUDFromOptions copies it to the player.
     unsigned int saveNamed : 1;      // Tested before the save screen; the keyboard popup runs otherwise.
     unsigned int optionBits : 10;
     short buttons[2][14];            // +0x002e
-    unsigned char unknown_66;
+    unsigned char unknown_66;        // +0x0066
     unsigned char prevMission;       // +0x0067
     unsigned char prevLevel;         // +0x0068
     unsigned char currentSaveSlot;   // +0x0069
     unsigned char unknown_6a[2];
     SSaveData saves[20];             // +0x006c
-    unsigned char unknown_bafc[0xbf48 - 0xbafc];
+    SPlayerStats levelStats[11];     // +0xbafc; indexed by level - 1.
     int medals;                      // +0xbf48
     int unlockedLevels;              // +0xbf4c
     int filmCanisters[2];            // +0xbf50; indexed by canister type.
@@ -117,15 +133,26 @@ struct SPlayerProfile {
     int cheats;                      // +0xbf5c
     int activeCheats;                // +0xbf60
     unsigned char coopDifficulty;    // +0xbf64
-    unsigned char unknown_bf65;
+    unsigned char unknown_bf65;      // +0xbf65
     unsigned char coopPrevLevel;     // +0xbf66
-    unsigned char unknown_bf67[0xc3b4 - 0xbf67];
+    unsigned char unknown_bf67;
+    SPlayerStats coopLevelStats[11]; // +0xbf68; indexed by level - 1.
     int coopMedals;                  // +0xc3b4
     int coopUnlockedLevels;          // +0xc3b8
     int coopCheats;                  // +0xc3bc
-    unsigned char unknown_c3c0[0xc4e8 - 0xc3c0];
+    char names[17][17];              // +0xc3c0; TotalReset writes "DEFAULT" to the first.
+    unsigned char unknown_c4e1;      // +0xc4e1
+    unsigned char unknown_c4e2;      // +0xc4e2
+    unsigned int unknown_c4e3a : 4;  // +0xc4e3
+    unsigned int unknown_c4e3b : 4;
+    unsigned int unknown_c4e4 : 6;   // +0xc4e4
+    unsigned int unknown_c4e4a : 1;
+    unsigned int unknown_c4e4b : 1;
+    unsigned char unknown_c4e5;      // +0xc4e5
+    unsigned char unknown_c4e6;      // +0xc4e6
     SPlayerLevelData levelData[22];  // +0xc4e8
     void TotalReset();
+    static int VERSION;              // Name from its symbol; set from the string "411" at startup.
 };
 
 // The per-player multiplayer entry; 20 bytes. restartIndex (first byte, RestartPlayer's
@@ -137,12 +164,19 @@ struct SMPPlayerData {
     unsigned char maxHealth;    // +0x0d; SetHealthMax's value.
     unsigned char unknown_e[2];
 };
-struct SMPPlayerSlot { int unknown_0; SMPPlayerData data; };
+// The first slot's leading bytes hold shared options; only scoreLimit is known, and it ends the match.
+struct SMPPlayerSlot { unsigned char unknown_0; unsigned char scoreLimit; unsigned char unknown_2[2]; SMPPlayerData data; };
 
 struct SUnknown32140 { unsigned char unknown_0; unsigned char unknown_1; unsigned char unknown_2[18]; };
 
+// Named from how Add_MPPlayerKilled counts them.
 struct SDMStats {
-    int unknown[6];
+    int unknown_0;
+    int kills;     // +0x04
+    int deaths;    // +0x08
+    int score;     // +0x0c
+    int teamKills; // +0x10
+    int unknown_14;
 };
 
 // Saved game data the settings object points to; Init reports sizeof as 0x321ec of 0x321f8 reserved.
@@ -156,7 +190,7 @@ struct SCoreGameSettings {
     int unknown_32070;                  // +0x32070; TotalReset writes it as a fifth entry's leading word.
     int field_32074;                    // +0x32074; a team setting CPlayerObject::HandleBulletCollision requires non-negative for friendly fire protection.
     SDMStats dmStats[8];                // +0x32078
-    int unknown_32138[2];               // +0x32138
+    int teamScore[2];                   // +0x32138; indexed by team.
     SUnknown32140 table_32140[8];       // +0x32140
     signed char profileIndex[4];        // +0x321e0; indexed by player.
     signed char unknown_321e4;          // +0x321e4
@@ -167,6 +201,19 @@ struct SCoreGameSettings {
     void TotalReset();
     void ResetDMStats();
 };
+
+// What the stats screen reads; the type name is descriptive, and the original's is not in the symbols.
+struct SLevelStatsSummary {
+    int objectives;       // +0x00
+    int bonusObjectives;  // +0x04
+    int shotsFired;       // +0x08
+    int hits;             // +0x0c
+    int enemiesKilled;    // +0x10
+    int hitsTaken;        // +0x14
+    int shotLocation[7];  // +0x18; in the order the methods copy them, not EShotLocations order.
+};
+// Original enum tag; the values are star counts.
+enum PerformanceStars { NoStars = 0, OneStar = 1, TwoStars = 2, ThreeStars = 3 };
 
 // Original enum tag; members are descriptive.
 enum EShotLocations { ShotLocation0 = 0 };
@@ -239,8 +286,15 @@ class CGameSettings {
     void SetPlayersFinishedLevelHealth(int, int, float);
     void ActivateCheatNamed_All();
     void ActivateCheatNamed_Unlock();
+    void ActivateCheatNamed_BeatTheLevel();
     void ActivateCheatNamed_HugeArms();
     void AddMedal(int);
+    void DoBeatTheLevelDuties(int);
+    void CalculateLevelStats();
+    SLevelStatsSummary GetLevelStats() const;
+    SLevelStatsSummary GetTotalStatsForLevel() const;
+    void CalculateCumulativeStats();
+    int CalculatePerformanceRating(PerformanceStars &, PerformanceStars &, PerformanceStars &);
     void ResetLevelTimer();
     void UpdateLevelTimer(CPlayerObject *, unsigned int);
     void SaveData();
@@ -252,13 +306,18 @@ class CGameSettings {
     int Get_PlayerControllerSetting(int);
     void InitHUDFromOptions(int);
     void InitAudioFromOptions(int, bool);
+    void ButtonArrayToKeymap(short *, KEYMAP *);
     int GetSoundModeValue(int);
     void SetSoundModeValue(int, ESoundMode);
     int CurrentLevelIsShell() const;
     void BindKeyToEvent(KEYMAP *, unsigned short, unsigned short);
     void SetUpButtonConfig(int, short *);
     int PlayerLevelDataIndex(int, int);
+    void RestoreSaveData(unsigned int, unsigned int);
     void RestoreSaveData();
+    void RestoreLevelStartData();
+    void RestoreSerializedData();
+    void StoreSaveData(unsigned int, unsigned int);
     void RestoreSlotBackup();
     void RememberProfileDevices();
     void RestoreProfileDevices();
@@ -296,7 +355,7 @@ class CGameSettings {
     unsigned char unknown_28[0xa8 - 0x28];
     int unknown_a8; // Read as a copy by the pop-up message handler. Set to 1 by the constructor and total reset.
     int unknown_ac;
-    int unknown_b0; // Compared with 1 before the language is used for loading screens.
+    int skuType; // Index of the sku key's value in game.cfg, 0 "us". Compared with 1 before the language is used for loading screens.
     int slotBackupSlot;         // +0x0b4
     int slotBackupPlayer;       // +0x0b8
     int serializeMode;          // +0x0bc; 1 or 3 write, 2 reads.
@@ -325,6 +384,7 @@ class CGameSettings {
     void Set_hitsTaken(unsigned int, bool);
     void Set_enemiesKilled(unsigned int, bool);
     void Set_shotLocation(unsigned int, EShotLocations, bool);
+    void Add_MPPlayerKilled(IMovingSceneNode *, IMovingSceneNode *);
 };
 extern CGameSettings g_GameSettings;
 
@@ -332,12 +392,16 @@ extern CGameSettings g_GameSettings;
 struct CheatsView {
     int invincible; // Tested by CPlayerObject::IsInvincible; name inferred.
     int infiniteAmmo; // +4; CWeapon::Update refills an empty reserve. Name from Frontline.
-    unsigned char unknown_8[0x1c - 8];
+    int unknown_8;
+    int unknown_c;
+    float unknown_10;
+    int unknown_14;
+    int unknown_18;
     int keepGrenadeSpeed; // +0x1c; name from Frontline.
     int oneShotKillsEnemies; // +0x20; a soldier's bullet damage becomes 1000. Descriptive.
     int headShotsOnly;       // +0x24; name from Frontline.
     int oneHitKills; // +0x28; damage becomes 1000 in CExplosion::Visit. Name from Frontline.
-    unsigned char unknown_2c[0x30 - 0x2c];
+    int unknown_2c;
     int hugeArms; // +0x30; set by ActivateCheatNamed_HugeArms.
     int allReplayItems;
 };

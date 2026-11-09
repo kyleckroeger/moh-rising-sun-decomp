@@ -7,8 +7,8 @@ void SPlayerStats::Reset() {
     hits = 0;
     hitsTaken = 0;
     unknown_a = 0;
-    unknown_4[0] = 0;
-    unknown_4[1] = 0;
+    objectives = 0;
+    bonusObjectives = 0;
     shotLocation[0] = 0;
     shotLocation[3] = 0;
     shotLocation[6] = 0;
