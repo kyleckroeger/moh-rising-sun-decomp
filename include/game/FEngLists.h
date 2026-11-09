@@ -51,17 +51,38 @@ class FERefList {
 
 class FEWideString;
 class FEScript;
+class FEMessageResponse;
 class FEObject : public FENode {
   public:
     FEScript *FindScript(unsigned long) const;
     void SetCurrentScript(FEScript *);
+    void SetupMoveToTracks();
+    void SetDataSize(unsigned long);
+    FEMessageResponse *FindResponse(unsigned long) const;
+    void SetScript(unsigned long, bool);
+    void SetScript(FEScript *, bool);
+    unsigned char unknown_14[0x18 - 0x14];
+    int type;                     // +0x18; 5 for a group, 2 for a string in SetGroupString.
+    unsigned int unknownBits : 5; // +0x1c, the object's flag word.
+    unsigned int disabled : 1;    // Set by DisableButton.
+    unsigned int unknownBit6 : 3;
+    unsigned int changed : 1;     // Set whenever text or script is replaced.
+    unsigned char unknown_20[0x2c - 0x20];
+    unsigned char *data;          // +0x2c
+    unsigned long dataSize;       // +0x30
+    unsigned char unknown_34[0x38 - 0x34];
+    FEMessageResponse *responses; // +0x38
+    unsigned char unknown_3c[0x48 - 0x3c];
+    FEScript *scripts;            // +0x48
+    unsigned char unknown_4c[0x54 - 0x4c];
+    FEScript *currentScript;      // +0x54
 };
 
 class FEGroup : public FEObject {
   public:
     FEObject *FindChild(unsigned long) const;
     FEObject *FindChild(const char *) const;
-    unsigned char unknown_14[0x5c - 0x14];
+    unsigned char unknown_58[0x5c - 0x58];
     FEObject *children; // +0x5c
 };
 

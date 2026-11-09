@@ -11,7 +11,7 @@ int PackageHandler::SetScript(FEPackage *package, const char *name, const char *
     FEScript *found = object->FindScript(FEHashUpper(script));
     if (!found) return -2;
     object->SetCurrentScript(found);
-    object->textChanged = 1;
+    object->changed = 1;
     return 0;
 }
 int PackageHandler::SetScript(FEPackage *package, unsigned long hash, const char *script) {
@@ -20,6 +20,6 @@ int PackageHandler::SetScript(FEPackage *package, unsigned long hash, const char
     FEScript *found = object->FindScript(FEHashUpper(script));
     if (!found) return -2;
     object->SetCurrentScript(found);
-    object->textChanged = 1;
+    object->changed = 1;
     return 0;
 }

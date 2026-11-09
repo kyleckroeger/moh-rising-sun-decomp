@@ -56,6 +56,10 @@ they share a string with `EnableButton` across it.
 entries of three 64-byte strings, a demo entry and a credits entry, starting at `+0x84`. It ends at
 `+0x2304`, which fixes the position of `ShellManager`'s following members.
 
-Not yet exact: `GetStringLength` (register allocation), `FEColor::operator-` (load order),
+`FEObject`'s flag word at `+0x1c`, data block at `+0x2c`, response and script lists and current
+script at `+0x54` are verified by its methods and `PackageHandler`'s. Its data comes from the file-local
+pool `ObjDataPool`.
+
+Not yet exact: `Close` (FEObject.cpp, a float range test), `GetStringLength` (register allocation), `FEColor::operator-` (load order),
 `ShellManager::RenderObjectList`, `RecallPackageMarker`, `RecordPackageMarker` and the
 `PackageHandler` object-list index functions.
