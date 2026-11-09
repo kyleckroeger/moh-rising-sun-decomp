@@ -2254,7 +2254,18 @@
     "gamesettings_buttonarraytokeymap.json",
     "gamesettings_restorelevelstartdata.json",
     "gamesettings_getprofilescrcvalue.json",
-    "gamesettings_storesavedata.json"
+    "gamesettings_storesavedata.json",
+    "snd_mutex_hooks.json",
+    "ssys_options.json",
+    "ssys_iop.json",
+    "ssys_heap.json",
+    "svecreal_mode.json",
+    "coda_hooks.json",
+    "eaxadecf_feed.json",
+    "eaxadecf_state.json",
+    "mtdecf_bits.json",
+    "mtdecf_filter.json",
+    "mtdecf_class.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

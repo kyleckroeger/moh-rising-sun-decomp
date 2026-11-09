@@ -1933,7 +1933,13 @@
       "src/sound/ea/SNDI_mult16.cpp": "4f89d97881a128095f971693bc70d7667fff3f4d9616ce2bb4c5d82d0287e3d4",
       "src/sound/ea/SNDI_root1x.cpp": "b8cb81975aae1629cfe4bb3b1a1724aa93700d217933dfd624cb97348a2b951d",
       "src/sound/ea/SNDI_sin.cpp": "48b77d6d0581a9304aa3f75ad076d39e5e2cafbc067c49354a718c50f88ac555",
+      "src/sound/ea/coda_hooks.cpp": "8222d55692354d509207882116fe1af1504bb9c061c8e4aedb36d5148f3720b4",
+      "src/sound/ea/eaxadecf_feed.cpp": "f8eb145f64d87b3a0764e957a0a2730a957107880b1fa6bf2aa56a1bd1e4b222",
+      "src/sound/ea/eaxadecf_state.cpp": "40950e84779a93834b9acf138af947d8bfc1301b857b0e69fdecd3172034fa49",
       "src/sound/ea/isnd64.cpp": "6b2f195cb4696a2c6c4435d711ed520975d96cbb2363316be54ecf816b8491ab",
+      "src/sound/ea/mtdecf_bits.cpp": "6ff7c09b542bc592ff9086496ccd1d2c8ad7dbe968c5fc8e4ef1332a0130b053",
+      "src/sound/ea/mtdecf_class.cpp": "886cf43d5017d7dff01968d593f0695ff973e98d1ca1b8ced83abcb0bb167c68",
+      "src/sound/ea/mtdecf_filter.cpp": "2e1254d698c9ad52a9c937272c337154e6d12a9569100cdf5162fafe6bc3735f",
       "src/sound/ea/path_control.cpp": "12651e06dcb7ff8cee798d576ce0c4b69f73b24ac3d8db018f7c5e859e533d9c",
       "src/sound/ea/path_createtrack.cpp": "fbae8f31056cdf4a004045ebe80d905d515aa4a196807a266efdd8d72a1119e5",
       "src/sound/ea/path_ctl.cpp": "e953f0395dc2386605b65e7cb8a65f1884919c3f82c0dd9337634fa63c44444d",
@@ -2064,6 +2070,7 @@
       "src/sound/ea/srrange.cpp": "09c74bfc5c6aafd0cf8517454512d2bbadac4a8bb57cda77ccf7ca0e94ec8f28",
       "src/sound/ea/sserver.cpp": "cafec45ef56fbdc83327d79dfcd2d979cbb49e8423b73be864f66bcc2b929544",
       "src/sound/ea/sserver_100hz.cpp": "327e95da5915088f050cbd1306de203584f23935f36e227e0de9be56401fda29",
+      "src/sound/ea/sserver_hooks.cpp": "727c78a9bd382ca6689c33e0a495cf9d89a0262feddebbfa8b5de32bf8fae52a",
       "src/sound/ea/sst_queue_q.cpp": "a77c5bf52dfb602100780e8e4178836b8a5a9d2b3f8289a60beaedabe2f885cf",
       "src/sound/ea/sst_service.cpp": "f9b294f40058001bd3c809c1102e050b5417270d5fca1032f1cc356735ee5870",
       "src/sound/ea/sst_stream.cpp": "69165821bf3327e1172e21cef47995977c753ece129da5bbefe3780f831f6536",
@@ -2081,7 +2088,10 @@
       "src/sound/ea/sstsetgl.cpp": "d0fbcf99e259b9f92ef921cfd7ed594a4d6414f1a79b4cd3ef8e770ddb74aba7",
       "src/sound/ea/sststat.cpp": "35555d92273b87ed48807abe4e01a99304a2e0adc23103d9297746f5df123257",
       "src/sound/ea/sstvol.cpp": "41e109bddcbf6d5fde910f7d047f0752c0e2ffaeb37edad869be9e6e9e0f85a7",
+      "src/sound/ea/ssys_heap.cpp": "e9e3e9a0c6ff55cad08f7a3a35a9c59b209af2ff26161f3b676788bec9f9c17d",
       "src/sound/ea/ssys_inited.cpp": "225a018f216edcadf9d419b9b4d1bbea909b1fb830b469f953611750b1a8d730",
+      "src/sound/ea/ssys_iop.cpp": "693161e346868da5d38496039ea6774dd40e52fa5c79920758aaa0e16dbc33ee",
+      "src/sound/ea/ssys_options.cpp": "6a04cd403a68d6e92371d33c3e7c3549c539f7a7120a6168227e4c16c077a4ef",
       "src/sound/ea/ssys_restore.cpp": "01666f4c348a50927c13e6a466c9380a2d5e5f681dd07f99dd4bc8dc919c9719",
       "src/sound/ea/ssysopts.cpp": "e01e1014454d18c7d70b796780dad091ffe06fc58842ceffa8a2140020b62300",
       "src/sound/ea/ssysreal.cpp": "889a51f34a02038446f52f661087a066c48661006f50fe062fc5024f1f4d8ef5",
@@ -2090,14 +2100,15 @@
       "src/sound/ea/stretch.cpp": "a3fa126b7a3209b34b0c970234e64619897895a1ebba0fa6dac0aee8b06be877",
       "src/sound/ea/supf.cpp": "b2a0bb3e826b53d0315d56952dcffd06ba844982a073d14375eacfcdbcc504fa",
       "src/sound/ea/suplf.cpp": "968c578e1fe244e626ed85f129f90f8a320521a20c77ef34cb9e2a01d8330337",
-      "src/sound/ea/supmutf.cpp": "9de2c9fc2ef9c8ce835618f490b20d1ed2323052eff1e52866cc581467c8a5cb",
-      "src/sound/ea/supmutlf.cpp": "7bff9d8a8bc92bf56187cc8a8657a60c75a6b45327581ca22d547468c663ab72",
-      "src/sound/ea/supmutpf.cpp": "79b2cf32996f70457a0c54c5e6f87ddb8419a15166ac016297e28b0c672b8bed",
+      "src/sound/ea/supmutf.cpp": "fd5d21351f87ae67470038edff4da68ac9d4cacf5cd2d9695502bc5a02200545",
+      "src/sound/ea/supmutlf.cpp": "061ca0163e4243704c1251a6b416bcb4b17a2f5a0e1e64cbef2511b9e355b3a7",
+      "src/sound/ea/supmutpf.cpp": "e98a89bb443f3096c0218e0518d56c8352a491d591285513dde0eda499426f0a",
       "src/sound/ea/suppf.cpp": "555d9dc6d44b64a09523bfd5561bcb62a76f859a6ac3b4686e9d78853180d3b1",
-      "src/sound/ea/supxaf.cpp": "1b1831045aab3ae330000ce66ea1b65d01a3d8acfd5dc07635cfd2bf876a37db",
-      "src/sound/ea/supxalf.cpp": "2c9177a2f77ad8e67de00e7d112c981ea0b29e8073204541759b743c01c9d0eb",
-      "src/sound/ea/supxapf.cpp": "fbdd2361b3f90e6ee7780a7617fe3f41ffcbbfe4334eefbdd0698e49534b805d",
+      "src/sound/ea/supxaf.cpp": "21781723cdd7e0d3d0ac8241a972576eb589bb67cdc8f6f2057b4b9a91bebca2",
+      "src/sound/ea/supxalf.cpp": "5557a8f0db4a4b2a0e40ca48efddcc3fb805ee57100faae90a5f393b34fcb9ee",
+      "src/sound/ea/supxapf.cpp": "5b972c10e53f0cd4451a12c64d991c4b61011d3c1ed2170199c97a4f546c529a",
       "src/sound/ea/susercb.cpp": "a71b84268488393d97684ad26943b3a64ba777719e38e48c61df644fd75b5e3d",
+      "src/sound/ea/svecreal_mode.cpp": "d3cb6c0e87ffda799be88b5adfefeab4f4fd317d366cb311e636fce003500fc2",
       "src/sound/ea/svol.cpp": "604c59b717c9247132f920281f8c15fe5fe8091d32f06089ea87f96bdb869813",
       "src/sound/ea/sx87d16.cpp": "c1dd596abc75c11f30754a6dba703855646d4b8f22e144410e386724486258d4",
       "src/sound/soundbuss_activate.cpp": "c0ba388aa4b92b4cf746a427cb0b30155c0c8d724f2e18d108988f3fa550824c",
@@ -2697,6 +2708,9 @@
       "include/game/Shell.h": "4368aeeaa2127f31c86496fbba71e284b54b8752c8ed69e0b6031b7b3e299b6e",
       "include/game/ShellManager.h": "e2923227eb223f506831fd2f15441e6251b3d419998fedeb7d5a32e7bcd1af04",
       "include/game/SkyBox.h": "810947bbc2ecf7cb4d69dfa350c055b05d446c04b904abfadaf4828c7be01a55",
+      "include/game/SndEAXA.h": "462f6c63008084b8cb5b525d5029b804e760f3859ba6e5676a4d36461906da13",
+      "include/game/SndMicroTalk.h": "47d54f16635c2a64944419af8564ee38901f410b5dc9d139ed973fb87d8ff937",
+      "include/game/SndSystem.h": "7766ae7c6fbd1228ce2c309bb0f61588c2862828adbeea8e059134e149bacb6f",
       "include/game/SoundAmbience.h": "a8ffdd3a842aa24e0d8511216e05fd27625c8c2e96c7db19d7557afa729b1fb5",
       "include/game/SoundBuss.h": "75b881885a01592151ee125c282bb1239dbdb7035ddd48aa27497ed12a3e1e21",
       "include/game/SoundEntryPool.h": "3766b906852ceb49985a2e376f46077c2e739f8dc17ca0f16a47b60b79eb0d59",
@@ -3207,6 +3221,7 @@
       "config/GR8E69/cdbobject_volume_tests.json": "cd69b3449a419ddfd4ab9b86bd8a79f6b756d62ec55e7837299a8bc66d0fe0a9",
       "config/GR8E69/cdbvolbox_destructor.json": "09f5635ea67b9a14ae39f825281f580a8edc97496b69bc8d2fae2e9b60cb8354",
       "config/GR8E69/character_skeleton_joints.json": "7b9a08ef542bee784de669616fb38a4939dbc5f672dc055e0ec39449098eda0d",
+      "config/GR8E69/coda_hooks.json": "20a6c9c073123aebaae54e4dc31b2b111afb3fd64be1158bd37fbec51e3c9cbd",
       "config/GR8E69/collision.json": "1b0c1c5fcf9df49be4f7e94045811de208a33a442beaf2225667d05a837a0c9c",
       "config/GR8E69/collisionvolume.json": "a360590b9e54eb2830ee70b8ccb7bd1ab64783469d91bd35518a796bb4d4ff7f",
       "config/GR8E69/collisionvolume_ctor.json": "1cd7798c387aced98950eda6770d628d8e632260c24bad508e72302c54580be7",
@@ -3560,6 +3575,8 @@
       "config/GR8E69/eagl_viewport_getshape.json": "1a436f45b9dfa1cd6ef56773ec6916c5d4a6284dfe14e67e1314d89495972658",
       "config/GR8E69/eagl_viewport_setview.json": "b1bfd4919126fb25e7ab6a171f6c563794e1816a593604ea9b0e8066e7018bb7",
       "config/GR8E69/eagl_viewport_sphere_private.json": "4d31b223d12b3b878dad6164cce0d71fa9cfc7466cfe0e15bb95566da9426146",
+      "config/GR8E69/eaxadecf_feed.json": "9fb038cfc5e5625c24c9b668ff29fe4fa77f494a2eca20fb711243d7c499591a",
+      "config/GR8E69/eaxadecf_state.json": "c9694f72f4b9050bf1b2c6da299c36c11ad7a4dc23bd1893d522b85012ece971",
       "config/GR8E69/endian_scalar.json": "b06b899196751f86468ed6219d7354e925563bb4d924c4bde79681dbca388e37",
       "config/GR8E69/endian_short.json": "46ae80cd39c500fc5811695c39a6554a21972ed5948c58969a359a404c747428",
       "config/GR8E69/ethsec.json": "5305737979b5e234b337720f07434e602f0d0ab8df682c5287ba2349d6438f69",
@@ -3786,6 +3803,9 @@
       "config/GR8E69/moving_node_light_defaults.json": "11326888dd025f649beae1650cf3b91bb0d5b68dccce9fd75c058f2ea24ca33f",
       "config/GR8E69/moving_node_reset.json": "67a3713a8a1e1b7b5f0e00297a1a9e11dc4da80179665d43f5e0580a62913d96",
       "config/GR8E69/moving_node_transform_defaults.json": "bf036bd61b867754c63869e74af221f9ffb6d0f51aa4cb01a2c4fbc2c685b122",
+      "config/GR8E69/mtdecf_bits.json": "6ff81150f79781ce32a5c3b9cffed0dfd6eaf8fccee98949b4cb2afc3e50e186",
+      "config/GR8E69/mtdecf_class.json": "e1e385f3f2b804889cb595a4d41d9886c622663593c2d64118524f54669a5c11",
+      "config/GR8E69/mtdecf_filter.json": "61cc7db4e35da36767f4a99558fafda434792cf786c77a75c487534b8065f911",
       "config/GR8E69/mtx44.json": "84de9c6118b6daea26b557ecdd7359bff811fed286a625edf04cff45c24da5c3",
       "config/GR8E69/newlib-source.json": "e576a198dc1b37da204e4e141c2f21b1a9e1c88c1a709105cc6e2737018e78c6",
       "config/GR8E69/newlib__tolower.json": "35084196609b4abe76e7981924b6dd63422f61e1d52314c374074af3f2357d58",
@@ -4017,7 +4037,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "554c24f7d6f38e9be73e743f120ae18f50a158c2ccc697da6ef0255fac337d8d",
+      "config/GR8E69/project.json": "347917af862811975ac1b5a0500b0f918fb5374903a66147d6e172c986a5ef01",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -4682,6 +4702,7 @@
       "config/GR8E69/skybox_class.json": "6382327bdfd3308c3364c6cd96a02b3c8d1e82af96f09447f12c14cac9db21ea",
       "config/GR8E69/skybox_dtor.json": "d67d7fc8b0aebb0429903e6dcdaa65bf32a5f1930b319afc4a4bf8063f1d5e6b",
       "config/GR8E69/sn-library-source.json": "606ef80cd17599d3b7c2833a01c483622529485e2455c15ac76c975ba20507dc",
+      "config/GR8E69/snd_mutex_hooks.json": "888a901de9b9b6ef39e592331c274725b5fa96b8ec6103d47d0dacda86df8438",
       "config/GR8E69/sound_SNDI_cos.json": "287a7c6bda63c9aecddaf5c5ee432ad55999d46465fed70d9dbda4c2871a6f46",
       "config/GR8E69/sound_SNDI_mult16.json": "5ee21154684ee0405d463f947be20b6d7b921148d9e4251afe2ed9fcb1b1acfb",
       "config/GR8E69/sound_SNDI_root1x.json": "adb374620a624ba61d9bece2ab55b067834ce9c8f584372dd3c9b19816fd1399",
@@ -4893,6 +4914,9 @@
       "config/GR8E69/sphere_test_triangle.json": "2a5b8b5ff0e5f0df68069a329e049772042260412a2df8ba5c38283994312972",
       "config/GR8E69/sphere_transformed_copy.json": "025056d6c715db1dad3375b20a1d22067222ae98559bf34ae18cab52a59c09b6",
       "config/GR8E69/sprite_ctor.json": "1a13712a334e19091b8830494644f9b9914e0eed3d8e53ca030cdd8e2f9058dd",
+      "config/GR8E69/ssys_heap.json": "8e4e5609ec14fda7eeed8c3b7252a5858f9d21386543c396a2a1f80ca752182b",
+      "config/GR8E69/ssys_iop.json": "e84bcb5cfa65b1cd4899c5daa355a2c4954cf3c6fdaea63d1042c85387b14d22",
+      "config/GR8E69/ssys_options.json": "37df7b8b62795e520909616ebd42835ed4a01420fd117be2009d0cffd472b91b",
       "config/GR8E69/static_draw.json": "4ec55f884794175fe89cb6b8d0be7e4306b6a2da1953afc4dc67a05325c7135f",
       "config/GR8E69/static_draw2.json": "479d4fd43bb7419b6aea1a6b48c25d0649a2ca56a0432f1cb77d3fb11df65b43",
       "config/GR8E69/static_screen.json": "0b055ec8f0df5367f869aa35f193e35f29b8add1693bf6e63802802d295fc4b6",
@@ -5097,6 +5121,7 @@
       "config/GR8E69/string_table_create.json": "f909d5f84888ed793f069d620ce2e269b4a7790ee57264c82e6aa49e06b9db48",
       "config/GR8E69/string_table_init.json": "ff3b4b52d9b1c1a40f9e18e637276126dacc3691b4bbdfa395f2e3a86396a0d9",
       "config/GR8E69/surfacetype.json": "daa592458ac3208da8ec350650fa5d93bdb1bcc4741a496b87bf6963468e9289",
+      "config/GR8E69/svecreal_mode.json": "be84672377a0aa57fdddb28b10722054cc40f2a300c64bf0847b07a7c90d8a9f",
       "config/GR8E69/sys_memory_operators.json": "593181060ad84668f2fdb91654d17a410ae9aaaceec9493f698e682fe683b96b",
       "config/GR8E69/target.json": "48fb9548419f5549d49ebba1794d3193398e58c37c0d15569e6ed1810d8adb8f",
       "config/GR8E69/thrown_accessors.json": "6b256ab3fbe4b068539a2e125fee54b0d77a57f5580e2c54d92df8ccbddfb6ba",
@@ -6705,14 +6730,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1164664,
+    "matching_code_bytes": 1168804,
     "total_executable_code_bytes": 2492032,
-    "percent": 46.735515434793776,
+    "percent": 46.90164492269762,
     "categories": {
-      "reconstructed_game": 772448,
+      "reconstructed_game": 776588,
       "restored_library": 392216
     },
-    "matching_functions": 5981
+    "matching_functions": 6013
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -7054,6 +7079,7 @@
     "config/GR8E69/cdbobject_volume_tests.json": "cd69b3449a419ddfd4ab9b86bd8a79f6b756d62ec55e7837299a8bc66d0fe0a9",
     "config/GR8E69/cdbvolbox_destructor.json": "09f5635ea67b9a14ae39f825281f580a8edc97496b69bc8d2fae2e9b60cb8354",
     "config/GR8E69/character_skeleton_joints.json": "7b9a08ef542bee784de669616fb38a4939dbc5f672dc055e0ec39449098eda0d",
+    "config/GR8E69/coda_hooks.json": "20a6c9c073123aebaae54e4dc31b2b111afb3fd64be1158bd37fbec51e3c9cbd",
     "config/GR8E69/collision.json": "1b0c1c5fcf9df49be4f7e94045811de208a33a442beaf2225667d05a837a0c9c",
     "config/GR8E69/collisionvolume.json": "a360590b9e54eb2830ee70b8ccb7bd1ab64783469d91bd35518a796bb4d4ff7f",
     "config/GR8E69/collisionvolume_ctor.json": "1cd7798c387aced98950eda6770d628d8e632260c24bad508e72302c54580be7",
@@ -7407,6 +7433,8 @@
     "config/GR8E69/eagl_viewport_getshape.json": "1a436f45b9dfa1cd6ef56773ec6916c5d4a6284dfe14e67e1314d89495972658",
     "config/GR8E69/eagl_viewport_setview.json": "b1bfd4919126fb25e7ab6a171f6c563794e1816a593604ea9b0e8066e7018bb7",
     "config/GR8E69/eagl_viewport_sphere_private.json": "4d31b223d12b3b878dad6164cce0d71fa9cfc7466cfe0e15bb95566da9426146",
+    "config/GR8E69/eaxadecf_feed.json": "9fb038cfc5e5625c24c9b668ff29fe4fa77f494a2eca20fb711243d7c499591a",
+    "config/GR8E69/eaxadecf_state.json": "c9694f72f4b9050bf1b2c6da299c36c11ad7a4dc23bd1893d522b85012ece971",
     "config/GR8E69/endian_scalar.json": "b06b899196751f86468ed6219d7354e925563bb4d924c4bde79681dbca388e37",
     "config/GR8E69/endian_short.json": "46ae80cd39c500fc5811695c39a6554a21972ed5948c58969a359a404c747428",
     "config/GR8E69/ethsec.json": "5305737979b5e234b337720f07434e602f0d0ab8df682c5287ba2349d6438f69",
@@ -7633,6 +7661,9 @@
     "config/GR8E69/moving_node_light_defaults.json": "11326888dd025f649beae1650cf3b91bb0d5b68dccce9fd75c058f2ea24ca33f",
     "config/GR8E69/moving_node_reset.json": "67a3713a8a1e1b7b5f0e00297a1a9e11dc4da80179665d43f5e0580a62913d96",
     "config/GR8E69/moving_node_transform_defaults.json": "bf036bd61b867754c63869e74af221f9ffb6d0f51aa4cb01a2c4fbc2c685b122",
+    "config/GR8E69/mtdecf_bits.json": "6ff81150f79781ce32a5c3b9cffed0dfd6eaf8fccee98949b4cb2afc3e50e186",
+    "config/GR8E69/mtdecf_class.json": "e1e385f3f2b804889cb595a4d41d9886c622663593c2d64118524f54669a5c11",
+    "config/GR8E69/mtdecf_filter.json": "61cc7db4e35da36767f4a99558fafda434792cf786c77a75c487534b8065f911",
     "config/GR8E69/mtx44.json": "84de9c6118b6daea26b557ecdd7359bff811fed286a625edf04cff45c24da5c3",
     "config/GR8E69/newlib-source.json": "e576a198dc1b37da204e4e141c2f21b1a9e1c88c1a709105cc6e2737018e78c6",
     "config/GR8E69/newlib__tolower.json": "35084196609b4abe76e7981924b6dd63422f61e1d52314c374074af3f2357d58",
@@ -7864,7 +7895,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "554c24f7d6f38e9be73e743f120ae18f50a158c2ccc697da6ef0255fac337d8d",
+    "config/GR8E69/project.json": "347917af862811975ac1b5a0500b0f918fb5374903a66147d6e172c986a5ef01",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -8529,6 +8560,7 @@
     "config/GR8E69/skybox_class.json": "6382327bdfd3308c3364c6cd96a02b3c8d1e82af96f09447f12c14cac9db21ea",
     "config/GR8E69/skybox_dtor.json": "d67d7fc8b0aebb0429903e6dcdaa65bf32a5f1930b319afc4a4bf8063f1d5e6b",
     "config/GR8E69/sn-library-source.json": "606ef80cd17599d3b7c2833a01c483622529485e2455c15ac76c975ba20507dc",
+    "config/GR8E69/snd_mutex_hooks.json": "888a901de9b9b6ef39e592331c274725b5fa96b8ec6103d47d0dacda86df8438",
     "config/GR8E69/sound_SNDI_cos.json": "287a7c6bda63c9aecddaf5c5ee432ad55999d46465fed70d9dbda4c2871a6f46",
     "config/GR8E69/sound_SNDI_mult16.json": "5ee21154684ee0405d463f947be20b6d7b921148d9e4251afe2ed9fcb1b1acfb",
     "config/GR8E69/sound_SNDI_root1x.json": "adb374620a624ba61d9bece2ab55b067834ce9c8f584372dd3c9b19816fd1399",
@@ -8740,6 +8772,9 @@
     "config/GR8E69/sphere_test_triangle.json": "2a5b8b5ff0e5f0df68069a329e049772042260412a2df8ba5c38283994312972",
     "config/GR8E69/sphere_transformed_copy.json": "025056d6c715db1dad3375b20a1d22067222ae98559bf34ae18cab52a59c09b6",
     "config/GR8E69/sprite_ctor.json": "1a13712a334e19091b8830494644f9b9914e0eed3d8e53ca030cdd8e2f9058dd",
+    "config/GR8E69/ssys_heap.json": "8e4e5609ec14fda7eeed8c3b7252a5858f9d21386543c396a2a1f80ca752182b",
+    "config/GR8E69/ssys_iop.json": "e84bcb5cfa65b1cd4899c5daa355a2c4954cf3c6fdaea63d1042c85387b14d22",
+    "config/GR8E69/ssys_options.json": "37df7b8b62795e520909616ebd42835ed4a01420fd117be2009d0cffd472b91b",
     "config/GR8E69/static_draw.json": "4ec55f884794175fe89cb6b8d0be7e4306b6a2da1953afc4dc67a05325c7135f",
     "config/GR8E69/static_draw2.json": "479d4fd43bb7419b6aea1a6b48c25d0649a2ca56a0432f1cb77d3fb11df65b43",
     "config/GR8E69/static_screen.json": "0b055ec8f0df5367f869aa35f193e35f29b8add1693bf6e63802802d295fc4b6",
@@ -8944,6 +8979,7 @@
     "config/GR8E69/string_table_create.json": "f909d5f84888ed793f069d620ce2e269b4a7790ee57264c82e6aa49e06b9db48",
     "config/GR8E69/string_table_init.json": "ff3b4b52d9b1c1a40f9e18e637276126dacc3691b4bbdfa395f2e3a86396a0d9",
     "config/GR8E69/surfacetype.json": "daa592458ac3208da8ec350650fa5d93bdb1bcc4741a496b87bf6963468e9289",
+    "config/GR8E69/svecreal_mode.json": "be84672377a0aa57fdddb28b10722054cc40f2a300c64bf0847b07a7c90d8a9f",
     "config/GR8E69/sys_memory_operators.json": "593181060ad84668f2fdb91654d17a410ae9aaaceec9493f698e682fe683b96b",
     "config/GR8E69/target.json": "48fb9548419f5549d49ebba1794d3193398e58c37c0d15569e6ed1810d8adb8f",
     "config/GR8E69/thrown_accessors.json": "6b256ab3fbe4b068539a2e125fee54b0d77a57f5580e2c54d92df8ccbddfb6ba",
@@ -9346,6 +9382,9 @@
     "include/game/Shell.h": "4368aeeaa2127f31c86496fbba71e284b54b8752c8ed69e0b6031b7b3e299b6e",
     "include/game/ShellManager.h": "e2923227eb223f506831fd2f15441e6251b3d419998fedeb7d5a32e7bcd1af04",
     "include/game/SkyBox.h": "810947bbc2ecf7cb4d69dfa350c055b05d446c04b904abfadaf4828c7be01a55",
+    "include/game/SndEAXA.h": "462f6c63008084b8cb5b525d5029b804e760f3859ba6e5676a4d36461906da13",
+    "include/game/SndMicroTalk.h": "47d54f16635c2a64944419af8564ee38901f410b5dc9d139ed973fb87d8ff937",
+    "include/game/SndSystem.h": "7766ae7c6fbd1228ce2c309bb0f61588c2862828adbeea8e059134e149bacb6f",
     "include/game/SoundAmbience.h": "a8ffdd3a842aa24e0d8511216e05fd27625c8c2e96c7db19d7557afa729b1fb5",
     "include/game/SoundBuss.h": "75b881885a01592151ee125c282bb1239dbdb7035ddd48aa27497ed12a3e1e21",
     "include/game/SoundEntryPool.h": "3766b906852ceb49985a2e376f46077c2e739f8dc17ca0f16a47b60b79eb0d59",
@@ -11446,7 +11485,13 @@
     "src/sound/ea/SNDI_mult16.cpp": "4f89d97881a128095f971693bc70d7667fff3f4d9616ce2bb4c5d82d0287e3d4",
     "src/sound/ea/SNDI_root1x.cpp": "b8cb81975aae1629cfe4bb3b1a1724aa93700d217933dfd624cb97348a2b951d",
     "src/sound/ea/SNDI_sin.cpp": "48b77d6d0581a9304aa3f75ad076d39e5e2cafbc067c49354a718c50f88ac555",
+    "src/sound/ea/coda_hooks.cpp": "8222d55692354d509207882116fe1af1504bb9c061c8e4aedb36d5148f3720b4",
+    "src/sound/ea/eaxadecf_feed.cpp": "f8eb145f64d87b3a0764e957a0a2730a957107880b1fa6bf2aa56a1bd1e4b222",
+    "src/sound/ea/eaxadecf_state.cpp": "40950e84779a93834b9acf138af947d8bfc1301b857b0e69fdecd3172034fa49",
     "src/sound/ea/isnd64.cpp": "6b2f195cb4696a2c6c4435d711ed520975d96cbb2363316be54ecf816b8491ab",
+    "src/sound/ea/mtdecf_bits.cpp": "6ff7c09b542bc592ff9086496ccd1d2c8ad7dbe968c5fc8e4ef1332a0130b053",
+    "src/sound/ea/mtdecf_class.cpp": "886cf43d5017d7dff01968d593f0695ff973e98d1ca1b8ced83abcb0bb167c68",
+    "src/sound/ea/mtdecf_filter.cpp": "2e1254d698c9ad52a9c937272c337154e6d12a9569100cdf5162fafe6bc3735f",
     "src/sound/ea/path_control.cpp": "12651e06dcb7ff8cee798d576ce0c4b69f73b24ac3d8db018f7c5e859e533d9c",
     "src/sound/ea/path_createtrack.cpp": "fbae8f31056cdf4a004045ebe80d905d515aa4a196807a266efdd8d72a1119e5",
     "src/sound/ea/path_ctl.cpp": "e953f0395dc2386605b65e7cb8a65f1884919c3f82c0dd9337634fa63c44444d",
@@ -11577,6 +11622,7 @@
     "src/sound/ea/srrange.cpp": "09c74bfc5c6aafd0cf8517454512d2bbadac4a8bb57cda77ccf7ca0e94ec8f28",
     "src/sound/ea/sserver.cpp": "cafec45ef56fbdc83327d79dfcd2d979cbb49e8423b73be864f66bcc2b929544",
     "src/sound/ea/sserver_100hz.cpp": "327e95da5915088f050cbd1306de203584f23935f36e227e0de9be56401fda29",
+    "src/sound/ea/sserver_hooks.cpp": "727c78a9bd382ca6689c33e0a495cf9d89a0262feddebbfa8b5de32bf8fae52a",
     "src/sound/ea/sst_queue_q.cpp": "a77c5bf52dfb602100780e8e4178836b8a5a9d2b3f8289a60beaedabe2f885cf",
     "src/sound/ea/sst_service.cpp": "f9b294f40058001bd3c809c1102e050b5417270d5fca1032f1cc356735ee5870",
     "src/sound/ea/sst_stream.cpp": "69165821bf3327e1172e21cef47995977c753ece129da5bbefe3780f831f6536",
@@ -11594,7 +11640,10 @@
     "src/sound/ea/sstsetgl.cpp": "d0fbcf99e259b9f92ef921cfd7ed594a4d6414f1a79b4cd3ef8e770ddb74aba7",
     "src/sound/ea/sststat.cpp": "35555d92273b87ed48807abe4e01a99304a2e0adc23103d9297746f5df123257",
     "src/sound/ea/sstvol.cpp": "41e109bddcbf6d5fde910f7d047f0752c0e2ffaeb37edad869be9e6e9e0f85a7",
+    "src/sound/ea/ssys_heap.cpp": "e9e3e9a0c6ff55cad08f7a3a35a9c59b209af2ff26161f3b676788bec9f9c17d",
     "src/sound/ea/ssys_inited.cpp": "225a018f216edcadf9d419b9b4d1bbea909b1fb830b469f953611750b1a8d730",
+    "src/sound/ea/ssys_iop.cpp": "693161e346868da5d38496039ea6774dd40e52fa5c79920758aaa0e16dbc33ee",
+    "src/sound/ea/ssys_options.cpp": "6a04cd403a68d6e92371d33c3e7c3549c539f7a7120a6168227e4c16c077a4ef",
     "src/sound/ea/ssys_restore.cpp": "01666f4c348a50927c13e6a466c9380a2d5e5f681dd07f99dd4bc8dc919c9719",
     "src/sound/ea/ssysopts.cpp": "e01e1014454d18c7d70b796780dad091ffe06fc58842ceffa8a2140020b62300",
     "src/sound/ea/ssysreal.cpp": "889a51f34a02038446f52f661087a066c48661006f50fe062fc5024f1f4d8ef5",
@@ -11603,14 +11652,15 @@
     "src/sound/ea/stretch.cpp": "a3fa126b7a3209b34b0c970234e64619897895a1ebba0fa6dac0aee8b06be877",
     "src/sound/ea/supf.cpp": "b2a0bb3e826b53d0315d56952dcffd06ba844982a073d14375eacfcdbcc504fa",
     "src/sound/ea/suplf.cpp": "968c578e1fe244e626ed85f129f90f8a320521a20c77ef34cb9e2a01d8330337",
-    "src/sound/ea/supmutf.cpp": "9de2c9fc2ef9c8ce835618f490b20d1ed2323052eff1e52866cc581467c8a5cb",
-    "src/sound/ea/supmutlf.cpp": "7bff9d8a8bc92bf56187cc8a8657a60c75a6b45327581ca22d547468c663ab72",
-    "src/sound/ea/supmutpf.cpp": "79b2cf32996f70457a0c54c5e6f87ddb8419a15166ac016297e28b0c672b8bed",
+    "src/sound/ea/supmutf.cpp": "fd5d21351f87ae67470038edff4da68ac9d4cacf5cd2d9695502bc5a02200545",
+    "src/sound/ea/supmutlf.cpp": "061ca0163e4243704c1251a6b416bcb4b17a2f5a0e1e64cbef2511b9e355b3a7",
+    "src/sound/ea/supmutpf.cpp": "e98a89bb443f3096c0218e0518d56c8352a491d591285513dde0eda499426f0a",
     "src/sound/ea/suppf.cpp": "555d9dc6d44b64a09523bfd5561bcb62a76f859a6ac3b4686e9d78853180d3b1",
-    "src/sound/ea/supxaf.cpp": "1b1831045aab3ae330000ce66ea1b65d01a3d8acfd5dc07635cfd2bf876a37db",
-    "src/sound/ea/supxalf.cpp": "2c9177a2f77ad8e67de00e7d112c981ea0b29e8073204541759b743c01c9d0eb",
-    "src/sound/ea/supxapf.cpp": "fbdd2361b3f90e6ee7780a7617fe3f41ffcbbfe4334eefbdd0698e49534b805d",
+    "src/sound/ea/supxaf.cpp": "21781723cdd7e0d3d0ac8241a972576eb589bb67cdc8f6f2057b4b9a91bebca2",
+    "src/sound/ea/supxalf.cpp": "5557a8f0db4a4b2a0e40ca48efddcc3fb805ee57100faae90a5f393b34fcb9ee",
+    "src/sound/ea/supxapf.cpp": "5b972c10e53f0cd4451a12c64d991c4b61011d3c1ed2170199c97a4f546c529a",
     "src/sound/ea/susercb.cpp": "a71b84268488393d97684ad26943b3a64ba777719e38e48c61df644fd75b5e3d",
+    "src/sound/ea/svecreal_mode.cpp": "d3cb6c0e87ffda799be88b5adfefeab4f4fd317d366cb311e636fce003500fc2",
     "src/sound/ea/svol.cpp": "604c59b717c9247132f920281f8c15fe5fe8091d32f06089ea87f96bdb869813",
     "src/sound/ea/sx87d16.cpp": "c1dd596abc75c11f30754a6dba703855646d4b8f22e144410e386724486258d4",
     "src/sound/soundbuss_activate.cpp": "c0ba388aa4b92b4cf746a427cb0b30155c0c8d724f2e18d108988f3fa550824c",
@@ -56240,6 +56290,215 @@
       "discarded_functions": [],
       "object_sha256": "77897a298b767c0878287fbb84a54a5e94b63d55cdcde6f1637ddea0f28a9e73",
       "linked_sha256": "a2ccf813340a74751a63e1a4861283203e0c2f5fb95e5323a4f4c7e394e43e48"
+    },
+    {
+      "id": "snd_mutex_hooks",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 64,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "272e3b436e98b0259dde8d5f41a9f418dedbaae2ea51041961cf34078283bb1a",
+      "linked_sha256": "357bd832f290fa9d0e918ef74d87e9d4b7df86abb63e377584627aadc936ba8b"
+    },
+    {
+      "id": "ssys_options",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 288,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "843ca9e4b64c53389783244ede4a46f6963efb6e465018df513e430314323b2c",
+      "linked_sha256": "246b4db2b5a9f7138829d0b66b23f49264fcdfe28bd64643ac79f3659acf78e3"
+    },
+    {
+      "id": "ssys_iop",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 8,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "88eb08abfdfc2369368359fe236eeb68a603a70e4b0815b6551eec7450ac4067",
+      "linked_sha256": "5ba6b6816f24df981ff744740b2efa297b56e78b3d771a7f69deaa41a30469fc"
+    },
+    {
+      "id": "ssys_heap",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 184,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "9fc2b0abb6394b922d14dc28e18c61f6d6a8029bbda73fddf6538f0fb4297b5c",
+      "linked_sha256": "6a7587b1869d911b86173d35f88f2f42d44d0286c7902ef6329a52b5ea4945ba"
+    },
+    {
+      "id": "svecreal_mode",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 36,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "84f85cd954589d8056a1af8899ba4c8227a3036e8309c833af2c562ed1037ada",
+      "linked_sha256": "ad757e63c99a4a4b2a53e84ec139fc0297158dda889bf1108aec72b77631677f"
+    },
+    {
+      "id": "coda_hooks",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 24,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "9d07d9a196feecec19cfbe6bb7874cc69978fd451d7a150e320a98a89a8fb905",
+      "linked_sha256": "efa3678fefaba485a0e04e2e81c83285f70f9463f2b6a8b936444b31afcb3792"
+    },
+    {
+      "id": "eaxadecf_feed",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 188,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "52d3d6553d31d375fe094095f7d19ea939d64bfe01d5ba03e68429ca3e0d212d",
+      "linked_sha256": "a3e7d0399a4a5cefe815bb500b4b7b369af486a832a9fa2af289cfa8341f30db"
+    },
+    {
+      "id": "eaxadecf_state",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 68,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "6c06fdcf5851199f2448eb178d6a4674476763e4382da0c003cf32054e4bfb24",
+      "linked_sha256": "6b1fd06203aed38fa01728c0d1d3a505e7915e4342925933ee04ad81a671333a"
+    },
+    {
+      "id": "mtdecf_bits",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 256,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "9cc1b09dfb81b5aba0907b0f25559a2e02588457d8924f9d2686c7cb4e392333",
+      "linked_sha256": "252a16fa3c10a9bd61dda06928a8a5abe6248e244df60fdbb878e97222379bde"
+    },
+    {
+      "id": "mtdecf_filter",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 2188,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "1c2f761489d207566c22b317190c9adc9983c6ce4b5b7ab083ca048ac91851a8",
+      "linked_sha256": "0e1af8f0a2545b68314e25987c9a2badf5e90c0e325a8c58af12ba461482af9e"
+    },
+    {
+      "id": "mtdecf_class",
+      "category": "reconstructed_game",
+      "functions": 6,
+      "code_bytes": 836,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "99aa37734ad06e70b2f74cb004eacec33953ab7f75ff6190c5160a85c15cb5d6",
+      "linked_sha256": "8c951d2a05f648153cf05acf1661b871de8e9eb8153e2b27a85caf1738792d94"
     }
   ],
   "code_map": {
@@ -82829,20 +83088,6 @@
             "kind": "function",
             "name": "SNDSYSI_variabletimerservice__Fv",
             "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8021f908",
-            "size": 32,
-            "kind": "function",
-            "name": "DefaultMutexLockFn__3Sndv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8021f928",
-            "size": 32,
-            "kind": "function",
-            "name": "DefaultMutexUnlockFn__3Sndv",
-            "evidence": "adjacent-compiler-markers"
           }
         ],
         "marker_interval": [
@@ -82902,27 +83147,6 @@
         "file_name": "ssys.cpp",
         "ranges": [
           {
-            "address": "0x80220eb4",
-            "size": 68,
-            "kind": "function",
-            "name": "SetMaxBanks__Q23Snd6Systemi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80220ef8",
-            "size": 140,
-            "kind": "function",
-            "name": "CapOutputMode__Q23Snd6SystemQ23Snd10OutputModePb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80220f84",
-            "size": 80,
-            "kind": "function",
-            "name": "SetOutputMode__Q23Snd6SystemQ23Snd10OutputMode",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80220fd4",
             "size": 112,
             "kind": "function",
@@ -82930,38 +83154,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80221044",
-            "size": 8,
-            "kind": "function",
-            "name": "SetSndLoadsIopModules__Q23Snd6Systemb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8022104c",
             "size": 156,
             "kind": "function",
             "name": "Init__Q23Snd6Systemi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x802210e8",
-            "size": 48,
-            "kind": "function",
-            "name": "Restore__Q23Snd6System",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80221118",
-            "size": 128,
-            "kind": "function",
-            "name": "SetHeap__Q23Snd6MemoryQ23Snd6DevicePvi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80221198",
-            "size": 8,
-            "kind": "function",
-            "name": "SetHeapFastRam__Q23Snd6MemoryPvi",
             "evidence": "adjacent-compiler-markers"
           }
         ],
@@ -83047,24 +83243,6 @@
         "marker_interval": [
           "0x80222044",
           "0x802226e0"
-        ]
-      },
-      {
-        "name": "Unmatched files/svecreal.cpp [inferred file group]",
-        "file_record": 595,
-        "file_name": "svecreal.cpp",
-        "ranges": [
-          {
-            "address": "0x802227e0",
-            "size": 36,
-            "kind": "function",
-            "name": "VectorToReal__Q23Snd6System",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x802227e0",
-          "0x80222804"
         ]
       },
       {
@@ -83297,31 +83475,6 @@
         ]
       },
       {
-        "name": "Unmatched files/coda.cpp [inferred file group]",
-        "file_record": 636,
-        "file_name": "coda.cpp",
-        "ranges": [
-          {
-            "address": "0x802276b0",
-            "size": 12,
-            "kind": "function",
-            "name": "CODASetNew__3SndPFUi_Pv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x802276bc",
-            "size": 12,
-            "kind": "function",
-            "name": "CODASetDelete__3SndPFPv_v",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x802276b0",
-          "0x802276c8"
-        ]
-      },
-      {
         "name": "Unmatched files/sexithndl.c [inferred file group]",
         "file_record": 637,
         "file_name": "sexithndl.c",
@@ -83467,52 +83620,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8022a844",
-            "size": 44,
-            "kind": "function",
-            "name": "__nw__Q23Snd12CEAXABLKDecfUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8022a870",
-            "size": 44,
-            "kind": "function",
-            "name": "__dl__Q23Snd12CEAXABLKDecfPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8022a89c",
-            "size": 40,
-            "kind": "function",
-            "name": "__Q23Snd12CEAXABLKDecf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8022a8c4",
-            "size": 60,
-            "kind": "function",
-            "name": "Feed__Q23Snd12CEAXABLKDecfPvii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8022a900",
             "size": 440,
             "kind": "function",
             "name": "Decode__Q23Snd12CEAXABLKDecfPPfi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8022aab8",
-            "size": 48,
-            "kind": "function",
-            "name": "GetState__Q23Snd12CEAXABLKDecf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8022aae8",
-            "size": 20,
-            "kind": "function",
-            "name": "SetState__Q23Snd12CEAXABLKDecfPQ23Snd8XAFSTATE",
             "evidence": "adjacent-compiler-markers"
           }
         ],
@@ -83527,34 +83638,6 @@
         "file_name": "mtdecf.cpp",
         "ranges": [
           {
-            "address": "0x8022aafc",
-            "size": 44,
-            "kind": "function",
-            "name": "__nw__Q23Snd10CMTBLKDecfUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8022ab28",
-            "size": 44,
-            "kind": "function",
-            "name": "__dl__Q23Snd10CMTBLKDecfPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8022ab54",
-            "size": 96,
-            "kind": "function",
-            "name": "getbits__3SndPQ23Snd15UTALKSTATE_CODAi",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x8022abb4",
-            "size": 72,
-            "kind": "function",
-            "name": "discardbits__3SndPQ23Snd15UTALKSTATE_CODAi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8022abfc",
             "size": 504,
             "kind": "function",
@@ -83562,80 +83645,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8022adf4",
-            "size": 104,
-            "kind": "function",
-            "name": "interpolate__3SndPf",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x8022ae5c",
-            "size": 244,
-            "kind": "function",
-            "name": "reftolpc__3SndPfT1",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x8022af50",
-            "size": 1472,
-            "kind": "function",
-            "name": "filter__3SndPQ23Snd15UTALKSTATE_CODAii",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x8022b510",
-            "size": 368,
-            "kind": "function",
-            "name": "initmut__Q23Snd10CMTBLKDecfPUcPQ23Snd15UTALKSTATE_CODAi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8022b680",
             "size": 1064,
             "kind": "function",
             "name": "decodemut__3SndPQ23Snd15UTALKSTATE_CODA",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8022baa8",
-            "size": 48,
-            "kind": "function",
-            "name": "__Q23Snd10CMTBLKDecf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8022bad8",
-            "size": 144,
-            "kind": "function",
-            "name": "Feed__Q23Snd10CMTBLKDecfPvii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8022bb68",
-            "size": 544,
-            "kind": "function",
-            "name": "Decode__Q23Snd10CMTBLKDecfPPfi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8022bd88",
-            "size": 64,
-            "kind": "function",
-            "name": "GetState__Q23Snd10CMTBLKDecf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8022bdc8",
-            "size": 28,
-            "kind": "function",
-            "name": "SetState__Q23Snd10CMTBLKDecfPQ23Snd8MTFSTATEi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8022bde4",
-            "size": 8,
-            "kind": "function",
-            "name": "SetCodecVersion__Q23Snd10CMTBLKDecfi",
             "evidence": "adjacent-compiler-markers"
           }
         ],

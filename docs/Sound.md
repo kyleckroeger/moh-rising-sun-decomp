@@ -510,3 +510,21 @@ Observed quirks, kept as they are: `RemoveLevelStreamFile` passes the stream han
 Not reconstructed: `SetSfxVol`, `ServiceStreams` and `PauseBankSounds` (they own the
 `source/tl/dwi_memory.h:56` literal in this file's shared header strings), `GetMultSettings` and
 `GetSoundEntries` (inlined `SoundEntryBank` destructor), `LoadLevelBus` and `SearchForAlias`.
+
+## Sound system front end and block decoders
+
+`Snd::System` and `Snd::Memory` (`ssys.cpp`) wrap the `SNDSYS_getopts` and `SNDSYS_setopts` record:
+each setter copies the 212-byte record out, changes one field and writes it back. `SetHeap` keeps the
+main heap in `Snd::pheap` and `Snd::heapsize` and the fast heap in the record. The record's field names
+are inferred from these setters. `SetVoices` and `System::Init` are not reconstructed: both set `r3` for
+`SNDSYS_setopts` before their switch, which no plain form tried reproduces.
+
+`Snd::CMTBLKDecf` (`mtdecf.cpp`) derives from `UTALKSTATE_CODA`, whose layout is verified: bit reader
+at `+0`, a first-bit flag at `+0xc`, shift at `+0x10`, a 64-entry gain table at `+0x14`, reflection and
+filter state at `+0x114` and `+0x144`, 324 history samples at `+0x174` and 432 output samples at `+0x684`;
+the decoder's own members follow at `+0xd44`. When the first-bit flag is clear `decodemut` reads no grid
+fields and takes samples one apart instead of two. Codec version 1 streams carry a run of raw 16-bit
+samples, introduced by the marker byte `0xEE`, that `Decode` copies over the output between frames.
+Member names are inferred. `readsamples` and `decodemut` are not reconstructed; `Snd::CEAXABLKDecf`'s
+`process_raw_block`, `decodexac` and `Decode` are not either. All of these units use `-G0
+-fno-strength-reduce`, like the other new units in this library.
