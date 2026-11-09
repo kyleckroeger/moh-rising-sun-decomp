@@ -2288,7 +2288,16 @@
     "moh3soundevent_pause.json",
     "animshape_ctors.json",
     "animshape_copy.json",
-    "animshape_unregister.json"
+    "animshape_unregister.json",
+    "ai_PathWalkCommit.json",
+    "ai_PathWalkStep.json",
+    "ai_PathSearchTrim.json",
+    "ai_PathWalkStop.json",
+    "ai_PathFindingUpdate.json",
+    "ai_PathWalkNext.json",
+    "ai_BotCampLookat.json",
+    "ai_BotLookDir.json",
+    "ai_BotStrafe.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

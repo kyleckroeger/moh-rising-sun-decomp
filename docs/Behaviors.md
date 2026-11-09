@@ -72,7 +72,7 @@ byte, with their native tables and literal pools. There is no Frontline counterp
   bias and line clipping) are matched. `CAreaPathNode`'s member names are inferred. The
   literal pool holds an unreferenced 0 and 1 after `ContainsPoint`'s (at `0x802a4194`), so
   the units around it leave those two words as original context.
-- Bot state code: the bot's state handlers (`BS_Enter_Dead`, `BS_Dead`, `BS_Enter_Goto`,
+- Bot state code: `SetCampingLookat`, `UpdateLookDir` and `WantToStrafe` and the bot's state handlers (`BS_Enter_Dead`, `BS_Dead`, `BS_Enter_Goto`,
   `BS_Enter_Combat`, `BS_Chase`, `BS_Enter_Camp`, `BS_Exit_Camp`), the move state, the threat
   and boredom queries, and a few team and weapon queries. Member names in `CBotObject` are
   inferred from these uses, and `CBotWeapon`'s table starts at `+0x1a20`. `eBotState` and
@@ -82,10 +82,12 @@ byte, with their native tables and literal pools. There is no Frontline counterp
 - `BotMan.cpp`: bot memory (`GetBotMem` hands out 11,568-byte slots), setup and cleanup. `MMG_Info`
   and `CampingPoint` strides come from `BS_Enter_UseMMG` and the camping point table.
 - `BotArea.cpp`: the area and edge arrays and their accessors. `CBotArea` (sixteen bytes) and
-  `CAreaEdge` (64 bytes) come from the symbol table with sizes from array strides; `coverPoints`,
+  `CAreaEdge` (64 bytes) come from the symbol table with sizes from array strides; `jumpIndex`, `coverPoints`,
   `coverData`, `vertex0` and `vertex1` are inferred. `DwiAllocIdScope` is an inferred name for
   the save-and-restore of the allocator tag, reproducing the saved stack slot.
-  `CAIAreaPathFinding`'s volume counters, finish flag and walk-type query.
+  `CAIAreaPathFinding`'s volume counters, finish flag and walk-type query, the path walk
+  stop, trim and step functions, and the on-network test in `Update`. Its member names are
+  inferred from these uses; `CAIPhysics` is at `+0x1c` and the solution list at `+0x88`.
 
 ## Not reconstructed yet
 
@@ -93,6 +95,10 @@ byte, with their native tables and literal pools. There is no Frontline counterp
   `GetMidPoint`: near misses (register allocation; the last two inline `GetEdgePoints`).
 - `BS_Enter_Retreat`, `BS_Enter_Chase` and `BS_Camp`: their strings are shared with neighbors in
   the same pool that are not reconstructed yet.
+- `CBotObject::DirectChase`: drafted, but its literal pool has a double at 4 mod 8 and needs
+  `ChaseDecision` and `CoverPointChase` in the same unit.
+- `CAIAreaPathFinding::PathDistance`: a near miss (a register for the first node).
+- `GetBestPath`: a private function called only by `ComputeAStarPath`, so it waits for that unit.
 - `ShrinkAreaMesh`: an empty body with a 224-byte frame; the locals behind that frame are unknown.
 - `CCoverpointBehavior::UpdateHeuristicScore`, `StartBehavior`, `GetCapabilities` and
   `ChooseCoverpoint`: near misses left out rather than steered.
@@ -113,11 +119,3 @@ byte, with their native tables and literal pools. There is no Frontline counterp
   slot address forms in six functions. The threat type values have no recovered names.
 - The inline-virtual methods that the original emits at the end of each file (`GetType`,
   `GetScriptObject`) are written as ordinary out-of-line definitions in that order.
-
-## Area search nodes
-
-`CAreaSearchNode` comes from a pool of 1228 64-byte nodes with a free list, whose link is at
-`+0x04`. A node records its area path node, a position, and costs; a path node points back at
-its search node. Verified: construction, destruction, the pool, heuristic and cost values, and the
-two direct path tests. Inferred: member names and `CAreaSearchNodePoolInit`'s constructor.
-Not reconstructed: `Setup`, `DirectPathOk` (a shared `return 0` tail) and `WalkDirect`.

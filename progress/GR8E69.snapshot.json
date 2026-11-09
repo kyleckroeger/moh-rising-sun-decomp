@@ -68,9 +68,11 @@
       "src/ai/BotAreaHeight.cpp": "8be5d6a73b5d00c0584759cb92a5090694579f73cbc3c08dc3cec801433cd16a",
       "src/ai/BotAreaJump.cpp": "3987b36b376bc26517c99df29e3dca9e279bc6e099bbdfac7b4ba5c93ac55d80",
       "src/ai/BotAreaLink.cpp": "bfac31e6dcf4981af8b08d2a77ab1f5e3add92919f3323aa23e9f0d20c382b81",
+      "src/ai/BotCampLookat.cpp": "22ce4b9a292ca8823f5633a08769b07f4640ae327ed9cce365fd2cc01a7fec00",
       "src/ai/BotCharacter.cpp": "797341790b538fbd452e72ae8237abe9b43699b7d382cfa82e5fe1bef7928354",
       "src/ai/BotChooseWeapon.cpp": "1675256e3812e21961b86bed423788467fccf1edab4b88956920d4e139ae16bf",
       "src/ai/BotEnemySight.cpp": "6b14d4fede4a7b58ec53c0a04f25b97fafbe5f719d07518c3c026084a64d8b13",
+      "src/ai/BotLookDir.cpp": "7c87efc5ff038d6e2494104e3f7246518b2ef1722247524620698c33c768a718",
       "src/ai/BotManA.cpp": "7d4048715d475fe7092893e9140052fbe9df03d16f7dcbbc380c7949fff02df6",
       "src/ai/BotManLookat.cpp": "07a8b1fa877c4ae73bcbabd2f7e826366354ed1e13a1d98bcdfc62379e083ec2",
       "src/ai/BotManMMG.cpp": "cc5f205349d47f9bf2c84819452e9572197e183ce9b34bdeb484d587d7d92948",
@@ -82,6 +84,7 @@
       "src/ai/BotStateChase.cpp": "e43a538bb35e13f8f7d17598a1eb5a198fd9a882d0a5ac937661e20190d18d97",
       "src/ai/BotStateCombatEnter.cpp": "384ee108252f674bc52832412a1b89e0f005968bacbac42aee308758e92feb5d",
       "src/ai/BotStateDead.cpp": "f66667e9894127af4149acb8e5c261e6a54dbf1d84edcfdf6add904bba3feb60",
+      "src/ai/BotStrafe.cpp": "aa88484ee6d8bc6d3f6da38c30ad89f7c3ff35005713f51a220bdd635f185fd9",
       "src/ai/BotTeamDistance.cpp": "4576beee415c36e21e9ec91d0dfe1a69139951b5152c29bcc6d53d6f37c0a657",
       "src/ai/BotThreatDirections.cpp": "86b324a29e7aa50ce75053d32e578ec8ed4b6f93f42db357b7a101f91b7fba91",
       "src/ai/BuddyFollowBehavior.cpp": "057e6a09a3d436b73da6bd873f38d17b151b25352dc707f668037944b9e0ff20",
@@ -106,6 +109,12 @@
       "src/ai/MMGBehaviorStop.cpp": "0328671512ff42474e6d4e750a7fc669cf9d05c757a920312faac25e97ff06dd",
       "src/ai/MMGBehaviorTail.cpp": "ed8f6b7848af53eab271ac374d6c490377430fccf780e9e5ba9c3aff13d380ca",
       "src/ai/NullWeaponBehavior.cpp": "73e48f23e4a8e7963c1f5fd241186ea823189254e2fb72cb103336975c9f7592",
+      "src/ai/PathFindingUpdate.cpp": "229ec008c8b3479776605a3b74dccf7f4a68343c1914db07b791134ac4ea2055",
+      "src/ai/PathSearchTrim.cpp": "08a0614ae25d3cf1b0f1ec7e82d02284dabae6963c84ec9d927ab9439aa1723e",
+      "src/ai/PathWalkCommit.cpp": "bd1a8448f0ff2543b228365da5ac84a7ff3d228833cd923145b9a457e2187d58",
+      "src/ai/PathWalkNext.cpp": "cd54234c0391f72340c6be61ef5fff33cfdcafbdab8018c7014641bae9ab50f3",
+      "src/ai/PathWalkStep.cpp": "8a1ab3d50dfb8cf6dd3ee1bbaf3e8c020cd2997d914fa0957391023999aa7a07",
+      "src/ai/PathWalkStop.cpp": "1e50bc301bc1dcfd783e5c7af63a3b3ea0471f5d5b167946a798acc9075c607e",
       "src/ai/PistolBehavior.cpp": "52bbbfdcf25027a20f6dccb47bee3647d3a2d5c6195cfbdc570a2b1529d0dc4b",
       "src/ai/PolemineBehavior.cpp": "d5a2845cb2cf8466791a8170691fd2be4addf548d1e2e4bc7a16177eae66b4a2",
       "src/ai/RifleBehavior.cpp": "69fed157b0314f5b3f78d01825c1ff73e0938411cc643f8fb263f7653584b9bf",
@@ -2573,12 +2582,12 @@
       "include/dolphin-sdk/macros.inc": "4e92f656bb511fbb45d66081291371c47ceba7bce9c55f86871116203cf38a46",
       "include/dolphin-sn/dolphin/types.h": "ca31e0bbb97e93ca4713654367df29578f6392f3acaf40ca68bc1de1c913af93",
       "include/game/AIBehavior.h": "5304eb80fe34f5dae798fe1ce82d59dbd2f8bed3251f085a11277c6b3f734864",
-      "include/game/AIBot.h": "f66e3be5cfc6165c4717e9598149560d05396feb1008bb053e1b8c2e1b369039",
+      "include/game/AIBot.h": "3bf707b0b5453d3352b647bce655f372414f9a3623ff27fcf4d219af2b7a7b91",
       "include/game/AIDoodad.h": "5a8328fd7c55b6f602742adb79faabaeb4466fbaa44292b3a32fd0d0ad10aca9",
       "include/game/AIFilterGlobal.h": "8206508036a820ab1075f5e290d849293a434e49041b0d700337c523bc915738",
       "include/game/AIMovement.h": "be6b180ea11f5f27a6b5fb27e3ae35288d2c22879ba23a2233dc1d233979674a",
-      "include/game/AIPathSearch.h": "43734a0f9e104071d4045a54bc33b1125f8826a9f29309eea5c8e6e5553f4c6d",
-      "include/game/AISplinePath.h": "9e8efa729cb1f73b0a9fe4c56a1d26854709403e02a7305b90ecdced1f99d326",
+      "include/game/AIPathSearch.h": "a2c7f9d5fabefa195ac22871f2ba2e6581e3109b134bc8c53bddb1ae373a3729",
+      "include/game/AISplinePath.h": "66b1ac579e7a8a8c830780cf389deab3f16f0b7c9608cc9669ca9389464e112b",
       "include/game/AITargeting.h": "e627d0bfbe67665b87bf089c456c1feded0163e8755fd60f994082d6c711b08f",
       "include/game/AnimShape.h": "eb3d8e24b295f937a6524701d5d87c8b8b4e052c8bbb2bafd8fb764c3318e87e",
       "include/game/AnimatedVolume.h": "527918576e64cf9296cbb9164eefaf3fc8b7a0f96894e342d2da9e847df4cf25",
@@ -3065,9 +3074,11 @@
       "config/GR8E69/ai_BotAreaHeight.json": "b46f5b082f017dfdf79e2b13b84fee950faa3cd41dc1199ffa0be7436277c124",
       "config/GR8E69/ai_BotAreaJump.json": "1fc3594ec73ac73f06436364106e05a26104c1fdad1b31cf0e7b483b83745088",
       "config/GR8E69/ai_BotAreaLink.json": "1430e98bbf472a815c93d55a7264a2172bfdc3a61901e907849e87863f89e012",
+      "config/GR8E69/ai_BotCampLookat.json": "7fcfbc70de5b87042b1bff53e7e1e1a21ba45e096316f9d106a9338c8a36891e",
       "config/GR8E69/ai_BotCharacter.json": "394fa19a4102477369c534f7f9bd5cc995308cb9a5715d0630f8cbdc82d329ef",
       "config/GR8E69/ai_BotChooseWeapon.json": "71bd05f9d6b6ce201c28b5373f4455252265c5d27ec947832ddd4819ce6db44e",
       "config/GR8E69/ai_BotEnemySight.json": "22982a8f8af961f81c9419a10587132f348fdaf76cf60be15e53285e7c0f6583",
+      "config/GR8E69/ai_BotLookDir.json": "a1fcfffbf781a1a657917cd8b501ffdf67b2d96da4eb1f189dae1954049e844a",
       "config/GR8E69/ai_BotManA.json": "273a504cbec657331c0d7d956011cf9a51079c6fd3f9244f072c8ed012da7f3e",
       "config/GR8E69/ai_BotManLookat.json": "ce5739dc32ef240ed16181ab9b8ea9e9758fd40369df1b9c319b320c7f1b5d8b",
       "config/GR8E69/ai_BotManMMG.json": "4ba5a1ae62d8b7711a4f32770d89cf9803ab2dc9bf28abc1f225083abd84b42d",
@@ -3079,6 +3090,7 @@
       "config/GR8E69/ai_BotStateChase.json": "022bce79a2ece06934d554b71dba66f6fea9a4fa4872af70f0ceaa5414fd4010",
       "config/GR8E69/ai_BotStateCombatEnter.json": "d084e6d0361b56376a5292b4159839603282f14c44c6a55cdf460ab678f58ead",
       "config/GR8E69/ai_BotStateDead.json": "f29e111788bda39c0aeda9c6689dc37253b9bc3aecb3941a406ab0fee35967bd",
+      "config/GR8E69/ai_BotStrafe.json": "2932afc0a56ef10afb89217ed922db19640ef3257d0391b553fdd9c0daeafa6f",
       "config/GR8E69/ai_BotTeamDistance.json": "863f064202a13e1ac5c53c31f227d344a3e4e6be95fb8844f2d557172d3c3944",
       "config/GR8E69/ai_BotThreatDirections.json": "c56a415a671a4226d2752d0d79a623d38559249714b7b9a090d58f49fe66530d",
       "config/GR8E69/ai_BuddyFollowBehavior.json": "cbbfff677e02708e9a8316c80cafed21c1558b16d030d7a8d1fbfc13e2d2655d",
@@ -3100,6 +3112,12 @@
       "config/GR8E69/ai_MMGBehaviorStop.json": "7fab2b9a8c31fda9d9ce8c6cca14e78def4ba563d85b747625a73593bd8c197c",
       "config/GR8E69/ai_MMGBehaviorTail.json": "596f9ab0bf4ea7b937860c1c34e3c2ef736904c3a6a2f0fcba4a48c22c8c818d",
       "config/GR8E69/ai_NullWeaponBehavior.json": "cf42b3058125a789f6b44c78b488755e338f60dccc9715e162d9b6220e0e6ffc",
+      "config/GR8E69/ai_PathFindingUpdate.json": "2feb4f337b1fb1dd7e294b25b266b19bce8df8cc0d377ea9b1c769b54c63e394",
+      "config/GR8E69/ai_PathSearchTrim.json": "750e09f71648ea84fb014fe142c9127c5e61171e7aefd06ff9f72e40199a8224",
+      "config/GR8E69/ai_PathWalkCommit.json": "876f8b78b1fb834dbf029b2e9bdb35e49113afcd40298b55969ab2b68c30eb64",
+      "config/GR8E69/ai_PathWalkNext.json": "dafb0a5a95ea2b1af23fafb1b95c10b829d50765ba95c578378eacdc9e8c53a4",
+      "config/GR8E69/ai_PathWalkStep.json": "98adb1f1237bb5bc85441c73fa523e18d1fba9125509157675c3199cc29e723b",
+      "config/GR8E69/ai_PathWalkStop.json": "d3443ca62f922172fe71b28c7260493a0c504ca64d558e678f48bb14940b54c7",
       "config/GR8E69/ai_PistolBehavior.json": "dde1e548afe69c91e77cea98367d95cb2beb8d5be9f21f46bafa6516b54e0212",
       "config/GR8E69/ai_PolemineBehavior.json": "e1649ae5303f1eb384dd28825a7fd97cb68efecf3b5251b60f4fdaff9413cbbc",
       "config/GR8E69/ai_RifleBehavior.json": "2dbc34c425e032263dc153292249b04c0f8f54bfbf6f7162823a4954dbc8faf4",
@@ -4081,7 +4099,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "8c047311f948e1ee93c3cd2e067367bcb8e9e60244810fb6b0afc057acf2cdeb",
+      "config/GR8E69/project.json": "a335ea600fc640d9ff8fe36c28d447445bf18ecdd9e3592328a8fc7b89c95267",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -6780,14 +6798,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1178448,
+    "matching_code_bytes": 1180272,
     "total_executable_code_bytes": 2492032,
-    "percent": 47.2886383481432,
+    "percent": 47.36183162977041,
     "categories": {
-      "reconstructed_game": 786232,
+      "reconstructed_game": 788056,
       "restored_library": 392216
     },
-    "matching_functions": 6087
+    "matching_functions": 6101
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -6946,9 +6964,11 @@
     "config/GR8E69/ai_BotAreaHeight.json": "b46f5b082f017dfdf79e2b13b84fee950faa3cd41dc1199ffa0be7436277c124",
     "config/GR8E69/ai_BotAreaJump.json": "1fc3594ec73ac73f06436364106e05a26104c1fdad1b31cf0e7b483b83745088",
     "config/GR8E69/ai_BotAreaLink.json": "1430e98bbf472a815c93d55a7264a2172bfdc3a61901e907849e87863f89e012",
+    "config/GR8E69/ai_BotCampLookat.json": "7fcfbc70de5b87042b1bff53e7e1e1a21ba45e096316f9d106a9338c8a36891e",
     "config/GR8E69/ai_BotCharacter.json": "394fa19a4102477369c534f7f9bd5cc995308cb9a5715d0630f8cbdc82d329ef",
     "config/GR8E69/ai_BotChooseWeapon.json": "71bd05f9d6b6ce201c28b5373f4455252265c5d27ec947832ddd4819ce6db44e",
     "config/GR8E69/ai_BotEnemySight.json": "22982a8f8af961f81c9419a10587132f348fdaf76cf60be15e53285e7c0f6583",
+    "config/GR8E69/ai_BotLookDir.json": "a1fcfffbf781a1a657917cd8b501ffdf67b2d96da4eb1f189dae1954049e844a",
     "config/GR8E69/ai_BotManA.json": "273a504cbec657331c0d7d956011cf9a51079c6fd3f9244f072c8ed012da7f3e",
     "config/GR8E69/ai_BotManLookat.json": "ce5739dc32ef240ed16181ab9b8ea9e9758fd40369df1b9c319b320c7f1b5d8b",
     "config/GR8E69/ai_BotManMMG.json": "4ba5a1ae62d8b7711a4f32770d89cf9803ab2dc9bf28abc1f225083abd84b42d",
@@ -6960,6 +6980,7 @@
     "config/GR8E69/ai_BotStateChase.json": "022bce79a2ece06934d554b71dba66f6fea9a4fa4872af70f0ceaa5414fd4010",
     "config/GR8E69/ai_BotStateCombatEnter.json": "d084e6d0361b56376a5292b4159839603282f14c44c6a55cdf460ab678f58ead",
     "config/GR8E69/ai_BotStateDead.json": "f29e111788bda39c0aeda9c6689dc37253b9bc3aecb3941a406ab0fee35967bd",
+    "config/GR8E69/ai_BotStrafe.json": "2932afc0a56ef10afb89217ed922db19640ef3257d0391b553fdd9c0daeafa6f",
     "config/GR8E69/ai_BotTeamDistance.json": "863f064202a13e1ac5c53c31f227d344a3e4e6be95fb8844f2d557172d3c3944",
     "config/GR8E69/ai_BotThreatDirections.json": "c56a415a671a4226d2752d0d79a623d38559249714b7b9a090d58f49fe66530d",
     "config/GR8E69/ai_BuddyFollowBehavior.json": "cbbfff677e02708e9a8316c80cafed21c1558b16d030d7a8d1fbfc13e2d2655d",
@@ -6981,6 +7002,12 @@
     "config/GR8E69/ai_MMGBehaviorStop.json": "7fab2b9a8c31fda9d9ce8c6cca14e78def4ba563d85b747625a73593bd8c197c",
     "config/GR8E69/ai_MMGBehaviorTail.json": "596f9ab0bf4ea7b937860c1c34e3c2ef736904c3a6a2f0fcba4a48c22c8c818d",
     "config/GR8E69/ai_NullWeaponBehavior.json": "cf42b3058125a789f6b44c78b488755e338f60dccc9715e162d9b6220e0e6ffc",
+    "config/GR8E69/ai_PathFindingUpdate.json": "2feb4f337b1fb1dd7e294b25b266b19bce8df8cc0d377ea9b1c769b54c63e394",
+    "config/GR8E69/ai_PathSearchTrim.json": "750e09f71648ea84fb014fe142c9127c5e61171e7aefd06ff9f72e40199a8224",
+    "config/GR8E69/ai_PathWalkCommit.json": "876f8b78b1fb834dbf029b2e9bdb35e49113afcd40298b55969ab2b68c30eb64",
+    "config/GR8E69/ai_PathWalkNext.json": "dafb0a5a95ea2b1af23fafb1b95c10b829d50765ba95c578378eacdc9e8c53a4",
+    "config/GR8E69/ai_PathWalkStep.json": "98adb1f1237bb5bc85441c73fa523e18d1fba9125509157675c3199cc29e723b",
+    "config/GR8E69/ai_PathWalkStop.json": "d3443ca62f922172fe71b28c7260493a0c504ca64d558e678f48bb14940b54c7",
     "config/GR8E69/ai_PistolBehavior.json": "dde1e548afe69c91e77cea98367d95cb2beb8d5be9f21f46bafa6516b54e0212",
     "config/GR8E69/ai_PolemineBehavior.json": "e1649ae5303f1eb384dd28825a7fd97cb68efecf3b5251b60f4fdaff9413cbbc",
     "config/GR8E69/ai_RifleBehavior.json": "2dbc34c425e032263dc153292249b04c0f8f54bfbf6f7162823a4954dbc8faf4",
@@ -7962,7 +7989,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "8c047311f948e1ee93c3cd2e067367bcb8e9e60244810fb6b0afc057acf2cdeb",
+    "config/GR8E69/project.json": "a335ea600fc640d9ff8fe36c28d447445bf18ecdd9e3592328a8fc7b89c95267",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -9297,12 +9324,12 @@
     "include/dolphin-sdk/macros.inc": "4e92f656bb511fbb45d66081291371c47ceba7bce9c55f86871116203cf38a46",
     "include/dolphin-sn/dolphin/types.h": "ca31e0bbb97e93ca4713654367df29578f6392f3acaf40ca68bc1de1c913af93",
     "include/game/AIBehavior.h": "5304eb80fe34f5dae798fe1ce82d59dbd2f8bed3251f085a11277c6b3f734864",
-    "include/game/AIBot.h": "f66e3be5cfc6165c4717e9598149560d05396feb1008bb053e1b8c2e1b369039",
+    "include/game/AIBot.h": "3bf707b0b5453d3352b647bce655f372414f9a3623ff27fcf4d219af2b7a7b91",
     "include/game/AIDoodad.h": "5a8328fd7c55b6f602742adb79faabaeb4466fbaa44292b3a32fd0d0ad10aca9",
     "include/game/AIFilterGlobal.h": "8206508036a820ab1075f5e290d849293a434e49041b0d700337c523bc915738",
     "include/game/AIMovement.h": "be6b180ea11f5f27a6b5fb27e3ae35288d2c22879ba23a2233dc1d233979674a",
-    "include/game/AIPathSearch.h": "43734a0f9e104071d4045a54bc33b1125f8826a9f29309eea5c8e6e5553f4c6d",
-    "include/game/AISplinePath.h": "9e8efa729cb1f73b0a9fe4c56a1d26854709403e02a7305b90ecdced1f99d326",
+    "include/game/AIPathSearch.h": "a2c7f9d5fabefa195ac22871f2ba2e6581e3109b134bc8c53bddb1ae373a3729",
+    "include/game/AISplinePath.h": "66b1ac579e7a8a8c830780cf389deab3f16f0b7c9608cc9669ca9389464e112b",
     "include/game/AITargeting.h": "e627d0bfbe67665b87bf089c456c1feded0163e8755fd60f994082d6c711b08f",
     "include/game/AnimShape.h": "eb3d8e24b295f937a6524701d5d87c8b8b4e052c8bbb2bafd8fb764c3318e87e",
     "include/game/AnimatedVolume.h": "527918576e64cf9296cbb9164eefaf3fc8b7a0f96894e342d2da9e847df4cf25",
@@ -9697,9 +9724,11 @@
     "src/ai/BotAreaHeight.cpp": "8be5d6a73b5d00c0584759cb92a5090694579f73cbc3c08dc3cec801433cd16a",
     "src/ai/BotAreaJump.cpp": "3987b36b376bc26517c99df29e3dca9e279bc6e099bbdfac7b4ba5c93ac55d80",
     "src/ai/BotAreaLink.cpp": "bfac31e6dcf4981af8b08d2a77ab1f5e3add92919f3323aa23e9f0d20c382b81",
+    "src/ai/BotCampLookat.cpp": "22ce4b9a292ca8823f5633a08769b07f4640ae327ed9cce365fd2cc01a7fec00",
     "src/ai/BotCharacter.cpp": "797341790b538fbd452e72ae8237abe9b43699b7d382cfa82e5fe1bef7928354",
     "src/ai/BotChooseWeapon.cpp": "1675256e3812e21961b86bed423788467fccf1edab4b88956920d4e139ae16bf",
     "src/ai/BotEnemySight.cpp": "6b14d4fede4a7b58ec53c0a04f25b97fafbe5f719d07518c3c026084a64d8b13",
+    "src/ai/BotLookDir.cpp": "7c87efc5ff038d6e2494104e3f7246518b2ef1722247524620698c33c768a718",
     "src/ai/BotManA.cpp": "7d4048715d475fe7092893e9140052fbe9df03d16f7dcbbc380c7949fff02df6",
     "src/ai/BotManLookat.cpp": "07a8b1fa877c4ae73bcbabd2f7e826366354ed1e13a1d98bcdfc62379e083ec2",
     "src/ai/BotManMMG.cpp": "cc5f205349d47f9bf2c84819452e9572197e183ce9b34bdeb484d587d7d92948",
@@ -9711,6 +9740,7 @@
     "src/ai/BotStateChase.cpp": "e43a538bb35e13f8f7d17598a1eb5a198fd9a882d0a5ac937661e20190d18d97",
     "src/ai/BotStateCombatEnter.cpp": "384ee108252f674bc52832412a1b89e0f005968bacbac42aee308758e92feb5d",
     "src/ai/BotStateDead.cpp": "f66667e9894127af4149acb8e5c261e6a54dbf1d84edcfdf6add904bba3feb60",
+    "src/ai/BotStrafe.cpp": "aa88484ee6d8bc6d3f6da38c30ad89f7c3ff35005713f51a220bdd635f185fd9",
     "src/ai/BotTeamDistance.cpp": "4576beee415c36e21e9ec91d0dfe1a69139951b5152c29bcc6d53d6f37c0a657",
     "src/ai/BotThreatDirections.cpp": "86b324a29e7aa50ce75053d32e578ec8ed4b6f93f42db357b7a101f91b7fba91",
     "src/ai/BuddyFollowBehavior.cpp": "057e6a09a3d436b73da6bd873f38d17b151b25352dc707f668037944b9e0ff20",
@@ -9735,6 +9765,12 @@
     "src/ai/MMGBehaviorStop.cpp": "0328671512ff42474e6d4e750a7fc669cf9d05c757a920312faac25e97ff06dd",
     "src/ai/MMGBehaviorTail.cpp": "ed8f6b7848af53eab271ac374d6c490377430fccf780e9e5ba9c3aff13d380ca",
     "src/ai/NullWeaponBehavior.cpp": "73e48f23e4a8e7963c1f5fd241186ea823189254e2fb72cb103336975c9f7592",
+    "src/ai/PathFindingUpdate.cpp": "229ec008c8b3479776605a3b74dccf7f4a68343c1914db07b791134ac4ea2055",
+    "src/ai/PathSearchTrim.cpp": "08a0614ae25d3cf1b0f1ec7e82d02284dabae6963c84ec9d927ab9439aa1723e",
+    "src/ai/PathWalkCommit.cpp": "bd1a8448f0ff2543b228365da5ac84a7ff3d228833cd923145b9a457e2187d58",
+    "src/ai/PathWalkNext.cpp": "cd54234c0391f72340c6be61ef5fff33cfdcafbdab8018c7014641bae9ab50f3",
+    "src/ai/PathWalkStep.cpp": "8a1ab3d50dfb8cf6dd3ee1bbaf3e8c020cd2997d914fa0957391023999aa7a07",
+    "src/ai/PathWalkStop.cpp": "1e50bc301bc1dcfd783e5c7af63a3b3ea0471f5d5b167946a798acc9075c607e",
     "src/ai/PistolBehavior.cpp": "52bbbfdcf25027a20f6dccb47bee3647d3a2d5c6195cfbdc570a2b1529d0dc4b",
     "src/ai/PolemineBehavior.cpp": "d5a2845cb2cf8466791a8170691fd2be4addf548d1e2e4bc7a16177eae66b4a2",
     "src/ai/RifleBehavior.cpp": "69fed157b0314f5b3f78d01825c1ff73e0938411cc643f8fb263f7653584b9bf",
@@ -57013,6 +57049,168 @@
       "discarded_functions": [],
       "object_sha256": "b10a9ddd1e7f4f66d96fd63105c89ee4f1e3cf120e1a47ee7bec1bc41f463de6",
       "linked_sha256": "1886632370c99ed045f1d92500d23fd77d3045c4aa51b17b93fa8c0d5c0b31c9"
+    },
+    {
+      "id": "ai_PathWalkCommit",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 56,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "6d5b561500e2b30897a487b100e62c96a13fafa3a076c70791ddf7bb6f4a8965",
+      "linked_sha256": "68ff070439e3b71598fc40e080969e592c3c8cf6f4f7238eb3dc38bcf2c5bd34"
+    },
+    {
+      "id": "ai_PathWalkStep",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 328,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "371e8ef1fab3bd9ea49d58198b5a110e5e0b82e63a294c564714870b2aea0b96",
+      "linked_sha256": "ea6228f053b64fcd1e0c34c8dd71721d76099bb6ad5a10652002eb6c0de6bdf7"
+    },
+    {
+      "id": "ai_PathSearchTrim",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 268,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "bf2831d757504ca820df51183bba1c2f629869df9ec0ac6d8a42cdfe45b13d20",
+      "linked_sha256": "d41d0c44ba003e1d89b95f2c1b9354edb3a4e9f7708860ae4adc4faaf892c598"
+    },
+    {
+      "id": "ai_PathWalkStop",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 172,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "d8365b7afaafcd68d57e8fef1d372507d48f71220e2b1dae2f70f603f6aeec74",
+      "linked_sha256": "e2cb7480cdbbda823d3fc2ab8111084415f9a3a2c19d80c3ead0833a6ffa60fa"
+    },
+    {
+      "id": "ai_PathFindingUpdate",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 188,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "6d7790c834133b0169faff0085a5cbbadd6231054ea33f0150a25093465e276d",
+      "linked_sha256": "81f24efe088e3968e10d4a6a63176f0ebbaefce5efb37fe1f4e02a9cd2fca24a"
+    },
+    {
+      "id": "ai_PathWalkNext",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 268,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "4c472402e3586cebb83e645ac73ce7baff16cc539ce83b48c66b54969fd423e2",
+      "linked_sha256": "a03e1eb408632e7848aa07494d675615059a41ff88172b70679cfb6b5fcb2ef2"
+    },
+    {
+      "id": "ai_BotCampLookat",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 196,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "2ac32aad8418141210d029ba6634474f7780483c02209f45ef093eb4c4f27549",
+      "linked_sha256": "cbd680776844fc1a479dc7bd695155b8b1eb1b316e38e7e64bf7418462722660"
+    },
+    {
+      "id": "ai_BotLookDir",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 200,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "9bf1edf16c6df8f9f7799a6d920cc232c00c1b21a708d9fb373bbdb82dfaa981",
+      "linked_sha256": "ea94ef6e56a3fcb492a36f27dd42b3a830e8bca088cf0e9debce76cc64897f95"
+    },
+    {
+      "id": "ai_BotStrafe",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 148,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "4569dc0446ecd22c29ca93dd7f17737d70910dec4e1c4a0278fc8f934f8a256e",
+      "linked_sha256": "4fde70f483b8407227c5867e7032bb00a98ac2670c686fffb63eb4b76b41de5c"
     }
   ],
   "code_map": {
@@ -64626,14 +64824,12 @@
             "kind": "function",
             "name": "BS_Recover__10CBotObject",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800957a8",
-            "size": 196,
-            "kind": "function",
-            "name": "SetCampingLookat__10CBotObject",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 8009586c",
+        "ranges": [
           {
             "address": "0x8009586c",
             "size": 1320,
@@ -64696,14 +64892,12 @@
             "kind": "function",
             "name": "ClearBotData__10CBotObject",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800975b8",
-            "size": 200,
-            "kind": "function",
-            "name": "UpdateLookDir__10CBotObject",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 80097680",
+        "ranges": [
           {
             "address": "0x80097680",
             "size": 640,
@@ -64729,14 +64923,12 @@
             "kind": "function",
             "name": "CheckForNearbyPowerups__10CBotObject",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80098324",
-            "size": 148,
-            "kind": "function",
-            "name": "WantToStrafe__10CBotObject",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 800983b8",
+        "ranges": [
           {
             "address": "0x800983b8",
             "size": 568,
@@ -67824,13 +68016,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800e9ecc",
-            "size": 56,
-            "kind": "function",
-            "name": "SetupAStarPathWalkCommit__18CAIAreaPathFinding",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800e9f04",
             "size": 372,
             "kind": "function",
@@ -67866,27 +68051,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800eaee4",
-            "size": 208,
-            "kind": "function",
-            "name": "WalkAStarPath__18CAIAreaPathFinding",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800eafb4",
-            "size": 36,
-            "kind": "function",
-            "name": "ClearSearchNodeQueue__18CAIAreaPathFindingR20CAreaSearchNodeQueue",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800eafd8",
-            "size": 84,
-            "kind": "function",
-            "name": "ClearSearchNodeList__18CAIAreaPathFindingR19CAreaSearchNodeList",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800eb02c",
             "size": 416,
             "kind": "function",
@@ -67908,20 +68072,6 @@
             "evidence": "local-file-symbol"
           },
           {
-            "address": "0x800eb34c",
-            "size": 192,
-            "kind": "function",
-            "name": "TrimSolutionNodeQueue__18CAIAreaPathFindingP15CAreaSearchNodeR19CAreaSearchNodeList",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800eb40c",
-            "size": 76,
-            "kind": "function",
-            "name": "CleanupAStarPathWalk__18CAIAreaPathFinding",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800eb458",
             "size": 328,
             "kind": "function",
@@ -67936,31 +68086,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800eb780",
-            "size": 80,
-            "kind": "function",
-            "name": "StopAStarPathWalk__18CAIAreaPathFinding",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800eb7d0",
-            "size": 92,
-            "kind": "function",
-            "name": "RemovePointersTo__18CAIAreaPathFindingP9CAIObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800eb860",
             "size": 412,
             "kind": "function",
             "name": "OptimizePath__18CAIAreaPathFindingP15CAreaSearchNodeR19CAreaSearchNodeList",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800eb9fc",
-            "size": 188,
-            "kind": "function",
-            "name": "Update__18CAIAreaPathFinding",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -68010,20 +68139,6 @@
             "size": 364,
             "kind": "function",
             "name": "FindDestinationOnNetwork__18CAIAreaPathFindingRC8CVector3P8CVector3P13CAreaPathNodeRP13CAreaPathNode",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ec5f8",
-            "size": 140,
-            "kind": "function",
-            "name": "TeleportToNextPositionOnPath__18CAIAreaPathFinding",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ec684",
-            "size": 128,
-            "kind": "function",
-            "name": "GetNextWalkToPos__18CAIAreaPathFindingR8CVector3",
             "evidence": "adjacent-compiler-markers"
           },
           {

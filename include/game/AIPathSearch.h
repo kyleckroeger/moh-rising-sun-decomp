@@ -39,15 +39,8 @@ class CAreaSearchNodeQueue {
   public:
     void Clear();
 };
-class CAreaSearchNodeList : public CLinkedList {};
-// The search view of CAIAreaPathFinding: member offsets are used by the functions listed here.
-class CAIAreaPathSearch {
+class CAreaSearchNodeList : public CLinkedList {
   public:
-    void SetupAStarPathWalkCommit();
-    float PathDistance() const;
-    void ClearSearchNodeQueue(CAreaSearchNodeQueue &);
-    void ClearSearchNodeList(CAreaSearchNodeList &);
-    void CleanupAStarPathWalk();
-    void StopAStarPathWalk();
+    CAreaSearchNodeList();
 };
 #endif

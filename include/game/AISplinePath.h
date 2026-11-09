@@ -3,6 +3,7 @@
 #include "AIFilterGlobal.h"
 #include "BPD.h"
 #include "AIMovement.h"
+#include "LinkedList.h"
 // AI-assisted reconstruction from GR8E69; see docs/Paths.md.
 class CAISplinePathManager;
 class CAISplinePathModule;
@@ -114,20 +115,48 @@ public:
     unsigned short *vertexIndices;   // +0x08; borderVertexCount + linkCount entries.
     BPDLinkEdge *links;                // +0x0c
 };
+class CAreaSearchNodeQueue;
+class CAreaSearchNode;
+class CAreaSearchNodeList;
+// Member offsets come from the path walk functions; the names are inferred.
 class CAIAreaPathFinding {
 public:
     static void ResetAStarVolumes();
-    unsigned char unknown00[0x20];
-    CAILocomotion *locomotion;
+    unsigned char unknown00[4];
+    int positionValid;        // +0x04; set with onNetwork by Update.
+    int walkActive;           // +0x08
+    unsigned char unknown0c[0x14 - 0x0c];
+    CAreaPathNode *currentNode; // +0x14
+    unsigned char unknown18[0x1c - 0x18];
+    CAIPhysics *physics;      // +0x1c
+    CAILocomotion *locomotion; // +0x20
     BSObject *scriptObject;   // +0x24
-    unsigned char unknown28[4];
+    int onNetwork;            // +0x28
     int currentVolume;        // +0x2c
     int volumeCount;          // +0x30
     unsigned char unknown34[0x40 - 0x34];
     CVector3 closestPosition; // +0x40
     CAIObject *targetObject;  // +0x50
-    unsigned char unknown54[0x98 - 0x54];
+    unsigned char unknown54[0x70 - 0x54];
+    CVector3 destination;     // +0x70
+    int field80;              // +0x80
+    CLinkedListElement *currentPathNode; // +0x84
+    CLinkedList solutionPath; // +0x88
+    float commitTime;         // +0x94
     int pathFinished;         // +0x98
+    unsigned char unknown9c[0xa4 - 0x9c];
+    int fieldA4;              // +0xa4
+    int fieldA8;              // +0xa8
+    int fieldAC;              // +0xac
+    unsigned char unknownb0[0xb4 - 0xb0];
+    int walkPhase;            // +0xb4
+    void SetupAStarPathWalkCommit();
+    void TrimSolutionNodeQueue(CAreaSearchNode *, CAreaSearchNodeList &);
+    void TeleportToNextPositionOnPath();
+    int GetNextWalkToPos(CVector3 &);
+    void ClearSearchNodeQueue(CAreaSearchNodeQueue &);
+    void ClearSearchNodeList(CAreaSearchNodeList &);
+    void CleanupAStarPathWalk();
     void StopAStarPathWalk();
     float PathDistance() const;
     void UpdateOffAStarPosition();

@@ -149,7 +149,7 @@ class CBotObject {
     int RetreatForHealth();
     int RetreatForAmmo();
     int RetreatForWeapons();
-    void CalcAStarPath(const CVector3 &, CAreaPathNode *);
+    int CalcAStarPath(const CVector3 &, CAreaPathNode *);
     void SetCampingLookat();
     CVector3 EstimateEnemyPosition();
     int WantToRetreat();
