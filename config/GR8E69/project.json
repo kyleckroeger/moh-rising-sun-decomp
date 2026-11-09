@@ -2091,7 +2091,14 @@
     "ai_BotObjectAccessors.json",
     "scene_SoldierGagFilter.json",
     "scene_SoldierLipSyncDef.json",
-    "scene_SoldierConstrain.json"
+    "scene_SoldierConstrain.json",
+    "eagl_rendercontext_base.json",
+    "eagl_rendercontext_begin.json",
+    "eagl_rendercontext_gpbreak.json",
+    "eagl_rendercontext_accessors.json",
+    "eagl_rendercontext_private.json",
+    "eagl_rendercontext_extension.json",
+    "eagl_rendercontext_efb.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

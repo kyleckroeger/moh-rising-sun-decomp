@@ -449,6 +449,13 @@
       "src/eagl/eagl_property_end.cpp": "3b5e03274e9743d6599ef735619a3dd7bf9045fcbe727514635fcb9a433392fa",
       "src/eagl/eagl_property_max.cpp": "9027624d434590d20238f80f28f05a29a95126569842c03edb6d6ef85cfe5326",
       "src/eagl/eagl_property_skip.cpp": "6fcf24640732bba1246cef05f9c26e399f19a047be6295d721f0316d70be0167",
+      "src/eagl/eagl_rendercontext_accessors.cpp": "e74420e3985e1458db07b072a148095d0f373bcb34144e733d71b9b0436b2609",
+      "src/eagl/eagl_rendercontext_base.cpp": "2df6254822446bd44eedea3bd041863f020b941ab7e455697a9c4a78ec505d67",
+      "src/eagl/eagl_rendercontext_begin.cpp": "839534b675892ef69788cb32a6c6c53ff88e5881ee072067f8652b5d17c6233f",
+      "src/eagl/eagl_rendercontext_efb.cpp": "6ef3178d7b6c662dad47caec891258736a0273e362b108a30558665a0dc92ff5",
+      "src/eagl/eagl_rendercontext_extension.cpp": "b6dcb520288f318a3d1af66c3886e652a4c02689e3ede0b33d5daf131a10640f",
+      "src/eagl/eagl_rendercontext_gpbreak.cpp": "eab4e4f2050012244f883b06c2a5c39e79428fdae5ace282c3ff9d585945533e",
+      "src/eagl/eagl_rendercontext_private.cpp": "1c9f824458cc1782c738542cb0f355acd02b854865b694dd5d01e4d95a9c70b2",
       "src/eagl/eagl_skin_render.cpp": "56a61b4fbaa01877123d67ed6d532383cfcdf115d459e208909a949ae0d03003",
       "src/eagl/eagl_state_attribute_format.cpp": "b0a86202a9a433dc0a9093af5edd85d33abc8664145275978a1dcb803cbea79a",
       "src/eagl/eagl_state_context.cpp": "046635b42f51d220088a2bac5a1078c2d915ab9ab7eed8b764d0873b8390aadb",
@@ -2459,10 +2466,13 @@
       "include/game/EAGLDynamicLoader.h": "0da2b505a7dc5a368dd35d335c06b32b30be9ff8980371eec599652eaee51f7f",
       "include/game/EAGLGeoPrimState.h": "765381a4df0bc12e501732bc705954fc88f6c0ecf1ac4ae363c296e9e152d1ef",
       "include/game/EAGLLoading.h": "d705e7083a39bef71bdce0ba63dd163ef809ac37652454bb6cfef83d12428a99",
-      "include/game/EAGLMaterial.h": "c3fb8175e12398214eba5bc3417ee0e8c9165b5da3bb327140bd7bc2d4d46519",
+      "include/game/EAGLMaterial.h": "fd807d952dc6ce8699173b29dabe7cdba74cddbfab3fdfe076aca83f34bdbefe",
       "include/game/EAGLMaterialLighting.h": "fe99d16184831d1665eaa33a89560b87cc1df400656debd67095f3e5674afee5",
       "include/game/EAGLMemory.h": "fdcff73217acecdec07803345a7061df61db8cc6c38544980856ef539ddc7bbf",
       "include/game/EAGLPropertyParser.h": "71dc0d4dda9bf9df333fbd5172293805881c33b453b5de6f4e89e8f9b623c5b6",
+      "include/game/EAGLRenderContext.h": "a16eec3bb77554125198a5ad5233807404bc85bc013c9699b913b3c781d75e46",
+      "include/game/EAGLRenderContextExtensionBase.h": "f8814016d9be48284664c33390a9438076126ff0dd3ac1f1cdc9f353f2b37dd3",
+      "include/game/EAGLRenderContextPrivateBase.h": "c2f43c1ffe271d4e1167aaaf8ffd998847975df7323053d8b4a07b2d1caae3e4",
       "include/game/EAGLTransform.h": "c8b8d8e4397d16d893d6b080bfa5a7a1a9e4fd35bd0d98096d75f3d00e64d433",
       "include/game/Endian.h": "6f3a06aca2ed749c09949cedff932c6e9a8db1272b5393bdc9a46185a384387b",
       "include/game/FEHash.h": "5d2777480e94ab65796f9850193722c7585a884299d6b68b610c5b3ce6a08757",
@@ -3238,6 +3248,13 @@
       "config/GR8E69/eagl_property_end.json": "1a38800ff354bcdb33180273453d4e6ac5b85fb61e0664d298eed94fada33d1a",
       "config/GR8E69/eagl_property_max.json": "2944d4849e6f22ed7c88d15bb393475715beec30cc12383881255ffb6f4dc030",
       "config/GR8E69/eagl_property_skip.json": "34bdb5776f91d6a88d575bc5a58dec95eeaa3a3d03a82db32caa70cfbab630be",
+      "config/GR8E69/eagl_rendercontext_accessors.json": "197ce63f649a6f096d1bce6f408e54fb92c827b5392128295888ce65f5cfb449",
+      "config/GR8E69/eagl_rendercontext_base.json": "9a62816b6cfe1c0bc81a03a4156ed85e2dfd74c650f7a40fbde3649a66df2705",
+      "config/GR8E69/eagl_rendercontext_begin.json": "b08bee5bc4dc976aff4603bf51319697dd7e2c7418ba04aa7a3f6a752eabeaab",
+      "config/GR8E69/eagl_rendercontext_efb.json": "d232d6ad6d01397232ca68ee761e93c3e9b07dbae565cb823e0959f95b32e943",
+      "config/GR8E69/eagl_rendercontext_extension.json": "a7efe424753d9822d617ff6e1d770a770b5da33a0ed2baa9d81ab7bec2d4612c",
+      "config/GR8E69/eagl_rendercontext_gpbreak.json": "8fe83eadc9b68c213ad6e044c15de76f2f7045358fd618adee14738382760e18",
+      "config/GR8E69/eagl_rendercontext_private.json": "edb36d95442a2531f7a87a95e94d8696ac18c7870cca49ca0dbe111027bc61e5",
       "config/GR8E69/eagl_skin_render.json": "432aea647778628105ab21a4ea8a204d5f0885738adbe40583b9d607a27402ab",
       "config/GR8E69/eagl_state_attribute_format.json": "1bf3ba5c119fe012be456d92bfeae50864ccc770e9d6e27efa2e8663c0dfed98",
       "config/GR8E69/eagl_state_context.json": "70c497790b922bf6453d91d30599d6786f5d81dee8d0c3417285b206673b428b",
@@ -3712,7 +3729,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "9db7573abc26b399a6d4a87b603bdf7307e0269738e3b3a173c609569245ab02",
+      "config/GR8E69/project.json": "75892b214d2665dca5e3c5d380cbe1828b9cde9e1b9fa709ece1bf0a8210a61f",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -6375,14 +6392,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1096044,
+    "matching_code_bytes": 1099100,
     "total_executable_code_bytes": 2492032,
-    "percent": 43.98193923673532,
+    "percent": 44.10457008577739,
     "categories": {
-      "reconstructed_game": 703828,
+      "reconstructed_game": 706884,
       "restored_library": 392216
     },
-    "matching_functions": 5404
+    "matching_functions": 5454
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -6936,6 +6953,13 @@
     "config/GR8E69/eagl_property_end.json": "1a38800ff354bcdb33180273453d4e6ac5b85fb61e0664d298eed94fada33d1a",
     "config/GR8E69/eagl_property_max.json": "2944d4849e6f22ed7c88d15bb393475715beec30cc12383881255ffb6f4dc030",
     "config/GR8E69/eagl_property_skip.json": "34bdb5776f91d6a88d575bc5a58dec95eeaa3a3d03a82db32caa70cfbab630be",
+    "config/GR8E69/eagl_rendercontext_accessors.json": "197ce63f649a6f096d1bce6f408e54fb92c827b5392128295888ce65f5cfb449",
+    "config/GR8E69/eagl_rendercontext_base.json": "9a62816b6cfe1c0bc81a03a4156ed85e2dfd74c650f7a40fbde3649a66df2705",
+    "config/GR8E69/eagl_rendercontext_begin.json": "b08bee5bc4dc976aff4603bf51319697dd7e2c7418ba04aa7a3f6a752eabeaab",
+    "config/GR8E69/eagl_rendercontext_efb.json": "d232d6ad6d01397232ca68ee761e93c3e9b07dbae565cb823e0959f95b32e943",
+    "config/GR8E69/eagl_rendercontext_extension.json": "a7efe424753d9822d617ff6e1d770a770b5da33a0ed2baa9d81ab7bec2d4612c",
+    "config/GR8E69/eagl_rendercontext_gpbreak.json": "8fe83eadc9b68c213ad6e044c15de76f2f7045358fd618adee14738382760e18",
+    "config/GR8E69/eagl_rendercontext_private.json": "edb36d95442a2531f7a87a95e94d8696ac18c7870cca49ca0dbe111027bc61e5",
     "config/GR8E69/eagl_skin_render.json": "432aea647778628105ab21a4ea8a204d5f0885738adbe40583b9d607a27402ab",
     "config/GR8E69/eagl_state_attribute_format.json": "1bf3ba5c119fe012be456d92bfeae50864ccc770e9d6e27efa2e8663c0dfed98",
     "config/GR8E69/eagl_state_context.json": "70c497790b922bf6453d91d30599d6786f5d81dee8d0c3417285b206673b428b",
@@ -7410,7 +7434,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "9db7573abc26b399a6d4a87b603bdf7307e0269738e3b3a173c609569245ab02",
+    "config/GR8E69/project.json": "75892b214d2665dca5e3c5d380cbe1828b9cde9e1b9fa709ece1bf0a8210a61f",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -8778,10 +8802,13 @@
     "include/game/EAGLDynamicLoader.h": "0da2b505a7dc5a368dd35d335c06b32b30be9ff8980371eec599652eaee51f7f",
     "include/game/EAGLGeoPrimState.h": "765381a4df0bc12e501732bc705954fc88f6c0ecf1ac4ae363c296e9e152d1ef",
     "include/game/EAGLLoading.h": "d705e7083a39bef71bdce0ba63dd163ef809ac37652454bb6cfef83d12428a99",
-    "include/game/EAGLMaterial.h": "c3fb8175e12398214eba5bc3417ee0e8c9165b5da3bb327140bd7bc2d4d46519",
+    "include/game/EAGLMaterial.h": "fd807d952dc6ce8699173b29dabe7cdba74cddbfab3fdfe076aca83f34bdbefe",
     "include/game/EAGLMaterialLighting.h": "fe99d16184831d1665eaa33a89560b87cc1df400656debd67095f3e5674afee5",
     "include/game/EAGLMemory.h": "fdcff73217acecdec07803345a7061df61db8cc6c38544980856ef539ddc7bbf",
     "include/game/EAGLPropertyParser.h": "71dc0d4dda9bf9df333fbd5172293805881c33b453b5de6f4e89e8f9b623c5b6",
+    "include/game/EAGLRenderContext.h": "a16eec3bb77554125198a5ad5233807404bc85bc013c9699b913b3c781d75e46",
+    "include/game/EAGLRenderContextExtensionBase.h": "f8814016d9be48284664c33390a9438076126ff0dd3ac1f1cdc9f353f2b37dd3",
+    "include/game/EAGLRenderContextPrivateBase.h": "c2f43c1ffe271d4e1167aaaf8ffd998847975df7323053d8b4a07b2d1caae3e4",
     "include/game/EAGLTransform.h": "c8b8d8e4397d16d893d6b080bfa5a7a1a9e4fd35bd0d98096d75f3d00e64d433",
     "include/game/Endian.h": "6f3a06aca2ed749c09949cedff932c6e9a8db1272b5393bdc9a46185a384387b",
     "include/game/FEHash.h": "5d2777480e94ab65796f9850193722c7585a884299d6b68b610c5b3ce6a08757",
@@ -9451,6 +9478,13 @@
     "src/eagl/eagl_property_end.cpp": "3b5e03274e9743d6599ef735619a3dd7bf9045fcbe727514635fcb9a433392fa",
     "src/eagl/eagl_property_max.cpp": "9027624d434590d20238f80f28f05a29a95126569842c03edb6d6ef85cfe5326",
     "src/eagl/eagl_property_skip.cpp": "6fcf24640732bba1246cef05f9c26e399f19a047be6295d721f0316d70be0167",
+    "src/eagl/eagl_rendercontext_accessors.cpp": "e74420e3985e1458db07b072a148095d0f373bcb34144e733d71b9b0436b2609",
+    "src/eagl/eagl_rendercontext_base.cpp": "2df6254822446bd44eedea3bd041863f020b941ab7e455697a9c4a78ec505d67",
+    "src/eagl/eagl_rendercontext_begin.cpp": "839534b675892ef69788cb32a6c6c53ff88e5881ee072067f8652b5d17c6233f",
+    "src/eagl/eagl_rendercontext_efb.cpp": "6ef3178d7b6c662dad47caec891258736a0273e362b108a30558665a0dc92ff5",
+    "src/eagl/eagl_rendercontext_extension.cpp": "b6dcb520288f318a3d1af66c3886e652a4c02689e3ede0b33d5daf131a10640f",
+    "src/eagl/eagl_rendercontext_gpbreak.cpp": "eab4e4f2050012244f883b06c2a5c39e79428fdae5ace282c3ff9d585945533e",
+    "src/eagl/eagl_rendercontext_private.cpp": "1c9f824458cc1782c738542cb0f355acd02b854865b694dd5d01e4d95a9c70b2",
     "src/eagl/eagl_skin_render.cpp": "56a61b4fbaa01877123d67ed6d532383cfcdf115d459e208909a949ae0d03003",
     "src/eagl/eagl_state_attribute_format.cpp": "b0a86202a9a433dc0a9093af5edd85d33abc8664145275978a1dcb803cbea79a",
     "src/eagl/eagl_state_context.cpp": "046635b42f51d220088a2bac5a1078c2d915ab9ab7eed8b764d0873b8390aadb",
@@ -52632,6 +52666,132 @@
       "discarded_functions": [],
       "object_sha256": "1be4c310596b40b7abb6dbcaa3773086ca59ddbe0f4d6e331a141b1f876cda86",
       "linked_sha256": "7286435244af24cb6f66cf4df6636dbda25c35da1da5f0685bf66aa8855a4422"
+    },
+    {
+      "id": "eagl_rendercontext_base",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 120,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "1cdddc8aee1d1a4f5537fd61d438bd93f2efc403565e64dfadef1137ce3c84eb",
+      "linked_sha256": "a50706849aaeb2db6bf927003394355ed33c511995c7617477fe68510fcb17ef"
+    },
+    {
+      "id": "eagl_rendercontext_begin",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 272,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "da8f144902a120940dab8fb6a4bfe281c238983336f19fcb73400f4a1c4f9401",
+      "linked_sha256": "dad11ed15555fde2df30fd82fe1c26867b660466b6d561ddf272e1ae99479ba8"
+    },
+    {
+      "id": "eagl_rendercontext_gpbreak",
+      "category": "reconstructed_game",
+      "functions": 6,
+      "code_bytes": 576,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e26faf702b0639e6ec4623d8474e7b91c60b100242a5eadf7f309a4a06e43109",
+      "linked_sha256": "fb7966c7b0bc7049f65ac9e7ed0c686affcae30a4923472926a6f444a5df2eb1"
+    },
+    {
+      "id": "eagl_rendercontext_accessors",
+      "category": "reconstructed_game",
+      "functions": 13,
+      "code_bytes": 520,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "ba3cf3bf16966b7b0ef54b384aab1df6c029664423429547814415da1214ecd0",
+      "linked_sha256": "488d67abad4f1daf27d732a254989602f034827b393d34c81d0aa1dc916abf97"
+    },
+    {
+      "id": "eagl_rendercontext_private",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 380,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "a781bf42d157933fc86b73f9fc8ae71db109aba8f3686015353b725d8d36919a",
+      "linked_sha256": "e47ade71f09a1d35ab0acecc76361e8f9c9d5e1a74281ff62c0cb61c249215d0"
+    },
+    {
+      "id": "eagl_rendercontext_extension",
+      "category": "reconstructed_game",
+      "functions": 24,
+      "code_bytes": 948,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "2cd5a45c52d05bc32f48bcf6fff9de416d17f5503c2046ac2357d76b1b7f1caf",
+      "linked_sha256": "5b5ff53d0d070a8949aeab13cd0bb1a34f640729251ff91fe73cff4a28919310"
+    },
+    {
+      "id": "eagl_rendercontext_efb",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 240,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "5f5e404a982b043b998bec34856c1a3e34b477fa4a538e258e03389ba8a856cb",
+      "linked_sha256": "994dcd33d7162a38a400cb1b18d121f9c28790c00f81e8666a4d14273b6b9a9b"
     }
   ],
   "code_map": {
@@ -79511,27 +79671,6 @@
             "evidence": "local-file-symbol"
           },
           {
-            "address": "0x801dc514",
-            "size": 120,
-            "kind": "function",
-            "name": "_._Q24EAGL17RenderContextBase",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dc58c",
-            "size": 112,
-            "kind": "function",
-            "name": "__Q24EAGL13RenderContextPQ24EAGL6Device",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dc5fc",
-            "size": 160,
-            "kind": "function",
-            "name": "BeginFrame__Q24EAGL13RenderContext",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x801dc69c",
             "size": 200,
             "kind": "function",
@@ -79557,335 +79696,6 @@
             "size": 156,
             "kind": "function",
             "name": "SendDebugToken__Q24EAGL22RenderContextExtension",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dc9b0",
-            "size": 56,
-            "kind": "function",
-            "name": "ProcessGPBreakPoint__Q212EAGLInternal20RenderContextPrivate",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dc9e8",
-            "size": 104,
-            "kind": "function",
-            "name": "SetGPBreakPoint__Q212EAGLInternal20RenderContextPrivateUiPFUi_v",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dca50",
-            "size": 104,
-            "kind": "function",
-            "name": "ReleaseGPBreakPoint__Q212EAGLInternal20RenderContextPrivate",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dcab8",
-            "size": 48,
-            "kind": "function",
-            "name": "ProcessGPBreak__Q312EAGLInternal20RenderContextPrivate7GPBreak",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dcae8",
-            "size": 120,
-            "kind": "function",
-            "name": "ReleaseGPBreak__Q312EAGLInternal20RenderContextPrivate7GPBreakRQ312EAGLInternal20RenderContextPrivate7GPBreak",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dcb60",
-            "size": 144,
-            "kind": "function",
-            "name": "SetGPBreak__Q312EAGLInternal20RenderContextPrivate7GPBreakUiPFUi_v",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dcbf0",
-            "size": 12,
-            "kind": "function",
-            "name": "SetSize__Q24EAGL13RenderContextff",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dcbfc",
-            "size": 20,
-            "kind": "function",
-            "name": "GetSize__CQ24EAGL13RenderContextRfT1",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dcc10",
-            "size": 4,
-            "kind": "function",
-            "name": "SetZBufferDepth__Q24EAGL13RenderContexti",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dcc14",
-            "size": 8,
-            "kind": "function",
-            "name": "SetDepthBufferType__Q24EAGL13RenderContextQ24EAGL15DepthBufferType",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dcc1c",
-            "size": 16,
-            "kind": "function",
-            "name": "SetSyncToVBL__Q24EAGL13RenderContextb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dcc2c",
-            "size": 48,
-            "kind": "function",
-            "name": "SetZWritesEnable__Q24EAGL13RenderContextb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dcc5c",
-            "size": 48,
-            "kind": "function",
-            "name": "WaitForDrawsToComplete__Q24EAGL22RenderContextExtension",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dcc8c",
-            "size": 28,
-            "kind": "function",
-            "name": "SetVolatileBufferSize__Q24EAGL22RenderContextExtensionUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dcca8",
-            "size": 28,
-            "kind": "function",
-            "name": "GetCurrentVolatileBuffer__Q24EAGL22RenderContextExtension",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dccc4",
-            "size": 80,
-            "kind": "function",
-            "name": "StartDataStuffing__Q24EAGL22RenderContextExtensionPvUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dcd14",
-            "size": 132,
-            "kind": "function",
-            "name": "StuffData__Q24EAGL22RenderContextExtensionPCvUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dcd98",
-            "size": 44,
-            "kind": "function",
-            "name": "StopDataStuffing__Q24EAGL22RenderContextExtension",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dcdc4",
-            "size": 52,
-            "kind": "function",
-            "name": "_._Q212EAGLInternal24RenderContextPrivateBase",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dcdf8",
-            "size": 172,
-            "kind": "function",
-            "name": "__Q212EAGLInternal20RenderContextPrivatePQ24EAGL13RenderContext",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dcea4",
-            "size": 156,
-            "kind": "function",
-            "name": "_._Q212EAGLInternal20RenderContextPrivate",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dcf40",
-            "size": 52,
-            "kind": "function",
-            "name": "_._Q24EAGL26RenderContextExtensionBase",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dcf74",
-            "size": 84,
-            "kind": "function",
-            "name": "__Q24EAGL22RenderContextExtensionPQ24EAGL13RenderContext",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dcfc8",
-            "size": 52,
-            "kind": "function",
-            "name": "_._Q24EAGL22RenderContextExtension",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dcffc",
-            "size": 36,
-            "kind": "function",
-            "name": "SetFogEnable__Q24EAGL26RenderContextExtensionBaseb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dd020",
-            "size": 12,
-            "kind": "function",
-            "name": "GetFogEnable__CQ24EAGL26RenderContextExtensionBaseRb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dd02c",
-            "size": 36,
-            "kind": "function",
-            "name": "SetFogTableMode__Q24EAGL26RenderContextExtensionBaseQ24EAGL12FogTableMode",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dd050",
-            "size": 36,
-            "kind": "function",
-            "name": "SetFogStart__Q24EAGL26RenderContextExtensionBasef",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dd074",
-            "size": 36,
-            "kind": "function",
-            "name": "SetFogEnd__Q24EAGL26RenderContextExtensionBasef",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dd098",
-            "size": 44,
-            "kind": "function",
-            "name": "SetFogColour__Q24EAGL26RenderContextExtensionBaseGQ24EAGL6Colour",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dd0c4",
-            "size": 36,
-            "kind": "function",
-            "name": "SetFogRangeAdjustEnable__Q24EAGL26RenderContextExtensionBaseb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dd0e8",
-            "size": 52,
-            "kind": "function",
-            "name": "EnactFogSettings__CQ24EAGL26RenderContextExtensionBase",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dd11c",
-            "size": 20,
-            "kind": "function",
-            "name": "GetMipmapLODBiasOverride__Q24EAGL26RenderContextExtensionBaseRf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dd130",
-            "size": 20,
-            "kind": "function",
-            "name": "GetFilterModeOverride__Q24EAGL26RenderContextExtensionBaseRQ24EAGL18FilterModeOverride",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dd144",
-            "size": 20,
-            "kind": "function",
-            "name": "GetAlphaWritesOverride__Q24EAGL26RenderContextExtensionBaseRQ24EAGL19AlphaWritesOverride",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dd158",
-            "size": 20,
-            "kind": "function",
-            "name": "GetMipMapModeOverride__Q24EAGL26RenderContextExtensionBaseRQ24EAGL18MipMapModeOverride",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dd16c",
-            "size": 16,
-            "kind": "function",
-            "name": "GetMaxAnisotropyOverride__Q24EAGL26RenderContextExtensionBaseRQ24EAGL18AnisotropyOverride",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dd17c",
-            "size": 20,
-            "kind": "function",
-            "name": "SetRenderMode__Q24EAGL22RenderContextExtensionR16_GXRenderModeObjUs",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dd190",
-            "size": 12,
-            "kind": "function",
-            "name": "GetDebugTokenEnable__Q24EAGL22RenderContextExtension",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dd19c",
-            "size": 20,
-            "kind": "function",
-            "name": "SetVISize__Q24EAGL22RenderContextExtensionii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dd1b0",
-            "size": 172,
-            "kind": "function",
-            "name": "SetVideoOrigin__Q24EAGL22RenderContextExtensionii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dd25c",
-            "size": 28,
-            "kind": "function",
-            "name": "GetXFBInformation__CQ24EAGL22RenderContextExtensionRPvRP16_GXRenderModeObj",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dd278",
-            "size": 32,
-            "kind": "function",
-            "name": "SetScreenClearOptimization__Q24EAGL22RenderContextExtensionb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dd298",
-            "size": 24,
-            "kind": "function",
-            "name": "GetScreenClearOptimization__Q24EAGL22RenderContextExtension",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dd2b0",
-            "size": 28,
-            "kind": "function",
-            "name": "SetFifoSize__Q24EAGL22RenderContextExtensionUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dd2cc",
-            "size": 92,
-            "kind": "function",
-            "name": "SetEFBCopy__Q24EAGL22RenderContextExtensioniiiiii9_GXTexFmtUc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801dd328",
-            "size": 240,
-            "kind": "function",
-            "name": "GetEFBAsTAR__Q24EAGL22RenderContextExtensionPQ24EAGL3TARbN22",
             "evidence": "adjacent-compiler-markers"
           },
           {

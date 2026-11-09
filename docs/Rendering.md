@@ -449,3 +449,23 @@ original; the last four reach file-local port state tables in a file with no rec
 The [animated-texture sweep](research/broad-source-sweep.md#animated-textures)
 reconstructs `AnimShape` lookup, CRC controls, list operations and frame-selection
 helpers. Frame advancement and TAR rebinding remain measured partial source.
+
+## Render context
+
+`EAGL::RenderContext` and its helpers come from one original file: a `gcc2_compiled.`
+marker opens it at `0x801db4b8` and the next closes it at `0x801dd444`. Class, method and
+static-member names come from the symbol table. Instance member names are inferred from
+use; [`EAGLRenderContext.h`](../include/game/EAGLRenderContext.h) establishes only the
+offsets the code touches, so it is a view and not a complete layout.
+
+Verified by the constructors and tables: `RenderContext` holds its extension at `+16` and
+its private data at `+56`, with `RenderContextBase`'s table pointer at `+12` and the device
+at `+236`. Table pointers follow each class's own fields. `RenderContextPrivate` defaults to
+640 by 448 and a `0x40000` FIFO. `GetEFBAsTAR` uses a seven-byte soft vertical filter.
+
+Inferred: the two base classes' destructors are the only virtuals of their tables, and each
+is both inlined into the derived destructor and present out of line, so their headers give
+inline bodies. Those headers use `#pragma interface`, and the fragments that hold the
+out-of-line copies use `#pragma implementation`. That pairing is a project arrangement, as
+for `IVolume`. The `GetEFBAsTAR` parameter names, `gDoScreenClear`'s meaning and the private
+members named `unknown_*` are not established.
