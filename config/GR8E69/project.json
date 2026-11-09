@@ -2462,7 +2462,15 @@
     "meshparticle_initdef.json",
     "meshparticle_list.json",
     "skeletondata_lookup.json",
-    "skeletondata_attachpoints.json"
+    "skeletondata_attachpoints.json",
+    "handler_difficulty.json",
+    "handler_mpjoin.json",
+    "handler_cooptemplaunch.json",
+    "handler_medalsoverlay.json",
+    "handler_quadrantgroup.json",
+    "handler_numplayers.json",
+    "handler_main.json",
+    "handler_languagemenu.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

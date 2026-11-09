@@ -15,6 +15,7 @@ class ShellLoader {
     int LoadResources(FEPackage *, long, FEResourceRequest *);
     int UnloadResources(FEPackage *, long, FEResourceRequest *);
 };
+enum EShellSoundType { EShellSoundType0 = 0 };
 enum EMovieType { EMovieTypeUnknown0 = 0 };
 struct _ShellMoviePaths {
     char movie[64];
@@ -85,6 +86,7 @@ class ShellManager : public FEGameInterface {
     void MoveShellCamera();
     unsigned long GetCombinedJoyPadActiveMask() const;
     void GetMouseInfo(FEMouseInfo &);
+    void PlayShellSound(EShellSoundType);
     void SetMovieName(int, char *);
     void PlayMovie(_ShellMoviePaths *, bool);
     void PlayMovie(EMovieType, int, bool);
@@ -124,7 +126,9 @@ class ShellManager : public FEGameInterface {
     unsigned char unknown_28[0x3c - 0x28];
     ShellLoader *loader;              // +0x3c
     FEngine *engine;                  // +0x40
-    unsigned char unknown_44[0x18a0 - 0x44];
+    unsigned char unknown_44[0x4c - 0x44];
+    class FELocalizer *localizer;     // +0x4c
+    unsigned char unknown_50[0x18a0 - 0x50];
     unsigned char mpPlayerCount;      // +0x18a0; copied to the settings when the match starts. Name inferred.
     unsigned char coopJoinBits;       // +0x18a1; bit n per player.
     unsigned char unknown_18a2[0x18a8 - 0x18a2];
@@ -132,7 +136,8 @@ class ShellManager : public FEGameInterface {
     unsigned char unknown_18ac[0x18b8 - 0x18ac];
     int inCoop;                       // +0x18b8; UpdateUnplugged picks the co-op controller checks.
     int inMultiplayer;                // +0x18bc; UpdateUnplugged picks the multiplayer checks.
-    unsigned char unknown_18c0[0x18c4 - 0x18c0];
+    int unknown_18c0;                 // +0x18c0; set by "Start Online Multiplayer".
+
     CShellMovieSettings movies;       // +0x18c4
     int unknown_3bc8;                 // +0x3bc8
     int controllerBad;                // +0x3bcc
@@ -140,6 +145,7 @@ class ShellManager : public FEGameInterface {
     signed char activeControllers[4]; // +0x3bd1
     unsigned char unknown_3bd5[3];
     SCoopJoinInfo coopJoin[2];        // +0x3bd8
+    int quadrantUsed[2];              // +0x3bf0; tested by HandlerQuadrantGroup::Init. Name inferred.
 };
 extern ShellManager g_Shell;
 #endif

@@ -846,6 +846,14 @@
       "src/frontend/fescript_pool.cpp": "462ba70b9980a98bfbecab1ffc5ee5b2e103e16ebd541daad3df72b0b5cb4fc8",
       "src/frontend/feslotpool.cpp": "16006d3616e75c42e460305edd0935c44f5ffaf272dd92127e442f24a7dc5405",
       "src/frontend/festring_copy.cpp": "43a6bad3a72f4854993b0cb2395f0b41cf19306d43fa72960efb2584f90c598f",
+      "src/frontend/handler_cooptemplaunch.cpp": "ce40919b7a4144b358771779689238f6a676480873209b9dc529c37a48866189",
+      "src/frontend/handler_difficulty.cpp": "ec067e290bc8c6808d94eea2e14b4dd3beb9d5c99d4ee04be8999645c35f6f62",
+      "src/frontend/handler_languagemenu.cpp": "85cff7599bf4497e492fa4eed3ae2708f3c4d4fd496b45c8f1eebf21ab3665c0",
+      "src/frontend/handler_main.cpp": "a55baddde44cdbe6bc3f2267b93f2a14cb904843fca01b3a0b1e0a297735a42a",
+      "src/frontend/handler_medalsoverlay.cpp": "41ab623d49a9fcc73ee8fb234c2f55aefed2863042c7a3193822c4cc058b29e1",
+      "src/frontend/handler_mpjoin.cpp": "c17a9021899000dc1788ee8ce2692df91684ab4223656c9cbe9296f716b72a32",
+      "src/frontend/handler_numplayers.cpp": "74f10a3a4faae4832e0243415fc36e37e357d648b0957a06ef735a61d910e7db",
+      "src/frontend/handler_quadrantgroup.cpp": "8443d712807646d503cd05a9fa489e5b8efcb36c22e5338e1f4ed7364dcb7726",
       "src/frontend/hash.cpp": "6d1834f84056ea091ae722973283ab6edc0b53f73938a4866d969db56d62d55b",
       "src/frontend/mc_getname.cpp": "117e60c8a600ab7d5eb1733d4c259ba7cf2c65a94b0ff58dd99ecc1a0ceb515e",
       "src/frontend/pkgh_enablebutton.cpp": "5ff3dc80fc2a45f9c12efb01442fd7eae7730f036da08cec041446b4c4a5b566",
@@ -2859,7 +2867,7 @@
       "include/game/FEngElements.h": "18898b9a90dec3cb114ecb9d0b9b35b173c5dec91efac46ed7e322e815792584",
       "include/game/FEngLists.h": "e16f0bdb3d11f3f7c319f107ee02e65f750a90724be34755c4430aa709199e7e",
       "include/game/FEngMath.h": "a3c508c3d334618c63c8798a569d2dc2dab33f5ebdbd2ca0e956fdacca314a32",
-      "include/game/FEngObjects.h": "02f629e8c69f1dea4e6856d5dc097102793ef9994758a331698c381b6d1d0df7",
+      "include/game/FEngObjects.h": "74e8cb7dc00d6a2c894bd36cc3750e646fa63c5fb1a6466d2d85ccfce93df419",
       "include/game/FEngStrings.h": "3fb38fb321893a9cc7e83396ced3500fb9dfbf859a210f4e470c2961e735cc86",
       "include/game/FEngine.h": "12403097c5abb6cf27665e894a4a9ee9c2f158d5d06eac1caeb61a7210509491",
       "include/game/Fader.h": "5e6a829b80a545618de960a1fcb77e1c59c1ea1ba2f2e0fee87d54c2e7c73143",
@@ -2893,6 +2901,7 @@
       "include/game/Objectives.h": "54f9ed5dd4be862a546640fa7e495b07c0ac78788f6027aedba7a6c25034b5d5",
       "include/game/ObserverTypes.h": "687dfc07deb4adc23a1d0247270d6ab04c34b758bd88846bf5e4b6ef33e7cc1f",
       "include/game/OffsetPtr.h": "06d2e4c320890063bd6b210c1ddda4b7cefc28e7aa9a4f276e76c128c0a68499",
+      "include/game/PackageHandlers.h": "b7fce1bd657b9a83f98ec7d78aff5772ae050a1799c45b375ca09a5bb8676a58",
       "include/game/ParticleClock.h": "7784d24bb307ac0a9e2b796c228584fe306f5781575650f1896038426c80dc0b",
       "include/game/ParticleDef.h": "3cfc6be658b04adb177616a7dec68bbf8c785ccd0a24dd847c44177f5bd3e53b",
       "include/game/ParticleRecipe.h": "28b998f22095db651513949138c0a49717baa6ebf769668fe4d9d09c3d853139",
@@ -2922,7 +2931,7 @@
       "include/game/ScriptTimers.h": "a81f3399ff20908469a289229ed0f0aae2c28aa3a9889629e62049e8bb16705b",
       "include/game/ScriptedGag.h": "41ce2a7f909e292930c5279c0ec536596c3b6bc35d11bb27ad6be5d51b9a0235",
       "include/game/Shell.h": "03c36affd7c0f616996096b426e82b2efd08e39aecafbde166641edbd4ccd210",
-      "include/game/ShellManager.h": "4c5e8354847117e7b238d64b12e3a3949d5154e89f043f6d209ec3d32346b10c",
+      "include/game/ShellManager.h": "2ee78a5ca3bb7309ba3357546e93e1425a36c7b5a13c8c94017056d904da8eeb",
       "include/game/SkyBox.h": "810947bbc2ecf7cb4d69dfa350c055b05d446c04b904abfadaf4828c7be01a55",
       "include/game/SndEAXA.h": "462f6c63008084b8cb5b525d5029b804e760f3859ba6e5676a4d36461906da13",
       "include/game/SndMicroTalk.h": "47d54f16635c2a64944419af8564ee38901f410b5dc9d139ed973fb87d8ff937",
@@ -4026,6 +4035,14 @@
       "config/GR8E69/gchw_vd_draw.json": "8240cd2ce5d0a0f00cae88ddb2fbd1c1a198a12246488f9b6cebd10604e92e3b",
       "config/GR8E69/gchw_vd_setters.json": "34856555c8f331dcd604dd04eb40e58713689ec5a0bdc6c685507364dc3fbc70",
       "config/GR8E69/grenade_response_queries.json": "5932b489bfec46bf4c73dad2d1d3bc9faa7acf77d137fb97cac1fdea8d343ecc",
+      "config/GR8E69/handler_cooptemplaunch.json": "fe8ba138204bb35cd15a511326e1018220c4c8ba511c3a7e49d588276478fe43",
+      "config/GR8E69/handler_difficulty.json": "e3b1051479b962b466a7f66924efdcaa205604b827c6982c2b16731a4608e42e",
+      "config/GR8E69/handler_languagemenu.json": "4a9dc112b0d364ecd374e6b0f31a6a7b586f5b8d5bb4702f04ffc415dd418224",
+      "config/GR8E69/handler_main.json": "50527a63797e95ccc9aa6a0af3702185cad410b340687a38050d7c1d660514bc",
+      "config/GR8E69/handler_medalsoverlay.json": "d9d67384cfcc7ecb385cae1f0a498d2401e3af72a0abc0a672b7e70f8fd992a0",
+      "config/GR8E69/handler_mpjoin.json": "1d82e2341a5f4475dc0835cb9c26dd64ac0c95551bc1479ef1db9740bc4283ea",
+      "config/GR8E69/handler_numplayers.json": "8955700d3de34413c4628e1d74f5a6a40e3ee4f16be726db8c6d78f23e18905c",
+      "config/GR8E69/handler_quadrantgroup.json": "849da7a189927840d4331af5ab992e135823dc871c9dc517a3a4c0380d515f67",
       "config/GR8E69/hud_compass.json": "230bb48fb8e54f510b0920d41d8908fce954e3f35ce7aabab7606e82e83b90ae",
       "config/GR8E69/hud_edge.json": "0587540e62b102096fad2646d13861b723a48c51ddb6b770bf2dad53c7a736c4",
       "config/GR8E69/hud_fade.json": "0fe5ea6c673c1a7e849d777cdf4c670efcce1c64e0ca9d07b0b70484233d613c",
@@ -4415,7 +4432,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "6791ccdd2c0d6158a28f3fc9903b6fa6c38812fab235a7388a659b025bc059d8",
+      "config/GR8E69/project.json": "29d3750bb6f9dee361817cd6c2d32a2e45b0511963a9ec265133840acb41515a",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7144,14 +7161,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1261712,
+    "matching_code_bytes": 1266628,
     "total_executable_code_bytes": 2492032,
-    "percent": 50.629847449791974,
+    "percent": 50.82711618470389,
     "categories": {
-      "reconstructed_game": 869496,
+      "reconstructed_game": 874412,
       "restored_library": 392216
     },
-    "matching_functions": 6615
+    "matching_functions": 6627
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -8081,6 +8098,14 @@
     "config/GR8E69/gchw_vd_draw.json": "8240cd2ce5d0a0f00cae88ddb2fbd1c1a198a12246488f9b6cebd10604e92e3b",
     "config/GR8E69/gchw_vd_setters.json": "34856555c8f331dcd604dd04eb40e58713689ec5a0bdc6c685507364dc3fbc70",
     "config/GR8E69/grenade_response_queries.json": "5932b489bfec46bf4c73dad2d1d3bc9faa7acf77d137fb97cac1fdea8d343ecc",
+    "config/GR8E69/handler_cooptemplaunch.json": "fe8ba138204bb35cd15a511326e1018220c4c8ba511c3a7e49d588276478fe43",
+    "config/GR8E69/handler_difficulty.json": "e3b1051479b962b466a7f66924efdcaa205604b827c6982c2b16731a4608e42e",
+    "config/GR8E69/handler_languagemenu.json": "4a9dc112b0d364ecd374e6b0f31a6a7b586f5b8d5bb4702f04ffc415dd418224",
+    "config/GR8E69/handler_main.json": "50527a63797e95ccc9aa6a0af3702185cad410b340687a38050d7c1d660514bc",
+    "config/GR8E69/handler_medalsoverlay.json": "d9d67384cfcc7ecb385cae1f0a498d2401e3af72a0abc0a672b7e70f8fd992a0",
+    "config/GR8E69/handler_mpjoin.json": "1d82e2341a5f4475dc0835cb9c26dd64ac0c95551bc1479ef1db9740bc4283ea",
+    "config/GR8E69/handler_numplayers.json": "8955700d3de34413c4628e1d74f5a6a40e3ee4f16be726db8c6d78f23e18905c",
+    "config/GR8E69/handler_quadrantgroup.json": "849da7a189927840d4331af5ab992e135823dc871c9dc517a3a4c0380d515f67",
     "config/GR8E69/hud_compass.json": "230bb48fb8e54f510b0920d41d8908fce954e3f35ce7aabab7606e82e83b90ae",
     "config/GR8E69/hud_edge.json": "0587540e62b102096fad2646d13861b723a48c51ddb6b770bf2dad53c7a736c4",
     "config/GR8E69/hud_fade.json": "0fe5ea6c673c1a7e849d777cdf4c670efcce1c64e0ca9d07b0b70484233d613c",
@@ -8470,7 +8495,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "6791ccdd2c0d6158a28f3fc9903b6fa6c38812fab235a7388a659b025bc059d8",
+    "config/GR8E69/project.json": "29d3750bb6f9dee361817cd6c2d32a2e45b0511963a9ec265133840acb41515a",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -9947,7 +9972,7 @@
     "include/game/FEngElements.h": "18898b9a90dec3cb114ecb9d0b9b35b173c5dec91efac46ed7e322e815792584",
     "include/game/FEngLists.h": "e16f0bdb3d11f3f7c319f107ee02e65f750a90724be34755c4430aa709199e7e",
     "include/game/FEngMath.h": "a3c508c3d334618c63c8798a569d2dc2dab33f5ebdbd2ca0e956fdacca314a32",
-    "include/game/FEngObjects.h": "02f629e8c69f1dea4e6856d5dc097102793ef9994758a331698c381b6d1d0df7",
+    "include/game/FEngObjects.h": "74e8cb7dc00d6a2c894bd36cc3750e646fa63c5fb1a6466d2d85ccfce93df419",
     "include/game/FEngStrings.h": "3fb38fb321893a9cc7e83396ced3500fb9dfbf859a210f4e470c2961e735cc86",
     "include/game/FEngine.h": "12403097c5abb6cf27665e894a4a9ee9c2f158d5d06eac1caeb61a7210509491",
     "include/game/Fader.h": "5e6a829b80a545618de960a1fcb77e1c59c1ea1ba2f2e0fee87d54c2e7c73143",
@@ -9981,6 +10006,7 @@
     "include/game/Objectives.h": "54f9ed5dd4be862a546640fa7e495b07c0ac78788f6027aedba7a6c25034b5d5",
     "include/game/ObserverTypes.h": "687dfc07deb4adc23a1d0247270d6ab04c34b758bd88846bf5e4b6ef33e7cc1f",
     "include/game/OffsetPtr.h": "06d2e4c320890063bd6b210c1ddda4b7cefc28e7aa9a4f276e76c128c0a68499",
+    "include/game/PackageHandlers.h": "b7fce1bd657b9a83f98ec7d78aff5772ae050a1799c45b375ca09a5bb8676a58",
     "include/game/ParticleClock.h": "7784d24bb307ac0a9e2b796c228584fe306f5781575650f1896038426c80dc0b",
     "include/game/ParticleDef.h": "3cfc6be658b04adb177616a7dec68bbf8c785ccd0a24dd847c44177f5bd3e53b",
     "include/game/ParticleRecipe.h": "28b998f22095db651513949138c0a49717baa6ebf769668fe4d9d09c3d853139",
@@ -10010,7 +10036,7 @@
     "include/game/ScriptTimers.h": "a81f3399ff20908469a289229ed0f0aae2c28aa3a9889629e62049e8bb16705b",
     "include/game/ScriptedGag.h": "41ce2a7f909e292930c5279c0ec536596c3b6bc35d11bb27ad6be5d51b9a0235",
     "include/game/Shell.h": "03c36affd7c0f616996096b426e82b2efd08e39aecafbde166641edbd4ccd210",
-    "include/game/ShellManager.h": "4c5e8354847117e7b238d64b12e3a3949d5154e89f043f6d209ec3d32346b10c",
+    "include/game/ShellManager.h": "2ee78a5ca3bb7309ba3357546e93e1425a36c7b5a13c8c94017056d904da8eeb",
     "include/game/SkyBox.h": "810947bbc2ecf7cb4d69dfa350c055b05d446c04b904abfadaf4828c7be01a55",
     "include/game/SndEAXA.h": "462f6c63008084b8cb5b525d5029b804e760f3859ba6e5676a4d36461906da13",
     "include/game/SndMicroTalk.h": "47d54f16635c2a64944419af8564ee38901f410b5dc9d139ed973fb87d8ff937",
@@ -11029,6 +11055,14 @@
     "src/frontend/fescript_pool.cpp": "462ba70b9980a98bfbecab1ffc5ee5b2e103e16ebd541daad3df72b0b5cb4fc8",
     "src/frontend/feslotpool.cpp": "16006d3616e75c42e460305edd0935c44f5ffaf272dd92127e442f24a7dc5405",
     "src/frontend/festring_copy.cpp": "43a6bad3a72f4854993b0cb2395f0b41cf19306d43fa72960efb2584f90c598f",
+    "src/frontend/handler_cooptemplaunch.cpp": "ce40919b7a4144b358771779689238f6a676480873209b9dc529c37a48866189",
+    "src/frontend/handler_difficulty.cpp": "ec067e290bc8c6808d94eea2e14b4dd3beb9d5c99d4ee04be8999645c35f6f62",
+    "src/frontend/handler_languagemenu.cpp": "85cff7599bf4497e492fa4eed3ae2708f3c4d4fd496b45c8f1eebf21ab3665c0",
+    "src/frontend/handler_main.cpp": "a55baddde44cdbe6bc3f2267b93f2a14cb904843fca01b3a0b1e0a297735a42a",
+    "src/frontend/handler_medalsoverlay.cpp": "41ab623d49a9fcc73ee8fb234c2f55aefed2863042c7a3193822c4cc058b29e1",
+    "src/frontend/handler_mpjoin.cpp": "c17a9021899000dc1788ee8ce2692df91684ab4223656c9cbe9296f716b72a32",
+    "src/frontend/handler_numplayers.cpp": "74f10a3a4faae4832e0243415fc36e37e357d648b0957a06ef735a61d910e7db",
+    "src/frontend/handler_quadrantgroup.cpp": "8443d712807646d503cd05a9fa489e5b8efcb36c22e5338e1f4ed7364dcb7726",
     "src/frontend/hash.cpp": "6d1834f84056ea091ae722973283ab6edc0b53f73938a4866d969db56d62d55b",
     "src/frontend/mc_getname.cpp": "117e60c8a600ab7d5eb1733d4c259ba7cf2c65a94b0ff58dd99ecc1a0ceb515e",
     "src/frontend/pkgh_enablebutton.cpp": "5ff3dc80fc2a45f9c12efb01442fd7eae7730f036da08cec041446b4c4a5b566",
@@ -60881,6 +60915,150 @@
       "discarded_functions": [],
       "object_sha256": "1e0b7d1b14e5d0fa6ccbe12e8e549226f89bdecfc986f02af379a3b8e2e857f5",
       "linked_sha256": "a0ad970bd2ff2ea0c12aab12a34c4780cf039362f9a5c4809f85e8f98860166e"
+    },
+    {
+      "id": "handler_difficulty",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 1224,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "f7bee1a6a0e588c209d5d3c4eac1754a43b7bba6ab38631bd6c68a75ce74b6fb",
+      "linked_sha256": "0cfa5142cf6a07312382a6a7b95a881ae5e768a0126cfb3c9dcd4621a28ba1af"
+    },
+    {
+      "id": "handler_mpjoin",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 460,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e5fae3b4d1aa76d5b9bc51aa7a7aceca9ba15ee3fe1cecc1e0de5ac188d7348d",
+      "linked_sha256": "b658d4a7a00c0e3278136a3673601554718aacdbd4b44f10dbae17d597d35454"
+    },
+    {
+      "id": "handler_cooptemplaunch",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 36,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "2b8d8bc528ee116c0d83769ecd862025793f18196611fc6b99e7792c1307d09b",
+      "linked_sha256": "1bc2e4c9008b9dc2edfca21d23761893f03ed77f93387ca0b4bac4610a00c0f4"
+    },
+    {
+      "id": "handler_medalsoverlay",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 272,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "2c4af480daf6da41a048832dff2dd8708eb5e0aabba565c70ea472ef3abe9321",
+      "linked_sha256": "e6df386f0c1fb18e5c2aa02484ecbbbefeefb221c72db1d11e8a9cd2512cd651"
+    },
+    {
+      "id": "handler_quadrantgroup",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 404,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "84a9b938791f4c1dc2a52c19fc7b8bd5374723dc57375d559bb8da2e528976a3",
+      "linked_sha256": "155b1b102552e86a466a71e7a6f28bf955d24d77c4f25391db31df604ee28b00"
+    },
+    {
+      "id": "handler_numplayers",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 1296,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "83ef42a874a5815407ce925529e05f7bdc4fda68b791102806aad2cad4ced186",
+      "linked_sha256": "70a619eb6f6d852e8af9980b05739ddc41858cfe5d798c0eee685e5e27151c5a"
+    },
+    {
+      "id": "handler_main",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 796,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "50cad87b632fe288f81656ac053a61227078b4fdd7c9ab20112cba074a57dc71",
+      "linked_sha256": "41e20b7341620786a6f8b2d3ef05ae07e559e79d83e49f096ded62dd496f230d"
+    },
+    {
+      "id": "handler_languagemenu",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 428,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "5f51741134e869f9dda4c5b6a2799be2503e9b1066740991afc495b8e0917659",
+      "linked_sha256": "e166b9fa73e24d4a79c50f9aee3ed0ef9db766c3f051d111167ba27d85a94afb"
     }
   ],
   "code_map": {
@@ -75454,56 +75632,6 @@
         ]
       },
       {
-        "name": "Unmatched files/handlerMain.cpp [inferred file group]",
-        "file_record": 269,
-        "file_name": "handlerMain.cpp",
-        "ranges": [
-          {
-            "address": "0x8018907c",
-            "size": 36,
-            "kind": "function",
-            "name": "HandleTick__18PackageHandlerMain",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801890a0",
-            "size": 760,
-            "kind": "function",
-            "name": "HandleEvent__18PackageHandlerMainUiP8FEObjectUl",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x8018907c",
-          "0x80189398"
-        ]
-      },
-      {
-        "name": "Unmatched files/handlerNumPlayers.cpp [inferred file group]",
-        "file_record": 270,
-        "file_name": "handlerNumPlayers.cpp",
-        "ranges": [
-          {
-            "address": "0x80189398",
-            "size": 200,
-            "kind": "function",
-            "name": "Init__17HandlerNumPlayersPCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80189460",
-            "size": 1096,
-            "kind": "function",
-            "name": "HandleEvent__17HandlerNumPlayersUiP8FEObjectUl",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x80189398",
-          "0x801898a8"
-        ]
-      },
-      {
         "name": "Unmatched files/handlerSplitScreen.cpp [inferred file group]",
         "file_record": 271,
         "file_name": "handlerSplitScreen.cpp",
@@ -75540,24 +75668,6 @@
         "marker_interval": [
           "0x801898a8",
           "0x8018a0a0"
-        ]
-      },
-      {
-        "name": "Unmatched files/handlerQuadrantGroup.cpp [inferred file group]",
-        "file_record": 272,
-        "file_name": "handlerQuadrantGroup.cpp",
-        "ranges": [
-          {
-            "address": "0x8018a0a0",
-            "size": 404,
-            "kind": "function",
-            "name": "Init__20HandlerQuadrantGroupPCc",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x8018a0a0",
-          "0x8018a234"
         ]
       },
       {
@@ -75632,24 +75742,6 @@
         "marker_interval": [
           "0x8018a234",
           "0x8018b138"
-        ]
-      },
-      {
-        "name": "Unmatched files/handlerMPJoin.cpp [inferred file group]",
-        "file_record": 274,
-        "file_name": "handlerMPJoin.cpp",
-        "ranges": [
-          {
-            "address": "0x8018b138",
-            "size": 460,
-            "kind": "function",
-            "name": "HandleEvent__13HandlerMPJoinUiP8FEObjectUl",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x8018b138",
-          "0x8018b304"
         ]
       },
       {
@@ -75915,31 +76007,6 @@
         ]
       },
       {
-        "name": "Unmatched files/handlerDifficulty.cpp [inferred file group]",
-        "file_record": 281,
-        "file_name": "handlerDifficulty.cpp",
-        "ranges": [
-          {
-            "address": "0x801908a0",
-            "size": 104,
-            "kind": "function",
-            "name": "__17HandlerDifficulty",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80190908",
-            "size": 1120,
-            "kind": "function",
-            "name": "HandleEvent__17HandlerDifficultyUiP8FEObjectUl",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x801908a0",
-          "0x80190d68"
-        ]
-      },
-      {
         "name": "Unmatched files/handlerNameEntry.cpp [inferred file group]",
         "file_record": 282,
         "file_name": "handlerNameEntry.cpp",
@@ -76125,24 +76192,6 @@
         "marker_interval": [
           "0x80192cdc",
           "0x801931d0"
-        ]
-      },
-      {
-        "name": "Unmatched files/handlerCoopTempLaunch.cpp [inferred file group]",
-        "file_record": 287,
-        "file_name": "handlerCoopTempLaunch.cpp",
-        "ranges": [
-          {
-            "address": "0x801931d0",
-            "size": 36,
-            "kind": "function",
-            "name": "HandleEvent__21HandlerCoopTempLaunchUiP8FEObjectUl",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x801931d0",
-          "0x801931f4"
         ]
       },
       {
@@ -76466,24 +76515,6 @@
         ]
       },
       {
-        "name": "Unmatched files/handlerMedalsOverlay.cpp [inferred file group]",
-        "file_record": 298,
-        "file_name": "handlerMedalsOverlay.cpp",
-        "ranges": [
-          {
-            "address": "0x80196694",
-            "size": 272,
-            "kind": "function",
-            "name": "HandleEvent__20HandlerMedalsOverlayUiP8FEObjectUl",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x80196694",
-          "0x801967a4"
-        ]
-      },
-      {
         "name": "Unmatched files/handlerVirtualKeyboard.cpp [inferred file group]",
         "file_record": 299,
         "file_name": "handlerVirtualKeyboard.cpp",
@@ -76641,31 +76672,6 @@
         "marker_interval": [
           "0x80199080",
           "0x80199228"
-        ]
-      },
-      {
-        "name": "Unmatched files/handlerLanguageSelect.cpp [inferred file group]",
-        "file_record": 304,
-        "file_name": "handlerLanguageSelect.cpp",
-        "ranges": [
-          {
-            "address": "0x80199228",
-            "size": 60,
-            "kind": "function",
-            "name": "__19HandlerLanguageMenu",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80199264",
-            "size": 368,
-            "kind": "function",
-            "name": "HandleEvent__19HandlerLanguageMenuUiP8FEObjectUl",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x80199228",
-          "0x801993d4"
         ]
       },
       {

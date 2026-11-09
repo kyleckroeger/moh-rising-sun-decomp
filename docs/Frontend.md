@@ -126,3 +126,15 @@ store. `FEngine::LoadPackage`, `FENode` and the object tag readers use the same 
 `FECodeListBox` is a 196-byte `FEObject`, per `CreateObject` and `Clone`; member names come from use and are inferred.
 `FEngine::RenderGroup` walks children with a world and combined matrix; `FEObjectSorter<1024>` is a symbol, its second
 array is inferred from the size of the space before `messageQueue`.
+
+### Package handlers
+
+Each shell screen is a `PackageHandler` subclass; class names, tables and method names are symbols, and `PackageHandlers.h`
+declares only the members their reconstructed methods touch. The base table's slots are the destructor, `Init`, `HandleTick`,
+the pure `HandleEvent` and `HandleSoundEvent`, as dumped from `_vt.14PackageHandler`. A handler's `HandleEvent` compares the
+event against upper-case hashes of the script's message names. `PackageHandlers.h` uses `#pragma interface` so that the tables
+and implicit destructors, which sit elsewhere in the image, stay external to these units.
+
+Verified: the message and object names and the control flow of the reconstructed handlers. Inferred: `buttonHashes`,
+`unknown_18c0`, the language table layout
+and `quadrantUsed` are named from use, and `quadrantUsed` is only tested for being clear.
