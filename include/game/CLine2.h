@@ -48,6 +48,7 @@ public:
     }
     float GetClosestPointSquared(const CVector2&, CVector2*) const;
     int Intersect(const CLine2&, float, CVector2*) const;
+    int IsDegenerate() const;
 };
 
 #endif

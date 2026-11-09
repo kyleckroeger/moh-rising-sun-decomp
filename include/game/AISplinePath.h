@@ -106,7 +106,7 @@ public:
     bool LineEndsAtLinkEdge(const CLine2 &, CAreaPathNode *) const;
     bool GetClosestPointOnBorder(const CVector3 &, CVector3 &) const;
     bool LineIntersectsBorderEdges(const CLine2 &, CVector2 *) const;
-    unsigned char unknown00[4];
+    class CAreaSearchNode *searchNode; // +0x00
     unsigned char borderVertexCount; // +0x04
     unsigned char linkCount;         // +0x05
     unsigned char inArea;            // +0x06

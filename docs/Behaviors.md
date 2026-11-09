@@ -113,3 +113,11 @@ byte, with their native tables and literal pools. There is no Frontline counterp
   slot address forms in six functions. The threat type values have no recovered names.
 - The inline-virtual methods that the original emits at the end of each file (`GetType`,
   `GetScriptObject`) are written as ordinary out-of-line definitions in that order.
+
+## Area search nodes
+
+`CAreaSearchNode` comes from a pool of 1228 64-byte nodes with a free list, whose link is at
+`+0x04`. A node records its area path node, a position, and costs; a path node points back at
+its search node. Verified: construction, destruction, the pool, heuristic and cost values, and the
+two direct path tests. Inferred: member names and `CAreaSearchNodePoolInit`'s constructor.
+Not reconstructed: `Setup`, `DirectPathOk` (a shared `return 0` tail) and `WalkDirect`.

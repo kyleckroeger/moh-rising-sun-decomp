@@ -119,5 +119,7 @@
     "g_scene": "0x803e6d90"
   },
   "discarded_functions": [],
-  "undefined_in_discarded_code": []
+  "undefined_in_discarded_code": [],
+  "original_file": "hierAnimobject.cpp",
+  "original_file_index": 937
 }

@@ -2273,7 +2273,10 @@
     "input_manager_ctor.json",
     "flood_search_add.json",
     "flood_search_expand.json",
-    "object_fade.json"
+    "object_fade.json",
+    "search_node_lifetime.json",
+    "search_node_pool.json",
+    "search_node_direct.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
