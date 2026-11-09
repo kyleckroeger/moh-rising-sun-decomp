@@ -43,6 +43,15 @@ class Message : public Task {
     unsigned int unknown_3c;
     Resource::Pointer<Task> kept;  // +0x40
 };
+// Plays one animation of a state's bank. Only the entry points the operations call are modeled here.
+class Playback : public Task {
+  public:
+    Playback(Resource::Pointer<State> &state, unsigned int substate, Task *parent, unsigned int flags, const char *name,
+             float start, unsigned int animation);
+    static Resource::Pointer<Playback> Create(Resource::Pointer<State> &state, unsigned int substate, Task *parent,
+                                              unsigned int flags, const char *name, float start, unsigned int animation);
+    void AssignOpcodes(unsigned int count, Opcode *opcodes);
+};
 // Runs up to sixteen tasks in order and promotes the last one into its parent when it is alone.
 class Sequence : public Task {
   public:

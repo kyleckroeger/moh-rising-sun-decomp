@@ -738,6 +738,10 @@
       "src/eala/JumpEval.cpp": "cebcf508fd3e4bd7150f67f475377d89fb6fba6ee6c7fad6027ed86c6a56d97c",
       "src/eala/MessageA.cpp": "7997368bb2849f65dde5b4b7a55bda9940ccf5896246efaf63cf0fb7b7140fe1",
       "src/eala/MessageAs.cpp": "9a4972c34b0d0d29dc9904431aad2b8f6ce0174473858746aa4b14dadec4d353",
+      "src/eala/OperationEval.cpp": "8c34f44e55ad74ad1f8c7c178064305a80a26b0b6fb33e12577681fa50c1c005",
+      "src/eala/OperationInlines.cpp": "634ee056ad1bbdcba7354d0c3edf57274cf3b3375c9a4433cb9f230666f23aed",
+      "src/eala/OperationStreams.cpp": "0ae138bf07371cf712a6f53ced4fad3f19a517fab0652f94bc1daf59b1104a4d",
+      "src/eala/OperationTurnDuration.cpp": "0a250ffe7a3dfde36fd64003bf7eb4667459bd6b232772883176ef6824408dd5",
       "src/eala/SentinelA.cpp": "321da46140502c5c55bcd1ae8c75e53b77b87f322a0513d0c5181ec37f62d306",
       "src/eala/SentinelBusy.cpp": "796fb3c616b855146a5d83d745a36ca98710649011557181d1ca3488562f7b6a",
       "src/eala/SentinelDump.cpp": "f5cdf6cc60f70fe6cf5a88b5fe94065529d05e145c6411489b0defda28df23fa",
@@ -2796,10 +2800,11 @@
       "include/game/Camera.h": "d2a5039c6f0c09da0be76e78c92b9e11c53f5c9900aac3c2239fe9c8c2fee623",
       "include/game/CameraShake.h": "9a35526b5b806abeb9b501b7d2864ab782436821078fb1cad73ab82b32d3f8d4",
       "include/game/Capsule.h": "332dd06329ac7dc3ac5fc01793549a41e2defbe70298018accd2ce79c9e3ce3b",
+      "include/game/CharacterOperation.h": "db9b4121d4fa4d1f9b441b809721eab35c63326564bcb9e86719d042c3eb8ec8",
       "include/game/CharacterShadow.h": "048ae3efc6fd6d3119f4c234f5bacd499c748c55b1573df386f686411e93a67a",
       "include/game/CharacterSkeleton.h": "25c56293a6d9d28a67ea66878159dbe31efc306059bc3b842cd7ce5cd1efbc24",
-      "include/game/CharacterTask.h": "cf3983cfbe21d739a09c81773cdbb041e78ad64305f646d89702c7ce2ca7831c",
-      "include/game/CharacterTasks.h": "51e9667416a97fb4f1e63e8c43d77219493680c5f7b9818810d51067d984d0f3",
+      "include/game/CharacterTask.h": "87db0532c12360b7e0565d69dfcac6d28fa60dfa01510a42427cb9d0b292342b",
+      "include/game/CharacterTasks.h": "a17411696abe72c5818dac0e5b39e6c70ffeb527c69ef9db4d404e93142263fa",
       "include/game/CollisionMath.h": "a9a8ee2674ee845e1549d3f906d34a2c02543fe5d4f8fbc40d42c4fdd0f22f2d",
       "include/game/CollisionProjection.h": "5efc5439936194866e0ee58e43061509d1252ca7ed70983b652f4919a3159332",
       "include/game/CollisionVolume.h": "26ba5d9a9865a0185f0e87db21b13faf3214b7e213201e825181412f0f9a5b7c",
@@ -2973,8 +2978,8 @@
       "include/game/WorldVolume.h": "9acfaf28c317912de14baef7ca50a3d80175ddc31dcf83cea18c80725e688318",
       "include/game-containers/AlgorithmTypes.h": "cd4a28c7c2eb6a6cb85477587065b64ff0e86ee9010ceed6df1637ca9fcffe14",
       "include/game-containers/ContainerTypes.h": "04e4154701a889eeace740f5c3d59f3f3123ba76eccd767bf211f8bce1df1e51",
-      "include/game-containers/EALAResource.h": "72b4979c6f030dd7e3a8b97f8b4b7f240a3a70ff0cb7ab4baa5fed6920f96fd5",
-      "include/game-containers/ResourceTypes.h": "4ace8e77a7864643517fa580a718037e07d64d05fcc115d2ba788ecc970ae02d",
+      "include/game-containers/EALAResource.h": "eab2c890b242e88375e56998926b0852bd7cb804dea268eb817a85394fdc8ddb",
+      "include/game-containers/ResourceTypes.h": "67582635e60edb4e1f8c0c3f096f3b99250f0458d90307bb46d839469271b1f1",
       "include/game-containers/TargetTypes.h": "2c1eb2911c9bbfc217161fe5d274aad0633cd8d043a3ce2a7c0b5c561cebafe5",
       "include/newlib/_ansi.h": "98221b391010195de4e2824879860b7fe98a8f6bc8ab2c5eaa2a3b029b4f1ad4",
       "include/newlib/_syslist.h": "546b13e022a2e53bfad0138e9294d92210773c9a7a61ee2d4ffb152ed4a6396a",
@@ -3335,6 +3340,10 @@
       "config/GR8E69/ai_MessageA.json": "459185b21f4b6c542bb90baa6da9d9c095b47798c43475c60f5f25b1fdd50e8a",
       "config/GR8E69/ai_MessageAs.json": "cb75a92d94dbcad0fbd4a4e8f57342928eb7af3be45068f6aefc6a24798cf28f",
       "config/GR8E69/ai_NullWeaponBehavior.json": "cf42b3058125a789f6b44c78b488755e338f60dccc9715e162d9b6220e0e6ffc",
+      "config/GR8E69/ai_OperationEval.json": "3e1fae1d904de8f6d95b756c3d688b71f0ff731279ebe1443d8445584ec06cd7",
+      "config/GR8E69/ai_OperationInlines.json": "af08c35bdac7483812118f0e1fd6a86946f53e58707823dee208cfd4762cb4de",
+      "config/GR8E69/ai_OperationStreams.json": "05064fc3b13441baa99fb5b4bf3ed28999f1683e9967d9d81a40ba2305b79719",
+      "config/GR8E69/ai_OperationTurnDuration.json": "718a0c573da37ea4d8c9276edc667548f36b351e5413ef10b874015aceb66e32",
       "config/GR8E69/ai_PathFindingUpdate.json": "2feb4f337b1fb1dd7e294b25b266b19bce8df8cc0d377ea9b1c769b54c63e394",
       "config/GR8E69/ai_PathNetwork.json": "0abb096cc2692853350a50aa4e79d0f4d49167e2365aeebdf68049cab0f24780",
       "config/GR8E69/ai_PathSearchTrim.json": "750e09f71648ea84fb014fe142c9127c5e61171e7aefd06ff9f72e40199a8224",
@@ -4451,7 +4460,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "019f669e4ddc69f3d201e7ca2991ecbb8e07c3479e31ff7549afba00635c230d",
+      "config/GR8E69/project.json": "b1c7d095f94c035261203e1c836323d4e55fb87d5810554c10e3b6ac7c9b06ee",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7180,14 +7189,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1271368,
+    "matching_code_bytes": 1281856,
     "total_executable_code_bytes": 2492032,
-    "percent": 51.017322409985105,
+    "percent": 51.438183779341514,
     "categories": {
-      "reconstructed_game": 879152,
+      "reconstructed_game": 889640,
       "restored_library": 392216
     },
-    "matching_functions": 6663
+    "matching_functions": 6758
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -7407,6 +7416,10 @@
     "config/GR8E69/ai_MessageA.json": "459185b21f4b6c542bb90baa6da9d9c095b47798c43475c60f5f25b1fdd50e8a",
     "config/GR8E69/ai_MessageAs.json": "cb75a92d94dbcad0fbd4a4e8f57342928eb7af3be45068f6aefc6a24798cf28f",
     "config/GR8E69/ai_NullWeaponBehavior.json": "cf42b3058125a789f6b44c78b488755e338f60dccc9715e162d9b6220e0e6ffc",
+    "config/GR8E69/ai_OperationEval.json": "3e1fae1d904de8f6d95b756c3d688b71f0ff731279ebe1443d8445584ec06cd7",
+    "config/GR8E69/ai_OperationInlines.json": "af08c35bdac7483812118f0e1fd6a86946f53e58707823dee208cfd4762cb4de",
+    "config/GR8E69/ai_OperationStreams.json": "05064fc3b13441baa99fb5b4bf3ed28999f1683e9967d9d81a40ba2305b79719",
+    "config/GR8E69/ai_OperationTurnDuration.json": "718a0c573da37ea4d8c9276edc667548f36b351e5413ef10b874015aceb66e32",
     "config/GR8E69/ai_PathFindingUpdate.json": "2feb4f337b1fb1dd7e294b25b266b19bce8df8cc0d377ea9b1c769b54c63e394",
     "config/GR8E69/ai_PathNetwork.json": "0abb096cc2692853350a50aa4e79d0f4d49167e2365aeebdf68049cab0f24780",
     "config/GR8E69/ai_PathSearchTrim.json": "750e09f71648ea84fb014fe142c9127c5e61171e7aefd06ff9f72e40199a8224",
@@ -8523,7 +8536,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "019f669e4ddc69f3d201e7ca2991ecbb8e07c3479e31ff7549afba00635c230d",
+    "config/GR8E69/project.json": "b1c7d095f94c035261203e1c836323d4e55fb87d5810554c10e3b6ac7c9b06ee",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -9920,10 +9933,11 @@
     "include/game/Camera.h": "d2a5039c6f0c09da0be76e78c92b9e11c53f5c9900aac3c2239fe9c8c2fee623",
     "include/game/CameraShake.h": "9a35526b5b806abeb9b501b7d2864ab782436821078fb1cad73ab82b32d3f8d4",
     "include/game/Capsule.h": "332dd06329ac7dc3ac5fc01793549a41e2defbe70298018accd2ce79c9e3ce3b",
+    "include/game/CharacterOperation.h": "db9b4121d4fa4d1f9b441b809721eab35c63326564bcb9e86719d042c3eb8ec8",
     "include/game/CharacterShadow.h": "048ae3efc6fd6d3119f4c234f5bacd499c748c55b1573df386f686411e93a67a",
     "include/game/CharacterSkeleton.h": "25c56293a6d9d28a67ea66878159dbe31efc306059bc3b842cd7ce5cd1efbc24",
-    "include/game/CharacterTask.h": "cf3983cfbe21d739a09c81773cdbb041e78ad64305f646d89702c7ce2ca7831c",
-    "include/game/CharacterTasks.h": "51e9667416a97fb4f1e63e8c43d77219493680c5f7b9818810d51067d984d0f3",
+    "include/game/CharacterTask.h": "87db0532c12360b7e0565d69dfcac6d28fa60dfa01510a42427cb9d0b292342b",
+    "include/game/CharacterTasks.h": "a17411696abe72c5818dac0e5b39e6c70ffeb527c69ef9db4d404e93142263fa",
     "include/game/CollisionMath.h": "a9a8ee2674ee845e1549d3f906d34a2c02543fe5d4f8fbc40d42c4fdd0f22f2d",
     "include/game/CollisionProjection.h": "5efc5439936194866e0ee58e43061509d1252ca7ed70983b652f4919a3159332",
     "include/game/CollisionVolume.h": "26ba5d9a9865a0185f0e87db21b13faf3214b7e213201e825181412f0f9a5b7c",
@@ -10097,8 +10111,8 @@
     "include/game/WorldVolume.h": "9acfaf28c317912de14baef7ca50a3d80175ddc31dcf83cea18c80725e688318",
     "include/game-containers/AlgorithmTypes.h": "cd4a28c7c2eb6a6cb85477587065b64ff0e86ee9010ceed6df1637ca9fcffe14",
     "include/game-containers/ContainerTypes.h": "04e4154701a889eeace740f5c3d59f3f3123ba76eccd767bf211f8bce1df1e51",
-    "include/game-containers/EALAResource.h": "72b4979c6f030dd7e3a8b97f8b4b7f240a3a70ff0cb7ab4baa5fed6920f96fd5",
-    "include/game-containers/ResourceTypes.h": "4ace8e77a7864643517fa580a718037e07d64d05fcc115d2ba788ecc970ae02d",
+    "include/game-containers/EALAResource.h": "eab2c890b242e88375e56998926b0852bd7cb804dea268eb817a85394fdc8ddb",
+    "include/game-containers/ResourceTypes.h": "67582635e60edb4e1f8c0c3f096f3b99250f0458d90307bb46d839469271b1f1",
     "include/game-containers/TargetTypes.h": "2c1eb2911c9bbfc217161fe5d274aad0633cd8d043a3ce2a7c0b5c561cebafe5",
     "include/newlib/_ansi.h": "98221b391010195de4e2824879860b7fe98a8f6bc8ab2c5eaa2a3b029b4f1ad4",
     "include/newlib/_syslist.h": "546b13e022a2e53bfad0138e9294d92210773c9a7a61ee2d4ffb152ed4a6396a",
@@ -10976,6 +10990,10 @@
     "src/eala/JumpEval.cpp": "cebcf508fd3e4bd7150f67f475377d89fb6fba6ee6c7fad6027ed86c6a56d97c",
     "src/eala/MessageA.cpp": "7997368bb2849f65dde5b4b7a55bda9940ccf5896246efaf63cf0fb7b7140fe1",
     "src/eala/MessageAs.cpp": "9a4972c34b0d0d29dc9904431aad2b8f6ce0174473858746aa4b14dadec4d353",
+    "src/eala/OperationEval.cpp": "8c34f44e55ad74ad1f8c7c178064305a80a26b0b6fb33e12577681fa50c1c005",
+    "src/eala/OperationInlines.cpp": "634ee056ad1bbdcba7354d0c3edf57274cf3b3375c9a4433cb9f230666f23aed",
+    "src/eala/OperationStreams.cpp": "0ae138bf07371cf712a6f53ced4fad3f19a517fab0652f94bc1daf59b1104a4d",
+    "src/eala/OperationTurnDuration.cpp": "0a250ffe7a3dfde36fd64003bf7eb4667459bd6b232772883176ef6824408dd5",
     "src/eala/SentinelA.cpp": "321da46140502c5c55bcd1ae8c75e53b77b87f322a0513d0c5181ec37f62d306",
     "src/eala/SentinelBusy.cpp": "796fb3c616b855146a5d83d745a36ca98710649011557181d1ca3488562f7b6a",
     "src/eala/SentinelDump.cpp": "f5cdf6cc60f70fe6cf5a88b5fe94065529d05e145c6411489b0defda28df23fa",
@@ -59435,8 +59453,8 @@
       ],
       "strip_unused": false,
       "discarded_functions": [],
-      "object_sha256": "bb2a79d2f6dbe42e0eecde780b2b8e854e11426a21584440e7236d8283d835db",
-      "linked_sha256": "1f0397b3efa7477a567661d33a9e41c6a8d76f72f86cd068a5533a77766c9c22"
+      "object_sha256": "69e06ba26f94d1dc9cfea12045d24c676b7c3a37e0e1ba82eccbe4394ac2048c",
+      "linked_sha256": "638abc5db15ab4c75dba01efadcf78d34fdf55ffa7e4136bc3974398226935fe"
     },
     {
       "id": "ai_JumpDump",
@@ -61259,6 +61277,78 @@
       "discarded_functions": [],
       "object_sha256": "6fe9aed65c3f4df5e321670a25f1c22f67060000afbe3e86b0dd49e0c438bf93",
       "linked_sha256": "754b964166ca311ec2dd5e451e04c035975a8e4d4a9d7d14e8ecb8bb894fb4a5"
+    },
+    {
+      "id": "ai_OperationEval",
+      "category": "reconstructed_game",
+      "functions": 20,
+      "code_bytes": 3912,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "860d0c353fc143908a856113314e8bfa2340e4049d3f30cd0156fccb5fe624b5",
+      "linked_sha256": "55fcfac923b2551c200b7f1dc1b3eb0cb3ebe2dd14e640d73f7be3e482952262"
+    },
+    {
+      "id": "ai_OperationStreams",
+      "category": "reconstructed_game",
+      "functions": 16,
+      "code_bytes": 5352,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "c1a17912a1c634566e9bfd40629b6304b5fefd06708bc60ad6efb820385b5606",
+      "linked_sha256": "0586e9a214c37cae656603b02a9bdd0d27e3776fd88ba94a84955707c2a3a19c"
+    },
+    {
+      "id": "ai_OperationTurnDuration",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 304,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "21a4f32961461c289d7e2e33f2956470ff361bfc9bb375894293f8645d01da5c",
+      "linked_sha256": "08ab2aeb5d9e85c4cc8e80f360fba08aef96a0094dbf992e824744ba6d38854e"
+    },
+    {
+      "id": "ai_OperationInlines",
+      "category": "reconstructed_game",
+      "functions": 57,
+      "code_bytes": 920,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "6c0ce0d437cafc443632d85b9c023ae233bbe43bd2b4af1ac8b2fe25f40ce410",
+      "linked_sha256": "094fe4d01ddcaf645892b6735d533c6e4c51cac6a2c1a474d8300658ed8551e5"
     }
   ],
   "code_map": {
@@ -65791,276 +65881,10 @@
         "file_name": "Operations.cpp",
         "ranges": [
           {
-            "address": "0x8008a7e8",
-            "size": 60,
-            "kind": "function",
-            "name": "size_of__Q34EALA9Character18AnimationOperationi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008a824",
-            "size": 244,
-            "kind": "function",
-            "name": "Eval__Q34EALA9Character18AnimationOperationRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4Task",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008a918",
-            "size": 188,
-            "kind": "function",
-            "name": "__ls__FRQ29Serialize3AnyRQ34EALA9Character6Opcode",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008a9d4",
-            "size": 484,
-            "kind": "function",
-            "name": "Serialize__Q34EALA9Character18AnimationOperationRQ29Serialize3Any",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008abb8",
-            "size": 152,
-            "kind": "function",
-            "name": "Eval__Q34EALA9Character16MessageOperationRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4Task",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008ac50",
-            "size": 4,
-            "kind": "function",
-            "name": "Serialize__Q34EALA9Character16MessageOperationRQ29Serialize3Any",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008ac54",
-            "size": 164,
-            "kind": "function",
-            "name": "Eval__Q34EALA9Character19TransitionOperationRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4Task",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008acf8",
-            "size": 360,
-            "kind": "function",
-            "name": "Serialize__Q34EALA9Character19TransitionOperationRQ29Serialize3Any",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008ae60",
-            "size": 220,
-            "kind": "function",
-            "name": "_._Q34EALA9Character17CompoundOperation",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008af3c",
-            "size": 12,
-            "kind": "function",
-            "name": "size_of__Q34EALA9Character17CompoundOperationi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008af48",
-            "size": 80,
-            "kind": "function",
-            "name": "Eval__Q34EALA9Character17CompoundOperationRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4Task",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008af98",
-            "size": 56,
-            "kind": "function",
-            "name": "IsAuthoredTransition__Q34EALA9Character17CompoundOperationUiUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008afd0",
-            "size": 144,
-            "kind": "function",
-            "name": "Serialize__Q34EALA9Character17CompoundOperationRQ29Serialize3Any",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008b060",
-            "size": 904,
-            "kind": "function",
-            "name": "Eval__Q34EALA9Character16SequenceOperatorRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4TaskiPPQ44EALA9Character9Operation7Operand",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008b3e8",
-            "size": 4,
-            "kind": "function",
-            "name": "Serialize__Q34EALA9Character16SequenceOperatorRQ29Serialize3Any",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008b3ec",
-            "size": 332,
-            "kind": "function",
-            "name": "Eval__Q34EALA9Character14RandomOperatorRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4TaskiPPQ44EALA9Character9Operation7Operand",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008b538",
-            "size": 4,
-            "kind": "function",
-            "name": "Serialize__Q34EALA9Character14RandomOperatorRQ29Serialize3Any",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008b53c",
-            "size": 200,
-            "kind": "function",
-            "name": "Eval__Q34EALA9Character17SelectionOperatorRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4TaskiPPQ44EALA9Character9Operation7Operand",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008b604",
-            "size": 288,
-            "kind": "function",
-            "name": "Serialize__Q34EALA9Character17SelectionOperatorRQ29Serialize3Any",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008b724",
-            "size": 12,
-            "kind": "function",
-            "name": "size_of__Q34EALA9Character19MatrixBlendOperatori",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8008b730",
             "size": 1284,
             "kind": "function",
             "name": "Eval__Q34EALA9Character19MatrixBlendOperatorRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4TaskiPPQ44EALA9Character9Operation7Operand",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008bc34",
-            "size": 724,
-            "kind": "function",
-            "name": "Serialize__Q34EALA9Character19MatrixBlendOperatorRQ29Serialize3Any",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008bf08",
-            "size": 12,
-            "kind": "function",
-            "name": "size_of__Q34EALA9Character19LinearBlendOperatori",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008bf14",
-            "size": 1228,
-            "kind": "function",
-            "name": "Eval__Q34EALA9Character19LinearBlendOperatorRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4TaskiPPQ44EALA9Character9Operation7Operand",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008c3e0",
-            "size": 444,
-            "kind": "function",
-            "name": "Serialize__Q34EALA9Character19LinearBlendOperatorRQ29Serialize3Any",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008c59c",
-            "size": 752,
-            "kind": "function",
-            "name": "Eval__Q34EALA9Character12TurnOperatorRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4TaskiPPQ44EALA9Character9Operation7Operand",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008c88c",
-            "size": 288,
-            "kind": "function",
-            "name": "Serialize__Q34EALA9Character12TurnOperatorRQ29Serialize3Any",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008c9ac",
-            "size": 200,
-            "kind": "function",
-            "name": "Eval__Q34EALA9Character14ScriptOperatorRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4TaskiPPQ44EALA9Character9Operation7Operand",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008ca74",
-            "size": 264,
-            "kind": "function",
-            "name": "Serialize__Q34EALA9Character14ScriptOperatorRQ29Serialize3Any",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008cb7c",
-            "size": 776,
-            "kind": "function",
-            "name": "Eval__Q34EALA9Character26AuthoredTransitionOperatorRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4TaskiPPQ44EALA9Character9Operation7Operand",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008ce84",
-            "size": 32,
-            "kind": "function",
-            "name": "IsAuthoredTransition__Q34EALA9Character26AuthoredTransitionOperatorUiUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008cea4",
-            "size": 116,
-            "kind": "function",
-            "name": "Serialize__Q34EALA9Character26AuthoredTransitionOperatorRQ29Serialize3Any",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008cf18",
-            "size": 44,
-            "kind": "function",
-            "name": "Serialize__Q44EALA9Character9Operation7OperandRQ29Serialize3Any",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008cf44",
-            "size": 32,
-            "kind": "function",
-            "name": "Serialize__Q34EALA9Character13SimpleOperandRQ29Serialize3Any",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008cf64",
-            "size": 84,
-            "kind": "function",
-            "name": "Serialize__Q34EALA9Character15WeightedOperandRQ29Serialize3Any",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008cfb8",
-            "size": 120,
-            "kind": "function",
-            "name": "Serialize__Q34EALA9Character18MatrixBlendOperandRQ29Serialize3Any",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d030",
-            "size": 236,
-            "kind": "function",
-            "name": "GetTaskAngle__Q34EALA9Character11TurnOperandRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4Task",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d11c",
-            "size": 220,
-            "kind": "function",
-            "name": "GetTaskDuration__Q34EALA9Character11TurnOperandRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4Task",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d1f8",
-            "size": 84,
-            "kind": "function",
-            "name": "Serialize__Q34EALA9Character11TurnOperandRQ29Serialize3Any",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -66069,405 +65893,6 @@
             "kind": "function",
             "name": "__static_initialization_and_destruction_0",
             "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x8008d75c",
-            "size": 120,
-            "kind": "function",
-            "name": "_._Q44EALA9Character9Operation7Operand",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d7d4",
-            "size": 8,
-            "kind": "function",
-            "name": "AsSimpleOperand__Q44EALA9Character9Operation7Operand",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d7dc",
-            "size": 8,
-            "kind": "function",
-            "name": "AsWeightedOperand__Q44EALA9Character9Operation7Operand",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d7e4",
-            "size": 8,
-            "kind": "function",
-            "name": "AsMatrixBlendOperand__Q44EALA9Character9Operation7Operand",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d7ec",
-            "size": 8,
-            "kind": "function",
-            "name": "AsTurnOperand__Q44EALA9Character9Operation7Operand",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d7f4",
-            "size": 20,
-            "kind": "function",
-            "name": "__Q34EALA9Character18AnimationOperationRCQ212Serializable6NoInit",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d808",
-            "size": 36,
-            "kind": "function",
-            "name": "SizeOf__CQ34EALA9Character18AnimationOperation",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d82c",
-            "size": 12,
-            "kind": "function",
-            "name": "ClassName__CQ34EALA9Character18AnimationOperation",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d838",
-            "size": 20,
-            "kind": "function",
-            "name": "__Q34EALA9Character16MessageOperationRCQ212Serializable6NoInit",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d84c",
-            "size": 8,
-            "kind": "function",
-            "name": "SizeOf__CQ34EALA9Character16MessageOperation",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d854",
-            "size": 12,
-            "kind": "function",
-            "name": "ClassName__CQ34EALA9Character16MessageOperation",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d860",
-            "size": 20,
-            "kind": "function",
-            "name": "__Q34EALA9Character19TransitionOperationRCQ212Serializable6NoInit",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d874",
-            "size": 8,
-            "kind": "function",
-            "name": "SizeOf__CQ34EALA9Character19TransitionOperation",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d87c",
-            "size": 12,
-            "kind": "function",
-            "name": "ClassName__CQ34EALA9Character19TransitionOperation",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d888",
-            "size": 20,
-            "kind": "function",
-            "name": "__Q34EALA9Character17CompoundOperationRCQ212Serializable6NoInit",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d89c",
-            "size": 36,
-            "kind": "function",
-            "name": "SizeOf__CQ34EALA9Character17CompoundOperation",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d8c0",
-            "size": 12,
-            "kind": "function",
-            "name": "ClassName__CQ34EALA9Character17CompoundOperation",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d8cc",
-            "size": 20,
-            "kind": "function",
-            "name": "__Q34EALA9Character16SequenceOperatorRCQ212Serializable6NoInit",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d8e0",
-            "size": 8,
-            "kind": "function",
-            "name": "SizeOf__CQ34EALA9Character16SequenceOperator",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d8e8",
-            "size": 12,
-            "kind": "function",
-            "name": "ClassName__CQ34EALA9Character16SequenceOperator",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d8f4",
-            "size": 20,
-            "kind": "function",
-            "name": "__Q34EALA9Character14RandomOperatorRCQ212Serializable6NoInit",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d908",
-            "size": 8,
-            "kind": "function",
-            "name": "SizeOf__CQ34EALA9Character14RandomOperator",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d910",
-            "size": 12,
-            "kind": "function",
-            "name": "ClassName__CQ34EALA9Character14RandomOperator",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d91c",
-            "size": 20,
-            "kind": "function",
-            "name": "__Q34EALA9Character17SelectionOperatorRCQ212Serializable6NoInit",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d930",
-            "size": 8,
-            "kind": "function",
-            "name": "SizeOf__CQ34EALA9Character17SelectionOperator",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d938",
-            "size": 12,
-            "kind": "function",
-            "name": "ClassName__CQ34EALA9Character17SelectionOperator",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d944",
-            "size": 20,
-            "kind": "function",
-            "name": "__Q34EALA9Character19MatrixBlendOperatorRCQ212Serializable6NoInit",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d958",
-            "size": 36,
-            "kind": "function",
-            "name": "SizeOf__CQ34EALA9Character19MatrixBlendOperator",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d97c",
-            "size": 12,
-            "kind": "function",
-            "name": "ClassName__CQ34EALA9Character19MatrixBlendOperator",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d988",
-            "size": 20,
-            "kind": "function",
-            "name": "__Q34EALA9Character19LinearBlendOperatorRCQ212Serializable6NoInit",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d99c",
-            "size": 36,
-            "kind": "function",
-            "name": "SizeOf__CQ34EALA9Character19LinearBlendOperator",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d9c0",
-            "size": 12,
-            "kind": "function",
-            "name": "ClassName__CQ34EALA9Character19LinearBlendOperator",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d9cc",
-            "size": 20,
-            "kind": "function",
-            "name": "__Q34EALA9Character12TurnOperatorRCQ212Serializable6NoInit",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d9e0",
-            "size": 8,
-            "kind": "function",
-            "name": "SizeOf__CQ34EALA9Character12TurnOperator",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d9e8",
-            "size": 12,
-            "kind": "function",
-            "name": "ClassName__CQ34EALA9Character12TurnOperator",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008d9f4",
-            "size": 20,
-            "kind": "function",
-            "name": "__Q34EALA9Character14ScriptOperatorRCQ212Serializable6NoInit",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008da08",
-            "size": 8,
-            "kind": "function",
-            "name": "SizeOf__CQ34EALA9Character14ScriptOperator",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008da10",
-            "size": 12,
-            "kind": "function",
-            "name": "ClassName__CQ34EALA9Character14ScriptOperator",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008da1c",
-            "size": 20,
-            "kind": "function",
-            "name": "__Q34EALA9Character26AuthoredTransitionOperatorRCQ212Serializable6NoInit",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008da30",
-            "size": 8,
-            "kind": "function",
-            "name": "SizeOf__CQ34EALA9Character26AuthoredTransitionOperator",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008da38",
-            "size": 12,
-            "kind": "function",
-            "name": "ClassName__CQ34EALA9Character26AuthoredTransitionOperator",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008da44",
-            "size": 20,
-            "kind": "function",
-            "name": "__Q34EALA9Character13SimpleOperandRCQ212Serializable6NoInit",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008da58",
-            "size": 8,
-            "kind": "function",
-            "name": "SizeOf__CQ34EALA9Character13SimpleOperand",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008da60",
-            "size": 12,
-            "kind": "function",
-            "name": "ClassName__CQ34EALA9Character13SimpleOperand",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008da6c",
-            "size": 4,
-            "kind": "function",
-            "name": "AsSimpleOperand__Q34EALA9Character13SimpleOperand",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008da70",
-            "size": 20,
-            "kind": "function",
-            "name": "__Q34EALA9Character15WeightedOperandRCQ212Serializable6NoInit",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008da84",
-            "size": 8,
-            "kind": "function",
-            "name": "SizeOf__CQ34EALA9Character15WeightedOperand",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008da8c",
-            "size": 12,
-            "kind": "function",
-            "name": "ClassName__CQ34EALA9Character15WeightedOperand",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008da98",
-            "size": 4,
-            "kind": "function",
-            "name": "AsWeightedOperand__Q34EALA9Character15WeightedOperand",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008da9c",
-            "size": 20,
-            "kind": "function",
-            "name": "__Q34EALA9Character18MatrixBlendOperandRCQ212Serializable6NoInit",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008dab0",
-            "size": 8,
-            "kind": "function",
-            "name": "SizeOf__CQ34EALA9Character18MatrixBlendOperand",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008dab8",
-            "size": 12,
-            "kind": "function",
-            "name": "ClassName__CQ34EALA9Character18MatrixBlendOperand",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008dac4",
-            "size": 4,
-            "kind": "function",
-            "name": "AsMatrixBlendOperand__Q34EALA9Character18MatrixBlendOperand",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008dac8",
-            "size": 20,
-            "kind": "function",
-            "name": "__Q34EALA9Character11TurnOperandRCQ212Serializable6NoInit",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008dadc",
-            "size": 8,
-            "kind": "function",
-            "name": "SizeOf__CQ34EALA9Character11TurnOperand",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008dae4",
-            "size": 12,
-            "kind": "function",
-            "name": "ClassName__CQ34EALA9Character11TurnOperand",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008daf0",
-            "size": 4,
-            "kind": "function",
-            "name": "AsTurnOperand__Q34EALA9Character11TurnOperand",
-            "evidence": "adjacent-compiler-markers"
           },
           {
             "address": "0x8008daf4",

@@ -2479,7 +2479,11 @@
     "mc_task_trc_init.json",
     "mc_message_clear.json",
     "mc_file_descriptor_clear.json",
-    "mc_file_descriptor_init.json"
+    "mc_file_descriptor_init.json",
+    "ai_OperationEval.json",
+    "ai_OperationStreams.json",
+    "ai_OperationTurnDuration.json",
+    "ai_OperationInlines.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
