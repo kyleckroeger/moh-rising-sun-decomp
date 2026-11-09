@@ -93,28 +93,31 @@ enum EBehaviorType {
     BehaviorTypeGrenadeResponse = 10
 };
 enum EAIHighLevelState { AIHighLevelStateUnknown = 0 };
-enum ECapability { CapabilityUnknown = 0 };
+// Selector names are descriptive: only their values are known.
+enum ECapability { Capability0 = 0, Capability1, Capability2, Capability3, Capability4, Capability5, Capability6, Capability7 };
 enum ECollisionTestDirection { CollisionTestDirectionUnknown = 0 };
 class CAIBehavior;
-// The behavior base class: enable word at +8, then its table pointer at +0xc. Slot
-// names come from the original table where it names them; the pure slots are descriptive.
+// The behavior base class: its table pointer follows its data, at +0xc. Method names
+// come from the symbol table; member names and the pure slots' return types are inferred.
 class CBehavior {
 public:
-    unsigned char unknown00[8];
+    CAIObject *aiObject; // +0x00; cleared here and set by the owner.
+    int framesSinceUpdate; // +0x04; accumulated by Update.
     int enabled; // +0x08
+    CBehavior();
     virtual ~CBehavior();
-    virtual float PureSlot2() = 0; // Compared to pick the best behavior; name descriptive.
-    virtual void PureSlot3() = 0;
-    virtual void PureSlot4() = 0;
-    virtual int Start() = 0;
-    virtual void Stop(bool) = 0;
+    virtual float GetCurrentHeuristicScore() = 0;
+    virtual int GetHeuristicUpdateFrequency() = 0;
+    virtual int UpdateHeuristicScore() = 0;
+    virtual int StartBehavior() = 0;
+    virtual void StopBehavior(bool) = 0;
     virtual void ReleaseResources();
-    virtual int GetCapability(ECapability) = 0;
+    virtual int GetCapabilities(ECapability) = 0;
     virtual int GetType();
-    virtual int GetCRC();
+    virtual unsigned int GetCRC();
     virtual void Enable();
     virtual void Disable();
-    virtual int GetScriptObject();
+    virtual BSObject *GetScriptObject();
     int Update(int, bool);
 };
 // Method-only view of the embedded tactics module.
@@ -311,7 +314,7 @@ public:
     void RemovePointersTo(CAIObject *);
     int GetPreviousBehaviorType();
     int GetNextBehaviorType();
-    int GetNextBehaviorScript();
+    BSObject *GetNextBehaviorScript();
     void SetHighLevelState(EAIHighLevelState);
     int IsNearbyPositionOnAStarMesh(ECollisionTestDirection, float);
     void SetupFieldOfViewCorpse(float, float);

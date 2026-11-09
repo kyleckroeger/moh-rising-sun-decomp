@@ -27,9 +27,7 @@ names are descriptive.
 `GetLocation` (both overloads) and the two `GetDistance*Real` functions, the behavior
 selection group from `ChooseBehavior` to `GetBehaviorCapability`, the previous and next
 behavior accessors, the `As*` casts through `SetAIStatusVar`, and the global-list add and
-remove all match. `CBehavior` is a view added for them: the enable word is at `+8`, its
-table pointer at `+0xc`; slot names come from the original table where it names them, and
-the pure slots are descriptive only. `CAIObject` holds the previous, next and current
+remove all match. `CBehavior` itself is described in [Behaviors.md](Behaviors.md). `CAIObject` holds the previous, next and current
 behaviors at `+0x370`, `+0x378` and `+0x37c`.
 
 The AI object constructors and destructors are deliberately absent. Matching them would

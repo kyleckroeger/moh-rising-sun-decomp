@@ -2049,7 +2049,13 @@
     "property_read_wayPoint.json",
     "cdb_separate1.json",
     "cdb_separate2.json",
-    "cdb_separate3.json"
+    "cdb_separate3.json",
+    "ai_Behavior.json",
+    "ai_SwordBehavior.json",
+    "ai_PistolBehavior.json",
+    "ai_RifleBehavior.json",
+    "ai_NullWeaponBehavior.json",
+    "ai_PolemineBehavior.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

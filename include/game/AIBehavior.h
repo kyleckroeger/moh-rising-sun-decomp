@@ -22,8 +22,25 @@ class CBuddyLeadBehavior { // Type 1.
     static void HandleCheckpointReachedByPlayer(int);
 };
 
-class CBuddyFollowBehavior { // Type 2.
+class CAIActivityZone {
   public:
+    void Disable();
+    void UseMovingTarget(ISceneNode *, float);
+};
+
+class CBuddyFollowBehavior : public CBehavior { // Type 2.
+  public:
+    CBuddyFollowBehavior(CAIActivityZone *);
+    virtual ~CBuddyFollowBehavior();
+    virtual void Enable();
+    virtual void Disable();
+    virtual float GetCurrentHeuristicScore();
+    virtual int GetHeuristicUpdateFrequency();
+    virtual int UpdateHeuristicScore();
+    virtual int StartBehavior();
+    virtual void StopBehavior(bool);
+    virtual int GetCapabilities(ECapability);
+    virtual int GetType();
     void BumpPlayer();
     void CantReachTarget();
     void FinishedMovingAway();
@@ -32,29 +49,103 @@ class CBuddyFollowBehavior { // Type 2.
     void ExitBuddyTeleportArea(int);
     int IsBuddyInArea(int);
     float UpdateDistanceToPlayer();
+    float GetStopDistance();
+    float GetStartDistance();
     static void RegisterBuddyFollowObject(BSObject *, float, float, float, float);
+    float heuristicScore;           // +0x10
+    float stopDistance;             // +0x14; state 4 uses stopAttackDistance instead.
+    float moveThreshold;            // +0x18; state 4 uses breakOffAttackDistance instead.
+    float breakOffAttackDistance;   // +0x1c
+    float stopAttackDistance;       // +0x20
+    int stopped;                    // +0x24; set by StopBehavior, cleared by StartBehavior.
+    int cantReachTarget;            // +0x28
+    float cantReachExpireTime;      // +0x2c
+    int distancesSet;               // +0x30; keeps Enable from restoring the defaults.
+    CAIActivityZone *activityZone;  // +0x34
+    int teleportArea;               // +0x38
+    int teleportAreaCount;          // +0x3c
+    int movingAway;                 // +0x40; set by BumpPlayer.
+    float movingAwayExpireTime;     // +0x44
+    static BSObject *m_pBuddyFollowObject;
+    static float m_defaultStopDistance;
+    static float m_defaultMoveThreshold;
+    static float m_defaultBreakOffAttackDistance;
+    static float m_defaultStopAttackDistance;
 };
 
-class CPistolBehavior { // Type 6.
+class CPistolBehavior : public CBehavior { // Type 6.
   public:
-    // The table pointer follows twelve bytes of base data; slots 1-13 in the
-    // order of the original table at 0x802e7e20.
-    unsigned char unknown00[8];
-    int field_08; // Checked with GetScriptObject by BIFunc_HasPistol.
+    CPistolBehavior();
     virtual ~CPistolBehavior();
     virtual float GetCurrentHeuristicScore();
-    virtual float GetHeuristicUpdateFrequency();
-    virtual void UpdateHeuristicScore();
-    virtual void StartBehavior();
+    virtual int GetHeuristicUpdateFrequency();
+    virtual int UpdateHeuristicScore();
+    virtual int StartBehavior();
     virtual void StopBehavior(bool);
-    virtual void ReleaseResources();
     virtual int GetCapabilities(ECapability);
     virtual int GetType();
     virtual unsigned int GetCRC();
-    virtual void Enable();
-    virtual void Disable();
     virtual BSObject *GetScriptObject();
     virtual void SetWeaponScript(BSObject *);
+    EAIHighLevelState highLevelState; // +0x10; passed with the start and stop events.
+    float heuristicScore; // +0x14
+    BSObject *weaponScript; // +0x18
+};
+
+class CRifleBehavior : public CBehavior { // Type 7.
+  public:
+    CRifleBehavior();
+    virtual ~CRifleBehavior();
+    virtual float GetCurrentHeuristicScore();
+    virtual int GetHeuristicUpdateFrequency();
+    virtual int UpdateHeuristicScore();
+    virtual int StartBehavior();
+    virtual void StopBehavior(bool);
+    virtual int GetCapabilities(ECapability);
+    virtual int GetType();
+    virtual unsigned int GetCRC();
+    virtual BSObject *GetScriptObject();
+    virtual void SetWeaponScript(BSObject *);
+    EAIHighLevelState highLevelState; // +0x10; passed with the start and stop events.
+    float heuristicScore; // +0x14
+    BSObject *weaponScript; // +0x18
+};
+
+class CNullWeaponBehavior : public CBehavior { // Type 9.
+  public:
+    CNullWeaponBehavior();
+    virtual ~CNullWeaponBehavior();
+    virtual float GetCurrentHeuristicScore();
+    virtual int GetHeuristicUpdateFrequency();
+    virtual int UpdateHeuristicScore();
+    virtual int StartBehavior();
+    virtual void StopBehavior(bool);
+    virtual int GetCapabilities(ECapability);
+    virtual int GetType();
+    virtual unsigned int GetCRC();
+    virtual BSObject *GetScriptObject();
+    virtual void SetWeaponScript(BSObject *);
+    EAIHighLevelState highLevelState; // +0x10; passed with the start and stop events.
+    float heuristicScore; // +0x14
+    BSObject *weaponScript; // +0x18
+};
+
+class CPolemineBehavior : public CBehavior { // Type 7, as the rifle.
+  public:
+    CPolemineBehavior();
+    virtual ~CPolemineBehavior();
+    virtual float GetCurrentHeuristicScore();
+    virtual int GetHeuristicUpdateFrequency();
+    virtual int UpdateHeuristicScore();
+    virtual int StartBehavior();
+    virtual void StopBehavior(bool);
+    virtual int GetCapabilities(ECapability);
+    virtual int GetType();
+    virtual unsigned int GetCRC();
+    virtual BSObject *GetScriptObject();
+    virtual void SetWeaponScript(BSObject *);
+    float heuristicScore; // +0x10
+    BSObject *weaponScript; // +0x14
 };
 
 class CMountedMachineGunBehavior { // Type 3.
@@ -99,20 +190,51 @@ class CCoverpointBehavior { // Type 4.
     static void RegisterCoverpoint(TriggerObject *);
 };
 
-class CScriptedBehavior { // Type 5.
+class CScriptedBehavior : public CBehavior { // Type 5.
   public:
-    unsigned char unknown00[0x4c];
-    int scriptedType; // +0x4c; read and written by the scripted-behavior type built-ins.
+    CScriptedBehavior();
+    virtual ~CScriptedBehavior();
+    virtual float GetCurrentHeuristicScore();
+    virtual int GetHeuristicUpdateFrequency();
+    virtual int UpdateHeuristicScore();
+    virtual int StartBehavior();
+    virtual void StopBehavior(bool);
+    virtual void ReleaseResources();
+    virtual int GetCapabilities(ECapability);
+    virtual int GetType();
+    virtual BSObject *GetScriptObject();
     void SetAllowedHighLevelState(EAIHighLevelState);
     void SetCapability(ECapability, bool);
     void StartScript(BSObject *);
     void StopScript();
+    BSObject *script;        // +0x10
+    BSObject *pendingScript; // +0x14; started when StopBehavior ends the current script.
+    int scriptActive;        // +0x18; makes the behavior score at all.
+    int scoreChanged;        // +0x1c; read and cleared by UpdateHeuristicScore.
+    int capabilities[11];    // +0x20; indexed by ECapability.
+    int scriptedType;        // +0x4c; read and written by the scripted-behavior type built-ins.
+    int allowedStateMask;    // +0x50; bit per high-level state; 0xffff allows every state.
 };
 
-class CSwordBehavior { // Type 8.
+class CSwordBehavior : public CBehavior { // Type 8.
   public:
+    CSwordBehavior();
+    virtual ~CSwordBehavior();
+    virtual float GetCurrentHeuristicScore();
+    virtual int GetHeuristicUpdateFrequency();
+    virtual int UpdateHeuristicScore();
+    virtual int StartBehavior();
+    virtual void StopBehavior(bool);
+    virtual int GetCapabilities(ECapability);
+    virtual int GetType();
+    virtual unsigned int GetCRC();
+    virtual BSObject *GetScriptObject();
+    virtual void SetWeaponScript(BSObject *);
     int IsSwordDrawn();
     void SetSwordDrawn(bool);
+    int swordDrawn; // +0x10
+    float heuristicScore; // +0x14
+    BSObject *weaponScript; // +0x18
 };
 
 class CGrenadeResponseBehavior { // Type 10.

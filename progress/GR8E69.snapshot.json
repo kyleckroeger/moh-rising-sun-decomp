@@ -14,9 +14,9 @@
       "src/ai/AIFilterPlayerVars.cpp": "bc94f76bb72a6f6dc726fa11d1db5655e145cf58e25acccc3e495e1a2fdf2f19",
       "src/ai/AIFilterTank.cpp": "977bd9bbf589e74e00e7b09aaf9f31164ded18b3ab9804b593ebe96cd4edae65",
       "src/ai/AIFilterTankVars.cpp": "ea9f88db1e89f52a6d42a6e58a3fa6c687793f87e097ababb4d8a87bc8c8a695",
-      "src/ai/AIObjectBehavior.cpp": "308761ec4374338d825b611d886a88ea9a77e2665d24637887d35c6b9c615eb0",
-      "src/ai/AIObjectBehaviorInfo.cpp": "830084c7cfc461b96c4db0f388b44fe49c12d427208b97ddeb9a0f2575409a88",
-      "src/ai/AIObjectBestBehavior.cpp": "54dff2ff4340b6f4043b58a4210fd443b3053c6908d68956712af333e6028e75",
+      "src/ai/AIObjectBehavior.cpp": "d755742a68eb054d0e252f253b491d5831fbb0427c5746a0fa41070b3da77eda",
+      "src/ai/AIObjectBehaviorInfo.cpp": "b9dc95555ff5fa798f1d65cb8983fcf60b361ace1086950f44773f24cc59fb00",
+      "src/ai/AIObjectBestBehavior.cpp": "d6d25c0595ef84aea49500f3ef3be4879578873a54368d921188873d51bcfc31",
       "src/ai/AIObjectFindBehavior.cpp": "f18e7e7f883cf6582b38a3a9a8f312c8a26cdcadfc7fb03cf96651045f566324",
       "src/ai/AIObjectGlobalList.cpp": "1e7b0a97c9b8d7fa7e8839cf3bd59ea7eacf76130f9bb0d8d20ded28340000c1",
       "src/ai/AIObjectHeuristics.cpp": "2763f2431b591f5a3fa360eb2be64f47fd01ffb19ad897f1a6e67dcf7e933f9e",
@@ -43,7 +43,13 @@
       "src/ai/AITankObjectD.cpp": "1d48f7210ac6083554bb04559b38da035c0101862b0202ce9e65b5ef7df36f7f",
       "src/ai/AIThreatsMakeNoise.cpp": "7bee718b455cdad488a5bd94fe4b89a14920f44fae951c91f5e2d53dc40f5c7a",
       "src/ai/AIThreatsNoiseEvent.cpp": "d2e839aac6237e303a88e27ee5996125f76cf10713ebc8ef02bf8e5e0d7ae2cb",
+      "src/ai/Behavior.cpp": "085db5cd1f8fe7c991c04156eac45718b95e4938cebc97ebdf5f2eef3674b970",
       "src/ai/GrenadeResponseQueries.cpp": "c69240fd532d35c3cd178969bbafd94bb6c3202d155ba8437e716d4f7ee4b2c9",
+      "src/ai/NullWeaponBehavior.cpp": "73e48f23e4a8e7963c1f5fd241186ea823189254e2fb72cb103336975c9f7592",
+      "src/ai/PistolBehavior.cpp": "52bbbfdcf25027a20f6dccb47bee3647d3a2d5c6195cfbdc570a2b1529d0dc4b",
+      "src/ai/PolemineBehavior.cpp": "d5a2845cb2cf8466791a8170691fd2be4addf548d1e2e4bc7a16177eae66b4a2",
+      "src/ai/RifleBehavior.cpp": "69fed157b0314f5b3f78d01825c1ff73e0938411cc643f8fb263f7653584b9bf",
+      "src/ai/SwordBehavior.cpp": "cf8d0527eba6217f7a4683bb2334bc522390462426d1eb3117ae6f104e34fc01",
       "src/ai/cover_flags.cpp": "70759f9875d7c34dbd0bae1737558f8bb0b0ff16498366b6528906e461242cb2",
       "src/ai/cover_invalidate.cpp": "59768695622932fd51e91523bfc0248c905726f09bd5fc168ef28150df4c7dc8",
       "src/ai/cover_occupy.cpp": "fadc5c08be2036b7b61924483209edb6071f0e381f24dd39111aa2fb173057a4",
@@ -1301,7 +1307,7 @@
       "src/script/ai_force_to_closest_cover_point.cpp": "97b028ba2ab5da274f51da254a43da0820efa3edd3bb12f1e8f0e1eb4c8803df",
       "src/script/ai_get_distance_to_move_point.cpp": "c3fa27b2b91abd35108e8bdc2b92a55674375bbf138936e6aac956f201b9fbd7",
       "src/script/ai_get_distance_to_target_xyz.cpp": "92ccca639c1bdd699cd060335f0c1478d4332dc04152eba2c4734e588b840647",
-      "src/script/ai_get_next_behavior_type.cpp": "5cc8bcae4c62d7020af5556f27c610e614cb1bf89bc493857af8c6cfc1f6bcfe",
+      "src/script/ai_get_next_behavior_type.cpp": "0a977ef69f17215c62fccb198051742f759dd79b54465a901d527a4eba55fbd9",
       "src/script/ai_get_pan_angle_to_move_point.cpp": "5446880c67bbd97a4a616b373e44272c0d1c10f9b9f8f2354fdf22729a9eda60",
       "src/script/ai_get_previous_behavior_script.cpp": "d30715b0818fec12b764043e84c7922848c6bbc6898e7d119ba23a467f544246",
       "src/script/ai_get_previous_behavior_type.cpp": "02b4bce41e8430f970109d3b4bb7eaea3f28702a972075f21614d0a5257e9491",
@@ -1460,7 +1466,7 @@
       "src/script/grenade_timer_get.cpp": "07314f404ff3339037064ad840142e959f30a296d38449c626c8af6a3db5c7ef",
       "src/script/has_any_film_canister.cpp": "2aca636b9de4e87bd3c487b6190674931f87e4d4dc4864c62d89cd786beac740",
       "src/script/has_film_canister.cpp": "154bc0d9a8bf84a9cef31c6db403ea31d1aa48ddb566e1e3a4e0f5765a41d021",
-      "src/script/has_pistol.cpp": "813e43eaefc88cb8377f224d82eafd92045b75b9c873667e02a788dfd4d887c4",
+      "src/script/has_pistol.cpp": "1123b010019698531b0b05ad8fa8ddfe74605fcff8246b780c5e3fb572131ac4",
       "src/script/has_replay_item.cpp": "6da729e9f74905bcb4d6180b09985978b23fc40a7ee901be6fc464230f8f4377",
       "src/script/hier_object_fire.cpp": "aa30fe3d7483c75667f5e3ce6481e1f65ed0a17fcefedc923506efb5160770c3",
       "src/script/hier_object_map_weapon.cpp": "7d7638a98df8d016eeb11133388a2923bd94f8a4b157ce1aa1c2725bcd1aa1f7",
@@ -2333,12 +2339,12 @@
       "include/dolphin-sdk/libc/wchar.h": "eb9359b3f8c80e980c291b31b08b913739a9fda753a2a5007f8bf2bf3c646439",
       "include/dolphin-sdk/macros.inc": "4e92f656bb511fbb45d66081291371c47ceba7bce9c55f86871116203cf38a46",
       "include/dolphin-sn/dolphin/types.h": "ca31e0bbb97e93ca4713654367df29578f6392f3acaf40ca68bc1de1c913af93",
-      "include/game/AIBehavior.h": "6f7949c0c3195674189be542ef10a86d531d9ab8ff4625b1583f30211e7c0a3f",
+      "include/game/AIBehavior.h": "c8f0b7a5ee8c578421cd095b85068eb9dc5e748e2cb3a63085fcf25e2479f2d6",
       "include/game/AIDoodad.h": "5a8328fd7c55b6f602742adb79faabaeb4466fbaa44292b3a32fd0d0ad10aca9",
       "include/game/AIFilterGlobal.h": "8206508036a820ab1075f5e290d849293a434e49041b0d700337c523bc915738",
       "include/game/AIMovement.h": "143e409a2e3b38c72b2a667b1781a10c9af5ce7cc9cf5bd75ac43f142192d484",
       "include/game/AISplinePath.h": "b099db9f3b62cd89d875d5fcaf42b91b7b23a8d20085288a26f1f94c37bd89df",
-      "include/game/AITargeting.h": "dc11df24848d61ef167caaf2545f38c1e263ccd173a9a9c6e67122cdd1001d28",
+      "include/game/AITargeting.h": "fedc5915212000b4944aee07532ff8e27bbb61d320ff2b8455db3f9836aa2780",
       "include/game/AnimShape.h": "eb3d8e24b295f937a6524701d5d87c8b8b4e052c8bbb2bafd8fb764c3318e87e",
       "include/game/AnimatedVolume.h": "527918576e64cf9296cbb9164eefaf3fc8b7a0f96894e342d2da9e847df4cf25",
       "include/game/AvPlayer.h": "ee5373fca262bf54fd66e19125fe4c512d5a3ff3ce27f97ea7d292b46204a6a1",
@@ -2773,6 +2779,12 @@
       "config/GR8E69/ai_AITankObjectD.json": "5c92c1ea302426601af352e931c5823c744898a4032b45f381ca6666d5d12a70",
       "config/GR8E69/ai_AIThreatsMakeNoise.json": "b06c11964d7ac075ffc0cb708f944422c029373acdefbf93b664fb0fe46dc290",
       "config/GR8E69/ai_AIThreatsNoiseEvent.json": "f1926faf7a7b46c026848b4f3693067c9cb15971933ded3220769db7eea1a84f",
+      "config/GR8E69/ai_Behavior.json": "5e5efe1d0bf7f05574e75618e1b8e6b045feca44fa885170b947d8ad4a4c2381",
+      "config/GR8E69/ai_NullWeaponBehavior.json": "cf42b3058125a789f6b44c78b488755e338f60dccc9715e162d9b6220e0e6ffc",
+      "config/GR8E69/ai_PistolBehavior.json": "dde1e548afe69c91e77cea98367d95cb2beb8d5be9f21f46bafa6516b54e0212",
+      "config/GR8E69/ai_PolemineBehavior.json": "e1649ae5303f1eb384dd28825a7fd97cb68efecf3b5251b60f4fdaff9413cbbc",
+      "config/GR8E69/ai_RifleBehavior.json": "2dbc34c425e032263dc153292249b04c0f8f54bfbf6f7162823a4954dbc8faf4",
+      "config/GR8E69/ai_SwordBehavior.json": "f83d9ad360c79f28c46140ceab34e9c3b1db19a75f1b9ef0b5c248db3ee7dcfe",
       "config/GR8E69/ai_filter_clock.json": "f2034db8752a041debc3e5f86662b062dae08812cf71d3c95f66f339dbd705b1",
       "config/GR8E69/ai_filter_splines.json": "26b024e231fa1eb564b501c3108a8fb71d50e76cdc7ad97470e83b7b39b7fbde",
       "config/GR8E69/ai_locomotion_access.json": "a561dbd2e9dc1e3932ea24b9e503dd28adac5b45f786bacaa0dd26e3f5cc6154",
@@ -3634,7 +3646,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "e042c7ffc0afeb46654714cc06ef519b0893f9c16b54a564eb032271b1089d24",
+      "config/GR8E69/project.json": "b1c1b28e52e19ae3f87a1b775e134e165d63df8e4dae11cb8a7ffc05c774164e",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -4768,16 +4780,16 @@
       "tools/toolchain.json": "224f4d272eaf40364a4a3d162fb9beb62a3ab398c1f9640097d91ef800316a5e"
     },
     "objdiff_version": "3.8.3",
-    "objdiff_sha256": "27dbd79196394c246dde77ef0a6ac855ff6c568069171dd7db0093f39c03ee8d",
+    "objdiff_sha256": "e823ae932a56c68dcd86b68d12f2268c953e0c027402162c8a6dfa6a00d65008",
     "compiler_executables": {
       "ProDG/3.8.1": {
-        "ngccc.orig.exe": "d5d25173b5f30398013054fd3e4785bf7a22a4fb2f160b8b3b28418adea2a286",
         "cc1plus.exe": "5768c7fba187f21cf21327cf1a5abb23144da6c72ae2ccadc65e93faf9b2e7cd",
-        "ngccc.exe": "a1c157666fca3790ff2ffdc2f0b5c0bc1a3f4ecf4231e8b51f23540807bbf1d2",
         "ngcasm.exe": "222046d9baf5b38faba202263805ad17f4af161c221888ee2d2c5a3a654c01d5",
-        "cpp.exe": "e6918e5192edfa9db60cc17ff6d3bfbfe9fc71aad5ec36953384e7dbddb9b659",
+        "ngccc.exe": "a1c157666fca3790ff2ffdc2f0b5c0bc1a3f4ecf4231e8b51f23540807bbf1d2",
         "cc1.exe": "c8b1e6739b6a3b2ed63cd13be52a2a86a8ddbdb64247162255ab2558f83b96e8",
+        "cpp.exe": "e6918e5192edfa9db60cc17ff6d3bfbfe9fc71aad5ec36953384e7dbddb9b659",
         "NgcAs.exe": "4ca278d5d558ea86266d8338c65cf8c9cdb23ce8cef59857d967633a143c74db",
+        "ngccc.orig.exe": "d5d25173b5f30398013054fd3e4785bf7a22a4fb2f160b8b3b28418adea2a286",
         "ngcld.exe": "254a33cb6e760e9e5f44d538d398851ec4d381f99e9a51dc2f13c85bd586a7cd"
       }
     },
@@ -6288,14 +6300,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1076936,
+    "matching_code_bytes": 1080460,
     "total_executable_code_bytes": 2492032,
-    "percent": 43.21517540705737,
+    "percent": 43.35658611125379,
     "categories": {
-      "reconstructed_game": 684720,
+      "reconstructed_game": 688244,
       "restored_library": 392216
     },
-    "matching_functions": 5152
+    "matching_functions": 5224
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -6429,6 +6441,12 @@
     "config/GR8E69/ai_AITankObjectD.json": "5c92c1ea302426601af352e931c5823c744898a4032b45f381ca6666d5d12a70",
     "config/GR8E69/ai_AIThreatsMakeNoise.json": "b06c11964d7ac075ffc0cb708f944422c029373acdefbf93b664fb0fe46dc290",
     "config/GR8E69/ai_AIThreatsNoiseEvent.json": "f1926faf7a7b46c026848b4f3693067c9cb15971933ded3220769db7eea1a84f",
+    "config/GR8E69/ai_Behavior.json": "5e5efe1d0bf7f05574e75618e1b8e6b045feca44fa885170b947d8ad4a4c2381",
+    "config/GR8E69/ai_NullWeaponBehavior.json": "cf42b3058125a789f6b44c78b488755e338f60dccc9715e162d9b6220e0e6ffc",
+    "config/GR8E69/ai_PistolBehavior.json": "dde1e548afe69c91e77cea98367d95cb2beb8d5be9f21f46bafa6516b54e0212",
+    "config/GR8E69/ai_PolemineBehavior.json": "e1649ae5303f1eb384dd28825a7fd97cb68efecf3b5251b60f4fdaff9413cbbc",
+    "config/GR8E69/ai_RifleBehavior.json": "2dbc34c425e032263dc153292249b04c0f8f54bfbf6f7162823a4954dbc8faf4",
+    "config/GR8E69/ai_SwordBehavior.json": "f83d9ad360c79f28c46140ceab34e9c3b1db19a75f1b9ef0b5c248db3ee7dcfe",
     "config/GR8E69/ai_filter_clock.json": "f2034db8752a041debc3e5f86662b062dae08812cf71d3c95f66f339dbd705b1",
     "config/GR8E69/ai_filter_splines.json": "26b024e231fa1eb564b501c3108a8fb71d50e76cdc7ad97470e83b7b39b7fbde",
     "config/GR8E69/ai_locomotion_access.json": "a561dbd2e9dc1e3932ea24b9e503dd28adac5b45f786bacaa0dd26e3f5cc6154",
@@ -7290,7 +7308,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "e042c7ffc0afeb46654714cc06ef519b0893f9c16b54a564eb032271b1089d24",
+    "config/GR8E69/project.json": "b1c1b28e52e19ae3f87a1b775e134e165d63df8e4dae11cb8a7ffc05c774164e",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -8565,12 +8583,12 @@
     "include/dolphin-sdk/libc/wchar.h": "eb9359b3f8c80e980c291b31b08b913739a9fda753a2a5007f8bf2bf3c646439",
     "include/dolphin-sdk/macros.inc": "4e92f656bb511fbb45d66081291371c47ceba7bce9c55f86871116203cf38a46",
     "include/dolphin-sn/dolphin/types.h": "ca31e0bbb97e93ca4713654367df29578f6392f3acaf40ca68bc1de1c913af93",
-    "include/game/AIBehavior.h": "6f7949c0c3195674189be542ef10a86d531d9ab8ff4625b1583f30211e7c0a3f",
+    "include/game/AIBehavior.h": "c8f0b7a5ee8c578421cd095b85068eb9dc5e748e2cb3a63085fcf25e2479f2d6",
     "include/game/AIDoodad.h": "5a8328fd7c55b6f602742adb79faabaeb4466fbaa44292b3a32fd0d0ad10aca9",
     "include/game/AIFilterGlobal.h": "8206508036a820ab1075f5e290d849293a434e49041b0d700337c523bc915738",
     "include/game/AIMovement.h": "143e409a2e3b38c72b2a667b1781a10c9af5ce7cc9cf5bd75ac43f142192d484",
     "include/game/AISplinePath.h": "b099db9f3b62cd89d875d5fcaf42b91b7b23a8d20085288a26f1f94c37bd89df",
-    "include/game/AITargeting.h": "dc11df24848d61ef167caaf2545f38c1e263ccd173a9a9c6e67122cdd1001d28",
+    "include/game/AITargeting.h": "fedc5915212000b4944aee07532ff8e27bbb61d320ff2b8455db3f9836aa2780",
     "include/game/AnimShape.h": "eb3d8e24b295f937a6524701d5d87c8b8b4e052c8bbb2bafd8fb764c3318e87e",
     "include/game/AnimatedVolume.h": "527918576e64cf9296cbb9164eefaf3fc8b7a0f96894e342d2da9e847df4cf25",
     "include/game/AvPlayer.h": "ee5373fca262bf54fd66e19125fe4c512d5a3ff3ce27f97ea7d292b46204a6a1",
@@ -8884,9 +8902,9 @@
     "src/ai/AIFilterPlayerVars.cpp": "bc94f76bb72a6f6dc726fa11d1db5655e145cf58e25acccc3e495e1a2fdf2f19",
     "src/ai/AIFilterTank.cpp": "977bd9bbf589e74e00e7b09aaf9f31164ded18b3ab9804b593ebe96cd4edae65",
     "src/ai/AIFilterTankVars.cpp": "ea9f88db1e89f52a6d42a6e58a3fa6c687793f87e097ababb4d8a87bc8c8a695",
-    "src/ai/AIObjectBehavior.cpp": "308761ec4374338d825b611d886a88ea9a77e2665d24637887d35c6b9c615eb0",
-    "src/ai/AIObjectBehaviorInfo.cpp": "830084c7cfc461b96c4db0f388b44fe49c12d427208b97ddeb9a0f2575409a88",
-    "src/ai/AIObjectBestBehavior.cpp": "54dff2ff4340b6f4043b58a4210fd443b3053c6908d68956712af333e6028e75",
+    "src/ai/AIObjectBehavior.cpp": "d755742a68eb054d0e252f253b491d5831fbb0427c5746a0fa41070b3da77eda",
+    "src/ai/AIObjectBehaviorInfo.cpp": "b9dc95555ff5fa798f1d65cb8983fcf60b361ace1086950f44773f24cc59fb00",
+    "src/ai/AIObjectBestBehavior.cpp": "d6d25c0595ef84aea49500f3ef3be4879578873a54368d921188873d51bcfc31",
     "src/ai/AIObjectFindBehavior.cpp": "f18e7e7f883cf6582b38a3a9a8f312c8a26cdcadfc7fb03cf96651045f566324",
     "src/ai/AIObjectGlobalList.cpp": "1e7b0a97c9b8d7fa7e8839cf3bd59ea7eacf76130f9bb0d8d20ded28340000c1",
     "src/ai/AIObjectHeuristics.cpp": "2763f2431b591f5a3fa360eb2be64f47fd01ffb19ad897f1a6e67dcf7e933f9e",
@@ -8913,7 +8931,13 @@
     "src/ai/AITankObjectD.cpp": "1d48f7210ac6083554bb04559b38da035c0101862b0202ce9e65b5ef7df36f7f",
     "src/ai/AIThreatsMakeNoise.cpp": "7bee718b455cdad488a5bd94fe4b89a14920f44fae951c91f5e2d53dc40f5c7a",
     "src/ai/AIThreatsNoiseEvent.cpp": "d2e839aac6237e303a88e27ee5996125f76cf10713ebc8ef02bf8e5e0d7ae2cb",
+    "src/ai/Behavior.cpp": "085db5cd1f8fe7c991c04156eac45718b95e4938cebc97ebdf5f2eef3674b970",
     "src/ai/GrenadeResponseQueries.cpp": "c69240fd532d35c3cd178969bbafd94bb6c3202d155ba8437e716d4f7ee4b2c9",
+    "src/ai/NullWeaponBehavior.cpp": "73e48f23e4a8e7963c1f5fd241186ea823189254e2fb72cb103336975c9f7592",
+    "src/ai/PistolBehavior.cpp": "52bbbfdcf25027a20f6dccb47bee3647d3a2d5c6195cfbdc570a2b1529d0dc4b",
+    "src/ai/PolemineBehavior.cpp": "d5a2845cb2cf8466791a8170691fd2be4addf548d1e2e4bc7a16177eae66b4a2",
+    "src/ai/RifleBehavior.cpp": "69fed157b0314f5b3f78d01825c1ff73e0938411cc643f8fb263f7653584b9bf",
+    "src/ai/SwordBehavior.cpp": "cf8d0527eba6217f7a4683bb2334bc522390462426d1eb3117ae6f104e34fc01",
     "src/ai/cover_flags.cpp": "70759f9875d7c34dbd0bae1737558f8bb0b0ff16498366b6528906e461242cb2",
     "src/ai/cover_invalidate.cpp": "59768695622932fd51e91523bfc0248c905726f09bd5fc168ef28150df4c7dc8",
     "src/ai/cover_occupy.cpp": "fadc5c08be2036b7b61924483209edb6071f0e381f24dd39111aa2fb173057a4",
@@ -10171,7 +10195,7 @@
     "src/script/ai_force_to_closest_cover_point.cpp": "97b028ba2ab5da274f51da254a43da0820efa3edd3bb12f1e8f0e1eb4c8803df",
     "src/script/ai_get_distance_to_move_point.cpp": "c3fa27b2b91abd35108e8bdc2b92a55674375bbf138936e6aac956f201b9fbd7",
     "src/script/ai_get_distance_to_target_xyz.cpp": "92ccca639c1bdd699cd060335f0c1478d4332dc04152eba2c4734e588b840647",
-    "src/script/ai_get_next_behavior_type.cpp": "5cc8bcae4c62d7020af5556f27c610e614cb1bf89bc493857af8c6cfc1f6bcfe",
+    "src/script/ai_get_next_behavior_type.cpp": "0a977ef69f17215c62fccb198051742f759dd79b54465a901d527a4eba55fbd9",
     "src/script/ai_get_pan_angle_to_move_point.cpp": "5446880c67bbd97a4a616b373e44272c0d1c10f9b9f8f2354fdf22729a9eda60",
     "src/script/ai_get_previous_behavior_script.cpp": "d30715b0818fec12b764043e84c7922848c6bbc6898e7d119ba23a467f544246",
     "src/script/ai_get_previous_behavior_type.cpp": "02b4bce41e8430f970109d3b4bb7eaea3f28702a972075f21614d0a5257e9491",
@@ -10330,7 +10354,7 @@
     "src/script/grenade_timer_get.cpp": "07314f404ff3339037064ad840142e959f30a296d38449c626c8af6a3db5c7ef",
     "src/script/has_any_film_canister.cpp": "2aca636b9de4e87bd3c487b6190674931f87e4d4dc4864c62d89cd786beac740",
     "src/script/has_film_canister.cpp": "154bc0d9a8bf84a9cef31c6db403ea31d1aa48ddb566e1e3a4e0f5765a41d021",
-    "src/script/has_pistol.cpp": "813e43eaefc88cb8377f224d82eafd92045b75b9c873667e02a788dfd4d887c4",
+    "src/script/has_pistol.cpp": "1123b010019698531b0b05ad8fa8ddfe74605fcff8246b780c5e3fb572131ac4",
     "src/script/has_replay_item.cpp": "6da729e9f74905bcb4d6180b09985978b23fc40a7ee901be6fc464230f8f4377",
     "src/script/hier_object_fire.cpp": "aa30fe3d7483c75667f5e3ce6481e1f65ed0a17fcefedc923506efb5160770c3",
     "src/script/hier_object_map_weapon.cpp": "7d7638a98df8d016eeb11133388a2923bd94f8a4b157ce1aa1c2725bcd1aa1f7",
@@ -51701,6 +51725,114 @@
       "discarded_functions": [],
       "object_sha256": "19cde3e2b8756a2294ef2aeae3730df13eff3db16f0ee147607241b5711c3fb6",
       "linked_sha256": "a2bae157824bbf6cc08e7fb3a6ca810704ac18f418e47249cfa9bf2e8d125559"
+    },
+    {
+      "id": "ai_Behavior",
+      "category": "reconstructed_game",
+      "functions": 9,
+      "code_bytes": 280,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "34df1226d409f3f12dd43321728a38d99d2f9f2a2ccf3d874e51b556abdb97c8",
+      "linked_sha256": "20f906e52b05a9a797bb15b846b6fb65d8b9d6a965aaa0ead2c557379f00a319"
+    },
+    {
+      "id": "ai_SwordBehavior",
+      "category": "reconstructed_game",
+      "functions": 15,
+      "code_bytes": 964,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "bc08d6bcf184e642340bb4f08568b044f5528f3aa36fa8c5f7fbea3984c49c64",
+      "linked_sha256": "6716faba20de3217143ef53f622e5bc72f68b00822d7562a663963d47704ed5c"
+    },
+    {
+      "id": "ai_PistolBehavior",
+      "category": "reconstructed_game",
+      "functions": 12,
+      "code_bytes": 664,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "82c3a6723774607c153d66bdd16a801cf62a116312f00d52b27aca82724ad72c",
+      "linked_sha256": "549898db973e0a0972388f22bf11c4f925983c8bf6ecc0733452b8d55bdf59e8"
+    },
+    {
+      "id": "ai_RifleBehavior",
+      "category": "reconstructed_game",
+      "functions": 12,
+      "code_bytes": 564,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e5cf51b7c16235132f795369f0f5d73c91e6abd3aef4230bbf931a5cd2e3d52f",
+      "linked_sha256": "bbcfd0e675c2eb7d7e66634a3a96960b62624f02c86fecd77c0a161cbdaaa366"
+    },
+    {
+      "id": "ai_NullWeaponBehavior",
+      "category": "reconstructed_game",
+      "functions": 12,
+      "code_bytes": 532,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "17acf9de438ac2f5fd553d4c17a352dad994b3c72ff33742172b9a3a42bb3686",
+      "linked_sha256": "d1890148cf3a9f6567b1cbdb9c744c349f27d864f9a555810053911aca098497"
+    },
+    {
+      "id": "ai_PolemineBehavior",
+      "category": "reconstructed_game",
+      "functions": 12,
+      "code_bytes": 520,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "a8f7a11b5a755326c9b914b6766533e50bc9f1b02e8d493efa3600af4c008dd7",
+      "linked_sha256": "63a712a67355ee7d70405391676b9ff1deadf9735591b6425882af8e32589316"
     }
   ],
   "code_map": {
@@ -64634,80 +64766,6 @@
         ]
       },
       {
-        "name": "Unmatched files/Behavior.cpp [inferred file group]",
-        "file_record": 171,
-        "file_name": "Behavior.cpp",
-        "ranges": [
-          {
-            "address": "0x800e27fc",
-            "size": 40,
-            "kind": "function",
-            "name": "__9CBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e2824",
-            "size": 52,
-            "kind": "function",
-            "name": "_._9CBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e2858",
-            "size": 136,
-            "kind": "function",
-            "name": "Update__9CBehaviorib",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e28e0",
-            "size": 4,
-            "kind": "function",
-            "name": "ReleaseResources__9CBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e28e4",
-            "size": 8,
-            "kind": "function",
-            "name": "GetType__9CBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e28ec",
-            "size": 8,
-            "kind": "function",
-            "name": "GetCRC__9CBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e28f4",
-            "size": 12,
-            "kind": "function",
-            "name": "Enable__9CBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e2900",
-            "size": 12,
-            "kind": "function",
-            "name": "Disable__9CBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e290c",
-            "size": 8,
-            "kind": "function",
-            "name": "GetScriptObject__9CBehavior",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x800e27fc",
-          "0x800e2914"
-        ]
-      },
-      {
         "name": "Unmatched files/MountedMachineGunBehavior.cpp [inferred file group]",
         "file_record": 172,
         "file_name": "MountedMachineGunBehavior.cpp",
@@ -65256,502 +65314,6 @@
         "marker_interval": [
           "0x800e5188",
           "0x800e575c"
-        ]
-      },
-      {
-        "name": "Unmatched files/SwordBehavior.cpp [inferred file group]",
-        "file_record": 175,
-        "file_name": "SwordBehavior.cpp",
-        "ranges": [
-          {
-            "address": "0x800e575c",
-            "size": 84,
-            "kind": "function",
-            "name": "__14CSwordBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e57b0",
-            "size": 48,
-            "kind": "function",
-            "name": "_._14CSwordBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e57e0",
-            "size": 8,
-            "kind": "function",
-            "name": "GetCurrentHeuristicScore__14CSwordBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e57e8",
-            "size": 8,
-            "kind": "function",
-            "name": "GetHeuristicUpdateFrequency__14CSwordBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e57f0",
-            "size": 112,
-            "kind": "function",
-            "name": "UpdateHeuristicScore__14CSwordBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5860",
-            "size": 112,
-            "kind": "function",
-            "name": "StartBehavior__14CSwordBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e58d0",
-            "size": 136,
-            "kind": "function",
-            "name": "StopBehavior__14CSwordBehaviorb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5958",
-            "size": 44,
-            "kind": "function",
-            "name": "GetCapabilities__14CSwordBehavior11ECapability",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5984",
-            "size": 40,
-            "kind": "function",
-            "name": "GetCRC__14CSwordBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e59ac",
-            "size": 8,
-            "kind": "function",
-            "name": "SetWeaponScript__14CSwordBehaviorP8BSObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e59b4",
-            "size": 8,
-            "kind": "function",
-            "name": "IsSwordDrawn__14CSwordBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e59bc",
-            "size": 8,
-            "kind": "function",
-            "name": "SetSwordDrawn__14CSwordBehaviorb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e59c4",
-            "size": 332,
-            "kind": "function",
-            "name": "ChooseSwordOrPistol__FP9CAIObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5b10",
-            "size": 8,
-            "kind": "function",
-            "name": "GetType__14CSwordBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5b18",
-            "size": 8,
-            "kind": "function",
-            "name": "GetScriptObject__14CSwordBehavior",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x800e575c",
-          "0x800e5b20"
-        ]
-      },
-      {
-        "name": "Unmatched files/PistolBehavior.cpp [inferred file group]",
-        "file_record": 176,
-        "file_name": "PistolBehavior.cpp",
-        "ranges": [
-          {
-            "address": "0x800e5b20",
-            "size": 88,
-            "kind": "function",
-            "name": "__15CPistolBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5b78",
-            "size": 48,
-            "kind": "function",
-            "name": "_._15CPistolBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5ba8",
-            "size": 8,
-            "kind": "function",
-            "name": "GetCurrentHeuristicScore__15CPistolBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5bb0",
-            "size": 8,
-            "kind": "function",
-            "name": "GetHeuristicUpdateFrequency__15CPistolBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5bb8",
-            "size": 112,
-            "kind": "function",
-            "name": "UpdateHeuristicScore__15CPistolBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5c28",
-            "size": 108,
-            "kind": "function",
-            "name": "StartBehavior__15CPistolBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5c94",
-            "size": 140,
-            "kind": "function",
-            "name": "StopBehavior__15CPistolBehaviorb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5d20",
-            "size": 88,
-            "kind": "function",
-            "name": "GetCapabilities__15CPistolBehavior11ECapability",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5d78",
-            "size": 40,
-            "kind": "function",
-            "name": "GetCRC__15CPistolBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5da0",
-            "size": 8,
-            "kind": "function",
-            "name": "SetWeaponScript__15CPistolBehaviorP8BSObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5da8",
-            "size": 8,
-            "kind": "function",
-            "name": "GetType__15CPistolBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5db0",
-            "size": 8,
-            "kind": "function",
-            "name": "GetScriptObject__15CPistolBehavior",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x800e5b20",
-          "0x800e5db8"
-        ]
-      },
-      {
-        "name": "Unmatched files/RifleBehavior.cpp [inferred file group]",
-        "file_record": 177,
-        "file_name": "RifleBehavior.cpp",
-        "ranges": [
-          {
-            "address": "0x800e5db8",
-            "size": 88,
-            "kind": "function",
-            "name": "__14CRifleBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5e10",
-            "size": 48,
-            "kind": "function",
-            "name": "_._14CRifleBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5e40",
-            "size": 8,
-            "kind": "function",
-            "name": "GetCurrentHeuristicScore__14CRifleBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5e48",
-            "size": 8,
-            "kind": "function",
-            "name": "GetHeuristicUpdateFrequency__14CRifleBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5e50",
-            "size": 60,
-            "kind": "function",
-            "name": "UpdateHeuristicScore__14CRifleBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5e8c",
-            "size": 108,
-            "kind": "function",
-            "name": "StartBehavior__14CRifleBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5ef8",
-            "size": 140,
-            "kind": "function",
-            "name": "StopBehavior__14CRifleBehaviorb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5f84",
-            "size": 40,
-            "kind": "function",
-            "name": "GetCapabilities__14CRifleBehavior11ECapability",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5fac",
-            "size": 40,
-            "kind": "function",
-            "name": "GetCRC__14CRifleBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5fd4",
-            "size": 8,
-            "kind": "function",
-            "name": "SetWeaponScript__14CRifleBehaviorP8BSObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5fdc",
-            "size": 8,
-            "kind": "function",
-            "name": "GetType__14CRifleBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e5fe4",
-            "size": 8,
-            "kind": "function",
-            "name": "GetScriptObject__14CRifleBehavior",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x800e5db8",
-          "0x800e5fec"
-        ]
-      },
-      {
-        "name": "Unmatched files/NullWeaponBehavior.cpp [inferred file group]",
-        "file_record": 178,
-        "file_name": "NullWeaponBehavior.cpp",
-        "ranges": [
-          {
-            "address": "0x800e5fec",
-            "size": 88,
-            "kind": "function",
-            "name": "__19CNullWeaponBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e6044",
-            "size": 48,
-            "kind": "function",
-            "name": "_._19CNullWeaponBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e6074",
-            "size": 8,
-            "kind": "function",
-            "name": "GetCurrentHeuristicScore__19CNullWeaponBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e607c",
-            "size": 8,
-            "kind": "function",
-            "name": "GetHeuristicUpdateFrequency__19CNullWeaponBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e6084",
-            "size": 60,
-            "kind": "function",
-            "name": "UpdateHeuristicScore__19CNullWeaponBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e60c0",
-            "size": 108,
-            "kind": "function",
-            "name": "StartBehavior__19CNullWeaponBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e612c",
-            "size": 140,
-            "kind": "function",
-            "name": "StopBehavior__19CNullWeaponBehaviorb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e61b8",
-            "size": 8,
-            "kind": "function",
-            "name": "GetCapabilities__19CNullWeaponBehavior11ECapability",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e61c0",
-            "size": 40,
-            "kind": "function",
-            "name": "GetCRC__19CNullWeaponBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e61e8",
-            "size": 8,
-            "kind": "function",
-            "name": "SetWeaponScript__19CNullWeaponBehaviorP8BSObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e61f0",
-            "size": 8,
-            "kind": "function",
-            "name": "GetType__19CNullWeaponBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e61f8",
-            "size": 8,
-            "kind": "function",
-            "name": "GetScriptObject__19CNullWeaponBehavior",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x800e5fec",
-          "0x800e6200"
-        ]
-      },
-      {
-        "name": "Unmatched files/PolemineBehavior.cpp [inferred file group]",
-        "file_record": 179,
-        "file_name": "PolemineBehavior.cpp",
-        "ranges": [
-          {
-            "address": "0x800e6200",
-            "size": 80,
-            "kind": "function",
-            "name": "__17CPolemineBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e6250",
-            "size": 48,
-            "kind": "function",
-            "name": "_._17CPolemineBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e6280",
-            "size": 8,
-            "kind": "function",
-            "name": "GetCurrentHeuristicScore__17CPolemineBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e6288",
-            "size": 8,
-            "kind": "function",
-            "name": "GetHeuristicUpdateFrequency__17CPolemineBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e6290",
-            "size": 60,
-            "kind": "function",
-            "name": "UpdateHeuristicScore__17CPolemineBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e62cc",
-            "size": 108,
-            "kind": "function",
-            "name": "StartBehavior__17CPolemineBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e6338",
-            "size": 128,
-            "kind": "function",
-            "name": "StopBehavior__17CPolemineBehaviorb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e63b8",
-            "size": 16,
-            "kind": "function",
-            "name": "GetCapabilities__17CPolemineBehavior11ECapability",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e63c8",
-            "size": 40,
-            "kind": "function",
-            "name": "GetCRC__17CPolemineBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e63f0",
-            "size": 8,
-            "kind": "function",
-            "name": "SetWeaponScript__17CPolemineBehaviorP8BSObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e63f8",
-            "size": 8,
-            "kind": "function",
-            "name": "GetType__17CPolemineBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e6400",
-            "size": 8,
-            "kind": "function",
-            "name": "GetScriptObject__17CPolemineBehavior",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x800e6200",
-          "0x800e6408"
         ]
       },
       {
