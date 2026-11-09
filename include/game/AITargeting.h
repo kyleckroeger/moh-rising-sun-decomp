@@ -79,6 +79,7 @@ public:
     BSObject *GetTargetScript() const;
     static void RegisterLocationTarget(int, bool, ETeam, BSObject *);
     static void DeRegisterLocationTarget(int);
+    static void ResetLocationTargets();
     static CAITarget GetLocationTarget(int);
     bool IsNonAITarget() const;
     bool HasValidTarget() const;
@@ -362,6 +363,12 @@ public:
     void Disable();
     void UseMovingTarget(ISceneNode *, float);
     int IsPointUsable(const CVector3 &);
+    unsigned char unknown00[4];
+    int mode;           // +0x04; 0 anywhere, 1 around the node, 2 around the point.
+    unsigned char unknown08[8];
+    CVector3 point;     // +0x10
+    ISceneNode *node;   // +0x20
+    float radius;       // +0x24
 };
 class CAIThreat {
 public:

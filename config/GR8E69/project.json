@@ -2114,7 +2114,14 @@
     "player_target_find.json",
     "scene_HearingVolumeCtor.json",
     "scene_HearingVolume.json",
-    "scene_HearingVolumeId.json"
+    "scene_HearingVolumeId.json",
+    "ai_MMGBehaviorHead.json",
+    "ai_MMGBehaviorStop.json",
+    "ai_MMGBehaviorFlags.json",
+    "ai_MMGBehaviorTail.json",
+    "ai_AI.json",
+    "ai_AIActivityZone.json",
+    "ai_AILaggedVector.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

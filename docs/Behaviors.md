@@ -49,6 +49,11 @@ byte, with their native tables and literal pools. There is no Frontline counterp
   line-of-sight override, at `+0xdb8` and `+0xdc0` of the soldier AI object, follows the
   embedded coverpoint behavior and ends the 3536-byte allocation.
 
+- `CMountedMachineGunBehavior`: the constructor, destructor (which withdraws any bid on
+  its gun), `StopBehavior`, `ReleaseResources`, capabilities and the setters match.
+- `AI::Initialize`, `Restart` and `Shutdown`, `CAIActivityZone`'s point test and setters,
+  and `CAILaggedVector::Init` and `Reset` match.
+
 ## Not reconstructed yet
 
 - `CCoverpointBehavior::UpdateHeuristicScore`, `StartBehavior`, `GetCapabilities` and

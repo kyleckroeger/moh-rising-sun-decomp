@@ -10,17 +10,33 @@ class CStaticObject;
 // CAIObject::FindMatchingBehavior. Each class's GetType returns the selector
 // noted beside it. Storage, bases and virtual interfaces are not declared; the
 // built-ins convert the returned behavior pointer without adjustment.
-// Observed prefix of a buddy-lead checkpoint record.
-struct BuddyLeadCheckpoint {
-    int unknown_0;
-    int value; // +0x4; returned by BIFunc_GetBuddyLeadCheckpointFromID.
-};
 class CCoverPoint;
-class CBuddyLeadBehavior { // Type 1.
+// A buddy-lead checkpoint record: only its prefix is observed. The tag is original.
+struct Checkpoint_t {
+    TriggerObject *trigger; // +0x0
+    int value;              // +0x4; returned by BIFunc_GetBuddyLeadCheckpointFromID.
+    int reached;            // +0x8
+};
+typedef Checkpoint_t BuddyLeadCheckpoint;
+class CBuddyLeadBehavior : public CBehavior { // Type 1.
   public:
+    CBuddyLeadBehavior();
+    virtual ~CBuddyLeadBehavior();
+    virtual float GetCurrentHeuristicScore();
+    virtual int GetHeuristicUpdateFrequency();
+    virtual int UpdateHeuristicScore();
+    virtual int StartBehavior();
+    virtual void StopBehavior(bool);
+    virtual int GetCapabilities(ECapability);
+    virtual int GetType();
     static BuddyLeadCheckpoint *GetBuddyLeadCheckpointFromID(int);
     void HandleCheckpointReachedByBuddy(int);
     static void HandleCheckpointReachedByPlayer(int);
+    static void CacheBuddyLeadTriggers();
+    int checkpointDone;   // +0x10
+    int finished;         // +0x14
+    float heuristicScore; // +0x18
+    Checkpoint_t *currentCheckpoint; // +0x1c
 };
 
 class CBuddyFollowBehavior : public CBehavior { // Type 2.
@@ -169,6 +185,10 @@ class CMountedMachineGunBehavior : public CBehavior { // Type 3.
     static CStaticObject *GetGunByLinkCode(int);
     static void RegisterFeeder(int, BSObject *);
     static void RegisterGun(int, CStaticObject *);
+    static void DeregisterAllGuns();
+    static void DeregisterAllFeeders();
+    static void DeregisterMMGTriggers();
+    static void RegisterMMGTriggers();
     EAIHighLevelState behaviorStyle; // +0x10; the name's event argument.
     float heuristicScore;            // +0x14
     BSObject *gunScript;             // +0x18
@@ -211,6 +231,7 @@ class CCoverpointBehavior : public CBehavior { // Type 4.
     void ForceToCoverPoint();
     static void InvalidateCoverPointByID(int);
     static void RegisterCoverpoint(TriggerObject *);
+    static void ResetCoverpoints();
     float heuristicScore;      // +0x10
     unsigned char unknown14[4];
     BSObject *coverScript;     // +0x18; the chosen cover point's script object.
@@ -272,17 +293,34 @@ class CSwordBehavior : public CBehavior { // Type 8.
     BSObject *weaponScript; // +0x18
 };
 
-class CGrenadeResponseBehavior { // Type 10.
+class CGrenadeResponseBehavior : public CBehavior { // Type 10.
   public:
-    unsigned char unknown_0[0x24];
-    int caught; // +0x24; set by BIFunc_CatchGrenade.
+    virtual ~CGrenadeResponseBehavior();
+    virtual float GetCurrentHeuristicScore();
+    virtual int GetHeuristicUpdateFrequency();
+    virtual int UpdateHeuristicScore();
+    virtual int StartBehavior();
+    virtual void StopBehavior(bool);
+    virtual void ReleaseResources();
+    virtual int GetCapabilities(ECapability);
+    virtual int GetType();
+    virtual BSObject *GetScriptObject();
     void FinishedResponse(CThrownBullet *);
+    static void Initialize();
+    static void Shutdown();
+    unsigned char unknown10[0x18 - 0x10];
+    BSObject *responseScript; // +0x18; destroyed by ReleaseResources.
+    unsigned char unknown1c[0x24 - 0x1c];
+    int caught; // +0x24; set by BIFunc_CatchGrenade.
+    unsigned char unknown28[0x2c - 0x28];
+    float heuristicScore; // +0x2c
 };
 
 // Static scripted-gag entry points.
 class CScriptedGag {
   public:
     static void RegisterGagAction(BSObject *, const char *, int);
+    static void UnregisterAllGagActions();
     static void StartGag(BSObject *, const char *, int);
     static void StartGag(BSObject *, unsigned int, int);
 };

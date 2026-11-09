@@ -68,17 +68,38 @@ class CAreaPathNode {
 public:
     void GetFurthestVertex(const CVector3 &, const CVector3 &, CVector3 *, bool) const;
     void BiasTowardCentroid(CVector3 *, float) const;
+    bool ContainsPoint(const CVector3 &) const;
+    void UpdateOutOfArea();
+    void ResetOutOfArea();
+    void MarkAsOutOfArea();
+    void MarkAsInArea();
+    unsigned char unknown00[6];
+    unsigned char inArea; // +0x06
+    unsigned char unknown07[16 - 7]; // Sixteen bytes per node, from the node-array stride.
 };
 class CAIAreaPathFinding {
 public:
+    static void ResetAStarVolumes();
     unsigned char unknown00[0x20];
     CAILocomotion *locomotion;
+    BSObject *scriptObject;   // +0x24
+    unsigned char unknown28[4];
+    int currentVolume;        // +0x2c
+    int volumeCount;          // +0x30
+    unsigned char unknown34[0x40 - 0x34];
+    CVector3 closestPosition; // +0x40
+    CAIObject *targetObject;  // +0x50
+    unsigned char unknown54[0x98 - 0x54];
+    int pathFinished;         // +0x98
     void StopAStarPathWalk();
     void UpdateOffAStarPosition();
     int StartAStarPathWalk(BSObject *, EAStarDestinationInfo);
     int StartAStarPathWalk(EAStarDestinationInfo);
     void EnterAStarVolume(int);
     void GetClosestPositionOnAStar(CVector3 *) const;
+    void FinishPath();
+    int GetWalkType();
+    void StopWalk();
     static void RegisterAStarVolume(TriggerObject *, int);
     static void RegisterAStarLinkPoint(TriggerObject *, int, int, int);
     void ExitAStarVolume(int);
@@ -94,6 +115,10 @@ public:
 // no-argument class static without one (`f__1A`), and `_13AIPathFinding.g_iLastPathNodeUpdatedOutOfArea`
 // has local binding, which a class static data member cannot have.
 namespace AIPathFinding {
+void ResetAreaPathNodes();
+    CAreaPathNode *GetClosestPathNode(const CVector3 &, int);
+    CAreaPathNode *GetPathNodeByIndex(unsigned short);
+    unsigned short GetIndexByPathNode(CAreaPathNode *);
     bool IsPointOnNetwork(const CVector3 &);
     void UpdateAStarNodesOutOfArea();
 }
