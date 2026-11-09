@@ -2428,7 +2428,12 @@
     "meshparticle_init.json",
     "meshparticle_detach.json",
     "particlesystem_detach.json",
-    "game_drivecheck_status.json"
+    "game_drivecheck_status.json",
+    "projector_system_def.json",
+    "particlesystem_ctor.json",
+    "particlesystem_reset.json",
+    "meshparticle_draw.json",
+    "particlesystem_draw.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

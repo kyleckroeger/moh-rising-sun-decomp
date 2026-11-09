@@ -175,3 +175,10 @@ of 272 bytes each, and tags the allocation `source/system/freepool.h:38`. Its po
 inline here; the header line suggests the original had a pool template. `Detach` in both particle classes clears
 the attached node and the attach matrix (`+220` and `+0x144`). `MeshParticleSystem::DeInit` is not reconstructed:
 its two saved registers are rotated.
+
+## Particle system construction
+
+`CParticleSystem`'s default constructor runs a class-initialization check for each of its two member matrices,
+in member order, which `CheckedMatrix` in the header reproduces; the five vectors at `+0x40` and the matrix at
+`+0x100` have placeholder names. The pool's stride is 400 bytes and `ResetSystem` relinks every system onto the
+free list. `CProjectorSystemDef` (`projector.cpp`) loads a shape from the repository into a `TAR` at `+8`.

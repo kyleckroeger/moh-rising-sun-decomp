@@ -280,6 +280,7 @@
       "src/camera/projector_frustum.cpp": "44b4b71bb7db97ec31969b874dfbb0ee080b29177e68f9cb3bad12492920c385",
       "src/camera/projector_pool.cpp": "544a077f281a7bce8e304e06c4158a4de328f214663dd0c04e6f5c5353c22e5b",
       "src/camera/projector_slots.cpp": "b88c8cc7ea89020e53e212de96ef95bce62d9cfcb51d02bc38f5dda9c169e05f",
+      "src/camera/projector_system_def.cpp": "b3f3ab612a547fe5e09c27c9c28bc8fc02c862fc0e211e40eee75f3c51862849",
       "src/camera/projector_transform.cpp": "fc75ec7dd827e4dff1c708ee56cf1cc3ad745bad887d7e25723c79f73dca65d8",
       "src/camera/projector_update_projection.cpp": "360d2a3f98375821e29f821497142d88a406fed56ae2a9695889b58a87aab2b2",
       "src/camera/projector_visible.cpp": "747f4ed33be995f03ef9caa68f3abc6ad7bbc853cf9fcdb6b5b509ec49978895",
@@ -1307,6 +1308,7 @@
       "src/particles/ParticleVelocity.cpp": "ea620216e51ba6219de1500b4a0f6db91dee7a87a57af227afba091f8f8b910c",
       "src/particles/meshparticle_alloc.cpp": "3a0906580ebebfb4ab4b6ab8df6a16c1d4954d5ac1aa1254ab84b1db2defadb7",
       "src/particles/meshparticle_detach.cpp": "a6724ae3888bc9efd26ff44788192b3ff97751c972fd4f808564affdee6d2cfe",
+      "src/particles/meshparticle_draw.cpp": "c198a15463654aad4c6cbebe541334dc0f911bf8fe6baf85800f41a572809585",
       "src/particles/meshparticle_init.cpp": "e4e6e02f26c4a0b864e4b47c7ae3822556f49cca0413e4f1a9dff6f58b6966b5",
       "src/particles/meshparticle_lifecycle.cpp": "1588b8228b8363d4e02895482812c083afc663c5082dc5790c22df8b9e593b0b",
       "src/particles/meshparticle_release.cpp": "908b004bd72a6a63407c9009c5412d109a1ae54d44273142c94d2fdd5f88cd59",
@@ -1316,10 +1318,13 @@
       "src/particles/particledef_base_proc.cpp": "b5f399a06a1573451826715b0d5865c621d4b2cb31a99f8abf382950bdbbbf42",
       "src/particles/particledef_inlines.cpp": "fcfede5f3625c258c128793069e6c4dce8c40e8ba3103a3caafa44a87923865c",
       "src/particles/particledef_mesh.cpp": "91ad79c3c6ef969e95266bdc11617d9747913baf2fc93c124528341906a6e315",
+      "src/particles/particlesystem_ctor.cpp": "880e75d602498551014c03566bb08612c0026be657b2f3521ea8654d62f9e14a",
       "src/particles/particlesystem_detach.cpp": "5bf491465dd724a1999632df001b2f1d63b8ae631dee555380583013fdfbc697",
+      "src/particles/particlesystem_draw.cpp": "6a64dbc8a8dcfd818a775d48508fee18fc0b76dfda104b6e0099fd4012ebc4b2",
       "src/particles/particlesystem_event.cpp": "f2df934890f3786edc188ecda549b0d283f6e31b401f902a9454997949034333",
       "src/particles/particlesystem_executedraw.cpp": "b50a19ef2bf3cd263f0baca9b9fba7c410b2f48921a351417bbf6249c0e7a28e",
       "src/particles/particlesystem_fade.cpp": "b50d1a48f794f2c23c0c0cdb916d9b7cff629e8d4166dc9cf34385c7ac1bbcc3",
+      "src/particles/particlesystem_reset.cpp": "a8d4334f707bd78cf1a8cc632930a01964dc087a17e90056c87c8e017f13a893",
       "src/particles/particlesystem_transforms.cpp": "c8b71b5bd9cf31ad7b5f385cd51faae49782b30571fd3a4a246d8ab612b90963",
       "src/pathfinding/PathFindingNetwork.cpp": "93cf9c07d942c5c46a7f770d11d4ae4284fb90d321d8856cdddc1c1d08fd7bdf",
       "src/player/AnimPlayerA.cpp": "ac9bb376d7ac85733a1012066c00544be99c6730cfb6d1a18b50d138341f4f82",
@@ -4083,6 +4088,7 @@
       "config/GR8E69/mesh_vis.json": "39470d819c852e973991545391bf6c3ce5025266ef99181c119aabce27cd8370",
       "config/GR8E69/meshparticle_alloc.json": "a5cc70fa4821566dbc31276abeb3f441d8d578dc483d39928e90f9f0c78e1896",
       "config/GR8E69/meshparticle_detach.json": "b2674ec85940576813340f0a2085ca858d0d15c82208ec7202bc36d2edc761b1",
+      "config/GR8E69/meshparticle_draw.json": "8ffa7607477af08e56ddd63c80ffb42dba56dc44f290161dbeda5a738099aae6",
       "config/GR8E69/meshparticle_init.json": "97ef4cf10257856523e098568ffe46be131d46802a41c81fb5b268e5c8aaa1ae",
       "config/GR8E69/meshparticle_lifecycle.json": "061d97e4b52a7542de426462383bb7eba308b3eda346ef7e4014273c15b00a4b",
       "config/GR8E69/meshparticle_release.json": "8b52e415b56637bd1105aec861e817851a5f320214bd1bc85b6a275c23cc7cf7",
@@ -4268,10 +4274,13 @@
       "config/GR8E69/particledef_base_proc.json": "5b1486844d87abe74b300f034478842400f9a65b77cb5ade005b86423bfea260",
       "config/GR8E69/particledef_inlines.json": "da72065e03f93f9c76d9b70c96142339e543a2967ac5305ed5aaf142876a2332",
       "config/GR8E69/particledef_mesh.json": "134eb1f0a1f8c8460fdf4d9f1194516c73ff1740d61ddfb116b50b072c419770",
+      "config/GR8E69/particlesystem_ctor.json": "713906b9febee89683299a888f9e66b0cc0d438d917e20d6a589ea7cbb93ba24",
       "config/GR8E69/particlesystem_detach.json": "c8db55c4c0571083694c6cd2ff70dc45cc5f512ee30ef545c57e1e28f11d8869",
+      "config/GR8E69/particlesystem_draw.json": "5000cfa84f057f74d2226fd2aa3bc48aab6515994af2f5c58945d159c54556b3",
       "config/GR8E69/particlesystem_event.json": "99b6fa31cf58a26854281fa74537930e69106f6bdb081f80ff6d82317a5ca642",
       "config/GR8E69/particlesystem_executedraw.json": "4b4c8071fd4ca1c24a69d8fe70b8266a4b0daea4d95aee78d954b4ed7cdb22c7",
       "config/GR8E69/particlesystem_fade.json": "44efb08287dd2c757a2a1bad6b5a454b358fc3dc3198557099506b249c1c1706",
+      "config/GR8E69/particlesystem_reset.json": "7214a9b7120cfdeee1a2696a3744d8d0ef035ebdf9ab15f32d57fd00c1b94bda",
       "config/GR8E69/particlesystem_transforms.json": "a484ade964b87bb43b977c8a3c7094cac268d66ba358f4dffffedfa94039426f",
       "config/GR8E69/pausemenu_cpausemenu.json": "1bc496bd6b8f75035d21f4dbb1b52ea5ccc654510f8b823cde1cfa929f5041d1",
       "config/GR8E69/pausemenu_processuievent.json": "ff2b7f97606a7548f2a53946503f1d4b413419933fed9e9ccc0d9b0e83bb6c52",
@@ -4348,7 +4357,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "e0ef7a3af890ead2e6c0aeee42a6e3f43c566ca7cc89bc79371c9e965f15bd69",
+      "config/GR8E69/project.json": "a138039fd07d05ed652467893afac9b044641df0edec2f04de1139cc0414bd0e",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -4368,6 +4377,7 @@
       "config/GR8E69/projector_frustum.json": "1603e78b84f1f9fdfd5e665a93a4f37df7b62d58675690bdd778551ce78d336e",
       "config/GR8E69/projector_pool.json": "66ab57dd5bc8c214f494f265b7e8ab32185e5b2b5a081be37e9b06e0e2411ee5",
       "config/GR8E69/projector_slots.json": "2329c4532e1e0ffe8caa7905c56be61619dd334fdaf4eeebdeca590775014eb0",
+      "config/GR8E69/projector_system_def.json": "500b493b86a181a2246c6eedd0d516428473472d37b3968b7496d75bb7ba413d",
       "config/GR8E69/projector_transform.json": "e6e6a917c17abd1ed871a0f686bda319e7cf240b880427a3ac5229517425ddde",
       "config/GR8E69/projector_update_projection.json": "636932c9b59adb625b570d273b30a037aa9f1f05673dee5749a9e7e498a484c9",
       "config/GR8E69/projector_visible.json": "612c6694d4f58cb3b002abdac52037cc3cffe7a5223db4b63ede7082f570792c",
@@ -7074,14 +7084,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1242692,
+    "matching_code_bytes": 1243712,
     "total_executable_code_bytes": 2492032,
-    "percent": 49.866614874929375,
+    "percent": 49.9075453284709,
     "categories": {
-      "reconstructed_game": 850476,
+      "reconstructed_game": 851496,
       "restored_library": 392216
     },
-    "matching_functions": 6532
+    "matching_functions": 6540
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -8104,6 +8114,7 @@
     "config/GR8E69/mesh_vis.json": "39470d819c852e973991545391bf6c3ce5025266ef99181c119aabce27cd8370",
     "config/GR8E69/meshparticle_alloc.json": "a5cc70fa4821566dbc31276abeb3f441d8d578dc483d39928e90f9f0c78e1896",
     "config/GR8E69/meshparticle_detach.json": "b2674ec85940576813340f0a2085ca858d0d15c82208ec7202bc36d2edc761b1",
+    "config/GR8E69/meshparticle_draw.json": "8ffa7607477af08e56ddd63c80ffb42dba56dc44f290161dbeda5a738099aae6",
     "config/GR8E69/meshparticle_init.json": "97ef4cf10257856523e098568ffe46be131d46802a41c81fb5b268e5c8aaa1ae",
     "config/GR8E69/meshparticle_lifecycle.json": "061d97e4b52a7542de426462383bb7eba308b3eda346ef7e4014273c15b00a4b",
     "config/GR8E69/meshparticle_release.json": "8b52e415b56637bd1105aec861e817851a5f320214bd1bc85b6a275c23cc7cf7",
@@ -8289,10 +8300,13 @@
     "config/GR8E69/particledef_base_proc.json": "5b1486844d87abe74b300f034478842400f9a65b77cb5ade005b86423bfea260",
     "config/GR8E69/particledef_inlines.json": "da72065e03f93f9c76d9b70c96142339e543a2967ac5305ed5aaf142876a2332",
     "config/GR8E69/particledef_mesh.json": "134eb1f0a1f8c8460fdf4d9f1194516c73ff1740d61ddfb116b50b072c419770",
+    "config/GR8E69/particlesystem_ctor.json": "713906b9febee89683299a888f9e66b0cc0d438d917e20d6a589ea7cbb93ba24",
     "config/GR8E69/particlesystem_detach.json": "c8db55c4c0571083694c6cd2ff70dc45cc5f512ee30ef545c57e1e28f11d8869",
+    "config/GR8E69/particlesystem_draw.json": "5000cfa84f057f74d2226fd2aa3bc48aab6515994af2f5c58945d159c54556b3",
     "config/GR8E69/particlesystem_event.json": "99b6fa31cf58a26854281fa74537930e69106f6bdb081f80ff6d82317a5ca642",
     "config/GR8E69/particlesystem_executedraw.json": "4b4c8071fd4ca1c24a69d8fe70b8266a4b0daea4d95aee78d954b4ed7cdb22c7",
     "config/GR8E69/particlesystem_fade.json": "44efb08287dd2c757a2a1bad6b5a454b358fc3dc3198557099506b249c1c1706",
+    "config/GR8E69/particlesystem_reset.json": "7214a9b7120cfdeee1a2696a3744d8d0ef035ebdf9ab15f32d57fd00c1b94bda",
     "config/GR8E69/particlesystem_transforms.json": "a484ade964b87bb43b977c8a3c7094cac268d66ba358f4dffffedfa94039426f",
     "config/GR8E69/pausemenu_cpausemenu.json": "1bc496bd6b8f75035d21f4dbb1b52ea5ccc654510f8b823cde1cfa929f5041d1",
     "config/GR8E69/pausemenu_processuievent.json": "ff2b7f97606a7548f2a53946503f1d4b413419933fed9e9ccc0d9b0e83bb6c52",
@@ -8369,7 +8383,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "e0ef7a3af890ead2e6c0aeee42a6e3f43c566ca7cc89bc79371c9e965f15bd69",
+    "config/GR8E69/project.json": "a138039fd07d05ed652467893afac9b044641df0edec2f04de1139cc0414bd0e",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -8389,6 +8403,7 @@
     "config/GR8E69/projector_frustum.json": "1603e78b84f1f9fdfd5e665a93a4f37df7b62d58675690bdd778551ce78d336e",
     "config/GR8E69/projector_pool.json": "66ab57dd5bc8c214f494f265b7e8ab32185e5b2b5a081be37e9b06e0e2411ee5",
     "config/GR8E69/projector_slots.json": "2329c4532e1e0ffe8caa7905c56be61619dd334fdaf4eeebdeca590775014eb0",
+    "config/GR8E69/projector_system_def.json": "500b493b86a181a2246c6eedd0d516428473472d37b3968b7496d75bb7ba413d",
     "config/GR8E69/projector_transform.json": "e6e6a917c17abd1ed871a0f686bda319e7cf240b880427a3ac5229517425ddde",
     "config/GR8E69/projector_update_projection.json": "636932c9b59adb625b570d273b30a037aa9f1f05673dee5749a9e7e498a484c9",
     "config/GR8E69/projector_visible.json": "612c6694d4f58cb3b002abdac52037cc3cffe7a5223db4b63ede7082f570792c",
@@ -10357,6 +10372,7 @@
     "src/camera/projector_frustum.cpp": "44b4b71bb7db97ec31969b874dfbb0ee080b29177e68f9cb3bad12492920c385",
     "src/camera/projector_pool.cpp": "544a077f281a7bce8e304e06c4158a4de328f214663dd0c04e6f5c5353c22e5b",
     "src/camera/projector_slots.cpp": "b88c8cc7ea89020e53e212de96ef95bce62d9cfcb51d02bc38f5dda9c169e05f",
+    "src/camera/projector_system_def.cpp": "b3f3ab612a547fe5e09c27c9c28bc8fc02c862fc0e211e40eee75f3c51862849",
     "src/camera/projector_transform.cpp": "fc75ec7dd827e4dff1c708ee56cf1cc3ad745bad887d7e25723c79f73dca65d8",
     "src/camera/projector_update_projection.cpp": "360d2a3f98375821e29f821497142d88a406fed56ae2a9695889b58a87aab2b2",
     "src/camera/projector_visible.cpp": "747f4ed33be995f03ef9caa68f3abc6ad7bbc853cf9fcdb6b5b509ec49978895",
@@ -11384,6 +11400,7 @@
     "src/particles/ParticleVelocity.cpp": "ea620216e51ba6219de1500b4a0f6db91dee7a87a57af227afba091f8f8b910c",
     "src/particles/meshparticle_alloc.cpp": "3a0906580ebebfb4ab4b6ab8df6a16c1d4954d5ac1aa1254ab84b1db2defadb7",
     "src/particles/meshparticle_detach.cpp": "a6724ae3888bc9efd26ff44788192b3ff97751c972fd4f808564affdee6d2cfe",
+    "src/particles/meshparticle_draw.cpp": "c198a15463654aad4c6cbebe541334dc0f911bf8fe6baf85800f41a572809585",
     "src/particles/meshparticle_init.cpp": "e4e6e02f26c4a0b864e4b47c7ae3822556f49cca0413e4f1a9dff6f58b6966b5",
     "src/particles/meshparticle_lifecycle.cpp": "1588b8228b8363d4e02895482812c083afc663c5082dc5790c22df8b9e593b0b",
     "src/particles/meshparticle_release.cpp": "908b004bd72a6a63407c9009c5412d109a1ae54d44273142c94d2fdd5f88cd59",
@@ -11393,10 +11410,13 @@
     "src/particles/particledef_base_proc.cpp": "b5f399a06a1573451826715b0d5865c621d4b2cb31a99f8abf382950bdbbbf42",
     "src/particles/particledef_inlines.cpp": "fcfede5f3625c258c128793069e6c4dce8c40e8ba3103a3caafa44a87923865c",
     "src/particles/particledef_mesh.cpp": "91ad79c3c6ef969e95266bdc11617d9747913baf2fc93c124528341906a6e315",
+    "src/particles/particlesystem_ctor.cpp": "880e75d602498551014c03566bb08612c0026be657b2f3521ea8654d62f9e14a",
     "src/particles/particlesystem_detach.cpp": "5bf491465dd724a1999632df001b2f1d63b8ae631dee555380583013fdfbc697",
+    "src/particles/particlesystem_draw.cpp": "6a64dbc8a8dcfd818a775d48508fee18fc0b76dfda104b6e0099fd4012ebc4b2",
     "src/particles/particlesystem_event.cpp": "f2df934890f3786edc188ecda549b0d283f6e31b401f902a9454997949034333",
     "src/particles/particlesystem_executedraw.cpp": "b50a19ef2bf3cd263f0baca9b9fba7c410b2f48921a351417bbf6249c0e7a28e",
     "src/particles/particlesystem_fade.cpp": "b50d1a48f794f2c23c0c0cdb916d9b7cff629e8d4166dc9cf34385c7ac1bbcc3",
+    "src/particles/particlesystem_reset.cpp": "a8d4334f707bd78cf1a8cc632930a01964dc087a17e90056c87c8e017f13a893",
     "src/particles/particlesystem_transforms.cpp": "c8b71b5bd9cf31ad7b5f385cd51faae49782b30571fd3a4a246d8ab612b90963",
     "src/pathfinding/PathFindingNetwork.cpp": "93cf9c07d942c5c46a7f770d11d4ae4284fb90d321d8856cdddc1c1d08fd7bdf",
     "src/player/AnimPlayerA.cpp": "ac9bb376d7ac85733a1012066c00544be99c6730cfb6d1a18b50d138341f4f82",
@@ -60129,6 +60149,96 @@
       "discarded_functions": [],
       "object_sha256": "9cad540f38db34d142e91f93118b6916783a6fb6ab9f50be68bd59daac1bff71",
       "linked_sha256": "9c7e873afdb421b235ada16ccaee0c718adc67324df3f3517bdc83a3b02745f3"
+    },
+    {
+      "id": "projector_system_def",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 288,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "f4c9480a29b18fd59731aaadee35cf8637bae668d34c2b41a2a37249c5abec7c",
+      "linked_sha256": "65a6bd3f2d7130ce1fc7d5b70cf3e3f14fb90cfaee8d3217a79cc3ba87511fc3"
+    },
+    {
+      "id": "particlesystem_ctor",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 144,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "400c97bd55f9a12444fbf9d0b8f158fecec0ccd3ad6b0df323083c91e238f6a6",
+      "linked_sha256": "da27a22439aad6c5ff24eee28cdbcbdb8aef9434e63c0e3c9eb76d06a0700a00"
+    },
+    {
+      "id": "particlesystem_reset",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 128,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "3f6c14c7f6704d713d649ef40b4c68e1ae1c0289ecd7d7c7f1f292e25411fd0b",
+      "linked_sha256": "4e67ce02f9cc93a660b8c514c07d7ec33fab27875af862baf1b9da4eb2f544e0"
+    },
+    {
+      "id": "meshparticle_draw",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 220,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "7419e97ec8894e3ddc532fc1d4626c63839f7829128f5ab84cfd09bfe762ccf2",
+      "linked_sha256": "b913f6ccfbef8d8b599ec7f6a9c823cbe717b63191f93126cc0f97cda2925a02"
+    },
+    {
+      "id": "particlesystem_draw",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 240,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e259e37d7aa73383fd0a64647e7b420727193efb6c8daae7a1e9f6193c456d28",
+      "linked_sha256": "2b5a8642b195d8dd3e2dc179ef9311a3091fb02a7c9b98b5b1230e5036c5cb19"
     }
   ],
   "code_map": {
@@ -62071,24 +62181,10 @@
         "file_name": "particlesystem.cpp",
         "ranges": [
           {
-            "address": "0x8005e730",
-            "size": 144,
-            "kind": "function",
-            "name": "__15CParticleSystem",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8005e7c0",
             "size": 80,
             "kind": "function",
             "name": "_._15CParticleSystem",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8005e81c",
-            "size": 128,
-            "kind": "function",
-            "name": "ResetSystem__15CParticleSystem",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -62124,13 +62220,6 @@
             "size": 624,
             "kind": "function",
             "name": "BeginUpdate__15CParticleSystemf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80061c78",
-            "size": 240,
-            "kind": "function",
-            "name": "Draw__15CParticleSystemR12CDrawContext",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -62261,13 +62350,6 @@
             "size": 412,
             "kind": "function",
             "name": "BeginUpdate__18MeshParticleSystemf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80065d04",
-            "size": 220,
-            "kind": "function",
-            "name": "Draw__18MeshParticleSystemR12CDrawContext",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -71373,34 +71455,6 @@
         "file_record": 210,
         "file_name": "projector.cpp",
         "ranges": [
-          {
-            "address": "0x80131e44",
-            "size": 24,
-            "kind": "function",
-            "name": "__19CProjectorSystemDef",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80131e5c",
-            "size": 92,
-            "kind": "function",
-            "name": "_._19CProjectorSystemDef",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80131eb8",
-            "size": 32,
-            "kind": "function",
-            "name": "__19CProjectorSystemDefRC19CProjectorSystemDef",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80131ed8",
-            "size": 140,
-            "kind": "function",
-            "name": "__19CProjectorSystemDefP24LevelFileContentsStruct_",
-            "evidence": "adjacent-compiler-markers"
-          },
           {
             "address": "0x80131f64",
             "size": 420,
