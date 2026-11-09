@@ -2500,7 +2500,15 @@
     "handler_audioconfig.json",
     "handler_pausepreferences.json",
     "handler_gameoptions.json",
-    "ea_mad_codec_frames.json"
+    "ea_mad_codec_frames.json",
+    "handler_controlleroptions.json",
+    "handler_mpwaiting.json",
+    "handler_mainmenu.json",
+    "handler_bonusoptions_cheats.json",
+    "handler_loadgame.json",
+    "handler_nameentry_init.json",
+    "handler_nameentry_string.json",
+    "handler_coopgameoptions_init.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

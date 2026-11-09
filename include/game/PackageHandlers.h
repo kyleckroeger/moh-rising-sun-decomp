@@ -171,7 +171,7 @@ class HandlerLevelMenu : public PackageHandler {
   public:
     HandlerLevelMenu();
     int HandleEvent(unsigned int, FEObject *, unsigned long);
-    unsigned char unknown_50[84 - 0x50];
+    int selection; // +0x50; the constructor sets it to -1.
 };
 class HandlerMainMenu : public PackageHandler {
   public:
@@ -195,7 +195,8 @@ class HandlerMovieMenu : public PackageHandler {
   public:
     HandlerMovieMenu();
     int HandleEvent(unsigned int, FEObject *, unsigned long);
-    unsigned char unknown_50[164 - 0x50];
+    unsigned char unknown_50[0x78 - 0x50];
+    unsigned long buttonHashes[11]; // +0x78
 };
 class HandlerCoop4WaySplit : public PackageHandler {
   public:
@@ -247,7 +248,10 @@ class HandlerMedalsOverlay : public PackageHandler {
 class HandlerPasswordEntry : public HandlerVirtualKeyboard {
   public:
     int HandleEvent(unsigned int, FEObject *, unsigned long);
-    unsigned char unknown_50[104 - 0x50];
+    char *GetMyString();
+    int GetStringLength();
+    int cursor;    // +0x50
+    char text[20]; // +0x54
 };
 class HandlerLanguageMenu : public PackageHandler {
   public:
@@ -266,7 +270,9 @@ class HandlerSaveProfile : public PackageHandler {
   public:
     HandlerSaveProfile();
     int HandleEvent(unsigned int, FEObject *, unsigned long);
-    unsigned char unknown_50[92 - 0x50];
+    int unknown_50;                        // +0x50; the constructor sets it to 1.
+    int unknown_54;                        // +0x54; likewise.
+    unsigned char unknown_58[92 - 0x58];
 };
 class HandlerOnlineKeyboard : public HandlerVirtualKeyboard {
   public:

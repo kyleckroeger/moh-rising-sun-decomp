@@ -144,3 +144,13 @@ allocation gives that line's number in `source/UserInterface/shellFactory.cpp`, 
 Allocation sizes there are the evidence for the handler sizes in `PackageHandlers.h`; members with no reader stay `unknown_`.
 `VolumeKnobs.h`'s `CSliderVector` is a descriptive name for the twelve-byte vectors the factory's inline constructors zero.
 Not reconstructed: handlers whose methods use function-local statics with `.bss` guards, such as `HandleSoundEvent`.
+
+`SMPSetup` in `GameSettingsViews.h` views the multiplayer setup block at `+0x3201c`: screens update its flag word through an
+address register pointing at the block, which a direct member access does not produce, so the block is one object in the
+original. `SCoreGameSettings` keeps naming its members separately until it is restructured. `SControllerPrefs` is the
+twelve bytes `HandlerControllerOptions` copies whole, with fields named for the buttons tied to them; `g_cheats`' words are
+`bool`s, as the unnormalized returns and `xori` in `HandlerBonusOptions` show.
+
+Not yet exact: `HandlerPauseBriefingOverlay::HandleEvent` and `HandlerPauseOutro::HandleEvent` (address registers),
+`HandlerLoadGame::OnAccept` (register allocation), `HandlerNameEntry::HandleEvent` (two copies) and
+`HandlerBonusOptions::HandleEvent`.

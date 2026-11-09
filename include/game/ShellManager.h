@@ -86,6 +86,7 @@ class ShellManager : public FEGameInterface {
     void MoveShellCamera();
     unsigned long GetCombinedJoyPadActiveMask() const;
     void GetMouseInfo(FEMouseInfo &);
+    int CheckIfValidPassword(char *);
     void DoCoopUnjoin(FEPackage *, signed char);
     void PlayShellSound(EShellSoundType);
     void SetMovieName(int, char *);
