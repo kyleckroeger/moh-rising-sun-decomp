@@ -2160,7 +2160,14 @@
     "particlesystem_transforms.json",
     "particledef_base_proc.json",
     "particledef_mesh.json",
-    "particledef_inlines.json"
+    "particledef_inlines.json",
+    "volfrustum_sphere_tests.json",
+    "projector_pool.json",
+    "projector_destroy.json",
+    "projector_slots.json",
+    "projector_accessors.json",
+    "projector_transform.json",
+    "projector_frustum.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

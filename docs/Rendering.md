@@ -469,3 +469,16 @@ inline bodies. Those headers use `#pragma interface`, and the fragments that hol
 out-of-line copies use `#pragma implementation`. That pairing is a project arrangement, as
 for `IVolume`. The `GetEFBAsTAR` parameter names, `gDoScreenClear`'s meaning and the private
 members named `unknown_*` are not established.
+
+## CProjector
+
+Projectors live in a pool, `g_ProjectorList`, with the same five-word shape as the particle system
+pool, linked through `+608`. [`Projector.h`](../include/game/Projector.h) holds the frustum at `+64`,
+the local-to-world matrix at `+368`, the projection matrix at `+432`, the radius at `+564` and four
+frustum parameters at `+568`. Names are inferred from use. `SetTMLocalToWorld` rebuilds the frustum
+from those parameters. `Create`, `InitClass`, `StateSetup`, `Attach`, `BeginUpdate` and the constructors
+are not reconstructed.
+
+`CVolFrustum` is 304 bytes (`Create` allocates that size). Ten collision tests, `TestVisibility` and
+`GetExtents` build a `CVolSphere` from its bounding centre at `+64` and radius at `+272`, set the radius
+through the table, and delegate to the sphere. See [`VolFrustum.h`](../include/game/VolFrustum.h).

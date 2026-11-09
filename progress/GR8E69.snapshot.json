@@ -208,9 +208,16 @@
       "src/camera/frustum_transform.cpp": "4bbe254e923e4c48c9b4468450fa8c93986141f00f98758a32be9071c57a9d7f",
       "src/camera/get_transform.cpp": "e3033e1c97452a331b5d46e6cdca18fba8f60ad43af2220d9cdc7bddbc12d468",
       "src/camera/projection.cpp": "4ed326a09aac21ee19656d0c6538dbe65908d865e795f163ae092f67e9972767",
+      "src/camera/projector_accessors.cpp": "1b759433f5c9275a698d0e6dcd1fac0106f067763d66f6119aa3a0bc7f96d565",
+      "src/camera/projector_destroy.cpp": "2d9aca9425f90663a6dd86b185f7e37c606cee4e8252549fc301f5061759a568",
+      "src/camera/projector_frustum.cpp": "44b4b71bb7db97ec31969b874dfbb0ee080b29177e68f9cb3bad12492920c385",
+      "src/camera/projector_pool.cpp": "544a077f281a7bce8e304e06c4158a4de328f214663dd0c04e6f5c5353c22e5b",
+      "src/camera/projector_slots.cpp": "b88c8cc7ea89020e53e212de96ef95bce62d9cfcb51d02bc38f5dda9c169e05f",
+      "src/camera/projector_transform.cpp": "fc75ec7dd827e4dff1c708ee56cf1cc3ad745bad887d7e25723c79f73dca65d8",
       "src/camera/transforms.cpp": "4f1d6ff74f4f9d296d64a95495ab90f53f98010031fde9b051b8a5be89c7278a",
       "src/camera/update_projection.cpp": "fd6857c4d808bd67914b5c1041d239ff9219b03f7d8a7bbe579e7d846583f4f7",
       "src/camera/viewport.cpp": "280c610501e88f6cedc6d8ab86186067423ed8b0e974e1905c9b0a385fb48912",
+      "src/camera/volfrustum_sphere_tests.cpp": "188de492e1ea40a10a9335e970f3389101ee612cd96005796b8ebec05027be2f",
       "src/camera/world_to_camera.cpp": "9c8631b1a6b92af8fece7a1b109bb61c516f6bc69bd7eccee0c678bbf1b8c1c3",
       "src/camera/world_to_clip.cpp": "291ee3d9b216585f1d3a9a710fa8a283765d8f07a257d59bc0317e4ba92137e3",
       "src/crc.cpp": "6736f2715ded88eedcb87aa7eece4de1874d9c52fe091cebaeffa6d9ba67d6ac",
@@ -721,7 +728,7 @@
       "src/game/screen_vsyncs.cpp": "39f4093a78453d2d9cbd31cce143ee637ec6131b77d84ab25ce1c4c1a86065c7",
       "src/game/shadow_ctor.cpp": "c565b9212141464677adbc4db0ca08a5a73ceea41c3cbb1ab373abbd16c31ae6",
       "src/game/shadow_enabled.cpp": "bb3b47c8e8ce85ab1f6cbfbd2f5a2410fcce5f462780575ec285f9c921ee2286",
-      "src/game/shadow_init.cpp": "350d0900239aa515ab5abe76f7b0a68c0ae16836c44980818d53a3a3b74e399f",
+      "src/game/shadow_init.cpp": "fb457ac54ce214332ec029a5eab39b7e9ad5ad33d3df0c22c2f407b102c7e4e4",
       "src/game/skybox_class.cpp": "838c453a03ec151b70f404c2067b990fd3671d434f29800d2872a536db5a4e7d",
       "src/game/skybox_dtor.cpp": "79cd2c149b6a96728b91d9c1cc9efad78acd5eb4b5a263517946e0818d940a36",
       "src/game/sprite_ctor.cpp": "aa94e157dcb92e33c29ee871e1f9ffcec9e7f09d5430a2b94654088a59ece6dc",
@@ -2579,6 +2586,7 @@
       "include/game/PathxTrack.h": "f46f02824655f05c7a0c47d71481dfbe5c5845b6b73ae17d5f8f3453b5c4298a",
       "include/game/PlacementNew.h": "49819284bb2cc2ffb2039d459ce855bd5a233bcfff0a6412ffe0bda02cd616c5",
       "include/game/PopUpMessage.h": "3ba712308420d487fc901d235bd01e828a92eaff7fe9c095eadb933d05ba7737",
+      "include/game/Projector.h": "7d3945fd8c8bf01ed6945d204fa4934da58371aa70da7a28bd39fd2a63f3e90b",
       "include/game/PropertyData.h": "952ae5ac78dc17e43053a7b905a8e58499a1faa3c7d0721269329f639095b22a",
       "include/game/PropertyReaders.h": "b071c0e9a64579b83d6d5955914a9a8b2357f7914fa2f21f6c8548f11463b54a",
       "include/game/Rcmp.h": "834ed5e660a51a562673ac049b2c39e07ab113426b2bc6002ea385b67fb5e61f",
@@ -2617,6 +2625,7 @@
       "include/game/Toilet.h": "a608aae7246153ba8ff8069a32a9080acb3d54ce06d1ce9f78ed5ccb94afacab",
       "include/game/TriggerObject.h": "73e70d537a184c92ad5f8f0e10b773f5efe3306ce871a82852a3c41398f7418b",
       "include/game/VideoDriver.h": "dd21c14b75db031804f4dfd4afd30fcaf14e5211ed4c37079e3f6ff3e19ee668",
+      "include/game/VolFrustum.h": "b60b3c36ce9c61c007d11037991c65de0a159749f1702d360fa98525e0c03072",
       "include/game/Volume.h": "cda9e7de972fc28d73bf86418423a8b271c864d60bb53d1eba7d42744622db46",
       "include/game/Weapon.h": "06c961fd954800c1d8766e2d17e71707a250f4de310b30d4c99182c3845d04b9",
       "include/game/WorldObject.h": "8bf6843a362f5e8fe835da2694838943402f9f5013bfb812dcd86ce9915fdde8",
@@ -3841,7 +3850,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "c2ad6c5867727c55ce3c1cb870d1df594b438ace9995b012dd39c13c42b6704c",
+      "config/GR8E69/project.json": "fd007f634afa9bbb5e6a2a8c0b41e2ea2235b4c9ebcf2fdd8e98e02cc810ff62",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -3854,6 +3863,12 @@
       "config/GR8E69/projectile_update.json": "d4ec9bdde8eee3e9d6bbdf9177f642129945dfdef3677ca61b30e3a5142f0ddb",
       "config/GR8E69/projectile_velocity.json": "aa97709a23b824bb14d79d2abd4113496a63adf01342a7fb953abc88b5c3d07d",
       "config/GR8E69/projectile_visible.json": "99237c2dae9ba9a71b438102dc50bdf75221e485d2a845fae66053de9d8bcb74",
+      "config/GR8E69/projector_accessors.json": "d3570a998327c4d0e987bfd91937c2d71f59f8602ec2e784efa8f0bc7b236895",
+      "config/GR8E69/projector_destroy.json": "ce8fb1cccbc53da8270c9d893e34c82adba0e4108f1ec639780740e275f1c810",
+      "config/GR8E69/projector_frustum.json": "1603e78b84f1f9fdfd5e665a93a4f37df7b62d58675690bdd778551ce78d336e",
+      "config/GR8E69/projector_pool.json": "66ab57dd5bc8c214f494f265b7e8ab32185e5b2b5a081be37e9b06e0e2411ee5",
+      "config/GR8E69/projector_slots.json": "2329c4532e1e0ffe8caa7905c56be61619dd334fdaf4eeebdeca590775014eb0",
+      "config/GR8E69/projector_transform.json": "e6e6a917c17abd1ed871a0f686bda319e7cf240b880427a3ac5229517425ddde",
       "config/GR8E69/property_dispatch.json": "b1146240bc87c6938c5ef52c60cbc3019c17349cb3d45e5eab32eaab05c78417",
       "config/GR8E69/property_read_animatedLight.json": "20e88681b64bb2cfa2b6a5335e22edb7d6515bc4975ca35c327dea3b9f110875",
       "config/GR8E69/property_read_cameraShaker.json": "5ffcdbef45baf1b32863a1a622ba49a7abffe634f00d02ee80519202c4e937f7",
@@ -4961,6 +4976,7 @@
       "config/GR8E69/vector_methods.json": "912ec9c6f429286eddc371a4eb9c495967c3be2239f5254be03ef35402d749e5",
       "config/GR8E69/vi.json": "dd95046e01890cb33bdb0006c936ff713366f21401f267c9cf268a70ac8b8833",
       "config/GR8E69/viewport.json": "6a801b98a150a54773ae5eb7717398fb7e8d4813f1204ea9810f555e4e844a38",
+      "config/GR8E69/volfrustum_sphere_tests.json": "969d268a2b60819a8f2a55153951ce6db15efd825e0bcc4051ea4f5e68365090",
       "config/GR8E69/volume_defaults.json": "ec1834b402ae07ad4d233082ab460cb579890c27c953532ce02d216062910d69",
       "config/GR8E69/weak_8028147c.json": "cc02f4fbc0e20dc88c9cad44b86e59ef5362235032a4832a6a740921f10cfc1d",
       "config/GR8E69/weak_802814e4.json": "3853fb0778a939dd88d1396ef97687c503cd6d349bac566b21cf985a5e08a9eb",
@@ -6524,14 +6540,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1125632,
+    "matching_code_bytes": 1129120,
     "total_executable_code_bytes": 2492032,
-    "percent": 45.16924341260465,
+    "percent": 45.309209512558425,
     "categories": {
-      "reconstructed_game": 733416,
+      "reconstructed_game": 736904,
       "restored_library": 392216
     },
-    "matching_functions": 5704
+    "matching_functions": 5737
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -7608,7 +7624,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "c2ad6c5867727c55ce3c1cb870d1df594b438ace9995b012dd39c13c42b6704c",
+    "config/GR8E69/project.json": "fd007f634afa9bbb5e6a2a8c0b41e2ea2235b4c9ebcf2fdd8e98e02cc810ff62",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7621,6 +7637,12 @@
     "config/GR8E69/projectile_update.json": "d4ec9bdde8eee3e9d6bbdf9177f642129945dfdef3677ca61b30e3a5142f0ddb",
     "config/GR8E69/projectile_velocity.json": "aa97709a23b824bb14d79d2abd4113496a63adf01342a7fb953abc88b5c3d07d",
     "config/GR8E69/projectile_visible.json": "99237c2dae9ba9a71b438102dc50bdf75221e485d2a845fae66053de9d8bcb74",
+    "config/GR8E69/projector_accessors.json": "d3570a998327c4d0e987bfd91937c2d71f59f8602ec2e784efa8f0bc7b236895",
+    "config/GR8E69/projector_destroy.json": "ce8fb1cccbc53da8270c9d893e34c82adba0e4108f1ec639780740e275f1c810",
+    "config/GR8E69/projector_frustum.json": "1603e78b84f1f9fdfd5e665a93a4f37df7b62d58675690bdd778551ce78d336e",
+    "config/GR8E69/projector_pool.json": "66ab57dd5bc8c214f494f265b7e8ab32185e5b2b5a081be37e9b06e0e2411ee5",
+    "config/GR8E69/projector_slots.json": "2329c4532e1e0ffe8caa7905c56be61619dd334fdaf4eeebdeca590775014eb0",
+    "config/GR8E69/projector_transform.json": "e6e6a917c17abd1ed871a0f686bda319e7cf240b880427a3ac5229517425ddde",
     "config/GR8E69/property_dispatch.json": "b1146240bc87c6938c5ef52c60cbc3019c17349cb3d45e5eab32eaab05c78417",
     "config/GR8E69/property_read_animatedLight.json": "20e88681b64bb2cfa2b6a5335e22edb7d6515bc4975ca35c327dea3b9f110875",
     "config/GR8E69/property_read_cameraShaker.json": "5ffcdbef45baf1b32863a1a622ba49a7abffe634f00d02ee80519202c4e937f7",
@@ -8728,6 +8750,7 @@
     "config/GR8E69/vector_methods.json": "912ec9c6f429286eddc371a4eb9c495967c3be2239f5254be03ef35402d749e5",
     "config/GR8E69/vi.json": "dd95046e01890cb33bdb0006c936ff713366f21401f267c9cf268a70ac8b8833",
     "config/GR8E69/viewport.json": "6a801b98a150a54773ae5eb7717398fb7e8d4813f1204ea9810f555e4e844a38",
+    "config/GR8E69/volfrustum_sphere_tests.json": "969d268a2b60819a8f2a55153951ce6db15efd825e0bcc4051ea4f5e68365090",
     "config/GR8E69/volume_defaults.json": "ec1834b402ae07ad4d233082ab460cb579890c27c953532ce02d216062910d69",
     "config/GR8E69/weak_8028147c.json": "cc02f4fbc0e20dc88c9cad44b86e59ef5362235032a4832a6a740921f10cfc1d",
     "config/GR8E69/weak_802814e4.json": "3853fb0778a939dd88d1396ef97687c503cd6d349bac566b21cf985a5e08a9eb",
@@ -9047,6 +9070,7 @@
     "include/game/PathxTrack.h": "f46f02824655f05c7a0c47d71481dfbe5c5845b6b73ae17d5f8f3453b5c4298a",
     "include/game/PlacementNew.h": "49819284bb2cc2ffb2039d459ce855bd5a233bcfff0a6412ffe0bda02cd616c5",
     "include/game/PopUpMessage.h": "3ba712308420d487fc901d235bd01e828a92eaff7fe9c095eadb933d05ba7737",
+    "include/game/Projector.h": "7d3945fd8c8bf01ed6945d204fa4934da58371aa70da7a28bd39fd2a63f3e90b",
     "include/game/PropertyData.h": "952ae5ac78dc17e43053a7b905a8e58499a1faa3c7d0721269329f639095b22a",
     "include/game/PropertyReaders.h": "b071c0e9a64579b83d6d5955914a9a8b2357f7914fa2f21f6c8548f11463b54a",
     "include/game/Rcmp.h": "834ed5e660a51a562673ac049b2c39e07ab113426b2bc6002ea385b67fb5e61f",
@@ -9085,6 +9109,7 @@
     "include/game/Toilet.h": "a608aae7246153ba8ff8069a32a9080acb3d54ce06d1ce9f78ed5ccb94afacab",
     "include/game/TriggerObject.h": "73e70d537a184c92ad5f8f0e10b773f5efe3306ce871a82852a3c41398f7418b",
     "include/game/VideoDriver.h": "dd21c14b75db031804f4dfd4afd30fcaf14e5211ed4c37079e3f6ff3e19ee668",
+    "include/game/VolFrustum.h": "b60b3c36ce9c61c007d11037991c65de0a159749f1702d360fa98525e0c03072",
     "include/game/Volume.h": "cda9e7de972fc28d73bf86418423a8b271c864d60bb53d1eba7d42744622db46",
     "include/game/Weapon.h": "06c961fd954800c1d8766e2d17e71707a250f4de310b30d4c99182c3845d04b9",
     "include/game/WorldObject.h": "8bf6843a362f5e8fe835da2694838943402f9f5013bfb812dcd86ce9915fdde8",
@@ -9439,9 +9464,16 @@
     "src/camera/frustum_transform.cpp": "4bbe254e923e4c48c9b4468450fa8c93986141f00f98758a32be9071c57a9d7f",
     "src/camera/get_transform.cpp": "e3033e1c97452a331b5d46e6cdca18fba8f60ad43af2220d9cdc7bddbc12d468",
     "src/camera/projection.cpp": "4ed326a09aac21ee19656d0c6538dbe65908d865e795f163ae092f67e9972767",
+    "src/camera/projector_accessors.cpp": "1b759433f5c9275a698d0e6dcd1fac0106f067763d66f6119aa3a0bc7f96d565",
+    "src/camera/projector_destroy.cpp": "2d9aca9425f90663a6dd86b185f7e37c606cee4e8252549fc301f5061759a568",
+    "src/camera/projector_frustum.cpp": "44b4b71bb7db97ec31969b874dfbb0ee080b29177e68f9cb3bad12492920c385",
+    "src/camera/projector_pool.cpp": "544a077f281a7bce8e304e06c4158a4de328f214663dd0c04e6f5c5353c22e5b",
+    "src/camera/projector_slots.cpp": "b88c8cc7ea89020e53e212de96ef95bce62d9cfcb51d02bc38f5dda9c169e05f",
+    "src/camera/projector_transform.cpp": "fc75ec7dd827e4dff1c708ee56cf1cc3ad745bad887d7e25723c79f73dca65d8",
     "src/camera/transforms.cpp": "4f1d6ff74f4f9d296d64a95495ab90f53f98010031fde9b051b8a5be89c7278a",
     "src/camera/update_projection.cpp": "fd6857c4d808bd67914b5c1041d239ff9219b03f7d8a7bbe579e7d846583f4f7",
     "src/camera/viewport.cpp": "280c610501e88f6cedc6d8ab86186067423ed8b0e974e1905c9b0a385fb48912",
+    "src/camera/volfrustum_sphere_tests.cpp": "188de492e1ea40a10a9335e970f3389101ee612cd96005796b8ebec05027be2f",
     "src/camera/world_to_camera.cpp": "9c8631b1a6b92af8fece7a1b109bb61c516f6bc69bd7eccee0c678bbf1b8c1c3",
     "src/camera/world_to_clip.cpp": "291ee3d9b216585f1d3a9a710fa8a283765d8f07a257d59bc0317e4ba92137e3",
     "src/crc.cpp": "6736f2715ded88eedcb87aa7eece4de1874d9c52fe091cebaeffa6d9ba67d6ac",
@@ -9952,7 +9984,7 @@
     "src/game/screen_vsyncs.cpp": "39f4093a78453d2d9cbd31cce143ee637ec6131b77d84ab25ce1c4c1a86065c7",
     "src/game/shadow_ctor.cpp": "c565b9212141464677adbc4db0ca08a5a73ceea41c3cbb1ab373abbd16c31ae6",
     "src/game/shadow_enabled.cpp": "bb3b47c8e8ce85ab1f6cbfbd2f5a2410fcce5f462780575ec285f9c921ee2286",
-    "src/game/shadow_init.cpp": "350d0900239aa515ab5abe76f7b0a68c0ae16836c44980818d53a3a3b74e399f",
+    "src/game/shadow_init.cpp": "fb457ac54ce214332ec029a5eab39b7e9ad5ad33d3df0c22c2f407b102c7e4e4",
     "src/game/skybox_class.cpp": "838c453a03ec151b70f404c2067b990fd3671d434f29800d2872a536db5a4e7d",
     "src/game/skybox_dtor.cpp": "79cd2c149b6a96728b91d9c1cc9efad78acd5eb4b5a263517946e0818d940a36",
     "src/game/sprite_ctor.cpp": "aa94e157dcb92e33c29ee871e1f9ffcec9e7f09d5430a2b94654088a59ece6dc",
@@ -54172,6 +54204,132 @@
       "discarded_functions": [],
       "object_sha256": "6b58cab4e0443317eb3bc24b41240a25f11397998ea4ddeac7d995ae813c3232",
       "linked_sha256": "6d880896389e8a7984f51901468f981b7b6f3d790ea70f2100a1e130ffeb406e"
+    },
+    {
+      "id": "volfrustum_sphere_tests",
+      "category": "reconstructed_game",
+      "functions": 12,
+      "code_bytes": 2384,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "db8f7b8daf6f130b51deae49f650c1c2c47b2566bf0213fca94a231ec7e07a8b",
+      "linked_sha256": "6a8a665d7ca5c4f8d7697cf4de3a0ac9d87b0a22f4b0b4dace8bafc6dde55e3b"
+    },
+    {
+      "id": "projector_pool",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 180,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "849b8895d948a352b915574a42427a91a65d8af9ba4da9ccbf45495af6f180fc",
+      "linked_sha256": "8f82a18d7d1672ba35ee338d5ef302e6cd0ce4a428601a2d544e72870d383166"
+    },
+    {
+      "id": "projector_destroy",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 324,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "96358196f1e51477ba584f1790cc6a3b7945d7e687691ab6028bee54cfd3029f",
+      "linked_sha256": "241e754c837da33c275fe944d7371e59de0e37c4687753eece990f2ea11a39da"
+    },
+    {
+      "id": "projector_slots",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 40,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "3360e83dbe61d25f007ff9a2fed4fd619a7e36f4e7c81644ca8081046891b63a",
+      "linked_sha256": "3fe6ffcce081e5d0df9e92ddf7a526799f41f1b91826bb18a1428bb0297da24d"
+    },
+    {
+      "id": "projector_accessors",
+      "category": "reconstructed_game",
+      "functions": 6,
+      "code_bytes": 372,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "b76c96c8c666cbfe389310afd7d98e64949f92a5418b3e0296c88a622944d08f",
+      "linked_sha256": "7322b24ebac9284ea2a66079ae0281b9a76692d7eb6cc1805f5ba3c2ab597ac9"
+    },
+    {
+      "id": "projector_transform",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 92,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "4926a4db0b5e9db3fc08741453b1dac67b83969aeee67e90a397354fd4481f31",
+      "linked_sha256": "a3fccad2d5b573f0025b279ce9df0f89afe726efa4268409ff21337752f7fd93"
+    },
+    {
+      "id": "projector_frustum",
+      "category": "reconstructed_game",
+      "functions": 6,
+      "code_bytes": 96,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "2278b18376bb7065a5c6cce6a231c1ca21fce002ecdf0c1bbe79feeec8ad86c0",
+      "linked_sha256": "8e3b3d983e51035546a522acfe611bb73e7fff283e588ff294bea9465ec3801c"
     }
   ],
   "code_map": {
@@ -68715,52 +68873,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80132218",
-            "size": 8,
-            "kind": "function",
-            "name": "__nw__10CProjectorUiPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80132220",
-            "size": 4,
-            "kind": "function",
-            "name": "__dl__10CProjectorPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80132224",
-            "size": 68,
-            "kind": "function",
-            "name": "Alloc__10CProjector",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80132268",
-            "size": 100,
-            "kind": "function",
-            "name": "Release__10CProjectorP10CProjector",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x801322cc",
             "size": 484,
             "kind": "function",
             "name": "Create__10CProjectorUib",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801324b0",
-            "size": 104,
-            "kind": "function",
-            "name": "Destroy__10CProjectorP10CProjector",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80132518",
-            "size": 220,
-            "kind": "function",
-            "name": "HandleEvent__10CProjectorP8ISubject13ESubjectEvent",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -68782,20 +68898,6 @@
             "size": 1196,
             "kind": "function",
             "name": "StateSetup__10CProjector",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80132d84",
-            "size": 8,
-            "kind": "function",
-            "name": "GetType__10CProjector",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80132d8c",
-            "size": 32,
-            "kind": "function",
-            "name": "Destroy__10CProjector",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -68827,59 +68929,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x801331a4",
-            "size": 8,
-            "kind": "function",
-            "name": "IsDrawEnabled__C10CProjector",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801331ac",
-            "size": 44,
-            "kind": "function",
-            "name": "GetTMLocalToWorld__C10CProjectorR7CMatrix",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801331d8",
-            "size": 80,
-            "kind": "function",
-            "name": "GetPosition__C10CProjectorR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80133228",
-            "size": 80,
-            "kind": "function",
-            "name": "GetRightward__C10CProjectorR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80133278",
-            "size": 80,
-            "kind": "function",
-            "name": "GetForward__C10CProjectorR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801332c8",
-            "size": 80,
-            "kind": "function",
-            "name": "GetUpward__C10CProjectorR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80133318",
             "size": 240,
             "kind": "function",
             "name": "IsVisible__C10CProjectorR12CDrawContext",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80133408",
-            "size": 92,
-            "kind": "function",
-            "name": "SetTMLocalToWorld__10CProjectorRC7CMatrix",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -68888,48 +68941,6 @@
             "kind": "function",
             "name": "__static_initialization_and_destruction_0",
             "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x80133504",
-            "size": 36,
-            "kind": "function",
-            "name": "SetFrustum__10CProjectorR11CVolFrustum",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80133528",
-            "size": 36,
-            "kind": "function",
-            "name": "SetMatrix__10CProjectorR7CMatrix",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8013354c",
-            "size": 8,
-            "kind": "function",
-            "name": "SetRadius__10CProjectorf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80133554",
-            "size": 8,
-            "kind": "function",
-            "name": "GetFrustum__C10CProjector",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8013355c",
-            "size": 4,
-            "kind": "function",
-            "name": "AsProjector__10CProjector",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80133560",
-            "size": 4,
-            "kind": "function",
-            "name": "AsProjector__C10CProjector",
-            "evidence": "adjacent-compiler-markers"
           },
           {
             "address": "0x80133564",
@@ -69212,90 +69223,6 @@
             "size": 216,
             "kind": "function",
             "name": "TestCollision__C11CVolFrustumRC10CVolSphereR10CCollisionb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8013fa74",
-            "size": 196,
-            "kind": "function",
-            "name": "TestCollision__C11CVolFrustumRC15CAnimatedVolumeR10CCollisionb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8013fb38",
-            "size": 196,
-            "kind": "function",
-            "name": "TestCollision__C11CVolFrustumRC10CCSGVolumeR10CCollisionb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8013fbfc",
-            "size": 196,
-            "kind": "function",
-            "name": "TestCollision__C11CVolFrustumRC12CWorldVolumeR10CCollisionb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8013fcc0",
-            "size": 196,
-            "kind": "function",
-            "name": "TestCollision__C11CVolFrustumRC11CVolCapsuleR10CCollisionb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8013fd84",
-            "size": 196,
-            "kind": "function",
-            "name": "TestCollision__C11CVolFrustumRC9CVolFiberR10CCollisionb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8013fe48",
-            "size": 196,
-            "kind": "function",
-            "name": "TestCollision__C11CVolFrustumRC10CCDBObjectR10CCollisionb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8013ff0c",
-            "size": 196,
-            "kind": "function",
-            "name": "TestCollision__C11CVolFrustumRC8CVector3R10CCollisionb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8013ffd0",
-            "size": 196,
-            "kind": "function",
-            "name": "TestCollision__C11CVolFrustumRC6CLine3R10CCollisionb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80140094",
-            "size": 196,
-            "kind": "function",
-            "name": "TestCollision__C11CVolFrustumRC6CPlaneR10CCollisionb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80140158",
-            "size": 196,
-            "kind": "function",
-            "name": "TestCollision__C11CVolFrustumRC9CTriangleR10CCollisionb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014021c",
-            "size": 236,
-            "kind": "function",
-            "name": "TestVisibility__C11CVolFrustumR12CDrawContext",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80140308",
-            "size": 188,
-            "kind": "function",
-            "name": "GetExtents__C11CVolFrustumR8CVector3T1",
             "evidence": "adjacent-compiler-markers"
           }
         ],
