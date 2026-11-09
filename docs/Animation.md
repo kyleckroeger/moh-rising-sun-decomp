@@ -617,3 +617,9 @@ its existing `AnimUtil.h` attribution; rotation expressions reuse this project's
 checked transform reconstruction with target operand order. ProDG 3.8.1 and the
 normal animation flags match every accepted generated allocated byte. Complete
 local image verification is required before publication; runtime remains untested.
+
+## Character skeleton lookups
+
+`EALA::Character::Skeleton`'s joint lookups forward to its `SkeletonData` when the pointer at `+0` is
+set. The view is in [`CharacterSkeleton.h`](../include/game/CharacterSkeleton.h). The test as a
+`HasData` inline is inferred from the materialized boolean in each body; that name is descriptive.

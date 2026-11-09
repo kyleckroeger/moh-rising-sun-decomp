@@ -2187,7 +2187,14 @@
     "eagl_viewport_ctor.json",
     "eagl_viewport_accessors.json",
     "eagl_rendercontext_newviewport.json",
-    "eagl_rendercontext_currentviewport.json"
+    "eagl_rendercontext_currentviewport.json",
+    "particlesystem_executedraw.json",
+    "meshparticle_release.json",
+    "meshparticle_lifecycle.json",
+    "meshparticle_visible.json",
+    "meshparticle_shutdown.json",
+    "meshparticle_state.json",
+    "character_skeleton_joints.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

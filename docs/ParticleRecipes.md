@@ -162,3 +162,8 @@ of each rotation entry and of the second value in each pair is inferred from the
 Ten `CParticleSystem` transform setters change `localToWorld`, then share one inline step: invert the
 matrix and rotate entries 19-21 of the definition, the acceleration and the velocity into local space.
 The helpers `RotateVector` and `UpdateLocalVectors` are descriptive names; the original's inline is unnamed.
+
+`MeshParticleSystem` keeps its flags at `+240`, the definition at `+216`, a bounding centre and radius
+at `+192` and `+224`, and pool links at `+256` in `g_meshParticleSystemList`, which has the same five
+words as the procedural pool. Flag names are inferred from the accessors; `running` is inferred only
+from `Terminate` clearing it.
