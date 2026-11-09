@@ -54,6 +54,16 @@ byte, with their native tables and literal pools. There is no Frontline counterp
 - `AI::Initialize`, `Restart` and `Shutdown`, `CAIActivityZone`'s point test and setters,
   and `CAILaggedVector::Init` and `Reset` match.
 
+- `CBuddyLeadBehavior`: the constructor, heuristic, start and stop match; it scores 100
+  while an unfinished checkpoint remains. `Checkpoint_t` is the original tag; only its
+  prefix is observed.
+- `CGrenadeResponseBehavior`: only `StopBehavior`, `ReleaseResources`, the capability test
+  and accessors so far. Its constructor and queries use a fixed-pool list that is not
+  yet modeled.
+- `AreaPathNode.cpp`: the node array (`g_pPathFindingAreas`, sixteen bytes per node), the
+  round-robin out-of-area update (fifty nodes per call) and the in-area byte at `+6`.
+  `CAIAreaPathFinding`'s volume counters, finish flag and walk-type query.
+
 ## Not reconstructed yet
 
 - `CCoverpointBehavior::UpdateHeuristicScore`, `StartBehavior`, `GetCapabilities` and

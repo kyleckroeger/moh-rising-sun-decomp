@@ -2167,7 +2167,18 @@
     "shell_dompcontrollerchecks.json",
     "shell_docoopcontrollerchecks.json",
     "shell_cshellmoviesettings.json",
-    "mc_getname.json"
+    "mc_getname.json",
+    "ai_AreaPathNodeNetwork.json",
+    "ai_AreaPathNodeFlags.json",
+    "ai_AreaPathWalkTail.json",
+    "ai_AreaPathVolumes.json",
+    "ai_BuddyLeadA.json",
+    "ai_BuddyLeadB.json",
+    "ai_BuddyLeadTail.json",
+    "ai_GrenadeResponseHead.json",
+    "ai_GrenadeResponseStop.json",
+    "ai_GrenadeResponseTail.json",
+    "ai_BotCharacter.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
