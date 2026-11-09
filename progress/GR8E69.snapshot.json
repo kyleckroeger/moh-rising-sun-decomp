@@ -471,6 +471,7 @@
       "src/ea/locatbig.cpp": "fa584699c71e3da3490236f9e528144d80adaae632b140dacfd593baaed752eb",
       "src/ea/locatbig_tail.cpp": "cb31096d1baa481ab45660bc3f49c446161462158dae382c55064958c3ed9f9a",
       "src/ea/maddec.cpp": "6bb014591aecb56d42dbb1222b84a6abf150b4ac39633f6381f2a6ddc835f63f",
+      "src/ea/maddeca.cpp": "9af3ceb1f66a1e60a1cfa50b54b8b641754d8cacb4581dc1e7153fade9bca310",
       "src/ea/madidct_compute.cpp": "cff5b77dd22f7c90e63449d90310125f62ba645c435a6223650c9b0c071a5262",
       "src/ea/memalloc.cpp": "1fb8d6c6965d9916235e6ee35c94a13b67f5d332f5f5adbf44ff3c8285f12e21",
       "src/ea/memblock.cpp": "9c22c07fb0234fb28e395fc44ebaa5d07b2ae93122bdbfb90b8e1b0da347e3ef",
@@ -3777,6 +3778,7 @@
       "config/GR8E69/ea_locatbig.json": "3d89332ca2423b134f8824282b22d2ecef215b3c58f819e83b0a7a01988cbef1",
       "config/GR8E69/ea_locatbig_tail.json": "97e626d1b280764969830c1170bbef289eb95eacd8e7c58cd7c7e9260b229f88",
       "config/GR8E69/ea_maddec.json": "cfc7362e74eb63ef3d4456a53560b3d93f35d681b4dc7e9b8434f91fb2d7a453",
+      "config/GR8E69/ea_maddeca.json": "617b4cab9db4a0ab0ee4f9e6d6d80eed6a1905a574b2ce389ab875fd671c3b7a",
       "config/GR8E69/ea_madidct_compute.json": "00166be4bce5e22164f38a9ae95015881aad9ebc235b0b3dafc6e85e49aac14b",
       "config/GR8E69/ea_memalloc.json": "4030127de92d45cef89b8bcbc97b5dce59122c4f49a385ce0d6cf6f3ae6a25f0",
       "config/GR8E69/ea_memblock.json": "d8bcb16d5b7e3784e63c0f2de83e1e3741b9dc84d3673d81e08b98a95d0117a0",
@@ -4651,7 +4653,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "15e4c4418e00f1e895de9e5f78fb253323ec714638b7535f55d99e4ebdf70090",
+      "config/GR8E69/project.json": "02efa2c2a77776018166d0b03da32cec90293e52dfb22f062f49e315c3418848",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7387,14 +7389,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1331488,
+    "matching_code_bytes": 1331944,
     "total_executable_code_bytes": 2492032,
-    "percent": 53.42981149519749,
+    "percent": 53.4481098156043,
     "categories": {
-      "reconstructed_game": 939272,
+      "reconstructed_game": 939728,
       "restored_library": 392216
     },
-    "matching_functions": 6983
+    "matching_functions": 6985
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -7947,6 +7949,7 @@
     "config/GR8E69/ea_locatbig.json": "3d89332ca2423b134f8824282b22d2ecef215b3c58f819e83b0a7a01988cbef1",
     "config/GR8E69/ea_locatbig_tail.json": "97e626d1b280764969830c1170bbef289eb95eacd8e7c58cd7c7e9260b229f88",
     "config/GR8E69/ea_maddec.json": "cfc7362e74eb63ef3d4456a53560b3d93f35d681b4dc7e9b8434f91fb2d7a453",
+    "config/GR8E69/ea_maddeca.json": "617b4cab9db4a0ab0ee4f9e6d6d80eed6a1905a574b2ce389ab875fd671c3b7a",
     "config/GR8E69/ea_madidct_compute.json": "00166be4bce5e22164f38a9ae95015881aad9ebc235b0b3dafc6e85e49aac14b",
     "config/GR8E69/ea_memalloc.json": "4030127de92d45cef89b8bcbc97b5dce59122c4f49a385ce0d6cf6f3ae6a25f0",
     "config/GR8E69/ea_memblock.json": "d8bcb16d5b7e3784e63c0f2de83e1e3741b9dc84d3673d81e08b98a95d0117a0",
@@ -8821,7 +8824,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "15e4c4418e00f1e895de9e5f78fb253323ec714638b7535f55d99e4ebdf70090",
+    "config/GR8E69/project.json": "02efa2c2a77776018166d0b03da32cec90293e52dfb22f062f49e315c3418848",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -11025,6 +11028,7 @@
     "src/ea/locatbig.cpp": "fa584699c71e3da3490236f9e528144d80adaae632b140dacfd593baaed752eb",
     "src/ea/locatbig_tail.cpp": "cb31096d1baa481ab45660bc3f49c446161462158dae382c55064958c3ed9f9a",
     "src/ea/maddec.cpp": "6bb014591aecb56d42dbb1222b84a6abf150b4ac39633f6381f2a6ddc835f63f",
+    "src/ea/maddeca.cpp": "9af3ceb1f66a1e60a1cfa50b54b8b641754d8cacb4581dc1e7153fade9bca310",
     "src/ea/madidct_compute.cpp": "cff5b77dd22f7c90e63449d90310125f62ba645c435a6223650c9b0c071a5262",
     "src/ea/memalloc.cpp": "1fb8d6c6965d9916235e6ee35c94a13b67f5d332f5f5adbf44ff3c8285f12e21",
     "src/ea/memblock.cpp": "9c22c07fb0234fb28e395fc44ebaa5d07b2ae93122bdbfb90b8e1b0da347e3ef",
@@ -63456,6 +63460,25 @@
       "discarded_functions": [],
       "object_sha256": "da9eaa2acec5e4e26c7542785cacdb843e50a0a8ed3285fd871babc9bd1db1c6",
       "linked_sha256": "72cd5838164291ff906cf96e3ce1f9393d045c3e15529a1d700b9ecc867dfd2f"
+    },
+    {
+      "id": "ea_maddeca",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 456,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "99da39bd638edb9469af13494a9dd3649b3f0b1da660b2e2b3a4c7bd3b5f051d",
+      "linked_sha256": "d9242b8889848dcb8ba21950b3685e8e90cb6cd23529198bcb4493a1e3bc8e33"
     }
   ],
   "code_map": {
@@ -86192,31 +86215,6 @@
             "name": "read",
             "evidence": "unknown-file"
           }
-        ]
-      },
-      {
-        "name": "Unmatched files/maddeca.cpp [inferred file group]",
-        "file_record": 947,
-        "file_name": "maddeca.cpp",
-        "ranges": [
-          {
-            "address": "0x802744fc",
-            "size": 88,
-            "kind": "function",
-            "name": "discardbits__Fi",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x80274554",
-            "size": 368,
-            "kind": "function",
-            "name": "madvlcdecode",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x802744fc",
-          "0x802746c4"
         ]
       },
       {
