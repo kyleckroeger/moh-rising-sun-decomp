@@ -2529,7 +2529,8 @@
     "game_glare_manager.json",
     "game_glare_execute.json",
     "ea_mad_frame.json",
-    "ea_mad_codec_chunks.json"
+    "ea_mad_codec_chunks.json",
+    "decal_set.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

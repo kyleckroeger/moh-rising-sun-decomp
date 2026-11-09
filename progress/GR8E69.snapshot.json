@@ -1672,6 +1672,7 @@
       "src/scene/WorldObjectCompartments.cpp": "b536aa54c3559f94a50841fa2a9f786260c9cd373c98698819de97e8c2c5f216",
       "src/scene/WorldObjectDraw.cpp": "93b5c5fc336b0cdd720869e1c812e753e0bf818a6153032af14765ec5db3842f",
       "src/scene/WorldObjectFiles.cpp": "541e2ec32260ae57af0464c96909d9797473cc6440af92aa7b1965e745fa88a0",
+      "src/scene/decal_set.cpp": "0026fb249c6da4c2c7409d0e4465522945283fdbeb7016a638e47a54d9dd4196",
       "src/scene/jaw_controller_ctor.cpp": "d925c4b536ea558fe6c261c9a3f83d4dc65bb6cd3e396224e2ef8e3ef23b2920",
       "src/scene/jaw_controller_motiontype.cpp": "509a33964954db2b09fd38a2c55eecd16285fed2fc2e66d5383ad2b7f9aa71ee",
       "src/scene/scene_closest.cpp": "03ef03ad17c343e6811960dbd6e6686f2d13a13c799b43f889498fbda9925f06",
@@ -3645,6 +3646,7 @@
       "config/GR8E69/crc.json": "d29c0ef0d8149a361db85a37711abcf340764c87356e4ddb75ed5bb24c982792",
       "config/GR8E69/csg_volume.json": "40a2fd4c64ca48aff4063c4ba8f4cb09970ca4c745a5faff31543918559b4156",
       "config/GR8E69/debug_msg.json": "668775e5b23b87c15679f01ef8896fc2ae452fbe71da62a13824d6cccd528f5d",
+      "config/GR8E69/decal_set.json": "11c2a6c75000166df36cf80874c2755723c843e799e0963093da21a5a42e56a5",
       "config/GR8E69/device_a.json": "89118186aa033bc46341dee495875b9668ea4ad29707b511b086469d27304fa2",
       "config/GR8E69/device_b.json": "fcc3d822095821ae168f21b6c5c89e11efedeb9c1fcdad063290da70e0cdf911",
       "config/GR8E69/device_c.json": "fec1918232ec214c86deaf390ff1d274d5b2eaef7c9cd14be7e3e622bff6d325",
@@ -4551,7 +4553,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "2f83a4771ac71046ed0dc61b7e5323732108b951b77f2a2252aa3b4dd4d16eb7",
+      "config/GR8E69/project.json": "9cfac519e1ea24e5bd458626d5284bfca3b49b1bb92a53c365097170bc2f0a4e",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7283,14 +7285,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1309400,
+    "matching_code_bytes": 1309788,
     "total_executable_code_bytes": 2492032,
-    "percent": 52.543466536545274,
+    "percent": 52.55903616004931,
     "categories": {
-      "reconstructed_game": 917184,
+      "reconstructed_game": 917572,
       "restored_library": 392216
     },
-    "matching_functions": 6869
+    "matching_functions": 6871
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -7767,6 +7769,7 @@
     "config/GR8E69/crc.json": "d29c0ef0d8149a361db85a37711abcf340764c87356e4ddb75ed5bb24c982792",
     "config/GR8E69/csg_volume.json": "40a2fd4c64ca48aff4063c4ba8f4cb09970ca4c745a5faff31543918559b4156",
     "config/GR8E69/debug_msg.json": "668775e5b23b87c15679f01ef8896fc2ae452fbe71da62a13824d6cccd528f5d",
+    "config/GR8E69/decal_set.json": "11c2a6c75000166df36cf80874c2755723c843e799e0963093da21a5a42e56a5",
     "config/GR8E69/device_a.json": "89118186aa033bc46341dee495875b9668ea4ad29707b511b086469d27304fa2",
     "config/GR8E69/device_b.json": "fcc3d822095821ae168f21b6c5c89e11efedeb9c1fcdad063290da70e0cdf911",
     "config/GR8E69/device_c.json": "fec1918232ec214c86deaf390ff1d274d5b2eaef7c9cd14be7e3e622bff6d325",
@@ -8673,7 +8676,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "2f83a4771ac71046ed0dc61b7e5323732108b951b77f2a2252aa3b4dd4d16eb7",
+    "config/GR8E69/project.json": "9cfac519e1ea24e5bd458626d5284bfca3b49b1bb92a53c365097170bc2f0a4e",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -12066,6 +12069,7 @@
     "src/scene/WorldObjectCompartments.cpp": "b536aa54c3559f94a50841fa2a9f786260c9cd373c98698819de97e8c2c5f216",
     "src/scene/WorldObjectDraw.cpp": "93b5c5fc336b0cdd720869e1c812e753e0bf818a6153032af14765ec5db3842f",
     "src/scene/WorldObjectFiles.cpp": "541e2ec32260ae57af0464c96909d9797473cc6440af92aa7b1965e745fa88a0",
+    "src/scene/decal_set.cpp": "0026fb249c6da4c2c7409d0e4465522945283fdbeb7016a638e47a54d9dd4196",
     "src/scene/jaw_controller_ctor.cpp": "d925c4b536ea558fe6c261c9a3f83d4dc65bb6cd3e396224e2ef8e3ef23b2920",
     "src/scene/jaw_controller_motiontype.cpp": "509a33964954db2b09fd38a2c55eecd16285fed2fc2e66d5383ad2b7f9aa71ee",
     "src/scene/scene_closest.cpp": "03ef03ad17c343e6811960dbd6e6686f2d13a13c799b43f889498fbda9925f06",
@@ -62375,6 +62379,24 @@
       "discarded_functions": [],
       "object_sha256": "bc91c44de51c1232054f090d2058454b95620f1dc8997ec50b527a77a7195258",
       "linked_sha256": "88c0279953f31e491cb251d2fd63f8f7023ea07ae110877a6e3230a7768079ec"
+    },
+    {
+      "id": "decal_set",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 388,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "5eeec221508bc381418a4089a58185cd0b6a6e0ccca33c33e24f74dc6d21765e",
+      "linked_sha256": "12291277e61e9a39da13a5bdc427f90fcedb0b522800758c930105b2101d0440"
     }
   ],
   "code_map": {
@@ -64721,22 +64743,8 @@
         ]
       },
       {
-        "name": "Unknown file/.text @ 80068b60",
+        "name": "Unknown file/.text @ 80068ce4",
         "ranges": [
-          {
-            "address": "0x80068b60",
-            "size": 84,
-            "kind": "function",
-            "name": "__8DecalSetRQ24_STLt9allocator1Z5Decal",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80068bb4",
-            "size": 304,
-            "kind": "function",
-            "name": "__8DecalSetRC8DecalSet",
-            "evidence": "unknown-file"
-          },
           {
             "address": "0x80068ce4",
             "size": 92,
