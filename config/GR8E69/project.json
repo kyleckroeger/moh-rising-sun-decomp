@@ -2164,7 +2164,6 @@
     "projector_transform.json",
     "projector_frustum.json",
     "shell_updateunplugged.json",
-    "shell_dompcontrollerchecks.json",
     "shell_docoopcontrollerchecks.json",
     "shell_cshellmoviesettings.json",
     "mc_getname.json",
@@ -2364,7 +2363,11 @@
     "scene_StaticFactoryMeshData.json",
     "animshape_register.json",
     "compartment_instance_storage.json",
-    "compartment_model_matrix.json"
+    "compartment_model_matrix.json",
+    "shell_dompcontrollerchecks.json",
+    "felocalizer_strings.json",
+    "felocalizer_widetoescape.json",
+    "felocalizer_readnextstring.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

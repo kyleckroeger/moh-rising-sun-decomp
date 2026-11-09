@@ -758,6 +758,9 @@
       "src/frontend/felistbox_dtor.cpp": "e14fa612c78f32dc829b7eac0d7b49efb7e803b3e673efaf95918c523d428b2a",
       "src/frontend/felistbox_setautowrap.cpp": "bfec8c5b03fd53d8f5501f05f51465cac7b7f0db32b168c99e6b3acb0f0c3123",
       "src/frontend/felistbox_setcelltype.cpp": "6e3d515fab585be9543f8078b575157b93e7aa0e91d049abee11b3dc576f7273",
+      "src/frontend/felocalizer_readnextstring.cpp": "aa806fb460a575d8e0840876214583188dde52a175e8ab94d3ae3f0ccf1c3305",
+      "src/frontend/felocalizer_strings.cpp": "4acd3b0bcebfabd49ca8741822c3084c77625a622a1d7f8176c65259b54dd2f2",
+      "src/frontend/felocalizer_widetoescape.cpp": "924aabe12fba69213f46f877d2709f56dd37b88b9d6449b10f35946f89ebeb67",
       "src/frontend/femessageresponse.cpp": "8383de6e6ca5707957b27223878c529b4e430c5d2663e4707217fb73176070cd",
       "src/frontend/fengine_addtoidlelist.cpp": "79853aec42c20268dd2b09ca07ad06ab00180016046f55219a96e8edb270e31f",
       "src/frontend/fengine_checkmoviedemoscreen.cpp": "aa105cd84f3b85923003f77af7368683c015e32771c149061a3aabb6f5f62893",
@@ -798,7 +801,7 @@
       "src/frontend/shell_cshellmoviesettings.cpp": "74f0dde849ea20168a6870b97aaef26a8330146cb8766e745a66360246fdc2cc",
       "src/frontend/shell_debugmessagequeued.cpp": "66c31a28249ee686b60e4df3ae9ffadb475598316b50da68a3f4549000b990ab",
       "src/frontend/shell_docoopcontrollerchecks.cpp": "a8a57e1a585a4a0223edaed05749842d0a28b3065763edcaa44e533683d9c7d9",
-      "src/frontend/shell_dompcontrollerchecks.cpp": "8c29986158b79fb39a94c5c267df26029adfc42c797c8c0f940607d7a3fecd47",
+      "src/frontend/shell_dompcontrollerchecks.cpp": "6e3253f27da31d47d206961d1d67b54ae43ced39febc05b08e8093adaee89cd4",
       "src/frontend/shell_endpackagerendering.cpp": "47cf0973a81235190ae2d4b82357dbd79558e6881f8d04ce17ebe5c03e4d067b",
       "src/frontend/shell_getcombinedjoypadactivemask.cpp": "38edeb34f8d3396cc636ed863d03bbdb8c81e4dcdff8cc15dbf9ec8afd913e26",
       "src/frontend/shell_getdeviceindexfromcontrolmask.cpp": "53d4afa2c6798a841218d00e035e8691571324d637bf6a7bcbe97d847bc1adb6",
@@ -2750,6 +2753,7 @@
       "include/game/Endian.h": "6f3a06aca2ed749c09949cedff932c6e9a8db1272b5393bdc9a46185a384387b",
       "include/game/FEHash.h": "5d2777480e94ab65796f9850193722c7585a884299d6b68b610c5b3ce6a08757",
       "include/game/FEListBox.h": "422a88beb0422ca70e1e34c5bc216c552ad2921e8c993896cdaf1a63880d4be8",
+      "include/game/FELocalizer.h": "895b45a27e3d28595267eb7fe70cd1595edbf0c008e5e945da9bcaefbf061437",
       "include/game/FEMessageResponse.h": "61a8d2f2e476029cde734cf9498ee8748fdcc79963bdfc36ab98a4c84eb7d20c",
       "include/game/FEObjectPool.h": "b89812c3ff027e7a3de82fe707e58d4ef1cea3b39f598919dc6bee573580a278",
       "include/game/FEScript.h": "3994a8396b947a1bac8e16a716ee21091121d6ce85294dcc24f14cec7baafb90",
@@ -3749,6 +3753,9 @@
       "config/GR8E69/felistbox_dtor.json": "89ef5046e796152af8ce12c5bf406b74829245f588da30807771e7790ba3b62a",
       "config/GR8E69/felistbox_setautowrap.json": "c65ede89a9778e6502d63ae705d59e7df3889956aaf38654826ffd91bfebe066",
       "config/GR8E69/felistbox_setcelltype.json": "0fa47e3d6bc40e5ad486986cb67fc6f7471776b56b717b02a35b8217279b66f6",
+      "config/GR8E69/felocalizer_readnextstring.json": "c3aac53efe474a965939dfee6ee927f16eacdfd77a9446bed766fae42687a86c",
+      "config/GR8E69/felocalizer_strings.json": "f93a854440911755c215cbf59cd6305d112ce22e55b95110488e07cd97af7239",
+      "config/GR8E69/felocalizer_widetoescape.json": "ded3785c1e5b268547c9dacefa7e14a860723fa35d357b664b594723dbb19061",
       "config/GR8E69/femessageresponse.json": "11725a584c60179ec85bcacc3b273562a6c1881e595a38e93a163219cf28bc1c",
       "config/GR8E69/fengine_addtoidlelist.json": "8ff963f5da0e4b12de907be8324a9e996ae48ab9ef835d0564153919adca2afb",
       "config/GR8E69/fengine_checkmoviedemoscreen.json": "00dd9d9f510e1254018ff2aa1700228b17616db66dc2e37a9cd5dbc252543f9c",
@@ -4232,7 +4239,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "63c3c4ca1e4ad6c459f5b11e261b40a76637dbcdf55afef08015070cf25d0fe9",
+      "config/GR8E69/project.json": "9a02fb4b562d1284496e24ac32d3d47602acc1ef970920a02e4b3ea5ac92ffa7",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -4891,7 +4898,7 @@
       "config/GR8E69/shell_cshellmoviesettings.json": "1051d2a404082bd7515b6e9efcd3e5b515fa0fcc5e359442dc2adb395bb7fadc",
       "config/GR8E69/shell_debugmessagequeued.json": "fc9aa9c0ad0bb0d61e15f858f602c6381f8ce78e08f87b5ccf1232d54c69c173",
       "config/GR8E69/shell_docoopcontrollerchecks.json": "7254f860ade5a45b0da36523c9e601153664625900778d3f7ca131b619e568d7",
-      "config/GR8E69/shell_dompcontrollerchecks.json": "2512444fce61d5a41c39cb34c3063d178335bdecdd82530590450fadbaa6874a",
+      "config/GR8E69/shell_dompcontrollerchecks.json": "d6b5f5819420f9880a51d324f96fd776d0928a27bfa72fff0f627c8f77f96851",
       "config/GR8E69/shell_endpackagerendering.json": "d0e1673953a9844c34608df15c69d5559c62eecde267d42ecf4e690d2ad15714",
       "config/GR8E69/shell_getcombinedjoypadactivemask.json": "f1e8d8545bb3444936c3a0af9c26f327db6b844b99eef66d52c5712dd2a1fcf0",
       "config/GR8E69/shell_getdeviceindexfromcontrolmask.json": "df1cc042d5e280ddadca03199b8b45501ebe3101e66ef66b58bd813d99da22ee",
@@ -6939,14 +6946,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1206564,
+    "matching_code_bytes": 1209188,
     "total_executable_code_bytes": 2492032,
-    "percent": 48.41687426164672,
+    "percent": 48.52216985977708,
     "categories": {
-      "reconstructed_game": 814348,
+      "reconstructed_game": 816972,
       "restored_library": 392216
     },
-    "matching_functions": 6315
+    "matching_functions": 6335
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -7706,6 +7713,9 @@
     "config/GR8E69/felistbox_dtor.json": "89ef5046e796152af8ce12c5bf406b74829245f588da30807771e7790ba3b62a",
     "config/GR8E69/felistbox_setautowrap.json": "c65ede89a9778e6502d63ae705d59e7df3889956aaf38654826ffd91bfebe066",
     "config/GR8E69/felistbox_setcelltype.json": "0fa47e3d6bc40e5ad486986cb67fc6f7471776b56b717b02a35b8217279b66f6",
+    "config/GR8E69/felocalizer_readnextstring.json": "c3aac53efe474a965939dfee6ee927f16eacdfd77a9446bed766fae42687a86c",
+    "config/GR8E69/felocalizer_strings.json": "f93a854440911755c215cbf59cd6305d112ce22e55b95110488e07cd97af7239",
+    "config/GR8E69/felocalizer_widetoescape.json": "ded3785c1e5b268547c9dacefa7e14a860723fa35d357b664b594723dbb19061",
     "config/GR8E69/femessageresponse.json": "11725a584c60179ec85bcacc3b273562a6c1881e595a38e93a163219cf28bc1c",
     "config/GR8E69/fengine_addtoidlelist.json": "8ff963f5da0e4b12de907be8324a9e996ae48ab9ef835d0564153919adca2afb",
     "config/GR8E69/fengine_checkmoviedemoscreen.json": "00dd9d9f510e1254018ff2aa1700228b17616db66dc2e37a9cd5dbc252543f9c",
@@ -8189,7 +8199,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "63c3c4ca1e4ad6c459f5b11e261b40a76637dbcdf55afef08015070cf25d0fe9",
+    "config/GR8E69/project.json": "9a02fb4b562d1284496e24ac32d3d47602acc1ef970920a02e4b3ea5ac92ffa7",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -8848,7 +8858,7 @@
     "config/GR8E69/shell_cshellmoviesettings.json": "1051d2a404082bd7515b6e9efcd3e5b515fa0fcc5e359442dc2adb395bb7fadc",
     "config/GR8E69/shell_debugmessagequeued.json": "fc9aa9c0ad0bb0d61e15f858f602c6381f8ce78e08f87b5ccf1232d54c69c173",
     "config/GR8E69/shell_docoopcontrollerchecks.json": "7254f860ade5a45b0da36523c9e601153664625900778d3f7ca131b619e568d7",
-    "config/GR8E69/shell_dompcontrollerchecks.json": "2512444fce61d5a41c39cb34c3063d178335bdecdd82530590450fadbaa6874a",
+    "config/GR8E69/shell_dompcontrollerchecks.json": "d6b5f5819420f9880a51d324f96fd776d0928a27bfa72fff0f627c8f77f96851",
     "config/GR8E69/shell_endpackagerendering.json": "d0e1673953a9844c34608df15c69d5559c62eecde267d42ecf4e690d2ad15714",
     "config/GR8E69/shell_getcombinedjoypadactivemask.json": "f1e8d8545bb3444936c3a0af9c26f327db6b844b99eef66d52c5712dd2a1fcf0",
     "config/GR8E69/shell_getdeviceindexfromcontrolmask.json": "df1cc042d5e280ddadca03199b8b45501ebe3101e66ef66b58bd813d99da22ee",
@@ -9633,6 +9643,7 @@
     "include/game/Endian.h": "6f3a06aca2ed749c09949cedff932c6e9a8db1272b5393bdc9a46185a384387b",
     "include/game/FEHash.h": "5d2777480e94ab65796f9850193722c7585a884299d6b68b610c5b3ce6a08757",
     "include/game/FEListBox.h": "422a88beb0422ca70e1e34c5bc216c552ad2921e8c993896cdaf1a63880d4be8",
+    "include/game/FELocalizer.h": "895b45a27e3d28595267eb7fe70cd1595edbf0c008e5e945da9bcaefbf061437",
     "include/game/FEMessageResponse.h": "61a8d2f2e476029cde734cf9498ee8748fdcc79963bdfc36ab98a4c84eb7d20c",
     "include/game/FEObjectPool.h": "b89812c3ff027e7a3de82fe707e58d4ef1cea3b39f598919dc6bee573580a278",
     "include/game/FEScript.h": "3994a8396b947a1bac8e16a716ee21091121d6ce85294dcc24f14cec7baafb90",
@@ -10629,6 +10640,9 @@
     "src/frontend/felistbox_dtor.cpp": "e14fa612c78f32dc829b7eac0d7b49efb7e803b3e673efaf95918c523d428b2a",
     "src/frontend/felistbox_setautowrap.cpp": "bfec8c5b03fd53d8f5501f05f51465cac7b7f0db32b168c99e6b3acb0f0c3123",
     "src/frontend/felistbox_setcelltype.cpp": "6e3d515fab585be9543f8078b575157b93e7aa0e91d049abee11b3dc576f7273",
+    "src/frontend/felocalizer_readnextstring.cpp": "aa806fb460a575d8e0840876214583188dde52a175e8ab94d3ae3f0ccf1c3305",
+    "src/frontend/felocalizer_strings.cpp": "4acd3b0bcebfabd49ca8741822c3084c77625a622a1d7f8176c65259b54dd2f2",
+    "src/frontend/felocalizer_widetoescape.cpp": "924aabe12fba69213f46f877d2709f56dd37b88b9d6449b10f35946f89ebeb67",
     "src/frontend/femessageresponse.cpp": "8383de6e6ca5707957b27223878c529b4e430c5d2663e4707217fb73176070cd",
     "src/frontend/fengine_addtoidlelist.cpp": "79853aec42c20268dd2b09ca07ad06ab00180016046f55219a96e8edb270e31f",
     "src/frontend/fengine_checkmoviedemoscreen.cpp": "aa105cd84f3b85923003f77af7368683c015e32771c149061a3aabb6f5f62893",
@@ -10669,7 +10683,7 @@
     "src/frontend/shell_cshellmoviesettings.cpp": "74f0dde849ea20168a6870b97aaef26a8330146cb8766e745a66360246fdc2cc",
     "src/frontend/shell_debugmessagequeued.cpp": "66c31a28249ee686b60e4df3ae9ffadb475598316b50da68a3f4549000b990ab",
     "src/frontend/shell_docoopcontrollerchecks.cpp": "a8a57e1a585a4a0223edaed05749842d0a28b3065763edcaa44e533683d9c7d9",
-    "src/frontend/shell_dompcontrollerchecks.cpp": "8c29986158b79fb39a94c5c267df26029adfc42c797c8c0f940607d7a3fecd47",
+    "src/frontend/shell_dompcontrollerchecks.cpp": "6e3253f27da31d47d206961d1d67b54ae43ced39febc05b08e8093adaee89cd4",
     "src/frontend/shell_endpackagerendering.cpp": "47cf0973a81235190ae2d4b82357dbd79558e6881f8d04ce17ebe5c03e4d067b",
     "src/frontend/shell_getcombinedjoypadactivemask.cpp": "38edeb34f8d3396cc636ed863d03bbdb8c81e4dcdff8cc15dbf9ec8afd913e26",
     "src/frontend/shell_getdeviceindexfromcontrolmask.cpp": "53d4afa2c6798a841218d00e035e8691571324d637bf6a7bcbe97d847bc1adb6",
@@ -55072,24 +55086,6 @@
       "linked_sha256": "0f17ba11ed574bc3976edf5e3646a7292cc1cfbd5417a9da78b1d4cb1aca5b13"
     },
     {
-      "id": "shell_dompcontrollerchecks",
-      "category": "reconstructed_game",
-      "functions": 3,
-      "code_bytes": 212,
-      "compiler_family": "ProDG",
-      "compiler_version": "3.8.1",
-      "compiler_flags": [
-        "-O2",
-        "-G0",
-        "-fno-exceptions",
-        "-fno-implicit-templates"
-      ],
-      "strip_unused": false,
-      "discarded_functions": [],
-      "object_sha256": "66bf4c49e4b798950198e3a762bfc5ca1d74745d0dd9fdf579e6acd7cb5bd91b",
-      "linked_sha256": "c82f3ff629ccafbb45c9f9fe0daf80bb281fa0e51a797dbf671f9ecda0bc24f5"
-    },
-    {
       "id": "shell_docoopcontrollerchecks",
       "category": "reconstructed_game",
       "functions": 2,
@@ -58703,6 +58699,78 @@
       "discarded_functions": [],
       "object_sha256": "63a981c9d833d1958cfddcb614179113e4b5df0d22e9aabd7bcd30a9815c2b5f",
       "linked_sha256": "573dcaae25d7e356c26c2b084b98335dde31fb90cac21f97e9ac03ddffe11b4d"
+    },
+    {
+      "id": "shell_dompcontrollerchecks",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 356,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "fc2b0e5a9d97a8e84d04c0cae242067848fbd9f50ef57d604a5da86ef2df6810",
+      "linked_sha256": "ef1c88480be92d33eb072c75c445020d04f0482814b6867da8ed6d91e79cc1f1"
+    },
+    {
+      "id": "felocalizer_strings",
+      "category": "reconstructed_game",
+      "functions": 17,
+      "code_bytes": 2176,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "798d51f17d26291d21727954d204a9f7f0f1774891dedfa1a834b4f05af5737d",
+      "linked_sha256": "8622df0a7e51f0120c7bb0942e5517605172ecca79168cacb25609597aaf0cdb"
+    },
+    {
+      "id": "felocalizer_widetoescape",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 148,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "cb07f4259ce15a2cf91ab0062784416f824991818eeee0902e78ed82fc0e3cf2",
+      "linked_sha256": "f318f97823ab5e405301fdd73223b089febb8f36740d4e5bd7070d39fa827fec"
+    },
+    {
+      "id": "felocalizer_readnextstring",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 156,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "269cd0b997f8f3310e3ba8550d8397282a1ff7ab58918dd59a16638668b110b9",
+      "linked_sha256": "742d0f2c33f1ad4af50f9a480a4faf7df508d5d73c9235f71b413d07604aa52a"
     }
   ],
   "code_map": {
@@ -59395,130 +59463,6 @@
         ]
       },
       {
-        "name": "Unknown file/.text @ 8004aa20",
-        "ranges": [
-          {
-            "address": "0x8004aa20",
-            "size": 56,
-            "kind": "function",
-            "name": "SetLabelName__13FELocalStringPCc",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8004aa58",
-            "size": 36,
-            "kind": "function",
-            "name": "SetPlatform__13FELocalStringPCc",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8004aa7c",
-            "size": 36,
-            "kind": "function",
-            "name": "SetComment__13FELocalStringPCc",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8004aaa0",
-            "size": 36,
-            "kind": "function",
-            "name": "SetFlags__13FELocalStringPCc",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8004aac4",
-            "size": 4,
-            "kind": "function",
-            "name": "SetSize__13FELocalStringPCc",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8004aac8",
-            "size": 80,
-            "kind": "function",
-            "name": "__11FELocalizer",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8004ab18",
-            "size": 88,
-            "kind": "function",
-            "name": "_._11FELocalizer",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8004ab70",
-            "size": 280,
-            "kind": "function",
-            "name": "ReleaseAll__11FELocalizer",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8004ac88",
-            "size": 116,
-            "kind": "function",
-            "name": "SetNumLanguages__11FELocalizerUl",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8004acfc",
-            "size": 60,
-            "kind": "function",
-            "name": "SetLanguageName__11FELocalizerPCcUl",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8004ad38",
-            "size": 664,
-            "kind": "function",
-            "name": "AllocStrings__11FELocalizerUl",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8004afd0",
-            "size": 68,
-            "kind": "function",
-            "name": "GetString__C11FELocalizerPCcUl",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8004b014",
-            "size": 88,
-            "kind": "function",
-            "name": "GetString__C11FELocalizerUlUl",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8004b06c",
-            "size": 60,
-            "kind": "function",
-            "name": "GetLabelIndex__C11FELocalizerPCc",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8004b0a8",
-            "size": 72,
-            "kind": "function",
-            "name": "GetLabelIndex__C11FELocalizerUl",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8004b0f0",
-            "size": 328,
-            "kind": "function",
-            "name": "SetString__11FELocalizerPCcUlR12FEWideString",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8004b238",
-            "size": 104,
-            "kind": "function",
-            "name": "SetString__11FELocalizerUlUlR12FEWideString",
-            "evidence": "unknown-file"
-          }
-        ]
-      },
-      {
         "name": "Unknown file/.text @ 8004b458",
         "ranges": [
           {
@@ -59527,28 +59471,24 @@
             "kind": "function",
             "name": "ReadLocaleData__11FELocalizerPvUl",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8004b818",
-            "size": 148,
-            "kind": "function",
-            "name": "WideToEscapeString__11FELocalizerPcPCs",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 8004b8ac",
+        "ranges": [
           {
             "address": "0x8004b8ac",
             "size": 288,
             "kind": "function",
             "name": "ReadString__11FELocalizerPsPcRUlUl",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8004b9cc",
-            "size": 156,
-            "kind": "function",
-            "name": "ReadNextString__11FELocalizerPsPcRUlUl",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 8004ba68",
+        "ranges": [
           {
             "address": "0x8004ba68",
             "size": 196,
@@ -74374,13 +74314,6 @@
             "size": 280,
             "kind": "function",
             "name": "DoMPJoinScreenUpdate__12ShellManager",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8018224c",
-            "size": 144,
-            "kind": "function",
-            "name": "SetActiveControllerIndicies__12ShellManager",
             "evidence": "adjacent-compiler-markers"
           },
           {

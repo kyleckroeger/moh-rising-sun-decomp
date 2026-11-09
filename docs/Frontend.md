@@ -100,3 +100,15 @@ pool `ObjDataPool`.
 Not yet exact: `Close` (FEObject.cpp, a float range test), `GetStringLength` (register allocation), `FEColor::operator-` (load order),
 `ShellManager::RenderObjectList`, `RecallPackageMarker`, `RecordPackageMarker` and the
 `PackageHandler` object-list index functions.
+
+### FELocalizer
+
+`FELocalizer` and `FELocalString` hold localized strings as a table of 28-byte records keyed by the upper-case
+label hash, each with one `FEWideString` per language. Class and method names are symbols; member names are
+inferred from use. Verified: `ReadLocaleData` parses `[HEADER]`, a `Languages` line, `[LABEL]`, `[PLATFORM]`,
+`[COMMENT]`, `[FLAGS]` and `[MAX_SIZE]` records; `SetSize` ignores its argument. Inferred: `storeLabels`.
+
+The unit's helpers `FECopyString`, `ItoA` and the rest are private symbols of the original file `FELocalizer.cpp`,
+which the symbol table names beside them and which the DWI labels in `SetNumLanguages`, `AllocStrings` and
+`SetString` repeat as `source/FEngine/FELocalizer.cpp`. The fragments that call them record that file. The helpers
+themselves, `ReadLocaleData` and `ReadString` are not reconstructed yet: their other callers are not in this unit.
