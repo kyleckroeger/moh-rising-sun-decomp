@@ -108,6 +108,15 @@ callbacks in that order, restores the priority and returns the record to the fre
 at the object's start guards both queues. The queues are `_STL::queue<ThreadJob *>`; that header is
 not in this tree, so the fragment declares the adapter. Verified: the code. Inferred: member names.
 
+## Lua state scripts
+
+The original `mohlua.cpp` opens one Lua state and registers nine functions the state scripts call:
+`SetStateChoice` and queries on the current object. `LUAEvaluateState` sets that object, clears the
+choice, runs a buffer and returns the choice. `GetStateVariable` calls `GetValue` through the
+object's table at `+0x38`. `BeginHurtling` reports `StartScriptDeath`'s argument message, as in the
+image. Verified: the code. Inferred: the script data's member names at `+0x8c` to `+0x9c`, and the
+meanings of the event numbers `StartScriptDeath` sends.
+
 ## MohLoader
 
 `MohLoader` and `MohLoaderGc` hold the console-side start-up state. `g_pPersistent` points to a

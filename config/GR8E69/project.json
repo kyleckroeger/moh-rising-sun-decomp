@@ -2373,7 +2373,11 @@
     "shell_ListBoxCtor.json",
     "shell_ListBoxScroll.json",
     "shell_ListBoxRows.json",
-    "shell_ListBoxRowDtor.json"
+    "shell_ListBoxRowDtor.json",
+    "mohlua_choice.json",
+    "mohlua_init.json",
+    "mohlua_queries.json",
+    "mohlua_calls.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

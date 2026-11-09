@@ -847,6 +847,10 @@
       "src/game/moh_ls.cpp": "f55328123c5554d493c6f9452253e7f4a65f2e1fd8e5d29e81f3c1c11fd1615c",
       "src/game/moh_rest.cpp": "0a13dc155dd1bd07e4f11c40d8b7d4783fd7fd0050e04b91dabe8dbff2fd14a3",
       "src/game/moh_scan.cpp": "bcbb53a103255e1cbfb4197aee196ecb80e2c03d5f087b9b0827a8ee688a9e1f",
+      "src/game/mohlua_calls.cpp": "da0f497552138ffab7cc68e4c18bcbc4f4a082959326485f3bf5075b9fe9cbee",
+      "src/game/mohlua_choice.cpp": "2aeb50712a14acb90345e4304af92ce6a34377eb28ae1b248c23f0245fd69a6f",
+      "src/game/mohlua_init.cpp": "727468b49619d86d5b1d160152bf0f2144a0042d62520d475716938c53252ae2",
+      "src/game/mohlua_queries.cpp": "35a5e45c34b5cee6f1c22ed0ad42a5afd375957efb0b617d4d9b95d0b96064b8",
       "src/game/rtc_a.cpp": "d9e3685177a72199f1ac8856e4c91f6cea36b380183026e0086b9768eccf0d20",
       "src/game/rtc_b.cpp": "6e20861f9cade38aae290ff193781e71ba7739aa26a9d26f57fe1ea0420c4965",
       "src/game/screen_init.cpp": "e0b48e8fa9140cb37b4791db75e8676370f877f67c8a9fe3b33c65350173e00d",
@@ -1463,7 +1467,7 @@
       "src/scene/SoldierFaceState.cpp": "033a5cc89299ea84492742fe6eb0e0610f19705f0a5dc1c17ce53994cda6c864",
       "src/scene/SoldierFade.cpp": "86ee08176d76986c82f7a597f69139f89a25ecce907744c1569bfa79eb1a608f",
       "src/scene/SoldierGag.cpp": "56f9895ace50b4581882e46c99ff281ea33e6cb5bc9c2d5fec8f5ca8994c6708",
-      "src/scene/SoldierGagFilter.cpp": "d3510f55dae43aaeac73be3e183885f9e03aad3600f057a115cf61c8613a666e",
+      "src/scene/SoldierGagFilter.cpp": "fe7adbcdf0cfd613074aea56657e3d115625752cacdb37886f0a152e048052ee",
       "src/scene/SoldierInitClass.cpp": "fa6b8e3319a14299fabd6b991c9b83e4241e7ce79b9b0ca328e2b4440d7f0597",
       "src/scene/SoldierLipSyncDef.cpp": "63f33520bde6e562307afb22a754dc4611bd7a0eb0d342ca761992a1a4e0b1e0",
       "src/scene/SoldierLipsync.cpp": "d6b2233028a4f8452cf2ad494fd5406e75442149dd6cb1f6d20b0351eea3b418",
@@ -3998,6 +4002,10 @@
       "config/GR8E69/moh_ls.json": "df518ec1946785af8f6b28533a8b46a4ad8727a7531b27fc320dac22643e6a3f",
       "config/GR8E69/moh_rest.json": "ef1ace94246dc22844c29b32e59ae82150d6bc75ef84595aff731085dcb3fa5a",
       "config/GR8E69/moh_scan.json": "b834df270873a8290f0d84a7db5cea044d7b3fc434267dd77e87e68234fbdba5",
+      "config/GR8E69/mohlua_calls.json": "ad031f1aed6411fdcd560457ca37470a422e3e2850c64a064cb779a10d9d08ab",
+      "config/GR8E69/mohlua_choice.json": "3b362b0303945eb91942f3ad7f7a409fc5432bceb4fa2128577df7a50fcad2f0",
+      "config/GR8E69/mohlua_init.json": "217528a369fcc28954fccb398a3d336d73728c1f7a0f451b51f745f6dd8c7ec8",
+      "config/GR8E69/mohlua_queries.json": "0e608f6dec642de9bce7cf7467c0aa94a4744aaf7191833417f7d7a6ad9a43c2",
       "config/GR8E69/motion_blur.json": "3bcfa4c027131dfec9f56892b60b79f4df2830f9be615cb9f47fded6eb81cc57",
       "config/GR8E69/motion_blur_pause.json": "d8e21ee2d561557a0f6b2e1c96930b2493ad432cff6bf8925a50600cfecb7b7a",
       "config/GR8E69/movie_player_heap.json": "cbaf5cfdd10a4d819b876b4b90b053a41c2e4033f5f552828c783d861ac0e6f3",
@@ -4245,7 +4253,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "d3c4f3248bac6208e05a42e6c58e7ce55f66b15c4f72de3f53731c49d252526b",
+      "config/GR8E69/project.json": "9faadafdecffd5b506891d812f1c031fb655f47873ec379e97a584911308fa3a",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -6958,14 +6966,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1213392,
+    "matching_code_bytes": 1215600,
     "total_executable_code_bytes": 2492032,
-    "percent": 48.69086753300118,
+    "percent": 48.7794699265499,
     "categories": {
-      "reconstructed_game": 821176,
+      "reconstructed_game": 823384,
       "restored_library": 392216
     },
-    "matching_functions": 6372
+    "matching_functions": 6386
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -7964,6 +7972,10 @@
     "config/GR8E69/moh_ls.json": "df518ec1946785af8f6b28533a8b46a4ad8727a7531b27fc320dac22643e6a3f",
     "config/GR8E69/moh_rest.json": "ef1ace94246dc22844c29b32e59ae82150d6bc75ef84595aff731085dcb3fa5a",
     "config/GR8E69/moh_scan.json": "b834df270873a8290f0d84a7db5cea044d7b3fc434267dd77e87e68234fbdba5",
+    "config/GR8E69/mohlua_calls.json": "ad031f1aed6411fdcd560457ca37470a422e3e2850c64a064cb779a10d9d08ab",
+    "config/GR8E69/mohlua_choice.json": "3b362b0303945eb91942f3ad7f7a409fc5432bceb4fa2128577df7a50fcad2f0",
+    "config/GR8E69/mohlua_init.json": "217528a369fcc28954fccb398a3d336d73728c1f7a0f451b51f745f6dd8c7ec8",
+    "config/GR8E69/mohlua_queries.json": "0e608f6dec642de9bce7cf7467c0aa94a4744aaf7191833417f7d7a6ad9a43c2",
     "config/GR8E69/motion_blur.json": "3bcfa4c027131dfec9f56892b60b79f4df2830f9be615cb9f47fded6eb81cc57",
     "config/GR8E69/motion_blur_pause.json": "d8e21ee2d561557a0f6b2e1c96930b2493ad432cff6bf8925a50600cfecb7b7a",
     "config/GR8E69/movie_player_heap.json": "cbaf5cfdd10a4d819b876b4b90b053a41c2e4033f5f552828c783d861ac0e6f3",
@@ -8211,7 +8223,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "d3c4f3248bac6208e05a42e6c58e7ce55f66b15c4f72de3f53731c49d252526b",
+    "config/GR8E69/project.json": "9faadafdecffd5b506891d812f1c031fb655f47873ec379e97a584911308fa3a",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -10747,6 +10759,10 @@
     "src/game/moh_ls.cpp": "f55328123c5554d493c6f9452253e7f4a65f2e1fd8e5d29e81f3c1c11fd1615c",
     "src/game/moh_rest.cpp": "0a13dc155dd1bd07e4f11c40d8b7d4783fd7fd0050e04b91dabe8dbff2fd14a3",
     "src/game/moh_scan.cpp": "bcbb53a103255e1cbfb4197aee196ecb80e2c03d5f087b9b0827a8ee688a9e1f",
+    "src/game/mohlua_calls.cpp": "da0f497552138ffab7cc68e4c18bcbc4f4a082959326485f3bf5075b9fe9cbee",
+    "src/game/mohlua_choice.cpp": "2aeb50712a14acb90345e4304af92ce6a34377eb28ae1b248c23f0245fd69a6f",
+    "src/game/mohlua_init.cpp": "727468b49619d86d5b1d160152bf0f2144a0042d62520d475716938c53252ae2",
+    "src/game/mohlua_queries.cpp": "35a5e45c34b5cee6f1c22ed0ad42a5afd375957efb0b617d4d9b95d0b96064b8",
     "src/game/rtc_a.cpp": "d9e3685177a72199f1ac8856e4c91f6cea36b380183026e0086b9768eccf0d20",
     "src/game/rtc_b.cpp": "6e20861f9cade38aae290ff193781e71ba7739aa26a9d26f57fe1ea0420c4965",
     "src/game/screen_init.cpp": "e0b48e8fa9140cb37b4791db75e8676370f877f67c8a9fe3b33c65350173e00d",
@@ -11363,7 +11379,7 @@
     "src/scene/SoldierFaceState.cpp": "033a5cc89299ea84492742fe6eb0e0610f19705f0a5dc1c17ce53994cda6c864",
     "src/scene/SoldierFade.cpp": "86ee08176d76986c82f7a597f69139f89a25ecce907744c1569bfa79eb1a608f",
     "src/scene/SoldierGag.cpp": "56f9895ace50b4581882e46c99ff281ea33e6cb5bc9c2d5fec8f5ca8994c6708",
-    "src/scene/SoldierGagFilter.cpp": "d3510f55dae43aaeac73be3e183885f9e03aad3600f057a115cf61c8613a666e",
+    "src/scene/SoldierGagFilter.cpp": "fe7adbcdf0cfd613074aea56657e3d115625752cacdb37886f0a152e048052ee",
     "src/scene/SoldierInitClass.cpp": "fa6b8e3319a14299fabd6b991c9b83e4241e7ce79b9b0ca328e2b4440d7f0597",
     "src/scene/SoldierLipSyncDef.cpp": "63f33520bde6e562307afb22a754dc4611bd7a0eb0d342ca761992a1a4e0b1e0",
     "src/scene/SoldierLipsync.cpp": "d6b2233028a4f8452cf2ad494fd5406e75442149dd6cb1f6d20b0351eea3b418",
@@ -58903,6 +58919,78 @@
       "discarded_functions": [],
       "object_sha256": "db8f385e6b9d20f6212efda3e29e84ce4c0e4e866aa7fa4452c5c807f2729099",
       "linked_sha256": "8ce8595d7720ef83a735555333ca171d421ec1d2266bab7b3cba5e2e6111cdc9"
+    },
+    {
+      "id": "mohlua_choice",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 124,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "19c7997c7a397ae44ad460ba68f77ca3f71a7466477752ad10e8d77873aeb266",
+      "linked_sha256": "0b43da16c337aa665e0cce607d3cf82c4a5629fddd6c77c44cb14454417fcab2"
+    },
+    {
+      "id": "mohlua_init",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 572,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "0bf1f6f0f4d990ccd5b96f69aa89d567cf02515775aa1061c45a6b4456f8daf0",
+      "linked_sha256": "ae33a10e764803a5936dba5d25855c054c230c2ce17a2da2f4b6bbe12ff49aa2"
+    },
+    {
+      "id": "mohlua_queries",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 968,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "d3ee29669d15b6a8f1ff78c9a45647bf128addaab3339180176e53367658ecb7",
+      "linked_sha256": "7cbcf656c8228a98c05ede956188fb1105178c3d02713a53f2ec6c5bfb7ad367"
+    },
+    {
+      "id": "mohlua_calls",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 544,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "ad15ad68de2ef3d4cbc9892bc77078c03373220efd075343e518bded46c37b46",
+      "linked_sha256": "c9d997e4997acc1e1b695147f00e3dea5619746c7b26cb50ad7e48bbfc07f01e"
     }
   ],
   "code_map": {
@@ -77343,116 +77431,6 @@
         "marker_interval": [
           "0x801a6e68",
           "0x801a7418"
-        ]
-      },
-      {
-        "name": "Unmatched files/mohlua.cpp [local symbols only]",
-        "file_record": 325,
-        "file_name": "mohlua.cpp",
-        "ranges": [
-          {
-            "address": "0x801a7418",
-            "size": 124,
-            "kind": "function",
-            "name": "SetStateChoice__FP9lua_State",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x801a76d0",
-            "size": 200,
-            "kind": "function",
-            "name": "LUAGetWeaponType__FP9lua_State",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x801a7798",
-            "size": 172,
-            "kind": "function",
-            "name": "LUAGetPosture__FP9lua_State",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x801a7844",
-            "size": 252,
-            "kind": "function",
-            "name": "LUAGetBulletType__FP9lua_State",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x801a7940",
-            "size": 172,
-            "kind": "function",
-            "name": "LUAGetHitLocation__FP9lua_State",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x801a79ec",
-            "size": 172,
-            "kind": "function",
-            "name": "LUAGetHitIntensity__FP9lua_State",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x801a7a98",
-            "size": 168,
-            "kind": "function",
-            "name": "LUAGetStateVariable__FP9lua_State",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x801a7b40",
-            "size": 296,
-            "kind": "function",
-            "name": "LUAStartScriptDeath__FP9lua_State",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x801a7c68",
-            "size": 80,
-            "kind": "function",
-            "name": "LUABeginHurtling__FP9lua_State",
-            "evidence": "local-file-symbol"
-          }
-        ]
-      },
-      {
-        "name": "Unknown file/.text @ 801a7494",
-        "ranges": [
-          {
-            "address": "0x801a7494",
-            "size": 384,
-            "kind": "function",
-            "name": "LUAInit__Fv",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801a7614",
-            "size": 56,
-            "kind": "function",
-            "name": "LUAShutdown__Fv",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801a764c",
-            "size": 108,
-            "kind": "function",
-            "name": "LUAEvaluateState__FPvPCciT1",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801a76b8",
-            "size": 12,
-            "kind": "function",
-            "name": "LUAGetState__Fv",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801a76c4",
-            "size": 12,
-            "kind": "function",
-            "name": "LUAGetCurrentObject__Fv",
-            "evidence": "unknown-file"
-          }
         ]
       },
       {
