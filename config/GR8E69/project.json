@@ -2499,7 +2499,8 @@
     "shellfactory.json",
     "handler_audioconfig.json",
     "handler_pausepreferences.json",
-    "handler_gameoptions.json"
+    "handler_gameoptions.json",
+    "ea_mad_codec_frames.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
