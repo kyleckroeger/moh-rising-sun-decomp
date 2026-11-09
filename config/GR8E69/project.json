@@ -2358,7 +2358,10 @@
     "ai_ChoreoB2.json",
     "ai_StateCtor.json",
     "ai_StateA.json",
-    "ai_StateB.json"
+    "ai_StateB.json",
+    "game_BitBuffer.json",
+    "game_sys_memory_dwi.json",
+    "scene_StaticFactoryMeshData.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

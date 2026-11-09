@@ -47,7 +47,7 @@ class BitBuffer {
     void LoadEnd();
     int Used() const;
     unsigned int Load(unsigned int);
-    void Save(unsigned int, unsigned int);
+    int Save(unsigned int, unsigned int);
     unsigned char storage[0x800];
 };
 
