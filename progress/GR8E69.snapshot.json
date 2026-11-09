@@ -1150,6 +1150,8 @@
       "src/matrix/vector.cpp": "3b10137c31cbb0c367c98b151c79e6f730d8308a23f48e4e17fb7f802c995a5a",
       "src/matrix/vector_dot.cpp": "cb4baa174ae4153fdd4a7f95d54642772e3dc8003ea1cd570932f3d8dad5029a",
       "src/memory/memstack.cpp": "e472593fd57e5103524803aa1e7575b48df0a39a12c3c0d23571762ef21d7a0e",
+      "src/memorycard/file_descriptor_clear.cpp": "47eb051dac3c31fea5dc8a3da15f77065112593e0afee76e5bc84faa30139e68",
+      "src/memorycard/file_descriptor_init.cpp": "7910f956f1bbc7f3547c5101814bdd053277044d88a324516bcb3db44b96d768",
       "src/memorycard/gc_driver_bio.cpp": "74d811024f98397854ad1718e5877d0d48580092235dd9e2fd040f8d8dfee0e2",
       "src/memorycard/gc_driver_files.cpp": "f1831fe8c01ac1ba4d921852af4515a6056e14e4a0adb6722d601f36dd6864ff",
       "src/memorycard/gc_driver_header.cpp": "d37293ecdd3e997c6b2d7e5e1d1f59f5007f2259c3ed1b40854675cc43492f17",
@@ -1158,6 +1160,13 @@
       "src/memorycard/gc_interface_create.cpp": "63a2b6c74a211f0f9f2320d664630fd900202547c9ad53fadd36af45c48c8725",
       "src/memorycard/gc_interface_messages.cpp": "7a7b95837703b92186e2c482d6ec27af0ecb3e3dca5273f377bbf7f4639da9a3",
       "src/memorycard/gc_interface_thread.cpp": "1fc31b9f9fdd0ec8ff37f1b5b0f3ea3165959fa5ec64708707198ac7c1902985",
+      "src/memorycard/message_clear.cpp": "41b782b44a1160f13de78ae478feb1113e58beae895627f74fd72ec7ad538259",
+      "src/memorycard/public_calls.cpp": "7c1030dcf2ab2b66caabf8d934bd16dc7531076e3ace1f9934d996b371ae4832",
+      "src/memorycard/public_start.cpp": "4a6df3192efef4f410c7bbf9e2c2ec3aea6f31a7fc268c447e87f6881ac62f34",
+      "src/memorycard/public_trc_files.cpp": "09f810042a96e58009ba8d056ac31819a5fc8c6f18327d407fc8f0902dcc636f",
+      "src/memorycard/task_clear.cpp": "c55be9d211c97a0b15f95adecef158762e64dea7a0018ea94d693eb027a820d1",
+      "src/memorycard/task_manager_start.cpp": "609326a001f153f4a521a15fa5938b31b21cd1c59bdbf11e961526f30a5ecadd",
+      "src/memorycard/task_trc_init.cpp": "176e1a47843fede7751894d206cf59fe087eb3f93f160bf93ea8de7dfa86f3cf",
       "src/newlib/COPYING.NEWLIB": "926114809b158088f2672ad7d05c60e72b3217edadbfd55ad3c1ba319b84f852",
       "src/newlib/NOTICE": "03cf2a4fe95fd7219fc9bf1e9967b9f29dceb614612006c4f7797c6b6889504c",
       "src/newlib/NOTICE.SN": "a3da43a64bc3abf524de4040183830a89bed291689a0a77dbe0cfaae247a45f8",
@@ -2916,6 +2925,7 @@
       "include/game/Rcmp.h": "938e4965d3c2b0d0f48d815f17eaf162b3fb5b491ec3dfd4bcc5814197bfa6ee",
       "include/game/RealmcDriver.h": "a863e7bcac7ee35751845bd892f6af2ff0bc93c904807531c49a486d6e158bf6",
       "include/game/RealmcInterface.h": "d9983ce75038880db59ca6963d9d4c58c9598f9719bf9965f258d77376e8af96",
+      "include/game/RealmcPublic.h": "90e9339fcc510af550e5213a18c87a56ed548f0b110fb5fe247de23145fbd7da",
       "include/game/SceneCollisions.h": "2a1769143eeecf427cad1a013ebf02f6b0d2ee83e011b58e5c62cd141306cd64",
       "include/game/SceneNode.h": "e57802b8a891e60ae5642230d29fea224075a837267cac91413b2a7fae00a560",
       "include/game/SceneObjects.h": "dd045643eb65ae01140f6cc6dc439501905b8b2fd77c922601ac4cfdf6a7d870",
@@ -4141,9 +4151,18 @@
       "config/GR8E69/mc_d.json": "c77c9bcd6ffb6d2cc662d01b6510cd12192a60dc7f4948c52a9054d183f2de29",
       "config/GR8E69/mc_e.json": "15859c4721280a839cfba2689b463a45fa4c0c022059241b4cbe29d82d44865a",
       "config/GR8E69/mc_f.json": "b6365333f1dc1297c28f4aaabd9f9b63a294215b6dc5fb767b66fdb3a442e30d",
+      "config/GR8E69/mc_file_descriptor_clear.json": "9fce5ca6cdf3375afd1cbdaca115cc6124908d7b71b9d0adb58cc78ea857f489",
+      "config/GR8E69/mc_file_descriptor_init.json": "5d87d3007553f96bf9638987cda9f5b006bd45122193c9ae51f6c26c1cd98c96",
       "config/GR8E69/mc_g.json": "816698e9a4c7b3b3c9a05187f01fb99c16c7ccb916c8b65e2cbd46442a173034",
       "config/GR8E69/mc_getname.json": "c27c96523883ff737d5b936158780c9ce6a1d27cbdfaa9c843dede6527bdb50c",
       "config/GR8E69/mc_h.json": "b06aa49f3024230543bae090edfc8250f5cc270effd2a85e7ddbb379285184db",
+      "config/GR8E69/mc_message_clear.json": "812cdf3692f94a575b852bcad36b2a626e2350da9db6ef37fb1159272fafd130",
+      "config/GR8E69/mc_public_calls.json": "1b4c75fc872636f1d71e062e5889abaad0edc12ac837306e0223f8d752c2bae8",
+      "config/GR8E69/mc_public_start.json": "2f391415137e12df10770f95de9776551f35e44650a6f6672d10b994facdf91b",
+      "config/GR8E69/mc_public_trc_files.json": "c31cbcabd2c723acde9580f01e7a132b36d74ffd220f2d08a7d5427c7b602a56",
+      "config/GR8E69/mc_task_clear.json": "840222c7c21a32278a4226ac9c1b756aee93eeb459991af202376e0bfc4bd3a3",
+      "config/GR8E69/mc_task_manager_start.json": "94ec5d9dea80dbc4a17e29ac13353f6637dca312522a902ddcba856e158e0c3f",
+      "config/GR8E69/mc_task_trc_init.json": "ef08d22147397b0c1b9c0ae84f6166dbea37eebc682a2d8eb6198c3af5d156a5",
       "config/GR8E69/md5.json": "c8e6e2f4eb9c41f917626bf7924787fa4654c663dd466d4377f67313eee22506",
       "config/GR8E69/memstack_lifecycle.json": "1b733583eefb0f32534fbb7ec55c414a8f61cb7ed1e84f095f839b1054fa0aba",
       "config/GR8E69/mesh_anim.json": "cb64574e1026d550e15df3b0b14aa26ef39854548946f486ae9dd8db9f2f7f58",
@@ -4432,7 +4451,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "29d3750bb6f9dee361817cd6c2d32a2e45b0511963a9ec265133840acb41515a",
+      "config/GR8E69/project.json": "019f669e4ddc69f3d201e7ca2991ecbb8e07c3479e31ff7549afba00635c230d",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7161,14 +7180,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1266628,
+    "matching_code_bytes": 1271368,
     "total_executable_code_bytes": 2492032,
-    "percent": 50.82711618470389,
+    "percent": 51.017322409985105,
     "categories": {
-      "reconstructed_game": 874412,
+      "reconstructed_game": 879152,
       "restored_library": 392216
     },
-    "matching_functions": 6627
+    "matching_functions": 6663
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -8204,9 +8223,18 @@
     "config/GR8E69/mc_d.json": "c77c9bcd6ffb6d2cc662d01b6510cd12192a60dc7f4948c52a9054d183f2de29",
     "config/GR8E69/mc_e.json": "15859c4721280a839cfba2689b463a45fa4c0c022059241b4cbe29d82d44865a",
     "config/GR8E69/mc_f.json": "b6365333f1dc1297c28f4aaabd9f9b63a294215b6dc5fb767b66fdb3a442e30d",
+    "config/GR8E69/mc_file_descriptor_clear.json": "9fce5ca6cdf3375afd1cbdaca115cc6124908d7b71b9d0adb58cc78ea857f489",
+    "config/GR8E69/mc_file_descriptor_init.json": "5d87d3007553f96bf9638987cda9f5b006bd45122193c9ae51f6c26c1cd98c96",
     "config/GR8E69/mc_g.json": "816698e9a4c7b3b3c9a05187f01fb99c16c7ccb916c8b65e2cbd46442a173034",
     "config/GR8E69/mc_getname.json": "c27c96523883ff737d5b936158780c9ce6a1d27cbdfaa9c843dede6527bdb50c",
     "config/GR8E69/mc_h.json": "b06aa49f3024230543bae090edfc8250f5cc270effd2a85e7ddbb379285184db",
+    "config/GR8E69/mc_message_clear.json": "812cdf3692f94a575b852bcad36b2a626e2350da9db6ef37fb1159272fafd130",
+    "config/GR8E69/mc_public_calls.json": "1b4c75fc872636f1d71e062e5889abaad0edc12ac837306e0223f8d752c2bae8",
+    "config/GR8E69/mc_public_start.json": "2f391415137e12df10770f95de9776551f35e44650a6f6672d10b994facdf91b",
+    "config/GR8E69/mc_public_trc_files.json": "c31cbcabd2c723acde9580f01e7a132b36d74ffd220f2d08a7d5427c7b602a56",
+    "config/GR8E69/mc_task_clear.json": "840222c7c21a32278a4226ac9c1b756aee93eeb459991af202376e0bfc4bd3a3",
+    "config/GR8E69/mc_task_manager_start.json": "94ec5d9dea80dbc4a17e29ac13353f6637dca312522a902ddcba856e158e0c3f",
+    "config/GR8E69/mc_task_trc_init.json": "ef08d22147397b0c1b9c0ae84f6166dbea37eebc682a2d8eb6198c3af5d156a5",
     "config/GR8E69/md5.json": "c8e6e2f4eb9c41f917626bf7924787fa4654c663dd466d4377f67313eee22506",
     "config/GR8E69/memstack_lifecycle.json": "1b733583eefb0f32534fbb7ec55c414a8f61cb7ed1e84f095f839b1054fa0aba",
     "config/GR8E69/mesh_anim.json": "cb64574e1026d550e15df3b0b14aa26ef39854548946f486ae9dd8db9f2f7f58",
@@ -8495,7 +8523,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "29d3750bb6f9dee361817cd6c2d32a2e45b0511963a9ec265133840acb41515a",
+    "config/GR8E69/project.json": "019f669e4ddc69f3d201e7ca2991ecbb8e07c3479e31ff7549afba00635c230d",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -10021,6 +10049,7 @@
     "include/game/Rcmp.h": "938e4965d3c2b0d0f48d815f17eaf162b3fb5b491ec3dfd4bcc5814197bfa6ee",
     "include/game/RealmcDriver.h": "a863e7bcac7ee35751845bd892f6af2ff0bc93c904807531c49a486d6e158bf6",
     "include/game/RealmcInterface.h": "d9983ce75038880db59ca6963d9d4c58c9598f9719bf9965f258d77376e8af96",
+    "include/game/RealmcPublic.h": "90e9339fcc510af550e5213a18c87a56ed548f0b110fb5fe247de23145fbd7da",
     "include/game/SceneCollisions.h": "2a1769143eeecf427cad1a013ebf02f6b0d2ee83e011b58e5c62cd141306cd64",
     "include/game/SceneNode.h": "e57802b8a891e60ae5642230d29fea224075a837267cac91413b2a7fae00a560",
     "include/game/SceneObjects.h": "dd045643eb65ae01140f6cc6dc439501905b8b2fd77c922601ac4cfdf6a7d870",
@@ -11359,6 +11388,8 @@
     "src/matrix/vector.cpp": "3b10137c31cbb0c367c98b151c79e6f730d8308a23f48e4e17fb7f802c995a5a",
     "src/matrix/vector_dot.cpp": "cb4baa174ae4153fdd4a7f95d54642772e3dc8003ea1cd570932f3d8dad5029a",
     "src/memory/memstack.cpp": "e472593fd57e5103524803aa1e7575b48df0a39a12c3c0d23571762ef21d7a0e",
+    "src/memorycard/file_descriptor_clear.cpp": "47eb051dac3c31fea5dc8a3da15f77065112593e0afee76e5bc84faa30139e68",
+    "src/memorycard/file_descriptor_init.cpp": "7910f956f1bbc7f3547c5101814bdd053277044d88a324516bcb3db44b96d768",
     "src/memorycard/gc_driver_bio.cpp": "74d811024f98397854ad1718e5877d0d48580092235dd9e2fd040f8d8dfee0e2",
     "src/memorycard/gc_driver_files.cpp": "f1831fe8c01ac1ba4d921852af4515a6056e14e4a0adb6722d601f36dd6864ff",
     "src/memorycard/gc_driver_header.cpp": "d37293ecdd3e997c6b2d7e5e1d1f59f5007f2259c3ed1b40854675cc43492f17",
@@ -11367,6 +11398,13 @@
     "src/memorycard/gc_interface_create.cpp": "63a2b6c74a211f0f9f2320d664630fd900202547c9ad53fadd36af45c48c8725",
     "src/memorycard/gc_interface_messages.cpp": "7a7b95837703b92186e2c482d6ec27af0ecb3e3dca5273f377bbf7f4639da9a3",
     "src/memorycard/gc_interface_thread.cpp": "1fc31b9f9fdd0ec8ff37f1b5b0f3ea3165959fa5ec64708707198ac7c1902985",
+    "src/memorycard/message_clear.cpp": "41b782b44a1160f13de78ae478feb1113e58beae895627f74fd72ec7ad538259",
+    "src/memorycard/public_calls.cpp": "7c1030dcf2ab2b66caabf8d934bd16dc7531076e3ace1f9934d996b371ae4832",
+    "src/memorycard/public_start.cpp": "4a6df3192efef4f410c7bbf9e2c2ec3aea6f31a7fc268c447e87f6881ac62f34",
+    "src/memorycard/public_trc_files.cpp": "09f810042a96e58009ba8d056ac31819a5fc8c6f18327d407fc8f0902dcc636f",
+    "src/memorycard/task_clear.cpp": "c55be9d211c97a0b15f95adecef158762e64dea7a0018ea94d693eb027a820d1",
+    "src/memorycard/task_manager_start.cpp": "609326a001f153f4a521a15fa5938b31b21cd1c59bdbf11e961526f30a5ecadd",
+    "src/memorycard/task_trc_init.cpp": "176e1a47843fede7751894d206cf59fe087eb3f93f160bf93ea8de7dfa86f3cf",
     "src/newlib/COPYING.NEWLIB": "926114809b158088f2672ad7d05c60e72b3217edadbfd55ad3c1ba319b84f852",
     "src/newlib/NOTICE": "03cf2a4fe95fd7219fc9bf1e9967b9f29dceb614612006c4f7797c6b6889504c",
     "src/newlib/NOTICE.SN": "a3da43a64bc3abf524de4040183830a89bed291689a0a77dbe0cfaae247a45f8",
@@ -61059,6 +61097,168 @@
       "discarded_functions": [],
       "object_sha256": "5f51741134e869f9dda4c5b6a2799be2503e9b1066740991afc495b8e0917659",
       "linked_sha256": "e166b9fa73e24d4a79c50f9aee3ed0ef9db766c3f051d111167ba27d85a94afb"
+    },
+    {
+      "id": "mc_public_start",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 276,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e73a9620626383c580cec2bff2701623ec8c537e3ba53ba7665623a2464b4aa6",
+      "linked_sha256": "12f39bf4a560edc4ca09e90d31e6802df262caf90dbe218a4ad379143b86081f"
+    },
+    {
+      "id": "mc_public_trc_files",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 1088,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e170511658abb8d923457ac575eeb0e780a91dec57e659b00d3c0033697768ed",
+      "linked_sha256": "0db2693ae111f33231c6861c6460d5985994e12d3a1298e344ff48f0ce5f1ce4"
+    },
+    {
+      "id": "mc_public_calls",
+      "category": "reconstructed_game",
+      "functions": 13,
+      "code_bytes": 1948,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "ec1f84099f7cc61e38102a41eb8e299412a6def6dc505d3b53861548be45b44e",
+      "linked_sha256": "ce906b67a63277f9732824e4c019e083dc7cb56c92324d8a5a366df7196aa33b"
+    },
+    {
+      "id": "mc_task_clear",
+      "category": "reconstructed_game",
+      "functions": 9,
+      "code_bytes": 648,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "87b3461982e9c37a27cea8bb18448215a249deceb2834c86b646d8503532bc95",
+      "linked_sha256": "146b5b6653fb124a5064b262dfeabf51c0318df162a9eb6ac9d056e63f89f1e1"
+    },
+    {
+      "id": "mc_task_manager_start",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 144,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "1bcbf58ecdc845c85893a3147f54a100ab8ef34d4f57486c73aa0df7b0d4ae7d",
+      "linked_sha256": "216cbd99b5424f029ada210835938274aca314b7bca8a8fdaf8cc225fd6b9fc8"
+    },
+    {
+      "id": "mc_task_trc_init",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 140,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "f90a7ba4a0a3c675459daca10d4beab571fd62b2d357f18ebeb17c11eb6aa3f0",
+      "linked_sha256": "1501aecb19a457321fbc42dd0753b7f32f3edb74988abb1744c10b97333b6535"
+    },
+    {
+      "id": "mc_message_clear",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 48,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "517b178f68967f6c97e44ca1aaa8440a21ff7186d07799767219d784bf8c30f0",
+      "linked_sha256": "95b4eb94830d9eb7f636aa40854a1e339c8a21303915dab2c2052b439b35db09"
+    },
+    {
+      "id": "mc_file_descriptor_clear",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 284,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e87b4e3127b0099b078a037a060217ded39a2285314411e2653dbc796cac6df6",
+      "linked_sha256": "f9198d33c73df2062059d16965419b3ccf13de53419bc8f1db3b55b90155cf9c"
+    },
+    {
+      "id": "mc_file_descriptor_init",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 164,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "6fe9aed65c3f4df5e321670a25f1c22f67060000afbe3e86b0dd49e0c438bf93",
+      "linked_sha256": "754b964166ca311ec2dd5e451e04c035975a8e4d4a9d7d14e8ecb8bb894fb4a5"
     }
   ],
   "code_map": {
@@ -82228,13 +82428,6 @@
         "file_name": "public.cpp",
         "ranges": [
           {
-            "address": "0x8020ea8c",
-            "size": 276,
-            "kind": "function",
-            "name": "TrcStartGame__Q26Realmc11GCInterfaceRCQ26Realmc13StartGameInfo",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8020eba0",
             "size": 188,
             "kind": "function",
@@ -82249,34 +82442,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8020ed30",
-            "size": 268,
-            "kind": "function",
-            "name": "TrcLoadFile__Q26Realmc11GCInterfaceRCQ26Realmc6CardIDRCQ26Realmc8FileInfo",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020ee3c",
-            "size": 276,
-            "kind": "function",
-            "name": "TrcSaveFile__Q26Realmc11GCInterfaceRCQ26Realmc6CardIDRCQ26Realmc8FileInfo",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020ef50",
-            "size": 276,
-            "kind": "function",
-            "name": "TrcListFiles__Q26Realmc11GCInterfaceRCQ26Realmc6CardIDRCQ26Realmc8FileInfo",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020f064",
-            "size": 268,
-            "kind": "function",
-            "name": "TrcDeleteFile__Q26Realmc11GCInterfaceRCQ26Realmc6CardIDRCQ26Realmc8FileInfo",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8020f170",
             "size": 48,
             "kind": "function",
@@ -82288,97 +82453,6 @@
             "size": 184,
             "kind": "function",
             "name": "GetCardName__Q26Realmc11GCInterfaceRCQ26Realmc6CardIDPwi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020f258",
-            "size": 144,
-            "kind": "function",
-            "name": "CardExists__Q26Realmc11GCInterfaceRCQ26Realmc6CardID",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020f2e8",
-            "size": 140,
-            "kind": "function",
-            "name": "GetCardInfo__Q26Realmc11GCInterfaceRCQ26Realmc6CardID",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020f374",
-            "size": 140,
-            "kind": "function",
-            "name": "Mount__Q26Realmc11GCInterfaceRCQ26Realmc6CardID",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020f400",
-            "size": 140,
-            "kind": "function",
-            "name": "Unmount__Q26Realmc11GCInterfaceRCQ26Realmc6CardID",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020f48c",
-            "size": 156,
-            "kind": "function",
-            "name": "OpenFile__Q26Realmc11GCInterfaceRCQ26Realmc6CardIDRCQ26Realmc8FileInfoQ26Realmc12FileOpenMode",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020f528",
-            "size": 136,
-            "kind": "function",
-            "name": "CloseFile__Q26Realmc11GCInterfacePQ26Realmc18OpenFileDescriptor",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020f5b0",
-            "size": 156,
-            "kind": "function",
-            "name": "Read__Q26Realmc11GCInterfacePQ26Realmc18OpenFileDescriptorPvi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020f64c",
-            "size": 156,
-            "kind": "function",
-            "name": "Write__Q26Realmc11GCInterfacePQ26Realmc18OpenFileDescriptorPvi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020f6e8",
-            "size": 152,
-            "kind": "function",
-            "name": "Seek__Q26Realmc11GCInterfacePQ26Realmc18OpenFileDescriptoriQ26Realmc8SeekFrom",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020f780",
-            "size": 136,
-            "kind": "function",
-            "name": "Flush__Q26Realmc11GCInterfacePQ26Realmc18OpenFileDescriptor",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020f808",
-            "size": 160,
-            "kind": "function",
-            "name": "DeleteFile__Q26Realmc11GCInterfaceRCQ26Realmc6CardIDPCcT2",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020f8a8",
-            "size": 168,
-            "kind": "function",
-            "name": "SetFileAttribute__Q26Realmc11GCInterfaceRCQ26Realmc6CardIDPCcT2Q26Realmc13FileAttribute",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020f950",
-            "size": 164,
-            "kind": "function",
-            "name": "FindFile__Q26Realmc11GCInterfaceRCQ26Realmc6CardIDPCcT2",
             "evidence": "adjacent-compiler-markers"
           }
         ],
@@ -88893,126 +88967,48 @@
             "kind": "function",
             "name": "FONT_getrectx__H1ZUs_P4FONTPCX01PfN32_v",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80294f2c",
-            "size": 92,
-            "kind": "function",
-            "name": "Clear__Q26Realmc14FindInfoStruct",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80294f88",
-            "size": 32,
-            "kind": "function",
-            "name": "Init__Q26Realmc6GcTaskb",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80294fa8",
-            "size": 20,
-            "kind": "function",
-            "name": "Clear__Q26Realmc7TaskTrc",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80294fbc",
-            "size": 76,
-            "kind": "function",
-            "name": "Clear__Q26Realmc16TaskTrcStartGame",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80295008",
-            "size": 64,
-            "kind": "function",
-            "name": "Clear__Q26Realmc18TaskTrcGetCardInfo",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80295048",
-            "size": 112,
-            "kind": "function",
-            "name": "Clear__Q26Realmc15TaskTrcSaveFile",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x802950b8",
-            "size": 76,
-            "kind": "function",
-            "name": "Clear__Q26Realmc16TaskTrcListFiles",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80295104",
-            "size": 88,
-            "kind": "function",
-            "name": "Clear__Q26Realmc15TaskTrcLoadFile",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8029515c",
-            "size": 88,
-            "kind": "function",
-            "name": "Clear__Q26Realmc17TaskTrcDeleteFile",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 802951b4",
+        "ranges": [
           {
             "address": "0x802951b4",
             "size": 52,
             "kind": "function",
             "name": "_._Q26Realmc9GCMessage",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x802951e8",
-            "size": 48,
-            "kind": "function",
-            "name": "Clear__Q26Realmc9GCMessage",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 80295218",
+        "ranges": [
           {
             "address": "0x80295218",
             "size": 52,
             "kind": "function",
             "name": "_._Q26Realmc15BlockCalculator",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8029524c",
-            "size": 144,
-            "kind": "function",
-            "name": "StartTask__Q26Realmc11TaskManagerPQ26Realmc4Task",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 802952dc",
+        "ranges": [
           {
             "address": "0x802952dc",
             "size": 112,
             "kind": "function",
             "name": "EndTask__Q26Realmc11TaskManagerPQ26Realmc4Task",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8029534c",
-            "size": 4,
-            "kind": "function",
-            "name": "UpdateCurrentTask__Q26Realmc11TaskManager",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80295350",
-            "size": 96,
-            "kind": "function",
-            "name": "Init__Q26Realmc7TaskTrcb",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x802953b0",
-            "size": 40,
-            "kind": "function",
-            "name": "IsPublicTrcTask__Q26Realmc11TaskManagerPQ26Realmc4Task",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 802953d8",
+        "ranges": [
           {
             "address": "0x802953d8",
             "size": 8,
@@ -89040,35 +89036,12 @@
             "kind": "function",
             "name": "_._Q26Realmc12DeviceDriver",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80295760",
-            "size": 72,
-            "kind": "function",
-            "name": "Clear__Q26Realmc17CmnFileDescriptor",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x802957a8",
-            "size": 92,
-            "kind": "function",
-            "name": "Init__Q26Realmc17CmnFileDescriptorRCQ26Realmc6CardIDRCQ26Realmc8FileInfoQ26Realmc12FileOpenMode",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80295804",
-            "size": 120,
-            "kind": "function",
-            "name": "Clear__Q26Realmc16GcFileDescriptor",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8029587c",
-            "size": 164,
-            "kind": "function",
-            "name": "Init__Q26Realmc16GcFileDescriptorRCQ26Realmc6CardIDRCQ26Realmc8FileInfoQ26Realmc12FileOpenMode",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 80295920",
+        "ranges": [
           {
             "address": "0x80295920",
             "size": 52,

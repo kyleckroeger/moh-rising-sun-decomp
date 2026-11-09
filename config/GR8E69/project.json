@@ -2470,7 +2470,16 @@
     "handler_quadrantgroup.json",
     "handler_numplayers.json",
     "handler_main.json",
-    "handler_languagemenu.json"
+    "handler_languagemenu.json",
+    "mc_public_start.json",
+    "mc_public_trc_files.json",
+    "mc_public_calls.json",
+    "mc_task_clear.json",
+    "mc_task_manager_start.json",
+    "mc_task_trc_init.json",
+    "mc_message_clear.json",
+    "mc_file_descriptor_clear.json",
+    "mc_file_descriptor_init.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
