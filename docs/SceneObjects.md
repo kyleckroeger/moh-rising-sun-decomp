@@ -183,9 +183,24 @@ tree and a later reader should expect them to be close rather than solved.
 The script-motion bits in `CStaticObject` are tested through inline accessors that each return
 one bit; without them `||` merges the tests into one mask. The accessor names are descriptive.
 
-`CHierObject::SwapOut` needs `-ffast-math`, which its manifest passes: the zero product on the
-box centre's x disappears while its square-root call stays. That is what reproduces the code and
-is not evidence of the original setting. `GetAttachPointMatrix` is `void`, as its call in
+All 19 accepted `hierobject.cpp` fragments share the `-ffast-math` profile.
+`SwapOut` needs it: the zero product on the box centre's x disappears while its
+square-root call stays. Applying the profile to the whole file group preserves
+all accepted bytes; it is a working reconstruction profile, not proof of the
+original setting. `GetAttachPointMatrix` is `void`, as its call in
 `CTankObject::FireSubObject` shows through the argument schedule; `CAITargeting::SetTarget`
 returns the current target, which its body loads last. `CVolBox::SetHeight` stores its argument
 unchanged for the player's box, so `SwapOut` halves the height through a local helper.
+
+## Maintained partial scene helpers
+
+PR #59 supersedes the three partial scene helpers from PR #60 with byte-exact,
+linked source: `CStaticObject::Init`, `CStaticObject::AttemptAnimMotionUpdate` and
+`CTankObject::AddWeapon` (860 target bytes). Their former comparison registrations
+and duplicate partial bodies are removed. The original/native differential
+fixtures now exercise the accepted native units, preserving the checks for flag
+bits, motion gates, bounds, weapon allocation and sentinel handling.
+
+`pathScale` is now named `pathTurnSlowdown` in the scoped view; its offset remains
+`+0x110`. The historical partial measurements remain in Git history and the
+[batch notes](research/shortlist-partials.md). None is counted twice.

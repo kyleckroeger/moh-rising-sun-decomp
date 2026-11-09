@@ -32,7 +32,8 @@ void CHeadsUpDisplay::DrawWeaponName(const char *name) {
         float right, bottom;
         GetBulletStatsRightBottom(right, bottom);
         CColor oldColor = font->GetColor();
-        font->SetColor(CColor(255, 255, 255, (int)(unknown7d8 * (unknown7c8 * 255.0f))));
+        float alpha = unknown7c8 * 255.0f;
+        font->SetColor(CColor(255, 255, 255, (int)(unknown7d8 * alpha)));
         float scale = 1.0f;
         float aspect = g_viewport.height / CScreen::m_sHeight;
         float scaleX, scaleY;
@@ -58,7 +59,8 @@ void CHeadsUpDisplay::DrawWeaponName(const char *name) {
             font->SetJustification(justification);
         } else {
             x = g_viewport.right - w - CScreen::m_sWidthScale * 56.0f;
-            y = CScreen::m_sHeightScale * (aspect * 356.0f) + g_viewport.top - 32.0f;
+            float verticalOffset = aspect * 356.0f;
+            y = CScreen::m_sHeightScale * verticalOffset + g_viewport.top - 32.0f;
             font->DrawText(x, y, name);
         }
         font->SetScale(scaleX, scaleY);

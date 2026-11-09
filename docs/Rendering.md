@@ -404,9 +404,12 @@ The screen object owns two sprites at `+0x04` and `+0x08` and a 16-byte block at
 
 ## CHeadsUpDisplay and the X-Files text
 
-`hud_compass` (`UpdateCompassRotation` and `GetCompassPosition`) compiles with `-ffast-math`: the damping loop's
-first test is `i >= time` and its bottom test `i < time`, a reversal of a floating test that only that flag
-allows. This is what reproduces the code; it does not establish the original setting.
+All ten accepted `HeadsUpDisplay.cpp` fragments share `-ffast-math`.
+The compass damping loop's first test is `i >= time` and its bottom test `i < time`;
+this profile reproduces the reversal. `DrawWeaponName` names the inner alpha and
+vertical-offset products to preserve their evaluation steps under that shared
+profile. Every fragment still verifies byte-for-byte. This is a working profile,
+not evidence of the original setting.
 
 `HeadsUpDisplay.h` is a scoped view holding only the small state functions. `UpdateHitStatus`
 reduces four hit-direction timers at `+0x7b0` by the elapsed time scaled by `0.0166834`, and
@@ -431,8 +434,8 @@ The handler holds `PopUpMessage popups[5][4]` (four records for each of five vie
 and sprites at `+0x644` to `+0x650`, the prompt message table at `+0x660` and the subtitle table at
 `+0x674`. `GetOldest` picks by each viewport's scroll direction and resets the record it picks.
 `GetNewest` has a nested loop for viewports 1 and 2 that shares one counter.
-The constructor, destructor, the loop, `AddPopUpMessage`, the subtitle functions and
-`CUserMessageTable::Load` remain original.
+The constructor, destructor and subtitle update/teardown helpers are reconstructed.
+`AddPopUpMessage`, `StartupSubtitles` and `CUserMessageTable::Load` remain original.
 
 ## CDeviceManager
 
