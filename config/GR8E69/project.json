@@ -2457,7 +2457,12 @@
     "ai_TurnB.json",
     "game_drivecheck_read.json",
     "game_drivecheck_font.json",
-    "ea_filedev_read_step.json"
+    "ea_filedev_read_step.json",
+    "particlesystem_init.json",
+    "meshparticle_initdef.json",
+    "meshparticle_list.json",
+    "skeletondata_lookup.json",
+    "skeletondata_attachpoints.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

@@ -666,3 +666,10 @@ promotes the target; it forwards the target's events only during the final evalu
 for the reason given above, and `operator new`, `operator delete` and the static initializers are out with the
 pool allocators. `Sentinel::EvalPose`, `Transition::Create`, `Transition::EvalPose` and `PerformBlend` are not
 reconstructed yet.
+
+## SkeletonData name lookups
+
+`SkeletonData` keeps two `_STL::map<_STL::string, int>` in storage the shared view does not name: attach points at
+`+48` and joints at `+64`. `FindJoint` by CRC walks the map and hashes each name; `FindJoint` and `FindAttachPoint` by
+name use the map's `find`. `GatherAttachPoints` remaps four attach points to joints with fixed names. The field at `+8`
+leads to the file's dynamic loader, inferred from `GatherJoints`, which is not reconstructed.

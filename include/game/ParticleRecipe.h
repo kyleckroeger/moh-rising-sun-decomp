@@ -78,9 +78,10 @@ class CParticleSystem : public IParticleSystem {
     CheckedMatrix matrix100;   // +0x100; the name is a placeholder.
     CProcParticleDef *definition;
     CMatrix *attachMatrix;      // +0x144
-    unsigned char unknown_148[8];
+    unsigned char unknown_148[4];
+    float startTicks;           // +0x14c; this and the three below are all set from the clock by Init. Inferred.
     float deactivationTicks;
-    unsigned char unknown_154[12];
+    float unknown_154, unknown_158, unknown_15c;
     unsigned int seed;
     float fadeInScale, fadeOutScale, fadeOutOffset; // +0x164: inferred from SetupAlphaFade.
     ParticleFlags flags;
@@ -91,10 +92,13 @@ class CParticleSystem : public IParticleSystem {
     virtual void MarkForDestruction(int);
     virtual void Destroy();
     CParticleSystem();
+    void Init(CParticleDef *);
+    void Reload();
     static void ResetSystem();
     void Draw(CDrawContext &);
     static CParticleSystem *AllocSystem(int);
     int Detach();
+    int Attach(ISceneNode &, CMatrix *, unsigned int);
     static void ReleaseSystem(CParticleSystem *);
     void *operator new(unsigned int, void *);
     void operator delete(void *);
@@ -172,23 +176,35 @@ struct MeshParticleFlags {
     unsigned int unknown_low27 : 27;
 };
 class CMeshParticleDef;
+class MeshParticle;
+namespace _STL {
+template <class T> class allocator;
+template <class T> struct _Nonconst_traits;
+template <class T, class Traits> struct _List_iterator;
+template <class T, class A> class list;
+}
+typedef _STL::list<MeshParticle, _STL::allocator<MeshParticle> > MeshParticleList;
+typedef _STL::_List_iterator<MeshParticle, _STL::_Nonconst_traits<MeshParticle> > MeshParticleIterator;
 class MeshParticleSystem : public IParticleSystem {
   public:
     unsigned char unknown_18[0x40 - 0x18];
     CMatrix localToWorld;       // +64
     unsigned char unknown_80[192 - 128];
     float center[3];            // +192
-    unsigned char unknown_cc[216 - 204];
+    unsigned char unknown_cc[4];
+    unsigned char particles[8]; // +208: an _STL::list<MeshParticle>, held as storage so this header needs no STL.
     CMeshParticleDef *definition; // +216
     CMatrix *attachMatrix;      // +220
     float radius;               // +224
-    unsigned char unknown_e4[8];
+    float unknown_e4, unknown_e8; // +228, +232: set by Init; names placeholders.
     float deactivationTicks;    // +236
     MeshParticleFlags flags;    // +240
     unsigned char unknown_f4[12];
     MeshParticleSystem *next;   // +256
     unsigned char unknown_104[272 - 260]; // The pool's stride is 272.
+    MeshParticleList &Particles() { return *(MeshParticleList *)particles; }
     static void Init();
+    void Init(CParticleDef *);
     int Detach();
     void Draw(CDrawContext &);
     static void DrawParticles(CDrawContext &, void **);
@@ -208,6 +224,8 @@ class MeshParticleSystem : public IParticleSystem {
     void DeActivate();
     void Terminate();
     void ReleaseParticles();
+    static MeshParticle *AllocParticle(MeshParticleList &);
+    static void ReleaseParticle(MeshParticleList &, MeshParticleIterator &);
     void Stop();
     void Start();
     unsigned int IsEternal() const;

@@ -182,3 +182,17 @@ its two saved registers are rotated.
 in member order, which `CheckedMatrix` in the header reproduces; the five vectors at `+0x40` and the matrix at
 `+0x100` have placeholder names. The pool's stride is 400 bytes and `ResetSystem` relinks every system onto the
 free list. `CProjectorSystemDef` (`projector.cpp`) loads a shape from the repository into a `TAR` at `+8`.
+
+## Setup from a definition
+
+Both `Init(CParticleDef *)` overrides keep the definition's typed view, reset their state and end with the virtual
+`Reload`. `CParticleSystem::Init` sets the flag bits for rotation (recipe entry 37) and fade (entries 47 and 48), and
+stamps four tick fields from `CPSManager::GetCurrentTicks`; their names, other than `deactivationTicks`, are
+placeholders. `Reload` marks the system eternal when entry 5 is zero and stores the particle acceleration (entries 19
+to 21) rotated into the system's local frame. `MeshParticleSystem::Init` randomizes the deactivation time from entries
+4 and 5.
+
+`MeshParticleSystem` keeps its particles in an `_STL::list<MeshParticle>` at `+208`. The header holds it as storage so
+that only units that use it need the container. `MeshParticle` is 112 bytes by the out-of-line copy constructor's
+reads; its list node puts it at `+16` of a 128-byte allocation, which is why it is declared with an inferred 16-byte
+alignment. `AllocParticle` refuses past 100 live particles, counted in `g_numActiveMeshParticles`.
