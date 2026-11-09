@@ -1,0 +1,38 @@
+{
+  "id": "gamesettings_reset",
+  "source": "src/shell/gamesettings_reset.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8016caa4",
+      "size": 108
+    }
+  ],
+  "functions": [
+    {
+      "name": "Reset__12SPlayerStats",
+      "address": "0x8016caa4",
+      "size": 108,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "GameSettings.cpp",
+  "original_file_index": 1479
+}

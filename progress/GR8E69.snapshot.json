@@ -625,7 +625,7 @@
       "src/frontend/usermessages_access.cpp": "41716b6c646c0838ec302212e35f8ece4f43914f5a10cbdd6fec31ad50f4081a",
       "src/frontend/usermessages_lifetime.cpp": "250e5edf14476401ba9fd4c26cd2a8fb96303b302f127109a29647323be7b017",
       "src/game/LinkedList.cpp": "7361285bbff6c1c98f4751ffa81c4a80a8de7b348144d43b880f40ca98feb332",
-      "src/game/configfile.cpp": "0b7f529b5026deac835ef66c0e735bf252c96ce3b825808ece1998806605444c",
+      "src/game/configfile.cpp": "6abe6ef618444cc664f6d8d9ad28891e74d1e61c84947fdaa1658d9271501d11",
       "src/game/debug_msg.cpp": "9a5e4e7ca6cd102ae562f15de3cb54173f9bce402660cd40507cb79eba79b346",
       "src/game/device_a.cpp": "28618faf851ad8aea3b81b6a468b6c36ecf5c768dc93571403fae8f84b83ee6c",
       "src/game/device_b.cpp": "7c6d0c3f9e9ca649690400da465d0de0ffb34b994132243694e88f0bd9365868",
@@ -1085,7 +1085,7 @@
       "src/player/PlayerHitpoints.cpp": "1d2300ea2ad5df79ac7a71ef6d54aa0520a0ccc1ccf18d5f9f6464232e077f84",
       "src/player/PlayerInitMultiplayer.cpp": "23e1523c097cda86dbaf5c932ac90b8b8b8e7c7e05a630da2a0e89ba02a0b286",
       "src/player/PlayerInvincible.cpp": "1b10beb6d82e55702cef051c47c065f66680ebf6d47fa04c5ec0caccbf2e8ac9",
-      "src/player/PlayerLevelData.cpp": "37e76e8b3053b174a5d63f011fbdeb3a72ccbc3b28e80d4fb78dcdf9c81ec7e6",
+      "src/player/PlayerLevelData.cpp": "a52d5ac0d92ea78cdc8af7f55cf609b5148276e594d46976cf3d09cce7e8dc31",
       "src/player/PlayerLightVolumes.cpp": "b177252dcb2353bdf55571e9aca0efb57e5f98c83c8431a0b8d526fb2063be1b",
       "src/player/PlayerLookEnable.cpp": "4cd27e43474c8c78c68069b16e4bd5a29736bcf4a39390fde53e35e6337b32a7",
       "src/player/PlayerLookatTrigger.cpp": "9195873f166d547b9cb4f2aeab2f2114b6a954686438ec061b2d212d23cb7549",
@@ -1254,7 +1254,7 @@
       "src/scene/StaticObjectMotionPlayback.cpp": "81078e9c868bb9cd77ec1779fe67fe7ed5f63757c2b1a4050558d557cfafb1d5",
       "src/scene/StaticObjectMovementPath.cpp": "6b6698b9a6c4675a29b322d34d955db298f63b5b930fdc3bc473ae5265e977b8",
       "src/scene/StaticObjectPathBegin.cpp": "d83208310662ca63ac0580501d604bd72bfcef78ab662a536d4e54ff8342f5db",
-      "src/scene/StaticObjectPathDest.cpp": "c5d7c51bd38cd2cacd1769e67ece3adc654dc21b682d8af2049c4def3fe40de5",
+      "src/scene/StaticObjectPathDest.cpp": "48bd5f38a48ed283b58272c13250f5281452ffc702fd16775fb9d637a9d28c06",
       "src/scene/StaticObjectPlayAnimation.cpp": "775ab2a935dd26c9c5630f9de852e447c0df21783b918e499ba187986445f48f",
       "src/scene/StaticObjectScale.cpp": "7f01471eba39bdaf0a87c5fd431722d6174ea0ddfe3a412f0a35bfde718f1abe",
       "src/scene/StaticObjectScriptBegin.cpp": "1b8b845c23ab4f36d48e44c57f0bab1b657ba178274b2a709e24e2e4f13f8a32",
@@ -1295,10 +1295,10 @@
       "src/script/activate_aiming.cpp": "9c303dafaa80279d2f04fa9ee1a17a4b43905a8e80ba5b4e959f7b3fd68972c2",
       "src/script/activate_animated_light_by_id.cpp": "a0dfd285b151b405263f6d81c6391d0771c087d7967fb5ea69ea9d12c62b0157",
       "src/script/activate_sound_buss.cpp": "03fa796475fdb5477f6b7692781af99e59f72c69e61011a6babf1970ccaf671e",
-      "src/script/add_film_canister.cpp": "006e15d373da72d87b1b4884385fe76d0cff30e6debd5d6689ed0388f0d6b47e",
+      "src/script/add_film_canister.cpp": "4dadfbd0cefb3ddef2bfce043a6b9127c09924dfffca03cb5c9dd72d8a63956e",
       "src/script/add_hint.cpp": "a741a62cab528cbeda7f79dedfc73a5af2b5892cc3a57dac34c247141510697f",
       "src/script/add_objective.cpp": "562a9bee00ed6eeb01512ca0b909c89941af59cfd05b3bbf315968e882cff314",
-      "src/script/add_replay_item.cpp": "6b22c514717be431fadea6bcc0806a7fa7f649c76c6d84f2c978715e8a09dcba",
+      "src/script/add_replay_item.cpp": "6dbcbf1d1073dfb5afa6456dc98d870fcf7429f21a0134cedb0e98adc1dab6da",
       "src/script/add_triggered_hint.cpp": "059af4e8b0a40ba0e5f9f736b576a20ffe7d7195f160c1fa8f4f15f1710f5c18",
       "src/script/adjust_aim.cpp": "cfa68f809c4aac4e441c0f343f7dc9e59b3cc1340e78b420f02e71f82b137e66",
       "src/script/ai_add_corpse_threat.cpp": "68e2239e7c9703c5dc2267fc9edc83ae3fcae35a40a6327f4886d039549a5c55",
@@ -1408,7 +1408,7 @@
       "src/script/enable_non_vis_destruct.cpp": "f3720b0ecdc21153c05c7b0147a2bf65e34545eb820c5fe5e1bc974ab7aac1ed",
       "src/script/enable_partition.cpp": "464702c72b5f82f1cb7556cdc87ea82ef52b12069f41702791c106c2dca546a6",
       "src/script/enable_partition_on_other.cpp": "8e658b1cc99768cc6f16eed862325ef21797ad58ca329756a6419bac7e692a7e",
-      "src/script/end_level.cpp": "655c5249e93aaf24dc674f3a8e742656eaa0797f9b911484a3724241e89637ae",
+      "src/script/end_level.cpp": "488c03f66c16ff080445895c1ed20c33d9f72c3872df3da51660f9d9ecc1e4f9",
       "src/script/end_sound.cpp": "17788603d3d3c54e5fdb63fd9a79eb5f8c76b73c37144d8fd617987efd8de55d",
       "src/script/enemy_count.cpp": "2e8805e2e35cdd8ebe01ea65cd0445752083438d67f5acdc1974db2b28327f31",
       "src/script/enter_astar_volume.cpp": "850efc3cbbe398a76091f73648382a51e43963dc1bbfcfd3170a3366ef03b3bc",
@@ -1470,10 +1470,10 @@
       "src/script/glare_destroy.cpp": "9af8820719b3e3c1c5a6f1f2b38795c83c08207fa7da7c14f5580ac634de27a2",
       "src/script/grenade_response_finished.cpp": "0e6c68a908e9d1de8ca11e5ce7573f39ed22151bfb4e87186d9fe2e2736afae5",
       "src/script/grenade_timer_get.cpp": "07314f404ff3339037064ad840142e959f30a296d38449c626c8af6a3db5c7ef",
-      "src/script/has_any_film_canister.cpp": "2aca636b9de4e87bd3c487b6190674931f87e4d4dc4864c62d89cd786beac740",
-      "src/script/has_film_canister.cpp": "154bc0d9a8bf84a9cef31c6db403ea31d1aa48ddb566e1e3a4e0f5765a41d021",
+      "src/script/has_any_film_canister.cpp": "5a0341796f1af55046e6c65e6f3b3fae451fb0d6461d5a1089b4db7c83153a49",
+      "src/script/has_film_canister.cpp": "bde0e77962cfcc8c3e6e721df25cf1a72acf42579a6497c2f528e888f051c477",
       "src/script/has_pistol.cpp": "1123b010019698531b0b05ad8fa8ddfe74605fcff8246b780c5e3fb572131ac4",
-      "src/script/has_replay_item.cpp": "6da729e9f74905bcb4d6180b09985978b23fc40a7ee901be6fc464230f8f4377",
+      "src/script/has_replay_item.cpp": "98cace1576c6f9769fbc97e71e6038f86839339550445f72ab5545808bea93b8",
       "src/script/hier_object_fire.cpp": "aa30fe3d7483c75667f5e3ce6481e1f65ed0a17fcefedc923506efb5160770c3",
       "src/script/hier_object_map_weapon.cpp": "7d7638a98df8d016eeb11133388a2923bd94f8a4b157ce1aa1c2725bcd1aa1f7",
       "src/script/hier_object_play_animation.cpp": "c8112617b61a2406691221e32450d307256af4a4625d35078c5565ae89e9dd4b",
@@ -1495,7 +1495,7 @@
       "src/script/letterbox_transition.cpp": "4b7452d4e1793f77c88bd9412a48689b954bfea1bf5b7321ba1fb4879fb5d479",
       "src/script/light_volume_transition_duration.cpp": "e69967ae1fe18abcb6435de458c23a4406863eb38550d17b019319c18e900f00",
       "src/script/load_compartment.cpp": "f0364b7a6b3872ca0548a165c25a0b336b5cea0461840348d7de95a2f5723281",
-      "src/script/load_one_shot_sound_bank.cpp": "9a1889945575a5a7da0e54bf1e4c1474ee8f4c18079835c4f9ac56a109944890",
+      "src/script/load_one_shot_sound_bank.cpp": "d84e6fd43bf34a0153d5a4fadbe38373f1e774ce72f0aa64239de7a89ec9cd46",
       "src/script/location_damage.cpp": "2555eb2e3eca193df53c024620b8b271d549f3e99ef7b69413d0e8d21d69de7a",
       "src/script/logical.cpp": "4cbcca143b9b639fafd8723a2169aae6bf3ceb7c51c4c2198ddd3b4efb3ec939",
       "src/script/machine_end.cpp": "ff4404250bd8eb6b78ce000b39195159d0824ebcc8d9dae084865679550f71b6",
@@ -1711,11 +1711,32 @@
       "src/script/use_binoculars.cpp": "3ab897eb9f47912d8c49df7f82f4b7a2d91baa056756f1b876b6755de43fbca5",
       "src/script/validation_build.cpp": "89251f21f21080d27633ad20ea624b1a8702565a91ab36e5f809b6e5e0ae4255",
       "src/script/vibration_partial.cpp": "29c765c0f143dab8c71ddb417edde951f88a66595192f026be5920461c5b9ec6",
+      "src/shell/gamesettings_activatecheatnamed_hugearms.cpp": "7cfb523e1b05e92df9fb6c89c91a273875607a5aca10cd0b22f36aa5f7163a51",
+      "src/shell/gamesettings_getifcurrentweaponselectable.cpp": "434c0b3b9cfaf0916814176410613e97fb800423c68368621ea074b30e7cb8df",
+      "src/shell/gamesettings_getprofileindexfromplayerid.cpp": "1ca6be741becd97d2b45907f68b313f59b8867469bf76374092832a0433d8055",
+      "src/shell/gamesettings_getsavedata.cpp": "44f7b097052aa1b13f3593b4031f4f9b8a5fd8bf91ddaf4b9966a52c006febd8",
+      "src/shell/gamesettings_getsoundmodevalue.cpp": "f27941e11c076eae147ebf71bdc5c48e84d322cd1d7ad01d8ef8b2de4c5feb76",
+      "src/shell/gamesettings_hasbeenunlocked.cpp": "84e160db9999b76d57a536e655e36379913c56eb1fcf9e7ff6d361346c875c12",
+      "src/shell/gamesettings_hasmedal.cpp": "0bc0b5e44584cf2edce97562c438719fc253bf23ef2ed73185cf2b64e05a59d5",
+      "src/shell/gamesettings_inithudfromoptions.cpp": "70cee48d5031229230296c59e8680959a27d456c71f8bde1b2dce405c433ff31",
+      "src/shell/gamesettings_invalidateslotbackup.cpp": "64f6395713dc5e3edef69f2262a5d9d1ab4ae9308339c62c3799f5abeb8fba26",
+      "src/shell/gamesettings_reset.cpp": "5d4747695bb170e2f4b2b156e7768ec26d2b19f748f0efc5d771e2f486a3b974",
+      "src/shell/gamesettings_resetcurrentlevelstats.cpp": "02656b7219d8331abca3dd90f849bed1d77446eb698b77415361763b31f17468",
+      "src/shell/gamesettings_resetleveltimer.cpp": "3aacffde4bfe0a26b631fa34c1be2e1413aa762d8403361640209384cbced3e8",
+      "src/shell/gamesettings_restorelevelaudio.cpp": "74e18a579e429e1ea821af16373cb68fff4e2584ff7a5591b71490da65dc5781",
+      "src/shell/gamesettings_restoresavedata.cpp": "65ab6126d5c0d687f9123abb9d8cb36e791830d81438bd98beaff7ff72adbf8c",
+      "src/shell/gamesettings_restoreslotbackup.cpp": "cc41c33fe9b0eee54525197525be7e9e8fd3fc200244a83ef4bcd2dca708486c",
+      "src/shell/gamesettings_savedata.cpp": "a61eff02d8366dd613cb272cfbc41652c2bb622dfd21f149ed88456f1ef6fcbd",
+      "src/shell/gamesettings_serializingin.cpp": "4701840686e449203078ef132deadecbb2488bc110b9767e6a3b732e452e54a1",
+      "src/shell/gamesettings_setcontrollerbuttons.cpp": "7881abe5b8b8ab47de752f3a24493462d76696951ac75362b548e2d7443742e5",
+      "src/shell/gamesettings_setplayersfinishedlevelsuccessfu.cpp": "480530acffcf042dd9042d9c14e1f7cdc03d408a7bb1ec5169dd1f4477074938",
+      "src/shell/gamesettings_setprevmissionandlevel.cpp": "cd2ed565b9b810b91c11e49a015e9ad3457780d185357a5002b7fbc81760f6fb",
+      "src/shell/gamesettings_validate.cpp": "e0d8f6c1c427bd389ec1bbf26dd2267be784518b084bed317701aaac5d9e1633",
       "src/shell/rcmp_alloc.cpp": "ea747ae393fea94d2f4e761be754f711c91a8fd0904a45dc0142c8f5de43a8bf",
       "src/shell/static_draw.cpp": "5c31cd87db7e8acba89ef9c6e6878e17ee2e38e1e74a2569d004e19d66421be5",
       "src/shell/static_draw2.cpp": "ddba7fedecc5798e4626fe84063c50a4ee123d4a83a4cd65f5eedf9655a3e85f",
       "src/shell/static_screen.cpp": "854412bd857510cace0da7e41289b26f13079c7bc1a1e8dda609505d3fc5735c",
-      "src/shell/static_start.cpp": "6c4d52f041de9494643999343b5f34a0e713e9b2ce417885684ac53b2c31bc68",
+      "src/shell/static_start.cpp": "53890fd35320c5c35971fd96d65c87850d83ac03da2a894bae081d15c54c697c",
       "src/shell/static_stop.cpp": "4e0f45cbe22baf974c621e4d2147515a09781c89af3a03e63f31231b92badd01",
       "src/shell/static_text.cpp": "5a4217333e2ae2759f0c67cfd72be2f4b00390a47c31c6fba360be1bff988ae8",
       "src/sound/AmbientTrack.cpp": "806bc651699acac158151883251a45c29078a06e4fd195081a3d1d7443a56e52",
@@ -2381,6 +2402,7 @@
       "include/game/CollisionVolume.h": "26ba5d9a9865a0185f0e87db21b13faf3214b7e213201e825181412f0f9a5b7c",
       "include/game/Color.h": "de545de60e69ea1ed6449833872b54d60ac164fa2d0fa76cc8deb25dc2b58be1",
       "include/game/Compartment.h": "42673c10c8ec7d752aa83871afd544971852c0901840b4643627c8f4d5f29e03",
+      "include/game/ConfigFile.h": "66b42170189b79ebbcd591331641c46e2c117025db240e767a3b76ac031ffe0a",
       "include/game/DestructorQueue.h": "434ec17ba96007c8368db0dc62c9454d1650bc2c4d5615a13aad40969412bda8",
       "include/game/DrawContext.h": "646a671aa97643c9e91809cc0ca1980de395bd2895d9111035b5b8b03d1581f5",
       "include/game/DwiContainers.h": "767afa50598d566ef93a48c03d3cf202dd5e983f5c43d3e6aca789ab9622c07b",
@@ -2441,7 +2463,8 @@
       "include/game/Fog.h": "30a37f01f3f665d1f9b3b0a5ef81ea098194595159c5ff794797541c6bf325c0",
       "include/game/Font.h": "aac3ae3971b2a09911276f89091539c78c3d22be4046eca5d1e65a39c2f82e6b",
       "include/game/Frustum.h": "8b459091729087e5119c39887634fd28825b36e40b7a0efdf9a40c2cf58741fe",
-      "include/game/GameSettings.h": "176ccc59a47f478ecbf2657870e8d1c5cabf78c0a49c18f4c91c3ee7f71aad4c",
+      "include/game/GameSettings.h": "6b5ac7cd1bdc4ee3677cb697bdfdc9dc44259cc077320533b0bb6de2c3f18818",
+      "include/game/GameSettingsViews.h": "daf4a7107f3e7027773ccedbd05e2e2c0a49229fc912e54f973475be30fc98a3",
       "include/game/GrenadeResponse.h": "a26075782a75877dd754799cb73d6fe55e2a6c6597676869bb956ba8cdb2bed4",
       "include/game/HeadsUpDisplay.h": "d2ec0be8ec139afa6cde43d5aab5dd4fcfb39fac459cfd54732b66c19e233989",
       "include/game/IDestructible.h": "1427a08ba92fefc7fdc63c4ba8fc7aab3ec64bc8d2d1cfb7fe035346b685379f",
@@ -3314,6 +3337,27 @@
       "config/GR8E69/framecount.json": "7bd0dd7ee9ed7947fa10ed915ba8b1bf34fde1b0e777286f39ec6b0b8c2bbdee",
       "config/GR8E69/frustum_transform.json": "35766529dbd85ffd05cf8d34adb7010b3b10b02c04d1d097811dde2dfc2ef057",
       "config/GR8E69/fstload.json": "d49e84fe0d1e9af1dd569811065db3c015f596b540ac5988c5078fa2f9c5dd5e",
+      "config/GR8E69/gamesettings_activatecheatnamed_hugearms.json": "1a5212cff62406bb097fded87a75d7cc51c850d33df8d4ca1e9da23d6c1ee059",
+      "config/GR8E69/gamesettings_getifcurrentweaponselectable.json": "0dde371947c62af667bd73e4dfeb6b8ef71e6c7e780379b7750edb17992d0f37",
+      "config/GR8E69/gamesettings_getprofileindexfromplayerid.json": "fcfe5f6b5d90cffe68f34b0875cb1a9681bf11fb48f15a8e80dc96bed559504d",
+      "config/GR8E69/gamesettings_getsavedata.json": "9a136ab4b15981df0e163112862278173fe0bc82b2bb7f526f121a2abe239c78",
+      "config/GR8E69/gamesettings_getsoundmodevalue.json": "06fe9dfe388571e1aa051343dbcdb1ca8f6be6991beae6e329c5f1b881d87fe0",
+      "config/GR8E69/gamesettings_hasbeenunlocked.json": "9a8663d92bf9be5f6e2f55a66c01c11cf11a92f5561113d7f0f33e9932b07a2f",
+      "config/GR8E69/gamesettings_hasmedal.json": "9f6811f64e6e51173774f5160b50444c59e9f99e1c26e63806368ccefaf4b942",
+      "config/GR8E69/gamesettings_inithudfromoptions.json": "11de24ec062db62e6bf7e5a1674d8477fb4f2b25da6ebe2485232fdcffc4d889",
+      "config/GR8E69/gamesettings_invalidateslotbackup.json": "11eba1ed69de8d79adadb1d71df7b6ceafaecf0c7865c958ef0b5274c2f8ef2d",
+      "config/GR8E69/gamesettings_reset.json": "32646f4a9d13d95211e79c25bec6ea3a6c3f6e7854aa308203a1675bd720fc2e",
+      "config/GR8E69/gamesettings_resetcurrentlevelstats.json": "64a8dce8562280423f505353b541ed53991ab4fd0e959e14dcf94432d25cea48",
+      "config/GR8E69/gamesettings_resetleveltimer.json": "1a6d75572d293046d1ffde1ac331cea2254985e75f6dd86d369ebb68efc3ae4f",
+      "config/GR8E69/gamesettings_restorelevelaudio.json": "86daf22b25da1c2bed18f52fd70af0cec754263fdbb13c1472f9e4feee10e187",
+      "config/GR8E69/gamesettings_restoresavedata.json": "02381ab02e4e072c918a041c31c3b1995743f0b6a106265736e4fd1216d5d3f3",
+      "config/GR8E69/gamesettings_restoreslotbackup.json": "1f04111f0365bb971e1664808f8ca24b1ba35267b1f6869739dab33be689b04b",
+      "config/GR8E69/gamesettings_savedata.json": "afc34348a7673f9add9ecc55d6c9091c9ccc22aa03297f0bffb8ae8aa858c0b7",
+      "config/GR8E69/gamesettings_serializingin.json": "b4c0e53c07cf89cce72e138923f6b1f340351be2b26e6aa6443176846ac63f53",
+      "config/GR8E69/gamesettings_setcontrollerbuttons.json": "ecbb7e2b5f3ded3a2cc12fde812fffc9755d833156ea32dd4f155bb7fc83be8c",
+      "config/GR8E69/gamesettings_setplayersfinishedlevelsuccessfu.json": "3baf76798ff6aa3a4286b5c711e147b8f4fccaabb8995b095456a6cb87135675",
+      "config/GR8E69/gamesettings_setprevmissionandlevel.json": "44e3873c42f4799987398762d8c2e3caecb465604639ae50f1be38d1d36d1e3f",
+      "config/GR8E69/gamesettings_validate.json": "112fdb9de71471339d701e4917ecb721e9e80836a2f5665f2bc98744ca5087eb",
       "config/GR8E69/gchw_vd_draw.json": "8240cd2ce5d0a0f00cae88ddb2fbd1c1a198a12246488f9b6cebd10604e92e3b",
       "config/GR8E69/gchw_vd_setters.json": "34856555c8f331dcd604dd04eb40e58713689ec5a0bdc6c685507364dc3fbc70",
       "config/GR8E69/grenade_response_queries.json": "5932b489bfec46bf4c73dad2d1d3bc9faa7acf77d137fb97cac1fdea8d343ecc",
@@ -3652,7 +3696,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "5b98217bd54daa1daac50ec7e14abf2e0ef16be8dda3918a57377af0615e984a",
+      "config/GR8E69/project.json": "e9b8126b4f0b2c5cb153cfd2d7aeaddab0938bf421d63ca3767473d75267caee",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -6312,14 +6356,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1082584,
+    "matching_code_bytes": 1088204,
     "total_executable_code_bytes": 2492032,
-    "percent": 43.44181776156967,
+    "percent": 43.66733653500437,
     "categories": {
-      "reconstructed_game": 690368,
+      "reconstructed_game": 695988,
       "restored_library": 392216
     },
-    "matching_functions": 5241
+    "matching_functions": 5313
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -6982,6 +7026,27 @@
     "config/GR8E69/framecount.json": "7bd0dd7ee9ed7947fa10ed915ba8b1bf34fde1b0e777286f39ec6b0b8c2bbdee",
     "config/GR8E69/frustum_transform.json": "35766529dbd85ffd05cf8d34adb7010b3b10b02c04d1d097811dde2dfc2ef057",
     "config/GR8E69/fstload.json": "d49e84fe0d1e9af1dd569811065db3c015f596b540ac5988c5078fa2f9c5dd5e",
+    "config/GR8E69/gamesettings_activatecheatnamed_hugearms.json": "1a5212cff62406bb097fded87a75d7cc51c850d33df8d4ca1e9da23d6c1ee059",
+    "config/GR8E69/gamesettings_getifcurrentweaponselectable.json": "0dde371947c62af667bd73e4dfeb6b8ef71e6c7e780379b7750edb17992d0f37",
+    "config/GR8E69/gamesettings_getprofileindexfromplayerid.json": "fcfe5f6b5d90cffe68f34b0875cb1a9681bf11fb48f15a8e80dc96bed559504d",
+    "config/GR8E69/gamesettings_getsavedata.json": "9a136ab4b15981df0e163112862278173fe0bc82b2bb7f526f121a2abe239c78",
+    "config/GR8E69/gamesettings_getsoundmodevalue.json": "06fe9dfe388571e1aa051343dbcdb1ca8f6be6991beae6e329c5f1b881d87fe0",
+    "config/GR8E69/gamesettings_hasbeenunlocked.json": "9a8663d92bf9be5f6e2f55a66c01c11cf11a92f5561113d7f0f33e9932b07a2f",
+    "config/GR8E69/gamesettings_hasmedal.json": "9f6811f64e6e51173774f5160b50444c59e9f99e1c26e63806368ccefaf4b942",
+    "config/GR8E69/gamesettings_inithudfromoptions.json": "11de24ec062db62e6bf7e5a1674d8477fb4f2b25da6ebe2485232fdcffc4d889",
+    "config/GR8E69/gamesettings_invalidateslotbackup.json": "11eba1ed69de8d79adadb1d71df7b6ceafaecf0c7865c958ef0b5274c2f8ef2d",
+    "config/GR8E69/gamesettings_reset.json": "32646f4a9d13d95211e79c25bec6ea3a6c3f6e7854aa308203a1675bd720fc2e",
+    "config/GR8E69/gamesettings_resetcurrentlevelstats.json": "64a8dce8562280423f505353b541ed53991ab4fd0e959e14dcf94432d25cea48",
+    "config/GR8E69/gamesettings_resetleveltimer.json": "1a6d75572d293046d1ffde1ac331cea2254985e75f6dd86d369ebb68efc3ae4f",
+    "config/GR8E69/gamesettings_restorelevelaudio.json": "86daf22b25da1c2bed18f52fd70af0cec754263fdbb13c1472f9e4feee10e187",
+    "config/GR8E69/gamesettings_restoresavedata.json": "02381ab02e4e072c918a041c31c3b1995743f0b6a106265736e4fd1216d5d3f3",
+    "config/GR8E69/gamesettings_restoreslotbackup.json": "1f04111f0365bb971e1664808f8ca24b1ba35267b1f6869739dab33be689b04b",
+    "config/GR8E69/gamesettings_savedata.json": "afc34348a7673f9add9ecc55d6c9091c9ccc22aa03297f0bffb8ae8aa858c0b7",
+    "config/GR8E69/gamesettings_serializingin.json": "b4c0e53c07cf89cce72e138923f6b1f340351be2b26e6aa6443176846ac63f53",
+    "config/GR8E69/gamesettings_setcontrollerbuttons.json": "ecbb7e2b5f3ded3a2cc12fde812fffc9755d833156ea32dd4f155bb7fc83be8c",
+    "config/GR8E69/gamesettings_setplayersfinishedlevelsuccessfu.json": "3baf76798ff6aa3a4286b5c711e147b8f4fccaabb8995b095456a6cb87135675",
+    "config/GR8E69/gamesettings_setprevmissionandlevel.json": "44e3873c42f4799987398762d8c2e3caecb465604639ae50f1be38d1d36d1e3f",
+    "config/GR8E69/gamesettings_validate.json": "112fdb9de71471339d701e4917ecb721e9e80836a2f5665f2bc98744ca5087eb",
     "config/GR8E69/gchw_vd_draw.json": "8240cd2ce5d0a0f00cae88ddb2fbd1c1a198a12246488f9b6cebd10604e92e3b",
     "config/GR8E69/gchw_vd_setters.json": "34856555c8f331dcd604dd04eb40e58713689ec5a0bdc6c685507364dc3fbc70",
     "config/GR8E69/grenade_response_queries.json": "5932b489bfec46bf4c73dad2d1d3bc9faa7acf77d137fb97cac1fdea8d343ecc",
@@ -7320,7 +7385,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "5b98217bd54daa1daac50ec7e14abf2e0ef16be8dda3918a57377af0615e984a",
+    "config/GR8E69/project.json": "e9b8126b4f0b2c5cb153cfd2d7aeaddab0938bf421d63ca3767473d75267caee",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -8637,6 +8702,7 @@
     "include/game/CollisionVolume.h": "26ba5d9a9865a0185f0e87db21b13faf3214b7e213201e825181412f0f9a5b7c",
     "include/game/Color.h": "de545de60e69ea1ed6449833872b54d60ac164fa2d0fa76cc8deb25dc2b58be1",
     "include/game/Compartment.h": "42673c10c8ec7d752aa83871afd544971852c0901840b4643627c8f4d5f29e03",
+    "include/game/ConfigFile.h": "66b42170189b79ebbcd591331641c46e2c117025db240e767a3b76ac031ffe0a",
     "include/game/DestructorQueue.h": "434ec17ba96007c8368db0dc62c9454d1650bc2c4d5615a13aad40969412bda8",
     "include/game/DrawContext.h": "646a671aa97643c9e91809cc0ca1980de395bd2895d9111035b5b8b03d1581f5",
     "include/game/DwiContainers.h": "767afa50598d566ef93a48c03d3cf202dd5e983f5c43d3e6aca789ab9622c07b",
@@ -8697,7 +8763,8 @@
     "include/game/Fog.h": "30a37f01f3f665d1f9b3b0a5ef81ea098194595159c5ff794797541c6bf325c0",
     "include/game/Font.h": "aac3ae3971b2a09911276f89091539c78c3d22be4046eca5d1e65a39c2f82e6b",
     "include/game/Frustum.h": "8b459091729087e5119c39887634fd28825b36e40b7a0efdf9a40c2cf58741fe",
-    "include/game/GameSettings.h": "176ccc59a47f478ecbf2657870e8d1c5cabf78c0a49c18f4c91c3ee7f71aad4c",
+    "include/game/GameSettings.h": "6b5ac7cd1bdc4ee3677cb697bdfdc9dc44259cc077320533b0bb6de2c3f18818",
+    "include/game/GameSettingsViews.h": "daf4a7107f3e7027773ccedbd05e2e2c0a49229fc912e54f973475be30fc98a3",
     "include/game/GrenadeResponse.h": "a26075782a75877dd754799cb73d6fe55e2a6c6597676869bb956ba8cdb2bed4",
     "include/game/HeadsUpDisplay.h": "d2ec0be8ec139afa6cde43d5aab5dd4fcfb39fac459cfd54732b66c19e233989",
     "include/game/IDestructible.h": "1427a08ba92fefc7fdc63c4ba8fc7aab3ec64bc8d2d1cfb7fe035346b685379f",
@@ -9531,7 +9598,7 @@
     "src/frontend/usermessages_access.cpp": "41716b6c646c0838ec302212e35f8ece4f43914f5a10cbdd6fec31ad50f4081a",
     "src/frontend/usermessages_lifetime.cpp": "250e5edf14476401ba9fd4c26cd2a8fb96303b302f127109a29647323be7b017",
     "src/game/LinkedList.cpp": "7361285bbff6c1c98f4751ffa81c4a80a8de7b348144d43b880f40ca98feb332",
-    "src/game/configfile.cpp": "0b7f529b5026deac835ef66c0e735bf252c96ce3b825808ece1998806605444c",
+    "src/game/configfile.cpp": "6abe6ef618444cc664f6d8d9ad28891e74d1e61c84947fdaa1658d9271501d11",
     "src/game/debug_msg.cpp": "9a5e4e7ca6cd102ae562f15de3cb54173f9bce402660cd40507cb79eba79b346",
     "src/game/device_a.cpp": "28618faf851ad8aea3b81b6a468b6c36ecf5c768dc93571403fae8f84b83ee6c",
     "src/game/device_b.cpp": "7c6d0c3f9e9ca649690400da465d0de0ffb34b994132243694e88f0bd9365868",
@@ -9991,7 +10058,7 @@
     "src/player/PlayerHitpoints.cpp": "1d2300ea2ad5df79ac7a71ef6d54aa0520a0ccc1ccf18d5f9f6464232e077f84",
     "src/player/PlayerInitMultiplayer.cpp": "23e1523c097cda86dbaf5c932ac90b8b8b8e7c7e05a630da2a0e89ba02a0b286",
     "src/player/PlayerInvincible.cpp": "1b10beb6d82e55702cef051c47c065f66680ebf6d47fa04c5ec0caccbf2e8ac9",
-    "src/player/PlayerLevelData.cpp": "37e76e8b3053b174a5d63f011fbdeb3a72ccbc3b28e80d4fb78dcdf9c81ec7e6",
+    "src/player/PlayerLevelData.cpp": "a52d5ac0d92ea78cdc8af7f55cf609b5148276e594d46976cf3d09cce7e8dc31",
     "src/player/PlayerLightVolumes.cpp": "b177252dcb2353bdf55571e9aca0efb57e5f98c83c8431a0b8d526fb2063be1b",
     "src/player/PlayerLookEnable.cpp": "4cd27e43474c8c78c68069b16e4bd5a29736bcf4a39390fde53e35e6337b32a7",
     "src/player/PlayerLookatTrigger.cpp": "9195873f166d547b9cb4f2aeab2f2114b6a954686438ec061b2d212d23cb7549",
@@ -10160,7 +10227,7 @@
     "src/scene/StaticObjectMotionPlayback.cpp": "81078e9c868bb9cd77ec1779fe67fe7ed5f63757c2b1a4050558d557cfafb1d5",
     "src/scene/StaticObjectMovementPath.cpp": "6b6698b9a6c4675a29b322d34d955db298f63b5b930fdc3bc473ae5265e977b8",
     "src/scene/StaticObjectPathBegin.cpp": "d83208310662ca63ac0580501d604bd72bfcef78ab662a536d4e54ff8342f5db",
-    "src/scene/StaticObjectPathDest.cpp": "c5d7c51bd38cd2cacd1769e67ece3adc654dc21b682d8af2049c4def3fe40de5",
+    "src/scene/StaticObjectPathDest.cpp": "48bd5f38a48ed283b58272c13250f5281452ffc702fd16775fb9d637a9d28c06",
     "src/scene/StaticObjectPlayAnimation.cpp": "775ab2a935dd26c9c5630f9de852e447c0df21783b918e499ba187986445f48f",
     "src/scene/StaticObjectScale.cpp": "7f01471eba39bdaf0a87c5fd431722d6174ea0ddfe3a412f0a35bfde718f1abe",
     "src/scene/StaticObjectScriptBegin.cpp": "1b8b845c23ab4f36d48e44c57f0bab1b657ba178274b2a709e24e2e4f13f8a32",
@@ -10201,10 +10268,10 @@
     "src/script/activate_aiming.cpp": "9c303dafaa80279d2f04fa9ee1a17a4b43905a8e80ba5b4e959f7b3fd68972c2",
     "src/script/activate_animated_light_by_id.cpp": "a0dfd285b151b405263f6d81c6391d0771c087d7967fb5ea69ea9d12c62b0157",
     "src/script/activate_sound_buss.cpp": "03fa796475fdb5477f6b7692781af99e59f72c69e61011a6babf1970ccaf671e",
-    "src/script/add_film_canister.cpp": "006e15d373da72d87b1b4884385fe76d0cff30e6debd5d6689ed0388f0d6b47e",
+    "src/script/add_film_canister.cpp": "4dadfbd0cefb3ddef2bfce043a6b9127c09924dfffca03cb5c9dd72d8a63956e",
     "src/script/add_hint.cpp": "a741a62cab528cbeda7f79dedfc73a5af2b5892cc3a57dac34c247141510697f",
     "src/script/add_objective.cpp": "562a9bee00ed6eeb01512ca0b909c89941af59cfd05b3bbf315968e882cff314",
-    "src/script/add_replay_item.cpp": "6b22c514717be431fadea6bcc0806a7fa7f649c76c6d84f2c978715e8a09dcba",
+    "src/script/add_replay_item.cpp": "6dbcbf1d1073dfb5afa6456dc98d870fcf7429f21a0134cedb0e98adc1dab6da",
     "src/script/add_triggered_hint.cpp": "059af4e8b0a40ba0e5f9f736b576a20ffe7d7195f160c1fa8f4f15f1710f5c18",
     "src/script/adjust_aim.cpp": "cfa68f809c4aac4e441c0f343f7dc9e59b3cc1340e78b420f02e71f82b137e66",
     "src/script/ai_add_corpse_threat.cpp": "68e2239e7c9703c5dc2267fc9edc83ae3fcae35a40a6327f4886d039549a5c55",
@@ -10314,7 +10381,7 @@
     "src/script/enable_non_vis_destruct.cpp": "f3720b0ecdc21153c05c7b0147a2bf65e34545eb820c5fe5e1bc974ab7aac1ed",
     "src/script/enable_partition.cpp": "464702c72b5f82f1cb7556cdc87ea82ef52b12069f41702791c106c2dca546a6",
     "src/script/enable_partition_on_other.cpp": "8e658b1cc99768cc6f16eed862325ef21797ad58ca329756a6419bac7e692a7e",
-    "src/script/end_level.cpp": "655c5249e93aaf24dc674f3a8e742656eaa0797f9b911484a3724241e89637ae",
+    "src/script/end_level.cpp": "488c03f66c16ff080445895c1ed20c33d9f72c3872df3da51660f9d9ecc1e4f9",
     "src/script/end_sound.cpp": "17788603d3d3c54e5fdb63fd9a79eb5f8c76b73c37144d8fd617987efd8de55d",
     "src/script/enemy_count.cpp": "2e8805e2e35cdd8ebe01ea65cd0445752083438d67f5acdc1974db2b28327f31",
     "src/script/enter_astar_volume.cpp": "850efc3cbbe398a76091f73648382a51e43963dc1bbfcfd3170a3366ef03b3bc",
@@ -10376,10 +10443,10 @@
     "src/script/glare_destroy.cpp": "9af8820719b3e3c1c5a6f1f2b38795c83c08207fa7da7c14f5580ac634de27a2",
     "src/script/grenade_response_finished.cpp": "0e6c68a908e9d1de8ca11e5ce7573f39ed22151bfb4e87186d9fe2e2736afae5",
     "src/script/grenade_timer_get.cpp": "07314f404ff3339037064ad840142e959f30a296d38449c626c8af6a3db5c7ef",
-    "src/script/has_any_film_canister.cpp": "2aca636b9de4e87bd3c487b6190674931f87e4d4dc4864c62d89cd786beac740",
-    "src/script/has_film_canister.cpp": "154bc0d9a8bf84a9cef31c6db403ea31d1aa48ddb566e1e3a4e0f5765a41d021",
+    "src/script/has_any_film_canister.cpp": "5a0341796f1af55046e6c65e6f3b3fae451fb0d6461d5a1089b4db7c83153a49",
+    "src/script/has_film_canister.cpp": "bde0e77962cfcc8c3e6e721df25cf1a72acf42579a6497c2f528e888f051c477",
     "src/script/has_pistol.cpp": "1123b010019698531b0b05ad8fa8ddfe74605fcff8246b780c5e3fb572131ac4",
-    "src/script/has_replay_item.cpp": "6da729e9f74905bcb4d6180b09985978b23fc40a7ee901be6fc464230f8f4377",
+    "src/script/has_replay_item.cpp": "98cace1576c6f9769fbc97e71e6038f86839339550445f72ab5545808bea93b8",
     "src/script/hier_object_fire.cpp": "aa30fe3d7483c75667f5e3ce6481e1f65ed0a17fcefedc923506efb5160770c3",
     "src/script/hier_object_map_weapon.cpp": "7d7638a98df8d016eeb11133388a2923bd94f8a4b157ce1aa1c2725bcd1aa1f7",
     "src/script/hier_object_play_animation.cpp": "c8112617b61a2406691221e32450d307256af4a4625d35078c5565ae89e9dd4b",
@@ -10401,7 +10468,7 @@
     "src/script/letterbox_transition.cpp": "4b7452d4e1793f77c88bd9412a48689b954bfea1bf5b7321ba1fb4879fb5d479",
     "src/script/light_volume_transition_duration.cpp": "e69967ae1fe18abcb6435de458c23a4406863eb38550d17b019319c18e900f00",
     "src/script/load_compartment.cpp": "f0364b7a6b3872ca0548a165c25a0b336b5cea0461840348d7de95a2f5723281",
-    "src/script/load_one_shot_sound_bank.cpp": "9a1889945575a5a7da0e54bf1e4c1474ee8f4c18079835c4f9ac56a109944890",
+    "src/script/load_one_shot_sound_bank.cpp": "d84e6fd43bf34a0153d5a4fadbe38373f1e774ce72f0aa64239de7a89ec9cd46",
     "src/script/location_damage.cpp": "2555eb2e3eca193df53c024620b8b271d549f3e99ef7b69413d0e8d21d69de7a",
     "src/script/logical.cpp": "4cbcca143b9b639fafd8723a2169aae6bf3ceb7c51c4c2198ddd3b4efb3ec939",
     "src/script/machine_end.cpp": "ff4404250bd8eb6b78ce000b39195159d0824ebcc8d9dae084865679550f71b6",
@@ -10617,11 +10684,32 @@
     "src/script/use_binoculars.cpp": "3ab897eb9f47912d8c49df7f82f4b7a2d91baa056756f1b876b6755de43fbca5",
     "src/script/validation_build.cpp": "89251f21f21080d27633ad20ea624b1a8702565a91ab36e5f809b6e5e0ae4255",
     "src/script/vibration_partial.cpp": "29c765c0f143dab8c71ddb417edde951f88a66595192f026be5920461c5b9ec6",
+    "src/shell/gamesettings_activatecheatnamed_hugearms.cpp": "7cfb523e1b05e92df9fb6c89c91a273875607a5aca10cd0b22f36aa5f7163a51",
+    "src/shell/gamesettings_getifcurrentweaponselectable.cpp": "434c0b3b9cfaf0916814176410613e97fb800423c68368621ea074b30e7cb8df",
+    "src/shell/gamesettings_getprofileindexfromplayerid.cpp": "1ca6be741becd97d2b45907f68b313f59b8867469bf76374092832a0433d8055",
+    "src/shell/gamesettings_getsavedata.cpp": "44f7b097052aa1b13f3593b4031f4f9b8a5fd8bf91ddaf4b9966a52c006febd8",
+    "src/shell/gamesettings_getsoundmodevalue.cpp": "f27941e11c076eae147ebf71bdc5c48e84d322cd1d7ad01d8ef8b2de4c5feb76",
+    "src/shell/gamesettings_hasbeenunlocked.cpp": "84e160db9999b76d57a536e655e36379913c56eb1fcf9e7ff6d361346c875c12",
+    "src/shell/gamesettings_hasmedal.cpp": "0bc0b5e44584cf2edce97562c438719fc253bf23ef2ed73185cf2b64e05a59d5",
+    "src/shell/gamesettings_inithudfromoptions.cpp": "70cee48d5031229230296c59e8680959a27d456c71f8bde1b2dce405c433ff31",
+    "src/shell/gamesettings_invalidateslotbackup.cpp": "64f6395713dc5e3edef69f2262a5d9d1ab4ae9308339c62c3799f5abeb8fba26",
+    "src/shell/gamesettings_reset.cpp": "5d4747695bb170e2f4b2b156e7768ec26d2b19f748f0efc5d771e2f486a3b974",
+    "src/shell/gamesettings_resetcurrentlevelstats.cpp": "02656b7219d8331abca3dd90f849bed1d77446eb698b77415361763b31f17468",
+    "src/shell/gamesettings_resetleveltimer.cpp": "3aacffde4bfe0a26b631fa34c1be2e1413aa762d8403361640209384cbced3e8",
+    "src/shell/gamesettings_restorelevelaudio.cpp": "74e18a579e429e1ea821af16373cb68fff4e2584ff7a5591b71490da65dc5781",
+    "src/shell/gamesettings_restoresavedata.cpp": "65ab6126d5c0d687f9123abb9d8cb36e791830d81438bd98beaff7ff72adbf8c",
+    "src/shell/gamesettings_restoreslotbackup.cpp": "cc41c33fe9b0eee54525197525be7e9e8fd3fc200244a83ef4bcd2dca708486c",
+    "src/shell/gamesettings_savedata.cpp": "a61eff02d8366dd613cb272cfbc41652c2bb622dfd21f149ed88456f1ef6fcbd",
+    "src/shell/gamesettings_serializingin.cpp": "4701840686e449203078ef132deadecbb2488bc110b9767e6a3b732e452e54a1",
+    "src/shell/gamesettings_setcontrollerbuttons.cpp": "7881abe5b8b8ab47de752f3a24493462d76696951ac75362b548e2d7443742e5",
+    "src/shell/gamesettings_setplayersfinishedlevelsuccessfu.cpp": "480530acffcf042dd9042d9c14e1f7cdc03d408a7bb1ec5169dd1f4477074938",
+    "src/shell/gamesettings_setprevmissionandlevel.cpp": "cd2ed565b9b810b91c11e49a015e9ad3457780d185357a5002b7fbc81760f6fb",
+    "src/shell/gamesettings_validate.cpp": "e0d8f6c1c427bd389ec1bbf26dd2267be784518b084bed317701aaac5d9e1633",
     "src/shell/rcmp_alloc.cpp": "ea747ae393fea94d2f4e761be754f711c91a8fd0904a45dc0142c8f5de43a8bf",
     "src/shell/static_draw.cpp": "5c31cd87db7e8acba89ef9c6e6878e17ee2e38e1e74a2569d004e19d66421be5",
     "src/shell/static_draw2.cpp": "ddba7fedecc5798e4626fe84063c50a4ee123d4a83a4cd65f5eedf9655a3e85f",
     "src/shell/static_screen.cpp": "854412bd857510cace0da7e41289b26f13079c7bc1a1e8dda609505d3fc5735c",
-    "src/shell/static_start.cpp": "6c4d52f041de9494643999343b5f34a0e713e9b2ce417885684ac53b2c31bc68",
+    "src/shell/static_start.cpp": "53890fd35320c5c35971fd96d65c87850d83ac03da2a894bae081d15c54c697c",
     "src/shell/static_stop.cpp": "4e0f45cbe22baf974c621e4d2147515a09781c89af3a03e63f31231b92badd01",
     "src/shell/static_text.cpp": "5a4217333e2ae2759f0c67cfd72be2f4b00390a47c31c6fba360be1bff988ae8",
     "src/sound/AmbientTrack.cpp": "806bc651699acac158151883251a45c29078a06e4fd195081a3d1d7443a56e52",
@@ -51965,6 +52053,384 @@
       "discarded_functions": [],
       "object_sha256": "6fffb182eeb59de0111b56d3572c148afa1f606ef3724ff1b9a8d3f93436ed5d",
       "linked_sha256": "6d03495cdf998a7698873468fb211dc3a55be5847d463ad2990e718e42707160"
+    },
+    {
+      "id": "gamesettings_reset",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 108,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "a4bbaff010ebdd29a699ac98a05a263c45c7a6d756d62acb8f77d49cd5130e24",
+      "linked_sha256": "dc1545076cdc2c9ec48428fcaf781132c9eabb25433b3456ee0419973d431f22"
+    },
+    {
+      "id": "gamesettings_invalidateslotbackup",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 12,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "b56281422c6a116f33da5fe18729ab9118cf0c4fe733f37baecb65c00a0861bd",
+      "linked_sha256": "63f3dc096c8c5e0e1c4dc4adf0f3e877facf338aee7d186db98de2b470d00283"
+    },
+    {
+      "id": "gamesettings_setprevmissionandlevel",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 228,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "edff2687c44165b2e595673db7f3769b4d4322be87343e1b8eebf317ae5a5f41",
+      "linked_sha256": "ac5a3f5c4d6cc45fcab5edd17ae4df2fc344f4de5d3632b87cb4b562a3d3f0ae"
+    },
+    {
+      "id": "gamesettings_resetcurrentlevelstats",
+      "category": "reconstructed_game",
+      "functions": 6,
+      "code_bytes": 280,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "6ffe5a45534b6cf6db08c1478c189fd738b0d6d9a4733a03a7135b237a770329",
+      "linked_sha256": "2bb3037c77d4a42e66268a496bd2862849e3359b13391082851e558dabec3bb6"
+    },
+    {
+      "id": "gamesettings_setplayersfinishedlevelsuccessfu",
+      "category": "reconstructed_game",
+      "functions": 8,
+      "code_bytes": 532,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "72474fa4f1029328dccd28e4d2dce5c36866839c7256bdb607e7e7e1b32ed406",
+      "linked_sha256": "4e6c9af48bb8a22cccfb4efd003f4c130951c56a74766a91dc760d93f19ea9db"
+    },
+    {
+      "id": "gamesettings_getifcurrentweaponselectable",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 192,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "53fbae6a37430311ff503374d39f2933196b236c3e317ac4ef223a7c7ede3971",
+      "linked_sha256": "b135575d7204f1f60e2d3fc1b57d88e315a6cb5c0ea31aa10da8578b82406398"
+    },
+    {
+      "id": "gamesettings_activatecheatnamed_hugearms",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 16,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "514494d5b2bc69911315aa00869b23a507a2eb3f094d8f87f2f10cb62d5f2438",
+      "linked_sha256": "56a7dd6c4d8b46fca17d030a6b55ecc812d63fff321514d05bd91da059e05c66"
+    },
+    {
+      "id": "gamesettings_resetleveltimer",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 56,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "c77f504ddd386f8595a4fe437546e5216fb704f4b122654e85ed6931dac6e791",
+      "linked_sha256": "e0d87318aa8586414824d994171e9f7bca4c120a05372d73ce72834957f76086"
+    },
+    {
+      "id": "gamesettings_savedata",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 56,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "3e0efae26037e5ffbe1af03f1b16bb2ddc20cc367c34b5f2f579f6c9c87084cc",
+      "linked_sha256": "c5ab88ca5492085c265c4642aa9c15497c0c69a0fdc8dca6ff21215aeb266329"
+    },
+    {
+      "id": "gamesettings_setcontrollerbuttons",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 364,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "7f4dc543884c80bb8cfa29094da58746eb2c34592db0e570c01073891b77bd3a",
+      "linked_sha256": "09b0b9297c0865257dee77b86e912436cb5f1a782b733f5ec4f17b3c2466f040"
+    },
+    {
+      "id": "gamesettings_inithudfromoptions",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 168,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "701a58031b5f4f248122a2245d458b5f390189587d9a88567c14746b8dfcc01e",
+      "linked_sha256": "f7c9930dc2281ddbac02347340d4b9639a746110ed952067b36a24ebdbdd7e86"
+    },
+    {
+      "id": "gamesettings_getsoundmodevalue",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 480,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "c5e224769cd600f557e18d25cb74847550df3dddb25ffc622d050db2b7874814",
+      "linked_sha256": "da03f3eb41724d767030c38baa53048a6d7bedae51bd3921fad10a1b6996bbde"
+    },
+    {
+      "id": "gamesettings_restoresavedata",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 112,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "a033a464d63235e0530046baa88c56cc76003ce368d71f719f8a922e1445149b",
+      "linked_sha256": "3bed51d69f814fbd34c039f8d3a5e4c1ec61013b3351bbfcea5145ec4416df84"
+    },
+    {
+      "id": "gamesettings_restoreslotbackup",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 272,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "a67720cfd995d62b288290dd00424d9eac72ed22ec54233fb5c22fc651379807",
+      "linked_sha256": "8f2bc7127f2254c0617678330c2780bc77c95584eb3326626c47123c8d7af133"
+    },
+    {
+      "id": "gamesettings_restorelevelaudio",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 300,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "c581e6706e46fc6e8dfcf08c1e0f2b98d496b1149d391628223344d4fee38c54",
+      "linked_sha256": "568a811eae9fb667c0cc1fbf8b66723770b52507aa84e7620608b627c59cadac"
+    },
+    {
+      "id": "gamesettings_validate",
+      "category": "reconstructed_game",
+      "functions": 8,
+      "code_bytes": 560,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "543a0bed2a7e3e10c7636d55bab5bbf162471c736a38ae14d072d9828c371ca4",
+      "linked_sha256": "d5d29df02b95122d2ad67c6892364b0d3c4eba565e2f1abb509556b6603f1aa7"
+    },
+    {
+      "id": "gamesettings_serializingin",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 320,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e36809be72606a2f15b0d6c260a5435e854dcd0468919c8256f3d00da9fc8f20",
+      "linked_sha256": "3dcc40808127000971af49e16b962551ecf6ad200dd93e94245467b5d71642d4"
+    },
+    {
+      "id": "gamesettings_getsavedata",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 132,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "7263078145f28968e575a7095b781125ae18f36c98aa212d6a49ee6befe8ab3e",
+      "linked_sha256": "1fdeb32128d81d7bbdf4f99887065cfe91032b26d809183c139f0fc0351de92c"
+    },
+    {
+      "id": "gamesettings_hasbeenunlocked",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 560,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "a0a6a3b8af4a39100314c5b3e5750a9674841d927fdc3d828811915c3d09287d",
+      "linked_sha256": "451bc87393569a987c2e28a577b06d3f8e6bd03be54010a029203c21bdf0c4e4"
+    },
+    {
+      "id": "gamesettings_hasmedal",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 596,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "7c9f2a3c4bec7e0723233d3d1dc9f6c28b63ef91fcd9ee04a879a05aa7f91122",
+      "linked_sha256": "02c9b3a417562bce2186a2532e5caea2668b40f59f11831e4ce8fe6133247577"
+    },
+    {
+      "id": "gamesettings_getprofileindexfromplayerid",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 276,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "5297208d0128ba9f5e80dbbd81518bb361c806553081277b8ff873f72ffc6888",
+      "linked_sha256": "cfa1c9a29ceeda3bb33facc17dca15617eacadbbb5c5da9d87b0a6db583dfa2c"
     }
   ],
   "code_map": {
@@ -71622,13 +72088,6 @@
         "file_name": "GameSettings.cpp",
         "ranges": [
           {
-            "address": "0x8016caa4",
-            "size": 108,
-            "kind": "function",
-            "name": "Reset__12SPlayerStats",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8016cb10",
             "size": 292,
             "kind": "function",
@@ -71720,13 +72179,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8016d758",
-            "size": 12,
-            "kind": "function",
-            "name": "InvalidateSlotBackup__13CGameSettings",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8016d764",
             "size": 200,
             "kind": "function",
@@ -71734,73 +72186,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8016d82c",
-            "size": 168,
-            "kind": "function",
-            "name": "SetPrevMissionAndLevel__13CGameSettingsUiUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016d8d4",
-            "size": 32,
-            "kind": "function",
-            "name": "SetNextMissionAndLevel__13CGameSettingsUiUii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016d8f4",
-            "size": 28,
-            "kind": "function",
-            "name": "SetCurrentMissionAndLevel__13CGameSettingsUiUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8016d910",
             "size": 156,
             "kind": "function",
             "name": "Set_Language__13CGameSettings10ELanguages",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016d9ac",
-            "size": 72,
-            "kind": "function",
-            "name": "ResetCurrentLevelStats__13CGameSettings",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016d9f4",
-            "size": 40,
-            "kind": "function",
-            "name": "Set_shotsFired__13CGameSettingsUib",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016da1c",
-            "size": 40,
-            "kind": "function",
-            "name": "Set_hits__13CGameSettingsUib",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016da44",
-            "size": 40,
-            "kind": "function",
-            "name": "Set_hitsTaken__13CGameSettingsUib",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016da6c",
-            "size": 40,
-            "kind": "function",
-            "name": "Set_enemiesKilled__13CGameSettingsUib",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016da94",
-            "size": 48,
-            "kind": "function",
-            "name": "Set_shotLocation__13CGameSettingsUi14EShotLocationsb",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -71818,80 +72207,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8016dee0",
-            "size": 100,
-            "kind": "function",
-            "name": "SetPlayersFinishedLevelSuccessfully__13CGameSettingsii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016df44",
-            "size": 104,
-            "kind": "function",
-            "name": "SetPlayersFinishedLevelHealth__13CGameSettingsiif",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016dfac",
-            "size": 24,
-            "kind": "function",
-            "name": "SetCurrentHealth__13CGameSettingsfi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016dfc4",
-            "size": 24,
-            "kind": "function",
-            "name": "GetCurrentHealth__C13CGameSettingsi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016dfdc",
-            "size": 96,
-            "kind": "function",
-            "name": "SetCurrentAmmo__13CGameSettingsiUiUii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016e03c",
-            "size": 40,
-            "kind": "function",
-            "name": "SetCurrentWeapon__13CGameSettingsP7CWeaponi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016e064",
-            "size": 44,
-            "kind": "function",
-            "name": "GetCurrentWeapon__13CGameSettingsRii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016e090",
-            "size": 100,
-            "kind": "function",
-            "name": "GetCurrentAmmo__C13CGameSettingsiRUiT2i",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8016e0f4",
             "size": 80,
             "kind": "function",
             "name": "SetIfCurrentWeaponSelectable__13CGameSettingsibi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016e144",
-            "size": 80,
-            "kind": "function",
-            "name": "GetIfCurrentWeaponSelectable__C13CGameSettingsii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016e194",
-            "size": 112,
-            "kind": "function",
-            "name": "GetPlayersFinishedLevelSuccessfully__13CGameSettingsii",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -71923,31 +72242,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8016e86c",
-            "size": 16,
-            "kind": "function",
-            "name": "ActivateCheatNamed_HugeArms__13CGameSettings",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8016e87c",
             "size": 496,
             "kind": "function",
             "name": "AddMedal__13CGameSettingsi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016ea6c",
-            "size": 20,
-            "kind": "function",
-            "name": "ResetLevelTimer__13CGameSettings",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016ea80",
-            "size": 36,
-            "kind": "function",
-            "name": "UpdateLevelTimer__13CGameSettingsP13CPlayerObjectUi",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -71986,52 +72284,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8016f444",
-            "size": 56,
-            "kind": "function",
-            "name": "SaveData__13CGameSettings",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8016f47c",
             "size": 52,
             "kind": "function",
             "name": "LoadData__13CGameSettings",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016f4b0",
-            "size": 88,
-            "kind": "function",
-            "name": "SetControllerButtons__13CGameSettingsiiPsi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016f508",
-            "size": 88,
-            "kind": "function",
-            "name": "GetControllerButtons__13CGameSettingsiiPsi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016f560",
-            "size": 76,
-            "kind": "function",
-            "name": "CopyNameIntoSettings__13CGameSettingsPCci",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016f5ac",
-            "size": 44,
-            "kind": "function",
-            "name": "GetNameFromSettings__13CGameSettingsi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016f5d8",
-            "size": 68,
-            "kind": "function",
-            "name": "Get_PlayerControllerSetting__13CGameSettingsi",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -72042,52 +72298,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8016f75c",
-            "size": 88,
-            "kind": "function",
-            "name": "InitHUDFromOptions__13CGameSettingsi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016f7b4",
-            "size": 80,
-            "kind": "function",
-            "name": "InitAudioFromOptions__13CGameSettingsib",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8016f804",
             "size": 856,
             "kind": "function",
             "name": "InitCheatsFromOptions__13CGameSettings",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016fb5c",
-            "size": 144,
-            "kind": "function",
-            "name": "GetSoundModeValue__13CGameSettingsi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016fbec",
-            "size": 212,
-            "kind": "function",
-            "name": "SetSoundModeValue__13CGameSettingsi10ESoundMode",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016fcc0",
-            "size": 44,
-            "kind": "function",
-            "name": "CurrentLevelIsShell__C13CGameSettings",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8016fcec",
-            "size": 80,
-            "kind": "function",
-            "name": "BindKeyToEvent__13CGameSettingsP6KEYMAPUsUs",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -72119,13 +72333,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x801701d8",
-            "size": 112,
-            "kind": "function",
-            "name": "RestoreSaveData__13CGameSettings",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80170248",
             "size": 364,
             "kind": "function",
@@ -72133,45 +72340,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x801703b4",
-            "size": 168,
-            "kind": "function",
-            "name": "RestoreSlotBackup__13CGameSettings",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017045c",
-            "size": 52,
-            "kind": "function",
-            "name": "RememberProfileDevices__13CGameSettings",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80170490",
-            "size": 52,
-            "kind": "function",
-            "name": "RestoreProfileDevices__13CGameSettings",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x801704c4",
             "size": 508,
             "kind": "function",
             "name": "RestoreSerializedData__13CGameSettings",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801706c0",
-            "size": 72,
-            "kind": "function",
-            "name": "RestoreLevelAudio__13CGameSettings",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80170708",
-            "size": 228,
-            "kind": "function",
-            "name": "RestoreCoreLevelStats__13CGameSettings",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -72189,101 +72361,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80170b98",
-            "size": 4,
-            "kind": "function",
-            "name": "Validate__13CGameSettings",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80170b9c",
-            "size": 120,
-            "kind": "function",
-            "name": "SerializeValue__13CGameSettingsRUiUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80170c14",
-            "size": 32,
-            "kind": "function",
-            "name": "SerializeValue__13CGameSettingsRiUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80170c34",
-            "size": 72,
-            "kind": "function",
-            "name": "SerializeValue__13CGameSettingsRUc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80170c7c",
-            "size": 136,
-            "kind": "function",
-            "name": "SerializeValue__13CGameSettingsRb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80170d04",
-            "size": 36,
-            "kind": "function",
-            "name": "SerializeValue__13CGameSettingsRf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80170d28",
-            "size": 72,
-            "kind": "function",
-            "name": "SerializeValue__13CGameSettingsR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80170d70",
-            "size": 88,
-            "kind": "function",
-            "name": "SerializeValue__13CGameSettingsR11CQuaternion",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80170dc8",
             "size": 280,
             "kind": "function",
             "name": "SerializeDelta__13CGameSettingsRC7CMatrixR7CMatrix",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80170ee0",
-            "size": 20,
-            "kind": "function",
-            "name": "SerializingIn__C13CGameSettings",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80170ef4",
-            "size": 20,
-            "kind": "function",
-            "name": "SerializingOut__C13CGameSettings",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80170f08",
-            "size": 100,
-            "kind": "function",
-            "name": "findSavePointSlot__Fi",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x80170f6c",
-            "size": 80,
-            "kind": "function",
-            "name": "RegisterSavePoint__13CGameSettingsib",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80170fbc",
-            "size": 100,
-            "kind": "function",
-            "name": "TriggerSavePointResponse__13CGameSettingsib",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -72294,66 +72375,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x801710f0",
-            "size": 56,
-            "kind": "function",
-            "name": "GetSaveData__C13CGameSettingsUiUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80171128",
-            "size": 20,
-            "kind": "function",
-            "name": "SetCurrentCompartmentID__13CGameSettingsUii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017113c",
-            "size": 20,
-            "kind": "function",
-            "name": "GetCurrentCompartmentID__C13CGameSettingsUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80171150",
-            "size": 16,
-            "kind": "function",
-            "name": "GetCurrentOneShotBankID__13CGameSettings",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80171160",
-            "size": 20,
-            "kind": "function",
-            "name": "GetCurrentSavePointID__C13CGameSettings",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80171174",
             "size": 392,
             "kind": "function",
             "name": "SetSkuType__13CGameSettingsR11CConfigFile",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801712fc",
-            "size": 132,
-            "kind": "function",
-            "name": "HasBeenUnlocked__C13CGameSettingsi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80171380",
-            "size": 192,
-            "kind": "function",
-            "name": "AddCheat__13CGameSettingsi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80171440",
-            "size": 236,
-            "kind": "function",
-            "name": "UnlockLevel__13CGameSettingsib",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -72364,73 +72389,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x801715b8",
-            "size": 136,
-            "kind": "function",
-            "name": "HasMedal__C13CGameSettingsi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80171640",
-            "size": 92,
-            "kind": "function",
-            "name": "HasCheat__C13CGameSettingsi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017169c",
-            "size": 92,
-            "kind": "function",
-            "name": "IsCheatActive__C13CGameSettingsi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801716f8",
-            "size": 160,
-            "kind": "function",
-            "name": "ActivateCheat__13CGameSettingsib",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80171798",
-            "size": 116,
-            "kind": "function",
-            "name": "Get_currentDifficulty__C13CGameSettings",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8017180c",
             "size": 216,
             "kind": "function",
             "name": "GetProfilesCRCValue__13CGameSettings",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801718e4",
-            "size": 96,
-            "kind": "function",
-            "name": "GetProfileIndexFromPlayerID__13CGameSettingsi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80171944",
-            "size": 120,
-            "kind": "function",
-            "name": "GetPlayerIDFromProfileIndex__13CGameSettingsi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801719bc",
-            "size": 16,
-            "kind": "function",
-            "name": "WasLastGameSinglePlayer__13CGameSettings",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801719cc",
-            "size": 44,
-            "kind": "function",
-            "name": "GetProfile__13CGameSettingsUi",
             "evidence": "adjacent-compiler-markers"
           },
           {

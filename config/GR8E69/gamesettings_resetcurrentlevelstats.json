@@ -1,0 +1,70 @@
+{
+  "id": "gamesettings_resetcurrentlevelstats",
+  "source": "src/shell/gamesettings_resetcurrentlevelstats.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8016d9ac",
+      "size": 280
+    }
+  ],
+  "functions": [
+    {
+      "name": "ResetCurrentLevelStats__13CGameSettings",
+      "address": "0x8016d9ac",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "Set_shotsFired__13CGameSettingsUib",
+      "address": "0x8016d9f4",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "Set_hits__13CGameSettingsUib",
+      "address": "0x8016da1c",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "Set_hitsTaken__13CGameSettingsUib",
+      "address": "0x8016da44",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "Set_enemiesKilled__13CGameSettingsUib",
+      "address": "0x8016da6c",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "Set_shotLocation__13CGameSettingsUi14EShotLocationsb",
+      "address": "0x8016da94",
+      "size": 48,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Reset__12SPlayerStats": "0x8016caa4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "GameSettings.cpp",
+  "original_file_index": 1479
+}
