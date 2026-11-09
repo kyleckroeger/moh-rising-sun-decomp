@@ -3,8 +3,8 @@
 #include <string.h>
 
 void FEListBox::SetAutoWrap(bool wrap) {
-    if (wrap) flags88 &= ~4;
-    else flags88 |= 4;
+    if (wrap) listFlags &= ~4;
+    else listFlags |= 4;
 }
 void FEListBox::InitializeListEntry(FEListEntryData *entry, unsigned long count) {
     void *data = entry;

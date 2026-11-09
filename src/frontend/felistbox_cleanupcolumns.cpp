@@ -46,15 +46,15 @@ void FEListBox::RecalculateCummulative() {
     }
 }
 void FEListBox::CompleteScroll() {
-    flags88 &= ~98;
+    listFlags &= ~98;
     scrollX = targetX;
     scrollY = targetY;
     if (currentColumn == 0) {
-        flags88 &= ~8;
+        listFlags &= ~8;
         scrollX = 0.0f;
     }
     if (currentRow == 0) {
-        flags88 &= ~16;
+        listFlags &= ~16;
         scrollY = 0.0f;
     }
 }

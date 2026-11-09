@@ -4,8 +4,8 @@
 
 FEListBox::~FEListBox() { Terminate(); }
 void FEListBox::Terminate() {
-    if (((flags88 ^ 1) & 1) == 0) {
-        flags88 &= ~1;
+    if (((listFlags ^ 1) & 1) == 0) {
+        listFlags &= ~1;
         CleanupColumns();
         CleanupRows();
         CleanupCells();

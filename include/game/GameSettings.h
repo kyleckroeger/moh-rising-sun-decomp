@@ -418,7 +418,7 @@ struct GameFlowView {
     int unknown_0;
     int levelIsShell; // +0x4; Init stores CurrentLevelIsShell.
     int levelEnding; // +0x8; set by BIFunc_EndLevel and CPauseMenu::RestartLevel.
-    int startingMP; // +0xc; set by SetStartMPDataFromShell. Name inferred.
+    int startingMP; // +0xc; set by SetStartMPDataFromShell and by the pause menu when quitting to the shell. Name inferred and doubtful.
     unsigned char unknown_10[0x14 - 0x10];
 };
 extern GameFlowView g_GameFlow;

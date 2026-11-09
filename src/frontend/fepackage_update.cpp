@@ -8,7 +8,8 @@ void FEPackage::Update(FEngine *owner, long time) {
     lastDeltaTime = time;
     for (FEObject *object = firstObject; object; object = (FEObject *)object->next) UpdateObject(object, time);
 }
-// Message hashes: focus lost, then focus gained, each sent to the package and to the button.
+// Two message hashes, each sent to the package and to the button: one for the old button, one for the new.
+// Reading them as focus lost and focus gained is inferred from this use; the hash names are unknown.
 void FEPackage::SetCurrentButton(FEngine *owner, FEObject *button, bool notify) {
     if (notify) {
         if (currentButton) {

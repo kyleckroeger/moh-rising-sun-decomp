@@ -37,7 +37,7 @@ struct FEListBoxCell {
 
 class FEListBox : public FEObject {
   public:
-    unsigned long flags88;     // +0x58; 1 initialized, 2 scrolling, 4 no wrap.
+    unsigned long listFlags;     // +0x58; 1 initialized, 2 scrolling, 4 no wrap.
     unsigned long numColumns;  // +0x5c
     unsigned long numRows;     // +0x60
     float unknown_64;          // +0x64
