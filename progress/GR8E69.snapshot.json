@@ -451,6 +451,7 @@
       "src/ea/filedev_open.cpp": "80ba240a2ebf4a997c44b9665e953e859508729c3925414c4d327de619bd34c6",
       "src/ea/filedev_read_step.cpp": "f02d9bfbe67073f641fea41e46efa418c1b59184c9f6f7967ce53784e4a87736",
       "src/ea/filesys.cpp": "c3c94be82051fb71d94bba7ef22050a8ddbdd86b2534c9978ac816f6168897a0",
+      "src/ea/fixedmult.cpp": "7c23ebbce3c3398f969d24f8efa19c704143d8f1299987d455ed7f3d665c64f7",
       "src/ea/fontchar.cpp": "2980d56dfbdbbeb46cba293f7c2397b7518079ba32d510118510c9301ee15a47",
       "src/ea/fontcreate.cpp": "fb846d119db1a373f03387cc09f0db8bf0c80ede2c1efb305914580be2630def",
       "src/ea/fontdraw.cpp": "a2add2aca7bf8e5dfd9f636944bcb77c9f833207222f054469a3c787cfaa9258",
@@ -469,6 +470,8 @@
       "src/ea/ipad_vbl.cpp": "66c3f6f31d5eb828019a9d019df2d806941430558437500d7702bf522559ff84",
       "src/ea/locatbig.cpp": "fa584699c71e3da3490236f9e528144d80adaae632b140dacfd593baaed752eb",
       "src/ea/locatbig_tail.cpp": "cb31096d1baa481ab45660bc3f49c446161462158dae382c55064958c3ed9f9a",
+      "src/ea/maddec.cpp": "6bb014591aecb56d42dbb1222b84a6abf150b4ac39633f6381f2a6ddc835f63f",
+      "src/ea/madidct_compute.cpp": "cff5b77dd22f7c90e63449d90310125f62ba645c435a6223650c9b0c071a5262",
       "src/ea/memalloc.cpp": "1fb8d6c6965d9916235e6ee35c94a13b67f5d332f5f5adbf44ff3c8285f12e21",
       "src/ea/memblock.cpp": "9c22c07fb0234fb28e395fc44ebaa5d07b2ae93122bdbfb90b8e1b0da347e3ef",
       "src/ea/memclass.cpp": "196a92c247bbf907c1250a3e3090187e220b38ee4cc84b90ea8337dba4eca7ca",
@@ -3756,6 +3759,7 @@
       "config/GR8E69/ea_filedev_open.json": "e97f5219ff18eab471530c5762a71e3e833ac03ba3b29af4e9841c58fef8c74e",
       "config/GR8E69/ea_filedev_read_step.json": "acddf22a18317a4b6d27bda7861e013b0ea68103e9843485f2aeb47164827e11",
       "config/GR8E69/ea_filesys.json": "2738aedc64fab28e1b4a76a601f496a5b5464547d13a689f20fd73bdde9e96d4",
+      "config/GR8E69/ea_fixedmult.json": "d800dfcee05b2416fc3a3d74ee6832d7d800f7d9806506252f22642942cdc612",
       "config/GR8E69/ea_fontchar.json": "1e52ab7673f6e190e13a35e0fe6fd63489a5cf38806f041eb69bb3cb4a9a1769",
       "config/GR8E69/ea_fontcreate.json": "8bde187429767df88e9c261b790b4a86fbe3edced2e17abfb412777116b78049",
       "config/GR8E69/ea_fontdraw.json": "51bc483feba71a2948e8618f24e872d17068d6160d6fa15866e94754d6a0314b",
@@ -3772,6 +3776,8 @@
       "config/GR8E69/ea_ipad_vbl.json": "7d6de802ef682882fd356ed8e55b56cdcb87e3eb6a834680c5b8c5a51a87f7a2",
       "config/GR8E69/ea_locatbig.json": "3d89332ca2423b134f8824282b22d2ecef215b3c58f819e83b0a7a01988cbef1",
       "config/GR8E69/ea_locatbig_tail.json": "97e626d1b280764969830c1170bbef289eb95eacd8e7c58cd7c7e9260b229f88",
+      "config/GR8E69/ea_maddec.json": "cfc7362e74eb63ef3d4456a53560b3d93f35d681b4dc7e9b8434f91fb2d7a453",
+      "config/GR8E69/ea_madidct_compute.json": "00166be4bce5e22164f38a9ae95015881aad9ebc235b0b3dafc6e85e49aac14b",
       "config/GR8E69/ea_memalloc.json": "4030127de92d45cef89b8bcbc97b5dce59122c4f49a385ce0d6cf6f3ae6a25f0",
       "config/GR8E69/ea_memblock.json": "d8bcb16d5b7e3784e63c0f2de83e1e3741b9dc84d3673d81e08b98a95d0117a0",
       "config/GR8E69/ea_memclass.json": "8e117c8b801c31ab4ce641234870dbfe51a29f5cf82036b5e9e215b928bd18d4",
@@ -4645,7 +4651,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "4f4e76b40941864ebfeeeb9b9fe5da5e38167e3462140578ac292345a3894403",
+      "config/GR8E69/project.json": "15e4c4418e00f1e895de9e5f78fb253323ec714638b7535f55d99e4ebdf70090",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7381,14 +7387,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1328224,
+    "matching_code_bytes": 1331488,
     "total_executable_code_bytes": 2492032,
-    "percent": 53.2988340438646,
+    "percent": 53.42981149519749,
     "categories": {
-      "reconstructed_game": 936008,
+      "reconstructed_game": 939272,
       "restored_library": 392216
     },
-    "matching_functions": 6971
+    "matching_functions": 6983
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -7923,6 +7929,7 @@
     "config/GR8E69/ea_filedev_open.json": "e97f5219ff18eab471530c5762a71e3e833ac03ba3b29af4e9841c58fef8c74e",
     "config/GR8E69/ea_filedev_read_step.json": "acddf22a18317a4b6d27bda7861e013b0ea68103e9843485f2aeb47164827e11",
     "config/GR8E69/ea_filesys.json": "2738aedc64fab28e1b4a76a601f496a5b5464547d13a689f20fd73bdde9e96d4",
+    "config/GR8E69/ea_fixedmult.json": "d800dfcee05b2416fc3a3d74ee6832d7d800f7d9806506252f22642942cdc612",
     "config/GR8E69/ea_fontchar.json": "1e52ab7673f6e190e13a35e0fe6fd63489a5cf38806f041eb69bb3cb4a9a1769",
     "config/GR8E69/ea_fontcreate.json": "8bde187429767df88e9c261b790b4a86fbe3edced2e17abfb412777116b78049",
     "config/GR8E69/ea_fontdraw.json": "51bc483feba71a2948e8618f24e872d17068d6160d6fa15866e94754d6a0314b",
@@ -7939,6 +7946,8 @@
     "config/GR8E69/ea_ipad_vbl.json": "7d6de802ef682882fd356ed8e55b56cdcb87e3eb6a834680c5b8c5a51a87f7a2",
     "config/GR8E69/ea_locatbig.json": "3d89332ca2423b134f8824282b22d2ecef215b3c58f819e83b0a7a01988cbef1",
     "config/GR8E69/ea_locatbig_tail.json": "97e626d1b280764969830c1170bbef289eb95eacd8e7c58cd7c7e9260b229f88",
+    "config/GR8E69/ea_maddec.json": "cfc7362e74eb63ef3d4456a53560b3d93f35d681b4dc7e9b8434f91fb2d7a453",
+    "config/GR8E69/ea_madidct_compute.json": "00166be4bce5e22164f38a9ae95015881aad9ebc235b0b3dafc6e85e49aac14b",
     "config/GR8E69/ea_memalloc.json": "4030127de92d45cef89b8bcbc97b5dce59122c4f49a385ce0d6cf6f3ae6a25f0",
     "config/GR8E69/ea_memblock.json": "d8bcb16d5b7e3784e63c0f2de83e1e3741b9dc84d3673d81e08b98a95d0117a0",
     "config/GR8E69/ea_memclass.json": "8e117c8b801c31ab4ce641234870dbfe51a29f5cf82036b5e9e215b928bd18d4",
@@ -8812,7 +8821,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "4f4e76b40941864ebfeeeb9b9fe5da5e38167e3462140578ac292345a3894403",
+    "config/GR8E69/project.json": "15e4c4418e00f1e895de9e5f78fb253323ec714638b7535f55d99e4ebdf70090",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -10996,6 +11005,7 @@
     "src/ea/filedev_open.cpp": "80ba240a2ebf4a997c44b9665e953e859508729c3925414c4d327de619bd34c6",
     "src/ea/filedev_read_step.cpp": "f02d9bfbe67073f641fea41e46efa418c1b59184c9f6f7967ce53784e4a87736",
     "src/ea/filesys.cpp": "c3c94be82051fb71d94bba7ef22050a8ddbdd86b2534c9978ac816f6168897a0",
+    "src/ea/fixedmult.cpp": "7c23ebbce3c3398f969d24f8efa19c704143d8f1299987d455ed7f3d665c64f7",
     "src/ea/fontchar.cpp": "2980d56dfbdbbeb46cba293f7c2397b7518079ba32d510118510c9301ee15a47",
     "src/ea/fontcreate.cpp": "fb846d119db1a373f03387cc09f0db8bf0c80ede2c1efb305914580be2630def",
     "src/ea/fontdraw.cpp": "a2add2aca7bf8e5dfd9f636944bcb77c9f833207222f054469a3c787cfaa9258",
@@ -11014,6 +11024,8 @@
     "src/ea/ipad_vbl.cpp": "66c3f6f31d5eb828019a9d019df2d806941430558437500d7702bf522559ff84",
     "src/ea/locatbig.cpp": "fa584699c71e3da3490236f9e528144d80adaae632b140dacfd593baaed752eb",
     "src/ea/locatbig_tail.cpp": "cb31096d1baa481ab45660bc3f49c446161462158dae382c55064958c3ed9f9a",
+    "src/ea/maddec.cpp": "6bb014591aecb56d42dbb1222b84a6abf150b4ac39633f6381f2a6ddc835f63f",
+    "src/ea/madidct_compute.cpp": "cff5b77dd22f7c90e63449d90310125f62ba645c435a6223650c9b0c071a5262",
     "src/ea/memalloc.cpp": "1fb8d6c6965d9916235e6ee35c94a13b67f5d332f5f5adbf44ff3c8285f12e21",
     "src/ea/memblock.cpp": "9c22c07fb0234fb28e395fc44ebaa5d07b2ae93122bdbfb90b8e1b0da347e3ef",
     "src/ea/memclass.cpp": "196a92c247bbf907c1250a3e3090187e220b38ee4cc84b90ea8337dba4eca7ca",
@@ -63387,6 +63399,63 @@
       "discarded_functions": [],
       "object_sha256": "d2198faeac80e482f07299d4255799721278284ac0f8cf1f5c22055f77ac78a4",
       "linked_sha256": "710ca4e503efbbc091b54b33d730ad9e5c768827176d37be2443b56175edbe60"
+    },
+    {
+      "id": "ea_maddec",
+      "category": "reconstructed_game",
+      "functions": 10,
+      "code_bytes": 2844,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "81046926676f71624fdb4d5b2172a59d7da6958bac566c36f2c4296ddb237434",
+      "linked_sha256": "0c4d2e361dfd8ce410982f3033fd0210013d7539a0c96b8247c74936ba5af74d"
+    },
+    {
+      "id": "ea_madidct_compute",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 356,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "aca42460beb39dd4301394730c62f89a8ffb406ad41c9e3583719a5b99dfc39c",
+      "linked_sha256": "d91cab07027279d0492c5cabc34bfb780213287764ce72e1ec82241a091fddbf"
+    },
+    {
+      "id": "ea_fixedmult",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 64,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "da9eaa2acec5e4e26c7542785cacdb843e50a0a8ed3285fd871babc9bd1db1c6",
+      "linked_sha256": "72cd5838164291ff906cf96e3ce1f9393d045c3e15529a1d700b9ecc867dfd2f"
     }
   ],
   "code_map": {
@@ -86126,87 +86195,6 @@
         ]
       },
       {
-        "name": "Unmatched files/maddec.cpp [inferred file group]",
-        "file_record": 946,
-        "file_name": "maddec.cpp",
-        "ranges": [
-          {
-            "address": "0x802739e0",
-            "size": 784,
-            "kind": "function",
-            "name": "madinit__Fv",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x80273cf0",
-            "size": 88,
-            "kind": "function",
-            "name": "discardbits__Fi",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x80273d48",
-            "size": 68,
-            "kind": "function",
-            "name": "getdelta__Fv",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x80273d8c",
-            "size": 96,
-            "kind": "function",
-            "name": "dcblock__FPii",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x80273dec",
-            "size": 156,
-            "kind": "function",
-            "name": "getluma__FPCUciPii",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x80273e88",
-            "size": 156,
-            "kind": "function",
-            "name": "getchroma__FPCUciPii",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x80273f24",
-            "size": 292,
-            "kind": "function",
-            "name": "setluma__FPCiPUci",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x80274048",
-            "size": 164,
-            "kind": "function",
-            "name": "setchroma__FPCiPUci",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x802740ec",
-            "size": 216,
-            "kind": "function",
-            "name": "MAD_initdecode__FPCUsii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x802741c4",
-            "size": 824,
-            "kind": "function",
-            "name": "MAD_decodemacroblock__FPCUcN20PUcN23i",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x802739e0",
-          "0x802744fc"
-        ]
-      },
-      {
         "name": "Unmatched files/maddeca.cpp [inferred file group]",
         "file_record": 947,
         "file_name": "maddeca.cpp",
@@ -86232,7 +86220,7 @@
         ]
       },
       {
-        "name": "Unmatched files/madidct.cpp [inferred file group]",
+        "name": "Unmatched files/madidct.cpp [local symbols only]",
         "file_record": 948,
         "file_name": "madidct.cpp",
         "ranges": [
@@ -86249,30 +86237,11 @@
             "kind": "function",
             "name": "IdctRow",
             "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x80274998",
-            "size": 356,
-            "kind": "function",
-            "name": "idctcompute",
-            "evidence": "adjacent-compiler-markers"
           }
         ],
         "marker_interval": [
           "0x802746c4",
           "0x80274afc"
-        ]
-      },
-      {
-        "name": "Unknown file/.text @ 80274afc",
-        "ranges": [
-          {
-            "address": "0x80274afc",
-            "size": 64,
-            "kind": "function",
-            "name": "fixedmult",
-            "evidence": "unknown-file"
-          }
         ]
       },
       {

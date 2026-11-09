@@ -2574,7 +2574,10 @@
     "ai_BotStateGoal.json",
     "ai_BotPowerups.json",
     "ea_rcmp_mad_codec.json",
-    "ea_rcmp_mad_chunk_types.json"
+    "ea_rcmp_mad_chunk_types.json",
+    "ea_maddec.json",
+    "ea_madidct_compute.json",
+    "ea_fixedmult.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

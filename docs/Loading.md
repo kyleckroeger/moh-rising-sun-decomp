@@ -173,6 +173,16 @@ three chunk tags and the test for them. Both files' `.rodata` start with the emp
 `operator new`. Verified: all of both files' code. Inferred: member, local and helper names, and what the chunk tags mean.
 `CODEC` is declared with plain virtuals so that its table stays outside these units; the original's slots are pure.
 
+## MAD macroblock decoder
+
+`maddec.cpp` builds its code tables on first use and decodes a macroblock at a time: six blocks (four luma and two chroma)
+each come from the previous frame (`mode` set), a DC value, or the inverse transform. `maddeca.cpp` reads one block's
+coefficients through the run-length tables, and `madidct.cpp` holds the transform, with `fixedmult` the 16.16 multiply. These
+units use small data for the bit reader's three words, so they build with `-G8 -fno-strength-reduce`; their loops are
+unreduced. Verified: all of `maddec.cpp` and `maddeca.cpp`, `idctcompute` and `fixedmult`. Inferred: parameter, local and
+helper names, and the mode bit meanings. The tables are referenced, not defined, by these units. Not reconstructed:
+`IdctColumn` and `IdctRow`, whose final statements are not in the original's order yet.
+
 ## RCMP flags
 
 `-fno-strength-reduce` holds for the RCMP library's code: `GetFrame` and `DecodeChunk` here and the subtitle display show
