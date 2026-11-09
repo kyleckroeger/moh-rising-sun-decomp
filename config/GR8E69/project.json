@@ -2285,7 +2285,10 @@
     "soundbussman_update.json",
     "soundbussman_retrofit.json",
     "soundbussman_apply.json",
-    "moh3soundevent_pause.json"
+    "moh3soundevent_pause.json",
+    "animshape_ctors.json",
+    "animshape_copy.json",
+    "animshape_unregister.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

@@ -163,6 +163,8 @@
       "src/ai/targeting_update.cpp": "efa38085cd71d0f02270c2c78c31115170fb46b2abe25150043975d5d59420b5",
       "src/animshape/advance.cpp": "4e499bb1d9c7fcbe9e98fa310eef525634e637209169828cc05a6c5154e50292",
       "src/animshape/controls.cpp": "6120ca06458952633cd024aeebb11c3d271f21f526898dee81c891616cb1bc01",
+      "src/animshape/copy.cpp": "d9d00deff0799cedd29d674098bc42e7444faed373795d0e8a5b65909b08103e",
+      "src/animshape/ctors.cpp": "65e19db02d75e93942f5ee85b4ffeb700be51de197a2eeb2e2c368fd7fa2be1f",
       "src/animshape/decompress.cpp": "cd3108831fd51fceef028f7b27c1ce3f8bee8f7f6c292844ca21f17df8278452",
       "src/animshape/list.cpp": "ff9168ec93e5ee18b311637a3b80f34c1122812e91caff03e40ada40547655cc",
       "src/animshape/lookup.cpp": "7e47bfbc7d5355d9dfb761bb23aab6e4a643ec9d4ce216770773c404cd771fd7",
@@ -170,6 +172,7 @@
       "src/animshape/reset.cpp": "216f0e474c41949e05bf52ee0f9fe799c6fd2a357c5690ed1864e399e13f6b72",
       "src/animshape/set_frame.cpp": "ddd697b9fd0eb8ed97dc830dd6211e9e9e9a006811206d1c62e81e4b2d1a73ec",
       "src/animshape/step.cpp": "f3a96756cdda9270c6d0ebf05f127703422e5f5662eff8346d210def3cac5afe",
+      "src/animshape/unregister.cpp": "0835fa757760812db8124b1196c8c52ac179975755d60d1fc3511bf9dd7474ea",
       "src/animshape/update.cpp": "c7f93ab701c2bd594956c257b2568c667d730965157166f0ba2391f759300d03",
       "src/bpd/endian.cpp": "319fe162774583e7968ef97f898b64e6f7cc49d0263c5173dbde60878dc7459b",
       "src/bpd/free_properties.cpp": "5e6ccb4af115415f37acba5f48b16fc2e4bc9e5648ce7c4438fdc0a67970b824",
@@ -3162,12 +3165,15 @@
       "config/GR8E69/animplayer_tail.json": "3366813c15f06af405df159af9b8f86049d3871539af85b8b8ab09ab7e1f1a15",
       "config/GR8E69/animplayer_update.json": "34f8abd77cfad3c26655ed9a74cd8a841a6211e37807b2244843104a0196f821",
       "config/GR8E69/animshape_controls.json": "b35890af20c37e9183f065bb63c1a2790519166da5eac707969a17efb4f5dca7",
+      "config/GR8E69/animshape_copy.json": "9f51c6bdfe51806d9814819423e5d3ef477477d76ec1b83623b12e7eebaebf37",
+      "config/GR8E69/animshape_ctors.json": "c77cb876c4d9afd4e15a8301c523b738df385e160bae9c92a9cb91efc4e9e659",
       "config/GR8E69/animshape_decompress.json": "9407c4cf61cea7a27756a9ad2bd7c2166ae96638f21b3850915afbd9a9ebdb2b",
       "config/GR8E69/animshape_list.json": "98e437a4316e97910fd36908f78e20c3960d42f3b4149ef11bf2e280a29f9ad3",
       "config/GR8E69/animshape_lookup.json": "8d90aaa66fc97693bb053cfef57c67dbbfae6a4c7be2cafebe470a9b8a5a4166",
       "config/GR8E69/animshape_reset.json": "514095d8ab6d032e30f9620bd4f1eac0d44004c6ef38927b69107f43deeaaa5f",
       "config/GR8E69/animshape_set_frame.json": "cc67ab40a865a758f71208af08751203625e80f39b5b74b6d53405b2a6575426",
       "config/GR8E69/animshape_step.json": "8376102964c45116cd21ae18cf96aaf1eb4e964bc36f8048fe880040d1809866",
+      "config/GR8E69/animshape_unregister.json": "fa79ca7d8d4306e99de2a3273f8fc4552060e9b91ad36ee059cbc5b5243e7bf5",
       "config/GR8E69/animshape_update.json": "7ccf39e5cef7c354c4b9475b3b784228cb0cabe61652e497379acc7741ae53ef",
       "config/GR8E69/ar.json": "d8da1ec6cb2ac6c8f83ac2a4b995898cbb723d38d41c84a1d25a8d7a863b1908",
       "config/GR8E69/arq.json": "b79b6daec16d9806b4df0388a3f927cb06d48ce10fdb9fa35772dcecce291de7",
@@ -4075,7 +4081,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "d3e6a3f9208e625c17f3c9127fedd24be70d6366b56f3798ffb8729400409f86",
+      "config/GR8E69/project.json": "8c047311f948e1ee93c3cd2e067367bcb8e9e60244810fb6b0afc057acf2cdeb",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -6774,14 +6780,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1177864,
+    "matching_code_bytes": 1178448,
     "total_executable_code_bytes": 2492032,
-    "percent": 47.265203657095896,
+    "percent": 47.2886383481432,
     "categories": {
-      "reconstructed_game": 785648,
+      "reconstructed_game": 786232,
       "restored_library": 392216
     },
-    "matching_functions": 6082
+    "matching_functions": 6087
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -7040,12 +7046,15 @@
     "config/GR8E69/animplayer_tail.json": "3366813c15f06af405df159af9b8f86049d3871539af85b8b8ab09ab7e1f1a15",
     "config/GR8E69/animplayer_update.json": "34f8abd77cfad3c26655ed9a74cd8a841a6211e37807b2244843104a0196f821",
     "config/GR8E69/animshape_controls.json": "b35890af20c37e9183f065bb63c1a2790519166da5eac707969a17efb4f5dca7",
+    "config/GR8E69/animshape_copy.json": "9f51c6bdfe51806d9814819423e5d3ef477477d76ec1b83623b12e7eebaebf37",
+    "config/GR8E69/animshape_ctors.json": "c77cb876c4d9afd4e15a8301c523b738df385e160bae9c92a9cb91efc4e9e659",
     "config/GR8E69/animshape_decompress.json": "9407c4cf61cea7a27756a9ad2bd7c2166ae96638f21b3850915afbd9a9ebdb2b",
     "config/GR8E69/animshape_list.json": "98e437a4316e97910fd36908f78e20c3960d42f3b4149ef11bf2e280a29f9ad3",
     "config/GR8E69/animshape_lookup.json": "8d90aaa66fc97693bb053cfef57c67dbbfae6a4c7be2cafebe470a9b8a5a4166",
     "config/GR8E69/animshape_reset.json": "514095d8ab6d032e30f9620bd4f1eac0d44004c6ef38927b69107f43deeaaa5f",
     "config/GR8E69/animshape_set_frame.json": "cc67ab40a865a758f71208af08751203625e80f39b5b74b6d53405b2a6575426",
     "config/GR8E69/animshape_step.json": "8376102964c45116cd21ae18cf96aaf1eb4e964bc36f8048fe880040d1809866",
+    "config/GR8E69/animshape_unregister.json": "fa79ca7d8d4306e99de2a3273f8fc4552060e9b91ad36ee059cbc5b5243e7bf5",
     "config/GR8E69/animshape_update.json": "7ccf39e5cef7c354c4b9475b3b784228cb0cabe61652e497379acc7741ae53ef",
     "config/GR8E69/ar.json": "d8da1ec6cb2ac6c8f83ac2a4b995898cbb723d38d41c84a1d25a8d7a863b1908",
     "config/GR8E69/arq.json": "b79b6daec16d9806b4df0388a3f927cb06d48ce10fdb9fa35772dcecce291de7",
@@ -7953,7 +7962,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "d3e6a3f9208e625c17f3c9127fedd24be70d6366b56f3798ffb8729400409f86",
+    "config/GR8E69/project.json": "8c047311f948e1ee93c3cd2e067367bcb8e9e60244810fb6b0afc057acf2cdeb",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -9783,6 +9792,8 @@
     "src/ai/targeting_update.cpp": "efa38085cd71d0f02270c2c78c31115170fb46b2abe25150043975d5d59420b5",
     "src/animshape/advance.cpp": "4e499bb1d9c7fcbe9e98fa310eef525634e637209169828cc05a6c5154e50292",
     "src/animshape/controls.cpp": "6120ca06458952633cd024aeebb11c3d271f21f526898dee81c891616cb1bc01",
+    "src/animshape/copy.cpp": "d9d00deff0799cedd29d674098bc42e7444faed373795d0e8a5b65909b08103e",
+    "src/animshape/ctors.cpp": "65e19db02d75e93942f5ee85b4ffeb700be51de197a2eeb2e2c368fd7fa2be1f",
     "src/animshape/decompress.cpp": "cd3108831fd51fceef028f7b27c1ce3f8bee8f7f6c292844ca21f17df8278452",
     "src/animshape/list.cpp": "ff9168ec93e5ee18b311637a3b80f34c1122812e91caff03e40ada40547655cc",
     "src/animshape/lookup.cpp": "7e47bfbc7d5355d9dfb761bb23aab6e4a643ec9d4ce216770773c404cd771fd7",
@@ -9790,6 +9801,7 @@
     "src/animshape/reset.cpp": "216f0e474c41949e05bf52ee0f9fe799c6fd2a357c5690ed1864e399e13f6b72",
     "src/animshape/set_frame.cpp": "ddd697b9fd0eb8ed97dc830dd6211e9e9e9a006811206d1c62e81e4b2d1a73ec",
     "src/animshape/step.cpp": "f3a96756cdda9270c6d0ebf05f127703422e5f5662eff8346d210def3cac5afe",
+    "src/animshape/unregister.cpp": "0835fa757760812db8124b1196c8c52ac179975755d60d1fc3511bf9dd7474ea",
     "src/animshape/update.cpp": "c7f93ab701c2bd594956c257b2568c667d730965157166f0ba2391f759300d03",
     "src/bpd/endian.cpp": "319fe162774583e7968ef97f898b64e6f7cc49d0263c5173dbde60878dc7459b",
     "src/bpd/free_properties.cpp": "5e6ccb4af115415f37acba5f48b16fc2e4bc9e5648ce7c4438fdc0a67970b824",
@@ -56947,6 +56959,60 @@
       "discarded_functions": [],
       "object_sha256": "b513b7a4d47b5f475e06b915345a793bcb625d62dff23044b18cc8a5e6745d0a",
       "linked_sha256": "0674b689ab05f1b9e6c6fb0aab9b66ff2e28cbbb0e27af6fd558f70dfc1285dc"
+    },
+    {
+      "id": "animshape_ctors",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 152,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "857f51468336e527453a7db90d001f1f6f74adc63713a3cf4ae3ad6d28d03518",
+      "linked_sha256": "7749ba70631c616fe169ef488f51032aa2c42070af6b8a57592b0791932819c0"
+    },
+    {
+      "id": "animshape_copy",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 316,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "20f7e710fc8979137ab39ead451d1a169d09dc36803dbdad39ed9f5622a5a8b0",
+      "linked_sha256": "01482edf6f09bcee60bda9ffdcad89453ecaec96246e187595c58135fc608631"
+    },
+    {
+      "id": "animshape_unregister",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 116,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "b10a9ddd1e7f4f66d96fd63105c89ee4f1e3cf120e1a47ee7bec1bc41f463de6",
+      "linked_sha256": "1886632370c99ed045f1d92500d23fd77d3045c4aa51b17b93fa8c0d5c0b31c9"
     }
   ],
   "code_map": {
@@ -60415,38 +60481,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8006a568",
-            "size": 76,
-            "kind": "function",
-            "name": "__9AnimShapeR9ShapeFile",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8006a5b4",
-            "size": 76,
-            "kind": "function",
-            "name": "__9AnimShapeRC9AnimShape",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8006a600",
             "size": 412,
             "kind": "function",
             "name": "Init__9AnimShapeR9ShapeFile",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8006a79c",
-            "size": 132,
-            "kind": "function",
-            "name": "_._9AnimShape",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8006a820",
-            "size": 184,
-            "kind": "function",
-            "name": "__as__9AnimShapeRC9AnimShape",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -60468,13 +60506,6 @@
             "size": 288,
             "kind": "function",
             "name": "RegisterTAR__9AnimShapeRQ24EAGL3TAR",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8006aed4",
-            "size": 116,
-            "kind": "function",
-            "name": "UnRegisterTAR__9AnimShapeRQ24EAGL3TAR",
             "evidence": "adjacent-compiler-markers"
           },
           {
