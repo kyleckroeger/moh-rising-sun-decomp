@@ -8,6 +8,7 @@
 #include "TARExtension.h"
 #include "EAGLRenderContextPrivateBase.h"
 #include "EAGLRenderContextExtensionBase.h"
+#include "EAGLViewPort.h"
 #include <dolphin/gx/GXStruct.h>
 namespace EAGL {
 // Enumerator values are not established by the code that receives them.
@@ -15,10 +16,6 @@ enum DepthBufferType {};
 class Device;
 }
 namespace EAGLInternal {
-class ViewPortPrivate {
-  public:
-    void EnactFogSettings();
-};
 class DevicePrivate {
   public:
     void SetCurrentRenderContext(EAGL::RenderContext *);
@@ -88,15 +85,6 @@ class RenderContextPrivate : public RenderContextPrivateBase {
 }
 extern "C" int MEM_free(void *);
 namespace EAGL {
-class ViewPortExtension {
-  public:
-    static ViewPort *gpFirstViewPort;
-};
-class ViewPort {
-  public:
-    unsigned char unknown_0[12];
-    EAGLInternal::ViewPortPrivate privateData; // +12
-};
 class RenderContextExtension : public RenderContextExtensionBase {
   public:
     RenderContext *context; // +32

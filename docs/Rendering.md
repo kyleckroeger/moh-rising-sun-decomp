@@ -482,3 +482,23 @@ are not reconstructed.
 `CVolFrustum` is 304 bytes (`Create` allocates that size). Ten collision tests, `TestVisibility` and
 `GetExtents` build a `CVolSphere` from its bounding centre at `+64` and radius at `+272`, set the radius
 through the table, and delegate to the sphere. See [`VolFrustum.h`](../include/game/VolFrustum.h).
+
+## Viewport
+
+`EAGL::ViewPort` occupies 428 bytes: `NewViewPort` allocates that size and the destructor frees
+it. Its private data sits at `+12`, viewports link through `+420`, and `RenderContextBase` keeps
+the list head and the current viewport in its private base. Class, method and static names come
+from the symbol table. Member names in
+[`EAGLViewPort.h`](../include/game/EAGLViewPort.h) are inferred from use.
+
+`IsSphereInView` tests a transformed centre against the near and far clips, then, for a
+perspective view, against four side planes stored as a tangent and a sine. `EnactFogSettings`
+copies the render context's fog state to GX and optionally builds a range-adjust table from the
+projection and the viewport centre. `EndView` also appears inline in `ReBegin`, so its header
+gives an inline body, emitted through the same `#pragma interface` and `#pragma implementation`
+arrangement as the render context bases.
+
+Not reconstructed here: `SetShape`, `SetPerspective`, `BeginView`, `ClearViewPort`,
+`SetOrthographicScreenSpace`, `DeleteViewPort` and the file's static initializer.
+`SetOrthographicScreenSpace` compiles to the original instructions, but its literals start at an
+address that is not 8-aligned ahead of a double, so it cannot stand as its own section.

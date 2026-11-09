@@ -2178,7 +2178,16 @@
     "ai_GrenadeResponseHead.json",
     "ai_GrenadeResponseStop.json",
     "ai_GrenadeResponseTail.json",
-    "ai_BotCharacter.json"
+    "ai_BotCharacter.json",
+    "eagl_viewport_sphere_private.json",
+    "eagl_viewport_getshape.json",
+    "eagl_viewport_setview.json",
+    "eagl_viewport_endview.json",
+    "eagl_viewport_extension.json",
+    "eagl_viewport_ctor.json",
+    "eagl_viewport_accessors.json",
+    "eagl_rendercontext_newviewport.json",
+    "eagl_rendercontext_currentviewport.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
