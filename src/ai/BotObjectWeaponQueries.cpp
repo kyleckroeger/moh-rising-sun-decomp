@@ -6,7 +6,7 @@
 #include "ScriptTimers.h"
 
 int CBotObject::CanFireWeapon() {
-    if (reloadEndTime >= 0.0f || fireDelay >= 0.0f || !weapons[currentWeaponIndex].weapon || moveState == 5)
+    if (reloadEndTime >= 0.0f || fireDelay >= 0.0f || !weapons[currentWeaponIndex].weapon || fireBlockState == 5)
         return 0;
     return 1;
 }

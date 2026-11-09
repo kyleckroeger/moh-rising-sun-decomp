@@ -1,18 +1,7 @@
 // AI-assisted reconstruction from GR8E69. A fragment of the original bot object source: the
 // original file name is not known. Method names come from the symbol table; the attribute
 // members are numbered because their meanings are not established.
-class CBotCharacter {
-  public:
-    CBotCharacter();
-    void Init();
-    float attributes[7];   // +0x00; all set to one value by Init.
-    unsigned char unknown1c[0x48 - 0x1c];
-    float field48;         // +0x48
-    int field4c;           // +0x4c
-    int field50;           // +0x50
-    float field54;         // +0x54
-    float field58;         // +0x58
-};
+#include "AIBot.h"
 
 CBotCharacter::CBotCharacter() { Init(); }
 

@@ -62,10 +62,38 @@ byte, with their native tables and literal pools. There is no Frontline counterp
   yet modeled.
 - `AreaPathNode.cpp`: the node array (`g_pPathFindingAreas`, sixteen bytes per node), the
   round-robin out-of-area update (fifty nodes per call) and the in-area byte at `+6`.
+  `ImportAreaPathNodeNetwork` fixes up the BPD's `areas`, `points` and `bsp` arrays; its template
+  instances name the record types `BPDPathFindingArea`, `BPDLinkEdge`, `BPDPathFindingBSP`
+  and `BPDPathFindingBSPBranch`, and the vertices are `PropVec3`. A node lists
+  `borderVertexCount + linkCount` vertex indices and `linkCount` four-byte link edges. A link's low
+  14 bits are the neighbor's node index, and its two bytes index the owner's vertex list.
+  A BSP walk ends on a non-positive branch value, whose complement is the node index. The
+  geometry queries (containment, closest point, border and link edge intersection, centroid
+  bias and line clipping) are matched. `CAreaPathNode`'s member names are inferred. The
+  literal pool holds an unreferenced 0 and 1 after `ContainsPoint`'s (at `0x802a4194`), so
+  the units around it leave those two words as original context.
+- Bot state code: the bot's state handlers (`BS_Enter_Dead`, `BS_Dead`, `BS_Enter_Goto`,
+  `BS_Enter_Combat`, `BS_Chase`, `BS_Enter_Camp`, `BS_Exit_Camp`), the move state, the threat
+  and boredom queries, and a few team and weapon queries. Member names in `CBotObject` are
+  inferred from these uses, and `CBotWeapon`'s table starts at `+0x1a20`. `eBotState` and
+  `eBotMoveState` are original enum tags; their values are plain numbers here because their
+  names are not known. `OUT_OF_SIGHT_DELAY` is a function-local static as its suffixed symbol
+  shows.
+- `BotMan.cpp`: bot memory (`GetBotMem` hands out 11,568-byte slots), setup and cleanup. `MMG_Info`
+  and `CampingPoint` strides come from `BS_Enter_UseMMG` and the camping point table.
+- `BotArea.cpp`: the area and edge arrays and their accessors. `CBotArea` (sixteen bytes) and
+  `CAreaEdge` (64 bytes) come from the symbol table with sizes from array strides; `coverPoints`,
+  `coverData`, `vertex0` and `vertex1` are inferred. `DwiAllocIdScope` is an inferred name for
+  the save-and-restore of the allocator tag, reproducing the saved stack slot.
   `CAIAreaPathFinding`'s volume counters, finish flag and walk-type query.
 
 ## Not reconstructed yet
 
+- `CAreaPathNode::LineEndsAtLinkEdge` and `GetNextNode`, `CAreaEdge::GetEdgeVector` and
+  `GetMidPoint`: near misses (register allocation; the last two inline `GetEdgePoints`).
+- `BS_Enter_Retreat`, `BS_Enter_Chase` and `BS_Camp`: their strings are shared with neighbors in
+  the same pool that are not reconstructed yet.
+- `ShrinkAreaMesh`: an empty body with a 224-byte frame; the locals behind that frame are unknown.
 - `CCoverpointBehavior::UpdateHeuristicScore`, `StartBehavior`, `GetCapabilities` and
   `ChooseCoverpoint`: near misses left out rather than steered.
 - `CAIThreatEvaluation`'s constructor and the module destructors: their tables and

@@ -9,7 +9,7 @@ EnemyInfo &CBotObject::GetEnemyInfo(unsigned int index) { return enemyInfo[index
 EnemyInfo *CBotObject::GetpEnemyInfo(unsigned int index) { return &enemyInfo[index]; }
 
 int CBotObject::EnemyInView() {
-    return enemyInView ? *enemyInView != 0 : 0;
+    return enemyInView ? enemyInView->inView != 0 : 0;
 }
 
 float CBotObject::GetHealth() { return aiObject->hitPoints; }
@@ -39,6 +39,6 @@ int CBotObject::WithinGrenadeBlastRadius() {
 }
 
 void *CBotObject::GetCurrentPathNode() { return *(void **)((char *)aiObject + 580); }
-BotCampingPoint *CBotObject::GetCurrentCampingPoint() { return &g_BotMan.campingPoints[currentCampingPoint]; }
+CampingPoint *CBotObject::GetCurrentCampingPoint() { return &g_BotMan.campingPoints[currentCampingPoint]; }
 void CBotObject::SetPlayerIndex(unsigned char index) { playerIndex = index; }
 void CBotObject::SetName(const char *newName) { strcpy(name, newName); }
