@@ -1,0 +1,92 @@
+{
+  "id": "hud_stamp",
+  "source": "src/ui/hud_stamp.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-ffast-math"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80177544",
+      "size": 820
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802ace94",
+      "size": 60
+    }
+  ],
+  "functions": [
+    {
+      "name": "InitTimeStampStuff__Fv",
+      "address": "0x80177544",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "ResetTimeStampStuff__Fv",
+      "address": "0x801775b4",
+      "size": 276,
+      "binding": 1
+    },
+    {
+      "name": "SetLandmarkStampString__FPCc",
+      "address": "0x801776c8",
+      "size": 140,
+      "binding": 1
+    },
+    {
+      "name": "SetTimeStampString__FPCc",
+      "address": "0x80177754",
+      "size": 156,
+      "binding": 1
+    },
+    {
+      "name": "UpdateXFilesText__Ff",
+      "address": "0x801777f0",
+      "size": 136,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "DisplayLandmarkStamp__Ff": "0x80177878",
+    "DisplayTimeStamp__Ff": "0x80177a54",
+    "FadeTheXFilesText__Ff": "0x80177c24",
+    "GetDepthBufferMax__C7CScreen": "0x8005bb5c",
+    "SetColor__5CFontG6CColor": "0x800674f8",
+    "SetDepth__5CFontUi": "0x80067560",
+    "SetScale__5CFontff": "0x80067590",
+    "TLT_FindNextResourceByType__F13TLTResourceIDP24LevelFileContentsStruct_": "0x801a9690",
+    "TLT_LoadFileFromLevelBigFile__FPCcPi": "0x801a9634",
+    "XFiles": "0x803e7b40",
+    "_7CScreen.m_sHeightScale": "0x80452580",
+    "_7CScreen.m_sWidthScale": "0x8045257c",
+    "_7CScreen.m_spScreen": "0x802c1b7c",
+    "__5CFontPc": "0x80066e14",
+    "memset": "0x80266778",
+    "strcmp": "0x802669b4",
+    "strncpy": "0x80266dd4",
+    "timestampFont": "0x802c5330"
+  },
+  "local_externals": [
+    "XFiles",
+    "timestampFont"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "HeadsUpDisplay.cpp",
+  "original_file_index": 1509
+}

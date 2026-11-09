@@ -73,3 +73,7 @@ These documents earn no matching-source credit. Accepted source must pass the
 [complete-image verification and snapshot process](../Progress.md). Keep game
 files and bulk research dumps in ignored local directories; see the
 [contribution guide](../../CONTRIBUTING.md).
+
+The [PR #59 integration review](pr59-review.md) records the file-wide compiler
+profiles, three partial-to-exact replacements, source-review boundaries and
+remaining tooling leads from the larger Frontline-guided contribution.

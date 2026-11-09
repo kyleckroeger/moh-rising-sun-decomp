@@ -1,0 +1,40 @@
+{
+  "id": "ea_printstr",
+  "source": "src/ea/printstr.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80218c4c",
+      "size": 148
+    }
+  ],
+  "functions": [
+    {
+      "name": "PRINT_string",
+      "address": "0x80218c4c",
+      "size": 148,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "PRINT_vstring": "0x80218b90"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

@@ -1,0 +1,208 @@
+{
+  "id": "popup_message",
+  "source": "src/frontend/popup_message.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80178570",
+      "size": 596
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802acfd0",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "Set_placement__12PopUpMessageUc",
+      "address": "0x80178570",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "Set_screenLocs__12PopUpMessageUsUs",
+      "address": "0x80178578",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "Set_property__12PopUpMessageUc",
+      "address": "0x80178584",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "Set_onScreenTime__12PopUpMessagef",
+      "address": "0x8017858c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "Set_textSize__12PopUpMessageUc",
+      "address": "0x80178594",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "Set_viewportID__12PopUpMessages",
+      "address": "0x8017859c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "Set_messageID__12PopUpMessages",
+      "address": "0x801785a4",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "Set_rgba__12PopUpMessageUcUcUcUc",
+      "address": "0x801785ac",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "Set_top__12PopUpMessageUs",
+      "address": "0x801785c0",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "Set_bottom__12PopUpMessageUs",
+      "address": "0x801785c8",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "ChangeAvailability__12PopUpMessageUc",
+      "address": "0x801785d0",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SetString__12PopUpMessagePCc",
+      "address": "0x801785d8",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "Available__12PopUpMessage",
+      "address": "0x80178600",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "Get_placement__12PopUpMessage",
+      "address": "0x80178608",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "Get_screenLocX__12PopUpMessage",
+      "address": "0x80178610",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "Get_screenLocY__12PopUpMessage",
+      "address": "0x80178618",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "Get_property__12PopUpMessage",
+      "address": "0x80178620",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "Get_onScreenTime__12PopUpMessage",
+      "address": "0x80178628",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "Get_viewportID__12PopUpMessage",
+      "address": "0x80178630",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "Get_messageID__12PopUpMessage",
+      "address": "0x80178638",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "Get_r__12PopUpMessage",
+      "address": "0x80178640",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "Get_g__12PopUpMessage",
+      "address": "0x80178648",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "Get_b__12PopUpMessage",
+      "address": "0x80178650",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "Get_top__12PopUpMessage",
+      "address": "0x80178658",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetString__12PopUpMessage",
+      "address": "0x80178660",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "MoveTop__12PopUpMessage",
+      "address": "0x80178668",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "Scroll__12PopUpMessage",
+      "address": "0x801786c0",
+      "size": 244,
+      "binding": 1
+    },
+    {
+      "name": "UpdateDisplayTime__12PopUpMessagef",
+      "address": "0x801787b4",
+      "size": 16,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Reset__12PopUpMessage": "0x80178418",
+    "strncpy": "0x80266dd4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "popup.cpp",
+  "original_file_index": 1536
+}

@@ -1,0 +1,63 @@
+{
+  "id": "player_save_data",
+  "source": "src/player/PlayerSaveData.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/stlport-runtime",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800b6848",
+      "size": 772
+    }
+  ],
+  "functions": [
+    {
+      "name": "StoreSaveData__13CPlayerObject",
+      "address": "0x800b6848",
+      "size": 292,
+      "binding": 1
+    },
+    {
+      "name": "RestoreSaveData__13CPlayerObject",
+      "address": "0x800b696c",
+      "size": 480,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CycleWeapon__13CPlayerObjectii": "0x800b3f94",
+    "GetCurrentAmmo__C13CGameSettingsiRUiT2i": "0x8016e090",
+    "GetCurrentHealth__C13CGameSettingsi": "0x8016dfc4",
+    "GetCurrentWeapon__13CGameSettingsRii": "0x8016e064",
+    "GetCurrentWeapon__C13CPlayerObject": "0x800b41a8",
+    "GetIfCurrentWeaponSelectable__C13CGameSettingsii": "0x8016e144",
+    "GetWeaponByCRC__C13CPlayerObjecti": "0x800b41d8",
+    "IsSelectable__C19CPlayerWeaponObject": "0x800c8e00",
+    "SetAmmo__19CPlayerWeaponObjectUiUi": "0x800c8ed8",
+    "SetAmmo__7CWeaponUiUi": "0x8014bab4",
+    "SetCurrentAmmo__13CGameSettingsiUiUii": "0x8016dfdc",
+    "SetCurrentHealth__13CGameSettingsfi": "0x8016dfac",
+    "SetCurrentWeapon__13CGameSettingsP7CWeaponi": "0x8016e03c",
+    "SetIfCurrentWeaponSelectable__13CGameSettingsibi": "0x8016e0f4",
+    "_M_increment__Q24_STLt10_Rb_global1ZbPQ24_STL18_Rb_tree_node_base": "0x8027a1dc",
+    "g_GameSettings": "0x802f80c8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}

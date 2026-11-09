@@ -1,0 +1,42 @@
+{
+  "id": "moh_rest",
+  "source": "src/game/moh_rest.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8005a560",
+      "size": 76
+    }
+  ],
+  "functions": [
+    {
+      "name": "RestoreCheats__Fv",
+      "address": "0x8005a560",
+      "size": 76,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "InitCheatsFromOptions__13CGameSettings": "0x8016f804",
+    "Instance__9MohLoader": "0x80059414",
+    "g_GameSettings": "0x802f80c8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Moh3.cpp",
+  "original_file_index": 384
+}

@@ -9,8 +9,8 @@ void CHierObject::CollisionResetMovement() {
     attachDelta.Zero();
     if (pathState > 1) {
         transform.SetPos(pathPosition);
-        pathAngle = 0.0f;
-        pathDistance = 0.0f;
+        pathPreviousSpeed = 0.0f;
+        pathSpeed = 0.0f;
     } else if (ScriptMoving() || ScriptRotating()) {
         CMatrix *matrix = &transform;
         orientation.GetMatrix(*matrix);

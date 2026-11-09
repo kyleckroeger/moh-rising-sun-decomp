@@ -1,0 +1,54 @@
+{
+  "id": "mc_f",
+  "source": "src/save/mc_f.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a3ca0",
+      "size": 100
+    }
+  ],
+  "functions": [
+    {
+      "name": "Free__11CMemoryCardPv",
+      "address": "0x801a3ca0",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "GetDeviceCount__C11CMemoryCard",
+      "address": "0x801a3cc0",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "GetDevice__C11CMemoryCardUi",
+      "address": "0x801a3ce0",
+      "size": 36,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetCount__9CMCDevice": "0x801a722c",
+    "GetDevice__9CMCDeviceUi": "0x801a7234",
+    "MEM_free": "0x8020d2a8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "MemoryCard.cpp",
+  "original_file_index": 2083
+}

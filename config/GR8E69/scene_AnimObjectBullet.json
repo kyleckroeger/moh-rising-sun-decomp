@@ -1,0 +1,51 @@
+{
+  "id": "scene_AnimObjectBullet",
+  "source": "src/scene/AnimObjectBullet.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800a3ea0",
+      "size": 976
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029e988",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "HandleBulletCollision__11CAnimObjectP7CBulletRC10CCollision",
+      "address": "0x800a3ea0",
+      "size": 976,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSEventGetEventMemoryBlock__FUi": "0x8011dba8",
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "Explode__13CThrownBullet": "0x80153b18",
+    "PlayImpactSound__FUsUsRC8CVector3b": "0x80157958",
+    "Set_hits__13CGameSettingsUib": "0x8016da1c",
+    "Set_shotLocation__13CGameSettingsUi14EShotLocationsb": "0x8016da94",
+    "g_GameSettings": "0x802f80c8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "anim_obj.cpp",
+  "original_file_index": 831
+}

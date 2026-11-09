@@ -1,0 +1,134 @@
+{
+  "id": "scene_ObjCreateBSGODestroy",
+  "source": "src/scene/ObjCreateBSGODestroy.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8012adc8",
+      "size": 1464
+    }
+  ],
+  "functions": [
+    {
+      "name": "__nw__17BSGO_DestructableUi",
+      "address": "0x8012adc8",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "__nw__12BSGO_SoldierUi",
+      "address": "0x8012adf4",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "__nw__9BSGO_TankUi",
+      "address": "0x8012ae20",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "__nw__9BSGO_AnimUi",
+      "address": "0x8012ae4c",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "__dl__17BSGO_DestructablePv",
+      "address": "0x8012ae78",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "__dl__12BSGO_SoldierPv",
+      "address": "0x8012aea4",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "__dl__9BSGO_TankPv",
+      "address": "0x8012aed0",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "__dl__9BSGO_AnimPv",
+      "address": "0x8012aefc",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "Destroy__12BSGO_Soldier",
+      "address": "0x8012af28",
+      "size": 240,
+      "binding": 1
+    },
+    {
+      "name": "Destroy__9BSGO_Anim",
+      "address": "0x8012b018",
+      "size": 224,
+      "binding": 1
+    },
+    {
+      "name": "Destroy__9BSGO_Tank",
+      "address": "0x8012b0f8",
+      "size": 208,
+      "binding": 1
+    },
+    {
+      "name": "Destroy__17BSGO_Destructable",
+      "address": "0x8012b1c8",
+      "size": 372,
+      "binding": 1
+    },
+    {
+      "name": "Destroy__11BSGO_Player",
+      "address": "0x8012b33c",
+      "size": 68,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CleanUp__13CPlayerObject": "0x800aca18",
+    "DeallocateStaticObject__20CStaticObjectFactoryP13CStaticObject": "0x800cd820",
+    "DestroyBSObject__FP8BSObject": "0x800f6cec",
+    "FreeBoxVolume__FPv": "0x8012b624",
+    "FreeElement__35BSUtilObjectInstanceMemoryAllocatorPv": "0x800f8430",
+    "GetFreeElement__35BSUtilObjectInstanceMemoryAllocatorb": "0x800f83f4",
+    "GetNativeBindingType__C13TriggerObject": "0x80122e9c",
+    "ReleaseObject__18CAnimObjectFactoryP11CAnimObject": "0x800cc668",
+    "RemoveObjectFromList__FP10BSGO_BasicPP10BSGO_Basic": "0x8012b3a8",
+    "Remove__6CSceneR10ISceneNode": "0x80146e9c",
+    "g_AnimObjFactory": "0x803e6bb0",
+    "g_numActiveSoldiers": "0x8032d014",
+    "g_pAnimatedMechList": "0x8032d010",
+    "g_pBoxList": "0x8032d004",
+    "g_pEnvModMechAllocator": "0x8032ce3c",
+    "g_pGermanList": "0x8032d008",
+    "g_pObjectAllocators": "0x8032cdcc",
+    "g_pTankList": "0x8032d00c",
+    "g_scene": "0x803e6d90"
+  },
+  "local_externals": [
+    "g_pEnvModMechAllocator",
+    "g_pObjectAllocators"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "objcreate.cpp",
+  "original_file_index": 1242
+}

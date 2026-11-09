@@ -1,0 +1,83 @@
+{
+  "id": "ea_avplayer_time",
+  "source": "src/ea/avplayer_time.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801b2c08",
+      "size": 844
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b8568",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "IsTimeForDecode__Q24RCMP9AV_PLAYER",
+      "address": "0x801b2c08",
+      "size": 172,
+      "binding": 1
+    },
+    {
+      "name": "SetSpeed__Q24RCMP9AV_PLAYERUi",
+      "address": "0x801b2cb4",
+      "size": 252,
+      "binding": 1
+    },
+    {
+      "name": "Pause__Q24RCMP9AV_PLAYER",
+      "address": "0x801b2db0",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "UnPause__Q24RCMP9AV_PLAYER",
+      "address": "0x801b2dd4",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "SetVol__Q24RCMP9AV_PLAYERUi",
+      "address": "0x801b2df8",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "SyncedAudioTime__Q24RCMP9AV_PLAYER",
+      "address": "0x801b2e2c",
+      "size": 296,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetFrameRate__Q24RCMP7DECODER": "0x801b0fe8",
+    "OSGetTime": "0x8025af7c",
+    "SNDPROFILE_outputlatency": "0x8021f4a8",
+    "SNDSTRM_requeststatus": "0x80220c28",
+    "SNDSTRM_status": "0x80220d84",
+    "SNDSYS_entercritical": "0x8021f948",
+    "SNDSYS_leavecritical": "0x8021f988",
+    "SetSpeed__Q24RCMP12AUDIO_PLAYERUi": "0x801b330c",
+    "SetVol__Q24RCMP12AUDIO_PLAYERUi": "0x801b33c0",
+    "Update__Q24RCMP11AV_MS_TIMER": "0x80291b9c",
+    "__udivdi3": "0x8026c82c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

@@ -1,0 +1,106 @@
+{
+  "id": "sound_path_tracks",
+  "source": "src/sound/ea/path_tracks.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800359a4",
+      "size": 1952
+    }
+  ],
+  "functions": [
+    {
+      "name": "PATHI_destroyall",
+      "address": "0x800359a4",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "PATHI_gettrackptr",
+      "address": "0x800359e4",
+      "size": 160,
+      "binding": 1
+    },
+    {
+      "name": "PATHI_getmastertrack",
+      "address": "0x80035a84",
+      "size": 152,
+      "binding": 1
+    },
+    {
+      "name": "PATHI_numtracks",
+      "address": "0x80035b1c",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "PATHI_setvolumes",
+      "address": "0x80035b8c",
+      "size": 260,
+      "binding": 1
+    },
+    {
+      "name": "PATHI_sampleoffset",
+      "address": "0x80035c90",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "PATHI_nextnode",
+      "address": "0x80035cf0",
+      "size": 196,
+      "binding": 1
+    },
+    {
+      "name": "PATHI_enternode",
+      "address": "0x80035db4",
+      "size": 300,
+      "binding": 1
+    },
+    {
+      "name": "PATHI_routenode",
+      "address": "0x80035ee0",
+      "size": 140,
+      "binding": 1
+    },
+    {
+      "name": "PATHI_eventstate",
+      "address": "0x80035f6c",
+      "size": 360,
+      "binding": 1
+    },
+    {
+      "name": "PATHI_eventnode",
+      "address": "0x800360d4",
+      "size": 112,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "PATHX_getvolume": "0x80158494",
+    "PATHX_stop": "0x80158d34",
+    "PATHX_volume": "0x80158b9c",
+    "PATH_destroy": "0x8003844c",
+    "inited": "0x802c1688",
+    "pfactive": "0x802c168c",
+    "pfstate": "0x802c1680",
+    "pfstates": "0x802edd00",
+    "songprogress": "0x802c1684"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

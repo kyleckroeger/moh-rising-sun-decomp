@@ -352,3 +352,94 @@ Mipmap filtering preserves context overrides, palette restrictions, anisotropy
 selection and the original LOD-bias bounds. Generated property strings, diagnostics
 and float/double constants are all compared in full. Runtime loading and rendering
 remain untested.
+
+## Screen, font and surface-type fragments
+
+`CScreen`'s `Init`, `GetVSyncs`, clear-state accessors and
+`GetDepthBufferMax` compile with the standard ProDG 3.8.1 profile. `include/game/Screen.h`
+models only the members these read (the table pointer at `+100` is not declared);
+`m_sFrameNum` is volatile because `GetVSyncs` stores and immediately reloads it.
+`CFont` keeps its `FONT` record at `+0`; `SetDepth` ignores its argument and stores 0.0.
+`CFont::GetColor` is not reconstructed.
+`CSurfaceType` reads a 12-byte record table at `CDB+0x34`, guarded by the word at
+`CDB+0x20`; the record field names follow the accessors and the flags are bits 0 to 3 of
+its first halfword.
+
+## CStaticMesh
+
+`CStaticMesh` keeps the mesh pointer at `+0x00`, lighting and fogging flags at `+0x04` and `+0x08`,
+the animated-texture shape list at `+0x0c`, two words set to -1 at `+0x10` and `+0x14`, and its
+table pointer at `+0x18`. Its `Update` advances each animated shape and each mesh material
+animation at most once per frame count. `CStaticAnimMesh` adds a frame table at `+0x1c`, a frame
+count at `+0x20` and ticks per frame at `+0x24`. `SetFrame` selects the frame's mesh, and `Draw`
+selects the requested frame, draws, then returns to frame 0.
+
+Not reconstructed: `Init`, `InitAnimatedTexturesOnly`, the texture registration functions,
+`SetAllShapesClamped`, the destructors (which emit the class table), `InitClass`, `GetBasis`,
+and the inline default constructor.
+
+`CStaticMesh::Draw` queues one command per mesh part. The first part sorts by its own address and
+the second by its view depth squared, capped at 1000000 and scaled by 256. `DrawMesh` sets the
+light block from the command's node and writes the part's `ComputationIndex::ComputationIndex`
+variables only when the mode differs from the one recorded at `+0x10` or `+0x14`. `IsVisible` tests
+both parts' bounding spheres through a virtual slot of `CDrawContext`, whose table pointer is at
+`+0x224`. The slot's name is inferred. `Draw` passes the address of the context's `+0xc0` member to
+`EAGL::Transform::BuildMatrix`, while `DrawMesh` loads the same member as a matrix pointer.
+
+## CFader
+
+`CFader` owns a primitive that extends `EAGL::DrawGouraud` (240 bytes), adding a fade colour of
+four floats at `+0xd0`, a fade-in time at `+0xe0`, a fade-out time at `+0xe4` and the elapsed time
+at `+0xe8`. Its `Update` lerps the colour from black during the first interval, holds when the
+second interval is the largest float, then lerps back. It doubles the colour, and draws a
+screen-covering quad when the result's alpha is positive, with channels clamped to 255. The unit
+compiles with `-ffast-math`, which folds subtractions and additions of the known zero red channel.
+`FadeIn` and `FadeOut` use normal blending, and `Flash` uses additive blending. The file's static
+initialization remains original.
+
+## CStaticScreen
+
+The screen object owns two sprites at `+0x04` and `+0x08` and a 16-byte block at `+0x50`, which
+`Init` allocates once. Its table pointer is at `+0x58`.
+
+## CHeadsUpDisplay and the X-Files text
+
+All ten accepted `HeadsUpDisplay.cpp` fragments share `-ffast-math`.
+The compass damping loop's first test is `i >= time` and its bottom test `i < time`;
+this profile reproduces the reversal. `DrawWeaponName` names the inner alpha and
+vertical-offset products to preserve their evaluation steps under that shared
+profile. Every fragment still verifies byte-for-byte. This is a working profile,
+not evidence of the original setting.
+
+`HeadsUpDisplay.h` is a scoped view holding only the small state functions. `UpdateHitStatus`
+reduces four hit-direction timers at `+0x7b0` by the elapsed time scaled by `0.0166834`, and
+`ChangeHitStatus` sets a direction's timer to 3 for directions 1 through 4. Interface state setters
+store a state with a time: the compass gets 5 when turned on and 4.5 otherwise, and ammo always
+gets 4.5.
+
+`XFiles` is a file-local block of the landmark and time stamp text state. Its member names come from
+Frontline's corresponding file-local variables and are inferred. `SetLandmarkStampString` and
+`SetTimeStampString` treat null and a single space as no text. `FadeTheXFilesText` reduces the text
+alpha at `0.35035` per unit of elapsed time, and finishing is signalled once alpha falls below zero.
+
+`DisplayLandmarkStamp` and `DisplayTimeStamp` remain original. They build a `SoundAliasEvent` on the
+stack with inlined construction and destruction, which the shared `SoundEvents.h` does not provide.
+
+`DrawViewportEdge` runs for the first player of a split screen. It draws a two-pixel grey line across
+the middle of the screen with two players, and a second line down the middle with more.
+
+## PopUpMessageHandler
+
+The handler holds `PopUpMessage popups[5][4]` (four records for each of five viewports), the fonts
+and sprites at `+0x644` to `+0x650`, the prompt message table at `+0x660` and the subtitle table at
+`+0x674`. `GetOldest` picks by each viewport's scroll direction and resets the record it picks.
+`GetNewest` has a nested loop for viewports 1 and 2 that shares one counter.
+The constructor, destructor and subtitle update/teardown helpers are reconstructed.
+`AddPopUpMessage`, `StartupSubtitles` and `CUserMessageTable::Load` remain original.
+
+## CDeviceManager
+
+The device manager holds four 2284-byte `CGcDevice` records, each with a signed pad port at `+0`
+(-1 for none), input state at `+2` and an event table at `+0x60`. The count is at `+0x23b0`.
+`SetPort`, `GetDeviceState`, the constructor, `Update`, `IsActive` and `GetCurrentState` remain
+original; the last four reach file-local port state tables in a file with no recorded name.

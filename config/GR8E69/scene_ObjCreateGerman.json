@@ -1,0 +1,87 @@
+{
+  "id": "scene_ObjCreateGerman",
+  "source": "src/scene/ObjCreateGerman.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80127e0c",
+      "size": 2696
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a6ff8",
+      "size": 512
+    }
+  ],
+  "functions": [
+    {
+      "name": "CreateGerman__FP13TriggerObjectiibPb",
+      "address": "0x80127e0c",
+      "size": 1916,
+      "binding": 1
+    },
+    {
+      "name": "CreateBasicAnimatedMech__FP13TriggerObjectii",
+      "address": "0x80128588",
+      "size": 780,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddObjectToList__FP10BSGO_BasicPP10BSGO_Basic": "0x8012b380",
+    "AddObserver__8ISubjectP9IObserver": "0x8014ae44",
+    "AddWeapon__14CSoldierObjectiii": "0x800bebec",
+    "Add__6CSceneR10ISceneNodeP10ISceneNode": "0x80146e08",
+    "AllocateObject__18CAnimObjectFactoryUi12EObjectClass": "0x800cbcf4",
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "CreateBSObject__FPCcPP8BSObjectP10BSGO_BasicP13TriggerObjectPPv": "0x800f6b5c",
+    "DebugMsg__FPCce": "0x80279094",
+    "ForceUpdateProximityTriggerStatus__FP10BSGO_Basicb": "0x80123bf8",
+    "GetCRC__C13TriggerObjectPCc": "0x801229f8",
+    "GetChildScript__C13TriggerObject": "0x8012308c",
+    "GetInt__C13TriggerObjectPCc": "0x80122844",
+    "GetMatrix__C13TriggerObjectR7CMatrix": "0x80122d30",
+    "GetPosition__C13TriggerObjectR8CVector3": "0x80122c4c",
+    "InitAI__14CSoldierObject": "0x800bc3e8",
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "QueueCreateGerman__FP13TriggerObjectii": "0x80127d28",
+    "SetCurrentWeapon__14CSoldierObjectiib": "0x800c2c2c",
+    "SetUpperTranslation__14CSoldierObjectRC8CVector3": "0x800c2ea8",
+    "SetUpperXAngleDifference__14CSoldierObjectff": "0x800c2ef4",
+    "SetUpperZAngleDifference__14CSoldierObjectff": "0x800c2f00",
+    "ToEulerXYZ__C7CMatrixRfN21": "0x8007b8b4",
+    "_7CMatrix.s_ClassInit": "0x802c2100",
+    "__nw__12BSGO_SoldierUi": "0x8012adf4",
+    "__nw__9BSGO_AnimUi": "0x8012ae4c",
+    "_vt.12BSGO_Soldier": "0x802e8320",
+    "_vt.9BSGO_Anim": "0x802e8360",
+    "_vt.9IObserver": "0x802e9aa0",
+    "_vt.t7WeakPtr2Z11CAnimObjecti8": "0x802e83a0",
+    "_vt.t7WeakPtr2Z14CSoldierObjecti8": "0x802e4008",
+    "g_AnimObjFactory": "0x803e6bb0",
+    "g_iNumberOfEnemiesSpawned": "0x8032d020",
+    "g_maxActiveSoldiers": "0x8032d018",
+    "g_numActiveSoldiers": "0x8032d014",
+    "g_pAnimatedMechList": "0x8032d010",
+    "g_pGermanList": "0x8032d008",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "objcreate.cpp",
+  "original_file_index": 1242
+}

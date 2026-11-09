@@ -1,0 +1,57 @@
+{
+  "id": "sound_supxalf",
+  "source": "src/sound/ea/supxalf.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8022a280",
+      "size": 268
+    }
+  ],
+  "functions": [
+    {
+      "name": "SFILTER_unpackgetframexalf__FPv",
+      "address": "0x8022a280",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SFILTER_unpackxalfrestore__FPv",
+      "address": "0x8022a288",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "SFILTER_unpackxalfinit__FPvP16UNPACKINITPARAMS",
+      "address": "0x8022a2b4",
+      "size": 216,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Feed__Q23Snd12CEAXABLKDecfPvii": "0x8022a8c4",
+    "SFILTER_unpackxalf__FPviT0T0i": "0x80229ff8",
+    "__Q23Snd12CEAXABLKDecf": "0x8022a89c",
+    "__dl__Q23Snd12CEAXABLKDecfPv": "0x8022a870",
+    "__nw__Q23Snd12CEAXABLKDecfUi": "0x8022a844"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "supxalf.cpp",
+  "original_file_index": 3286
+}

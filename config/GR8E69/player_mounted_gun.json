@@ -1,0 +1,51 @@
+{
+  "id": "player_mounted_gun",
+  "source": "src/player/PlayerMountedGun.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800ad218",
+      "size": 1076
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029f030",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetPlayersMountedMGPositions__13CPlayerObjectP7CMatrix",
+      "address": "0x800ad218",
+      "size": 1076,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AttemptUpdate__7CCameraf": "0x8012bc98",
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "Multiply__7CMatrixRC7CMatrixT1": "0x802794b8",
+    "SetTMLocalToWorld__7CCameraRC7CMatrix": "0x8012c038",
+    "_7CMatrix.s_ClassInit": "0x802c2100",
+    "_7CMatrix.s_TempMat": "0x802fbf00",
+    "__as__7CMatrixRC7CMatrix": "0x8007aa38"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rcmpbase_decoder",
+  "source": "src/ea/rcmpbase_decoder.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": true,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801b0e34",
+      "size": 204
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.Q24RCMP7DECODER",
+      "address": "0x802ec110",
+      "size": 24,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "__Q24RCMP7DECODERPCQ24RCMP11CODEC_IDATA",
+      "address": "0x801b0e34",
+      "size": 116,
+      "binding": 1
+    },
+    {
+      "name": "_._Q24RCMP7DECODER",
+      "address": "0x801b0ea8",
+      "size": 88,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FreeChosenCodec__Q24RCMP7DECODER": "0x801b0f48",
+    "_4RCMP.rcmp_sys": "0x803fef20",
+    "__Q24RCMP11CODEC_IDATA": "0x801b119c"
+  },
+  "discarded_functions": [
+    "__dl__Q24RCMP7DECODERPv"
+  ],
+  "undefined_in_discarded_code": [],
+  "original_file": "rcmpbase.cpp",
+  "original_file_index": 2326
+}

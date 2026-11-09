@@ -1,0 +1,96 @@
+{
+  "id": "ea_inittmr",
+  "source": "src/ea/inittmr.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802177e4",
+      "size": 532
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bf6e0",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "InitAlarm__Fv",
+      "address": "0x802177e4",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "TIMER_init",
+      "address": "0x8021781c",
+      "size": 268,
+      "binding": 1
+    },
+    {
+      "name": "TIMER_restore",
+      "address": "0x80217928",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "ttDoTimerMsg__Fv",
+      "address": "0x80217968",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "AlarmHandler__FP7OSAlarmP9OSContext",
+      "address": "0x802179d4",
+      "size": 36,
+      "binding": 0
+    }
+  ],
+  "externals": {
+    "Alarm": "0x8040f410",
+    "OSCancelAlarm": "0x80253df0",
+    "OSGetTime": "0x8025af7c",
+    "OSInitAlarm": "0x80253a60",
+    "OSSetPeriodicAlarm": "0x80253d74",
+    "REAL_addexit": "0x802176d4",
+    "TIMERhz": "0x804512c8",
+    "bIsAlarmInited": "0x804512d8",
+    "bIsTimerInited": "0x804512d9",
+    "libticks": "0x804512d0",
+    "ticks": "0x804512cc",
+    "tmrsub": "0x802d5200",
+    "ttInit__Fv": "0x8021850c",
+    "ttKill__Fv": "0x80218594",
+    "ttMsg__F8TIMERMSG": "0x802185cc"
+  },
+  "local_externals": [
+    "Alarm",
+    "bIsAlarmInited",
+    "bIsTimerInited"
+  ],
+  "sda_externals": [
+    "TIMERhz",
+    "bIsAlarmInited",
+    "bIsTimerInited",
+    "libticks",
+    "ticks"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "inittmr.cpp",
+  "original_file_index": 2975
+}

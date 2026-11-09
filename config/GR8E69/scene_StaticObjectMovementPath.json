@@ -1,0 +1,49 @@
+{
+  "id": "scene_StaticObjectMovementPath",
+  "source": "src/scene/StaticObjectMovementPath.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800a9970",
+      "size": 432
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029ec90",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetMovementPath__13CStaticObjectibT2ffffP8BSObjectfT2",
+      "address": "0x800a9970",
+      "size": 432,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetPlayer__C6CScenei": "0x8014ac08",
+    "GetSplinePath__C15CAIFilterGlobalUib": "0x800d86c4",
+    "PrepareForTraversalForward__22CAISplinePathTraversalP13CAISplinePathbP18CAIAreaPathFinding": "0x800e029c",
+    "g_aigAIFilterGlobalObject": "0x80309bfc",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "static_obj.cpp",
+  "original_file_index": 833
+}

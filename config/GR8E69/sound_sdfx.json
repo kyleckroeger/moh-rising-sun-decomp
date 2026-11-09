@@ -1,0 +1,66 @@
+{
+  "id": "sound_sdfx",
+  "source": "src/sound/ea/sdfx.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80223490",
+      "size": 588
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bfa00",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDDRV_setfx__Fi",
+      "address": "0x80223490",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "SNDPLATFORM_fxinit__Fii",
+      "address": "0x802234dc",
+      "size": 92,
+      "binding": 1
+    },
+    {
+      "name": "SNDPLATFORM_setfxlevel__Fii",
+      "address": "0x80223538",
+      "size": 420,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "MIX_initreverb": "0x80224c68",
+    "MIX_restorereverb": "0x80224e34",
+    "SNDDRV_DSPMixerSetAuxBus__FP6_AXVPBUsi": "0x802239bc",
+    "SNDDRV_initmixer__Fv": "0x8021ba34",
+    "SNDMIX_setwetgain": "0x80226298",
+    "SNDSYS_entercritical": "0x8021f948",
+    "SNDSYS_leavecritical": "0x8021f988",
+    "snddrv": "0x80410c40",
+    "sndgs": "0x804108fc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sdfx.c",
+  "original_file_index": 3153
+}

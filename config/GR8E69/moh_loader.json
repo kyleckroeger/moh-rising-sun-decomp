@@ -1,0 +1,156 @@
+{
+  "id": "moh_loader",
+  "source": "src/game/moh_loader.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80059380",
+      "size": 896
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.11MohLoaderGc",
+      "address": "0x802e14d0",
+      "size": 64,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "__9MohLoaderb",
+      "address": "0x80059380",
+      "size": 148,
+      "binding": 1
+    },
+    {
+      "name": "Instance__9MohLoader",
+      "address": "0x80059414",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "GameData__9MohLoader",
+      "address": "0x80059434",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "SetReturningFlag__11MohLoaderGc",
+      "address": "0x80059454",
+      "size": 24,
+      "binding": 1
+    },
+    {
+      "name": "ClearReturningFlag__11MohLoaderGc",
+      "address": "0x8005946c",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "InstanceGc__11MohLoaderGc",
+      "address": "0x80059480",
+      "size": 148,
+      "binding": 1
+    },
+    {
+      "name": "__11MohLoaderGcb",
+      "address": "0x80059514",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "Initialize__11MohLoaderGc",
+      "address": "0x80059558",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "InitVideo__11MohLoaderGc",
+      "address": "0x800595a0",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "GameDataGc__11MohLoaderGc",
+      "address": "0x800595a4",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "ValidateGameData__11MohLoaderGc",
+      "address": "0x800595b4",
+      "size": 24,
+      "binding": 1
+    },
+    {
+      "name": "InvalidateGameData__11MohLoaderGc",
+      "address": "0x800595cc",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "RequestReset__11MohLoaderGc",
+      "address": "0x800595e0",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "WasResetButtonPressed__11MohLoaderGc",
+      "address": "0x800595ec",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "ResetButtonPressed__11MohLoaderGcb",
+      "address": "0x800595fc",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "IsResetConsoleRequested__11MohLoaderGc",
+      "address": "0x8005960c",
+      "size": 184,
+      "binding": 1
+    },
+    {
+      "name": "ResetConsole__11MohLoaderGc",
+      "address": "0x800596c4",
+      "size": 60,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CheckForControllerReset__11MohLoaderGc": "0x80059700",
+    "DVDSetAutoFatalMessaging": "0x8023c7d4",
+    "LoadModule__11MohLoaderGcPCc": "0x8005981c",
+    "OSGetResetButtonState": "0x80258cfc",
+    "OSResetSystem": "0x80258920",
+    "VIFlush": "0x80260860",
+    "VIGetTvFormat": "0x80260c58",
+    "VISetBlack": "0x802609fc",
+    "VIWaitForRetrace": "0x8025f7dc",
+    "_._11MohLoaderGc": "0x80278e6c",
+    "_11MohLoaderGc.m_pLoaderGc": "0x802c1b00",
+    "__builtin_new": "0x801a8910",
+    "_vt.9MohLoader": "0x802e1510",
+    "g_pPersistent": "0x802c1b04",
+    "memset": "0x80266778"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Moh3.cpp",
+  "original_file_index": 384
+}

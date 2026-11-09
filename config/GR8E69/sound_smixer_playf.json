@@ -1,0 +1,46 @@
+{
+  "id": "sound_smixer_playf",
+  "source": "src/sound/ea/smixer_playf.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802260b0",
+      "size": 144
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bfb40",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "MIX_play",
+      "address": "0x802260b0",
+      "size": 144,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "sndmix": "0x8041ec1c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "smixer.c",
+  "original_file_index": 3186
+}

@@ -1,0 +1,56 @@
+{
+  "id": "sound_path_queuenode",
+  "source": "src/sound/ea/path_queuenode.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800368c8",
+      "size": 1556
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80295be0",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "PATHI_queuenode",
+      "address": "0x800368c8",
+      "size": 788,
+      "binding": 1
+    },
+    {
+      "name": "PATHI_choosebeat",
+      "address": "0x80036bdc",
+      "size": 768,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "PATHI_eventrestore": "0x80036590",
+    "PATHI_sampleoffset": "0x80035c90",
+    "PATHI_timeremaining": "0x80036f90",
+    "PATHI_timetonextstreambeat": "0x80036edc",
+    "PATHX_queuefile": "0x801589c4",
+    "PATHX_status": "0x8015883c",
+    "milliseconds": "0x802c1694",
+    "pfstate": "0x802c1680"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

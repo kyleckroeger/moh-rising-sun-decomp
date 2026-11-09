@@ -1,0 +1,82 @@
+{
+  "id": "scene_AnimObjFactoryLoaders",
+  "source": "src/scene/AnimObjFactoryLoaders.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800cc6e4",
+      "size": 500
+    }
+  ],
+  "functions": [
+    {
+      "name": "AddDynamicLoaderToRelease__18CAnimObjectFactoryPQ24EAGL13DynamicLoader",
+      "address": "0x800cc6e4",
+      "size": 28,
+      "binding": 1
+    },
+    {
+      "name": "ReleaseDynamicLoaders__18CAnimObjectFactory",
+      "address": "0x800cc700",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "InitMesh__14CAnyStaticMeshPvb",
+      "address": "0x800cc768",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "InitAnim__14CAnyStaticMeshii",
+      "address": "0x800cc7c8",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "InitFrame__14CAnyStaticMeshiPvb",
+      "address": "0x800cc834",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "numFrames__C14CAnyStaticMesh",
+      "address": "0x800cc858",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "ticksPerFrame__C14CAnyStaticMesh",
+      "address": "0x800cc898",
+      "size": 64,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetNumFrames__C15CStaticAnimMesh": "0x8019f9ec",
+    "GetTicksPerFrame__C15CStaticAnimMesh": "0x8019f9f4",
+    "Init__11CStaticMeshPvb": "0x8019d390",
+    "Init__15CStaticAnimMeshiPvb": "0x8019f980",
+    "Init__15CStaticAnimMeshii": "0x8019f900",
+    "Release__Q24EAGL13DynamicLoader": "0x801eacb0",
+    "__11CStaticMesh": "0x8019faa4",
+    "_vt.11CStaticMesh": "0x802ebd48",
+    "_vt.15CStaticAnimMesh": "0x802ebce8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

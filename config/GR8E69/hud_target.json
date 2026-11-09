@@ -1,0 +1,58 @@
+{
+  "id": "hud_target",
+  "source": "src/ui/hud_target.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-ffast-math"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8017817c",
+      "size": 172
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802acf60",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetTarget__15CHeadsUpDisplayPCc",
+      "address": "0x8017817c",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "ChangeLetterboxWidth__Ff",
+      "address": "0x801781ec",
+      "size": 60,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "LetterBoxVerts": "0x802c534c",
+    "strcpy": "0x80266a7c",
+    "strlen": "0x80266b70",
+    "strncpy": "0x80266dd4"
+  },
+  "local_externals": [
+    "LetterBoxVerts"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "HeadsUpDisplay.cpp",
+  "original_file_index": 1509
+}

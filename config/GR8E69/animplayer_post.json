@@ -1,0 +1,50 @@
+{
+  "id": "animplayer_post",
+  "source": "src/player/AnimPlayerPost.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d5094",
+      "size": 564
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a1ac8",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "PostUpdate__15CAnimatedPlayerf",
+      "address": "0x800d5094",
+      "size": 564,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "BuildRotZ__7CMatrixf": "0x8007ad70",
+    "GetHeading__13CPlayerObject": "0x800b9120",
+    "MathFunNormalizeAngleNegativePiToPi__Ff": "0x80133714",
+    "Translate__7CMatrixRC8CVector3": "0x8007af2c",
+    "g_bInMultiplayerMode": "0x802c1b30"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "animplayer.cpp",
+  "original_file_index": 942
+}

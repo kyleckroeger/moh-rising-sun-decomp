@@ -1,0 +1,41 @@
+{
+  "id": "pum_d",
+  "source": "src/ui/pum_d.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8017abb4",
+      "size": 36
+    }
+  ],
+  "functions": [
+    {
+      "name": "RestartSubtitles__Fv",
+      "address": "0x8017abb4",
+      "size": 36,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "ShutdownSubtitles__Fv": "0x8017aa64",
+    "StartupSubtitles__Fv": "0x8017a6d0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "pumhandler.cpp",
+  "original_file_index": 1539
+}

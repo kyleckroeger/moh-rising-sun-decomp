@@ -1,0 +1,66 @@
+{
+  "id": "sound_supmutpf",
+  "source": "src/sound/ea/supmutpf.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802299e8",
+      "size": 788
+    }
+  ],
+  "functions": [
+    {
+      "name": "SFILTER_unpackmtpf__FPviT0T0i",
+      "address": "0x802299e8",
+      "size": 600,
+      "binding": 1
+    },
+    {
+      "name": "SFILTER_unpackmtpfrestore__FPv",
+      "address": "0x80229c40",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "SFILTER_unpackmtpfinit__FPvP16UNPACKINITPARAMS",
+      "address": "0x80229c6c",
+      "size": 144,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Decode__Q23Snd10CMTBLKDecfPPfi": "0x8022bb68",
+    "Feed__Q23Snd10CMTBLKDecfPvii": "0x8022bad8",
+    "GetState__Q23Snd10CMTBLKDecf": "0x8022bd88",
+    "SNDDRV_getmastervoice__Fi": "0x8021ce74",
+    "SNDDRV_getsamplechan__Fi": "0x8021cea4",
+    "SNDPKTPLAYI_freeframes__Fiii": "0x8021f330",
+    "SNDPKTPLAYI_get__FiiPiT2": "0x8021f0f4",
+    "SNDPKTPLAYI_voicetopackethandle__Fi": "0x80229398",
+    "SetCodecVersion__Q23Snd10CMTBLKDecfi": "0x8022bde4",
+    "SetState__Q23Snd10CMTBLKDecfPQ23Snd8MTFSTATEi": "0x8022bdc8",
+    "__Q23Snd10CMTBLKDecf": "0x8022baa8",
+    "__dl__Q23Snd10CMTBLKDecfPv": "0x8022ab28",
+    "__nw__Q23Snd10CMTBLKDecfUi": "0x8022aafc",
+    "memset": "0x80266778"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "supmutpf.c",
+  "original_file_index": 3280
+}

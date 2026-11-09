@@ -1,0 +1,65 @@
+{
+  "id": "toilet_lookup",
+  "source": "src/game/toilet_lookup.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a959c",
+      "size": 352
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b7b20",
+      "size": 44
+    }
+  ],
+  "functions": [
+    {
+      "name": "TLT_GetPauseBigFile__Fv",
+      "address": "0x801a959c",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "TLT_LoadFileFromSystemBigFile__FPCcPi",
+      "address": "0x801a95a8",
+      "size": 140,
+      "binding": 1
+    },
+    {
+      "name": "TLT_LoadFileFromLevelBigFile__FPCcPi",
+      "address": "0x801a9634",
+      "size": 92,
+      "binding": 1
+    },
+    {
+      "name": "TLT_FindNextResourceByType__F13TLTResourceIDP24LevelFileContentsStruct_",
+      "address": "0x801a9690",
+      "size": 108,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DebugMsg__FPCce": "0x80279094",
+    "TLT_LoadFileFromBigFile__FPcPCcPi": "0x801a9b98",
+    "g_systemFileData": "0x803f54f8",
+    "g_toilet": "0x803f5360",
+    "strcmp": "0x802669b4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

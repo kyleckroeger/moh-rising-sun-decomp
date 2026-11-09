@@ -1,0 +1,81 @@
+{
+  "id": "player_commit",
+  "source": "src/player/PlayerCommit.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800b1808",
+      "size": 2564
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029f120",
+      "size": 28
+    },
+    {
+      "name": ".data",
+      "address": "0x802c262c",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "CommitUpdate__13CPlayerObject",
+      "address": "0x800b1808",
+      "size": 2564,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AttemptUpdate__7CCameraf": "0x8012bc98",
+    "DisablePassThru__10CCDBObjectb": "0x80073058",
+    "GetCurrentPlayerWeapon__C13CPlayerObject": "0x800b418c",
+    "GetForward__C7CCameraR8CVector3": "0x8012be90",
+    "GetPosition__C7CCameraR8CVector3": "0x8012bdf0",
+    "GetSlot__7CMatrixUi": "0x802790e0",
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "STAND_TO_WALK_TRANSITION": "0x80306b94",
+    "SetFlocoParams__15CAnimatedPlayerfi": "0x800d4a74",
+    "SetPerspective__7CCameraff": "0x8012c4dc",
+    "SetTMLocalToWorld__7CCameraRC7CMatrix": "0x8012c038",
+    "Set__6CLine3RC8CVector3T1": "0x80281690",
+    "Translate__7CMatrixRC8CVector3": "0x8007af2c",
+    "UpdateMuzzleFlash__19CPlayerWeaponObject": "0x800c7f08",
+    "UpdateTarget__Q213CPlayerObject9AimAdjustRC7CCamera": "0x800b7eb0",
+    "UpdateWeaponTransforms__19CPlayerWeaponObject": "0x800c83d0",
+    "_._10CCollision": "0x80133d10",
+    "_._9CVolFiber": "0x80140e54",
+    "_7CCamera.ASPECT_4x3": "0x802a764c",
+    "_7CMatrix.s_ClassInit": "0x802c2100",
+    "__10CCollision": "0x80133bd4",
+    "__9CVolFiberRC6CLine3": "0x80140db0",
+    "__as__7CMatrixRC7CMatrix": "0x8007aa38",
+    "g_MPAnimMeshZOffset": "0x802c2600",
+    "g_bCoopMultiplayer": "0x802c1b2c",
+    "g_bInMultiplayerMode": "0x802c1b30",
+    "g_scene": "0x803e6d90",
+    "sqrtf": "0x80270538"
+  },
+  "local_externals": [
+    "STAND_TO_WALK_TRANSITION",
+    "g_MPAnimMeshZOffset"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}

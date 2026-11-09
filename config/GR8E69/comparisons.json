@@ -22,9 +22,6 @@
     "comparisons/script_soldier_obj_info.json",
     "comparisons/script_set_expression.json",
     "comparisons/script_alias_looping.json",
-    "comparisons/script_vibration.json",
-    "comparisons/scene_static_init.json",
-    "comparisons/scene_static_anim_attempt.json",
-    "comparisons/scene_tank_add_weapon.json"
+    "comparisons/script_vibration.json"
   ]
 }

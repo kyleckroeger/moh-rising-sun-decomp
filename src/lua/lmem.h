@@ -20,7 +20,7 @@ void *luaM_growaux (lua_State *L, void *block, size_t nelems,
                     size_t limit);
 
 void *DWI_alloc(const char *, unsigned long, unsigned long);
-void DWI_free(void *);
+int DWI_free(void *);
 
 #define luaM_free(L, b) DWI_free(b)
 #define luaM_malloc(L, t) DWI_alloc("lua", (t), 1024)

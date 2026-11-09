@@ -1,0 +1,53 @@
+{
+  "id": "scene_SoldierSword",
+  "source": "src/scene/SoldierSword.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800c0b50",
+      "size": 160
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029fd64",
+      "size": 20
+    }
+  ],
+  "functions": [
+    {
+      "name": "OnSwordDraw__14CSoldierObject",
+      "address": "0x800c0b50",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "OnSwordSheath__14CSoldierObject",
+      "address": "0x800c0ba0",
+      "size": 80,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Hide__Q34EALA9Character4MeshPCc": "0x80081f4c",
+    "SetSwordDrawn__14CSwordBehaviorb": "0x800e59bc",
+    "Show__Q34EALA9Character4MeshPCc": "0x80081e90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Soldier_object.cpp",
+  "original_file_index": 875
+}

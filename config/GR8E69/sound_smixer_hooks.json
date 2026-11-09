@@ -1,0 +1,48 @@
+{
+  "id": "sound_smixer_hooks",
+  "source": "src/sound/ea/smixer_hooks.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80225b58",
+      "size": 64
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDI_New__FUi",
+      "address": "0x80225b58",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "SNDI_Delete__FPv",
+      "address": "0x80225b78",
+      "size": 32,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDMEMI_allocz__Fi": "0x8021ae30",
+    "SNDMEMI_free__FPv": "0x8021b034"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "smixer.c",
+  "original_file_index": 3186
+}

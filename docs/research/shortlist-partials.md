@@ -4,9 +4,10 @@ This batch maintains twelve functions across eleven comparison units, covering
 8,176 target executable bytes from the pinned GR8E69 Disc 1 ELF (SHA-1
 `dd797412be7d631e78c98f194a1bb47981174d75`). Codex assisted recovery, reconstruction
 and verification. The candidates were compiled and reviewed together before one
-complete source build and snapshot refresh. They all remain partial: similarity
-is separate from exact and linked coverage, and their original code remains in
-the verified image.
+complete source build and snapshot refresh. At introduction they all remained partial. PR #59 subsequently replaced the three
+scene partials (860 bytes) with accepted exact source and removed their duplicate
+comparison registrations. The other nine functions remain partial; similarity is
+separate from exact and linked coverage.
 
 | Group | New functions | Target bytes | Evidence |
 | --- | ---: | ---: | --- |
@@ -54,16 +55,18 @@ Integer results, memory snapshots and recorded call order compare exactly.
 Floating-point traces round to six decimal places; this is not bitwise floating
 equivalence. Quaternion checks preserve untouched scale/translation slots and
 explicitly check that skipping a constant bone does not consume its packed data.
-Tests use native symbol addresses, rather than assuming later partial functions
+The three promoted scene fixtures load accepted native units; the others load
+comparison units. Tests use native symbol addresses, rather than assuming later partial functions
 stay at their original offsets.
 
 External string routines, allocation, sound lookup, scene/volume queries, matrix/
 quaternion callees, weapon creation, script queries and F3 evaluation are stubbed
 as needed. These fixtures are not exhaustive equivalence, allocator/asset validation
 or a Dolphin/game test. The public suite skips them without the pinned original,
-native comparison outputs or Unicorn. To reproduce locally in that environment:
+required native outputs or Unicorn. To reproduce locally in that environment:
 
 ```sh
+python3 tools/reconstruct.py
 python3 tools/comparisons.py
 python3 -m unittest discover -s tests -p test_shortlist_partials.py -v
 ```

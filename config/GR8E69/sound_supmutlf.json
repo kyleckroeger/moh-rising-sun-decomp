@@ -1,0 +1,65 @@
+{
+  "id": "sound_supmutlf",
+  "source": "src/sound/ea/supmutlf.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8022980c",
+      "size": 476
+    }
+  ],
+  "functions": [
+    {
+      "name": "SFILTER_unpackgetframemtlf__FPv",
+      "address": "0x8022980c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SFILTER_unpackmtlf__FPviT0T0i",
+      "address": "0x80229814",
+      "size": 200,
+      "binding": 1
+    },
+    {
+      "name": "SFILTER_unpackmtlfrestore__FPv",
+      "address": "0x802298dc",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "SFILTER_unpackmtlfinit__FPvP16UNPACKINITPARAMS",
+      "address": "0x80229908",
+      "size": 224,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Decode__Q23Snd10CMTBLKDecfPPfi": "0x8022bb68",
+    "Feed__Q23Snd10CMTBLKDecfPvii": "0x8022bad8",
+    "GetState__Q23Snd10CMTBLKDecf": "0x8022bd88",
+    "SetState__Q23Snd10CMTBLKDecfPQ23Snd8MTFSTATEi": "0x8022bdc8",
+    "__Q23Snd10CMTBLKDecf": "0x8022baa8",
+    "__dl__Q23Snd10CMTBLKDecfPv": "0x8022ab28",
+    "__nw__Q23Snd10CMTBLKDecfUi": "0x8022aafc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "supmutlf.c",
+  "original_file_index": 3278
+}

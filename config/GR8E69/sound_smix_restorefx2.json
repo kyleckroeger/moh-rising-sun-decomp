@@ -1,0 +1,53 @@
+{
+  "id": "sound_smix_restorefx2",
+  "source": "src/sound/ea/smix_restorefx2.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802245a8",
+      "size": 372
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDMIXI_restorefx2__Fv",
+      "address": "0x802245a8",
+      "size": 372,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDI_getb__FPvi": "0x80224e70",
+    "SNDMEMI_free__FPv": "0x8021b034",
+    "SNDMIXfxv2inited": "0x802d64d8",
+    "conlist": "0x8041ec14",
+    "lastoutputchannels": "0x8041e44c",
+    "memset": "0x80266778",
+    "modlist": "0x8041ec10",
+    "pconhead": "0x8041e448",
+    "pfilterlist": "0x8041e43c",
+    "phead": "0x8041e440",
+    "pheaderinfo": "0x8041e438",
+    "plisthead": "0x8041e444",
+    "sndfx": "0x8041e454"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sfxrevc.c",
+  "original_file_index": 3166
+}

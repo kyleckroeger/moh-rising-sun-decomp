@@ -1,0 +1,41 @@
+{
+  "id": "ai_AITankChooseTarget",
+  "source": "src/ai/AITankChooseTarget.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800de7a4",
+      "size": 168
+    }
+  ],
+  "functions": [
+    {
+      "name": "ChooseTarget__13CAITankObjectf",
+      "address": "0x800de7a4",
+      "size": 168,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetGlobalListStart__9CAIObject": "0x800d9e48",
+    "SetTarget__12CAITargetingP9CAIObject": "0x800ed9bc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AITankObject.cpp",
+  "original_file_index": 984
+}

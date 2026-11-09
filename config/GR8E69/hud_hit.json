@@ -1,0 +1,50 @@
+{
+  "id": "hud_hit",
+  "source": "src/ui/hud_hit.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-ffast-math"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80176548",
+      "size": 120
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802acdc4",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "UpdateHitStatus__15CHeadsUpDisplayf",
+      "address": "0x80176548",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "ChangeHitStatus__15CHeadsUpDisplayUi",
+      "address": "0x8017659c",
+      "size": 36,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "HeadsUpDisplay.cpp",
+  "original_file_index": 1509
+}

@@ -1,0 +1,47 @@
+{
+  "id": "pum_print",
+  "source": "src/ui/pum_print.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8017ad78",
+      "size": 184
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802ad328",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "PrintSubtitle__FPcfG6CColorP19PopUpMessageHandler",
+      "address": "0x8017ad78",
+      "size": 184,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddPopUpMessage__19PopUpMessageHandlerPcUcUsUsUcfUcUcUcUcUcis": "0x80179e94",
+    "_7CScreen.m_sHeightScale": "0x80452580",
+    "_7CScreen.m_sWidthScale": "0x8045257c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "pumhandler.cpp",
+  "original_file_index": 1539
+}

@@ -1,0 +1,52 @@
+{
+  "id": "viewport",
+  "source": "src/camera/viewport.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8012f5bc",
+      "size": 236
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a7898",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetRect__9CViewportffff",
+      "address": "0x8012f5bc",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "GetTMClipToView__C9CViewport",
+      "address": "0x8012f5f0",
+      "size": 184,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BuildScale__7CMatrixRC8CVector3": "0x8007ab30",
+    "SetPos__7CMatrixRC8CVector3": "0x8007ae7c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "viewport.cpp",
+  "original_file_index": 1284
+}

@@ -5,13 +5,16 @@
 #define GAME_BS_GAME_OBJECT_H
 #pragma interface
 #include "ObserverTypes.h"
+class BSObject;
 class ISceneNode;
 class BSGO_Basic : public ISubject {
 public:
-    unsigned char unknown08[4];
+    BSObject *script; // +0x08
     BSGO_Basic *next;
     BSGO_Basic *previous;
-    virtual ~BSGO_Basic();
+    // The destructor is implicit: its body is a weak copy with no table store, and callers
+    // inline it down to ISubject's.
+    BSGO_Basic() : script(0), next(0), previous(0) {}
     void Destroy();
     // Pointer ABI placeholders: concrete script/proximity data types are unknown.
     virtual void *GetScriptData();

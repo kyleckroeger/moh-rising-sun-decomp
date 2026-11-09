@@ -1,0 +1,87 @@
+{
+  "id": "sound_path_ctl",
+  "source": "src/sound/ea/path_ctl.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80038274",
+      "size": 2176
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80295c28",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "PATH_jump",
+      "address": "0x80038274",
+      "size": 472,
+      "binding": 1
+    },
+    {
+      "name": "PATH_destroy",
+      "address": "0x8003844c",
+      "size": 360,
+      "binding": 1
+    },
+    {
+      "name": "PATH_pause",
+      "address": "0x800385b4",
+      "size": 296,
+      "binding": 1
+    },
+    {
+      "name": "PATH_stop",
+      "address": "0x800386dc",
+      "size": 256,
+      "binding": 1
+    },
+    {
+      "name": "PATH_volume",
+      "address": "0x800387dc",
+      "size": 348,
+      "binding": 1
+    },
+    {
+      "name": "PATH_fade",
+      "address": "0x80038938",
+      "size": 444,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "PATHI_numtracks": "0x80035b1c",
+    "PATHI_sortprojects": "0x80035808",
+    "PATHI_switchproject": "0x80035728",
+    "PATHX_destroytrack": "0x80158500",
+    "PATHX_endservice": "0x801587c8",
+    "PATHX_fade": "0x80158afc",
+    "PATHX_pause": "0x80158c88",
+    "PATHX_stop": "0x80158d34",
+    "PATHX_volume": "0x80158b9c",
+    "inited": "0x802c1688",
+    "paused": "0x802c1689",
+    "pfactive": "0x802c168c",
+    "pfstate": "0x802c1680",
+    "pfstates": "0x802edd00",
+    "volscale": "0x802c168a"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

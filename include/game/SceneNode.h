@@ -3,6 +3,7 @@
 #define MOH_SCENENODE_H
 #pragma interface
 #include "ObserverTypes.h"
+#include "DwiContainers.h"
 
 class CBullet;
 class CAIDoodad;
@@ -10,7 +11,9 @@ class CAIObject;
 class CAnimObject;
 class CAnimatedPlayer;
 class CBotObject;
+class CCamera;
 class CCollisionVolume;
+class CSkyBox;
 class CHierObject;
 class CPlayerObject;
 class CPlayerWeaponObject;
@@ -20,6 +23,7 @@ class CStaticObject;
 class CWorldObject;
 class CCollision;
 class CDrawContext;
+class CFog;
 class CLight;
 class CMatrix;
 class CVector3;
@@ -36,6 +40,13 @@ enum EClsnId { ClsnIdUnknown = 0 };
 class ISceneNode : public IObserver {
   public:
     enum EVolumeType { VolumeTypeUnknown = 0 };
+    // One end of a node's extent along a sweep axis.
+    struct SExtent {
+        ISceneNode *node;
+        int isBegin;
+        float position;
+        int unknown0c;
+    };
     virtual ~ISceneNode();
     virtual void BeginUpdate(float);
     virtual void UpdateAI(float);
@@ -146,12 +157,145 @@ class IVolume;
 class CScene {
   public:
     ISceneNode *firstNode; // +0x00
-    unsigned char unknown04[0x18 - 4];
+    ISceneNode *lastNode;  // +0x04
+    CPlayerObject *players[4]; // +0x08
     CWorldObject *world; // +0x18
-    unsigned char unknown1c[8];
+    CCamera *camera;     // +0x1c
+    CSkyBox *skyBox;     // +0x20
     ISceneNode *firstStaticObject; // +0x24
-    unsigned char unknown28[12];
-    ISceneNode *firstLight; // +0x34
+    ISceneNode *lastStaticObject;  // +0x28
+    ISceneNode *firstAnimObject;   // +0x2c
+    ISceneNode *lastAnimObject;    // +0x30
+    ISceneNode *firstLight;        // +0x34
+    ISceneNode *lastLight;         // +0x38
+    ISceneNode *firstProjector;    // +0x3c
+    ISceneNode *lastProjector;     // +0x40
+    int nodeCount;                 // +0x44
+    int staticObjectCount;         // +0x48
+    int animObjectCount;           // +0x4c
+    int lightCount;                // +0x50
+    int projectorCount;            // +0x54
+    int locked; // +0x58: changes queue while set; see Lock and Unlock.
+    int playerCount; // +0x5c
+    // +0x60, +0x78, +0x90: the visible lights, an unused list and the visible projectors, filled by Draw.
+    dwi::fast_vec<ISceneNode *> fast60, fast78, fast90;
+    // +0xa8, +0xd4: the two sweep lists.
+    dwi::list<ISceneNode::SExtent> extents0, extents1;
+    // A node pair met by a sweep, kept in address order. Only the fields used here are known.
+    union UNodePair {
+        struct {
+            ISceneNode *first;
+            ISceneNode *second;
+            signed char order;
+        } nodes;
+        unsigned char data[16];
+    };
+    // +0x100, +0x118: the pairs found by the two sweeps.
+    dwi::fast_vec<UNodePair> pairs0, pairs1;
+    // +0x130: the live collisions. The iterator clears its pointer on destruction; the inline
+    // operations that need the complete CCollision are in SceneCollisions.h.
+    struct SCollisionIter {
+        SCollisionIter(CCollision *q) : p(q) {}
+        SCollisionIter(const SCollisionIter &o) : p(o.p) {}
+        ~SCollisionIter() { p = 0; }
+        bool operator!=(const SCollisionIter &o) const { return p != o.p; }
+        SCollisionIter &operator++();
+        CCollision *p;
+    };
+    struct SCollisionConstIter {
+        SCollisionConstIter(const SCollisionIter &o) : p(o.p) {}
+        SCollisionConstIter(const SCollisionConstIter &o) : p(o.p) {}
+        ~SCollisionConstIter() { p = 0; }
+        bool operator!=(const SCollisionIter &o) const { return p != o.p; }
+        SCollisionConstIter &operator++();
+        const CCollision *p;
+    };
+    struct SCollisionVec {
+        SCollisionIter Begin() { return SCollisionIter(data); }
+        SCollisionIter End();
+        void Clear();
+        void PushBack(const CCollision &);
+        int Size() const { return count; }
+        int count;
+        int capacity;
+        CCollision *data;
+        int owned;
+    } collisions;
+    // An excluded node pair, kept in address order, and a value.
+    struct SExclusionEntry {
+        SExclusionEntry(const ISceneNode *, const ISceneNode *, float);
+        const ISceneNode *low;
+        const ISceneNode *high;
+        float value;
+        SExclusionEntry &operator=(const SExclusionEntry &other) {
+            low = other.low;
+            high = other.high;
+            value = other.value;
+            return *this;
+        }
+        bool operator==(const SExclusionEntry &other) const { return low == other.low && high == other.high; }
+    };
+    // +0x140: the collision exclusions; the capacity word is unread here and its name is inferred.
+    struct SExclusionList {
+        SExclusionEntry *items;
+        int capacity;
+        int count;
+        SExclusionEntry *Begin() { return items; }
+        SExclusionEntry *End() { return items + count; }
+        void Clear() { count = 0; }
+        void Erase(SExclusionEntry *entry) {
+            SExclusionEntry *end = End();
+            SExclusionEntry *to = entry;
+            for (SExclusionEntry *from = entry + 1; from != end;)
+                *to++ = *from++;
+            count--;
+        }
+    } exclusions;
+    unsigned char unknown14c[0x158 - 0x14c];
+    // A deferred scene change: the handler to run and its two arguments.
+    struct SModCommand {
+        void (CScene::*function)(SModCommand &);
+        void *arg0;
+        void *arg1;
+    };
+    // +0x158: the capacity word is unread here and its name is inferred.
+    struct SCommandQueue {
+        SModCommand *items;
+        int capacity;
+        int count;
+        SModCommand *End() { return items + count; }
+        void Clear() { count = 0; }
+    } queue;
+    void AddPlayer(CPlayerObject *);
+    void SetWorld(CWorldObject *);
+    void SetCamera(CCamera *);
+    void SetSkyBox(CSkyBox *);
+    void AddPlayer_now(SModCommand &);
+    void SetWorld_now(SModCommand &);
+    void SetCamera_now(SModCommand &);
+    void SetSkyBox_now(SModCommand &);
+    void AddNode_now(SModCommand &);
+    void RemoveNode_now(SModCommand &);
+    void AddNodeExtents(ISceneNode &);
+    void RemoveNodeExtents(ISceneNode &);
+    void Update(float);
+    void Draw(CDrawContext &, CFog &);
+    void SweepAllExtents();
+    int DetectSlowCollisions(float);
+    int DetectFastCollisions(float);
+    // Node list iterator returned by value.
+    class NodeIterator {
+      public:
+        NodeIterator(ISceneNode *n) : node(n) {}
+        NodeIterator(const NodeIterator &other) : node(other.node) {}
+        ISceneNode *node;
+    };
+    NodeIterator GetNodesBegin() const;
+    NodeIterator GetNodesEnd() const;
+    void Lock();
+    void Unlock();
+    void Reset();
+    void Shutdown();
     void Add(ISceneNode &, ISceneNode *);
     void Remove(ISceneNode &);
     int IsNodeInScene(const ISceneNode *) const;

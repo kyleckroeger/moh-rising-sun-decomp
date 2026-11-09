@@ -1,0 +1,48 @@
+{
+  "id": "sound_smixwet",
+  "source": "src/sound/ea/smixwet.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80224378",
+      "size": 52
+    }
+  ],
+  "functions": [
+    {
+      "name": "MIX_getwetbuffer",
+      "address": "0x80224378",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "remap__Fiii",
+      "address": "0x80224384",
+      "size": 40,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "mapchannel": "0x802d63b0",
+    "sndfx": "0x8041e454"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sfxrevc.c",
+  "original_file_index": 3166
+}

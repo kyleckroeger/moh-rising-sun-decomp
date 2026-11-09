@@ -31,9 +31,9 @@ extern char ReadFileThreadMsgQ[];
 // fragment does not define it (the manifest lists it as a local external).
 extern READREQUEST gCurRead;
 
-// initfiledev, the open/close functions and the asynchronous DVD read path
-// come first in the original file and are not reconstructed, so this unit
-// starts at readfile.
+// initfiledev, openfile, the asynchronous DVD read path and readfile come
+// earlier in the original file and are not part of this unit, which starts at
+// writefile.
 
 int readfile(HANDLE_def* handle, void* buffer, int offset, int size);
 

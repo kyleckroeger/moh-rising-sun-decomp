@@ -1,0 +1,48 @@
+{
+  "id": "ea_avplayer_dtor",
+  "source": "src/ea/avplayer_dtor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801b276c",
+      "size": 392
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetSubtitle__Q24RCMP9AV_PLAYERPQ24RCMP17AV_SUBTITLE_ARRAY",
+      "address": "0x801b276c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "_._Q24RCMP9AV_PLAYER",
+      "address": "0x801b2774",
+      "size": 384,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FILESYS_getopts": "0x802087e8",
+    "STREAM_destroy": "0x8020a6fc",
+    "_._Q24RCMP12AUDIO_PLAYER": "0x801b3294",
+    "_4RCMP.rcmp_sys": "0x803fef20",
+    "__udivdi3": "0x8026c82c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

@@ -1,0 +1,72 @@
+{
+  "id": "hud_life",
+  "source": "src/ui/hud_life.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-ffast-math"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801724f8",
+      "size": 708
+    }
+  ],
+  "functions": [
+    {
+      "name": "_._15CHeadsUpDisplay",
+      "address": "0x801724f8",
+      "size": 248,
+      "binding": 1
+    },
+    {
+      "name": "Shutdown__15CHeadsUpDisplay",
+      "address": "0x801725f0",
+      "size": 460,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "ResetTimeStampStuff__Fv": "0x801775b4",
+    "_._5CFont": "0x80066e6c",
+    "_._7CSprite": "0x8005d1f4",
+    "_15CHeadsUpDisplay.blackSprite": "0x802c530c",
+    "_15CHeadsUpDisplay.bulletText": "0x802c5320",
+    "_15CHeadsUpDisplay.bulletTextCount": "0x802c5324",
+    "_15CHeadsUpDisplay.circleSprite": "0x802c531c",
+    "_15CHeadsUpDisplay.compassEdgeSprite": "0x802c5304",
+    "_15CHeadsUpDisplay.compassSprite": "0x802c52fc",
+    "_15CHeadsUpDisplay.dotSprite": "0x802c5310",
+    "_15CHeadsUpDisplay.greySprite": "0x802c5314",
+    "_15CHeadsUpDisplay.healthSprite": "0x802c52f8",
+    "_15CHeadsUpDisplay.hitMeterSprite": "0x802c5308",
+    "_15CHeadsUpDisplay.starSprite": "0x802c5318",
+    "__builtin_delete": "0x801a8990",
+    "bReady": "0x802c5950",
+    "g_bInMultiplayerMode": "0x802c1b30",
+    "g_pAlliedIcon": "0x802c52e8",
+    "g_pJapaneseIcon": "0x802c52ec",
+    "g_pSmallAlliedIcon": "0x802c52f0",
+    "g_pSmallJapaneseIcon": "0x802c52f4",
+    "timestampFont": "0x802c5330"
+  },
+  "local_externals": [
+    "bReady",
+    "timestampFont"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "HeadsUpDisplay.cpp",
+  "original_file_index": 1509
+}

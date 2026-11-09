@@ -13,6 +13,17 @@ import test_explosion_grenade as ppc
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / "build/comparisons"
+PROMOTED = {
+    "scene_static_init": "scene_StaticObjectInit",
+    "scene_static_anim_attempt": "scene_StaticObjectMotionAttempt",
+    "scene_tank_add_weapon": "scene_TankObjectAddWeapon",
+}
+
+
+def native_directory(unit):
+    if unit in PROMOTED:
+        return ROOT / "build/reconstruction/units" / PROMOTED[unit]
+    return BASE / ("compare_" + unit)
 
 
 class Run(ppc.Run):
@@ -80,7 +91,7 @@ class Run(ppc.Run):
 
 def compare(unit, case, body):
     original = ppc.normalized(body(Run(), case))
-    compiled = ppc.normalized(body(Run("compare_" + unit), case))
+    compiled = ppc.normalized(body(Run(native_directory(unit)), case))
     assert original == compiled, (unit, case, original, compiled)
     return original
 
@@ -550,9 +561,14 @@ class ShortlistComparisons(unittest.TestCase):
             raise unittest.SkipTest("Install optional unicorn for isolated PPC checks")
         if (
             not (ROOT / "orig/GR8E69/MOH3RDVD.ELF").exists()
-            or not (BASE / "compare_scene_tank_add_weapon/compiled.elf").exists()
+            or not (BASE / "compare_script_vibration/compiled.elf").exists()
+            or any(
+                not (native_directory(u) / "compiled.elf").exists() for u in PROMOTED
+            )
         ):
-            raise unittest.SkipTest("Run comparisons.py with the pinned original first")
+            raise unittest.SkipTest(
+                "Run reconstruct.py and comparisons.py with the pinned original first"
+            )
         _, ppc.original = ppc.load_target()
         ppc.symbols = {s["name"]: s for s in ppc.original.symbols() if s["section"]}
 

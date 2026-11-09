@@ -1,0 +1,44 @@
+{
+  "id": "sound_SNDI_cos",
+  "source": "src/sound/ea/SNDI_cos.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80226a04",
+      "size": 152
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bfb60",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDI_cos__Ff",
+      "address": "0x80226a04",
+      "size": 152,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "SNDI_cos.c",
+  "original_file_index": 3201
+}

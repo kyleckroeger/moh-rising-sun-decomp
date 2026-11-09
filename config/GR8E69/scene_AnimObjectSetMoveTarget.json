@@ -1,0 +1,48 @@
+{
+  "id": "scene_AnimObjectSetMoveTarget",
+  "source": "src/scene/AnimObjectSetMoveTarget.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800a3608",
+      "size": 728
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029E8D0",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetMoveTarget__11CAnimObjectRC8CVector3",
+      "address": "0x800a3608",
+      "size": 728,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DetermineLocomotionType__11CAnimObjectfQ211CAnimObject14LocomotionType": "0x800a2a10",
+    "GetPosition__C9CAITarget": "0x800eea68",
+    "HasValidTarget__C12CAITargeting": "0x800edb64",
+    "atan2f": "0x8026fa5c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "anim_obj.cpp",
+  "original_file_index": 831
+}

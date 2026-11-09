@@ -1,0 +1,65 @@
+{
+  "id": "pum_b",
+  "source": "src/ui/pum_b.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80179a68",
+      "size": 1068
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetOldest__19PopUpMessageHandlerUc",
+      "address": "0x80179a68",
+      "size": 304,
+      "binding": 1
+    },
+    {
+      "name": "GetNewest__19PopUpMessageHandlerUc",
+      "address": "0x80179b98",
+      "size": 332,
+      "binding": 1
+    },
+    {
+      "name": "CheckForEmptySlot__19PopUpMessageHandlerUc",
+      "address": "0x80179ce4",
+      "size": 164,
+      "binding": 1
+    },
+    {
+      "name": "UpdateScroll__19PopUpMessageHandlerUcs",
+      "address": "0x80179d88",
+      "size": 268,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Available__12PopUpMessage": "0x80178600",
+    "Get_property__12PopUpMessage": "0x80178620",
+    "Get_top__12PopUpMessage": "0x80178658",
+    "Get_viewportID__12PopUpMessage": "0x80178630",
+    "MoveTop__12PopUpMessage": "0x80178668",
+    "Reset__12PopUpMessage": "0x80178418",
+    "Set_property__12PopUpMessageUc": "0x80178584",
+    "maxPopupsPerViewport": "0x802c5998"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "pumhandler.cpp",
+  "original_file_index": 1539
+}

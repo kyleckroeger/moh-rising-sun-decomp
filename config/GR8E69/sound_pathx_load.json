@@ -1,0 +1,73 @@
+{
+  "id": "sound_pathx_load",
+  "source": "src/sound/ea/pathx_load.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801580a4",
+      "size": 476
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a9d24",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "PATHX_igetslot__Fv",
+      "address": "0x801580a4",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "PATHX_iloadbank__FiPcT1",
+      "address": "0x801580d8",
+      "size": 224,
+      "binding": 1
+    },
+    {
+      "name": "PATHX_iloadfile__FPc",
+      "address": "0x801581b8",
+      "size": 144,
+      "binding": 1
+    },
+    {
+      "name": "PATHX_isynctask__Fii",
+      "address": "0x80158248",
+      "size": 56,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FILESYS_closesync": "0x80208b7c",
+    "FILESYS_opensync": "0x80208abc",
+    "FILESYS_readsync": "0x80208b2c",
+    "FILE_size": "0x8020b544",
+    "MEM_allocz": "0x8020d278",
+    "MEM_free": "0x8020d2a8",
+    "SNDbankadd": "0x80219610",
+    "SNDbankheadercopy": "0x8021a54c",
+    "SNDbankheadersize": "0x8021a5c0",
+    "pathService": "0x802c4df0",
+    "pathxinfo": "0x803e0cec"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sound.cpp",
+  "original_file_index": 1378
+}

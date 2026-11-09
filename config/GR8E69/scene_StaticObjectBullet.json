@@ -1,0 +1,47 @@
+{
+  "id": "scene_StaticObjectBullet",
+  "source": "src/scene/StaticObjectBullet.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800a9b20",
+      "size": 984
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029ec94",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "HandleBulletCollision__13CStaticObjectP7CBulletRC10CCollision",
+      "address": "0x800a9b20",
+      "size": 984,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSEventGetEventMemoryBlock__FUi": "0x8011dba8",
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "Explode__13CThrownBullet": "0x80153b18"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "static_obj.cpp",
+  "original_file_index": 833
+}

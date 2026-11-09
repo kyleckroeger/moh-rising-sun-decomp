@@ -37,13 +37,28 @@ limit. `CPlayerObject::TargetFind` at `+0x1ca0` has an inline disable, whose nam
 descriptive. `CAnimatedPlayer` is a separate member-only view; `Draw` skips the owning
 player's view by comparing the word at the player's `+0x10d8`.
 
+`CAnimatedPlayer::BeginUpdate` records the previous position, yaw, root-joint rotation and
+position and clears the velocity. `AttemptUpdate` blends toward the joint matrix's rotation
+and position by `dt`, moves the transform unless `attached` (`+0x238`) is set, updates the
+bounding volume and collision-sort extents, clears three record words and copies the muzzle
+state to the held weapon. Rising Sun's yaw handling reduces to zero here. The field names
+follow Frontline where marked in the header and are otherwise descriptive. `PostUpdate` turns
+`flocoHeading` toward the player's heading, raising script events 299 and 300 as the turn
+starts and ends, and rebuilds the transform. `HandleBulletCollision` spawns the `EnemyHit`
+effect aligned to the contact normal for projectile bullets and passes the hit to the player.
+
 `LineAlmostCollided` in `CAnimatedPlayer` is an empty body; its `int` return type follows
 the shared virtual declaration and the original returns nothing meaningful.
 
+`HandleBulletCollision` on the player ignores bullets while bit 29 of the flags is set; for
+projectiles and grenade types 4 and 7 it fills a 32-byte hit event (direction by the two dot
+products at 0.7071), applies invincibility and the one-hit-kills cheat, in multiplayer team
+protection and the contact's location (3x damage for locations 0 and 1), then raises script
+event 40, drives rumble and plays the impact sound. `SetMPShotLocation` still computes the
+location group it once recorded; the switch has no effect in this build, as in the original.
+
 ## Parked
 
-- `GetCurrentBulletSprite`: the wielded-weapon selection loads into `r3` in the original
-  and through `r9` in every tried source (12 instructions differ).
 - `Yaw` and `SetTMLocalToWorld`: see above.
 
 ## Death sequence
@@ -53,3 +68,80 @@ supplied the shape. The timer starts at 180 and counts down at +0xdc0. The multi
 branch of `UpdateDeathSequence` reads a default-constructed matrix that nothing fills in
 this build: Frontline's `GetLookMatrix` call on the killer is gone from Rising Sun, so the
 original reads uninitialized stack here, and the source reproduces that as it stands.
+
+## Respawn
+
+`Respawn` restores the capsule and the box at `+0xe0` (`boxStorage`, kept as raw storage),
+clears the per-life state, reinitializes from the player's `SMPPlayerData` and restarts the
+player. `SMPPlayerData` is named by `InitMultiplayer`'s symbol; its 20-byte slot spacing is
+observed and `restartIndex` is descriptive. `SetBasis`, `SetWidth`, `SetDepth`, `SetHeight`
+and `SetCenter` on `CVolBox` are inferred inlines. A previous weapon no longer current after
+reinitialization is cycled back to by its CRC; `fireDelay` comes from `RESPAWN_FIRE_DELAY`.
+
+## Path movement, constraints and mounted positions
+
+`UpdateMovePath` advances `pathParameter` while bit 19 of the path flags is set, evaluates
+`movePath` at the half step (or integrates the velocity without a path), derives the velocity
+from the new position and builds an orientation from `lookPath`'s tangent or next point.
+`UpdateCollisionVolumes` refreshes the world capsule and collision-sort extents. `Constrain`
+returns 1 at once while bit 14 of the flags, melee immunity or `mmgBlocked` is set; otherwise
+it runs `SatisfyConstraints`, records failure in bit 20, limits the position change to 0.3 per
+frame and recomputes the velocity (cleared on failure). `SetPlayersMountedMGPositions` derives
+the player's transform, camera and mounted gun from the mount matrix through the offsets at
+`+0xea0`, `+0xee0` and `+0xf60`. `SetHealthMax` copies `SMPPlayerData::maxHealth` into the
+script data's health; `SetFinishedLevelData` records a won level. `AimAdjust::Enable` and
+both `LookAtTarget::Enable` overloads clear or set the observed subject; their layouts are
+observed and `time`, `target` and `active` are descriptive. `PostUpdate` repositions a mounted
+gun, updates it, alternates the side bits in `mountedShotSide` and ejects a shell when bit 19 of
+the flags is set.
+
+## Save data and the weapon ring
+
+`StoreSaveData` and `RestoreSaveData` copy health, the current weapon, each map weapon's
+ammunition and selectability and the thrown weapon's ammunition to and from the game settings.
+`CPlayerWeaponObject::IsSelectable` returns `bool`: `StoreSaveData` passes the result to a `bool`
+parameter without normalizing it. `AddPlayerWeapon` allocates a weapon object once per CRC,
+gives it the box volumes at `+0xe0` and `+0x130` and inserts it into the ring at `weaponList`
+in ascending `weaponType`. `CCameraShake::Update` ramps toward the target and restarts with the
+fade time when the duration passes. `CCameraShake::SetShake` (four arguments) and
+`HitPickup` have matching code but stay context: each `.rodata` holds a double literal, and the
+assembler's 8-byte padding of that section cannot verify without neighbouring functions' literals.
+
+## Look-at trigger and aim adjustment
+
+`HandleLookatTrigger` stores the trigger, its first value converted from degrees to radians and
+its second value at `+0x1090`, `+0x1094` and `+0x1098`, and clears both values for a null trigger.
+`AimAdjust::UpdatePlayer` does nothing while inactive or when the target is within 5 units of the
+camera. Otherwise it writes the yaw as the arctangent of the flattened target direction's side and
+forward components in the camera's flattened axes, and the pitch as the arcsine of the normalized
+target direction against the camera's upward slot.
+
+`AimAdjust::UpdateTarget` builds a 200-unit line along the camera's forward slot. With no subject it
+walks the German list for the soldier nearest the line within 10 units whose AI status variable 0 is
+positive: a soldier on team 2 becomes the subject at once, any other only if no team 2 soldier was
+found. With no target it casts a fiber into the world and aims at the hit point; with a target it
+keeps following the subject until the subject dies or the target leaves the line or strays more than
+20 units. The object begins like an `IObserver`, so the subject link and `AddObserver` use the prefix;
+whether the class really derives from it is unverified.
+
+## Multiplayer setup
+
+`InitMultiplayer` copies the team to the AI object. On a respawn it empties and refills the grenade
+and every weapon in the level's weapon set, sets each weapon's enable bit from the selectable table
+and re-registers the weapons with the body. Otherwise it stores the name (ten characters, trailing
+spaces and nulls cleared) and the team word, creates the body from the level's body table if
+needed, adds the weapons and grenade, registers them with the body, enables the selectable ones and
+raises script event 164 and `CycleWeapon(1, 0)` when the set is not empty. The weapon-set table
+layouts are descriptive views of the level resource.
+
+## Per-frame commit
+
+`CommitUpdate` first places the multiplayer body at the transform (lifted by `g_MPAnimMeshZOffset`)
+and gives it its locomotion parameters: the horizontal distance moved since the last frame, and a
+direction type from the dot and cross of the normalised front and movement (1 forward, 4 backward, 2
+or 3 to the sides, 0 below `STAND_TO_WALK_TRANSITION`). With bit 9 of the path flags clear it casts a
+fiber from 0.39 above the position (the peek base while peeking) straight down against the scene's
+world volume; on a hit it stops the player, sets bit 30 and reruns `AttemptUpdate(0)`. With bit 9 set
+it updates the embedded camera from the camera matrix and the transform, the aim adjuster and the
+current weapon's transforms and muzzle flash, and points the thrown weapon along the camera. Then it
+records the position and the capsule's end height.

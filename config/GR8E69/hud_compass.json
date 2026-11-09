@@ -1,0 +1,61 @@
+{
+  "id": "hud_compass",
+  "source": "src/ui/hud_compass.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-ffast-math"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80175524",
+      "size": 1056
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802acd20",
+      "size": 64
+    }
+  ],
+  "functions": [
+    {
+      "name": "UpdateCompassRotation__15CHeadsUpDisplayP13CPlayerObjectf",
+      "address": "0x80175524",
+      "size": 780,
+      "binding": 1
+    },
+    {
+      "name": "GetCompassPosition__15CHeadsUpDisplayRfT1f",
+      "address": "0x80175830",
+      "size": 276,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_7CScreen.m_2dXDisp": "0x802c1b98",
+    "_7CScreen.m_2dXScale": "0x802c1b90",
+    "_7CScreen.m_2dYDisp": "0x802c1b9c",
+    "_7CScreen.m_2dYScale": "0x802c1b94",
+    "_7CScreen.m_sHeight": "0x80452578",
+    "acosf": "0x8026f5e4",
+    "floorf": "0x80270940",
+    "g_bInMultiplayerMode": "0x802c1b30",
+    "g_viewport": "0x803e71c0",
+    "sqrtf": "0x80270538"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "HeadsUpDisplay.cpp",
+  "original_file_index": 1509
+}

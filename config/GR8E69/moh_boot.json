@@ -1,0 +1,94 @@
+{
+  "id": "moh_boot",
+  "source": "src/game/moh_boot.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800599dc",
+      "size": 508
+    }
+  ],
+  "functions": [
+    {
+      "name": "LoadModule__11MohLoaderGcPCvUl",
+      "address": "0x800599dc",
+      "size": 244,
+      "binding": 1
+    },
+    {
+      "name": "GcDisplayLoadingScreen__FPCc",
+      "address": "0x80059ad0",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "InitREAL__Fv",
+      "address": "0x80059b18",
+      "size": 136,
+      "binding": 1
+    },
+    {
+      "name": "ShutdownREAL__Fv",
+      "address": "0x80059ba0",
+      "size": 56,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "ASYNCFILE_init": "0x802092a0",
+    "ASYNCFILE_restore": "0x80209374",
+    "CPU_detect": "0x80217794",
+    "CheckDiscDriveSyncTask__Fii": "0x80058794",
+    "DCFlushRangeNoSync": "0x80254634",
+    "DWI_alloc": "0x801a8670",
+    "DWI_free": "0x801a8894",
+    "DrawLoadingScreen__13CStaticScreenR7CSprite": "0x801a0714",
+    "FILESYS_init": "0x802070bc",
+    "FILESYS_restore": "0x8020728c",
+    "FILESYS_setmemcallbacks": "0x802087d4",
+    "FONT_restore": "0x80206324",
+    "GXAbortFrame": "0x802449dc",
+    "ICInvalidateRange": "0x8025468c",
+    "InitClass__12CMoviePlayer": "0x801a1fa4",
+    "OSResetSystem": "0x80258920",
+    "PAD_init": "0x80216e24",
+    "PAD_restore": "0x80216e44",
+    "PAD_update": "0x80216f28",
+    "PPCSync": "0x80231650",
+    "REAL_restore": "0x80217664",
+    "SYNCTASK_add": "0x80217ff4",
+    "SYNCTASK_del": "0x802180b8",
+    "SYNCTASK_init": "0x80217fc4",
+    "SetReturningFlag__11MohLoaderGc": "0x80059454",
+    "THREAD_init": "0x80217b1c",
+    "THREAD_restore": "0x80217b44",
+    "TIMER_init": "0x8021781c",
+    "TIMER_restore": "0x80217928",
+    "VIFlush": "0x80260860",
+    "VISetBlack": "0x802609fc",
+    "VIWaitForRetrace": "0x8025f7dc",
+    "_._7CSprite": "0x8005d1f4",
+    "__7CSpritePCcQ27CSprite15ESpriteLoadType": "0x8005d140",
+    "g_StaticScreen": "0x802f9888",
+    "memcpy": "0x802665e8",
+    "memset": "0x80266778"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Moh3.cpp",
+  "original_file_index": 384
+}

@@ -1,0 +1,42 @@
+{
+  "id": "toilet_mvd",
+  "source": "src/game/toilet_mvd.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a9e3c",
+      "size": 140
+    }
+  ],
+  "functions": [
+    {
+      "name": "TLT_LoadFromMVDBigFile__FPCcPiPb",
+      "address": "0x801a9e3c",
+      "size": 140,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BIG_locateentryz": "0x8020bb00",
+    "BIG_locatez": "0x8020c020",
+    "TLT_InsertFileInMVDRepository__FPc": "0x801a9fa0",
+    "TLT_IsFileInMVDRepository__FPc": "0x801a9ec8",
+    "g_toilet": "0x803f5360"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

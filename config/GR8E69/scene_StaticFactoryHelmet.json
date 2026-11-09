@@ -1,0 +1,55 @@
+{
+  "id": "scene_StaticFactoryHelmet",
+  "source": "src/scene/StaticFactoryHelmet.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800ceb18",
+      "size": 208
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a1380",
+      "size": 40
+    }
+  ],
+  "functions": [
+    {
+      "name": "DoesHelmetTypeStopBullets__20CStaticObjectFactoryi",
+      "address": "0x800ceb18",
+      "size": 208,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CompareStaticObjectDefinitions__FPCvT0": "0x800cc8d8",
+    "DebugMsg__FPCce": "0x80279094",
+    "bsearch": "0x80264f3c",
+    "g_numTemplates": "0x802c26a0",
+    "g_pStaticObjectTemplates": "0x802c269c",
+    "ptr__14CAnyStaticMesh": "0x80283808"
+  },
+  "local_externals": [
+    "CompareStaticObjectDefinitions__FPCvT0",
+    "g_numTemplates",
+    "g_pStaticObjectTemplates"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "staticobjfactory.cpp",
+  "original_file_index": 924
+}

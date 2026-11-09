@@ -1,0 +1,52 @@
+{
+  "id": "scene_StaticObjectAnimBegin",
+  "source": "src/scene/StaticObjectAnimBegin.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800a6724",
+      "size": 1380
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029eba8",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "BeginAnimMotionUpdate__13CStaticObjectf",
+      "address": "0x800a6724",
+      "size": 1380,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetPlayer__C6CScenei": "0x8014ac08",
+    "Multiply__11CQuaternionT0": "0x8007d260",
+    "Rotate__11CQuaternionR8CVector3RC8CVector3": "0x8007d3b4",
+    "SetFromMatrix__11CQuaternionRC7CMatrix": "0x8007ce2c",
+    "Slerp__11CQuaternionT0T0f": "0x8007d0ec",
+    "TriggerScriptEvent__13CStaticObjectUsPvb": "0x800aa98c",
+    "g_scene": "0x803e6d90",
+    "sqrtf": "0x80270538"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "static_obj.cpp",
+  "original_file_index": 833
+}

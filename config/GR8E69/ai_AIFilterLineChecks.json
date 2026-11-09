@@ -1,0 +1,66 @@
+{
+  "id": "ai_AIFilterLineChecks",
+  "source": "src/ai/AIFilterLineChecks.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d88a4",
+      "size": 1456
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a22a8",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "CheckVisionLineToEnvironment__15CAIFilterGlobalRC8CVector3T1P10ISceneNodeT3",
+      "address": "0x800d88a4",
+      "size": 480,
+      "binding": 1
+    },
+    {
+      "name": "CheckCollisionLineToEnvironment__15CAIFilterGlobalRC8CVector3T1P10ISceneNodeT3",
+      "address": "0x800d8a84",
+      "size": 468,
+      "binding": 1
+    },
+    {
+      "name": "GetCollisionDistLineToEnvironment__15CAIFilterGlobalRC8CVector3T1P15CAIFilterObjectf",
+      "address": "0x800d8c58",
+      "size": 508,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Set__6CLine3RC8CVector3T1": "0x80281690",
+    "VisitAllStaticObjects__6CSceneRQ23dwit8IVisitor1Z10ISceneNode": "0x80147a1c",
+    "_._10CCollision": "0x80133d10",
+    "_._9CVolFiber": "0x80140e54",
+    "__10CCollision": "0x80133bd4",
+    "__9CVolFiberRC6CLine3": "0x80140db0",
+    "__9CVolFiberRC9CVolFiber": "0x80140ca0",
+    "_vt.24MechanicCollisionChecker": "0x802e7850",
+    "_vt.Q23dwit8IVisitor1Z10ISceneNode": "0x802e18a8",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIFilter.cpp",
+  "original_file_index": 970
+}

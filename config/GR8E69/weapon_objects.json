@@ -1,0 +1,58 @@
+{
+  "id": "weapon_objects",
+  "source": "src/weapons/WeaponObjects.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/stlport-runtime",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8014f87c",
+      "size": 1512
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a905c",
+      "size": 40
+    }
+  ],
+  "functions": [
+    {
+      "name": "LoadWeaponObjects__14CWeaponFactory",
+      "address": "0x8014f87c",
+      "size": 1512,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "Init__11CStaticMeshPvb": "0x8019d390",
+    "TLT_LoadFromRepository__FPCcPiPb": "0x801a9c88",
+    "_M_erase__Q24_STLt8_Rb_tree5ZQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZP11CStaticMeshZQ24_STLt10_Select1st1ZQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZP11CStaticMeshZQ24_STLt4less1ZQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZQ24_STLt9allocator1ZQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZP11CStaticMeshPQ24_STLt13_Rb_tree_node1ZQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZP11CStaticMesh": "0x8028a91c",
+    "_M_increment__Q24_STLt10_Rb_global1ZbPQ24_STL18_Rb_tree_node_base": "0x8027a1dc",
+    "__Q24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcPCcRCQ24_STLt9allocator1Zc": "0x8027e2bc",
+    "__Q24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcRCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1Zc": "0x8027e344",
+    "__builtin_delete": "0x801a8990",
+    "__builtin_new": "0x801a8910",
+    "_vt.11CStaticMesh": "0x802ebd48",
+    "insert_unique__Q24_STLt8_Rb_tree5ZQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZP11CStaticMeshZQ24_STLt10_Select1st1ZQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZP11CStaticMeshZQ24_STLt4less1ZQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZQ24_STLt9allocator1ZQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZP11CStaticMeshGQ24_STLt17_Rb_tree_iterator2ZQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZP11CStaticMeshZQ24_STLt16_Nonconst_traits1ZQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZP11CStaticMeshRCQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZP11CStaticMesh": "0x8028acc0",
+    "memcmp": "0x80266558"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "weaponfactory.cpp",
+  "original_file_index": 1364
+}

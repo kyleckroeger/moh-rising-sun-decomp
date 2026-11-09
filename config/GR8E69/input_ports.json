@@ -1,0 +1,61 @@
+{
+  "id": "input_ports",
+  "source": "src/game/input_ports.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d6ea4",
+      "size": 172
+    }
+  ],
+  "functions": [
+    {
+      "name": "Shutdown__13CInputManager",
+      "address": "0x800d6ea4",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "SetController__13CInputManagerUcSc",
+      "address": "0x800d6ea8",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "SetKeymap__13CInputManagerUcP6KEYMAP",
+      "address": "0x800d6ed0",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "GetValue__C13CInputManagerUcUs",
+      "address": "0x800d6f08",
+      "size": 72,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetEventTable__C14CDeviceManagerUc": "0x800d67e8",
+    "SetPort__14CDeviceManagerUcSc": "0x800d6634",
+    "g_bCoopMultiplayer": "0x802c1b2c",
+    "g_bInMultiplayerMode": "0x802c1b30"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "input.cpp",
+  "original_file_index": 951
+}

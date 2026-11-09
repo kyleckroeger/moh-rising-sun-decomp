@@ -4,8 +4,7 @@ The loader fragments reconstruct symbol-pool insertion/removal and lifecycle,
 constructor registration, dynamic-loader lifecycle, constructor dispatch, symbol
 inspection and lookup iteration. They adapt the public NFS Most Wanted
 reconstruction to Rising Sun's older `EAGL` interface. The remaining initializer,
-resolver and unfinished lookup bodies stay original context. The initializer and
-two lookup bodies now have maintained partial source, described below. Current accepted
+resolver and unfinished lookup bodies stay original context. Current accepted
 ranges are recorded in the project manifest and verified progress snapshot.
 
 ## Reference and storage evidence
@@ -62,6 +61,56 @@ original `dlopen.cpp` file record. All generated strings, code, symbols and
 section boundaries are checked, with complete-image verification required before
 publication. No instruction substitutions or clipped constant pools are used.
 The game's loading and destructor path has not been exercised in Dolphin.
+
+## Toilet
+
+`Toilet` is the game's file loader, with one global instance, `g_toilet`. The image records no
+name for its source file. `include/game/Toilet.h` holds a view of the class: names of the class,
+functions and global come from the symbol table, and member names are inferred from use.
+
+`TLT_CloseFile` returns without freeing when the pointer lies inside the level big file or either
+of the two other big-file buffers at `+0x120` and `+0x128`, and otherwise passes it to `DWI_free`.
+A level-contents entry is 12 bytes: a type, an unknown word and a table of value records at `+8`.
+`TLT_FindNextResourceByType` walks these entries from the one after its argument, or from the
+start for null. `GetCompartmentNameFromIndex` looks the index up in resource type 0, comparing the
+value of table record 1, and formats record 0's value with `"|%s"`. Each compartment has three
+consecutive indices: index * 3 is its collision file, + 1 its visual file and + 2 its relocation
+file. A missing compartment big file or entry makes the size queries return -1.
+`TLT_Async_Load` runs one of 20 state functions from `g_ToiletLoadStates` and adds its result to
+the state. Its progress denominator is 21 for missions 2 through 4 and 22 for the others.
+
+Not reconstructed: the class constructor and language and system-file setup,
+`TLT_FindNextResourceByTypeAndVal` (6 differences, all parameter registers), and the two functions
+that use the file-local `s_ignoreLoadFileNormalLocked` (`TLT_ForceLoadFileNormalLocked`,
+`TLT_LoadFileNormal`), plus the repository functions after them. The extension search walks the
+level big file with `BIG_locateentry` and compares each entry name's tail case-insensitively.
+
+## MohLoader
+
+`MohLoader` and `MohLoaderGc` hold the console-side start-up state. `g_pPersistent` points to a
+block that survives a module reload: game data magic `0xc0de0101` at `+0`, returning magic
+`0xc0de0bac` at `+4`, a reset button flag at `+8` and the game settings at `+0xc`. Without the
+returning magic, `InstanceGc` clears the game data magic and reset flag first. The constructor
+clears the game settings unless the game data magic is valid.
+
+`LoadModule(const void *, unsigned long)` copies a loaded module's sections from its section table,
+zeroes each section first, flushes instruction and data caches, and jumps to the entry point at
+`+0x18`.
+
+Not reconstructed: `CheckForControllerReset` (function-local statics), the path `LoadModule`, and
+the two compiler-placed destructors, which are declared but emitted far from these units.
+
+`LevelExistsOnCurrentDisc` (`drivecheck.cpp`) asks DVD for `data/%d/%d_%d/comp.viv`, and
+`GetLoadscreenId` (`LoadImage.cpp`) picks a load screen from its flags. From `Moh3.cpp`,
+`RestoreCheats` reapplies the option cheats when game data is valid and the profile byte at
+`+0x31664` is 1, and `OnePassScanTask::Execute` records that the scan ran. `ShutdownCORE`, `InitCORE` and `RestartGame` are private to the file and
+need `main` in the same unit, because an unreferenced private function is not emitted.
+
+## CMemoryCard
+
+`CMemoryCard` (a `EALA::Resource`, with the table pointer at `+4`) loads two localization files at
+construction and creates locale data from each. The small reconstructed accessors read file globals.
+The destructor, `Display` and the rest of the class remain original.
 
 ## Maintained partial loading functions
 

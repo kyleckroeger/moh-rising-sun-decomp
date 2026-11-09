@@ -10,6 +10,17 @@ struct ProgressRecord {
     unsigned char unknown_c[0xc598 - 0xc];
 };
 
+// The per-player multiplayer entry; 20 bytes, the class tag is from InitMultiplayer's
+// symbol. restartIndex (first byte, RestartPlayer's argument) is a descriptive name.
+struct SMPPlayerData {
+    unsigned char restartIndex; // +0x00; InitMultiplayer's team.
+    char bodyIndex;     // +0x01
+    char name[11];      // +0x02
+    unsigned char maxHealth;    // +0x0d; SetHealthMax's value.
+    unsigned char unknown_e[2];
+};
+struct SMPPlayerSlot { int unknown_0; SMPPlayerData data; };
+
 // Observed fields of the profile the settings object points to.
 struct GameProfile {
     unsigned char unknown_0[0xbf54];
@@ -17,7 +28,11 @@ struct GameProfile {
     unsigned char unknown_3101c[0x31664 - 0x3101c];
     unsigned char mission;              // +0x31664
     unsigned char level;                // +0x31665
-    unsigned char unknown_31666[0x321e0 - 0x31666];
+    unsigned char unknown_31666[0x32020 - 0x31666];
+    SMPPlayerSlot players[4];           // +0x32024; indexed by the player's slot (count inferred).
+    unsigned char unknown_32070[0x32074 - 0x32070];
+    int field_32074;                    // +0x32074; a team setting CPlayerObject::HandleBulletCollision requires non-negative for friendly fire protection.
+    unsigned char unknown_32078[0x321e0 - 0x32078];
     signed char currentRecord;          // +0x321e0
 };
 
@@ -28,9 +43,25 @@ class CMatrix;
 class CVector3;
 class CQuaternion;
 // Member view of the game-settings singleton; only the profile pointer is named.
+class CWeapon;
 class CGameSettings {
   public:
+    void InitCheatsFromOptions();
+    void SetPlayersFinishedLevelSuccessfully(int, int);
+    void SetCurrentHealth(float, int);
+    float GetCurrentHealth(int) const;
+    void SetCurrentWeapon(CWeapon *, int);
+    void GetCurrentWeapon(int &, int);
+    void SetCurrentAmmo(int, unsigned int, unsigned int, int);
+    void GetCurrentAmmo(int, unsigned int &, unsigned int &, int) const;
+    void SetIfCurrentWeaponSelectable(int, bool, int);
+    int GetIfCurrentWeaponSelectable(int, int) const;
+    void SetPlayersFinishedLevelHealth(int, int, float);
     GameProfile *profile;
+    unsigned char unknown_04[0xa8 - 4];
+    int unknown_a8; // Read as a copy by the pop-up message handler.
+    int unknown_ac;
+    int unknown_b0; // Compared with 1 before the language is used for loading screens.
     int SerializingIn() const;
     int SerializingOut() const;
     void SerializeDelta(const CMatrix &, CMatrix &);
@@ -55,7 +86,8 @@ struct CheatsView {
     int infiniteAmmo; // +4; CWeapon::Update refills an empty reserve. Name from Frontline.
     unsigned char unknown_8[0x1c - 8];
     int keepGrenadeSpeed; // +0x1c; name from Frontline.
-    unsigned char unknown_20[0x28 - 0x20];
+    int oneShotKillsEnemies; // +0x20; a soldier's bullet damage becomes 1000. Descriptive.
+    int headShotsOnly;       // +0x24; name from Frontline.
     int oneHitKills; // +0x28; damage becomes 1000 in CExplosion::Visit. Name from Frontline.
     unsigned char unknown_2c[0x34 - 0x2c];
     int allReplayItems;

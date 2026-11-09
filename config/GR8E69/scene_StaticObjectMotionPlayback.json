@@ -1,0 +1,48 @@
+{
+  "id": "scene_StaticObjectMotionPlayback",
+  "source": "src/scene/StaticObjectMotionPlayback.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800a9170",
+      "size": 532
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029ec48",
+      "size": 28
+    }
+  ],
+  "functions": [
+    {
+      "name": "StartMotionPlayback__13CStaticObjectii12EBSEventEnum",
+      "address": "0x800a9170",
+      "size": 532,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetBool__C13TriggerObjectPCc": "0x8012298c",
+    "GetMatrix__C11CQuaternionR7CMatrix": "0x8007cd64",
+    "SetFromMatrix__11CQuaternionRC7CMatrix": "0x8007ce2c",
+    "SetPos__7CMatrixRC8CVector3": "0x8007ae7c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "static_obj.cpp",
+  "original_file_index": 833
+}

@@ -14,7 +14,7 @@ void BIFunc_MechSetPathFlag(int **stack, void *object) {
     switch (flag) {
     case 0:
     default:
-        mech->pathScale = value * pathScaleFactor[0];
+        mech->pathTurnSlowdown = value * pathScaleFactor[0];
         break;
     case 1:
         mech->flags.pathFlag1 = value != 0;

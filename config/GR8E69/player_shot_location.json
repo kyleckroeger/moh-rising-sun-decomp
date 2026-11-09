@@ -1,0 +1,43 @@
+{
+  "id": "player_shot_location",
+  "source": "src/player/PlayerShotLocation.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800b908c",
+      "size": 148
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029f4f8",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetMPShotLocation__13CPlayerObjectP32BS_STRUCT_HitByBulletInfo_struct",
+      "address": "0x800b908c",
+      "size": 148,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}

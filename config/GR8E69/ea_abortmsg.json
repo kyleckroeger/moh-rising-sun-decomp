@@ -1,0 +1,62 @@
+{
+  "id": "ea_abortmsg",
+  "source": "src/ea/abortmsg.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80218268",
+      "size": 476
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bf6f8",
+      "size": 36
+    }
+  ],
+  "functions": [
+    {
+      "name": "REAL_abortmessage",
+      "address": "0x80218268",
+      "size": 220,
+      "binding": 1
+    },
+    {
+      "name": "SYSTEM_abortmessage",
+      "address": "0x80218344",
+      "size": 256,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "PRINT_string": "0x80218c4c",
+    "REAL_exit": "0x802176bc",
+    "REALabortfilename": "0x804512f0",
+    "REALabortlinenum": "0x804512f4",
+    "REALabortmessage": "0x804512d4",
+    "vsprintf": "0x80264dfc"
+  },
+  "sda_externals": [
+    "REALabortfilename",
+    "REALabortlinenum",
+    "REALabortmessage"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "abortmsg.cpp",
+  "original_file_index": 2999
+}

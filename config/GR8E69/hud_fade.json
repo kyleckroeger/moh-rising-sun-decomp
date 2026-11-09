@@ -1,0 +1,59 @@
+{
+  "id": "hud_fade",
+  "source": "src/ui/hud_fade.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-ffast-math"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80177c24",
+      "size": 236
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802acf14",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "FadeTheXFilesText__Ff",
+      "address": "0x80177c24",
+      "size": 204,
+      "binding": 1
+    },
+    {
+      "name": "AddHitDirection__15CHeadsUpDisplayUi",
+      "address": "0x80177cf0",
+      "size": 32,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "ChangeHitStatus__15CHeadsUpDisplayUi": "0x8017659c",
+    "SetColor__5CFontG6CColor": "0x800674f8",
+    "XFiles": "0x803e7b40",
+    "timestampFont": "0x802c5330"
+  },
+  "local_externals": [
+    "XFiles",
+    "timestampFont"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "HeadsUpDisplay.cpp",
+  "original_file_index": 1509
+}

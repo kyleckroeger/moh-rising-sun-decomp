@@ -1,0 +1,51 @@
+{
+  "id": "gchw_vd_draw",
+  "source": "src/ea/gchw_vd_draw.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801b48f0",
+      "size": 112
+    }
+  ],
+  "functions": [
+    {
+      "name": "Draw__7GCHW_VDPQ24RCMP5FRAME",
+      "address": "0x801b48f0",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "ReDraw__7GCHW_VD",
+      "address": "0x801b493c",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "CompleteDraw__7GCHW_VD",
+      "address": "0x801b495c",
+      "size": 4,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "ReleaseFrame__Q24RCMP7DECODERPQ24RCMP5FRAME": "0x801b10c0",
+    "iDraw__7GCHW_VD": "0x801b43b8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

@@ -1,0 +1,58 @@
+{
+  "id": "player_constrain",
+  "source": "src/player/PlayerConstrain.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800b324c",
+      "size": 932
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029f1a4",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "UpdateCollisionVolumes__13CPlayerObject",
+      "address": "0x800b324c",
+      "size": 144,
+      "binding": 1
+    },
+    {
+      "name": "Constrain__13CPlayerObjectf",
+      "address": "0x800b32dc",
+      "size": 788,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FastInverse__7CMatrixRC7CMatrix": "0x8007b164",
+    "GetExtents__C11CVolCapsuleR8CVector3T1": "0x80144918",
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "SatisfyConstraints__20CClsnConstraintsBaseR7CMatrixfff": "0x80134628",
+    "SetPos__7CMatrixRC8CVector3": "0x8007ae7c",
+    "TransformedCopy__11CVolCapsuleRC7IVolumeRC7CMatrix": "0x8014241c",
+    "_7CMatrix.s_ClassInit": "0x802c2100",
+    "sqrtf": "0x80270538"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}

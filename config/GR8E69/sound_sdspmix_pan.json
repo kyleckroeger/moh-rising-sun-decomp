@@ -1,0 +1,52 @@
+{
+  "id": "sound_sdspmix_pan",
+  "source": "src/sound/ea/sdspmix_pan.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802238e4",
+      "size": 216
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bfa10",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDDRV_DSPMixerSetPan__FP6_AXVPBPfUsi",
+      "address": "0x802238e4",
+      "size": 216,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDDRV_dolbypl2balances": "0x802d56a0",
+    "__MIXChannel": "0x8041d134",
+    "numoutputchannels": "0x8041e434"
+  },
+  "local_externals": [
+    "__MIXChannel",
+    "numoutputchannels"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sdspmix.c",
+  "original_file_index": 3157
+}

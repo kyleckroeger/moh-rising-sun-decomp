@@ -1,0 +1,38 @@
+{
+  "id": "mesh_center",
+  "source": "src/staticmesh/mesh_center.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8019f010",
+      "size": 84
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetCenter__C11CStaticMeshR8CVector3",
+      "address": "0x8019f010",
+      "size": 84,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "staticmesh.cpp",
+  "original_file_index": 2056
+}

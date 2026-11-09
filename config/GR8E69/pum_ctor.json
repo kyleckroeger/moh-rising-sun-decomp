@@ -1,0 +1,85 @@
+{
+  "id": "pum_ctor",
+  "source": "src/ui/pum_ctor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801787c4",
+      "size": 1084
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802ad180",
+      "size": 224
+    }
+  ],
+  "functions": [
+    {
+      "name": "__19PopUpMessageHandlerPcN21",
+      "address": "0x801787c4",
+      "size": 928,
+      "binding": 1
+    },
+    {
+      "name": "_._19PopUpMessageHandler",
+      "address": "0x80178b64",
+      "size": 156,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "GetDepthBufferMax__C7CScreen": "0x8005bb5c",
+    "GetRenderedSize__5CFontPCcRfT2": "0x800675b4",
+    "Load__17CUserMessageTablePcN21": "0x8017b948",
+    "MP_PUM_TEXT_SCALE_X_2P": "0x802c5980",
+    "MP_PUM_TEXT_SCALE_X_4P": "0x802c5988",
+    "MP_PUM_TEXT_SCALE_Y_2P": "0x802c5984",
+    "MP_PUM_TEXT_SCALE_Y_4P": "0x802c598c",
+    "SetColor__5CFontG6CColor": "0x800674f8",
+    "SetDepth__5CFontUi": "0x80067560",
+    "SetScale__5CFontff": "0x80067590",
+    "ShutdownPopUpMessageHandler__19PopUpMessageHandler": "0x80178c24",
+    "TLT_FindNextResourceByType__F13TLTResourceIDP24LevelFileContentsStruct_": "0x801a9690",
+    "TLT_LoadFileFromLevelBigFile__FPCcPi": "0x801a9634",
+    "_._12PopUpMessage": "0x801783f0",
+    "_._17CUserMessageTable": "0x8017b908",
+    "_7CScreen.m_sHeightScale": "0x80452580",
+    "_7CScreen.m_sWidthScale": "0x8045257c",
+    "_7CScreen.m_spScreen": "0x802c1b7c",
+    "__12PopUpMessage": "0x80178294",
+    "__17CUserMessageTable": "0x8017b8e8",
+    "__5CFontPc": "0x80066e14",
+    "__7CSpritePCcQ27CSprite15ESpriteLoadType": "0x8005d140",
+    "__builtin_delete": "0x801a8990",
+    "g_GameSettings": "0x802f80c8",
+    "g_NumPlayers": "0x802c1b3c",
+    "g_bCoopMultiplayer": "0x802c1b2c",
+    "g_bInMultiplayerMode": "0x802c1b30",
+    "maxPopupsPerViewport": "0x802c5998"
+  },
+  "local_externals": [
+    "MP_PUM_TEXT_SCALE_X_2P",
+    "MP_PUM_TEXT_SCALE_X_4P",
+    "MP_PUM_TEXT_SCALE_Y_2P",
+    "MP_PUM_TEXT_SCALE_Y_4P"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "pumhandler.cpp",
+  "original_file_index": 1539
+}

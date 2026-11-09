@@ -1,0 +1,69 @@
+{
+  "id": "light_class",
+  "source": "src/lighting/light_class.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8012fe60",
+      "size": 180
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a797c",
+      "size": 20
+    }
+  ],
+  "functions": [
+    {
+      "name": "InitClass__6CLightP6CScene",
+      "address": "0x8012fe60",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "ShutdownClass__6CLight",
+      "address": "0x8012feac",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "ResetClass__6CLight",
+      "address": "0x8012feec",
+      "size": 40,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "InitClass__17CAnimLightManagerP6CScene": "0x801310c8",
+    "RegisterVar__Q24EAGL13DynamicLoaderPCcPv": "0x801eb030",
+    "ResetClass__17CAnimLightManager": "0x801312dc",
+    "ShutdownClass__17CAnimLightManager": "0x80131220",
+    "UnRegisterVar__Q24EAGL13DynamicLoaderPCc": "0x801eb060",
+    "g_AnimLightManager": "0x8032d170",
+    "g_MOHLightBlock": "0x8032d1e0",
+    "g_bReady": "0x802c4b50"
+  },
+  "local_externals": [
+    "g_AnimLightManager",
+    "g_MOHLightBlock",
+    "g_bReady"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "light.cpp",
+  "original_file_index": 1286
+}

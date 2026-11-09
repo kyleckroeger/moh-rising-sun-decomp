@@ -1,0 +1,59 @@
+{
+  "id": "device_d",
+  "source": "src/game/device_d.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d6724",
+      "size": 236
+    }
+  ],
+  "functions": [
+    {
+      "name": "UpdateActuators__14CDeviceManagerf",
+      "address": "0x800d6724",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "SetActuatorState__14CDeviceManagerUcUcUcff",
+      "address": "0x800d678c",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "GetEventTable__14CDeviceManagerUc",
+      "address": "0x800d67c0",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "GetEventTable__C14CDeviceManagerUc",
+      "address": "0x800d67e8",
+      "size": 40,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetEventTable__9CGcDevice": "0x800d5d1c",
+    "GetEventTable__C9CGcDevice": "0x800d5d38",
+    "SetActuatorFX__9CGcDeviceUcUcff": "0x800d5d54",
+    "UpdateActuators__9CGcDevicef": "0x800d5ef4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

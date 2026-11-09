@@ -19,11 +19,17 @@
   "sections": [
     {
       "name": ".text",
-      "address": "0x80209d98",
-      "size": 768
+      "address": "0x80209ab4",
+      "size": 1508
     }
   ],
   "functions": [
+    {
+      "name": "parsechunks__FP15STREAMHEADERtag",
+      "address": "0x80209ab4",
+      "size": 740,
+      "binding": 0
+    },
     {
       "name": "opencallback__FiiPv",
       "address": "0x80209d98",
@@ -56,13 +62,13 @@
     "FILESYS_open": "0x802078cc",
     "MUTEX_lock": "0x80217f7c",
     "MUTEX_unlock": "0x80217fa0",
-    "parsechunks__FP15STREAMHEADERtag": "0x80209ab4",
+    "filterchunk__FP15STREAMHEADERtagP14STREAMCHUNKHDR": "0x80209a3c",
     "restartstream__FP15STREAMHEADERtagi": "0x8020a098",
     "strcmp": "0x802669b4",
     "strcpy": "0x80266a7c"
   },
   "local_externals": [
-    "parsechunks__FP15STREAMHEADERtag",
+    "filterchunk__FP15STREAMHEADERtagP14STREAMCHUNKHDR",
     "restartstream__FP15STREAMHEADERtagi"
   ],
   "sda_externals": [],

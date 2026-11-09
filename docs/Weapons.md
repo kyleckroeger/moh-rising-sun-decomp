@@ -35,7 +35,7 @@ scoped views of the chain `RegisterWithAI` walks, and their names are not origin
 
 ## Not reconstructed
 
-`__7CWeapon`, `_._7CWeapon`, `Init`, `Update` and `FireBullet` remain original context.
+`__7CWeapon`, `_._7CWeapon`, `Init` and `FireBullet` remain original context.
 
 ## Player weapon objects and factory
 
@@ -43,8 +43,31 @@ scoped views of the chain `RegisterWithAI` walks, and their names are not origin
 answers whether weapon class 7 has rounds left, otherwise bit 29 of the flags at `+0x3f0`.
 `GetBulletEmitterMatrix` finds the joint `jo_fire` through the skeleton returned by slot 2
 of the subobject at `+0x38` and uses `g_pStaticObjectMuzzleFlashPlayer`.
+`Init(int, int, CPlayerObject *)` creates the weapon through the factory and adds the object
+to the scene. `BeginUpdate` follows the weapon's reserve ammunition in `+0x3f4` outside
+multiplayer; while bit 30 of the flags is set it updates the animation and, unless the player
+hides the weapon, the transforms, the weapon and the muzzle flash. `Draw` runs only for the
+player's own view, honours the delay in `+0x3b0`, complains if the object at `+0x2d8` is null
+and queues `DrawWeapon` in bin 11 with the matrix at `+0xd0` bound. Field names are descriptive.
 `CWeaponFactory::DestroyWeapon` calls `Shutdown` and then `MarkForDestruction(1)`.
 `CWeaponFactory::Init` differs from its original by the scheduling of three argument
 registers around the factory's `Init` call and remains original context.
 `CPlayerWeaponObject::Shoot` matches but stays context: its double and float literals start
 an 8-byte aligned `.rodata` section that ngcas pads past the string the next function owns.
+
+`CWeaponFactory::CreateWeapon` and `CreateWeaponByCRC` inline the object factory's allocator; its
+warning text names it `CGameObjectFactory::AllocateGameObject`. The allocator walks a pool of
+`objectSize + BUFSTART_PADSIZE + BUFEND_PADSIZE` strides for an entry whose id at `+0x08` is zero,
+clears the storage and constructs the weapon in place with no null test. The entry's `+0x04` and
+the first word of the view at weapon `+0x38` link entry and object. `CreateWeaponByCRC` falls back
+to the first table entry for an unknown nonzero CRC and returns null for CRC zero. Field names are
+descriptive.
+
+`CWeaponFactory::LoadWeaponObjects` collects the distinct model names of the property records in a
+local `map<string, CStaticMesh *>`, allocates one `CStaticMesh` per name and then walks the records
+again: the first record with a name loads and initializes the next mesh through
+`TLT_LoadFromRepository` and later records share it through the map. `CStaticMesh`'s default
+constructor is inline here, so the header now defines it.
+
+`CWeaponFactory::DeleteWeaponParameters` frees every record in the property map and clears the
+map's pointers; the map itself stays.

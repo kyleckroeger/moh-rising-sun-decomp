@@ -59,7 +59,10 @@ class CLight;
 class CCollision;
 class CStaticMesh;
 class CTankObject;
-struct MotionFrame;
+struct MotionFrame {
+    CVector3 position;
+    CQuaternion rotation;
+};
 // Method-only view; the storage it occupies in an object is not established.
 class CObjectFadeManager {
   public:
@@ -92,8 +95,11 @@ class CStaticObject {
     void TranslateFromScript(const CVector3 &, const CVector3 &, EBSEventEnum);
     void BeginScriptMotionUpdate(float);
     void BeginAnimMotionUpdate(float);
+    void AttemptScriptMotionUpdate(float);
     void AttemptAnimMotionUpdate(float);
+    void AttemptCollisionDamage(const CCollision &);
     void BeginPathMotionUpdate(float);
+    void AttemptPathMotionUpdate(float);
     void CommitPathMotionUpdate();
     void UpdatePathMotionDestAndSpeed();
     void Destroy();
@@ -129,10 +135,13 @@ class CStaticObject {
     BPDLightVolume *GetLightVolume();
     void MarkForDestruction(int);
     void Draw(CDrawContext &);
+    static void ExecuteDraw(CDrawContext &, void **);
+    void DrawDebugInfo(CDrawContext &);
     void BeginUpdate(float);
     int IsVisible(CDrawContext &) const;
     void AttemptUpdate(float);
     void CommitUpdate();
+    void StartMotionPlayback(int, int, EBSEventEnum);
     void StopMotionPlayback();
     void ModifyMotionData(MotionData *);
     void SetMovementPath(int, bool, bool, float, float, float, float, BSObject *, float, bool);
@@ -166,11 +175,20 @@ class CStaticObject {
     unsigned char unknown_30[0x4c - 0x30];
     void *model;          // +0x4c; drawing is skipped while it is null.
     CMatrix transform;    // +0x50
-    unsigned char unknown_90[0x100 - 0x90];
-    float pathDistance;   // +0x100; descriptive, copied to +0x230 on commit.
-    unsigned char unknown_104[0x110 - 0x104];
-    float pathScale;      // +0x110; BIFunc_MechSetPathFlag stores value / 100.
-    unsigned char unknown_114[0x12c - 0x114];
+    unsigned char unknown_90[0xa0 - 0x90];
+    unsigned char lookTraversal[0x30]; // +0xa0; a CAISplinePathTraversal.
+    unsigned char pathTraversal[0x30]; // +0xd0; a CAISplinePathTraversal.
+    float pathSpeed;      // +0x100; the current speed, copied to +0x230 on commit. Descriptive.
+    float pathField104;   // +0x104; SetMovementPath stores the speed argument here too.
+    float pathMaxSpeed;   // +0x108; name from Frontline.
+    float pathAcceleration; // +0x10c; descriptive.
+    float pathTurnSlowdown; // +0x110; share of the speed lost at full yaw rate; BIFunc_MechSetPathFlag stores value / 100. Descriptive.
+    void *pathFollowTarget; // +0x114; the player while following.
+    float pathFollowDistanceSquared; // +0x118
+    float pathYawRate;    // +0x11c; descriptive.
+    float pathPitchRate;  // +0x120; descriptive.
+    float pathMaxTurnRate; // +0x124; descriptive.
+    float pathTurnAcceleration; // +0x128; descriptive.
     unsigned int pathState; // +0x12c; cleared by Init. Descriptive.
     IVolume *localVolumeType3; // +0x130; returned for volume type 3.
     // +0x134: GetLocalBoundingVolume's type-0 volume, despite the older field name.
@@ -205,8 +223,8 @@ class CStaticObject {
     int maxLightPriority; // +0x214
     Flags flags;          // +0x218
     unsigned int mechFlags; // +0x21c; bits set and cleared by BIFunc_MechSetFlag.
-    unsigned char unknown_220[0x230 - 0x220];
-    float pathAngle;      // +0x230
+    CVector3 pathDest;    // +0x220; steered toward by AttemptPathMotionUpdate. Name from Frontline.
+    float pathPreviousSpeed; // +0x230; the speed at the start of the update. Descriptive.
     int motionEvent;      // +0x234; PlayAnimation's event.
     int motionFrame;      // +0x238
     int motionEnd;        // +0x23c
@@ -218,15 +236,15 @@ class CStaticObject {
     int motionPlayStart;  // +0x254
     int motionKey;        // +0x258
     int motionLoop;       // +0x25c
-    unsigned char unknown_260[4];
+    float motionKeyTime;  // +0x260; time into the current key. Descriptive.
     float motionRate;     // +0x264
     int motionTimer;      // +0x268
     float motionSampleRate; // +0x26c
     float motionRemaining; // +0x270
     float motionStep;     // +0x274
     CQuaternion motionResetOrientation; // +0x278
-    float dumpAge;        // +0x288; advances while the object is a dump object. Descriptive.
-    unsigned char unknown_28c[0x290 - 0x28c];
+    float dumpAge;        // +0x288; advances while the object is a dump object; the motion update stores its speed here. Descriptive.
+    int motionSpeedKey;   // +0x28c; the key +0x288 was measured for. Descriptive.
     MotionFrame *motionFrames; // +0x290
     unsigned char unknown_294[0x2a8 - 0x294];
     CLight *attachedLight; // +0x2a8; the subject of the weak reference starting at +0x294.
@@ -242,12 +260,40 @@ struct COORD3;
 namespace EAGL { class Transform; }
 namespace EALA {
 class Task;
-namespace Character { struct CollisionData; }
+namespace Character {
+struct CollisionData;
+// The record a choreographer hands its handler; names beyond the class names are descriptive.
+class Opcode {
+  public:
+    class Handler {
+      public:
+        virtual int Execute(Opcode &) = 0;
+    };
+    unsigned short unknown_0;
+    unsigned short id;        // +2
+    unsigned short paramLow;  // +4
+    unsigned short paramHigh; // +6
+    unsigned short extra;     // +8
+};
+}
 }
 class CAnimatedVolume;
 enum EAnimCallback { AnimCallbackUnknown = 0 };
+class CScreen;
+struct MATRIX4;
+// The part of EALA::Character::Mesh that CAnimObject::Draw reads; names descriptive.
+struct StaticMeshPart;
+struct CharacterMeshView {
+    unsigned char unknown_0[12];
+    StaticMeshPart *part; // +0xc
+    unsigned char unknown_10[0x30 - 0x10];
+    int noSortedPass; // +0x30; the second draw command is queued only while this is zero.
+};
 class CAnimObject {
   public:
+    void HandleBulletCollision(CBullet *, const CCollision &);
+    static void InitClass(CScreen *);
+    void OnCollision(const CCollision &);
     void Init();
     void CommitUpdate();
     void UpdateAnimation(float);
@@ -312,6 +358,14 @@ class CAnimObject {
     void LineAlmostCollided(CBullet *) const; // An empty body returning nothing.
     void *GetSkeleton();
     void Shutdown();
+    class StateDone;
+    void SetMoveTarget(const CVector3 &);
+    enum LocomotionType { LocomotionUnknown = 0 }; // Original name; its members are unknown.
+    LocomotionType DetermineLocomotionType(float, LocomotionType);
+    int IsVisible(CDrawContext &) const;
+    void Draw(CDrawContext &);
+    static void DrawMesh(CDrawContext &, void **);
+    static int ClipSphere(const MATRIX4 &, const COORD3 &, float, float, float &);
     void UpdateLocalBoundingVolume(ISceneNode::EVolumeType, const CVector3 &, const CVector3 &);
     int AttachObject(CStaticObject *, char *, int);
     int DetachObject(char *);
@@ -331,11 +385,22 @@ class CAnimObject {
     void Pitch(float);
     void Roll(float);
     void SetBasis(const CVector3 &, const CVector3 &, const CVector3 &);
-    unsigned char unknown_0[0x4c];
+    struct ExtentNode {
+        unsigned char unknown_0[8];
+        float value;
+    };
+    unsigned char unknown_0[0x20];
+    ExtentNode *sortMinX, *sortMaxX, *sortMinY, *sortMaxY; // +0x20
+    unsigned char unknown_30[0x44 - 0x30];
+    int field_44; // +0x44; cleared by Init.
+    int field_48; // +0x48; cleared by Init.
     float scale;         // +0x4c; multiplies the animation's motion and bounds. Descriptive.
-    unsigned char unknown_50[4];
+    int alwaysVisible;   // +0x50; IsVisible returns 1 while set. Descriptive.
     unsigned char choreographer[0x88 - 0x54]; // +0x54; EALA::Character::Choreographer methods run on it. Extent unknown.
-    unsigned char skeleton[0xd0 - 0x88]; // +0x88; GetSkeleton returns this address. Extent unknown.
+    CMatrix *JointMatrices() const { return *(CMatrix **)(skeleton + 0x34); } // +0xbc
+    unsigned char skeleton[0xc8 - 0x88]; // +0x88; GetSkeleton returns this address. Extent from the destructor.
+    CharacterMeshView *mesh;      // +0xc8; an EALA::Resource::Pointer<Mesh>, released by the destructor.
+    unsigned char unknown_cc[4];
     CMatrix transform;   // +0xd0
     IVolume *localVolumeType3; // +0x110
     IVolume *localVolumeType0; // +0x114
@@ -344,7 +409,9 @@ class CAnimObject {
     BSObject *script;    // +0x120
     int collisionId;     // +0x124
     CAnimatedVolume *animatedVolume; // +0x128
-    unsigned char unknown_12c[0x158 - 0x12c];
+    unsigned char unknown_12c[0x130 - 0x12c];
+    CVector3 moveTarget; // +0x130; SetMoveTarget stores it.
+    unsigned char weakNode[0x154 + 4 - 0x140]; // +0x140; a WeakPtr<ISceneNode, 8>, from the table the constructor stores.
     float yaw;           // +0x158
     int animCallback;    // +0x15c
     int pendingCallback; // +0x160
@@ -354,7 +421,7 @@ class CAnimObject {
     CVector3 adjustTarget; // +0x170
     float adjustValue;   // +0x180; descriptive.
     int adjustBlend;     // +0x184
-    unsigned char unknown_188[4];
+    int locomotionType; // +0x188; DetermineLocomotionType's last result.
     const char *stateName; // +0x18c
     CVector3 previousPosition; // +0x190; soldier CommitUpdate copies the position here.
     CVector3 velocity;   // +0x1a0
@@ -381,18 +448,23 @@ class CAnimObject {
     float attachBlend;   // +0x240
     unsigned char unknown_244[0x250 - 0x244];
     CMatrix attachLocation; // +0x250
-    unsigned char unknown_290[0x294 - 0x290];
+    int moveTargetPending; // +0x290; set by SetMoveTarget, cleared by the path callbacks.
     int gravity;    // +0x294
     int groundCheck; // +0x298
     int animMoved;   // +0x29c
     int hurtlingBlocked; // +0x2a0; BeginHurtling does nothing while set. Descriptive.
     CLightVolumeManager lightVolumes; // +0x2a4
-    unsigned char unknown_2c0[0x2c4 - 0x2c0];
-    int stateTask;       // +0x2c4; passed to SetState by address. Type unknown.
+    short field_2c0; // +0x2c0; Init stores 40.
+    int stateTask;       // +0x2c4; a CAnimObject::StateDone, passed to SetState by address: table, event, owner.
     int stateValue;      // +0x2c8
     CAnimObject *stateOwner; // +0x2cc
-    unsigned char unknown_2d0[0x2d8 - 0x2d0];
+    class AO_OpcodeHandler : public EALA::Character::Opcode::Handler {
+      public:
+        virtual int Execute(EALA::Character::Opcode &);
+        CAnimObject *owner; // +4
+    } opcodeHandler; // +0x2d0; class name from _vt.Q211CAnimObject16AO_OpcodeHandler.
     int poseEvaluated;   // +0x2d8; descriptive.
+    int stateDone; // +0x2dc; set by Init, the constructor and StateDone::Execute. Descriptive.
     void SetAttached(bool);
     void StartAnimAdjust(const CVector3 &, float, bool);
 };
@@ -418,9 +490,19 @@ class CSoldierObject {
     void SetAttachedLight(CLight *, const CVector3 &);
     void TranslateFromScript(const CVector3 &, const CVector3 &, EBSEventEnum);
     int AddWeapon(int, int, int);
+    int AttachObject(int, char *, int);
+    int AttachObject(CStaticObject *, char *, int);
+    int AttachMesh(CStaticMesh *, char *, int);
+    void SetBulletEmitter(CStaticObject *, char *);
+    void OnSwordDraw();
+    void OnSwordSheath();
     void GetLookMatrix(CMatrix &);
     void CleanUp();
     CStaticObject *DetachObject(char *);
+    CStaticMesh *DetachMesh(char *);
+    void OnCollision(const CCollision &);
+    void HandleBulletCollision(CBullet *, const CCollision &);
+    int EjectHelmet(CBullet *, const CCollision &);
     void GetBulletEmitterMatrix(CMatrix &);
     int GetAttachPoint(const char *);
     int GetAttachPointMatrix(char *, CMatrix *);
@@ -441,16 +523,21 @@ class CSoldierObject {
     enum Partition { PartitionNone = 0, Partition1 = 1, Partition2 = 2, Partition3 = 3 };
     unsigned char unknown_0[0x120];
     BSObject *scriptObject; // +0x120
-    unsigned char unknown_124[0x220 - 0x124];
+    unsigned char unknown_124[0x1a8 - 0x124];
+    float fallSpeed;        // +0x1a8; descriptive: OnCollision only counts a ground check once it is not positive.
+    unsigned char unknown_1ac[0x220 - 0x1ac];
     int groundCheckPending; // +0x220
     unsigned char unknown_224[4];
     int groundCheckState;   // +0x228; cleared before the ground-check event.
-    unsigned char unknown_22c[0x2e0 - 0x22c];
+    unsigned char unknown_22c[0x2c0 - 0x22c];
+    short groundSound;      // +0x2c0; descriptive: the surface's sound index, or 40 without a surface.
+    unsigned char unknown_2c2[0x2e0 - 0x2c2];
     unsigned char aiDoodad[0x2ec - 0x2e0]; // +0x2e0; a CAISoldierDoodad.
     int locomotionInfo;     // +0x2ec; returned by address.
     unsigned char unknown_2f0[0x334 - 0x2f0];
     int nonVisDestructDisabled; // +0x334; the inverse of BIFunc_EnableNonVisDestruct's flag.
-    unsigned char unknown_338[0x344 - 0x338];
+    unsigned char unknown_338[0x340 - 0x338];
+    int clsnConstraints;    // +0x340; start of a CClsnConstraintsBase of unestablished extent.
     VolumeList volumeLists[3]; // +0x344
     unsigned char unknown_38c[0xb10 - 0x38c];
     int collidedThisFrame;  // +0xb10; descriptive.
@@ -465,14 +552,18 @@ class CSoldierObject {
     struct AttachSlot {
         CStaticObject *object;
         const CMatrix *matrix;
-        unsigned char unknown_8[0x58 - 8];
+        unsigned char unknown_8[8];
+        CMatrix inverse; // +0x10
+        unsigned char unknown_50[8];
         int active;      // +0x58
         int keepObject;  // +0x5c
-        unsigned char unknown_60[4];
+        int hasInverse;  // +0x60
         int addToScene;  // +0x64
         int owned;       // +0x68
         unsigned char unknown_6c[4];
-    } attachSlots[8];       // +0xba0
+        // Above word alignment, inferred: only then do indexed members compile as
+        // (this + i * 112) + offset, as they do in the original.
+    } __attribute__((aligned(8))) attachSlots[8]; // +0xba0
     int currentWeaponSlot;  // +0xf20
     int emitterActive;      // +0xf24
     int emitterSlot;        // +0xf28
@@ -506,7 +597,9 @@ class CSoldierObject {
     unsigned char localVolumeType2[0x1030 - 0x1010]; // +0x1010
     unsigned char worldVolumeType2[0x1050 - 0x1030]; // +0x1030
     int voiceHandle;        // +0x1050; -12 when no voice is playing.
-    unsigned char unknown_1054[0x1060 - 0x1054];
+    unsigned char unknown_1054[0x1058 - 0x1054];
+    int helmetChance;       // +0x1058; a percentage. Name from Frontline.
+    float helmetDamageScale; // +0x105c; name from Frontline.
     unsigned char fadeStorage[0x1070 - 0x1060]; // +0x1060; a CObjectFadeManager. Extent bounded.
     int weaponsRemoved;     // +0x1070; descriptive.
     int headTrackPlayer;    // +0x1074
@@ -515,7 +608,8 @@ class CSoldierObject {
     CJawController jaw;     // +0x10a8
     unsigned char unknown_10e8[0x10f4 - 0x10e8];
     CWeapon *otherWeapon;   // +0x10f4; destroyed apart from the slot table.
-    unsigned char unknown_10f8[0x1100 - 0x10f8];
+    float hitTimer;         // +0x10f8; name from Frontline.
+    int hitCount;           // +0x10fc; name from Frontline.
     signed char headTransState; // +0x1100
     unsigned char unknown_1101[0x1138 - 0x1101];
     unsigned char aimModifier[0x1148 - 0x1138]; // +0x1138; EALA::Character::AimModifier methods run on it.
@@ -577,6 +671,7 @@ class CHierObject : public CStaticObject {
     void RegisterBulletDamage(int, int, int, float);
     float GetBulletDamageMultiplierByClass(int, int);
     CStaticObject *GetSubObject(int);
+    void SwapOut(CStaticMesh *, MotionData *);
     void ModifyMotionData(MotionData *);
     void Init(CHierObject *, int, int, int, CVector3 &);
     void OnCollision(const CCollision &);
@@ -587,7 +682,7 @@ class CHierObject : public CStaticObject {
     void CollisionResetMovement();
     void SetRotation(CQuaternion &);
     void GetRotation(CQuaternion &);
-    int GetAttachPointMatrix(int, CMatrix &);
+    void GetAttachPointMatrix(int, CMatrix &);
     void AddObjectToTree(CHierObject *, int, int);
     int RemoveObjectFromTree(CHierObject *, int);
     void CleanUp();
@@ -597,6 +692,9 @@ class CHierObject : public CStaticObject {
     CVector3 GetWorldLinearVelocity() const;
     void AttemptUpdate(float);
     void AttemptUpdateFromMotion(float);
+    void AttemptScriptMotionUpdate(float);
+    void AttemptAnimMotionUpdate(float);
+    void BeginAnimMotionUpdate(float);
     void AttemptUpdateOfAttachedObjects();
     int SetHierCollisionState(int);
     IVolume *GetWorldBoundingVolume(ISceneNode::EVolumeType) const;
@@ -634,7 +732,19 @@ class CHierObject : public CStaticObject {
     CMatrix attachPointMatrix; // +0xa30
     CVector3 attachOffset;    // +0xa70
     CVector3 attachDelta;     // +0xa80; added to attachOffset on commit.
-    unsigned char unknown_a90[0xb28 - 0xa90];
+    // +0xa90: the animated objects touching this one, collected from contacts.
+    struct AttachedList {
+        ISceneNode **items;
+        unsigned char unknown_4[4];
+        int count;
+        int capacity;
+        void Add(ISceneNode *node) {
+            if (count < capacity)
+                items[count++] = node;
+        }
+    };
+    AttachedList touching;
+    unsigned char unknown_aa0[0xb28 - 0xaa0];
     BulletDamage bulletDamage[2]; // +0xb28; class ranges, unused entries hold -1.
 };
 
@@ -694,13 +804,7 @@ class CDecalManager {
     static void ClearDecals();
 };
 
-// Four-byte colour passed by value; channel names are descriptive.
-class CColor {
-  public:
-    unsigned char r, g, b, a;
-    CColor() {}
-    CColor(unsigned char ar, unsigned char ag, unsigned char ab, unsigned char aa) : r(ar), g(ag), b(ab), a(aa) {}
-};
+#include "Color.h"
 
 // Static screen-fade entry points.
 class CFader {

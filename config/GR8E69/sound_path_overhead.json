@@ -1,0 +1,39 @@
+{
+  "id": "sound_path_overhead",
+  "source": "src/sound/ea/path_overhead.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80037c0c",
+      "size": 88
+    }
+  ],
+  "functions": [
+    {
+      "name": "PATH_overheadtrack",
+      "address": "0x80037c0c",
+      "size": 88,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "PATHX_overheadtrack": "0x8015830c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

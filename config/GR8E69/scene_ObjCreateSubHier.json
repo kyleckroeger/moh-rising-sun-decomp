@@ -1,0 +1,52 @@
+{
+  "id": "scene_ObjCreateSubHier",
+  "source": "src/scene/ObjCreateSubHier.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80129a9c",
+      "size": 1548
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a7328",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "CreateSubHierObject__FP11CHierObjectiiUiii",
+      "address": "0x80129a9c",
+      "size": 1548,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AllocateBoxVolume__Fv": "0x8012b5cc",
+    "AllocateStaticObject__20CStaticObjectFactoryiiP10PickupInfo": "0x800cc91c",
+    "GetBasis__C11CStaticMeshR8CVector3N21": "0x8019f064",
+    "GetCenter__C11CStaticMeshR8CVector3": "0x8019f010",
+    "Init__11CHierObjectP11CHierObjectiiiR8CVector3": "0x800d0578",
+    "SetLocalBoundingVolume__13CStaticObjectQ210ISceneNode11EVolumeTypeP7IVolume": "0x800a619c",
+    "SetWorldBoundingVolume__13CStaticObjectQ210ISceneNode11EVolumeTypeP7IVolume": "0x800a61d0",
+    "sqrtf": "0x80270538"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "objcreate.cpp",
+  "original_file_index": 1242
+}

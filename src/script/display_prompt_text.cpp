@@ -15,7 +15,7 @@ void BIFunc_DisplayPromptText(int **stack, void *object) {
     int count = g_pBuiltInFunctions[g_iCurrentBIFIndex].argumentCount;
     int message = *(*stack - (count - 1));
     int show = *(*stack - (count - 2));
-    const char *text = g_pPopUpMessageHandler->messages.GetString(message);
+    const char *text = g_pPopUpMessageHandler->tables[0].GetString(message);
     if (text) {
         int slot = -1;
         if (object) {

@@ -35,8 +35,8 @@ compiler's observed 32-bit argument bits; this does not establish portable
 behavior for every size.
 
 Both deletion operators call `DWI_free` at `0x801a8894` and ignore its result.
-That routine's observed paths return an integer status; its implementation and
-`MEM_free` remain unreconstructed. The wrappers add no null check, exception,
+That routine's observed paths return an integer status; its implementation remains
+unreconstructed. The wrappers add no null check, exception,
 new-handler loop, or replacement failure behavior. `g_memLabel` remains externally
 owned data. Its declaration as a pointer to const characters reflects its use;
 the original typedef and const spelling are unknown.

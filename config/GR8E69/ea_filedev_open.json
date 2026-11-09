@@ -1,0 +1,72 @@
+{
+  "id": "ea_filedev_open",
+  "source": "src/ea/filedev_open.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8020c188",
+      "size": 728
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bf3c8",
+      "size": 68
+    }
+  ],
+  "functions": [
+    {
+      "name": "openfile_plat__FPCcUiPi",
+      "address": "0x8020c188",
+      "size": 220,
+      "binding": 0
+    },
+    {
+      "name": "FixSlash__FPcPCc",
+      "address": "0x8020c264",
+      "size": 68,
+      "binding": 0
+    },
+    {
+      "name": "MyStrCmpi__FPCcT0",
+      "address": "0x8020c2a8",
+      "size": 80,
+      "binding": 0
+    },
+    {
+      "name": "openfile__FPCcUiP10HANDLE_def",
+      "address": "0x8020c2f8",
+      "size": 360,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DVDClose": "0x80239920",
+    "DVDConvertPathToEntrynum": "0x802395b8",
+    "DVDFastOpen": "0x802398ac",
+    "PCclose": "0x801af3e8",
+    "PCcreat": "0x801af3d8",
+    "PCopen": "0x801af3e0",
+    "REAL_abortmessage": "0x80218268",
+    "_ctype_": "0x802bfdac"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "filedev.cpp",
+  "original_file_index": 2880
+}

@@ -1,0 +1,38 @@
+{
+  "id": "toilet_ready",
+  "source": "src/game/toilet_ready.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801aa2f4",
+      "size": 28
+    }
+  ],
+  "functions": [
+    {
+      "name": "TLT_IsCompartmentReady__Fv",
+      "address": "0x801aa2f4",
+      "size": 28,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_toilet": "0x803f5360"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

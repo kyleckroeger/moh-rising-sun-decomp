@@ -1,0 +1,50 @@
+{
+  "id": "scene_SoldierCleanUp",
+  "source": "src/scene/SoldierCleanUp.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800bc704",
+      "size": 272
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029f94c",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "CleanUp__14CSoldierObject",
+      "address": "0x800bc704",
+      "size": 272,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CleanUp__16CAISoldierDoodad": "0x800d780c",
+    "DeallocateStaticObject__20CStaticObjectFactoryP13CStaticObject": "0x800cd820",
+    "FreeBoxVolume__FPv": "0x8012b624",
+    "GetAttachPoint__14CSoldierObjectPCc": "0x800c0584",
+    "Release__16CCharacterShadow": "0x8006774c",
+    "RemoveWeapons__14CSoldierObject": "0x800bc814"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Soldier_object.cpp",
+  "original_file_index": 875
+}

@@ -1,0 +1,51 @@
+{
+  "id": "light_create",
+  "source": "src/lighting/light_create.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8012ff28",
+      "size": 88
+    }
+  ],
+  "functions": [
+    {
+      "name": "Create__6CLightUi",
+      "address": "0x8012ff28",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "Create__6CLightPv",
+      "address": "0x8012ff54",
+      "size": 44,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Create__17CAnimLightManagerP24MOH_animatedLight_Struct": "0x8013151c",
+    "Create__17CAnimLightManagerUi": "0x8013143c",
+    "g_AnimLightManager": "0x8032d170"
+  },
+  "local_externals": [
+    "g_AnimLightManager"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "light.cpp",
+  "original_file_index": 1286
+}

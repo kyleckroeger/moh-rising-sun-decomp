@@ -5,7 +5,10 @@
 #include "CMatrix.h"
 #include "SceneNode.h"
 #include "Weapon.h"
+#include "CQuaternion.h"
 class CAISplinePath;
+class CVolSphere;
+struct BulletExtentEntry;
 class CScreen;
 class CCamera;
 class CAIObject;
@@ -57,23 +60,69 @@ class CSprite {
 // Method-only view of the multiplayer player body (CPlayerObject +0x1144).
 namespace EALA { namespace Character { class Skeleton { public: int FindJoint(const char *) const; }; class AimModifier { public: void SetEnabled(bool); }; } }
 class CVolBox;
+// Spacing observed; the type and member names are descriptive.
+struct AnimatedPlayerRecord {
+    unsigned char unknown_0[8];
+    int value;
+    unsigned char unknown_c[24 - 12];
+    void Clear() { value = 0; }
+};
 class CAnimatedPlayer {
   public:
-    unsigned char unknown_0[0x110];
+    unsigned char unknown_0[0x20];
+    BulletExtentEntry *extentMinX, *extentMaxX, *extentMinY, *extentMaxY; // +0x20; collision-sort entries, as CBullet's.
+    unsigned char unknown_30[0xbc - 0x30];
+    CMatrix *matrices;  // +0xbc; the skeleton's joint matrices. Name from Frontline.
+    unsigned char unknown_c0[0xd0 - 0xc0];
+    CMatrix transform;  // +0xd0; as CAnimObject's.
     CVolBox *localBox;  // +0x110; volume type 3.
     void *localVolume;  // +0x114
     void *worldBox;     // +0x118
     void *worldVolume;  // +0x11c
     BSObject *script;   // +0x120
-    unsigned char unknown_124[0xb84 - 0x124];
+    unsigned char unknown_124[0x128 - 0x124];
+    CVolSphere *sphere; // +0x128; its center is cleared by AttemptUpdate. Name from Frontline.
+    unsigned char unknown_12c[0x158 - 0x12c];
+    float yaw;          // +0x158
+    unsigned char unknown_15c[0x190 - 0x15c];
+    CVector3 lastPosition; // +0x190; names of these update fields are from Frontline.
+    CVector3 velocity;     // +0x1a0
+    unsigned char unknown_1b0[0x1d0 - 0x1b0];
+    float lastYaw;         // +0x1d0
+    unsigned char unknown_1d4[0x1e0 - 0x1d4];
+    CVector3 bonePosition; // +0x1e0
+    CQuaternion boneRotation; // +0x1f0
+    CVector3 nextBonePosition; // +0x200
+    CQuaternion nextBoneRotation; // +0x210
+    int field_220;         // +0x220
+    unsigned char unknown_224[0x238 - 0x224];
+    int attached;          // +0x238; as CAnimObject's. AttemptUpdate leaves the transform alone while set.
+    int attachedToLocation; // +0x23c; ... and then takes it from attachLocation.
+    unsigned char unknown_240[0x250 - 0x240];
+    CMatrix attachLocation; // +0x250
+    unsigned char unknown_290[0x344 - 0x290];
+    AnimatedPlayerRecord records[3]; // +0x344; AttemptUpdate clears each word at +8.
+    unsigned char unknown_38c[0xb84 - 0x38c];
     CWeapon *weapons[4]; // +0xb84; searched by GetWeaponSlot.
-    unsigned char unknown_b94[0x1138 - 0xb94];
+    unsigned char unknown_b94[0xf20 - 0xb94];
+    int currentWeapon;  // +0xf20; indexes weapons.
+    unsigned char unknown_f24[0x1080 - 0xf24];
+    int field_1080;     // +0x1080; 0 while bit 29 of the player's flags is set, otherwise 1.
+    unsigned char unknown_1084[0x1138 - 0x1084];
     EALA::Character::AimModifier aimModifier; // +0x1138
-    unsigned char unknown_1139[0x1610 - 0x1139];
+    unsigned char unknown_1139[0x157c - 0x1139];
+    int turning;        // +0x157c; set between script events 299 and 300 by PostUpdate.
+    unsigned char unknown_1580[0x15a4 - 0x1580];
+    int team;              // +0x15a4; the player's team word, set by InitMultiplayer.
+    unsigned char unknown_15a8[0x1610 - 0x15a8];
     CPlayerObject *player; // +0x1610
-    unsigned char unknown_1614[0x1618 - 0x1614];
+    float flocoHeading; // +0x1614; the heading PostUpdate turns toward the player's.
     float flocoRate;    // +0x1618
     int flocoCount;     // +0x161c
+    void BeginUpdate(float);
+    void AttemptUpdate(float);
+    void PostUpdate(float);
+    void HandleBulletCollision(CBullet *, const CCollision &);
     void Draw(CDrawContext &);
     void UpdateAnimation(float);
     void CommitUpdate();
@@ -103,7 +152,13 @@ class CPlayerWeaponObject {
   public:
     unsigned char unknown_0[0x38];
     WeaponAnimOwner animOwner; // +0x38; the animated-object subobject whose slot 2 returns the skeleton.
-    unsigned char unknown_3c[0x2e0 - 0x3c];
+    unsigned char unknown_3c[0xc8 - 0x3c];
+    int field_c8;      // +0xc8; the draw command's sort word.
+    unsigned char unknown_cc[0xd0 - 0xcc];
+    CMatrix transform; // +0xd0; bound while the weapon draws. Layout observed.
+    unsigned char unknown_110[0x2d8 - 0x110];
+    void *field_2d8;   // +0x2d8; Draw complains and skips while it is null.
+    unsigned char unknown_2dc[0x2e0 - 0x2dc];
     CPlayerWeaponObject *previous; // +0x2e0
     CPlayerWeaponObject *next; // +0x2e4
     CPlayerObject *player; // +0x2e8
@@ -111,7 +166,9 @@ class CPlayerWeaponObject {
     CSprite *aimOverlay;   // +0x2f0
     CSprite *crosshair;    // +0x2f4
     void *muzzleFlash;     // +0x2f8
-    unsigned char unknown_2fc[0x38c - 0x2fc];
+    unsigned char unknown_2fc[0x370 - 0x2fc];
+    CVector3 field_370; // +0x370; cleared by Init.
+    unsigned char unknown_380[0x38c - 0x380];
     float recoilYaw;   // +0x38c; added to the player's by FireMyWeapon.
     float recoilPitch; // +0x390
     unsigned char unknown_394[0x3a8 - 0x394];
@@ -126,8 +183,10 @@ class CPlayerWeaponObject {
             unsigned int flag31 : 1;
             unsigned int visible : 1; // Bit 30; cleared when the player dies. Name inferred.
             unsigned int enabled : 1; // Bit 29; SetWeaponEnable. Name inferred.
+            unsigned int flag28 : 1;
         };
     };
+    int field_3f4;     // +0x3f4; follows the weapon's reserve ammunition outside multiplayer.
     // Original nested enum tag; member names are descriptive.
     enum Partition { PartitionDefault = 0, PartitionAlternate = 1 };
     static CPlayerWeaponObject *m_pPlayerWeaponFirst;
@@ -143,13 +202,21 @@ class CPlayerWeaponObject {
     void SetWeaponName(const char *);
     void Destroy();
     void Init();
+    void Init(int, int, CPlayerObject *);
+    void BeginUpdate(float);
+    void AttemptUpdate(float);
+    void CommitUpdate();
+    void Draw(CDrawContext &);
+    static void DrawWeapon(CDrawContext &, void **);
+    void UpdateWeaponTransforms();
+    void UpdateMuzzleFlash();
     void SetDrawDelay(int);
     CPlayerWeaponObject *AsPlayerWeaponObject();
     const CPlayerWeaponObject *AsPlayerWeaponObject() const;
     void CreateEjectedShell(int);
     void DoneReloading();
     void SetAnimationState(const char *, int, Partition);
-    unsigned int IsSelectable() const;
+    bool IsSelectable() const;
 };
 // Scoped view of the mounted gun the player holds; names are descriptive.
 struct MountedGunView {
@@ -166,6 +233,7 @@ class PlayerDrawView {
     virtual void Submit(void *, const CMatrix &);
 };
 struct BS_STRUCT_HitByBulletInfo_struct;
+struct SMPPlayerData;
 class CPlayerObject {
   public:
     void SetPlayersMountedMGPositions(CMatrix *);
@@ -191,12 +259,37 @@ class CPlayerObject {
     // Member-only view of the embedded look-at controller at +0x1cf0.
     class LookAtTarget {
       public:
+        unsigned char unknown_0[8];
+        ObserverLinkBase link;   // +0x08
+        unsigned char unknown_10[4];
+        ISubject *subject;       // +0x14
+        unsigned char unknown_18[0x20 - 0x18];
+        CVector3 target;         // +0x20
+        float time;              // +0x30
+        int active;              // +0x34
         void Enable(ISceneNode *, float);
         void Enable(const CVector3 &, float);
         void Disable();
     };
     // 36 bytes: eight floats, then the table pointer at +32 (the class declares its
     // data before its virtual destructor). Field names are descriptive.
+    // Member-only view with the same observer prefix as TargetFind; the name is original.
+    class AimAdjust {
+      public:
+        unsigned char unknown_0[8];
+        ObserverLinkBase link;   // +0x08
+        unsigned char unknown_10[4];
+        ISubject *subject;       // +0x14
+        unsigned char unknown_18[0x20 - 0x18];
+        CVector3 target;         // +0x20
+        CVector3 lastTarget;     // +0x30
+        bool HasSubject() const { return subject != 0; }
+        int field_40;            // +0x40
+        int active;              // +0x44
+        void Enable();
+        void UpdateTarget(const CCamera &);
+        void UpdatePlayer(float &, float &, const CCamera &);
+    };
     class CCameraShake {
       public:
         float current;     // Intensity now.
@@ -222,14 +315,21 @@ class CPlayerObject {
         unsigned int hideWeapon : 1;    // Bit 30: IsDrawEnabled answers no while set; name inferred.
         unsigned int headingOverride : 1; // Bit 29: GetHeading reads +0x1c8c; name inferred.
         unsigned int fallingDamage : 1; // Bit 28: SetFallingDamageState.
-        unsigned int unknown_27 : 1;
+        unsigned int flag27 : 1;
         unsigned int canCrouch : 1;     // Bit 26: BIFunc_PlayerCanCrouch.
         unsigned int motionShake : 1;   // Bit 25: set by DoMotionShake for a positive amount.
-        unsigned int unknown_24 : 1;
+        unsigned int flag24 : 1;
         unsigned int wielding : 1;      // Bit 23: BIFunc_SetPlayerWielding.
         unsigned int triggerChecks : 1; // Bit 22: BIFunc_TogglePlayerVsTriggerChecks.
         unsigned int superAimMode : 1;  // Bit 21: BIFunc_PlayerSuperAimMode.
-        unsigned int unknown_20_12 : 9;
+        unsigned int bit20 : 1;
+        unsigned int bit19 : 1;
+        unsigned int bit18 : 1;
+        unsigned int bit17 : 1;
+        unsigned int unknown_16_15 : 2;
+        unsigned int bit14 : 1;
+        unsigned int flag13 : 1;
+        unsigned int flag12 : 1;
         unsigned int invincible : 1;    // Bit 11: BIFunc_MakePlayerInvincible.
         unsigned int unknown_low : 11;
     };
@@ -237,22 +337,31 @@ class CPlayerObject {
         unsigned int unknown_31 : 1;
         unsigned int peekAllowed : 1;   // Bit 30; set for a floor contact too.
         unsigned int bit29 : 1;         // Bit 29; a shallower contact.
-        unsigned int unknown_28_25 : 4;
+        unsigned int bit28 : 1;
+        unsigned int bit27 : 1;
+        unsigned int bit26 : 1;
+        unsigned int bit25 : 1;
         unsigned int binoculars : 1;    // Bit 24: BIFunc_UseBinoculars.
         unsigned int climbing : 1;      // Bit 23: SetClimbingState.
         unsigned int crouched : 1;      // Bit 22; names from Frontline.
         unsigned int crouching : 1;     // Bit 21.
         unsigned int peeking : 1;       // Bit 20.
-        unsigned int unknown_19_17 : 3;
+        unsigned int bit19 : 1;
+        unsigned int bit18 : 1;
+        unsigned int bit17 : 1;
         unsigned int climbCleared : 1;  // Bit 16: cleared when climbing starts.
         unsigned int meleeImmune : 1;   // Bit 15: BIFunc_CanMeleeTarget returns 0.
         unsigned int noShells : 1;      // Bit 14: suppresses BIFunc_PlayerEjectShell.
         unsigned int peekStarted : 1;   // Bit 13.
-        unsigned int unknown_12_10 : 3;
+        unsigned int bit12 : 1;
+        unsigned int bit11 : 1;
+        unsigned int bit10 : 1;
         unsigned int mmgBlocked : 1;    // Bit 9: skips BIFunc_AttachPlayerToMountedMachineGun in multiplayer.
         unsigned int unknown_8_0 : 9;
     };
-    unsigned char unknown_0[0x38];
+    unsigned char unknown_0[0x20];
+    BulletExtentEntry *extentMinX, *extentMaxX, *extentMinY, *extentMaxY; // +0x20; collision-sort entries, as CBullet's.
+    unsigned char unknown_30[0x38 - 0x30];
     unsigned char aiDoodad[0x44 - 0x38]; // +0x38; storage of the CAIPlayerDoodad member.
     CAIObject *aiObject;     // +0x44
     unsigned char unknown_48[0x50 - 0x48];
@@ -260,8 +369,9 @@ class CPlayerObject {
     CMatrix cameraMatrix;    // +0x90
     void *localBox;          // +0xd0; volume type 3. IsVisible transforms it into worldBox.
     PlayerDrawView *worldBox; // +0xd4
-    unsigned char unknown_d8[0x180 - 0xd8];
-    unsigned char localVolume[0x1d0 - 0x180]; // +0x180; the volume for types 0-2.
+    unsigned char unknown_d8[0xe0 - 0xd8];
+    unsigned char boxStorage[0x180 - 0xe0]; // +0xe0; the CVolBox the player's box is, kept as raw storage (world box after it).
+    unsigned char localVolume[0x1d0 - 0x180]; // +0x180; the volume for types 0-2, a CVolCapsule.
     unsigned char worldVolume[0x10];          // +0x1d0; extent runs on through bounds.
     // Name and accessors inferred; GetCentroid returns the midpoint.
     struct Bounds {
@@ -291,7 +401,7 @@ class CPlayerObject {
     };
     int field_d48;           // +0xd48
     Flags flags;
-    unsigned char unknown_d50[0xd54 - 0xd50];
+    float field_d50;         // +0xd50
     float field_d54;         // +0xd54; positive blocks explosion damage in coop and multiplayer.
     CCameraShake cameraShake;
     CCameraShake backgroundShake;
@@ -305,7 +415,9 @@ class CPlayerObject {
     CVector3 peekRight;      // +0xdf0
     CAISplinePath *movePath, *lookPath; // +0xe00, +0xe04
     float pathParameter, pathRate; // +0xe08, +0xe0c
-    unsigned char unknown_e10[0xe30 - 0xe10];
+    float field_e10;         // +0xe10
+    unsigned char unknown_e14[0xe2c - 0xe14];
+    float field_e2c;         // +0xe2c; the heading CAnimatedPlayer::PostUpdate takes while melee immune.
     float fov;               // +0xe30; set by BIFunc_SetGameFOV.
     float targetFov;         // +0xe34; the clamped value SetZoom passes to TransitionFOV.
     float fovTarget;         // +0xe38; set by TransitionFOV.
@@ -316,7 +428,8 @@ class CPlayerObject {
     float recoilYaw;         // +0xe4c; accumulated by FireMyWeapon.
     float recoilPitch;       // +0xe50
     float peekYaw;           // +0xe54; the yaw kept by PeekLeftRight.
-    unsigned char unknown_e58[0xe60 - 0xe58];
+    float field_e58;         // +0xe58
+    float field_e5c;         // +0xe5c
     unsigned char weaponMap[0x10]; // +0xe60; a map<int, CPlayerWeaponObject *> in the original.
     CPlayerWeaponObject *currentWeapon; // +0xe70
     CPlayerWeaponObject *weaponList; // +0xe74; the first of a ring linked through CPlayerWeaponObject::next.
@@ -324,27 +437,48 @@ class CPlayerObject {
     unsigned char unknown_e7c[0xe80 - 0xe7c];
     CStaticObject *mmgBase; // +0xe80; set by BIFunc_AttachHierBaseToMMG.
     MountedGunView *mountedGun; // +0xe84; SetZoom reads its zoom limit.
-    unsigned char unknown_e88[0xe8c - 0xe88];
+    int field_e88;           // +0xe88
     int field_e8c;           // +0xe8c
     int field_e90;           // +0xe90
     CWeapon *turretWeapon;   // +0xe94; SetDetonationTimeForPlayerTurret writes through it.
     CWeapon *mountedWeapon;  // +0xe98; used while pathBits bit 15 is set.
-    unsigned char unknown_e9c[0xfc0 - 0xe9c];
+    unsigned char unknown_e9c[0xea0 - 0xe9c];
+    CMatrix mountedOffset;   // +0xea0; the gun's mount transform, replaced by mountedOffsetAlt while bits 18 and 17 are set.
+    CMatrix mountedPlayerOffset; // +0xee0; applied to the player's transform by SetPlayersMountedMGPositions.
+    unsigned char unknown_f20[0xf60 - 0xf20];
+    CMatrix mountedOffsetAlt; // +0xf60
+    unsigned char unknown_fa0[0xfc0 - 0xfa0];
     EClsnId collisionId;     // +0xfc0
-    unsigned char unknown_fc4[0x10a0 - 0xfc4];
+    unsigned char unknown_fc4[0x1000 - 0xfc4];
+    int field_1000;          // +0x1000
+    unsigned char unknown_1004[0x1090 - 0x1004];
+    BSObject *lookatTrigger; // +0x1090; set by HandleLookatTrigger, as the next two.
+    float lookatAngle;       // +0x1094; radians, from the trigger's degrees.
+    float lookatValue;       // +0x1098
+    unsigned char unknown_109c[0x10a0 - 0x109c];
     CVector3 field_10a0;     // +0x10a0
     unsigned char unknown_10b0[0x10bc - 0x10b0];
     int cameraPitchUnhinged; // +0x10bc
     unsigned short surfaceSound; // +0x10c0; name from Frontline.
-    unsigned char unknown_10c2[0x10c8 - 0x10c2];
+    short field_10c2;        // +0x10c2
+    float field_10c4;        // +0x10c4
     float field_10c8;        // +0x10c8; the height OnCollision passes to UpdateHeight.
     float field_10cc;        // +0x10cc
-    unsigned char unknown_10d0[0x10d8 - 0x10d0];
-    short viewWordHigh;      // +0x10d8; the word here compares to a draw view's owner in CAnimatedPlayer::Draw.
-    short promptSlot;        // +0x10da; prompt buffer used by BIFunc_AddPlayerAmmo.
-    unsigned char unknown_10dc[3];
-    unsigned char playerIndex; // +0x10df
-    unsigned char unknown_10e0[0x1144 - 0x10e0];
+    int field_10d0;          // +0x10d0
+    char mountedShotSide;    // +0x10d4; PostUpdate alternates its low bits while bit 18 of the flags is set.
+    unsigned char unknown_10d5[0x10d8 - 0x10d5];
+    union {
+        int viewWord;        // +0x10d8; compared with the draw binding's owner by CPlayerWeaponObject::Draw.
+        struct {
+            short viewWordHigh; // The word here compares to a draw view's owner in CAnimatedPlayer::Draw.
+            short promptSlot;   // +0x10da; prompt buffer used by BIFunc_AddPlayerAmmo.
+        };
+    };
+    int playerIndex;         // +0x10dc; read as a word and as its low byte.
+    unsigned char unknown_10e0[0x112c - 0x10e0];
+    int field_112c;          // +0x112c
+    float field_1130, field_1134, field_1138, field_113c; // +0x1130
+    int field_1140;          // +0x1140
     int body;                // +0x1144; returned by BIFunc_MPGetPlayerBody.
     unsigned char unknown_1148[0x1150 - 0x1148];
     ClipSettings clip;       // +0x1150
@@ -353,9 +487,16 @@ class CPlayerObject {
     unsigned char unknown_1be0[0x1c28 - 0x1410 - sizeof(CHeadsUpDisplay)];
     int letterbox;           // +0x1c28; set by BIFunc_DisplayLetterbox.
     unsigned char unknown_1c2c[0x1c72 - 0x1c2c];
-    char name[0x1c83 - 0x1c72]; // +0x1c72; returned by GetName (extent inferred).
-    unsigned char team;      // +0x1c83
-    unsigned char unknown_1c84[0x1c8c - 0x1c84];
+    char name[0x1c80 - 0x1c72]; // +0x1c72; returned by GetName.
+    union {
+        int teamWord;        // +0x1c80; written whole by InitMultiplayer.
+        struct {
+            unsigned char unknown_1c80[3];
+            unsigned char team; // +0x1c83
+        };
+    };
+    unsigned char unknown_1c84[4];
+    int fireDelay;           // +0x1c88; set from RESPAWN_FIRE_DELAY. Name from Frontline.
     union {
         float mountedHeading; // +0x1c8c; GetHeading's answer while bit 29 of the flags is set.
         float deathYaw;       // The yaw when the death sequence started (same word).
@@ -367,6 +508,7 @@ class CPlayerObject {
     void GetTMLocalToWorld(CMatrix &) const;
     int GetLocalBoundingVolume(ISceneNode::EVolumeType) const;
     int GetWorldBoundingVolume(ISceneNode::EVolumeType) const;
+    void CommitUpdate();
     int IsVisible(CDrawContext &) const;
     unsigned int IsDrawEnabled() const;
     EClsnId GetCollisionId() const;
@@ -428,6 +570,18 @@ class CPlayerObject {
     void SetClimbingState(bool);
     void TransitionFOV(float, float);
     void MoveOnPath(CAISplinePath *, CAISplinePath *, float);
+    void UpdateMovePath(float);
+    void *GetCurrentBulletSprite() const;
+    CPlayerWeaponObject *AddPlayerWeapon(int);
+    void StoreSaveData();
+    void RestoreSaveData();
+    void PostUpdate(float);
+    void EjectMountedMGShell();
+    void SetFinishedLevelData();
+    void UpdateCollisionVolumes();
+    int Constrain(float);
+    void Yaw(float);
+    void SetTMLocalToWorld(const CMatrix &);
     void StopPath();
 
     void SetCameraShake(float, float, float, float);
@@ -448,6 +602,9 @@ class CPlayerObject {
     void FreeBinocularOverlay();
     void SetZoom(float);
     void Respawn();
+    void SetHealthMax();
+    void HandleBulletCollision(CBullet *, const CCollision &);
+    void InitMultiplayer(SMPPlayerData *, bool);
     int CanPlayerSwitchWeapon();
     bool IsPlayerCrouching() const;
     int IsInvincible() const;

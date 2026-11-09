@@ -1,0 +1,69 @@
+{
+  "id": "scene_ObjCreateDumpObject",
+  "source": "src/scene/ObjCreateDumpObject.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80127638",
+      "size": 1072
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a6f90",
+      "size": 104
+    }
+  ],
+  "functions": [
+    {
+      "name": "CreateDumpObject__FRC7CMatrixibP8BSObjecti12EPowerupType",
+      "address": "0x80127638",
+      "size": 1072,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddDumpObject__20CDumpObjectContainerP13CStaticObjectRC10PickupInfob": "0x80126bd8",
+    "AddObserver__8ISubjectP9IObserver": "0x8014ae44",
+    "Add__6CSceneR10ISceneNodeP10ISceneNode": "0x80146e08",
+    "AllocateSphereVolume__Fv": "0x8012b650",
+    "AllocateStaticObject__20CStaticObjectFactoryiiP10PickupInfo": "0x800cc91c",
+    "DebugMsg__FPCce": "0x80279094",
+    "ForceUpdateProximityTriggerStatus__FP10BSGO_Basicb": "0x80123bf8",
+    "GetCenter__C11CStaticMeshR8CVector3": "0x8019f010",
+    "SetLocalBoundingVolume__13CStaticObjectQ210ISceneNode11EVolumeTypeP7IVolume": "0x800a619c",
+    "SetWorldBoundingVolume__13CStaticObjectQ210ISceneNode11EVolumeTypeP7IVolume": "0x800a61d0",
+    "Translate__7CMatrixRC8CVector3": "0x8007af2c",
+    "_._8ISubject": "0x8014acd0",
+    "_._9IObserver": "0x8014ad64",
+    "__as__7CMatrixRC7CMatrix": "0x8007aa38",
+    "_vt.10BSGO_Basic": "0x802e5048",
+    "_vt.10BSGO_Dummy": "0x802e6bf0",
+    "_vt.9IObserver": "0x802e9aa0",
+    "_vt.t7WeakPtr2Z10ISceneNodei8": "0x802e48b0",
+    "g_DumpObjectContainer": "0x8032ce58",
+    "g_bInMultiplayerMode": "0x802c1b30",
+    "g_fDumpObjectCollisionRadius": "0x8032d01c",
+    "g_scene": "0x803e6d90"
+  },
+  "local_externals": [
+    "g_fDumpObjectCollisionRadius"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "objcreate.cpp",
+  "original_file_index": 1242
+}

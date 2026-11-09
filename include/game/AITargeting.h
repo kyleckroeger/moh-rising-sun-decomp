@@ -69,7 +69,7 @@ public:
     void UpdateTargetPosition();
     void UpdateNonAITargetPosition();
     void SetNonAITarget(BSObject *);
-    void SetTarget(CAIObject *);
+    CAIObject *SetTarget(CAIObject *); // Returns the current target (its body loads it last).
     void AdjustAimPosition(CVector3 *, int, AIFILTER_WEAPON_AIM_MODE *);
     void ChooseSniperAimMode(AIFILTER_WEAPON_AIM_MODE *);
     void ChooseBazookaAimMode(AIFILTER_WEAPON_AIM_MODE *);
@@ -352,6 +352,7 @@ public:
 // Member view of the soldier AI object returned by CAIObject slot 2.
 class CAIThreatEvaluation {
 public:
+    void PropagateSoundToMe(int, float, const CVector3 &, CAIObject *, bool);
     void Update(float);
     void FinishedInvestigation();
     void AddCorpseThreat(BSObject *);

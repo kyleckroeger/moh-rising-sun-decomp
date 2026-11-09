@@ -1,0 +1,57 @@
+{
+  "id": "player_move_path",
+  "source": "src/player/PlayerMovePath.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800b489c",
+      "size": 1036
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029f240",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "UpdateMovePath__13CPlayerObjectf",
+      "address": "0x800b489c",
+      "size": 1036,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "EvaluateSplinePath__FP13CAISplinePathfR8CVector3": "0x800b477c",
+    "EvaluateSplineTangent__FP13CAISplinePathfR8CVector3": "0x800b480c",
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "SetFront__7CMatrixRC8CVector3": "0x8007ae44",
+    "SetRight__7CMatrixRC8CVector3": "0x8007ae28",
+    "SetUp__7CMatrixRC8CVector3": "0x8007ae60",
+    "ToEulerXYZ__C7CMatrixRfN21": "0x8007b8b4",
+    "_7CMatrix.s_ClassInit": "0x802c2100",
+    "sqrtf": "0x80270538"
+  },
+  "local_externals": [
+    "EvaluateSplinePath__FP13CAISplinePathfR8CVector3",
+    "EvaluateSplineTangent__FP13CAISplinePathfR8CVector3"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}

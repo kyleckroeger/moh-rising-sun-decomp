@@ -1,0 +1,53 @@
+{
+  "id": "mc_a",
+  "source": "src/save/mc_a.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a3124",
+      "size": 160
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b66e8",
+      "size": 56
+    }
+  ],
+  "functions": [
+    {
+      "name": "__11CMemoryCard",
+      "address": "0x801a3124",
+      "size": 160,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "LOCALE_create": "0x802174b0",
+    "LOCALE_setstate": "0x802172b8",
+    "TLT_LoadFileNormal__FPCcPii": "0x801a9abc",
+    "_vt.11CMemoryCard": "0x802ebe10",
+    "g_pMiscTextDatabase": "0x802c5d60",
+    "g_pTextDatabase": "0x802c5d5c"
+  },
+  "local_externals": [
+    "g_pTextDatabase"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "MemoryCard.cpp",
+  "original_file_index": 2083
+}

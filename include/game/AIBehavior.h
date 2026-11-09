@@ -24,6 +24,7 @@ class CBuddyLeadBehavior { // Type 1.
 
 class CBuddyFollowBehavior { // Type 2.
   public:
+    void BumpPlayer();
     void CantReachTarget();
     void FinishedMovingAway();
     void SetDistances(float, float, float, float);
@@ -111,6 +112,7 @@ class CScriptedBehavior { // Type 5.
 class CSwordBehavior { // Type 8.
   public:
     int IsSwordDrawn();
+    void SetSwordDrawn(bool);
 };
 
 class CGrenadeResponseBehavior { // Type 10.
@@ -128,10 +130,24 @@ class CScriptedGag {
     static void StartGag(BSObject *, unsigned int, int);
 };
 
-// Method-only view of a cover point; the script object's native trigger is one.
+// A cover point; the script object's native trigger is one. Its first word holds the state
+// bits below; their names follow the accessors.
 class CCoverPoint {
   public:
+    void InitFlags();
+    int IsOccupied() const;
+    int IsValid() const;
+    int IsAvailable() const;
+    int FlagAsOccupied();
+    void FlagAsUnoccupied();
+    void SetOutOfArea(bool);
     void Invalidate();
+
+    unsigned int unknownHigh : 16;
+    unsigned int unknownBits : 13;
+    unsigned int outOfArea : 1;
+    unsigned int invalid : 1;
+    unsigned int occupied : 1;
 };
 
 // Static lookup used by BIFunc_AIFindTank; script object at +0x0c as in CAIObject.

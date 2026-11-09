@@ -1,0 +1,68 @@
+{
+  "id": "scene_AnimObjectDraw",
+  "source": "src/scene/AnimObjectDraw.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800a38e0",
+      "size": 1176
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029E8E0",
+      "size": 168
+    }
+  ],
+  "functions": [
+    {
+      "name": "ClipSphere__11CAnimObjectRC7MATRIX4RC6COORD3ffRf",
+      "address": "0x800a38e0",
+      "size": 388,
+      "binding": 1
+    },
+    {
+      "name": "Draw__11CAnimObjectR12CDrawContext",
+      "address": "0x800a3a64",
+      "size": 616,
+      "binding": 1
+    },
+    {
+      "name": "DrawMesh__11CAnimObjectR12CDrawContextPPv",
+      "address": "0x800a3ccc",
+      "size": 172,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddCommand__12CDrawContext11ERenderBinsRC11DrawCommand": "0x8012ea14",
+    "BuildMatrix__Q24EAGL9TransformPC7MATRIX4": "0x801e21dc",
+    "DebugMsg__FPCce": "0x80279094",
+    "Draw__Q34EALA9Character4MeshR12CDrawContextb": "0x80081ca0",
+    "Multiply__7CMatrixRC7CMatrixT1": "0x802794b8",
+    "PrepForSkinning__Q34EALA9Character8Skeleton": "0x80082770",
+    "SetLightBlock__6CLightP14BPDLightVolumeP12CDrawContextf": "0x8012f6dc",
+    "TransformPoint__CQ24EAGL9TransformRC6COORD3R6COORD3": "0x801e1ad0",
+    "_7CMatrix.s_TempMat": "0x802fbf00",
+    "_Q24EAGL8ViewPort.gpProjectionMatrix": "0x802d2a34",
+    "__as__7CMatrixRC7CMatrix": "0x8007aa38",
+    "sqrtf": "0x80270538"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "anim_obj.cpp",
+  "original_file_index": 831
+}

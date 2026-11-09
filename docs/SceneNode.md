@@ -136,7 +136,36 @@ vector by value; `GetPosition` zeroes three components) and
 `scene_node_axis_defaults` (`GetRightward`, `GetForward` and `GetUpward` set the
 unit X, Y and Z axes). `GetWorldLinearVelocity` now returns `CVector3`.
 
+## Scene node lists
+
+`CScene` keeps a node list (`+0x00`, `+0x04`, count `+0x44`) and typed lists for
+static objects (`+0x24`), animated objects (`+0x2c`), lights (`+0x34`) and
+projectors (`+0x3c`), with counts at `+0x48`-`+0x54`. Node links are at `+0x18` and
+`+0x1c`; static and animated objects link at `+0x44` and `+0x48`; lights and
+projectors at `+0x38` and `+0x3c`. List and member names are descriptive. The
+insertion path shared by `AddPlayer_now`, `SetWorld_now` and `AddNode_now` updates
+the list tail even when it inserts after another node. `AddNode_now` and
+`RemoveNode_now` skip the extent lists for lights. Collision exclusions are at
+`+0x140`, in a small array container with its count at `+0x148`.
+
 ## Next work
 
 The slot map applies to every class derived from `IMovingSceneNode`; each derived
 table should be checked against it rather than assumed.
+
+## CScene sweep containers
+
+`CScene` keeps two sweep lists at `+0xa8` and `+0xd4` (`dwi::list<ISceneNode::SExtent>`, named by
+`SweepExtents`' symbol) and two node-pair vectors at `+0x100` and `+0x118`
+(`dwi::fast_vec<CScene::UNodePair>`). `AddNodeExtents` enters a begin and an end extent for a node on
+each list, keeping four links at node `+0x20`; `RemoveNodeExtents` finds each by node and begin flag
+and returns the list node to the free list. `Reset` removes every node and empties all containers,
+destroying the collisions in the vector at `+0x130`. The vectors at `+0x60`, `+0x78` and `+0x90` are
+only emptied in the code reconstructed so far, so their element types are unknown. The collision
+iterators' user copy constructors and clearing destructors, and the field names, are inferred from the
+code shape. `DwiContainers.h` holds the containers without placement new, so that `SceneNode.h` can use
+them in units that also include the `new` header.
+
+`Draw` hands the camera, fog and the three visible-node vectors at `+0x60`, `+0x78` and `+0x90` to the draw
+context, fills the first with visible lights and the third with enabled visible projectors, then draws the
+sky box and every enabled visible node between `InitCommands` and `ExecCommands`.

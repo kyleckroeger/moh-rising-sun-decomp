@@ -1,0 +1,65 @@
+{
+  "id": "static_screen",
+  "source": "src/shell/static_screen.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8019fb08",
+      "size": 264
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b5e40",
+      "size": 36
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.13CStaticScreen",
+      "address": "0x802ebda8",
+      "size": 24,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "__13CStaticScreen",
+      "address": "0x8019fb08",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "_._13CStaticScreen",
+      "address": "0x8019fb38",
+      "size": 128,
+      "binding": 1
+    },
+    {
+      "name": "Init__13CStaticScreenP7CScreen",
+      "address": "0x8019fbb8",
+      "size": 88,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "_._7CSprite": "0x8005d1f4",
+    "__builtin_delete": "0x801a8990"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "StaticScreen.cpp",
+  "original_file_index": 2065
+}

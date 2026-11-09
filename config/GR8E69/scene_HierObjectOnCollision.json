@@ -1,0 +1,55 @@
+{
+  "id": "scene_HierObjectOnCollision",
+  "source": "src/scene/HierObjectOnCollision.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-ffast-math"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d1ea4",
+      "size": 1400
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a15e4",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "OnCollision__11CHierObjectRC10CCollision",
+      "address": "0x800d1ea4",
+      "size": 1400,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AttemptCollisionDamage__13CStaticObjectRC10CCollision": "0x800aa5d8",
+    "CollisionResetMovement__11CHierObject": "0x800d1d5c",
+    "FastInverse__7CMatrixRC7CMatrix": "0x8007b164",
+    "GetMatrix__C11CQuaternionR7CMatrix": "0x8007cd64",
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "SetHierCollisionState__11CHierObjecti": "0x800d1ce0",
+    "SetInheritedMatrix__11CHierObjectR7CMatrix": "0x800d24c4",
+    "SetPos__7CMatrixRC8CVector3": "0x8007ae7c",
+    "_7CMatrix.s_ClassInit": "0x802c2100",
+    "sqrtf": "0x80270538"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "hierobject.cpp",
+  "original_file_index": 935
+}

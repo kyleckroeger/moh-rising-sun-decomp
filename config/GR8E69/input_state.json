@@ -1,0 +1,68 @@
+{
+  "id": "input_state",
+  "source": "src/game/input_state.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d6ff8",
+      "size": 288
+    }
+  ],
+  "functions": [
+    {
+      "name": "IsReady__C13CInputManagerSc",
+      "address": "0x800d6ff8",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "IsActive__C13CInputManagerSc",
+      "address": "0x800d702c",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "SetFeedback__13CInputManagerUcUcUcff",
+      "address": "0x800d704c",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "Reset__13CInputManager",
+      "address": "0x800d7090",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "SetBlockVibrations__13CInputManagerbUc",
+      "address": "0x800d7108",
+      "size": 16,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetDeviceState__C14CDeviceManagerUc": "0x800d66cc",
+    "GetEventTable__14CDeviceManagerUc": "0x800d67c0",
+    "GetNumDevices__C14CDeviceManager": "0x800d66b8",
+    "IsActive__C14CDeviceManagerSc": "0x800d6810",
+    "SetActuatorState__14CDeviceManagerUcUcUcff": "0x800d678c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "input.cpp",
+  "original_file_index": 951
+}

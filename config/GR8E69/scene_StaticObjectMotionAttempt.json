@@ -1,0 +1,78 @@
+{
+  "id": "scene_StaticObjectMotionAttempt",
+  "source": "src/scene/StaticObjectMotionAttempt.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800a6ee8",
+      "size": 3868
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029ebc8",
+      "size": 44
+    }
+  ],
+  "functions": [
+    {
+      "name": "AttemptScriptMotionUpdate__13CStaticObjectf",
+      "address": "0x800a6ee8",
+      "size": 1116,
+      "binding": 1
+    },
+    {
+      "name": "AttemptAnimMotionUpdate__13CStaticObjectf",
+      "address": "0x800a7344",
+      "size": 548,
+      "binding": 1
+    },
+    {
+      "name": "AttemptPathMotionUpdate__13CStaticObjectf",
+      "address": "0x800a7568",
+      "size": 2204,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BuildRot__7CMatrixRC8CVector3f": "0x8007ab7c",
+    "BuildScale__7CMatrixf": "0x8007aae8",
+    "GetFrameCount__Fv": "0x80168a40",
+    "GetMatrix__C11CQuaternionR7CMatrix": "0x8007cd64",
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "MathFunAtan2F__Fff": "0x80133590",
+    "MathFunNormalizeAngleNegativePiToPi__Ff": "0x80133714",
+    "MathFunRandomReal__Fff": "0x80133a54",
+    "MathFunRotateAboutZ__FPfT0f": "0x801336a4",
+    "Multiply__11CQuaternionT0": "0x8007d260",
+    "Multiply__7CMatrixRC7CMatrixT1": "0x802794b8",
+    "Orthonormalize__7CMatrix": "0x8007b5a4",
+    "SetFront__7CMatrixRC8CVector3": "0x8007ae44",
+    "SetPos__7CMatrixRC8CVector3": "0x8007ae7c",
+    "SetRight__7CMatrixRC8CVector3": "0x8007ae28",
+    "SetUp__7CMatrixRC8CVector3": "0x8007ae60",
+    "Slerp__11CQuaternionT0T0f": "0x8007d0ec",
+    "Translate__7CMatrixRC8CVector3": "0x8007af2c",
+    "_7CMatrix.s_ClassInit": "0x802c2100",
+    "_7CMatrix.s_TempMat": "0x802fbf00",
+    "__as__7CMatrixRC7CMatrix": "0x8007aa38",
+    "sqrtf": "0x80270538"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "static_obj.cpp",
+  "original_file_index": 833
+}

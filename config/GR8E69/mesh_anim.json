@@ -1,0 +1,72 @@
+{
+  "id": "mesh_anim",
+  "source": "src/staticmesh/mesh_anim.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8019f870",
+      "size": 396
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b5e04",
+      "size": 40
+    }
+  ],
+  "functions": [
+    {
+      "name": "Draw__15CStaticAnimMeshR12CDrawContextiUi11ERenderBinsT4",
+      "address": "0x8019f870",
+      "size": 144,
+      "binding": 1
+    },
+    {
+      "name": "Init__15CStaticAnimMeshii",
+      "address": "0x8019f900",
+      "size": 128,
+      "binding": 1
+    },
+    {
+      "name": "Init__15CStaticAnimMeshiPvb",
+      "address": "0x8019f980",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "GetNumFrames__C15CStaticAnimMesh",
+      "address": "0x8019f9ec",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetTicksPerFrame__C15CStaticAnimMesh",
+      "address": "0x8019f9f4",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "Draw__11CStaticMeshR12CDrawContextiUi11ERenderBinsT4": "0x8019f3c8",
+    "InitAnimatedTexturesOnly__11CStaticMesh": "0x8019e868",
+    "Init__11CStaticMesh": "0x8019d3d8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "staticmesh.cpp",
+  "original_file_index": 2056
+}

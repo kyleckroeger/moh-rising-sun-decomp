@@ -57,6 +57,7 @@ struct SNDDRVVIEW {
 
 extern SNDDRVVIEW snddrv;
 
+struct SNDMIXOPTSVIEW;
 extern "C" {
 int OSEnableInterrupts(void);
 int OSRestoreInterrupts(int);
@@ -66,7 +67,7 @@ void SNDI_memcpy(void*, const void*, int);
 void SNDSYS_linkmaincpumixer(void);
 void SNDSYS_entercritical(void);
 void SNDSYS_leavecritical(void);
-extern void (*MIXinitfn)(void*);
+extern void (*MIXinitfn)(SNDMIXOPTSVIEW*);
 extern void (*MIXrestorefn)(void);
 }
 void* SNDMEMI_allocz(int);
@@ -105,7 +106,7 @@ void SNDDRV_audiocallback(void* buffers, void* context) {
 }
 
 /* inferred: the mixer's creation parameters */
-struct MIXINITVIEW {
+struct SNDMIXOPTSVIEW {
     int rate;
     unsigned char field04;
     unsigned char channels;
@@ -114,7 +115,7 @@ struct MIXINITVIEW {
 };
 
 void SNDDRV_initmixer() {
-    MIXINITVIEW params;
+    SNDMIXOPTSVIEW params;
     int i;
 
     SNDSYS_linkmaincpumixer();

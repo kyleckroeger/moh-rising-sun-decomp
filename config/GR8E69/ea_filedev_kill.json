@@ -1,0 +1,46 @@
+{
+  "id": "ea_filedev_kill",
+  "source": "src/ea/filedev_kill.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8020c160",
+      "size": 40
+    }
+  ],
+  "functions": [
+    {
+      "name": "killfiledev__Fv",
+      "address": "0x8020c160",
+      "size": 40,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "OSCancelThread": "0x8025a664",
+    "ReadFileThread": "0x80407520"
+  },
+  "local_externals": [
+    "ReadFileThread"
+  ],
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "filedev.cpp",
+  "original_file_index": 2880
+}

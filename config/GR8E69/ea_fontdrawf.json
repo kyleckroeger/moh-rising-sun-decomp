@@ -1,0 +1,43 @@
+{
+  "id": "ea_fontdrawf",
+  "source": "src/ea/fontdrawf.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80206220",
+      "size": 204
+    }
+  ],
+  "functions": [
+    {
+      "name": "FONT_drawtextfa",
+      "address": "0x80206220",
+      "size": 204,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FONT_drawtexta": "0x80206198",
+    "vsprintf": "0x80264dfc"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "fontdrawf.cpp",
+  "original_file_index": 2774
+}

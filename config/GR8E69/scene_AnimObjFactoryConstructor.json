@@ -1,0 +1,47 @@
+{
+  "id": "scene_AnimObjFactoryConstructor",
+  "source": "src/scene/AnimObjFactoryConstructor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800ca784",
+      "size": 180
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a0d10",
+      "size": 28
+    }
+  ],
+  "functions": [
+    {
+      "name": "__18CAnimObjectFactory",
+      "address": "0x800ca784",
+      "size": 180,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_allocalign": "0x801a8744",
+    "DWI_free": "0x801a8894",
+    "__18CGameObjectFactory": "0x800ca384"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AnimObjFactory.cpp",
+  "original_file_index": 920
+}

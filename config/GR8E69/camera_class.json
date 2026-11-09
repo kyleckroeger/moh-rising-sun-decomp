@@ -1,0 +1,60 @@
+{
+  "id": "camera_class",
+  "source": "src/camera/camera_class.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8012bc04",
+      "size": 144
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a7658",
+      "size": 48
+    }
+  ],
+  "functions": [
+    {
+      "name": "InitClass__7CCamera",
+      "address": "0x8012bc04",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "ShutdownClass__7CCamera",
+      "address": "0x8012bc54",
+      "size": 64,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "RegisterVar__Q24EAGL13DynamicLoaderPCcPv": "0x801eb030",
+    "UnRegisterVar__Q24EAGL13DynamicLoaderPCc": "0x801eb060",
+    "g_CameraPosition": "0x8032d030",
+    "g_WorldToCamera": "0x8032d040",
+    "g_bReady": "0x802c4af8"
+  },
+  "local_externals": [
+    "g_CameraPosition",
+    "g_WorldToCamera",
+    "g_bReady"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "camera.cpp",
+  "original_file_index": 1264
+}

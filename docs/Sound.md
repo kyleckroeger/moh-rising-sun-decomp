@@ -384,6 +384,14 @@ and the voice table sits at `sndgs+0x1f0` with the voice count at `sndgs+0x17e`.
 `sndmix` holds a pointer to its 96-byte channel records at `+0x1d8`. The stream record's
 members above about `+0xd0` sit 40 bytes further along than Frontline's.
 
+An effect bus record (`SNDFXBUS`, 20 bytes) has two tables in `sndgs`, one at `+0x1f8`
+and one at `+0x20c`, and the voice send levels start at `+0x61` in a voice record.
+`mapchannel` is 216 bytes and `remap` indexes it as a 6 x 6 x 6 table.
+
+Several allocators and filter loops here reach table records through byte offsets: a
+named `char*` record gives the table base first in the `add`, which `&table[i]` does not.
+A guard followed by a bottom-tested loop is written as `if (c) do { ... } while (c);`.
+
 `hlafile`'s `numrequests`, `freequeue` and `requestidcounter` are small statics of that
 file. The original symbol table gives `.sbss` statics a size of 0, so the unit declares
 them `extern` as original context instead of defining them. Their ownership is
@@ -406,3 +414,73 @@ have not been migrated.
 Ownership of some small statics is not verified by the build: `g_thMain`,
 `MEM_allocfailcallback` and the timer statics are declared `extern` as original context,
 like `hlafile`'s statics above, rather than defined in a unit.
+
+The pathx layer (`PATHX_*`) sits inside `sound.cpp`'s sections: its `.rodata` continues
+that file's pool and `pathxinfo` follows `g_objSound` in `.bss`, while its private helpers
+carry C++ mangled names and its public functions C names. Its units use the game's flags,
+without `-fno-strength-reduce`: `PATHX_igetslot` and `PATHX_initservice` have strength-reduced
+loops. A slot is 64 bytes: stream or bank `+0`, sound handle `+4`, stream request `+8`,
+patch `+12`, node count `+16`, requested volume `+20`, saved pitch `+24`, sound flag `+26`,
+name `+27`, bank data `+36`, play settings `+40`. Those offsets are verified; the member names are
+inferred. `PATHX_status` is not reconstructed: it matches, but its `.rodata` run (two doubles
+and a float, 20 bytes) is directly followed by another function's string, so a fragment cannot
+be verified alone.
+
+The music path player (`PATH_*`, `PATHI_*`) is one stretch of code from `0x800356a0` with no
+file evidence. Its units use the game's flags, without `-fno-strength-reduce`: loops such as
+`PATHI_gettrackptr`'s walk by 540 bytes. `pfstates` holds four 540-byte project states; each
+has a 24-entry track pointer table at `+444` and 16 queued 24-byte events at `+60`. A handle's
+top nibble selects projects, the next nibble songs and the low 24 bits tracks. Member names are
+inferred. Not reconstructed here: `PATHI_sortprojects` (the struct-swap loop's address computations
+are hoisted differently), `PATHI_eventstart` and `PATH_addmapfile` (their structure is right but
+their registers are allocated differently), and `PATH_createtrackfrombuf` and `PATH_event` (drafts
+that have not reached a match).
+
+The MicroTalk unpackers (`supmutf.c`, `supmutlf.c`, `supmutpf.c`) drive `Snd::CMTBLKDecf`, a 3,432-byte
+decoder. A state record has its decoder at `+40` (`supmutf.c`), `+28` (`supmutlf.c`) or `+52` (`supmutpf.c`);
+`Snd::MTFSTATE` is a 12-byte record whose `+8` word is set to 1 on a restart. Those offsets are verified;
+the member names are inferred. The driver's per-channel record is 64 bytes with its AX voice at `+60`.
+`SNDPLATFORM_setpitch` scales the voice's rate by `+138` of the voice record.
+
+`sndgs` keeps a table of periodic clients at `+388`, counted by the signed byte at `+375`;
+`SNDSYSI_100hzserver` calls them after `iSNDserve`. A voice record's envelope segments are 8-byte
+{duration, level} records and a negative duration means the segment holds. A packet player's
+platform record is 9,600 bytes of buffer followed by staging pointers (`+9600`), its voice (`+9624`),
+the buffer half playing (`+9625`), a start countdown (`+9626`), its DSP addresses (`+9628`), the buffer
+midpoint (`+9652`) and the frames consumed from each half (`+9656`). Those offsets are verified; the
+member names are inferred.
+
+`SNDPLATFORM_set3dpos` reads a per-layout table of 4-byte {azimuth offset, gain} records at `+548` of
+`sndgs`, with 6 channels per layout; the layout comes from the voice's channel count and the output
+count. `SNDDRV_dolbypl2balances` is 256 rows of four 16-bit levels indexed by azimuth over 256. A voice
+record's channel azimuths are at `+80`. Those offsets are verified; the member names are inferred.
+
+The DSP mixer's channel records (`__MIXChannel`, 76 bytes each) hold a current and target pair for each level
+from `+36`. `SNDDRV_DSPMixerUpdate` copies targets to the current values on flags in the channel's mode word
+(`0x20000000` and `0x10000000` for the volume, `0x80000000` and `0x40000000` for the pan) and writes deltas over
+320 samples to the AX voice. Those offsets and flags are verified; the member names are inferred.
+`SNDDRV_DSPMixerResetChannel` is not reconstructed: its run of stores is in a different order.
+
+`sndgs` holds a channel map at `+716`, six rows of six 16-bit values indexed by channel count less one; `SNDI_patchtohdr`
+adds it to each channel's pan offset. A big-file entry's offset field may be wider than 4 bytes; `BIG_locateentryz` reads
+it as 64 bits and stores the low word. Those offsets are verified; the member names are inferred.
+
+The runtime's variadic entry points (`REAL_abortmessage`, `SYSTEM_abortmessage`, `PRINT_string`, `FONT_drawtextfa`)
+copy the record `__builtin_saveregs` builds with inline word moves. Under `cc1plus` the standard `va_start` expands to
+`__builtin_memcpy`, which here is a call to `memcpy`, so these units write the same copy as a record assignment. That
+form is inferred. The same functions also match with the standard macro when compiled as C, but the code map names
+their files `.cpp`. The mixer hooks (`MIXinitfn` through `MIXsetpitchfn`) are declared with the signatures of the
+`MIX_*` functions they hold; `MIX_audioslice`'s parameters are inferred from its caller in the sound driver thread,
+since it is not reconstructed yet. `TIMER_init` reads the bus clock from low memory at `0x800000F8`; `OSLOWMEM` is an
+inferred view.
+
+`MEM_free` passes a record to two class hooks at `+100` and `+104` around the free; the alloc hooks at `+92` and `+96`
+are the same pattern in `MEM_allocaligna`, which is not reconstructed yet. The record's members are inferred from their
+stores. `openfile` opens host files through `PCopen` and `PCcreat`, with the file number stored as an `int`, as
+`openfile_plat`'s mangled name shows; `MyStrCmpi`, despite its name, returns the prefix's length when the name starts
+with it. The name also belongs to a different function near `0x801b1448`.
+
+`RCMP::AV_PLAYER` is reconstructed in fragments (`avplayer_ctor`, `avplayer_dtor`, `avplayer_time`, `avplayer_chunk`). Not
+reconstructed here: `Init`, `GetFirstFrame` and `GetRCMPChunk`, which have small differences, and `GetFrame`, whose code
+matches but whose `.rodata` holds a second, unreferenced copy of the 2^31 literal at `0x802b8560`. `CHUNK` has an empty
+inline destructor: `delete chunk` tests for null, which it does not for a class without one.

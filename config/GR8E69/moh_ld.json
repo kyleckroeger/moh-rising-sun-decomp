@@ -1,0 +1,46 @@
+{
+  "id": "moh_ld",
+  "source": "src/game/moh_ld.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80059130",
+      "size": 84
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029913c",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "LevelExistsOnCurrentDisc__Fii",
+      "address": "0x80059130",
+      "size": 84,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DVDConvertPathToEntrynum": "0x802395b8",
+    "sprintf": "0x80263a3c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "drivecheck.cpp",
+  "original_file_index": 372
+}

@@ -17,7 +17,7 @@ struct WeaponProperties_struct {
     short projectile; // +0x0e; nonzero for projectile weapons.
     unsigned char unknown_10[2];
     short infoValue1; // +0x12; returned for EWeaponInfo 1; caps the reserve in AddAmo.
-    unsigned char unknown_14[0x34 - 0x14];
+    char modelName[0x34 - 0x14]; // +0x14; loaded by LoadWeaponObjects.
     void *model;      // +0x34; copied to the static object by Init.
     char iconName[0x58 - 0x38]; // +0x38; loaded by LoadWeaponGUISprites.
     CSprite *icon;    // +0x58
@@ -25,7 +25,7 @@ struct WeaponProperties_struct {
     short soundType;  // +0x60; returned by GetWeaponSoundType.
     short field_62;   // Nonzero selects alternate grenade-catching side bounds.
     unsigned char unknown_64[0x68 - 0x64];
-    short weaponType; // +0x68; returned by the weapon-type built-ins.
+    short weaponType; // +0x68; returned by the weapon-type built-ins; orders the player's weapon ring.
 };
 
 typedef WeaponProperties_struct WeaponProperties;
@@ -52,7 +52,8 @@ class CWeapon : public CStaticObject {
     int bulletClass;            // +0x31c; chosen from the holder's collision id.
     int weaponClass; // +0x320; returned by BIFunc_PlayerGetWeaponClass.
     float shootValue2;          // +0x324; Shoot keeps it when passed -1.
-    unsigned char unknown_328[0x340 - 0x328];
+    unsigned char unknown_328[0x330 - 0x328];
+    CVector3 direction;         // +0x330; set for a mounted gun by SetPlayersMountedMGPositions.
     CVector3 position;          // +0x340; returned by GetPosition.
     unsigned int reloading : 1; // +0x350, bit 31: cleared by BIFunc_PlayerClearReloading.
     unsigned int field_30 : 1;
@@ -72,6 +73,8 @@ class CWeapon : public CStaticObject {
     float field_36c;            // +0x36c
     ISceneNode *holder; // +0x370
     int trigger;        // +0x374; proximity-trigger subobject, only its address is taken here.
+    void *operator new(unsigned int, void *storage) { return storage; }
+    CWeapon();
     void Init(int, WeaponProperties_struct *, ISceneNode *, short);
     void RegisterWithAI();
     int SupportsCoverpointBehavior();

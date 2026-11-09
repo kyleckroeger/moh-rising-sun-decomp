@@ -1,0 +1,49 @@
+{
+  "id": "font_draw",
+  "source": "src/game/font_draw.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80067338",
+      "size": 232
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029a014",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "DrawText__5CFontffPCc",
+      "address": "0x80067338",
+      "size": 232,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "ComputeJustification__5CFontRfT1PCc": "0x80067628",
+    "FONT_drawtexta": "0x80206198",
+    "_7CScreen.m_2dXDisp": "0x802c1b98",
+    "_7CScreen.m_2dXScale": "0x802c1b90",
+    "_7CScreen.m_2dYDisp": "0x802c1b9c",
+    "_7CScreen.m_2dYScale": "0x802c1b94",
+    "floorf": "0x80270940"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

@@ -36,6 +36,9 @@ class CWorldObject {
     CompartmentIterator BeginCompartments() { return CompartmentIterator(compartments.next); }
     CompartmentIterator EndCompartments() { return CompartmentIterator(&compartments); }
     void Acquire(const SAcquireSet &, bool, bool);
+    void *Borrow(int &);
+    void Return();
+    static int m_sCompartmentSize;
     CCompartment *GetCompartment(int);
     void DrawShadows(CDrawContext &);
     void Draw(CDrawContext &);
@@ -51,13 +54,36 @@ class CWorldObject {
     const CWorldObject *AsWorldObject() const;
     unsigned char unknown_0[0x20];
     CWorldBound *bounds[4]; // +0x20; the sorted bound entries low x, high x, low y, high y.
-    unsigned char unknown_30[0x60 - 0x30];
+    unsigned char unknown_30[0x38 - 0x30];
+    // A dwi::CMemFactory in Frontline's reading, with free blocks chained through their first
+    // word; only what Borrow and Return reach is declared, and the member names are descriptive.
+    struct BlockPool {
+        unsigned char unknown_0[4];
+        void **freeList; // +4
+        unsigned char unknown_8[8];
+        int used;        // +0x10
+        void **Take() {
+            void **block = freeList;
+            freeList = (void **)*block;
+            used++;
+            return block;
+        }
+        void Give(void **block) {
+            used--;
+            *block = freeList;
+            freeList = block;
+        }
+    };
+    BlockPool blockPool; // +0x38
+    unsigned char unknown_4c[0x60 - 0x4c];
     CompartmentNode compartments; // +0x60
     unsigned char unknown_6c[4];
     int streaming; // +0x70
     unsigned char unknown_74[0xd0 - 0x74];
     unsigned char worldVolumeStorage[0x130 - 0xd0]; // +0xd0; a CWorldVolume, returned for every volume type.
     unsigned int drawEnabled; // +0x130
+    unsigned char unknown_134[0x148 - 0x134];
+    void **borrowedBlocks[4]; // +0x148; what Borrow took, cleared by Return.
 };
 
 #endif

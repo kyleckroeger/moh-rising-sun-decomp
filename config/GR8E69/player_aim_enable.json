@@ -1,0 +1,41 @@
+{
+  "id": "player_aim_enable",
+  "source": "src/player/PlayerAimEnable.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800b7b4c",
+      "size": 120
+    }
+  ],
+  "functions": [
+    {
+      "name": "Enable__Q213CPlayerObject9AimAdjust",
+      "address": "0x800b7b4c",
+      "size": 120,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "UpdateTarget__Q213CPlayerObject9AimAdjustRC7CCamera": "0x800b7eb0",
+    "g_camera": "0x803e6f00"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}

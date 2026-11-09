@@ -1,0 +1,48 @@
+{
+  "id": "pum_a",
+  "source": "src/ui/pum_a.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80178c00",
+      "size": 176
+    }
+  ],
+  "functions": [
+    {
+      "name": "LoadSubtitles__19PopUpMessageHandlerPcN21",
+      "address": "0x80178c00",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "ShutdownPopUpMessageHandler__19PopUpMessageHandler",
+      "address": "0x80178c24",
+      "size": 140,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Load__17CUserMessageTablePcN21": "0x8017b948",
+    "_._5CFont": "0x80066e6c",
+    "_._7CSprite": "0x8005d1f4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "pumhandler.cpp",
+  "original_file_index": 1539
+}

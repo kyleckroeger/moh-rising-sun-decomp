@@ -1,0 +1,58 @@
+{
+  "id": "scene_SoldierAttachObject",
+  "source": "src/scene/SoldierAttachObject.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800c0630",
+      "size": 668
+    }
+  ],
+  "functions": [
+    {
+      "name": "AttachObject__14CSoldierObjectiPci",
+      "address": "0x800c0630",
+      "size": 244,
+      "binding": 1
+    },
+    {
+      "name": "GetAttachedObjectAt__14CSoldierObjectPc",
+      "address": "0x800c0724",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "AttachObject__14CSoldierObjectP13CStaticObjectPci",
+      "address": "0x800c0784",
+      "size": 328,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AllocateStaticObject__20CStaticObjectFactoryiiP10PickupInfo": "0x800cc91c",
+    "FindAttachPoint__Q34EALA9Character8SkeletonPCc": "0x80082630",
+    "GetAttachPoint__14CSoldierObjectPCc": "0x800c0584",
+    "Inverse__7CMatrixRC7CMatrix": "0x8007b290",
+    "IsNodeInScene__C6CScenePC10ISceneNode": "0x8014ac34",
+    "Remove__6CSceneR10ISceneNode": "0x80146e9c",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Soldier_object.cpp",
+  "original_file_index": 875
+}

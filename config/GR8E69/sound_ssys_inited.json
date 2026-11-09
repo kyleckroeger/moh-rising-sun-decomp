@@ -1,0 +1,41 @@
+{
+  "id": "sound_ssys_inited",
+  "source": "src/sound/ea/ssys_inited.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80221700",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "SNDSYS_inited",
+      "address": "0x80221700",
+      "size": 16,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "sndgs": "0x804108fc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "ssysinit.c",
+  "original_file_index": 3123
+}

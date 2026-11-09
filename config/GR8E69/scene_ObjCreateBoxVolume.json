@@ -1,0 +1,50 @@
+{
+  "id": "scene_ObjCreateBoxVolume",
+  "source": "src/scene/ObjCreateBoxVolume.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8012b5cc",
+      "size": 88
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a73c0",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "AllocateBoxVolume__Fv",
+      "address": "0x8012b5cc",
+      "size": 88,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetFreeElement__35BSUtilObjectInstanceMemoryAllocatorb": "0x800f83f4",
+    "_vt.7CVolBox": "0x802e95d0",
+    "g_pVolumeAllocator": "0x8032ce04"
+  },
+  "local_externals": [
+    "g_pVolumeAllocator"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "objcreate.cpp",
+  "original_file_index": 1242
+}

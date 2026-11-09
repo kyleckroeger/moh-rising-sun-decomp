@@ -30,7 +30,9 @@ struct SNDVOICEVIEW {
     char pad42[6];
     float outvolume;
     unsigned short baseazimuth;
-    char pad4e[17];
+    char pad4e[2];
+    unsigned short azimuths[6];
+    char pad5c[3];
     signed char field5f;
     signed char send[1];
     signed char level[1];
@@ -52,6 +54,22 @@ struct SNDVOICEVIEW {
     unsigned short pitchrate;
     unsigned short scaled;
 };
+/* a speaker's azimuth offset and gain, per speaker layout and channel */
+struct SNDSPEAKERPAN {
+    short pan;
+    short gain;
+};
+
+
+/* an effect bus record (20 bytes) */
+struct SNDFXBUS {
+    short type;
+    unsigned char level;
+    unsigned char field3;
+    int param1;
+    int param2;
+    char fieldC[8];
+};
 
 struct SNDGSVIEW {
     unsigned short outputrate0;
@@ -65,7 +83,8 @@ struct SNDGSVIEW {
     unsigned char field13;
     unsigned short field14;
     unsigned short field16;
-    char pad18[16];
+    char pad18[12];
+    unsigned int randomseed;
     unsigned short bankcount;
     unsigned short samplerate;
     char pad2c[2];
@@ -108,22 +127,28 @@ struct SNDGSVIEW {
     unsigned char inited;
     unsigned char mastervolume;
     unsigned char critical;
-    char pad177[2];
+    signed char clientcount;
+    unsigned char field178;
     signed char userdataclients;
     unsigned char voicequality;
     char pad17b[3];
     short voicecount;
     unsigned int tick;
-    char pad184[60];
+    void (*clients[1])();
+    char pad188[56];
     int ticksnapped;
     float rate;
     void (*userdataclient[7])(void*);
     int (*removebank)(int);
-    char pad1e8[4];
+    void (*streamclient)(void);
     void (*destroystreams)(void);
     struct SNDVOICEVIEW* voices;
     struct SNDBANKSLOT* banks;
-    char pad1f8[284];
+    struct SNDFXBUS fxreverb[1];
+    struct SNDFXBUS fxsecond[1];
+    char pad220[4];
+    struct SNDSPEAKERPAN speakerpan[7][6];
+    unsigned short channelmap[6][6];
     void (*prehook)(void);
     void (*posthook)(void);
 };

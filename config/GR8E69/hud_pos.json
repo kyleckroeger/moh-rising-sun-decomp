@@ -1,0 +1,73 @@
+{
+  "id": "hud_pos",
+  "source": "src/ui/hud_pos.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-ffast-math"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801744f0",
+      "size": 1088
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802acc80",
+      "size": 56
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetBulletStatsRightBottom__15CHeadsUpDisplayRfT1",
+      "address": "0x801744f0",
+      "size": 256,
+      "binding": 1
+    },
+    {
+      "name": "DrawWeaponName__15CHeadsUpDisplayPCc",
+      "address": "0x801745f0",
+      "size": 832,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DrawText__5CFontffPCc": "0x80067338",
+    "FONT_getrecta": "0x802061e0",
+    "GetColor__5CFont": "0x80067508",
+    "GetJustification__5CFont": "0x800675ac",
+    "GetRenderedSize__5CFontPCcRfT2": "0x800675b4",
+    "GetScale__5CFontRfT1": "0x80067574",
+    "SetColor__5CFontG6CColor": "0x800674f8",
+    "SetJustification__5CFontUi": "0x800675a4",
+    "SetScale__5CFontff": "0x80067590",
+    "_7CScreen.m_2dXDisp": "0x802c1b98",
+    "_7CScreen.m_2dXScale": "0x802c1b90",
+    "_7CScreen.m_2dYDisp": "0x802c1b9c",
+    "_7CScreen.m_2dYScale": "0x802c1b94",
+    "_7CScreen.m_sHeight": "0x80452578",
+    "_7CScreen.m_sHeightScale": "0x80452580",
+    "_7CScreen.m_sWidth": "0x80452574",
+    "_7CScreen.m_sWidthScale": "0x8045257c",
+    "floorf": "0x80270940",
+    "g_bCoopMultiplayer": "0x802c1b2c",
+    "g_bInMultiplayerMode": "0x802c1b30",
+    "g_pPopUpMessageHandler": "0x80326390",
+    "g_viewport": "0x803e71c0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "HeadsUpDisplay.cpp",
+  "original_file_index": 1509
+}

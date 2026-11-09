@@ -19,12 +19,12 @@
     {
       "name": ".text",
       "address": "0x800a523c",
-      "size": 1012
+      "size": 656
     },
     {
       "name": ".rodata",
-      "address": "0x8029ea0c",
-      "size": 32
+      "address": "0x8029EA0C",
+      "size": 28
     }
   ],
   "functions": [
@@ -99,61 +99,14 @@
       "address": "0x800a5494",
       "size": 56,
       "binding": 1
-    },
-    {
-      "name": "SetAttached__11CAnimObjectb",
-      "address": "0x800a54cc",
-      "size": 28,
-      "binding": 1
-    },
-    {
-      "name": "GetPosition__11CAnimObject",
-      "address": "0x800a54e8",
-      "size": 104,
-      "binding": 1
-    },
-    {
-      "name": "GetRotation__11CAnimObject",
-      "address": "0x800a5550",
-      "size": 32,
-      "binding": 1
-    },
-    {
-      "name": "SetPosition__11CAnimObjectRC6COORD3",
-      "address": "0x800a5570",
-      "size": 52,
-      "binding": 1
-    },
-    {
-      "name": "SetRotation__11CAnimObjectRCf",
-      "address": "0x800a55a4",
-      "size": 36,
-      "binding": 1
-    },
-    {
-      "name": "MarkForDestruction__11CAnimObjecti",
-      "address": "0x800a55c8",
-      "size": 60,
-      "binding": 1
-    },
-    {
-      "name": "Destroy__11CAnimObject",
-      "address": "0x800a5604",
-      "size": 44,
-      "binding": 1
     }
   ],
   "externals": {
     "AddVolume__19CLightVolumeManagerP14BPDLightVolume": "0x8013183c",
     "GetVolume__C19CLightVolumeManager": "0x801319c0",
-    "MarkForDestruction__8ISubjecti": "0x8014ad2c",
     "Orthonormalize__7CMatrix": "0x8007b5a4",
-    "ReleaseObject__18CAnimObjectFactoryP11CAnimObject": "0x800cc668",
     "RemoveVolume__19CLightVolumeManagerP14BPDLightVolume": "0x80131908",
-    "Remove__6CSceneR10ISceneNode": "0x80146e9c",
-    "__as__7CMatrixRC7CMatrix": "0x8007aa38",
-    "g_AnimObjFactory": "0x803e6bb0",
-    "g_scene": "0x803e6d90"
+    "__as__7CMatrixRC7CMatrix": "0x8007aa38"
   },
   "discarded_functions": [],
   "undefined_in_discarded_code": [],

@@ -16,6 +16,7 @@ public:
     void SetFromEuler(float, float, float);
     void Slerp(CQuaternion, CQuaternion, float);
     void Multiply(CQuaternion);
+    void Rotate(CVector3 &, const CVector3 &);
 };
 
 typedef char CQuaternionStorageSizeCheck[sizeof(CQuaternion) == 16 ? 1 : -1];

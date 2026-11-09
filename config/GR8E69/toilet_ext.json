@@ -1,0 +1,67 @@
+{
+  "id": "toilet_ext",
+  "source": "src/game/toilet_ext.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801aa054",
+      "size": 528
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b7bb0",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetExt__15TLT_FindExtDataPc",
+      "address": "0x801aa054",
+      "size": 148,
+      "binding": 1
+    },
+    {
+      "name": "MatchExtension__15TLT_FindExtDataPCc",
+      "address": "0x801aa0e8",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "TLT_FindFirstExtension__FR15TLT_FindExtDataPc",
+      "address": "0x801aa154",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "TLT_FindNextExtension__FR15TLT_FindExtData",
+      "address": "0x801aa1bc",
+      "size": 168,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BIG_count": "0x8020c060",
+    "BIG_locateentry": "0x8020bf40",
+    "g_toilet": "0x803f5360",
+    "sprintf": "0x80263a3c",
+    "strcasecmp": "0x8026680c",
+    "strcpy": "0x80266a7c",
+    "strlen": "0x80266b70"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

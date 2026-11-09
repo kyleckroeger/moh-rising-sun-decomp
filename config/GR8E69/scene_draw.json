@@ -1,0 +1,46 @@
+{
+  "id": "scene_draw",
+  "source": "src/scene/scene_draw.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801486f8",
+      "size": 540
+    }
+  ],
+  "functions": [
+    {
+      "name": "Draw__6CSceneR12CDrawContextR4CFog",
+      "address": "0x801486f8",
+      "size": 540,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DrawShadows__12CWorldObjectR12CDrawContext": "0x800c6a54",
+    "ExecCommands__12CDrawContext": "0x8012ede4",
+    "GetNodesBegin__C6CScene": "0x8014ac18",
+    "GetNodesEnd__C6CScene": "0x8014ac28",
+    "InitCommands__12CDrawContext": "0x8012e954",
+    "Lock__6CScene": "0x8014863c",
+    "Unlock__6CScene": "0x80148648"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "scene.cpp",
+  "original_file_index": 1338
+}

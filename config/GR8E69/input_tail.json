@@ -1,0 +1,57 @@
+{
+  "id": "input_tail",
+  "source": "src/game/input_tail.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d727c",
+      "size": 272
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetSPLockedPort__13CInputManagerUc",
+      "address": "0x800d727c",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "FindDeviceIDFromPortNum__C13CInputManagerUc",
+      "address": "0x800d72e0",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "SetBadControllerPort__13CInputManagerUc",
+      "address": "0x800d7348",
+      "size": 68,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetCurrentState__14CDeviceManagerUc": "0x800d684c",
+    "GetNumDevices__C14CDeviceManager": "0x800d66b8",
+    "GetPortNum__C14CDeviceManagerUc": "0x800d6840",
+    "SetController__13CInputManagerUcSc": "0x800d6ea8",
+    "SetNumberJoyPads__12ShellManagerUc": "0x801815a4",
+    "g_Shell": "0x802f4420"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "input.cpp",
+  "original_file_index": 951
+}
