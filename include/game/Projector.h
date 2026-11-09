@@ -22,7 +22,8 @@ class CProjector : public IMovingSceneNode {
     CVolFrustum frustum;     // +64
     CMatrix localToWorld;    // +368
     CMatrix projection;      // +432
-    unsigned char unknown_1f0[564 - 496];
+    CMatrix offset;          // +496; applied after the parent's transform.
+    CMatrix *attachMatrix;   // +560
     float radius;            // +564
     float frustumParams[4];  // +568
     unsigned char unknown_24c[4];
@@ -51,5 +52,10 @@ class CProjector : public IMovingSceneNode {
     const CVolFrustum &GetFrustum() const;
     CProjector *AsProjector();
     const CProjector *AsProjector() const;
+    void UpdateProjection();
+    void BeginUpdate(float);
+    void Draw(CDrawContext &);
+    int Detach();
+    int IsVisible(CDrawContext &) const;
 };
 #endif

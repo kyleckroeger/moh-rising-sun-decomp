@@ -2403,7 +2403,13 @@
     "gc_interface_messages.json",
     "gc_interface_access.json",
     "shell_VolumeKnobs.json",
-    "game_locale.json"
+    "game_locale.json",
+    "projector_update_projection.json",
+    "projector_begin_update.json",
+    "projector_detach.json",
+    "projector_visible.json",
+    "volfrustum_copy.json",
+    "volfrustum_transformed_copy.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

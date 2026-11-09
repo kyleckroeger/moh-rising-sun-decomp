@@ -476,10 +476,12 @@ Projectors live in a pool, `g_ProjectorList`, with the same five-word shape as t
 pool, linked through `+608`. [`Projector.h`](../include/game/Projector.h) holds the frustum at `+64`,
 the local-to-world matrix at `+368`, the projection matrix at `+432`, the radius at `+564` and four
 frustum parameters at `+568`. Names are inferred from use. `SetTMLocalToWorld` rebuilds the frustum
-from those parameters. `Create`, `InitClass`, `StateSetup`, `Attach`, `BeginUpdate` and the constructors
+from those parameters. `Create`, `InitClass`, `StateSetup`, `Attach` and the constructors
 are not reconstructed.
 
-`CVolFrustum` is 304 bytes (`Create` allocates that size). Ten collision tests, `TestVisibility` and
+`BeginUpdate` composes the attached node's transform with the attach matrix at `+560` and the offset at `+496`.
+
+`CVolFrustum` is 304 bytes (`Create` allocates that size). Its copy constructor, `operator=` and `TransformedCopy` copy only the six planes at `+80`. Ten collision tests, `TestVisibility` and
 `GetExtents` build a `CVolSphere` from its bounding centre at `+64` and radius at `+272`, set the radius
 through the table, and delegate to the sphere. See [`VolFrustum.h`](../include/game/VolFrustum.h).
 
