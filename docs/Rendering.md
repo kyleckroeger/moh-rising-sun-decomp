@@ -510,3 +510,15 @@ hooks. Its heap setup and teardown, language column table, constructor, and `Pla
 are reconstructed. Member names are inferred from the code. `Play`, the no-argument
 `SetupSubtitle` and `GetSubtitle` are not yet: they share `.rodata` that starts with an
 empty string and the unreferenced `bad_alloc` string, and a double literal behind that.
+
+## Draw context
+
+`CDrawContext` holds thirteen render bins at `+0x120`, each a queue of `DrawCommandData`. Each
+bin has the shape of STLport's `priority_queue`, shown by the `push_heap` and `pop_heap`
+instances; the project's STLport headers lack that class, so the source names a small local
+queue with the same members. `ExecCommands` swaps bins 8 and 9 when
+`b_ReverseParticleVsTranslucentSorting` is set. `CDrawContextEAGL` keeps its viewport at
+`+0x234`. Verified: command queuing, the EAGL constructor, `BeginDraw`, `EndDraw`, class
+setup and shutdown. Inferred: member names and the small `Rebuild` helper. Not reconstructed:
+the two destructors, whose base body is emitted weak, `GetFogValue` (one `fmr` of a known
+zero not reproduced), `SetCamera` and `SetViewport`.

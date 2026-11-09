@@ -2213,7 +2213,12 @@
     "soundman_remove.json",
     "scripted_gag.json",
     "movie_player_heap.json",
-    "movie_player_tail.json"
+    "movie_player_tail.json",
+    "draw_context_commands.json",
+    "draw_context_begin.json",
+    "draw_context_init.json",
+    "draw_context_shutdown.json",
+    "objectives_serialize.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

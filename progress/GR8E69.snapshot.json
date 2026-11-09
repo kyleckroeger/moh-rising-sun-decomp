@@ -212,6 +212,10 @@
       "src/bullets/ThrownCollisionLight.cpp": "2ea8ad4d6f233b463162dee7d2489dade510b4db575f2767521d9ede3c50f6fe",
       "src/bullets/ThrownSetters.cpp": "53bd8f3d5543f02d514a21a46422d909dc36d86b9f9058bef0b5e99b6b703dd4",
       "src/bullets/ThrownUpdate.cpp": "aff8c3d144bdda27777aaa768f13c97ff87c9afb4e194eb191ab3bd942839a4c",
+      "src/camera/DrawContextBegin.cpp": "52f56c0aa24bc5f6d043a8bf1d84c5e881592d23f3be52598d5f14d82ab9543b",
+      "src/camera/DrawContextCommands.cpp": "774dcc88e3cf297cf02b435dc4e86177545cdd06b71ae8458e8d2676ce0ad995",
+      "src/camera/DrawContextInit.cpp": "d3c1465fc0a4b4221a107a801f54fb3f62e6b6659538d7bd6accbdf57e627e2d",
+      "src/camera/DrawContextShutdown.cpp": "f7b93cc3a13c34f32accd4680b045e1bf5f7d0ed58ebf1380c6346e8a2f54309",
       "src/camera/axes.cpp": "5f01c8b680d40e8507f99181b64e824f3fd5f74911193154807716a91603286a",
       "src/camera/camera_attempt.cpp": "ec48bbce4df6ed15b2befbfa4c0ea8598855d4866123ece8268cc5b3394cec48",
       "src/camera/camera_begin.cpp": "c9abdc74721c4613675b5075e1023f328b2b1a7d5d9ca228971cba9b33119a7c",
@@ -1083,6 +1087,7 @@
       "src/newlib/string/strrchr.c": "402a6ca9631680b81811553ad4a60b85271b90f7cce71b898872c845b1931ff9",
       "src/newlib/string/strstr.c": "09437b966be6a045479e511b84d9ef0156823a5c9ccd29dc4c93d0f7c53998e7",
       "src/objectives/ObjectivesInit.cpp": "d5b86240d3cb28c893c72f3068b076d8d34f5d2bb70191f34ee127d65b52b49f",
+      "src/objectives/ObjectivesSerialize.cpp": "4f6b0cde17ed3fa323e8bd1274dd45dab304059f2454494f5d1faf114e6014ae",
       "src/objectives/ObjectivesShow.cpp": "30187052d1d8575538c3b9713505b78ccbcd0f192c78c04697bbeac35b8c8087",
       "src/objectives/ObjectivesStatus.cpp": "5b127ad92191139eca6e5be978ac1a7a5a53ad7b3f7db5a0d7b690f5acc9a53e",
       "src/observers/observer_8014acd0.cpp": "d406558cdd0a660375aa2fc657b5691ab50bfc1e4f53e96970165bf7ac3ff1e4",
@@ -2624,7 +2629,7 @@
       "include/game/MemoryCardDevice.h": "504e62bff7ae1c28f4d6207f45818a2c1597655fdcfd5336157bbc82b15c40cb",
       "include/game/MohLoader.h": "9149e28d430ae8e1c9ccab1b19b1b46307c3ac0c50ac5120675eeb2980bd10b4",
       "include/game/ObjCreate.h": "b6f8edb8c9b6eb61022293941d32ba7f9dea42d9ce5e7a29a0d3a8537d522db3",
-      "include/game/Objectives.h": "1ea24c6eff2ea812a193eb26bb5211d5a8980f82a173ebe7e2a37952e504ae43",
+      "include/game/Objectives.h": "54f9ed5dd4be862a546640fa7e495b07c0ac78788f6027aedba7a6c25034b5d5",
       "include/game/ObserverTypes.h": "687dfc07deb4adc23a1d0247270d6ab04c34b758bd88846bf5e4b6ef33e7cc1f",
       "include/game/OffsetPtr.h": "06d2e4c320890063bd6b210c1ddda4b7cefc28e7aa9a4f276e76c128c0a68499",
       "include/game/ParticleClock.h": "7784d24bb307ac0a9e2b796c228584fe306f5781575650f1896038426c80dc0b",
@@ -2680,7 +2685,7 @@
       "include/game/Weapon.h": "06c961fd954800c1d8766e2d17e71707a250f4de310b30d4c99182c3845d04b9",
       "include/game/WorldObject.h": "8bf6843a362f5e8fe835da2694838943402f9f5013bfb812dcd86ce9915fdde8",
       "include/game/WorldVolume.h": "9acfaf28c317912de14baef7ca50a3d80175ddc31dcf83cea18c80725e688318",
-      "include/game-containers/AlgorithmTypes.h": "a4959e24b9ab8edd66054b63ed6d53516aebc500f71f821e27babbf931b8d51a",
+      "include/game-containers/AlgorithmTypes.h": "cd4a28c7c2eb6a6cb85477587065b64ff0e86ee9010ceed6df1637ca9fcffe14",
       "include/game-containers/ContainerTypes.h": "f6b7f0133646a5eb70ccc5df78ced025919dee88dcd81edc3f565d0b71dd407c",
       "include/game-containers/ResourceTypes.h": "6f63038334ba47ea545e0994a455fbd01b1fdb6aa3b6bf155de630e9ede05c68",
       "include/game-containers/TargetTypes.h": "3ac99430c5eabe7c725b67a8b280b4ec55003d4bb6763dc1746023ced2fda08f",
@@ -3211,6 +3216,10 @@
       "config/GR8E69/device_d.json": "0d211ba5bb46fbb995d2bec21e8233aef1ea0dce785da8616c54ea18f4cd2ad4",
       "config/GR8E69/dolphin-network-source.json": "6b039c8ef3fc502a7441ab8f55160567fd2facec6c12d818739c3bc7fd741b82",
       "config/GR8E69/dolphin-source.json": "00e4890e3bb570018abbacc62a7beee8052c2ef4f115363b1716785b62884cf1",
+      "config/GR8E69/draw_context_begin.json": "7a5504ad2d7092dd26700b1308345520ff30fba18f392171339756a881ff0eb3",
+      "config/GR8E69/draw_context_commands.json": "47d833498fde3764f1415b668a90a6b4d7ffed4364c354c1eeeaccd2015c46ed",
+      "config/GR8E69/draw_context_init.json": "f30f7a6ecc9fdf2c7980693c5adb54ce95b653b62d5e4b5fdc52615780e6167f",
+      "config/GR8E69/draw_context_shutdown.json": "0b7b72c30eff9ce1832758a91897aea9927b887837b564a4884efa2cbd3265da",
       "config/GR8E69/dsp.json": "bcc4a05a8ec25869e7675234c297eb8243e9a2e03983f64bf5e7040c7a897cd7",
       "config/GR8E69/dsp_debug.json": "2c0310fa0176274558e8b7835044c6eb9dc060213f74257a1f46cb54d1746654",
       "config/GR8E69/dsp_task.json": "31b139f049d5654d71cd5fc3b5077f18c4c96bf4d82eee4c5d785e0ee86733f9",
@@ -3806,6 +3815,7 @@
       "config/GR8E69/newlib_writer.json": "cf7eab1eebe3bf4b04912e61b9ce9a2c7c4191ebecc610aa267f69bdabe6512f",
       "config/GR8E69/newlib_wsetup.json": "61dd8c7f513073a2f4c355ee89bdcf2d300345cd74c632de1997cba9f3e84020",
       "config/GR8E69/objectives_init.json": "eca4ead9759ddbaaf645bd69577bf42e99bb26ad920173006f50ff703e18e887",
+      "config/GR8E69/objectives_serialize.json": "4fba9fa4ce1cb980aef9ebf485c26c16d832be60ee7410d48b1fd7bb39bce962",
       "config/GR8E69/objectives_show.json": "6f555945147172984d179fd626392447493629055be0ce2ec5375fbba8951bf0",
       "config/GR8E69/objectives_status.json": "9cd3cc5b2129ad22356374933f20ce7999389baeaa04ac450846279e1f73c811",
       "config/GR8E69/observer_8014acd0.json": "e5ca4989003a3994946cd5d06961e1648c8f636b4236c883f083d9296cf067c2",
@@ -3934,7 +3944,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "fc89f76730bfff813d59670e092179bfc2d243cb6fc061be1a6e77d2221f1e6d",
+      "config/GR8E69/project.json": "83a5f0649d2afe5187d027817f48ac5a6ebb9718c96b491963b067eb3d2f34a8",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -6622,14 +6632,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1145276,
+    "matching_code_bytes": 1148104,
     "total_executable_code_bytes": 2492032,
-    "percent": 45.95751579433972,
+    "percent": 46.07099748317839,
     "categories": {
-      "reconstructed_game": 753060,
+      "reconstructed_game": 755888,
       "restored_library": 392216
     },
-    "matching_functions": 5898
+    "matching_functions": 5909
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -7017,6 +7027,10 @@
     "config/GR8E69/device_d.json": "0d211ba5bb46fbb995d2bec21e8233aef1ea0dce785da8616c54ea18f4cd2ad4",
     "config/GR8E69/dolphin-network-source.json": "6b039c8ef3fc502a7441ab8f55160567fd2facec6c12d818739c3bc7fd741b82",
     "config/GR8E69/dolphin-source.json": "00e4890e3bb570018abbacc62a7beee8052c2ef4f115363b1716785b62884cf1",
+    "config/GR8E69/draw_context_begin.json": "7a5504ad2d7092dd26700b1308345520ff30fba18f392171339756a881ff0eb3",
+    "config/GR8E69/draw_context_commands.json": "47d833498fde3764f1415b668a90a6b4d7ffed4364c354c1eeeaccd2015c46ed",
+    "config/GR8E69/draw_context_init.json": "f30f7a6ecc9fdf2c7980693c5adb54ce95b653b62d5e4b5fdc52615780e6167f",
+    "config/GR8E69/draw_context_shutdown.json": "0b7b72c30eff9ce1832758a91897aea9927b887837b564a4884efa2cbd3265da",
     "config/GR8E69/dsp.json": "bcc4a05a8ec25869e7675234c297eb8243e9a2e03983f64bf5e7040c7a897cd7",
     "config/GR8E69/dsp_debug.json": "2c0310fa0176274558e8b7835044c6eb9dc060213f74257a1f46cb54d1746654",
     "config/GR8E69/dsp_task.json": "31b139f049d5654d71cd5fc3b5077f18c4c96bf4d82eee4c5d785e0ee86733f9",
@@ -7612,6 +7626,7 @@
     "config/GR8E69/newlib_writer.json": "cf7eab1eebe3bf4b04912e61b9ce9a2c7c4191ebecc610aa267f69bdabe6512f",
     "config/GR8E69/newlib_wsetup.json": "61dd8c7f513073a2f4c355ee89bdcf2d300345cd74c632de1997cba9f3e84020",
     "config/GR8E69/objectives_init.json": "eca4ead9759ddbaaf645bd69577bf42e99bb26ad920173006f50ff703e18e887",
+    "config/GR8E69/objectives_serialize.json": "4fba9fa4ce1cb980aef9ebf485c26c16d832be60ee7410d48b1fd7bb39bce962",
     "config/GR8E69/objectives_show.json": "6f555945147172984d179fd626392447493629055be0ce2ec5375fbba8951bf0",
     "config/GR8E69/objectives_status.json": "9cd3cc5b2129ad22356374933f20ce7999389baeaa04ac450846279e1f73c811",
     "config/GR8E69/observer_8014acd0.json": "e5ca4989003a3994946cd5d06961e1648c8f636b4236c883f083d9296cf067c2",
@@ -7740,7 +7755,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "fc89f76730bfff813d59670e092179bfc2d243cb6fc061be1a6e77d2221f1e6d",
+    "config/GR8E69/project.json": "83a5f0649d2afe5187d027817f48ac5a6ebb9718c96b491963b067eb3d2f34a8",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -9190,7 +9205,7 @@
     "include/game/MemoryCardDevice.h": "504e62bff7ae1c28f4d6207f45818a2c1597655fdcfd5336157bbc82b15c40cb",
     "include/game/MohLoader.h": "9149e28d430ae8e1c9ccab1b19b1b46307c3ac0c50ac5120675eeb2980bd10b4",
     "include/game/ObjCreate.h": "b6f8edb8c9b6eb61022293941d32ba7f9dea42d9ce5e7a29a0d3a8537d522db3",
-    "include/game/Objectives.h": "1ea24c6eff2ea812a193eb26bb5211d5a8980f82a173ebe7e2a37952e504ae43",
+    "include/game/Objectives.h": "54f9ed5dd4be862a546640fa7e495b07c0ac78788f6027aedba7a6c25034b5d5",
     "include/game/ObserverTypes.h": "687dfc07deb4adc23a1d0247270d6ab04c34b758bd88846bf5e4b6ef33e7cc1f",
     "include/game/OffsetPtr.h": "06d2e4c320890063bd6b210c1ddda4b7cefc28e7aa9a4f276e76c128c0a68499",
     "include/game/ParticleClock.h": "7784d24bb307ac0a9e2b796c228584fe306f5781575650f1896038426c80dc0b",
@@ -9246,7 +9261,7 @@
     "include/game/Weapon.h": "06c961fd954800c1d8766e2d17e71707a250f4de310b30d4c99182c3845d04b9",
     "include/game/WorldObject.h": "8bf6843a362f5e8fe835da2694838943402f9f5013bfb812dcd86ce9915fdde8",
     "include/game/WorldVolume.h": "9acfaf28c317912de14baef7ca50a3d80175ddc31dcf83cea18c80725e688318",
-    "include/game-containers/AlgorithmTypes.h": "a4959e24b9ab8edd66054b63ed6d53516aebc500f71f821e27babbf931b8d51a",
+    "include/game-containers/AlgorithmTypes.h": "cd4a28c7c2eb6a6cb85477587065b64ff0e86ee9010ceed6df1637ca9fcffe14",
     "include/game-containers/ContainerTypes.h": "f6b7f0133646a5eb70ccc5df78ced025919dee88dcd81edc3f565d0b71dd407c",
     "include/game-containers/ResourceTypes.h": "6f63038334ba47ea545e0994a455fbd01b1fdb6aa3b6bf155de630e9ede05c68",
     "include/game-containers/TargetTypes.h": "3ac99430c5eabe7c725b67a8b280b4ec55003d4bb6763dc1746023ced2fda08f",
@@ -9600,6 +9615,10 @@
     "src/bullets/ThrownCollisionLight.cpp": "2ea8ad4d6f233b463162dee7d2489dade510b4db575f2767521d9ede3c50f6fe",
     "src/bullets/ThrownSetters.cpp": "53bd8f3d5543f02d514a21a46422d909dc36d86b9f9058bef0b5e99b6b703dd4",
     "src/bullets/ThrownUpdate.cpp": "aff8c3d144bdda27777aaa768f13c97ff87c9afb4e194eb191ab3bd942839a4c",
+    "src/camera/DrawContextBegin.cpp": "52f56c0aa24bc5f6d043a8bf1d84c5e881592d23f3be52598d5f14d82ab9543b",
+    "src/camera/DrawContextCommands.cpp": "774dcc88e3cf297cf02b435dc4e86177545cdd06b71ae8458e8d2676ce0ad995",
+    "src/camera/DrawContextInit.cpp": "d3c1465fc0a4b4221a107a801f54fb3f62e6b6659538d7bd6accbdf57e627e2d",
+    "src/camera/DrawContextShutdown.cpp": "f7b93cc3a13c34f32accd4680b045e1bf5f7d0ed58ebf1380c6346e8a2f54309",
     "src/camera/axes.cpp": "5f01c8b680d40e8507f99181b64e824f3fd5f74911193154807716a91603286a",
     "src/camera/camera_attempt.cpp": "ec48bbce4df6ed15b2befbfa4c0ea8598855d4866123ece8268cc5b3394cec48",
     "src/camera/camera_begin.cpp": "c9abdc74721c4613675b5075e1023f328b2b1a7d5d9ca228971cba9b33119a7c",
@@ -10471,6 +10490,7 @@
     "src/newlib/string/strrchr.c": "402a6ca9631680b81811553ad4a60b85271b90f7cce71b898872c845b1931ff9",
     "src/newlib/string/strstr.c": "09437b966be6a045479e511b84d9ef0156823a5c9ccd29dc4c93d0f7c53998e7",
     "src/objectives/ObjectivesInit.cpp": "d5b86240d3cb28c893c72f3068b076d8d34f5d2bb70191f34ee127d65b52b49f",
+    "src/objectives/ObjectivesSerialize.cpp": "4f6b0cde17ed3fa323e8bd1274dd45dab304059f2454494f5d1faf114e6014ae",
     "src/objectives/ObjectivesShow.cpp": "30187052d1d8575538c3b9713505b78ccbcd0f192c78c04697bbeac35b8c8087",
     "src/objectives/ObjectivesStatus.cpp": "5b127ad92191139eca6e5be978ac1a7a5a53ad7b3f7db5a0d7b690f5acc9a53e",
     "src/observers/observer_8014acd0.cpp": "d406558cdd0a660375aa2fc657b5691ab50bfc1e4f53e96970165bf7ac3ff1e4",
@@ -55336,6 +55356,96 @@
       "discarded_functions": [],
       "object_sha256": "0b5fe036ffe54fe1646e140b96713cd3be29bf66d7388ba6e3d7721a90cb88bd",
       "linked_sha256": "196e46450672809f4ff6edb4b340c4ee47eef366031c1846afb613898c6eed55"
+    },
+    {
+      "id": "draw_context_commands",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 1500,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "9874e149da0c2db98694a72b4a3bc7db2eaa6652fcb3dc09eb924616073bcd47",
+      "linked_sha256": "8507d190a3b21d78a5d59404b5f7501e3ce5c10e22d6f3be87874333bb614281"
+    },
+    {
+      "id": "draw_context_begin",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 648,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "4546f7fb4f2607eda7f27a665129beb8d99727b8d0e7554928358d6f707f7615",
+      "linked_sha256": "9171cb07088a88586bc530d49080420c5695fd424a90c6a16b0b2042c5d677f7"
+    },
+    {
+      "id": "draw_context_init",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 320,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "4dd5c36289372dc820d074708899cc4795c75a64fa59e9b711d109dc69d750e6",
+      "linked_sha256": "3f3d08586b1d7791e92b346b2892cbe9f0ca165163838a4c6ab387de36bdd741"
+    },
+    {
+      "id": "draw_context_shutdown",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 232,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e2213f017b714ec2edb7f0da1617382575dfc7642eb2bc6bc9be1532def43e45",
+      "linked_sha256": "3dbbdaf5a02b6186c22709f4b6e7d6a1743cd6b3796cfbdc98f15bd3be53e16b"
+    },
+    {
+      "id": "objectives_serialize",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 128,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "a1c56cf6b50252d035fd4362bbeac35de3e4e8e407ecb37343c64664476194aa",
+      "linked_sha256": "09bdf4ccdaa8907065a675aa30914e0d5fea01bb816f77c70c80dbbe85d5fd55"
     }
   ],
   "code_map": {
@@ -68967,80 +69077,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8012e954",
-            "size": 192,
-            "kind": "function",
-            "name": "InitCommands__12CDrawContext",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012ea14",
-            "size": 976,
-            "kind": "function",
-            "name": "AddCommand__12CDrawContext11ERenderBinsRC11DrawCommand",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012ede4",
-            "size": 248,
-            "kind": "function",
-            "name": "ExecCommands__12CDrawContext",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012eedc",
-            "size": 84,
-            "kind": "function",
-            "name": "__16CDrawContextEAGLRC7CCameraRC9CViewportRC7CScreenPQ24EAGL8ViewPortf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8012ef30",
             "size": 160,
             "kind": "function",
             "name": "_._16CDrawContextEAGL",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012efd0",
-            "size": 612,
-            "kind": "function",
-            "name": "BeginDraw__16CDrawContextEAGLb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012f234",
-            "size": 36,
-            "kind": "function",
-            "name": "EndDraw__16CDrawContextEAGL",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012f258",
-            "size": 320,
-            "kind": "function",
-            "name": "InitClass__16CDrawContextEAGL",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012f398",
-            "size": 156,
-            "kind": "function",
-            "name": "ShutdownClass__16CDrawContextEAGL",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012f434",
-            "size": 40,
-            "kind": "function",
-            "name": "ClearZBuffer__16CDrawContextEAGL",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012f45c",
-            "size": 36,
-            "kind": "function",
-            "name": "IsSphereInView__16CDrawContextEAGLRC8CVector3f",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -72632,13 +72672,6 @@
             "size": 612,
             "kind": "function",
             "name": "UpdateUI__17CPlayerObjectivesP9FEPackage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017c4b4",
-            "size": 128,
-            "kind": "function",
-            "name": "Serialize__17CPlayerObjectives",
             "evidence": "adjacent-compiler-markers"
           },
           {
