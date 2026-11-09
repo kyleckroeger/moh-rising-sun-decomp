@@ -99,6 +99,15 @@ Verified: the code. Inferred: the member names and the flags' meanings. Not reco
 `BitBuffer` is a 2048-byte store written least significant bit first. The reader and writer are
 file statics; `Load` sign-extends results of 2 to 31 bits.
 
+## Background thread
+
+`Thread`, from the allocation labels' `thread.cpp`, runs jobs on one worker. `Init` allocates the job
+records and a stack filled with 0xbad4c0de, queues every record as free and starts the worker at
+priority -3. The worker pops a pending job, runs its priority, then its `begin`, `run` and `end`
+callbacks in that order, restores the priority and returns the record to the free queue. A mutex
+at the object's start guards both queues. The queues are `_STL::queue<ThreadJob *>`; that header is
+not in this tree, so the fragment declares the adapter. Verified: the code. Inferred: member names.
+
 ## MohLoader
 
 `MohLoader` and `MohLoaderGc` hold the console-side start-up state. `g_pPersistent` points to a

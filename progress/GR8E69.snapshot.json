@@ -468,7 +468,7 @@
       "src/ea/stream_tail.cpp": "58c0e9c270914591c50f73b55564a12dcf0961e895bd944c20bb6d9ee7fed546",
       "src/ea/syncfile.cpp": "3df57d815e9d7e8ef396fdcf881e8e89ed7b7e77c762f80a3a18c0bf42ed09ba",
       "src/ea/systask.cpp": "064e88a22a3eb4ce2abeccd180f0df17d49e86028b44b3fc0a54e8cf7365d4bb",
-      "src/ea/threads.cpp": "2c7671ef74c09c1d408ee608078336f80cd6017d0caffdfa6e53ac79d5edf327",
+      "src/ea/threads.cpp": "60e5e4a5f53edea6d305588d9860403c91e306524deff60d8efbdf2b7319d951",
       "src/ea/timer_tail.cpp": "9924675f9ecc8fe7d4d9c692d9f3d917d1395c4a1a735b2f973e2d81dff05fae",
       "src/ea/timerthread.cpp": "20cae02efd81691bf08a6c1e883b2df0059457929220cab81bb80a2b605cb50a",
       "src/eagl/eagl_common_state_strings.cpp": "77d62062b069735a6f417ea2a70af129c6c8a18d87c7ab771dbdd531c6beb753",
@@ -862,6 +862,7 @@
       "src/game/string_80277f18.cpp": "b6c79191f3a19d54855216cdbc6cf512f4fa474cc60d95837b45a4acec64016c",
       "src/game/surfacetype.cpp": "88645588850e3802162963971edbe8af8607679de8260f145fa4e8c30fb03399",
       "src/game/sys_memory_dwi.cpp": "734d54b445abd8a9172e15bf85b8613c97a4b5f5ef97d730495ce2ae097eb9b2",
+      "src/game/thread.cpp": "12504beb69732fda1bfb8b88c3e1e6d0e9e7b3349f800bfd3e72e2bd4a42c9f1",
       "src/game/toilet_async.cpp": "7da9cce1c7a779eec8ee902b8669beed1c75965125d60eeca14a42131f5f6e53",
       "src/game/toilet_big.cpp": "f21188f2ea40f582aa9492ba44e35e9da1d5bedee6ffefbc827c9627aceb2b18",
       "src/game/toilet_compartment.cpp": "abd974c8962100fbdf12c35438078bf0a3a798a5c78cc150eaf6fa0757200bf0",
@@ -4240,7 +4241,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "efbbbf3491f36d1d22bdf39917c8613bcff296fccb89f4d5b66a0a2d30fbcdca",
+      "config/GR8E69/project.json": "f6563f6b7384db7ac1cc619cf346559cd918e143d712e3e3e37abc47eba6d293",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -5341,6 +5342,7 @@
       "config/GR8E69/surfacetype.json": "daa592458ac3208da8ec350650fa5d93bdb1bcc4741a496b87bf6963468e9289",
       "config/GR8E69/svecreal_mode.json": "be84672377a0aa57fdddb28b10722054cc40f2a300c64bf0847b07a7c90d8a9f",
       "config/GR8E69/sys_memory_operators.json": "593181060ad84668f2fdb91654d17a410ae9aaaceec9493f698e682fe683b96b",
+      "config/GR8E69/system_thread.json": "acc2b375abe689513557a886571fdbc798999461156e31233c3751356cdc5d4b",
       "config/GR8E69/target.json": "48fb9548419f5549d49ebba1794d3193398e58c37c0d15569e6ed1810d8adb8f",
       "config/GR8E69/thrown_accessors.json": "6b256ab3fbe4b068539a2e125fee54b0d77a57f5580e2c54d92df8ccbddfb6ba",
       "config/GR8E69/thrown_bullet_bounds.json": "dc581b821c584b8e2741553d516bee3f52463f8d4666128867764bf382de9882",
@@ -6948,14 +6950,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1210208,
+    "matching_code_bytes": 1212012,
     "total_executable_code_bytes": 2492032,
-    "percent": 48.56310031331861,
+    "percent": 48.63549103703323,
     "categories": {
-      "reconstructed_game": 817992,
+      "reconstructed_game": 819796,
       "restored_library": 392216
     },
-    "matching_functions": 6344
+    "matching_functions": 6359
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -8201,7 +8203,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "efbbbf3491f36d1d22bdf39917c8613bcff296fccb89f4d5b66a0a2d30fbcdca",
+    "config/GR8E69/project.json": "f6563f6b7384db7ac1cc619cf346559cd918e143d712e3e3e37abc47eba6d293",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -9302,6 +9304,7 @@
     "config/GR8E69/surfacetype.json": "daa592458ac3208da8ec350650fa5d93bdb1bcc4741a496b87bf6963468e9289",
     "config/GR8E69/svecreal_mode.json": "be84672377a0aa57fdddb28b10722054cc40f2a300c64bf0847b07a7c90d8a9f",
     "config/GR8E69/sys_memory_operators.json": "593181060ad84668f2fdb91654d17a410ae9aaaceec9493f698e682fe683b96b",
+    "config/GR8E69/system_thread.json": "acc2b375abe689513557a886571fdbc798999461156e31233c3751356cdc5d4b",
     "config/GR8E69/target.json": "48fb9548419f5549d49ebba1794d3193398e58c37c0d15569e6ed1810d8adb8f",
     "config/GR8E69/thrown_accessors.json": "6b256ab3fbe4b068539a2e125fee54b0d77a57f5580e2c54d92df8ccbddfb6ba",
     "config/GR8E69/thrown_bullet_bounds.json": "dc581b821c584b8e2741553d516bee3f52463f8d4666128867764bf382de9882",
@@ -10353,7 +10356,7 @@
     "src/ea/stream_tail.cpp": "58c0e9c270914591c50f73b55564a12dcf0961e895bd944c20bb6d9ee7fed546",
     "src/ea/syncfile.cpp": "3df57d815e9d7e8ef396fdcf881e8e89ed7b7e77c762f80a3a18c0bf42ed09ba",
     "src/ea/systask.cpp": "064e88a22a3eb4ce2abeccd180f0df17d49e86028b44b3fc0a54e8cf7365d4bb",
-    "src/ea/threads.cpp": "2c7671ef74c09c1d408ee608078336f80cd6017d0caffdfa6e53ac79d5edf327",
+    "src/ea/threads.cpp": "60e5e4a5f53edea6d305588d9860403c91e306524deff60d8efbdf2b7319d951",
     "src/ea/timer_tail.cpp": "9924675f9ecc8fe7d4d9c692d9f3d917d1395c4a1a735b2f973e2d81dff05fae",
     "src/ea/timerthread.cpp": "20cae02efd81691bf08a6c1e883b2df0059457929220cab81bb80a2b605cb50a",
     "src/eagl/eagl_common_state_strings.cpp": "77d62062b069735a6f417ea2a70af129c6c8a18d87c7ab771dbdd531c6beb753",
@@ -10747,6 +10750,7 @@
     "src/game/string_80277f18.cpp": "b6c79191f3a19d54855216cdbc6cf512f4fa474cc60d95837b45a4acec64016c",
     "src/game/surfacetype.cpp": "88645588850e3802162963971edbe8af8607679de8260f145fa4e8c30fb03399",
     "src/game/sys_memory_dwi.cpp": "734d54b445abd8a9172e15bf85b8613c97a4b5f5ef97d730495ce2ae097eb9b2",
+    "src/game/thread.cpp": "12504beb69732fda1bfb8b88c3e1e6d0e9e7b3349f800bfd3e72e2bd4a42c9f1",
     "src/game/toilet_async.cpp": "7da9cce1c7a779eec8ee902b8669beed1c75965125d60eeca14a42131f5f6e53",
     "src/game/toilet_big.cpp": "f21188f2ea40f582aa9492ba44e35e9da1d5bedee6ffefbc827c9627aceb2b18",
     "src/game/toilet_compartment.cpp": "abd974c8962100fbdf12c35438078bf0a3a798a5c78cc150eaf6fa0757200bf0",
@@ -58793,6 +58797,24 @@
       "discarded_functions": [],
       "object_sha256": "1b5a56caa8ffadf23daf8f1c87a3c40de68b904cf74c369f059632ee136f4ac5",
       "linked_sha256": "0c3ddc44f8b7862e0ed44a96f572d6ce32b2f6a0cb38251ecbbf0a98743e64e5"
+    },
+    {
+      "id": "system_thread",
+      "category": "reconstructed_game",
+      "functions": 15,
+      "code_bytes": 1804,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "5226cb0dfd0c62aa8f822a27c8aea7c168d27d7966b11b514d038f9d8077daed",
+      "linked_sha256": "82315a19b61162374042442aa4fac03bd63d177185479632324db1a0d99e43a2"
     }
   ],
   "code_map": {
@@ -77451,111 +77473,6 @@
             "size": 4,
             "kind": "function",
             "name": "NightRunnerLoop__Fv",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801a7cc0",
-            "size": 40,
-            "kind": "function",
-            "name": "Init__9ThreadJobPFR9ThreadJob_vN21P6ThreadPvi",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801a7ce8",
-            "size": 32,
-            "kind": "function",
-            "name": "Reset__9ThreadJob",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801a7d08",
-            "size": 184,
-            "kind": "function",
-            "name": "__6Thread",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801a7dc0",
-            "size": 88,
-            "kind": "function",
-            "name": "_._6Thread",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801a7e18",
-            "size": 348,
-            "kind": "function",
-            "name": "Init__6Threadii",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801a7f74",
-            "size": 148,
-            "kind": "function",
-            "name": "DeInit__6Thread",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801a8008",
-            "size": 124,
-            "kind": "function",
-            "name": "Add__6ThreadPFR9ThreadJob_vPviT1T1",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801a8084",
-            "size": 60,
-            "kind": "function",
-            "name": "AbortAll__6Thread",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801a80c0",
-            "size": 48,
-            "kind": "function",
-            "name": "HasJobs__6Thread",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801a80f0",
-            "size": 256,
-            "kind": "function",
-            "name": "ThreadCallback__6ThreadPv",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801a81f0",
-            "size": 100,
-            "kind": "function",
-            "name": "PopPending__6Thread",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801a8254",
-            "size": 100,
-            "kind": "function",
-            "name": "PopFree__6Thread",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801a82b8",
-            "size": 120,
-            "kind": "function",
-            "name": "PushFree__6ThreadP9ThreadJob",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801a8330",
-            "size": 120,
-            "kind": "function",
-            "name": "PushPending__6ThreadP9ThreadJob",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801a83a8",
-            "size": 36,
-            "kind": "function",
-            "name": "Reset__6Thread",
             "evidence": "unknown-file"
           }
         ]

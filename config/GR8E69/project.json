@@ -2368,7 +2368,8 @@
     "felocalizer_strings.json",
     "felocalizer_widetoescape.json",
     "felocalizer_readnextstring.json",
-    "sound_BankMan.json"
+    "sound_BankMan.json",
+    "system_thread.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
