@@ -2552,7 +2552,9 @@
     "handler_mpglobal_init.json",
     "handler_mpbots_validateskin.json",
     "projector_class.json",
-    "projector_create.json"
+    "projector_create.json",
+    "decal_clear.json",
+    "decal_draw.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

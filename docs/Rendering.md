@@ -547,3 +547,14 @@ of 64 glares tagged `source/system/freepool.h:38`. Verified: the manager's setup
 `CGlare`'s static calls and `Draw`. Inferred: member names and the record order of a glare's level resource. Not
 reconstructed: `CGlare`'s constructor and destructor, `CGlare::IsVisible` and `CGlareResource::Init` (one float register
 for a zero).
+
+## Decal manager
+
+`CDecalManager` is a scene node with a private singleton. It holds an `_STL::vector<DecalSet>` at `+64`, one set per type 34
+level resource, and a live decal count at `+60`. A `DecalSet` is 16 bytes: an `_STL::list<Decal>` and, at `+12`, its level
+resource. `ClearDecals` empties every set, `Reset` also puts the manager back in the scene, and `AddBulletDecal` finds the
+surface's decal CRC from the collision's first contact. `Draw` submits `ExecuteDraw` to render bin 7. The contact's word at
+`+36` is read as a surface record here; that reading, and the record's two names, are inferred.
+
+Not reconstructed: the singleton's accessors (the static has no recorded file name), the constructor and destructor (they
+need `ISceneNode`'s members), `Init`, `AcquireDecal`, `InitDecalFromCollision` and `ExecuteDraw`.

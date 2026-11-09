@@ -1694,6 +1694,8 @@
       "src/scene/WorldObjectCompartments.cpp": "b536aa54c3559f94a50841fa2a9f786260c9cd373c98698819de97e8c2c5f216",
       "src/scene/WorldObjectDraw.cpp": "93b5c5fc336b0cdd720869e1c812e753e0bf818a6153032af14765ec5db3842f",
       "src/scene/WorldObjectFiles.cpp": "541e2ec32260ae57af0464c96909d9797473cc6440af92aa7b1965e745fa88a0",
+      "src/scene/decal_clear.cpp": "0dd027f6aa0ea673705ebbe026c736e2cbc2659a77c3a5b9a7f841a099a7545b",
+      "src/scene/decal_draw.cpp": "40cda6f2e2b9ed292de18fd216a491b99e1c7fbd4f784105a9b62b218058754d",
       "src/scene/decal_set.cpp": "0026fb249c6da4c2c7409d0e4465522945283fdbeb7016a638e47a54d9dd4196",
       "src/scene/jaw_controller_ctor.cpp": "d925c4b536ea558fe6c261c9a3f83d4dc65bb6cd3e396224e2ef8e3ef23b2920",
       "src/scene/jaw_controller_motiontype.cpp": "509a33964954db2b09fd38a2c55eecd16285fed2fc2e66d5383ad2b7f9aa71ee",
@@ -2881,6 +2883,7 @@
       "include/game/Compartment.h": "ff79f1aca586a177fc4c83ebda653bb6cae9d4bd59f13bcdfcc9d0e93fbbb9cf",
       "include/game/CompartmentInstance.h": "9f8f8e1a2fbcc63a8365fc16624b66665fe16894a3d7bd05f07a2c922dabc943",
       "include/game/ConfigFile.h": "66b42170189b79ebbcd591331641c46e2c117025db240e767a3b76ac031ffe0a",
+      "include/game/DecalManager.h": "8c52b3f286f4a9ba545ffba91d98d24c2df6953361e99c489474ec76b8d0b337",
       "include/game/DestructorQueue.h": "434ec17ba96007c8368db0dc62c9454d1650bc2c4d5615a13aad40969412bda8",
       "include/game/DrawContext.h": "646a671aa97643c9e91809cc0ca1980de395bd2895d9111035b5b8b03d1581f5",
       "include/game/DwiContainers.h": "767afa50598d566ef93a48c03d3cf202dd5e983f5c43d3e6aca789ab9622c07b",
@@ -3005,7 +3008,7 @@
       "include/game/RealmcPublic.h": "90e9339fcc510af550e5213a18c87a56ed548f0b110fb5fe247de23145fbd7da",
       "include/game/SceneCollisions.h": "2a1769143eeecf427cad1a013ebf02f6b0d2ee83e011b58e5c62cd141306cd64",
       "include/game/SceneNode.h": "e57802b8a891e60ae5642230d29fea224075a837267cac91413b2a7fae00a560",
-      "include/game/SceneObjects.h": "dd045643eb65ae01140f6cc6dc439501905b8b2fd77c922601ac4cfdf6a7d870",
+      "include/game/SceneObjects.h": "1dd50e238fb947b5bb222de8a62c60e1a0a0fd063e07fae3975c5d7b3d0b11f5",
       "include/game/Screen.h": "86139c54ad8a9fdfa1e0842d665f4cd5699ac216901fab040218e8b7adc2c78a",
       "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
       "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
@@ -3673,6 +3676,8 @@
       "config/GR8E69/crc.json": "d29c0ef0d8149a361db85a37711abcf340764c87356e4ddb75ed5bb24c982792",
       "config/GR8E69/csg_volume.json": "40a2fd4c64ca48aff4063c4ba8f4cb09970ca4c745a5faff31543918559b4156",
       "config/GR8E69/debug_msg.json": "668775e5b23b87c15679f01ef8896fc2ae452fbe71da62a13824d6cccd528f5d",
+      "config/GR8E69/decal_clear.json": "18369533dadd5cc5d515cc43f3e50c80e9bcc36cbbddac8dc95eac5a637bc910",
+      "config/GR8E69/decal_draw.json": "4c202cc5c8079fba410123e5d3bef02e7838c5f2655b085bc983442e0f213a45",
       "config/GR8E69/decal_set.json": "11c2a6c75000166df36cf80874c2755723c843e799e0963093da21a5a42e56a5",
       "config/GR8E69/device_a.json": "89118186aa033bc46341dee495875b9668ea4ad29707b511b086469d27304fa2",
       "config/GR8E69/device_b.json": "fcc3d822095821ae168f21b6c5c89e11efedeb9c1fcdad063290da70e0cdf911",
@@ -4597,7 +4602,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "372a6582b336912df16fbc13ae4cdd3bc72a93a9f138dc1ce00e52a220579196",
+      "config/GR8E69/project.json": "c2749064a6621a91b9b10284f8ba934ea8ea51970e419a60a41bb9a0646c0b7f",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7331,14 +7336,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1315324,
+    "matching_code_bytes": 1315688,
     "total_executable_code_bytes": 2492032,
-    "percent": 52.78118419025117,
+    "percent": 52.7957907442601,
     "categories": {
-      "reconstructed_game": 923108,
+      "reconstructed_game": 923472,
       "restored_library": 392216
     },
-    "matching_functions": 6910
+    "matching_functions": 6916
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -7818,6 +7823,8 @@
     "config/GR8E69/crc.json": "d29c0ef0d8149a361db85a37711abcf340764c87356e4ddb75ed5bb24c982792",
     "config/GR8E69/csg_volume.json": "40a2fd4c64ca48aff4063c4ba8f4cb09970ca4c745a5faff31543918559b4156",
     "config/GR8E69/debug_msg.json": "668775e5b23b87c15679f01ef8896fc2ae452fbe71da62a13824d6cccd528f5d",
+    "config/GR8E69/decal_clear.json": "18369533dadd5cc5d515cc43f3e50c80e9bcc36cbbddac8dc95eac5a637bc910",
+    "config/GR8E69/decal_draw.json": "4c202cc5c8079fba410123e5d3bef02e7838c5f2655b085bc983442e0f213a45",
     "config/GR8E69/decal_set.json": "11c2a6c75000166df36cf80874c2755723c843e799e0963093da21a5a42e56a5",
     "config/GR8E69/device_a.json": "89118186aa033bc46341dee495875b9668ea4ad29707b511b086469d27304fa2",
     "config/GR8E69/device_b.json": "fcc3d822095821ae168f21b6c5c89e11efedeb9c1fcdad063290da70e0cdf911",
@@ -8742,7 +8749,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "372a6582b336912df16fbc13ae4cdd3bc72a93a9f138dc1ce00e52a220579196",
+    "config/GR8E69/project.json": "c2749064a6621a91b9b10284f8ba934ea8ea51970e419a60a41bb9a0646c0b7f",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -10156,6 +10163,7 @@
     "include/game/Compartment.h": "ff79f1aca586a177fc4c83ebda653bb6cae9d4bd59f13bcdfcc9d0e93fbbb9cf",
     "include/game/CompartmentInstance.h": "9f8f8e1a2fbcc63a8365fc16624b66665fe16894a3d7bd05f07a2c922dabc943",
     "include/game/ConfigFile.h": "66b42170189b79ebbcd591331641c46e2c117025db240e767a3b76ac031ffe0a",
+    "include/game/DecalManager.h": "8c52b3f286f4a9ba545ffba91d98d24c2df6953361e99c489474ec76b8d0b337",
     "include/game/DestructorQueue.h": "434ec17ba96007c8368db0dc62c9454d1650bc2c4d5615a13aad40969412bda8",
     "include/game/DrawContext.h": "646a671aa97643c9e91809cc0ca1980de395bd2895d9111035b5b8b03d1581f5",
     "include/game/DwiContainers.h": "767afa50598d566ef93a48c03d3cf202dd5e983f5c43d3e6aca789ab9622c07b",
@@ -10280,7 +10288,7 @@
     "include/game/RealmcPublic.h": "90e9339fcc510af550e5213a18c87a56ed548f0b110fb5fe247de23145fbd7da",
     "include/game/SceneCollisions.h": "2a1769143eeecf427cad1a013ebf02f6b0d2ee83e011b58e5c62cd141306cd64",
     "include/game/SceneNode.h": "e57802b8a891e60ae5642230d29fea224075a837267cac91413b2a7fae00a560",
-    "include/game/SceneObjects.h": "dd045643eb65ae01140f6cc6dc439501905b8b2fd77c922601ac4cfdf6a7d870",
+    "include/game/SceneObjects.h": "1dd50e238fb947b5bb222de8a62c60e1a0a0fd063e07fae3975c5d7b3d0b11f5",
     "include/game/Screen.h": "86139c54ad8a9fdfa1e0842d665f4cd5699ac216901fab040218e8b7adc2c78a",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
     "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
@@ -12161,6 +12169,8 @@
     "src/scene/WorldObjectCompartments.cpp": "b536aa54c3559f94a50841fa2a9f786260c9cd373c98698819de97e8c2c5f216",
     "src/scene/WorldObjectDraw.cpp": "93b5c5fc336b0cdd720869e1c812e753e0bf818a6153032af14765ec5db3842f",
     "src/scene/WorldObjectFiles.cpp": "541e2ec32260ae57af0464c96909d9797473cc6440af92aa7b1965e745fa88a0",
+    "src/scene/decal_clear.cpp": "0dd027f6aa0ea673705ebbe026c736e2cbc2659a77c3a5b9a7f841a099a7545b",
+    "src/scene/decal_draw.cpp": "40cda6f2e2b9ed292de18fd216a491b99e1c7fbd4f784105a9b62b218058754d",
     "src/scene/decal_set.cpp": "0026fb249c6da4c2c7409d0e4465522945283fdbeb7016a638e47a54d9dd4196",
     "src/scene/jaw_controller_ctor.cpp": "d925c4b536ea558fe6c261c9a3f83d4dc65bb6cd3e396224e2ef8e3ef23b2920",
     "src/scene/jaw_controller_motiontype.cpp": "509a33964954db2b09fd38a2c55eecd16285fed2fc2e66d5383ad2b7f9aa71ee",
@@ -62885,6 +62895,42 @@
       "discarded_functions": [],
       "object_sha256": "746d98c7113e300fe3a12514f11d0edbdc8d8c4c8865661d33062dafb0b349a1",
       "linked_sha256": "6a2c26977819ef15253bd5334c65b50bd0a85e29591a6bea2aae8f91ba1b7f3e"
+    },
+    {
+      "id": "decal_clear",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 288,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "a28eaf0bd552d8a8a6a19575a53e6e9566b98b154fa0e5178bce4b131ad7f602",
+      "linked_sha256": "d57be902f7affb09a4b5df0c71b96f231dd5db321fb9f6fcca448b0aa022532c"
+    },
+    {
+      "id": "decal_draw",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 76,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "2b3152d812c44e73dd40cefdb3e7739a2c471e549e33a091c312c4a45ef58a04",
+      "linked_sha256": "1d866f31479b055b3e372cd6c99360d8859d94a8f3a1394d84647e7020238d57"
     }
   ],
   "code_map": {
@@ -65267,28 +65313,12 @@
             "kind": "function",
             "name": "Init__13CDecalManager",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80069234",
-            "size": 100,
-            "kind": "function",
-            "name": "ClearDecals__13CDecalManager",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80069298",
-            "size": 56,
-            "kind": "function",
-            "name": "Reset__13CDecalManager",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800692d0",
-            "size": 132,
-            "kind": "function",
-            "name": "AddBulletDecal__13CDecalManagerRC10CCollisionb",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 80069354",
+        "ranges": [
           {
             "address": "0x80069354",
             "size": 576,
@@ -65302,28 +65332,12 @@
             "kind": "function",
             "name": "InitDecalFromCollision__13CDecalManagerR5DecalPC12SClsnContactb",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80069b00",
-            "size": 8,
-            "kind": "function",
-            "name": "IsVisible__C13CDecalManagerR12CDrawContext",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80069b08",
-            "size": 8,
-            "kind": "function",
-            "name": "IsDrawEnabled__C13CDecalManager",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80069b10",
-            "size": 60,
-            "kind": "function",
-            "name": "Draw__13CDecalManagerR12CDrawContext",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 80069b4c",
+        "ranges": [
           {
             "address": "0x80069b4c",
             "size": 1380,
