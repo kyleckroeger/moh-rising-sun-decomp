@@ -623,3 +623,7 @@ local image verification is required before publication; runtime remains unteste
 `EALA::Character::Skeleton`'s joint lookups forward to its `SkeletonData` when the pointer at `+0` is
 set. The view is in [`CharacterSkeleton.h`](../include/game/CharacterSkeleton.h). The test as a
 `HasData` inline is inferred from the materialized boolean in each body; that name is descriptive.
+
+`GetStillPose` and `StorePose` go through the word at `+12` of `SkeletonData`, an `EAGLAnim::Skeleton`; the
+member name is inferred. `GetJointIndex` maps the two `TYPE_JOINT` values it tests to themselves and anything
+else to -1; only the type name is recovered.

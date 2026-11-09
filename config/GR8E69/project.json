@@ -2300,7 +2300,9 @@
     "ai_BotStrafe.json",
     "motion_blur.json",
     "motion_blur_pause.json",
-    "gba_object_list.json"
+    "gba_object_list.json",
+    "character_skeleton_index.json",
+    "character_skeleton_pose.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
