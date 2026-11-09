@@ -279,6 +279,9 @@
       "src/camera/camera_visible.cpp": "a22cb50bf6ac6a829a9ff2ea24894e09f0fbe104e67d4edb0de88853a17f13d9",
       "src/camera/frustum_transform.cpp": "4bbe254e923e4c48c9b4468450fa8c93986141f00f98758a32be9071c57a9d7f",
       "src/camera/get_transform.cpp": "e3033e1c97452a331b5d46e6cdca18fba8f60ad43af2220d9cdc7bddbc12d468",
+      "src/camera/global_color_defaults.cpp": "79be6b219380f04a8bbc0db39106a08e88ae5a4e85fcc4ec4b0b176456b8eaab",
+      "src/camera/global_color_modifier.cpp": "9a0a86d6f3e310056d83b325ccdca1d5e017dfd0c8ed350497df82440dceef26",
+      "src/camera/global_color_scale.cpp": "667cd67d92fbf42e8d1d42c0fa0bad456efb71963f77f9543f9df10aeb09f3e6",
       "src/camera/projection.cpp": "4ed326a09aac21ee19656d0c6538dbe65908d865e795f163ae092f67e9972767",
       "src/camera/projector_accessors.cpp": "1b759433f5c9275a698d0e6dcd1fac0106f067763d66f6119aa3a0bc7f96d565",
       "src/camera/projector_begin_update.cpp": "243651acb1f344c12ad3c83082c446c5a0bc1517615bec9756ce008380860916",
@@ -3544,6 +3547,9 @@
       "config/GR8E69/camera_class.json": "6ec8b57948b256f41eb4b8724d7960727438bad6a56efe4c8dd87c0de811783d",
       "config/GR8E69/camera_commit.json": "4aceeef39d5f1e75f3bf0a35f992aaca0078eb10ab817e20cec3f13ebe187807",
       "config/GR8E69/camera_get_transform.json": "e718b74015c98fc9aa58fe5d2c6de29f40aac11d0ae8d291ca3afe1964bb03b4",
+      "config/GR8E69/camera_global_color_defaults.json": "aa6159924e53592c5d0842c7b87c7ea9447f5e5f121e4961db392659f8b7723a",
+      "config/GR8E69/camera_global_color_modifier.json": "8ac47fba40eca190c2a266dd01ebadb8513e0847624a51e0a2ddc9c0605a2ca2",
+      "config/GR8E69/camera_global_color_scale.json": "0ac4e19d9129e5ca8072ee5b449ba991c16b5e1d7b6b70160a18293130898a46",
       "config/GR8E69/camera_projection.json": "40155878dbb04c59b1fe9f848d4f00f68d57b05e4d6d50c2213504b4358ab7be",
       "config/GR8E69/camera_shake.json": "e22a74d25e4669349114a115f68bd05f1931289ad2cf2bdd350dc263b66cf795",
       "config/GR8E69/camera_transforms.json": "565ea07c7752be54366701e13af7ee6bb4cd78c6cf7d4bd3c68f01b89bdbfe5d",
@@ -4579,7 +4585,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "a8c32bb3efa05a95892330c8daa13738b44de81f15de9dc443921e326eb74987",
+      "config/GR8E69/project.json": "0bca8e046c5470975c4202d23b32a099dec545373f175b7c1609c6c3fbb3fbae",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7311,14 +7317,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1312628,
+    "matching_code_bytes": 1313032,
     "total_executable_code_bytes": 2492032,
-    "percent": 52.67299938363552,
+    "percent": 52.68921105346962,
     "categories": {
-      "reconstructed_game": 920412,
+      "reconstructed_game": 920816,
       "restored_library": 392216
     },
-    "matching_functions": 6894
+    "matching_functions": 6899
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -7680,6 +7686,9 @@
     "config/GR8E69/camera_class.json": "6ec8b57948b256f41eb4b8724d7960727438bad6a56efe4c8dd87c0de811783d",
     "config/GR8E69/camera_commit.json": "4aceeef39d5f1e75f3bf0a35f992aaca0078eb10ab817e20cec3f13ebe187807",
     "config/GR8E69/camera_get_transform.json": "e718b74015c98fc9aa58fe5d2c6de29f40aac11d0ae8d291ca3afe1964bb03b4",
+    "config/GR8E69/camera_global_color_defaults.json": "aa6159924e53592c5d0842c7b87c7ea9447f5e5f121e4961db392659f8b7723a",
+    "config/GR8E69/camera_global_color_modifier.json": "8ac47fba40eca190c2a266dd01ebadb8513e0847624a51e0a2ddc9c0605a2ca2",
+    "config/GR8E69/camera_global_color_scale.json": "0ac4e19d9129e5ca8072ee5b449ba991c16b5e1d7b6b70160a18293130898a46",
     "config/GR8E69/camera_projection.json": "40155878dbb04c59b1fe9f848d4f00f68d57b05e4d6d50c2213504b4358ab7be",
     "config/GR8E69/camera_shake.json": "e22a74d25e4669349114a115f68bd05f1931289ad2cf2bdd350dc263b66cf795",
     "config/GR8E69/camera_transforms.json": "565ea07c7752be54366701e13af7ee6bb4cd78c6cf7d4bd3c68f01b89bdbfe5d",
@@ -8715,7 +8724,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "a8c32bb3efa05a95892330c8daa13738b44de81f15de9dc443921e326eb74987",
+    "config/GR8E69/project.json": "0bca8e046c5470975c4202d23b32a099dec545373f175b7c1609c6c3fbb3fbae",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -10715,6 +10724,9 @@
     "src/camera/camera_visible.cpp": "a22cb50bf6ac6a829a9ff2ea24894e09f0fbe104e67d4edb0de88853a17f13d9",
     "src/camera/frustum_transform.cpp": "4bbe254e923e4c48c9b4468450fa8c93986141f00f98758a32be9071c57a9d7f",
     "src/camera/get_transform.cpp": "e3033e1c97452a331b5d46e6cdca18fba8f60ad43af2220d9cdc7bddbc12d468",
+    "src/camera/global_color_defaults.cpp": "79be6b219380f04a8bbc0db39106a08e88ae5a4e85fcc4ec4b0b176456b8eaab",
+    "src/camera/global_color_modifier.cpp": "9a0a86d6f3e310056d83b325ccdca1d5e017dfd0c8ed350497df82440dceef26",
+    "src/camera/global_color_scale.cpp": "667cd67d92fbf42e8d1d42c0fa0bad456efb71963f77f9543f9df10aeb09f3e6",
     "src/camera/projection.cpp": "4ed326a09aac21ee19656d0c6538dbe65908d865e795f163ae092f67e9972767",
     "src/camera/projector_accessors.cpp": "1b759433f5c9275a698d0e6dcd1fac0106f067763d66f6119aa3a0bc7f96d565",
     "src/camera/projector_begin_update.cpp": "243651acb1f344c12ad3c83082c446c5a0bc1517615bec9756ce008380860916",
@@ -62683,6 +62695,60 @@
       "discarded_functions": [],
       "object_sha256": "ce0f479f300b60167d059278e84fc42b1591750161d66adffaf293846e2a8d36",
       "linked_sha256": "faf6db305f45c93f5bb329fff6b76d760db761c58485d5cced67df20a0188204"
+    },
+    {
+      "id": "camera_global_color_modifier",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 160,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "faf8f4c694aeb73494bff20a58fc9714b6d8a4e1a12861a1c4d8672db9010120",
+      "linked_sha256": "6c441fe4b5eae374b18f1315bd8d556abcdb8ada5d95d6224e57baf6c59abcc8"
+    },
+    {
+      "id": "camera_global_color_scale",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 192,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "fc82b647d65960e8f4d6686368fc2b5b0ba5c394a0135f11bdc96999faa77618",
+      "linked_sha256": "1c20e7dff9b19a9b26fbd394e291e7d4ea758daf62406fbe57f107a63d982a1d"
+    },
+    {
+      "id": "camera_global_color_defaults",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 52,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "803517766b4280299c61761c7aa2bb7012058da58ac3c50878d90e5815c4f453",
+      "linked_sha256": "62c2dcf73fc786b78eba33595067b4f22463f7eb91b39129229b3144138efea5"
     }
   ],
   "code_map": {
@@ -72342,41 +72408,6 @@
         "file_record": 206,
         "file_name": "draw_context.cpp",
         "ranges": [
-          {
-            "address": "0x8012d26c",
-            "size": 72,
-            "kind": "function",
-            "name": "Init__19GlobalColorModifierv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012d2b4",
-            "size": 44,
-            "kind": "function",
-            "name": "SetScale__19GlobalColorModifierRC10CNormColor",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012d2e0",
-            "size": 44,
-            "kind": "function",
-            "name": "SetOffset__19GlobalColorModifierRC10CNormColor",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012d30c",
-            "size": 192,
-            "kind": "function",
-            "name": "SetScale__19GlobalColorModifierRC6CColor",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012d3cc",
-            "size": 52,
-            "kind": "function",
-            "name": "SetDefaults__19GlobalColorModifierv",
-            "evidence": "adjacent-compiler-markers"
-          },
           {
             "address": "0x8012d400",
             "size": 2776,

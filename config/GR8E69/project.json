@@ -2543,7 +2543,10 @@
     "handler_onlinefavorites_add.json",
     "handler_onlinefavorites_buttons.json",
     "handler_netconfwarning.json",
-    "handler_onlinekeyboard.json"
+    "handler_onlinekeyboard.json",
+    "camera_global_color_modifier.json",
+    "camera_global_color_scale.json",
+    "camera_global_color_defaults.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
