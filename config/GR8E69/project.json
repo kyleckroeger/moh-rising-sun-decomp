@@ -2055,7 +2055,13 @@
     "ai_PistolBehavior.json",
     "ai_RifleBehavior.json",
     "ai_NullWeaponBehavior.json",
-    "ai_PolemineBehavior.json"
+    "ai_PolemineBehavior.json",
+    "scene_SoldierUpper.json",
+    "scene_SoldierExpression.json",
+    "scene_SoldierPartition.json",
+    "scene_SoldierAnimState.json",
+    "scene_SoldierBlendWeight.json",
+    "scene_SoldierAttachPoint.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

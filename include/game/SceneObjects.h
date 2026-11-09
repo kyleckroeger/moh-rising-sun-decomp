@@ -20,6 +20,7 @@ enum EScriptCollisionType { ScriptCollisionTypeUnknown = 0 };
 EClsnId GetCollisionIDFromScriptCollisionType(EScriptCollisionType, ETeam);
 // Original enum tag; its members are unknown.
 enum EFireMethod { FireMethodUnknown = 0 };
+enum EExpressionType { ExpressionNone = -1 }; // Named by CSoldierObject::SetExpression's symbol; members inferred.
 
 // Member-only views of scene-object classes reached through the ISceneNode
 // casts. Each view starts at the ISceneNode subobject (the casts return it
@@ -544,7 +545,11 @@ class CSoldierObject {
     int canBePushed;        // +0xb14
     unsigned char unknown_b18[8];
     CMatrix defaultEmitterMatrix; // +0xb20
-    unsigned char unknown_b60[0xb80 - 0xb60];
+    CVector3 upperTranslation; // +0xb60; set by SetUpperTranslation.
+    float upperXAngleMin;   // +0xb70; the second argument of SetUpperXAngleDifference goes to +0xb74; descriptive.
+    float upperXAngleMax;   // +0xb74
+    float upperZAngleMin;   // +0xb78; descriptive.
+    float upperZAngleMax;   // +0xb7c
     float moveBlend;        // +0xb80; descriptive.
     CWeapon *weapons[1];    // +0xb84; slot table, indexed by slot number (extent unknown).
     unsigned char unknown_b88[0xba0 - 0xb88];
@@ -554,7 +559,8 @@ class CSoldierObject {
         const CMatrix *matrix;
         unsigned char unknown_8[8];
         CMatrix inverse; // +0x10
-        unsigned char unknown_50[8];
+        const char *name; // +0x50; set by GetAttachPoint.
+        unsigned char unknown_54[4];
         int active;      // +0x58
         int keepObject;  // +0x5c
         int hasInverse;  // +0x60
@@ -626,20 +632,41 @@ class CSoldierObject {
     int currentGagType;     // +0x1598
     unsigned char unknown_159c[0x15a8 - 0x159c];
     CAISoldierObject *aiObject; // +0x15a8
-    unsigned char unknown_15ac[0x15c4 - 0x15ac];
+    // Two state-done records like CAnimObject's stateTask/stateValue/stateOwner: one for the
+    // lower partition and one for the upper.
+    struct PartitionState {
+        int task;     // passed to SetState by address
+        int value;
+        CSoldierObject *owner;
+    };
+    PartitionState lowerState; // +0x15ac
+    PartitionState upperState; // +0x15b8
     unsigned char lipsyncMutex[0x15e0 - 0x15c4]; // +0x15c4; passed to MUTEX_lock.
     float lipsyncBlendWeight; // +0x15e0
     unsigned char unknown_15e4[0x15e8 - 0x15e4];
     int japanese;           // +0x15e8; set by BIFunc_SetJapanese.
-    unsigned char unknown_15ec[0x1c54 - 0x15ec];
+    unsigned char lipSyncFilterDef[0x1c54 - 0x15ec]; // +0x15ec; returned by address. Extent bounded.
     float reloadTimer;      // +0x1c54; reset to -1 by BIFunc_BotDoneReloading.
     void SetHeadTrans(bool);
     CWeapon *GetCurrentWeapon() const;
+    CWeapon *GetWeapon(int) const;
+    int GetCurrentWeaponType() const;
+    bool IsCurrentWeaponReloading() const;
+    void SetExpression(EExpressionType, float);
+    void SetBlink(int);
     void SetUpperTranslation(const CVector3 &);
     void SetUpperXAngleDifference(float, float);
     void SetUpperZAngleDifference(float, float);
     int SetFaceAnimationState(unsigned short, int);
     static unsigned char m_partitionLower[0x30], m_partitionUpper[0x30];
+    void SetLipsynchBlendWeight(float);
+    void *GetLipSyncFilterDef();
+    static void LipSyncFilterInit(void *, int, int);
+    static void LipSyncFilterRestore(void *);
+    int EvaluateScript(const char *, unsigned int, const char *);
+    void UpdateCollisionVolumes();
+    int SetAnimationState(const char *, int);
+    int SetAnimationState(const char *, EALA::Task *);
     void SetHeadTrackPlayer(bool);
     void EnableSkeletalPartition(Partition);
     void DisableSkeletalPartition(Partition);

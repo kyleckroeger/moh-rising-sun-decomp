@@ -150,6 +150,22 @@ angle at `+0x288`, doubles its scale and turns about Z. It then queues the mesh'
 frame 0 and the saved model-view pointer. `ExecuteDraw` sets the fade as a global colour scale and
 the light block around `CStaticMesh::DrawMesh`.
 
+## Soldier accessors with no Frontline counterpart
+
+`CSoldierObject`'s partition, blink, expression and upper-body accessors exist only in this
+game, so the code decides their names. The `m_partitionLower` and `m_partitionUpper` symbols name
+the two partitions; `Partition3` selects the lower and `Partition2` the upper. Everything else
+named in those fragments is descriptive and inferred, including the upper-body angle pairs at
+`+0xb70`, the two state-done records at `+0x15ac` and the attach-slot name at `+0x50`.
+
+`SetBlink`'s literal pool starts with 0 and 86400, the values of the state 0 and state 8 arm.
+State 0 is written first in the source so that the pool comes out in that order; the compiler
+then merges its identical body into state 8's. `SetUpperTranslation` is only an assignment:
+`CVector3::operator=` returns by value, which is the unused four-word copy on its stack.
+
+`CStaticObject::ModifyMotionData` and `TranslateFromScript` share one unit because their literals
+are neighbors: the first ends four bytes short of an eight-byte boundary after its double.
+
 ## Parked
 
 These still differ, with instruction differences in brackets; drafts are kept outside the
