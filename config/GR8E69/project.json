@@ -2427,7 +2427,8 @@
     "toilet_load_states.json",
     "meshparticle_init.json",
     "meshparticle_detach.json",
-    "particlesystem_detach.json"
+    "particlesystem_detach.json",
+    "game_drivecheck_status.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

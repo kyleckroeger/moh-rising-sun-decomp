@@ -134,6 +134,14 @@ the flags at `+8`, `LOCALE_getstr` first turns the id into an index through a so
 the offset at `+4`. `LOCALE_create` byte-swaps each string's 16-bit characters when asked. Verified:
 the code. Inferred: all member names.
 
+## Disc drive checks
+
+`drivecheck.cpp` maps `DVDGetDriveStatus` to a state, 0 for no message and 1 for busy, and shows the
+message for any higher state from a table per language, with English as the fallback. Disk number 1
+in `CheckDiscDriveStatus` and 0 in `CheckDiscChangeStatus` distinguish the two door states; a busy
+drive keeps the last of those states. Status -1 spins forever. Verified: the code. Inferred: the
+state names.
+
 ## MohLoader
 
 `MohLoader` and `MohLoaderGc` hold the console-side start-up state. `g_pPersistent` points to a

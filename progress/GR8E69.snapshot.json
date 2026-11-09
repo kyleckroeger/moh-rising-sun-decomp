@@ -861,6 +861,7 @@
       "src/game/device_b.cpp": "7c6d0c3f9e9ca649690400da465d0de0ffb34b994132243694e88f0bd9365868",
       "src/game/device_c.cpp": "a521a60265baf3b48c3bd2fb3f7a50726d75d860c9c7e651c20e9a4cc5e39162",
       "src/game/device_d.cpp": "1b5f2a867a8c893ee377b976142a0e777703f950403fd7732ad5f1d7c6274863",
+      "src/game/drivecheck_status.cpp": "a458eceb8f85167a1e52635839add3181457e078b2a8bfdc221f39def946dbfd",
       "src/game/fader.cpp": "747b4b655d1fd223cce5f602f80988b025c9c3ed3037e60e29588fc265522dba",
       "src/game/font_attrs.cpp": "17a5dcba14710a5625b373dba980f883f4491d208bf930ab9eb0cec07b5f3fe7",
       "src/game/font_ctor.cpp": "58553ab744e9e2326e145ad958eb12bdd904aa92453a41030f63035cd506348f",
@@ -3919,6 +3920,7 @@
       "config/GR8E69/frustum_transform.json": "35766529dbd85ffd05cf8d34adb7010b3b10b02c04d1d097811dde2dfc2ef057",
       "config/GR8E69/fstload.json": "d49e84fe0d1e9af1dd569811065db3c015f596b540ac5988c5078fa2f9c5dd5e",
       "config/GR8E69/game_BitBuffer.json": "0ce2a9795f7d9046d1f3e6909562986dc6f612e4aa88cb07d18b514e0b986702",
+      "config/GR8E69/game_drivecheck_status.json": "da8b6c2388db425236dae89296c02e57879f662c29f032f6de97d752ea870cfd",
       "config/GR8E69/game_locale.json": "660eadd84d9e49632c2a42595aef8ca6d557b198b51bef3d3a3bba9558e4514e",
       "config/GR8E69/game_sys_memory_dwi.json": "af6b28229efc2adad9f987e767f2772ebe56093b9e8dedd5cc5b55c6da45b0e6",
       "config/GR8E69/gamesettings_activatecheatnamed_beatthelevel.json": "d2ed6ab790652c9734686b7676bd44d302055843906ad37f619f5cbfa03d56f7",
@@ -4346,7 +4348,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "8718e175adc2503133fca7d986b1aeeee643ba61d4ff9bdb86bacc671d31f554",
+      "config/GR8E69/project.json": "e0ef7a3af890ead2e6c0aeee42a6e3f43c566ca7cc89bc79371c9e965f15bd69",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7072,14 +7074,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1241792,
+    "matching_code_bytes": 1242692,
     "total_executable_code_bytes": 2492032,
-    "percent": 49.83049976886332,
+    "percent": 49.866614874929375,
     "categories": {
-      "reconstructed_game": 849576,
+      "reconstructed_game": 850476,
       "restored_library": 392216
     },
-    "matching_functions": 6528
+    "matching_functions": 6532
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -7939,6 +7941,7 @@
     "config/GR8E69/frustum_transform.json": "35766529dbd85ffd05cf8d34adb7010b3b10b02c04d1d097811dde2dfc2ef057",
     "config/GR8E69/fstload.json": "d49e84fe0d1e9af1dd569811065db3c015f596b540ac5988c5078fa2f9c5dd5e",
     "config/GR8E69/game_BitBuffer.json": "0ce2a9795f7d9046d1f3e6909562986dc6f612e4aa88cb07d18b514e0b986702",
+    "config/GR8E69/game_drivecheck_status.json": "da8b6c2388db425236dae89296c02e57879f662c29f032f6de97d752ea870cfd",
     "config/GR8E69/game_locale.json": "660eadd84d9e49632c2a42595aef8ca6d557b198b51bef3d3a3bba9558e4514e",
     "config/GR8E69/game_sys_memory_dwi.json": "af6b28229efc2adad9f987e767f2772ebe56093b9e8dedd5cc5b55c6da45b0e6",
     "config/GR8E69/gamesettings_activatecheatnamed_beatthelevel.json": "d2ed6ab790652c9734686b7676bd44d302055843906ad37f619f5cbfa03d56f7",
@@ -8366,7 +8369,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "8718e175adc2503133fca7d986b1aeeee643ba61d4ff9bdb86bacc671d31f554",
+    "config/GR8E69/project.json": "e0ef7a3af890ead2e6c0aeee42a6e3f43c566ca7cc89bc79371c9e965f15bd69",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -10935,6 +10938,7 @@
     "src/game/device_b.cpp": "7c6d0c3f9e9ca649690400da465d0de0ffb34b994132243694e88f0bd9365868",
     "src/game/device_c.cpp": "a521a60265baf3b48c3bd2fb3f7a50726d75d860c9c7e651c20e9a4cc5e39162",
     "src/game/device_d.cpp": "1b5f2a867a8c893ee377b976142a0e777703f950403fd7732ad5f1d7c6274863",
+    "src/game/drivecheck_status.cpp": "a458eceb8f85167a1e52635839add3181457e078b2a8bfdc221f39def946dbfd",
     "src/game/fader.cpp": "747b4b655d1fd223cce5f602f80988b025c9c3ed3037e60e29588fc265522dba",
     "src/game/font_attrs.cpp": "17a5dcba14710a5625b373dba980f883f4491d208bf930ab9eb0cec07b5f3fe7",
     "src/game/font_ctor.cpp": "58553ab744e9e2326e145ad958eb12bdd904aa92453a41030f63035cd506348f",
@@ -60107,6 +60111,24 @@
       "discarded_functions": [],
       "object_sha256": "9a0dd0eeb40fc6a1010543ef36fd0194549bfc79b8a74b8346231901df6bf30d",
       "linked_sha256": "4d7ee9bc6e542e3eeffc1d98cb1959118419ee785cc3e40d8c2f15042e71320e"
+    },
+    {
+      "id": "game_drivecheck_status",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 900,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "9cad540f38db34d142e91f93118b6916783a6fb6ab9f50be68bd59daac1bff71",
+      "linked_sha256": "9c7e873afdb421b235ada16ccaee0c718adc67324df3f3517bdc83a3b02745f3"
     }
   ],
   "code_map": {
@@ -61515,34 +61537,6 @@
         "file_record": 60,
         "file_name": "drivecheck.cpp",
         "ranges": [
-          {
-            "address": "0x80058680",
-            "size": 276,
-            "kind": "function",
-            "name": "DisplayMessage__F14DiscDriveState",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80058794",
-            "size": 140,
-            "kind": "function",
-            "name": "CheckDiscDriveSyncTask__Fii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80058820",
-            "size": 256,
-            "kind": "function",
-            "name": "CheckDiscDriveStatus__Fv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80058920",
-            "size": 228,
-            "kind": "function",
-            "name": "CheckDiscChangeStatus__Fv",
-            "evidence": "adjacent-compiler-markers"
-          },
           {
             "address": "0x80058a04",
             "size": 380,
