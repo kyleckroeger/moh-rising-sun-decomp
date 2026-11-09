@@ -17,16 +17,32 @@ class ShellLoader {
     int UnloadResources(FEPackage *, long, FEResourceRequest *);
 };
 enum EMovieType { EMovieTypeUnknown0 = 0 };
-struct _ShellMoviePaths;
+struct _ShellMoviePaths {
+    char movie[64];
+    char text[64];
+    char time[64];
+};
+// Paths from game.cfg, named by its keys; the first index is the movie type.
 class CShellMovieSettings {
   public:
-    int loaded;     // +0x0; tested by InitMovies. 
+    int loaded;                    // +0x0000; tested by InitMovies.
+    char fontName[64];             // +0x0004
+    char backName[64];             // +0x0044
+    _ShellMoviePaths paths[4][11]; // +0x0084; historical, veteran, anim, letter.
+    _ShellMoviePaths demo;         // +0x2184
+    _ShellMoviePaths credits;      // +0x2244
     CShellMovieSettings();
     ~CShellMovieSettings();
     void Reset();
     void Load(CConfigFile &);
     void LoadSection(CConfigFile &, int);
     _ShellMoviePaths *GetMoviePathsStruct(EMovieType, int);
+};
+// One joined co-op player. coopJoin[0].port is what IsCoopOnTop compares.
+struct SCoopJoinInfo {
+    FEPackage *package;  // +0x0
+    signed char port;    // +0x4
+    unsigned long mask;  // +0x8
 };
 class FEGameInterface {
   public:
@@ -75,6 +91,11 @@ class ShellManager : public FEGameInterface {
     void Swap(const char *, FEPackage *);
     void DoMPControllerChecks();
     void ResetActiveControllerIndicies();
+    void SetActiveControllerIndicies();
+    void RemoveMPViewPorts();
+    void UpdateUnplugged();
+    void ResetCoopJoinInfo(signed char);
+    void ResetCoopJoinInfoFromPortNum(unsigned char);
     void DoCoopControllerChecks();
     int IsCoopOnTop(unsigned char);
     int IsCoopOnTopFromPortNum(unsigned char);
@@ -94,10 +115,12 @@ class ShellManager : public FEGameInterface {
     int inMultiplayer;                // +0x18bc; UpdateUnplugged picks the multiplayer checks.
     unsigned char unknown_18c0[0x18c4 - 0x18c0];
     CShellMovieSettings movies;       // +0x18c4
-    unsigned char unknown_18c8[0x3bd1 - 0x18c8];
+    int unknown_3bc8;                 // +0x3bc8
+    int controllerBad;                // +0x3bcc
+    signed char badPort;              // +0x3bd0
     signed char activeControllers[4]; // +0x3bd1
-    unsigned char unknown_3bd5[0x3bdc - 0x3bd5];
-    signed char coopOnTopPort;        // +0x3bdc
+    unsigned char unknown_3bd5[3];
+    SCoopJoinInfo coopJoin[2];        // +0x3bd8
 };
 extern ShellManager g_Shell;
 #endif

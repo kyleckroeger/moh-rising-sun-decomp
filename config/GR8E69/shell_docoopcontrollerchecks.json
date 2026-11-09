@@ -19,7 +19,7 @@
     {
       "name": ".text",
       "address": "0x8018243c",
-      "size": 4
+      "size": 112
     }
   ],
   "functions": [
@@ -28,11 +28,15 @@
       "address": "0x8018243c",
       "size": 4,
       "binding": 1
+    },
+    {
+      "name": "ResetCoopJoinInfo__12ShellManagerSc",
+      "address": "0x80182440",
+      "size": 108,
+      "binding": 1
     }
   ],
   "externals": {},
   "discarded_functions": [],
-  "undefined_in_discarded_code": [],
-  "original_file": "shellManager.cpp",
-  "original_file_index": 1580
+  "undefined_in_discarded_code": []
 }

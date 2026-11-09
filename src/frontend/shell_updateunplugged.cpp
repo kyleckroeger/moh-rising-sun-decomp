@@ -8,6 +8,21 @@ void BSObjectTriggerEvent(BSObject *, unsigned short, void *, BSObject *, bool);
 void DebugMsg(const char *, ...);
 extern "C" int strcasecmp(const char *, const char *);
 
+void ShellManager::UpdateUnplugged() {
+    if (inMultiplayer && unknown_3bc8) DoMPControllerChecks();
+    else if (inCoop && unknown_3bc8) DoCoopControllerChecks();
+    else {
+        CInputManager *input = &g_inputMgr;
+        signed char none = -1;
+        badPort = none;
+        controllerBad = 0;
+        if ((unsigned char)input->GetNumDevices() == 0) {
+            badPort = none;
+            controllerBad = 1;
+            input->SetBadControllerPort(255);
+        }
+    }
+}
 void ShellManager::Draw() {
     engine->Render();
     DrawUnplugged();

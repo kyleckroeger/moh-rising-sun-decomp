@@ -22,6 +22,7 @@ class FEngine {
     void QueueMessage(unsigned long, FEObject *, FEPackage *, FEObject *, unsigned long);
     void QueuePackagePush(const char *, FEPackage *, unsigned long);
     void QueuePackageSwitch(const char *, FEPackage *);
+    void QueuePackagePop(FEPackage *);
     void RecordLastPackageButton(unsigned long, unsigned long);
     unsigned long RecallLastPackageButton(unsigned long);
     int RecordPackageMarker(const char *);

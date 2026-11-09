@@ -52,6 +52,10 @@ markers and a ring of thirty-two remembered package buttons. `PackageHandler` ho
 spelling has been found, so that overload is unreconstructed, and the two others stay out because
 they share a string with `EnableButton` across it.
 
+`CShellMovieSettings` holds the `game.cfg` movie paths, named by their keys: four types of eleven
+entries of three 64-byte strings, a demo entry and a credits entry, starting at `+0x84`. It ends at
+`+0x2304`, which fixes the position of `ShellManager`'s following members.
+
 Not yet exact: `GetStringLength` (register allocation), `FEColor::operator-` (load order),
 `ShellManager::RenderObjectList`, `RecallPackageMarker`, `RecordPackageMarker` and the
 `PackageHandler` object-list index functions.

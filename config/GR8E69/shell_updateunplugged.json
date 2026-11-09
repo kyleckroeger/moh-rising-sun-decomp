@@ -1,6 +1,6 @@
 {
-  "id": "shell_draw",
-  "source": "src/frontend/shell_draw.cpp",
+  "id": "shell_updateunplugged",
+  "source": "src/frontend/shell_updateunplugged.cpp",
   "category": "reconstructed_game",
   "compiler_version": "3.8.1",
   "compiler_flags": [
@@ -18,11 +18,17 @@
   "sections": [
     {
       "name": ".text",
-      "address": "0x8017f994",
-      "size": 168
+      "address": "0x8017f8e4",
+      "size": 344
     }
   ],
   "functions": [
+    {
+      "name": "UpdateUnplugged__12ShellManager",
+      "address": "0x8017f8e4",
+      "size": 176,
+      "binding": 1
+    },
     {
       "name": "Draw__12ShellManager",
       "address": "0x8017f994",
@@ -55,13 +61,16 @@
     }
   ],
   "externals": {
+    "DoCoopControllerChecks__12ShellManager": "0x8018243c",
+    "DoMPControllerChecks__12ShellManager": "0x80182178",
+    "GetNumDevices__C14CDeviceManager": "0x800d66b8",
     "LoadPackage__11ShellLoaderPCcPPUcRb": "0x801831b4",
     "LoadResources__11ShellLoaderP9FEPackagelP17FEResourceRequest": "0x8018307c",
     "Render__7FEngine": "0x8004e990",
-    "UnloadResources__11ShellLoaderP9FEPackagelP17FEResourceRequest": "0x801831ac"
+    "SetBadControllerPort__13CInputManagerUc": "0x800d7348",
+    "UnloadResources__11ShellLoaderP9FEPackagelP17FEResourceRequest": "0x801831ac",
+    "g_inputMgr": "0x803077c4"
   },
   "discarded_functions": [],
-  "undefined_in_discarded_code": [],
-  "original_file": "shellManager.cpp",
-  "original_file_index": 1580
+  "undefined_in_discarded_code": []
 }

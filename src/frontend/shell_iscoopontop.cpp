@@ -10,6 +10,6 @@ extern "C" int strcasecmp(const char *, const char *);
 
 int ShellManager::IsCoopOnTop(unsigned char mask) {
     unsigned char port = GetPortNumFromControlMask(mask);
-    return coopOnTopPort == port;
+    return coopJoin[0].port == port;
 }
-int ShellManager::IsCoopOnTopFromPortNum(unsigned char port) { return coopOnTopPort == port; }
+int ShellManager::IsCoopOnTopFromPortNum(unsigned char port) { return coopJoin[0].port == port; }
