@@ -176,6 +176,12 @@ panel's 4.5-tick timer. `lastHealth` is the first word of the player's script da
 is health is inferred. `case 1` in the letterbox switch has no body, which is what leaves the
 comparison tree's left side empty.
 
+`CPlayerObject::TargetFind`'s methods use more of the object than the player header's view
+declares. An eight-entry `TargetInfo` array at `+0x30` with its count at `+0x1b0` follows a
+`WeakPtr<CPlayerObject, 8>` prefix and a second weak pointer at `+0x18`, which holds the chosen
+target; the source models them in the unit. The view's placement inside `CPlayerObject` and
+the array's relation to that view's `+0x40` fields are not settled here.
+
 ## Parked
 
 These still differ, with instruction differences in brackets; drafts are kept outside the

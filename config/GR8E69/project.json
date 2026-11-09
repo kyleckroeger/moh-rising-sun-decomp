@@ -2108,7 +2108,10 @@
     "ai_CoverpointTail.json",
     "ai_BotObjectWeaponQueries.json",
     "ai_AISoldierAccessors.json",
-    "ai_AISoldierDeath.json"
+    "ai_AISoldierDeath.json",
+    "scene_SoldierAimClients.json",
+    "scene_SoldierShouldDrawFlag.json",
+    "player_target_find.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

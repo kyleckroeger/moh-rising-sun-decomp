@@ -1124,6 +1124,7 @@
       "src/player/PlayerShotLocation.cpp": "964ecd07d50f150c689a62d2d63abf85ecca6addd8804bf577a398165154ae55",
       "src/player/PlayerStance.cpp": "e501eff7d897c36e0e4e2ea30a67c334ff4817bde96a99ebcb102b5cca4c68cb",
       "src/player/PlayerSwitch.cpp": "c8373d7d086194c4016dd9cb4d0891870edecaf25c503ebe11cdfdf4cb2c79ce",
+      "src/player/PlayerTargetFind.cpp": "03eec900d34b9812d758d302813f69f336c17e53940779b576939b8257a70e73",
       "src/player/PlayerUpdateAI.cpp": "31a76f5f0caf8fdfbaff231f579ca497e338b4b1075e6169ea940df8e95070c5",
       "src/player/path_controls.cpp": "2c0c17b029350994e9676cf7cefcfd8bfafce1a2c6ad97260f2de4bd2c94dc23",
       "src/player/spline_position.cpp": "07496d19c1bad0fdd00feef4600c82d86841c26da33d42d2f76bb6b7f314c7bd",
@@ -1232,6 +1233,7 @@
       "src/scene/SceneVisitors.cpp": "1eb2bbb2e4c6755a59a33c4e5f2ef17e0776120876ac26831a2ba39648b6ab31",
       "src/scene/SoldierAI.cpp": "448e24d2d80058b7b635bd9be04fe4d928fc087f13da1c2241079216998596ef",
       "src/scene/SoldierAim.cpp": "73a95aa7f90e1a8dbbbe40d1c327be29145148b01a5eb810fb42f90ac5d82036",
+      "src/scene/SoldierAimClients.cpp": "6c94c1b9e0ab512feebb8e29889e331e8762fd235cc269944da0461bf06a2470",
       "src/scene/SoldierAnimState.cpp": "c16d2fa486a0c0f58f2e8bafbd9caedca4dc46e71482eb1771970da86da18370",
       "src/scene/SoldierAttachMatrix.cpp": "c64ba18a738d38ef68ccb0031caddb77d39e521ff8578c426f70550afddd5e80",
       "src/scene/SoldierAttachMesh.cpp": "9cc38f1493c3eb00cbee1c042b1ac5f4a74b03756afb89dff025a292bcd81f78",
@@ -1257,6 +1259,7 @@
       "src/scene/SoldierLook.cpp": "320943220c3a79dbfde30ec40d4db5694fe50e80a21160be6ed155a494b433d9",
       "src/scene/SoldierOnCollision.cpp": "2f99908d8cac39854e89612801dc834f5d3ce3226afb1402e27ad86d81ef70c7",
       "src/scene/SoldierPartition.cpp": "7d40051fd9890dff98635f1f0ad9b71482ce7fefe3776f67dce5d35bb6f92f22",
+      "src/scene/SoldierShouldDrawFlag.cpp": "9e62ea8018700ecb727a22c1fb80545544c89a342113eecd61b7a94e428ba07a",
       "src/scene/SoldierSword.cpp": "c126dbf5cb7f07317171d56ff1a82a020e2e11b320fc60a4d1bd4f518852ab0d",
       "src/scene/SoldierUpdate.cpp": "72cfdecf336d90cd1fec4414a8b869dbe014ecf74e9b5a5f8217f4cf6c28e399",
       "src/scene/SoldierUpper.cpp": "21d563a2e647b9eb72441868890c6338f60e93cd1756c0af9fdfe2ad96c53b77",
@@ -2421,7 +2424,7 @@
       "include/game/CTriangle.h": "09bcd72b2b76ffdac4a6be541c441936f2178ae5ae44a66515a8430bbaaf5e25",
       "include/game/CVector3.h": "0c436c62dba8e3a7f44ca5e6eea6de50ff97e88e4e53545873d5ecca9d648aae",
       "include/game/Camera.h": "d2a5039c6f0c09da0be76e78c92b9e11c53f5c9900aac3c2239fe9c8c2fee623",
-      "include/game/CameraShake.h": "f4356387ae1b46263562b1b79752e77cbbad9a50551ca99a35958a036d58e1eb",
+      "include/game/CameraShake.h": "39a9d930ba63c3d04f49cf64c0c08c855ab7ef49133938e5751db394a5d2232b",
       "include/game/Capsule.h": "332dd06329ac7dc3ac5fc01793549a41e2defbe70298018accd2ce79c9e3ce3b",
       "include/game/CharacterShadow.h": "048ae3efc6fd6d3119f4c234f5bacd499c748c55b1573df386f686411e93a67a",
       "include/game/CollisionMath.h": "a9a8ee2674ee845e1549d3f906d34a2c02543fe5d4f8fbc40d42c4fdd0f22f2d",
@@ -2525,7 +2528,7 @@
       "include/game/Rcmp.h": "834ed5e660a51a562673ac049b2c39e07ab113426b2bc6002ea385b67fb5e61f",
       "include/game/SceneCollisions.h": "2a1769143eeecf427cad1a013ebf02f6b0d2ee83e011b58e5c62cd141306cd64",
       "include/game/SceneNode.h": "e57802b8a891e60ae5642230d29fea224075a837267cac91413b2a7fae00a560",
-      "include/game/SceneObjects.h": "8a82f7569e79e1b5b7c3618173adf4caf916d1097f541f40bcbeb8297bfe5ba8",
+      "include/game/SceneObjects.h": "2c4addea529e69c39009a4aea37d1b8af7ac2f71f94b85ba40e1e6720547b730",
       "include/game/Screen.h": "86139c54ad8a9fdfa1e0842d665f4cd5699ac216901fab040218e8b7adc2c78a",
       "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
       "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
@@ -3736,6 +3739,7 @@
       "config/GR8E69/player_spline_tangent.json": "36eccc91b26a0f0558ee6f02c6e52398927527bf754f986e8d6db6404022d9b8",
       "config/GR8E69/player_stance.json": "4dec96aa675f29f3e7aec20b1913ca307c1def2c48dca18339637759f674676e",
       "config/GR8E69/player_switch.json": "df94c6f14337a0ccd90d3bd92cd3e975a23037b7b5e351dd6e87d045bfcbc103",
+      "config/GR8E69/player_target_find.json": "83e354db6d7bfc843679ded23b5357726b3cbc53beb8f1dd6b03787fcd48e494",
       "config/GR8E69/player_update_ai.json": "debc86667f78158cfff65688b826cc949b75c6dadde210fbb141a380eb2422e9",
       "config/GR8E69/player_weapon_ammo.json": "8f93213fbd88361a58a1a8eb8b444df1f5ef0bfbf80c472109998f7475936cf4",
       "config/GR8E69/player_weapon_casts.json": "39e282131aafedd5e587028cbabb3c8599f4efd672d4ad645cf1bdd43b382809",
@@ -3749,7 +3753,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "a58569e0d0585057a8dc3ea7d61c94ccf844d1c31e8d1ff5993f85bd5b158882",
+      "config/GR8E69/project.json": "835dc3c44c472051e0b77b81265d93c8778c7989a846de8d900fe389f5b2cb86",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -3872,6 +3876,7 @@
       "config/GR8E69/scene_ObjCreateThrownDelete.json": "c82033e0b1c422136ba230d1675da05aeb0e585b79a96c952ecc707995899ec5",
       "config/GR8E69/scene_SoldierAI.json": "c85b0dbcc085ed3bcb2baee74d13b9bec64222b734018638d2e390df12c641a6",
       "config/GR8E69/scene_SoldierAim.json": "258da4ac98e51720b964a139b518ae408bc9440f87d263088874dea7e08adb21",
+      "config/GR8E69/scene_SoldierAimClients.json": "68046f55c51964634a097035809cff77a65af15e02423ca71c795f2e902947fd",
       "config/GR8E69/scene_SoldierAnimState.json": "c451c7993edae5076736482cc2f7c1948f7bcbe420ccee423e96aca6124c2d0a",
       "config/GR8E69/scene_SoldierAttachMatrix.json": "fa659916cc9f7ae38c8d46a81039e6d2073660d785bad010751381a940223efa",
       "config/GR8E69/scene_SoldierAttachMesh.json": "6592a179174bf6504c68903a4f72163bbad729bcd4a91762901b735cf7235912",
@@ -3897,6 +3902,7 @@
       "config/GR8E69/scene_SoldierLook.json": "164942c73d8902c36d17047ad0128c21f7b72185178213d491072ea10782392f",
       "config/GR8E69/scene_SoldierOnCollision.json": "dbac443e03a47cef301bf682c62dcec65da7593d24c6592e61a775a827b0595d",
       "config/GR8E69/scene_SoldierPartition.json": "58637852523a1f0f393f838a78ab42d40ebe0b0675c38158d4b9270776507acc",
+      "config/GR8E69/scene_SoldierShouldDrawFlag.json": "1b1b0f3b1a8e23d85a353c8c81ba38eb26b081103f901071f15168ea954fc310",
       "config/GR8E69/scene_SoldierSword.json": "36c2dca63a9fb5c9425074bebf85e6e34cfa92a8442796f4e94e307f10d3f470",
       "config/GR8E69/scene_SoldierUpdate.json": "7d602a1bb517faecae052fdb34db658100aefc12bdd24d8b82a19cd790a5399b",
       "config/GR8E69/scene_SoldierUpper.json": "dd236ecfdce285bfa8dec66f9f389916526d06e300920f4c032182e687eaa442",
@@ -6412,14 +6418,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1100352,
+    "matching_code_bytes": 1101800,
     "total_executable_code_bytes": 2492032,
-    "percent": 44.15481021110483,
+    "percent": 44.21291540397555,
     "categories": {
-      "reconstructed_game": 708136,
+      "reconstructed_game": 709584,
       "restored_library": 392216
     },
-    "matching_functions": 5477
+    "matching_functions": 5485
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -7451,6 +7457,7 @@
     "config/GR8E69/player_spline_tangent.json": "36eccc91b26a0f0558ee6f02c6e52398927527bf754f986e8d6db6404022d9b8",
     "config/GR8E69/player_stance.json": "4dec96aa675f29f3e7aec20b1913ca307c1def2c48dca18339637759f674676e",
     "config/GR8E69/player_switch.json": "df94c6f14337a0ccd90d3bd92cd3e975a23037b7b5e351dd6e87d045bfcbc103",
+    "config/GR8E69/player_target_find.json": "83e354db6d7bfc843679ded23b5357726b3cbc53beb8f1dd6b03787fcd48e494",
     "config/GR8E69/player_update_ai.json": "debc86667f78158cfff65688b826cc949b75c6dadde210fbb141a380eb2422e9",
     "config/GR8E69/player_weapon_ammo.json": "8f93213fbd88361a58a1a8eb8b444df1f5ef0bfbf80c472109998f7475936cf4",
     "config/GR8E69/player_weapon_casts.json": "39e282131aafedd5e587028cbabb3c8599f4efd672d4ad645cf1bdd43b382809",
@@ -7464,7 +7471,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "a58569e0d0585057a8dc3ea7d61c94ccf844d1c31e8d1ff5993f85bd5b158882",
+    "config/GR8E69/project.json": "835dc3c44c472051e0b77b81265d93c8778c7989a846de8d900fe389f5b2cb86",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7587,6 +7594,7 @@
     "config/GR8E69/scene_ObjCreateThrownDelete.json": "c82033e0b1c422136ba230d1675da05aeb0e585b79a96c952ecc707995899ec5",
     "config/GR8E69/scene_SoldierAI.json": "c85b0dbcc085ed3bcb2baee74d13b9bec64222b734018638d2e390df12c641a6",
     "config/GR8E69/scene_SoldierAim.json": "258da4ac98e51720b964a139b518ae408bc9440f87d263088874dea7e08adb21",
+    "config/GR8E69/scene_SoldierAimClients.json": "68046f55c51964634a097035809cff77a65af15e02423ca71c795f2e902947fd",
     "config/GR8E69/scene_SoldierAnimState.json": "c451c7993edae5076736482cc2f7c1948f7bcbe420ccee423e96aca6124c2d0a",
     "config/GR8E69/scene_SoldierAttachMatrix.json": "fa659916cc9f7ae38c8d46a81039e6d2073660d785bad010751381a940223efa",
     "config/GR8E69/scene_SoldierAttachMesh.json": "6592a179174bf6504c68903a4f72163bbad729bcd4a91762901b735cf7235912",
@@ -7612,6 +7620,7 @@
     "config/GR8E69/scene_SoldierLook.json": "164942c73d8902c36d17047ad0128c21f7b72185178213d491072ea10782392f",
     "config/GR8E69/scene_SoldierOnCollision.json": "dbac443e03a47cef301bf682c62dcec65da7593d24c6592e61a775a827b0595d",
     "config/GR8E69/scene_SoldierPartition.json": "58637852523a1f0f393f838a78ab42d40ebe0b0675c38158d4b9270776507acc",
+    "config/GR8E69/scene_SoldierShouldDrawFlag.json": "1b1b0f3b1a8e23d85a353c8c81ba38eb26b081103f901071f15168ea954fc310",
     "config/GR8E69/scene_SoldierSword.json": "36c2dca63a9fb5c9425074bebf85e6e34cfa92a8442796f4e94e307f10d3f470",
     "config/GR8E69/scene_SoldierUpdate.json": "7d602a1bb517faecae052fdb34db658100aefc12bdd24d8b82a19cd790a5399b",
     "config/GR8E69/scene_SoldierUpper.json": "dd236ecfdce285bfa8dec66f9f389916526d06e300920f4c032182e687eaa442",
@@ -8777,7 +8786,7 @@
     "include/game/CTriangle.h": "09bcd72b2b76ffdac4a6be541c441936f2178ae5ae44a66515a8430bbaaf5e25",
     "include/game/CVector3.h": "0c436c62dba8e3a7f44ca5e6eea6de50ff97e88e4e53545873d5ecca9d648aae",
     "include/game/Camera.h": "d2a5039c6f0c09da0be76e78c92b9e11c53f5c9900aac3c2239fe9c8c2fee623",
-    "include/game/CameraShake.h": "f4356387ae1b46263562b1b79752e77cbbad9a50551ca99a35958a036d58e1eb",
+    "include/game/CameraShake.h": "39a9d930ba63c3d04f49cf64c0c08c855ab7ef49133938e5751db394a5d2232b",
     "include/game/Capsule.h": "332dd06329ac7dc3ac5fc01793549a41e2defbe70298018accd2ce79c9e3ce3b",
     "include/game/CharacterShadow.h": "048ae3efc6fd6d3119f4c234f5bacd499c748c55b1573df386f686411e93a67a",
     "include/game/CollisionMath.h": "a9a8ee2674ee845e1549d3f906d34a2c02543fe5d4f8fbc40d42c4fdd0f22f2d",
@@ -8881,7 +8890,7 @@
     "include/game/Rcmp.h": "834ed5e660a51a562673ac049b2c39e07ab113426b2bc6002ea385b67fb5e61f",
     "include/game/SceneCollisions.h": "2a1769143eeecf427cad1a013ebf02f6b0d2ee83e011b58e5c62cd141306cd64",
     "include/game/SceneNode.h": "e57802b8a891e60ae5642230d29fea224075a837267cac91413b2a7fae00a560",
-    "include/game/SceneObjects.h": "8a82f7569e79e1b5b7c3618173adf4caf916d1097f541f40bcbeb8297bfe5ba8",
+    "include/game/SceneObjects.h": "2c4addea529e69c39009a4aea37d1b8af7ac2f71f94b85ba40e1e6720547b730",
     "include/game/Screen.h": "86139c54ad8a9fdfa1e0842d665f4cd5699ac216901fab040218e8b7adc2c78a",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
     "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
@@ -10183,6 +10192,7 @@
     "src/player/PlayerShotLocation.cpp": "964ecd07d50f150c689a62d2d63abf85ecca6addd8804bf577a398165154ae55",
     "src/player/PlayerStance.cpp": "e501eff7d897c36e0e4e2ea30a67c334ff4817bde96a99ebcb102b5cca4c68cb",
     "src/player/PlayerSwitch.cpp": "c8373d7d086194c4016dd9cb4d0891870edecaf25c503ebe11cdfdf4cb2c79ce",
+    "src/player/PlayerTargetFind.cpp": "03eec900d34b9812d758d302813f69f336c17e53940779b576939b8257a70e73",
     "src/player/PlayerUpdateAI.cpp": "31a76f5f0caf8fdfbaff231f579ca497e338b4b1075e6169ea940df8e95070c5",
     "src/player/path_controls.cpp": "2c0c17b029350994e9676cf7cefcfd8bfafce1a2c6ad97260f2de4bd2c94dc23",
     "src/player/spline_position.cpp": "07496d19c1bad0fdd00feef4600c82d86841c26da33d42d2f76bb6b7f314c7bd",
@@ -10291,6 +10301,7 @@
     "src/scene/SceneVisitors.cpp": "1eb2bbb2e4c6755a59a33c4e5f2ef17e0776120876ac26831a2ba39648b6ab31",
     "src/scene/SoldierAI.cpp": "448e24d2d80058b7b635bd9be04fe4d928fc087f13da1c2241079216998596ef",
     "src/scene/SoldierAim.cpp": "73a95aa7f90e1a8dbbbe40d1c327be29145148b01a5eb810fb42f90ac5d82036",
+    "src/scene/SoldierAimClients.cpp": "6c94c1b9e0ab512feebb8e29889e331e8762fd235cc269944da0461bf06a2470",
     "src/scene/SoldierAnimState.cpp": "c16d2fa486a0c0f58f2e8bafbd9caedca4dc46e71482eb1771970da86da18370",
     "src/scene/SoldierAttachMatrix.cpp": "c64ba18a738d38ef68ccb0031caddb77d39e521ff8578c426f70550afddd5e80",
     "src/scene/SoldierAttachMesh.cpp": "9cc38f1493c3eb00cbee1c042b1ac5f4a74b03756afb89dff025a292bcd81f78",
@@ -10316,6 +10327,7 @@
     "src/scene/SoldierLook.cpp": "320943220c3a79dbfde30ec40d4db5694fe50e80a21160be6ed155a494b433d9",
     "src/scene/SoldierOnCollision.cpp": "2f99908d8cac39854e89612801dc834f5d3ce3226afb1402e27ad86d81ef70c7",
     "src/scene/SoldierPartition.cpp": "7d40051fd9890dff98635f1f0ad9b71482ce7fefe3776f67dce5d35bb6f92f22",
+    "src/scene/SoldierShouldDrawFlag.cpp": "9e62ea8018700ecb727a22c1fb80545544c89a342113eecd61b7a94e428ba07a",
     "src/scene/SoldierSword.cpp": "c126dbf5cb7f07317171d56ff1a82a020e2e11b320fc60a4d1bd4f518852ab0d",
     "src/scene/SoldierUpdate.cpp": "72cfdecf336d90cd1fec4414a8b869dbe014ecf74e9b5a5f8217f4cf6c28e399",
     "src/scene/SoldierUpper.cpp": "21d563a2e647b9eb72441868890c6338f60e93cd1756c0af9fdfe2ad96c53b77",
@@ -53012,6 +53024,60 @@
       "discarded_functions": [],
       "object_sha256": "c1456ec5e14f4f3911b8355196c63b777cb9615bfa11f203a8673b27fe136548",
       "linked_sha256": "46d97e5ffe9143eae9d024be7fb7bc8c6cd8dfb624dee4d60cd7d93e71d29116"
+    },
+    {
+      "id": "scene_SoldierAimClients",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 348,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "7d5dbd34aca7ab99dd94674eb72aa21847acd3674d42e67b6e1b2e1ebe2f4086",
+      "linked_sha256": "20d36269752d20748dd0d44e71076fe3f58fc26508817d25958418bb0f1cf041"
+    },
+    {
+      "id": "scene_SoldierShouldDrawFlag",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 224,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "8d3195138225f2af28e0a03939d69d738b43b50f37e4a5f77891a7890dda3ad0",
+      "linked_sha256": "36daf325dd717d2c3a174bc3a837c595adaf772fab4498d79d5cd8b8748d1353"
+    },
+    {
+      "id": "player_target_find",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 876,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "ced9a5c5c8c8585c557e8d23404bdf4a65e29bf5073cf60714f664478c17bb02",
+      "linked_sha256": "098c5bf8c022d0886a740e6083407734c05e0a6bf6e1a4dbcff82b88630fa658"
     }
   ],
   "code_map": {
@@ -63383,34 +63449,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800b9cfc",
-            "size": 120,
-            "kind": "function",
-            "name": "Enable__Q213CPlayerObject10TargetFindP13CPlayerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b9d74",
-            "size": 272,
-            "kind": "function",
-            "name": "AddTarget__Q213CPlayerObject10TargetFindP10ISceneNodeR8CVector3fUc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b9e84",
-            "size": 364,
-            "kind": "function",
-            "name": "ChooseTarget__Q213CPlayerObject10TargetFind",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b9ff0",
-            "size": 120,
-            "kind": "function",
-            "name": "ClearTargets__Q213CPlayerObject10TargetFind",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800ba090",
             "size": 256,
             "kind": "function",
@@ -63468,27 +63506,6 @@
         "file_name": "Soldier_object.cpp",
         "ranges": [
           {
-            "address": "0x800bb104",
-            "size": 56,
-            "kind": "function",
-            "name": "GetTMLocalToWorld__CQ214CSoldierObject17AimModifierClientRQ24EAGL9Transform",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800bb13c",
-            "size": 112,
-            "kind": "function",
-            "name": "GetTarget__CQ214CSoldierObject9AimClientR6COORD3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800bb1ac",
-            "size": 180,
-            "kind": "function",
-            "name": "GetTarget__CQ214CSoldierObject12LookAtClientR6COORD3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800bb260",
             "size": 164,
             "kind": "function",
@@ -63528,13 +63545,6 @@
             "size": 1024,
             "kind": "function",
             "name": "DrawTeamFlag__14CSoldierObjectR12CDrawContextPPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800bcf04",
-            "size": 224,
-            "kind": "function",
-            "name": "ShouldDrawFlag__14CSoldierObjectR12CDrawContext",
             "evidence": "adjacent-compiler-markers"
           },
           {

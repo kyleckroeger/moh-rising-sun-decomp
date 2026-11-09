@@ -520,6 +520,25 @@ class CSoldierObject {
     const CSoldierObject *AsSoldierObject() const;
     void Draw(CDrawContext &);
     void RemoveWeapons();
+    // Each client holds its soldier at +4; only the symbols' methods are declared.
+    class AimModifierClient {
+      public:
+        void GetTMLocalToWorld(EAGL::Transform &) const;
+        unsigned char unknown_0[4];
+        CSoldierObject *soldier; // +4
+    };
+    class AimClient {
+      public:
+        void GetTarget(COORD3 &) const;
+        unsigned char unknown_0[4];
+        CSoldierObject *soldier; // +4
+    };
+    class LookAtClient {
+      public:
+        void GetTarget(COORD3 &) const;
+        unsigned char unknown_0[4];
+        CSoldierObject *soldier; // +4
+    };
     // Original nested enum tag; members are descriptive.
     enum Partition { PartitionNone = 0, Partition1 = 1, Partition2 = 2, Partition3 = 3 };
     unsigned char unknown_0[0x120];
@@ -594,7 +613,8 @@ class CSoldierObject {
     float blinkCloseTime;   // +0xfa8
     float blinkHoldTime;    // +0xfac
     float blinkOpenTime;    // +0xfb0
-    unsigned char unknown_fb4[0xfc4 - 0xfb4];
+    unsigned char unknown_fb4[4];
+    float blinkPhaseEnd[3]; // +0xfb8; running totals of the open, close and hold times.
     int faceAnimationPending; // +0xfc4
     unsigned short faceAnimationState; // +0xfc8
     unsigned char unknown_fca[0xfd0 - 0xfca];
@@ -633,7 +653,7 @@ class CSoldierObject {
     int currentGagType;     // +0x1598
     float lipSyncSum;       // +0x159c; absolute sample values since the last update.
     float lipSyncSamples;   // +0x15a0; samples since the last update.
-    unsigned char unknown_15a4[0x15a8 - 0x15a4];
+    int flagTeam;           // +0x15a4; -1 when the soldier carries no flag.
     CAISoldierObject *aiObject; // +0x15a8
     // Two state-done records like CAnimObject's stateTask/stateValue/stateOwner: one for the
     // lower partition and one for the upper.
@@ -663,6 +683,7 @@ class CSoldierObject {
     int SetFaceAnimationState(unsigned short, int);
     static unsigned char m_partitionLower[0x30], m_partitionUpper[0x30];
     void SetLipsynchBlendWeight(float);
+    int ShouldDrawFlag(CDrawContext &);
     void *GetLipSyncFilterDef();
     static int LipSyncFilterUpdate(void *, int, void *, void *, int);
     static void LipSyncFilterInit(void *, int, int);
@@ -670,6 +691,7 @@ class CSoldierObject {
     int EvaluateScript(const char *, unsigned int, const char *);
     void UpdateCollisionVolumes();
     int Constrain(float);
+    void UpdateAnimation(float);
     int SetAnimationState(const char *, int);
     int SetAnimationState(const char *, EALA::Task *);
     void SetHeadTrackPlayer(bool);
@@ -687,6 +709,7 @@ class CSoldierObject {
     void EjectHelmet(CVector3 &);
     int IsInAnyOtherCompartment(int);
     void FireCurrentWeapon(float, EFireMethod);
+    int FireWeapon(int, const CVector3 &, const CVector3 &, float, bool);
 };
 
 // Method-only view of a hierarchy object.
