@@ -356,6 +356,13 @@ public:
 // names and the enumerators' meanings are inferred (see docs/Behaviors.md). The 16-byte
 // alignment is inferred too: it gives the observed gaps before and after the embedded
 // threat in ThreatInfo (+0x4 to +0x10, +0x2c to +0x30) and the slot address forms.
+// The zone a soldier's behaviors stay inside; only its methods are declared here.
+class CAIActivityZone {
+public:
+    void Disable();
+    void UseMovingTarget(ISceneNode *, float);
+    int IsPointUsable(const CVector3 &);
+};
 class CAIThreat {
 public:
     enum ThreatType { ThreatNone = 0 };
@@ -418,9 +425,17 @@ public:
     void SetInitialStatus();
     void UpdateStatus();
     void SetupTargetMatchList(aistatus_match *, int);
+    ISceneNode *GetSceneNode();
+    void OverrideLOSPosition(const CVector3 &);
+    void StopOverrideLOSPosition();
+    void OnStateChange(EAIHighLevelState, EAIHighLevelState);
+    void OnDeath();
+    CAISoldierObject *AsAISoldierObject();
     unsigned char unknown_0[0x190];
     int aimDirty; // +0x190; set when an aim modifier changes. Descriptive.
-    unsigned char unknown_194[0x730 - 0x194];
+    unsigned char unknown_194[0x340 - 0x194];
+    CAIActivityZone activityZone; // +0x340
+    unsigned char unknown_after_zone[0x730 - 0x340 - sizeof(CAIActivityZone)];
     float health;    // +0x730
     float maxHealth; // +0x734
     aistatus_match targetMatchList[4]; // +0x738
@@ -430,7 +445,10 @@ public:
     unsigned char unknown_79c[0x7b0 - 0x79c];
     CAIThreatEvaluation threatEvaluation; // +0x7b0
     unsigned char unknown_after_threats[0xd10 - 0x7b0 - sizeof(CAIThreatEvaluation)];
-    unsigned char coverpointStorage[3536 - 0xd10]; // +0xd10; a CCoverpointBehavior. The allocation is 3536 bytes.
+    unsigned char coverpointStorage[0xdb8 - 0xd10]; // +0xd10; a CCoverpointBehavior. The allocation is 3536 bytes.
+    int losOverride;               // +0xdb8
+    unsigned char unknown_dbc[4];
+    CVector3 losOverridePosition;  // +0xdc0
 };
 class IMovingSceneNode;
 // Virtual-interface view of CAIObject: its table pointer follows the data at

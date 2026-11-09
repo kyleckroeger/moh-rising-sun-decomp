@@ -44,8 +44,15 @@ byte, with their native tables and literal pools. There is no Frontline counterp
   functions touch; offsets are verified by those functions, but the class extent and its
   soldier base are not modeled. `GetClock` reads the clock inside `g_BotMan`.
 
+- `CCoverpointBehavior`: the constructor, `StopBehavior`, `ReleaseResources` and the
+  small setters match. It scores 70 while its cover point stays useful. The soldier's
+  line-of-sight override, at `+0xdb8` and `+0xdc0` of the soldier AI object, follows the
+  embedded coverpoint behavior and ends the 3536-byte allocation.
+
 ## Not reconstructed yet
 
+- `CCoverpointBehavior::UpdateHeuristicScore`, `StartBehavior`, `GetCapabilities` and
+  `ChooseCoverpoint`: near misses left out rather than steered.
 - `CAIThreatEvaluation`'s constructor and the module destructors: their tables and
   destructors are weak in the original, and no current unit form owns those.
 - `ScoreInitialThreat`: one address computation (the position argument) still differs.

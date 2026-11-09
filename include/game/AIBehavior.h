@@ -15,17 +15,12 @@ struct BuddyLeadCheckpoint {
     int unknown_0;
     int value; // +0x4; returned by BIFunc_GetBuddyLeadCheckpointFromID.
 };
+class CCoverPoint;
 class CBuddyLeadBehavior { // Type 1.
   public:
     static BuddyLeadCheckpoint *GetBuddyLeadCheckpointFromID(int);
     void HandleCheckpointReachedByBuddy(int);
     static void HandleCheckpointReachedByPlayer(int);
-};
-
-class CAIActivityZone {
-  public:
-    void Disable();
-    void UseMovingTarget(ISceneNode *, float);
 };
 
 class CBuddyFollowBehavior : public CBehavior { // Type 2.
@@ -148,15 +143,22 @@ class CPolemineBehavior : public CBehavior { // Type 7, as the rifle.
     BSObject *weaponScript; // +0x14
 };
 
-class CMountedMachineGunBehavior { // Type 3.
+class TriggerObject;
+class CMountedMachineGunBehavior : public CBehavior { // Type 3.
   public:
-    // The table pointer follows twelve bytes of base data; slots 1-4 in the
-    // order of the original behavior tables (e.g. 0x802e8180).
-    unsigned char unknown00[12];
+    CMountedMachineGunBehavior();
     virtual ~CMountedMachineGunBehavior();
     virtual float GetCurrentHeuristicScore();
-    virtual float GetHeuristicUpdateFrequency();
-    virtual void UpdateHeuristicScore();
+    virtual int GetHeuristicUpdateFrequency();
+    virtual int UpdateHeuristicScore();
+    virtual int StartBehavior();
+    virtual void StopBehavior(bool);
+    virtual void ReleaseResources();
+    virtual int GetCapabilities(ECapability);
+    virtual int GetType();
+    virtual BSObject *GetScriptObject();
+    void SetBehaviorStyle(EAIHighLevelState);
+    int DoIOwnMMG(TriggerObject *);
     void Arrived();
     void CantReachMMG();
     void HitFromBehind();
@@ -167,18 +169,39 @@ class CMountedMachineGunBehavior { // Type 3.
     static CStaticObject *GetGunByLinkCode(int);
     static void RegisterFeeder(int, BSObject *);
     static void RegisterGun(int, CStaticObject *);
+    EAIHighLevelState behaviorStyle; // +0x10; the name's event argument.
+    float heuristicScore;            // +0x14
+    BSObject *gunScript;             // +0x18
+    unsigned char unknown1c[0x24 - 0x1c];
+    TriggerObject *bidTrigger;       // +0x24; withdrawn by the destructor.
+    int arrived;                     // +0x28
+    int stopping;                    // +0x2c
+    int forced;                      // +0x30
+    int cantReach;                   // +0x34
+    float retryTime;                 // +0x38; set by CantReachMMG and HitFromBehind.
+    float field3c;                   // +0x3c
+    int hitFromBehind;               // +0x40
+    int field44;                     // +0x44
 };
 
-class CCoverpointBehavior { // Type 4.
+class CCoverpointBehavior : public CBehavior { // Type 4.
   public:
-    // The table pointer follows twelve bytes of base data; slots 1-4 in the
-    // order of the original behavior tables (e.g. 0x802e8180).
-    unsigned char unknown00[12];
+    CCoverpointBehavior();
     virtual ~CCoverpointBehavior();
     static void UpdateCoverpointsOutOfArea(const ISceneNode *);
     virtual float GetCurrentHeuristicScore();
-    virtual float GetHeuristicUpdateFrequency();
-    virtual void UpdateHeuristicScore();
+    virtual int GetHeuristicUpdateFrequency();
+    virtual int UpdateHeuristicScore();
+    virtual int StartBehavior();
+    virtual void StopBehavior(bool);
+    virtual void ReleaseResources();
+    virtual int GetCapabilities(ECapability);
+    virtual int GetType();
+    virtual BSObject *GetScriptObject();
+    CCoverPoint *ChooseCoverpoint();
+    int CheckCoverpointUsefulness();
+    void LeaveCoverPoint();
+    void ForceMoveTargetUpdate();
     int StartCoverPointWalk();
     void WalkToCoverPoint();
     float GetAIValueByName(const char *);
@@ -188,6 +211,18 @@ class CCoverpointBehavior { // Type 4.
     void ForceToCoverPoint();
     static void InvalidateCoverPointByID(int);
     static void RegisterCoverpoint(TriggerObject *);
+    float heuristicScore;      // +0x10
+    unsigned char unknown14[4];
+    BSObject *coverScript;     // +0x18; the chosen cover point's script object.
+    int arrived;               // +0x1c
+    int stopping;              // +0x20; set by StopBehavior, cleared by ReleaseResources.
+    int ended;                 // +0x24
+    CCoverPoint *coverPoint;   // +0x28
+    CAISoldierObject *soldier; // +0x2c
+    float field30;             // +0x30; cleared by the constructor.
+    unsigned char unknown34[0x40 - 0x34];
+    CVector3 moveTarget;       // +0x40
+    int forced;                // +0x50
 };
 
 class CScriptedBehavior : public CBehavior { // Type 5.
@@ -257,6 +292,9 @@ class CScriptedGag {
 class CCoverPoint {
   public:
     void InitFlags();
+    int GetStyle() const;
+    void GetModifiedPosition(CVector3 &) const;
+    CVector3 GetPeekLocation();
     int IsOccupied() const;
     int IsValid() const;
     int IsAvailable() const;

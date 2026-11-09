@@ -2098,7 +2098,17 @@
     "eagl_rendercontext_accessors.json",
     "eagl_rendercontext_private.json",
     "eagl_rendercontext_extension.json",
-    "eagl_rendercontext_efb.json"
+    "eagl_rendercontext_efb.json",
+    "ai_CoverpointCtor.json",
+    "ai_CoverpointStop.json",
+    "ai_CoverpointForce.json",
+    "ai_CoverpointArrived.json",
+    "ai_CoverpointLeave.json",
+    "ai_CoverpointStopWalk.json",
+    "ai_CoverpointTail.json",
+    "ai_BotObjectWeaponQueries.json",
+    "ai_AISoldierAccessors.json",
+    "ai_AISoldierDeath.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

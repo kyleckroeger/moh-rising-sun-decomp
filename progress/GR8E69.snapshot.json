@@ -31,6 +31,8 @@
       "src/ai/AIObjectVisionSetup.cpp": "fdd7a290910dbfa6dc3dedcea1ca6f29d7cb48ba8dd8031216b1c0e4929a149a",
       "src/ai/AIPlayerDoodad.cpp": "aae454c7afa224f419a698b5e35635415fb9bcd40ff3c5a7ae4c3cc88feaa9bb",
       "src/ai/AIPlayerObject.cpp": "930b322c143d9d04f94c7abccede5a284b8b5d53926ba754559144324bd906ea",
+      "src/ai/AISoldierAccessors.cpp": "3ea8c992bb031c235206a01994cc8393faa2a410e1d9afcf5126315fe89365f6",
+      "src/ai/AISoldierDeath.cpp": "6d509e354b9f28f68dcb1de9c95b225353eb17e190760a9aa007df2b16907983",
       "src/ai/AISoldierDoodad.cpp": "69e8bc90a49fd028f5f23d1791ce17c60cc433862d36a8dedd339caa3017b9ac",
       "src/ai/AISoldierObjectNew.cpp": "15788533d823ec81370378332a90f80eb042969236023e0cbaa1524ebb9a5089",
       "src/ai/AISoldierObjectUpdate.cpp": "355ba15dd8b7ddd5a4373b58c2c07f980177ec5e995b59ae9f2e57a17228bfd7",
@@ -49,7 +51,15 @@
       "src/ai/AIThreatsReaction.cpp": "1bcc9af7673c903b15a271d70bc9772d532895d771f07cc6c1b9bc43c05fd990",
       "src/ai/Behavior.cpp": "085db5cd1f8fe7c991c04156eac45718b95e4938cebc97ebdf5f2eef3674b970",
       "src/ai/BotObjectAccessors.cpp": "26230c8f2f6d38f502ebc37e07bfb468718896db20ca2a1f5bb4a56072b2e546",
+      "src/ai/BotObjectWeaponQueries.cpp": "e9a94e80f688c772e3c94cf4b33df8e175cf3d694df3921f02b08be899dc486c",
       "src/ai/BuddyFollowBehavior.cpp": "057e6a09a3d436b73da6bd873f38d17b151b25352dc707f668037944b9e0ff20",
+      "src/ai/CoverpointArrived.cpp": "f9743664202244a90d58a54182b030a5e1e5527086ad0e3c5ab3e47d1d9a2e6d",
+      "src/ai/CoverpointCtor.cpp": "c39600cf3a80cd6e33e214c98cc787d4cc3815b724f3117570a7877b9636eb34",
+      "src/ai/CoverpointForce.cpp": "a52e40289af1aed341865e6736377adeebd6127fe8964b76c54e4b0c5d0ee358",
+      "src/ai/CoverpointLeave.cpp": "cc31dceec252174ce7e060253f15d74671edd1153e3bce4c3527179043c01815",
+      "src/ai/CoverpointStop.cpp": "dc653f0c31bb73de1262d064d5d3a34086c819d5e7afe1c51b3f664747234ac1",
+      "src/ai/CoverpointStopWalk.cpp": "bd3f48363f1bc88ca688e477292e1d0ee776c1cb725c4e8ca0e807b559b30cec",
+      "src/ai/CoverpointTail.cpp": "6fb11951571ebb7e0b7908a3be5c707933ad9af91fc6431e847aea3796d946f9",
       "src/ai/GrenadeResponseQueries.cpp": "c69240fd532d35c3cd178969bbafd94bb6c3202d155ba8437e716d4f7ee4b2c9",
       "src/ai/NullWeaponBehavior.cpp": "73e48f23e4a8e7963c1f5fd241186ea823189254e2fb72cb103336975c9f7592",
       "src/ai/PistolBehavior.cpp": "52bbbfdcf25027a20f6dccb47bee3647d3a2d5c6195cfbdc570a2b1529d0dc4b",
@@ -2382,13 +2392,13 @@
       "include/dolphin-sdk/libc/wchar.h": "eb9359b3f8c80e980c291b31b08b913739a9fda753a2a5007f8bf2bf3c646439",
       "include/dolphin-sdk/macros.inc": "4e92f656bb511fbb45d66081291371c47ceba7bce9c55f86871116203cf38a46",
       "include/dolphin-sn/dolphin/types.h": "ca31e0bbb97e93ca4713654367df29578f6392f3acaf40ca68bc1de1c913af93",
-      "include/game/AIBehavior.h": "c8f0b7a5ee8c578421cd095b85068eb9dc5e748e2cb3a63085fcf25e2479f2d6",
+      "include/game/AIBehavior.h": "77700acdd0b64a42a411c87c138a41f364f4d99ed3b669ca8fb939e9538df76e",
       "include/game/AIBot.h": "4ea15408aca37119347dccad6a1264360f7ca2ce5980316bfd7b7d8a6e20dd4d",
       "include/game/AIDoodad.h": "5a8328fd7c55b6f602742adb79faabaeb4466fbaa44292b3a32fd0d0ad10aca9",
       "include/game/AIFilterGlobal.h": "8206508036a820ab1075f5e290d849293a434e49041b0d700337c523bc915738",
-      "include/game/AIMovement.h": "143e409a2e3b38c72b2a667b1781a10c9af5ce7cc9cf5bd75ac43f142192d484",
+      "include/game/AIMovement.h": "be6b180ea11f5f27a6b5fb27e3ae35288d2c22879ba23a2233dc1d233979674a",
       "include/game/AISplinePath.h": "b099db9f3b62cd89d875d5fcaf42b91b7b23a8d20085288a26f1f94c37bd89df",
-      "include/game/AITargeting.h": "842e4be1b3245c271492db351479613f29eb4b089241d4eb9ecd7f4e7df1cae8",
+      "include/game/AITargeting.h": "db020ff7db46b0cdd6d811ff5b4c5a35d19d989d9b90a73a38c5149981407e7d",
       "include/game/AnimShape.h": "eb3d8e24b295f937a6524701d5d87c8b8b4e052c8bbb2bafd8fb764c3318e87e",
       "include/game/AnimatedVolume.h": "527918576e64cf9296cbb9164eefaf3fc8b7a0f96894e342d2da9e847df4cf25",
       "include/game/AvPlayer.h": "ee5373fca262bf54fd66e19125fe4c512d5a3ff3ce27f97ea7d292b46204a6a1",
@@ -2816,6 +2826,8 @@
       "config/GR8E69/ai_AIObjectVisionSetup.json": "ec5d56a40a8d985daab844ede07e96546c96a8f54f649284d9e6b6245783ba77",
       "config/GR8E69/ai_AIPlayerDoodad.json": "8976209d5d59b86a5d929fac29a9e3ea68a001d594b16260e83a1360eec3227b",
       "config/GR8E69/ai_AIPlayerObject.json": "8ba7399ad3e067573248c2a983cc6db12e45969ae604d079c827a9e9e59961b2",
+      "config/GR8E69/ai_AISoldierAccessors.json": "6919bc1de9aea3e16970bd880af9a9de8185bce98ea341459fdab8431c52b8bc",
+      "config/GR8E69/ai_AISoldierDeath.json": "100c309c1ebf83ea0ca290d0a7ee018d6dcd915df4532d6e2199d9345c55f9c5",
       "config/GR8E69/ai_AISoldierDoodad.json": "0eaebe52e58074f6eb5b7dd04ee0e4f40b1e85f8209f2dd8b1c1925244a85baf",
       "config/GR8E69/ai_AISoldierObjectNew.json": "c87901467bad4f775cd629eedfffe23caa5128b8531342c46deeb0d70b6e4a57",
       "config/GR8E69/ai_AISoldierObjectUpdate.json": "3c20d5d2d5c41faa2014cf1be63c5e739aeac08e9b07608fff96c25901c752d5",
@@ -2834,7 +2846,15 @@
       "config/GR8E69/ai_AIThreatsReaction.json": "6cc2cc5f9f3e0738ca5d0273b953237e6cbb8080d729541386d2b2a36b75a09b",
       "config/GR8E69/ai_Behavior.json": "5e5efe1d0bf7f05574e75618e1b8e6b045feca44fa885170b947d8ad4a4c2381",
       "config/GR8E69/ai_BotObjectAccessors.json": "41bc97f695d2cf488ede127e96bc9963d080b9b913fef160fe1c49662e5def1c",
+      "config/GR8E69/ai_BotObjectWeaponQueries.json": "e174f385b8731b705fc1690db44ecceea19cf719147c259cf34ccd7471912761",
       "config/GR8E69/ai_BuddyFollowBehavior.json": "cbbfff677e02708e9a8316c80cafed21c1558b16d030d7a8d1fbfc13e2d2655d",
+      "config/GR8E69/ai_CoverpointArrived.json": "464a1f398b83c33ee3a466ba0d2c4ad674b1f5e4f0857accfa949d56754227be",
+      "config/GR8E69/ai_CoverpointCtor.json": "ffc2f342faa217ff22e804b17c51a5f05bb10a62b0fdcc63d9efcbae53f1ffe4",
+      "config/GR8E69/ai_CoverpointForce.json": "fd00a8d5faf8e56a408f7492d1ef0ecbf607bceb8a6fb18e39b54962c5f7203b",
+      "config/GR8E69/ai_CoverpointLeave.json": "2eab3f4e9a28349cf8765b7e7245a4897a2ddcc34c5df5084caaff4365a68993",
+      "config/GR8E69/ai_CoverpointStop.json": "0e59d7ff9264175a4af105ec3bfafc14e8b58a1572b3e646965873a3ae62c760",
+      "config/GR8E69/ai_CoverpointStopWalk.json": "531ad82bc25943d5d5fbef6db4b48e1646efcb073829ac769da61859ff96a93c",
+      "config/GR8E69/ai_CoverpointTail.json": "453cd5fa372b6aec333c359bf5b748f323d1ebf7780d6c62434ee188a83d62cf",
       "config/GR8E69/ai_NullWeaponBehavior.json": "cf42b3058125a789f6b44c78b488755e338f60dccc9715e162d9b6220e0e6ffc",
       "config/GR8E69/ai_PistolBehavior.json": "dde1e548afe69c91e77cea98367d95cb2beb8d5be9f21f46bafa6516b54e0212",
       "config/GR8E69/ai_PolemineBehavior.json": "e1649ae5303f1eb384dd28825a7fd97cb68efecf3b5251b60f4fdaff9413cbbc",
@@ -3729,7 +3749,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "75892b214d2665dca5e3c5d380cbe1828b9cde9e1b9fa709ece1bf0a8210a61f",
+      "config/GR8E69/project.json": "a58569e0d0585057a8dc3ea7d61c94ccf844d1c31e8d1ff5993f85bd5b158882",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -6392,14 +6412,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1099100,
+    "matching_code_bytes": 1100352,
     "total_executable_code_bytes": 2492032,
-    "percent": 44.10457008577739,
+    "percent": 44.15481021110483,
     "categories": {
-      "reconstructed_game": 706884,
+      "reconstructed_game": 708136,
       "restored_library": 392216
     },
-    "matching_functions": 5454
+    "matching_functions": 5477
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -6521,6 +6541,8 @@
     "config/GR8E69/ai_AIObjectVisionSetup.json": "ec5d56a40a8d985daab844ede07e96546c96a8f54f649284d9e6b6245783ba77",
     "config/GR8E69/ai_AIPlayerDoodad.json": "8976209d5d59b86a5d929fac29a9e3ea68a001d594b16260e83a1360eec3227b",
     "config/GR8E69/ai_AIPlayerObject.json": "8ba7399ad3e067573248c2a983cc6db12e45969ae604d079c827a9e9e59961b2",
+    "config/GR8E69/ai_AISoldierAccessors.json": "6919bc1de9aea3e16970bd880af9a9de8185bce98ea341459fdab8431c52b8bc",
+    "config/GR8E69/ai_AISoldierDeath.json": "100c309c1ebf83ea0ca290d0a7ee018d6dcd915df4532d6e2199d9345c55f9c5",
     "config/GR8E69/ai_AISoldierDoodad.json": "0eaebe52e58074f6eb5b7dd04ee0e4f40b1e85f8209f2dd8b1c1925244a85baf",
     "config/GR8E69/ai_AISoldierObjectNew.json": "c87901467bad4f775cd629eedfffe23caa5128b8531342c46deeb0d70b6e4a57",
     "config/GR8E69/ai_AISoldierObjectUpdate.json": "3c20d5d2d5c41faa2014cf1be63c5e739aeac08e9b07608fff96c25901c752d5",
@@ -6539,7 +6561,15 @@
     "config/GR8E69/ai_AIThreatsReaction.json": "6cc2cc5f9f3e0738ca5d0273b953237e6cbb8080d729541386d2b2a36b75a09b",
     "config/GR8E69/ai_Behavior.json": "5e5efe1d0bf7f05574e75618e1b8e6b045feca44fa885170b947d8ad4a4c2381",
     "config/GR8E69/ai_BotObjectAccessors.json": "41bc97f695d2cf488ede127e96bc9963d080b9b913fef160fe1c49662e5def1c",
+    "config/GR8E69/ai_BotObjectWeaponQueries.json": "e174f385b8731b705fc1690db44ecceea19cf719147c259cf34ccd7471912761",
     "config/GR8E69/ai_BuddyFollowBehavior.json": "cbbfff677e02708e9a8316c80cafed21c1558b16d030d7a8d1fbfc13e2d2655d",
+    "config/GR8E69/ai_CoverpointArrived.json": "464a1f398b83c33ee3a466ba0d2c4ad674b1f5e4f0857accfa949d56754227be",
+    "config/GR8E69/ai_CoverpointCtor.json": "ffc2f342faa217ff22e804b17c51a5f05bb10a62b0fdcc63d9efcbae53f1ffe4",
+    "config/GR8E69/ai_CoverpointForce.json": "fd00a8d5faf8e56a408f7492d1ef0ecbf607bceb8a6fb18e39b54962c5f7203b",
+    "config/GR8E69/ai_CoverpointLeave.json": "2eab3f4e9a28349cf8765b7e7245a4897a2ddcc34c5df5084caaff4365a68993",
+    "config/GR8E69/ai_CoverpointStop.json": "0e59d7ff9264175a4af105ec3bfafc14e8b58a1572b3e646965873a3ae62c760",
+    "config/GR8E69/ai_CoverpointStopWalk.json": "531ad82bc25943d5d5fbef6db4b48e1646efcb073829ac769da61859ff96a93c",
+    "config/GR8E69/ai_CoverpointTail.json": "453cd5fa372b6aec333c359bf5b748f323d1ebf7780d6c62434ee188a83d62cf",
     "config/GR8E69/ai_NullWeaponBehavior.json": "cf42b3058125a789f6b44c78b488755e338f60dccc9715e162d9b6220e0e6ffc",
     "config/GR8E69/ai_PistolBehavior.json": "dde1e548afe69c91e77cea98367d95cb2beb8d5be9f21f46bafa6516b54e0212",
     "config/GR8E69/ai_PolemineBehavior.json": "e1649ae5303f1eb384dd28825a7fd97cb68efecf3b5251b60f4fdaff9413cbbc",
@@ -7434,7 +7464,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "75892b214d2665dca5e3c5d380cbe1828b9cde9e1b9fa709ece1bf0a8210a61f",
+    "config/GR8E69/project.json": "a58569e0d0585057a8dc3ea7d61c94ccf844d1c31e8d1ff5993f85bd5b158882",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -8718,13 +8748,13 @@
     "include/dolphin-sdk/libc/wchar.h": "eb9359b3f8c80e980c291b31b08b913739a9fda753a2a5007f8bf2bf3c646439",
     "include/dolphin-sdk/macros.inc": "4e92f656bb511fbb45d66081291371c47ceba7bce9c55f86871116203cf38a46",
     "include/dolphin-sn/dolphin/types.h": "ca31e0bbb97e93ca4713654367df29578f6392f3acaf40ca68bc1de1c913af93",
-    "include/game/AIBehavior.h": "c8f0b7a5ee8c578421cd095b85068eb9dc5e748e2cb3a63085fcf25e2479f2d6",
+    "include/game/AIBehavior.h": "77700acdd0b64a42a411c87c138a41f364f4d99ed3b669ca8fb939e9538df76e",
     "include/game/AIBot.h": "4ea15408aca37119347dccad6a1264360f7ca2ce5980316bfd7b7d8a6e20dd4d",
     "include/game/AIDoodad.h": "5a8328fd7c55b6f602742adb79faabaeb4466fbaa44292b3a32fd0d0ad10aca9",
     "include/game/AIFilterGlobal.h": "8206508036a820ab1075f5e290d849293a434e49041b0d700337c523bc915738",
-    "include/game/AIMovement.h": "143e409a2e3b38c72b2a667b1781a10c9af5ce7cc9cf5bd75ac43f142192d484",
+    "include/game/AIMovement.h": "be6b180ea11f5f27a6b5fb27e3ae35288d2c22879ba23a2233dc1d233979674a",
     "include/game/AISplinePath.h": "b099db9f3b62cd89d875d5fcaf42b91b7b23a8d20085288a26f1f94c37bd89df",
-    "include/game/AITargeting.h": "842e4be1b3245c271492db351479613f29eb4b089241d4eb9ecd7f4e7df1cae8",
+    "include/game/AITargeting.h": "db020ff7db46b0cdd6d811ff5b4c5a35d19d989d9b90a73a38c5149981407e7d",
     "include/game/AnimShape.h": "eb3d8e24b295f937a6524701d5d87c8b8b4e052c8bbb2bafd8fb764c3318e87e",
     "include/game/AnimatedVolume.h": "527918576e64cf9296cbb9164eefaf3fc8b7a0f96894e342d2da9e847df4cf25",
     "include/game/AvPlayer.h": "ee5373fca262bf54fd66e19125fe4c512d5a3ff3ce27f97ea7d292b46204a6a1",
@@ -9060,6 +9090,8 @@
     "src/ai/AIObjectVisionSetup.cpp": "fdd7a290910dbfa6dc3dedcea1ca6f29d7cb48ba8dd8031216b1c0e4929a149a",
     "src/ai/AIPlayerDoodad.cpp": "aae454c7afa224f419a698b5e35635415fb9bcd40ff3c5a7ae4c3cc88feaa9bb",
     "src/ai/AIPlayerObject.cpp": "930b322c143d9d04f94c7abccede5a284b8b5d53926ba754559144324bd906ea",
+    "src/ai/AISoldierAccessors.cpp": "3ea8c992bb031c235206a01994cc8393faa2a410e1d9afcf5126315fe89365f6",
+    "src/ai/AISoldierDeath.cpp": "6d509e354b9f28f68dcb1de9c95b225353eb17e190760a9aa007df2b16907983",
     "src/ai/AISoldierDoodad.cpp": "69e8bc90a49fd028f5f23d1791ce17c60cc433862d36a8dedd339caa3017b9ac",
     "src/ai/AISoldierObjectNew.cpp": "15788533d823ec81370378332a90f80eb042969236023e0cbaa1524ebb9a5089",
     "src/ai/AISoldierObjectUpdate.cpp": "355ba15dd8b7ddd5a4373b58c2c07f980177ec5e995b59ae9f2e57a17228bfd7",
@@ -9078,7 +9110,15 @@
     "src/ai/AIThreatsReaction.cpp": "1bcc9af7673c903b15a271d70bc9772d532895d771f07cc6c1b9bc43c05fd990",
     "src/ai/Behavior.cpp": "085db5cd1f8fe7c991c04156eac45718b95e4938cebc97ebdf5f2eef3674b970",
     "src/ai/BotObjectAccessors.cpp": "26230c8f2f6d38f502ebc37e07bfb468718896db20ca2a1f5bb4a56072b2e546",
+    "src/ai/BotObjectWeaponQueries.cpp": "e9a94e80f688c772e3c94cf4b33df8e175cf3d694df3921f02b08be899dc486c",
     "src/ai/BuddyFollowBehavior.cpp": "057e6a09a3d436b73da6bd873f38d17b151b25352dc707f668037944b9e0ff20",
+    "src/ai/CoverpointArrived.cpp": "f9743664202244a90d58a54182b030a5e1e5527086ad0e3c5ab3e47d1d9a2e6d",
+    "src/ai/CoverpointCtor.cpp": "c39600cf3a80cd6e33e214c98cc787d4cc3815b724f3117570a7877b9636eb34",
+    "src/ai/CoverpointForce.cpp": "a52e40289af1aed341865e6736377adeebd6127fe8964b76c54e4b0c5d0ee358",
+    "src/ai/CoverpointLeave.cpp": "cc31dceec252174ce7e060253f15d74671edd1153e3bce4c3527179043c01815",
+    "src/ai/CoverpointStop.cpp": "dc653f0c31bb73de1262d064d5d3a34086c819d5e7afe1c51b3f664747234ac1",
+    "src/ai/CoverpointStopWalk.cpp": "bd3f48363f1bc88ca688e477292e1d0ee776c1cb725c4e8ca0e807b559b30cec",
+    "src/ai/CoverpointTail.cpp": "6fb11951571ebb7e0b7908a3be5c707933ad9af91fc6431e847aea3796d946f9",
     "src/ai/GrenadeResponseQueries.cpp": "c69240fd532d35c3cd178969bbafd94bb6c3202d155ba8437e716d4f7ee4b2c9",
     "src/ai/NullWeaponBehavior.cpp": "73e48f23e4a8e7963c1f5fd241186ea823189254e2fb72cb103336975c9f7592",
     "src/ai/PistolBehavior.cpp": "52bbbfdcf25027a20f6dccb47bee3647d3a2d5c6195cfbdc570a2b1529d0dc4b",
@@ -49757,8 +49797,8 @@
       ],
       "strip_unused": false,
       "discarded_functions": [],
-      "object_sha256": "e964ae9824d86a620ecb4ea941de7995fcdaaddb300ec8ca5060608d5c39dfe8",
-      "linked_sha256": "8f84a61c85747e9a2de6ef83220d7566fe85f8066c455d64f582c946f8e10375"
+      "object_sha256": "1ea250106a54b8b9c3a0904892e20215408379db57fcff36a3a70b407e33718f",
+      "linked_sha256": "0d152c740b2f937684e18fc0197cd7b702b6905cd5bd205591c9ed35ad998862"
     },
     {
       "id": "sound_snddrv_serve",
@@ -52792,6 +52832,186 @@
       "discarded_functions": [],
       "object_sha256": "5f5e404a982b043b998bec34856c1a3e34b477fa4a538e258e03389ba8a856cb",
       "linked_sha256": "994dcd33d7162a38a400cb1b18d121f9c28790c00f81e8666a4d14273b6b9a9b"
+    },
+    {
+      "id": "ai_CoverpointCtor",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 200,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "cfc9dbe649986877ef487ded5f1157365afedee25129ac1fb4c6b82c6039af09",
+      "linked_sha256": "7e4214343c69f7ace6ef0f6f1c2921d9c34f711f2c18b5a79019f450af420c32"
+    },
+    {
+      "id": "ai_CoverpointStop",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 248,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "454c234a90cffbe6705ac6835196bf5b859bdffe53f1b8cc01d04611988a24e6",
+      "linked_sha256": "7e77326c9c0e3d7fb4a48c57324deb45813eea40c6e6f709e05b9cd52731c846"
+    },
+    {
+      "id": "ai_CoverpointForce",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 12,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "ed847dada1b56abad59d7c2340004ae01b304024aa2d2bfa6a7587eb4141ed27",
+      "linked_sha256": "214755615cafc71b3f03c256666f03b2b2c15853d1fd929780b83cc1be715b05"
+    },
+    {
+      "id": "ai_CoverpointArrived",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 24,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "286c78dcbf42d28a9e6928317b6719828abb5ab4925ff41157842623863bc6ca",
+      "linked_sha256": "ba9a88f01c2f6be064b192d351b84a530d10d6eb6e25045cbed9c84dcb765abe"
+    },
+    {
+      "id": "ai_CoverpointLeave",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 96,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "c0c1f3df6b70e3acb9133895295e276bd3c0901a51ed31078e6dec33721a1a7d",
+      "linked_sha256": "4eb9c94e00a0b8d0ca740b0e1b40d937c8576ed3b84bb5e4c5f226391839a6c9"
+    },
+    {
+      "id": "ai_CoverpointStopWalk",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 196,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "6a0fc8d0da4966664de6f7ab2d05bda755a14a903501467ef8ea6d01c25b871f",
+      "linked_sha256": "49f8d9e8d008611a658fc7e819c8c847dc37dc567599d674809e04eb4cc668f0"
+    },
+    {
+      "id": "ai_CoverpointTail",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 16,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "138688b66f489e715bb734396e179f343697655bd700e7203e402f3cc9ad68fd",
+      "linked_sha256": "a15ecae00ffc094ba6dca3ec46fdba05816a5ace0bce37b957aaf1795b2a961f"
+    },
+    {
+      "id": "ai_BotObjectWeaponQueries",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 220,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "dac6523e3ad2ed76c77eaef5cf451efa74fd421069846d58fd6beb5610a38d6e",
+      "linked_sha256": "e8bca74afe1376e37d507ba714e94e1309826b6d74b6fd5957085ed130a9a54a"
+    },
+    {
+      "id": "ai_AISoldierAccessors",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 96,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "593ad60637d6f6ef2cfbf478adb6d8bfa47c253dc7976c1628a87e515fe244ad",
+      "linked_sha256": "77519aec3509ce523107e6fe4de064b2d4b9571d8430383c61b9ee9b1012b8c9"
+    },
+    {
+      "id": "ai_AISoldierDeath",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 144,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "c1456ec5e14f4f3911b8355196c63b777cb9615bfa11f203a8673b27fe136548",
+      "linked_sha256": "46d97e5ffe9143eae9d024be7fb7bc8c6cd8dfb624dee4d60cd7d93e71d29116"
     }
   ],
   "code_map": {
@@ -62151,42 +62371,12 @@
             "kind": "function",
             "name": "CalcMove__10CBotObjectf",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80099ad0",
-            "size": 92,
-            "kind": "function",
-            "name": "CanFireWeapon__10CBotObject",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80099b2c",
-            "size": 96,
-            "kind": "function",
-            "name": "StartReload__10CBotObject",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80099b8c",
-            "size": 12,
-            "kind": "function",
-            "name": "FireAtEnemy__10CBotObject",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80099b98",
-            "size": 12,
-            "kind": "function",
-            "name": "Jump__10CBotObject",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80099ba4",
-            "size": 8,
-            "kind": "function",
-            "name": "GetGrenade__10CBotObject",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 80099bac",
+        "ranges": [
           {
             "address": "0x80099bac",
             "size": 56,
@@ -64865,20 +65055,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800de0f8",
-            "size": 84,
-            "kind": "function",
-            "name": "OverrideLOSPosition__16CAISoldierObjectRC8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800de14c",
-            "size": 12,
-            "kind": "function",
-            "name": "StopOverrideLOSPosition__16CAISoldierObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800de158",
             "size": 128,
             "kind": "function",
@@ -64890,20 +65066,6 @@
             "size": 212,
             "kind": "function",
             "name": "GetLookDirection__16CAISoldierObjectR8CVector3T1",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800de2ac",
-            "size": 36,
-            "kind": "function",
-            "name": "OnStateChange__16CAISoldierObject17EAIHighLevelStateT1",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800de2d0",
-            "size": 108,
-            "kind": "function",
-            "name": "OnDeath__16CAISoldierObject",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -66855,34 +67017,6 @@
         "file_name": "CoverpointBehavior.cpp",
         "ranges": [
           {
-            "address": "0x800f1134",
-            "size": 120,
-            "kind": "function",
-            "name": "__19CCoverpointBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f11ac",
-            "size": 48,
-            "kind": "function",
-            "name": "_._19CCoverpointBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f11dc",
-            "size": 8,
-            "kind": "function",
-            "name": "GetCurrentHeuristicScore__19CCoverpointBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f11e4",
-            "size": 24,
-            "kind": "function",
-            "name": "GetHeuristicUpdateFrequency__19CCoverpointBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800f11fc",
             "size": 380,
             "kind": "function",
@@ -66897,31 +67031,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800f14d0",
-            "size": 184,
-            "kind": "function",
-            "name": "StopBehavior__19CCoverpointBehaviorb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f1588",
-            "size": 64,
-            "kind": "function",
-            "name": "ReleaseResources__19CCoverpointBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800f15c8",
             "size": 412,
             "kind": "function",
             "name": "ChooseCoverpoint__19CCoverpointBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f1764",
-            "size": 12,
-            "kind": "function",
-            "name": "ForceToCoverPoint__19CCoverpointBehavior",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -66932,31 +67045,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800f1828",
-            "size": 12,
-            "kind": "function",
-            "name": "Arrived__19CCoverpointBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f1834",
-            "size": 12,
-            "kind": "function",
-            "name": "EndCoverpoint__19CCoverpointBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800f1840",
             "size": 524,
             "kind": "function",
             "name": "CheckCoverpointUsefulness__19CCoverpointBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f1a4c",
-            "size": 96,
-            "kind": "function",
-            "name": "LeaveCoverPoint__19CCoverpointBehavior",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -66985,20 +67077,6 @@
             "size": 672,
             "kind": "function",
             "name": "GetAIValueByName__19CCoverpointBehaviorPCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f2634",
-            "size": 16,
-            "kind": "function",
-            "name": "StopCoverPointWalk__19CCoverpointBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f2644",
-            "size": 180,
-            "kind": "function",
-            "name": "ForceMoveTargetUpdate__19CCoverpointBehavior",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -67049,20 +67127,6 @@
             "kind": "function",
             "name": "__static_initialization_and_destruction_0",
             "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x800f3038",
-            "size": 8,
-            "kind": "function",
-            "name": "GetType__19CCoverpointBehavior",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f3040",
-            "size": 8,
-            "kind": "function",
-            "name": "GetScriptObject__19CCoverpointBehavior",
-            "evidence": "adjacent-compiler-markers"
           },
           {
             "address": "0x800f3048",
