@@ -2454,7 +2454,10 @@
     "ai_BotChase.json",
     "ai_BuddyCheckpoints.json",
     "ai_TurnCtor.json",
-    "ai_TurnB.json"
+    "ai_TurnB.json",
+    "game_drivecheck_read.json",
+    "game_drivecheck_font.json",
+    "ea_filedev_read_step.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

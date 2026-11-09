@@ -142,6 +142,20 @@ in `CheckDiscDriveStatus` and 0 in `CheckDiscChangeStatus` distinguish the two d
 drive keeps the last of those states. Status -1 spins forever. Verified: the code. Inferred: the
 state names.
 
+`DVDSafeRead` waits for a clean drive, reads asynchronously at priority 2, and cancels and repeats the read if the
+drive reported an error during it. The error messages are drawn with the ROM font through `InitRomFont`, `DrawFontChar`,
+`RFPuts`, `GetRFTextWidth` and `DrawMessage`, the SDK's `DEMOPuts` code with the z coordinate dropped. Not reconstructed
+yet: `LoadSheet`, whose `.rodata` is 20 bytes with a double in it and runs into the strings of
+`LevelExistsOnCurrentDisc`, and `SwapDiscs` (saved registers only).
+
+## File device reads
+
+`filedev.cpp` reads a disc file through a bounce buffer on its read thread. The request record holds the destination
+and file positions with their 32-byte aligned bounds, and a state: 1 for a short read, 2 for a misaligned head, 3 for a
+run read in place, 4 for a chunk of at most 16 KB, 5 for finished. Verified: `QEndOp` and `AyncDVDRead`. Inferred: the
+record's member names and the state meanings. Not reconstructed yet: `StartNonAlignedAyncRead`, `AyncDVDCallback`,
+`ReadFileThreadFunc`, `readfile`, `initfiledev`.
+
 ## MohLoader
 
 `MohLoader` and `MohLoaderGc` hold the console-side start-up state. `g_pPersistent` points to a

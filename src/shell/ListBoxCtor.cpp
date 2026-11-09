@@ -1,4 +1,4 @@
-// A fragment of the original ListBox.cpp: rows on a shell list. Names come from the symbol table; member
+// A fragment of the original dListBox.cpp: rows on a shell list. Names come from the symbol table; member
 // names are inferred from this code.
 #include "profile.h"
 #include <vector>

@@ -439,6 +439,7 @@
       "src/ea/filedev_close.cpp": "f7e929b4c9885137030dd724c2bed7093b1bba828afa140294a52ccba862f46c",
       "src/ea/filedev_kill.cpp": "8c0f3195f66e6e81f3081cc790df3364fc8faca2dee866254e5a811a12635c72",
       "src/ea/filedev_open.cpp": "80ba240a2ebf4a997c44b9665e953e859508729c3925414c4d327de619bd34c6",
+      "src/ea/filedev_read_step.cpp": "f02d9bfbe67073f641fea41e46efa418c1b59184c9f6f7967ce53784e4a87736",
       "src/ea/filesys.cpp": "c3c94be82051fb71d94bba7ef22050a8ddbdd86b2534c9978ac816f6168897a0",
       "src/ea/fontchar.cpp": "2980d56dfbdbbeb46cba293f7c2397b7518079ba32d510118510c9301ee15a47",
       "src/ea/fontcreate.cpp": "fb846d119db1a373f03387cc09f0db8bf0c80ede2c1efb305914580be2630def",
@@ -881,6 +882,8 @@
       "src/game/device_b.cpp": "7c6d0c3f9e9ca649690400da465d0de0ffb34b994132243694e88f0bd9365868",
       "src/game/device_c.cpp": "a521a60265baf3b48c3bd2fb3f7a50726d75d860c9c7e651c20e9a4cc5e39162",
       "src/game/device_d.cpp": "1b5f2a867a8c893ee377b976142a0e777703f950403fd7732ad5f1d7c6274863",
+      "src/game/drivecheck_font.cpp": "99ab7d6e04b514d99c5929773f06954c9757deee16ace207361369c44adf2e90",
+      "src/game/drivecheck_read.cpp": "16a727f106ef89ef4d1fad38d0a940c0bba9009c65ee82925cbe20159e005cdd",
       "src/game/drivecheck_status.cpp": "a458eceb8f85167a1e52635839add3181457e078b2a8bfdc221f39def946dbfd",
       "src/game/fader.cpp": "747b4b655d1fd223cce5f602f80988b025c9c3ed3037e60e29588fc265522dba",
       "src/game/font_attrs.cpp": "17a5dcba14710a5625b373dba980f883f4491d208bf930ab9eb0cec07b5f3fe7",
@@ -2031,11 +2034,11 @@
       "src/script/use_binoculars.cpp": "3ab897eb9f47912d8c49df7f82f4b7a2d91baa056756f1b876b6755de43fbca5",
       "src/script/validation_build.cpp": "89251f21f21080d27633ad20ea624b1a8702565a91ab36e5f809b6e5e0ae4255",
       "src/script/vibration_partial.cpp": "29c765c0f143dab8c71ddb417edde951f88a66595192f026be5920461c5b9ec6",
-      "src/shell/ListBoxCtor.cpp": "32b06c4be6c215da1bc9fd5efe5f2e20d9db6e461d67206b93d9d6645a4ed56c",
-      "src/shell/ListBoxEdit.cpp": "28d6fe3af0d9f47f27f863be297d4e009f139de75cbc262a2fcfb5af3749cb89",
-      "src/shell/ListBoxRowDtor.cpp": "ba6bfb1c7d8b4e9e5b0c87987319bfa46ef6768ce6532465f42b9ed6a094c667",
-      "src/shell/ListBoxRows.cpp": "a5e634a8b45b0c9dbb1c23b009e11bd2f68ba7535c7de3235bc05a3d2836fad2",
-      "src/shell/ListBoxScroll.cpp": "c35e99a4c774da30d0dfcfda68f1602175000db9adaa3f579e0442bf8a2541e5",
+      "src/shell/ListBoxCtor.cpp": "c787987a9200614edc76e754fca2fced9db8546c63809d5baa383fb06ad4356e",
+      "src/shell/ListBoxEdit.cpp": "1e26784a78f6554609507ca9a5551fc8d28d4de1ef352e243dd843650473eba3",
+      "src/shell/ListBoxRowDtor.cpp": "7f07900905e74646d713b65cad8fcf6945d9f9a825ed35433195d4f9e19befa7",
+      "src/shell/ListBoxRows.cpp": "62fa9b965a47bc20150901f7994167aabbf34213612f0b982c5f17ce12305e70",
+      "src/shell/ListBoxScroll.cpp": "eb360d0e5118059ceb6f83a70f9fbc0ff7eb7a9f2bca13697ac904f328bb4bc4",
       "src/shell/MoviePlayerHeap.cpp": "febd0bd90633a0c962990afef60bd35e9f6288bd33b22c60039510d338647b22",
       "src/shell/MoviePlayerTail.cpp": "70e15d83c05ac1116563e0f59a56b9b1b1283c56eed681af3571da397ad35900",
       "src/shell/VolumeKnobs.cpp": "1ea20143d6befc08abd7f5aa3a1dc5b6215af931487271d2db3832ee0e789f6f",
@@ -3591,6 +3594,7 @@
       "config/GR8E69/ea_filedev_close.json": "c5bd473f3105c80e183851c795355c414c950945c828fc831b72fd9168efd1c3",
       "config/GR8E69/ea_filedev_kill.json": "abbfe313dbf537f33e0c37ed83fc67c8ca9cddabc49b3568fafb801745a7ef34",
       "config/GR8E69/ea_filedev_open.json": "e97f5219ff18eab471530c5762a71e3e833ac03ba3b29af4e9841c58fef8c74e",
+      "config/GR8E69/ea_filedev_read_step.json": "acddf22a18317a4b6d27bda7861e013b0ea68103e9843485f2aeb47164827e11",
       "config/GR8E69/ea_filesys.json": "2738aedc64fab28e1b4a76a601f496a5b5464547d13a689f20fd73bdde9e96d4",
       "config/GR8E69/ea_fontchar.json": "1e52ab7673f6e190e13a35e0fe6fd63489a5cf38806f041eb69bb3cb4a9a1769",
       "config/GR8E69/ea_fontcreate.json": "8bde187429767df88e9c261b790b4a86fbe3edced2e17abfb412777116b78049",
@@ -3969,6 +3973,8 @@
       "config/GR8E69/frustum_transform.json": "35766529dbd85ffd05cf8d34adb7010b3b10b02c04d1d097811dde2dfc2ef057",
       "config/GR8E69/fstload.json": "d49e84fe0d1e9af1dd569811065db3c015f596b540ac5988c5078fa2f9c5dd5e",
       "config/GR8E69/game_BitBuffer.json": "0ce2a9795f7d9046d1f3e6909562986dc6f612e4aa88cb07d18b514e0b986702",
+      "config/GR8E69/game_drivecheck_font.json": "bd3f5b665899ad48cc2df91be167c20721f6727b3abd1be7ad3a4ff94ad9c7e2",
+      "config/GR8E69/game_drivecheck_read.json": "c06fa9603eb5209583fae6f22e5aef646e4d786a105f48464fdb90ef1a955df2",
       "config/GR8E69/game_drivecheck_status.json": "da8b6c2388db425236dae89296c02e57879f662c29f032f6de97d752ea870cfd",
       "config/GR8E69/game_locale.json": "660eadd84d9e49632c2a42595aef8ca6d557b198b51bef3d3a3bba9558e4514e",
       "config/GR8E69/game_sys_memory_dwi.json": "af6b28229efc2adad9f987e767f2772ebe56093b9e8dedd5cc5b55c6da45b0e6",
@@ -4401,7 +4407,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "baff3fefd973a5043909e3e656e49df3178de61be106e767414c9fc015910ff4",
+      "config/GR8E69/project.json": "7493420340f4e04496994a20a9561cc9c86396954bec749ed332a46e94f51e1c",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7128,14 +7134,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1257068,
+    "matching_code_bytes": 1259116,
     "total_executable_code_bytes": 2492032,
-    "percent": 50.44349350249114,
+    "percent": 50.52567543273923,
     "categories": {
-      "reconstructed_game": 864852,
+      "reconstructed_game": 866900,
       "restored_library": 392216
     },
-    "matching_functions": 6598
+    "matching_functions": 6606
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -7638,6 +7644,7 @@
     "config/GR8E69/ea_filedev_close.json": "c5bd473f3105c80e183851c795355c414c950945c828fc831b72fd9168efd1c3",
     "config/GR8E69/ea_filedev_kill.json": "abbfe313dbf537f33e0c37ed83fc67c8ca9cddabc49b3568fafb801745a7ef34",
     "config/GR8E69/ea_filedev_open.json": "e97f5219ff18eab471530c5762a71e3e833ac03ba3b29af4e9841c58fef8c74e",
+    "config/GR8E69/ea_filedev_read_step.json": "acddf22a18317a4b6d27bda7861e013b0ea68103e9843485f2aeb47164827e11",
     "config/GR8E69/ea_filesys.json": "2738aedc64fab28e1b4a76a601f496a5b5464547d13a689f20fd73bdde9e96d4",
     "config/GR8E69/ea_fontchar.json": "1e52ab7673f6e190e13a35e0fe6fd63489a5cf38806f041eb69bb3cb4a9a1769",
     "config/GR8E69/ea_fontcreate.json": "8bde187429767df88e9c261b790b4a86fbe3edced2e17abfb412777116b78049",
@@ -8016,6 +8023,8 @@
     "config/GR8E69/frustum_transform.json": "35766529dbd85ffd05cf8d34adb7010b3b10b02c04d1d097811dde2dfc2ef057",
     "config/GR8E69/fstload.json": "d49e84fe0d1e9af1dd569811065db3c015f596b540ac5988c5078fa2f9c5dd5e",
     "config/GR8E69/game_BitBuffer.json": "0ce2a9795f7d9046d1f3e6909562986dc6f612e4aa88cb07d18b514e0b986702",
+    "config/GR8E69/game_drivecheck_font.json": "bd3f5b665899ad48cc2df91be167c20721f6727b3abd1be7ad3a4ff94ad9c7e2",
+    "config/GR8E69/game_drivecheck_read.json": "c06fa9603eb5209583fae6f22e5aef646e4d786a105f48464fdb90ef1a955df2",
     "config/GR8E69/game_drivecheck_status.json": "da8b6c2388db425236dae89296c02e57879f662c29f032f6de97d752ea870cfd",
     "config/GR8E69/game_locale.json": "660eadd84d9e49632c2a42595aef8ca6d557b198b51bef3d3a3bba9558e4514e",
     "config/GR8E69/game_sys_memory_dwi.json": "af6b28229efc2adad9f987e767f2772ebe56093b9e8dedd5cc5b55c6da45b0e6",
@@ -8448,7 +8457,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "baff3fefd973a5043909e3e656e49df3178de61be106e767414c9fc015910ff4",
+    "config/GR8E69/project.json": "7493420340f4e04496994a20a9561cc9c86396954bec749ed332a46e94f51e1c",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -10598,6 +10607,7 @@
     "src/ea/filedev_close.cpp": "f7e929b4c9885137030dd724c2bed7093b1bba828afa140294a52ccba862f46c",
     "src/ea/filedev_kill.cpp": "8c0f3195f66e6e81f3081cc790df3364fc8faca2dee866254e5a811a12635c72",
     "src/ea/filedev_open.cpp": "80ba240a2ebf4a997c44b9665e953e859508729c3925414c4d327de619bd34c6",
+    "src/ea/filedev_read_step.cpp": "f02d9bfbe67073f641fea41e46efa418c1b59184c9f6f7967ce53784e4a87736",
     "src/ea/filesys.cpp": "c3c94be82051fb71d94bba7ef22050a8ddbdd86b2534c9978ac816f6168897a0",
     "src/ea/fontchar.cpp": "2980d56dfbdbbeb46cba293f7c2397b7518079ba32d510118510c9301ee15a47",
     "src/ea/fontcreate.cpp": "fb846d119db1a373f03387cc09f0db8bf0c80ede2c1efb305914580be2630def",
@@ -11040,6 +11050,8 @@
     "src/game/device_b.cpp": "7c6d0c3f9e9ca649690400da465d0de0ffb34b994132243694e88f0bd9365868",
     "src/game/device_c.cpp": "a521a60265baf3b48c3bd2fb3f7a50726d75d860c9c7e651c20e9a4cc5e39162",
     "src/game/device_d.cpp": "1b5f2a867a8c893ee377b976142a0e777703f950403fd7732ad5f1d7c6274863",
+    "src/game/drivecheck_font.cpp": "99ab7d6e04b514d99c5929773f06954c9757deee16ace207361369c44adf2e90",
+    "src/game/drivecheck_read.cpp": "16a727f106ef89ef4d1fad38d0a940c0bba9009c65ee82925cbe20159e005cdd",
     "src/game/drivecheck_status.cpp": "a458eceb8f85167a1e52635839add3181457e078b2a8bfdc221f39def946dbfd",
     "src/game/fader.cpp": "747b4b655d1fd223cce5f602f80988b025c9c3ed3037e60e29588fc265522dba",
     "src/game/font_attrs.cpp": "17a5dcba14710a5625b373dba980f883f4491d208bf930ab9eb0cec07b5f3fe7",
@@ -12190,11 +12202,11 @@
     "src/script/use_binoculars.cpp": "3ab897eb9f47912d8c49df7f82f4b7a2d91baa056756f1b876b6755de43fbca5",
     "src/script/validation_build.cpp": "89251f21f21080d27633ad20ea624b1a8702565a91ab36e5f809b6e5e0ae4255",
     "src/script/vibration_partial.cpp": "29c765c0f143dab8c71ddb417edde951f88a66595192f026be5920461c5b9ec6",
-    "src/shell/ListBoxCtor.cpp": "32b06c4be6c215da1bc9fd5efe5f2e20d9db6e461d67206b93d9d6645a4ed56c",
-    "src/shell/ListBoxEdit.cpp": "28d6fe3af0d9f47f27f863be297d4e009f139de75cbc262a2fcfb5af3749cb89",
-    "src/shell/ListBoxRowDtor.cpp": "ba6bfb1c7d8b4e9e5b0c87987319bfa46ef6768ce6532465f42b9ed6a094c667",
-    "src/shell/ListBoxRows.cpp": "a5e634a8b45b0c9dbb1c23b009e11bd2f68ba7535c7de3235bc05a3d2836fad2",
-    "src/shell/ListBoxScroll.cpp": "c35e99a4c774da30d0dfcfda68f1602175000db9adaa3f579e0442bf8a2541e5",
+    "src/shell/ListBoxCtor.cpp": "c787987a9200614edc76e754fca2fced9db8546c63809d5baa383fb06ad4356e",
+    "src/shell/ListBoxEdit.cpp": "1e26784a78f6554609507ca9a5551fc8d28d4de1ef352e243dd843650473eba3",
+    "src/shell/ListBoxRowDtor.cpp": "7f07900905e74646d713b65cad8fcf6945d9f9a825ed35433195d4f9e19befa7",
+    "src/shell/ListBoxRows.cpp": "62fa9b965a47bc20150901f7994167aabbf34213612f0b982c5f17ce12305e70",
+    "src/shell/ListBoxScroll.cpp": "eb360d0e5118059ceb6f83a70f9fbc0ff7eb7a9f2bca13697ac904f328bb4bc4",
     "src/shell/MoviePlayerHeap.cpp": "febd0bd90633a0c962990afef60bd35e9f6288bd33b22c60039510d338647b22",
     "src/shell/MoviePlayerTail.cpp": "70e15d83c05ac1116563e0f59a56b9b1b1283c56eed681af3571da397ad35900",
     "src/shell/VolumeKnobs.cpp": "1ea20143d6befc08abd7f5aa3a1dc5b6215af931487271d2db3832ee0e789f6f",
@@ -60705,6 +60717,60 @@
       "discarded_functions": [],
       "object_sha256": "2218daa2433d38bb76c237cb535fe0e120685eeed2cf07c9f7e530139501ce53",
       "linked_sha256": "78b6a61384a66fb2f98bea2d6b9435eb3c0c061383085148330a2ed8dd8267d9"
+    },
+    {
+      "id": "game_drivecheck_read",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 476,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "c698b37eee1071230eb1d60c17547e3feeb26b5a5834103c996f2b4cae3065b9",
+      "linked_sha256": "a378a8ac1b2830fad1467ab81e37393b34c205f879c81147335ae12b510f1680"
+    },
+    {
+      "id": "game_drivecheck_font",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 1040,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "d549f03bf00b24eb87aef22761bf77c6a19e2f8597370717c3fd4e166181a5ac",
+      "linked_sha256": "9128f790f44a52900dd28a7bc8d77c5db4c30b726e991495497792d773248527"
+    },
+    {
+      "id": "ea_filedev_read_step",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 532,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "64f0639a6da8f9127e08182101a9931183f58f3d6bd212589e5b07b0fbef45c3",
+      "linked_sha256": "97d1b8ea23f6bb5d2850397d2d3ed3f63ff823688a99f75fc99de36d556040df"
     }
   ],
   "code_map": {
@@ -62023,53 +62089,11 @@
         "file_name": "drivecheck.cpp",
         "ranges": [
           {
-            "address": "0x80058a04",
-            "size": 380,
-            "kind": "function",
-            "name": "DVDSafeRead__FP11DVDFileInfoPvii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80058b80",
-            "size": 96,
-            "kind": "function",
-            "name": "InitRomFont__Fv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80058be0",
             "size": 320,
             "kind": "function",
             "name": "LoadSheet__FPv11_GXTexMapID",
             "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x80058d20",
-            "size": 260,
-            "kind": "function",
-            "name": "DrawFontChar__Fiiii",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x80058e24",
-            "size": 380,
-            "kind": "function",
-            "name": "RFPuts__FssPCc",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x80058fa0",
-            "size": 200,
-            "kind": "function",
-            "name": "GetRFTextWidth__FPCc",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x80059068",
-            "size": 200,
-            "kind": "function",
-            "name": "DrawMessage__FiiPCc",
-            "evidence": "adjacent-compiler-markers"
           },
           {
             "address": "0x80059184",
@@ -81992,20 +82016,6 @@
             "kind": "function",
             "name": "initfiledev__Fv",
             "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8020c4b4",
-            "size": 52,
-            "kind": "function",
-            "name": "QEndOp__Fv",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x8020c4e8",
-            "size": 480,
-            "kind": "function",
-            "name": "AyncDVDRead__FP11DVDFileInfo",
-            "evidence": "local-file-symbol"
           },
           {
             "address": "0x8020c6c8",
