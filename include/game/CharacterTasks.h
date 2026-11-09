@@ -5,6 +5,13 @@
 #include "CharacterTask.h"
 namespace EALA {
 namespace Character {
+// A task that redirects evaluation to another substate of its state.
+class Jump : public Task {
+  public:
+    Jump(Resource::Pointer<State> &state, unsigned int substate, Task *parent);
+    virtual ~Jump();
+    unsigned int target; // +0x34
+};
 class Sequence : public Task {
   public:
     Sequence(Resource::Pointer<State> &state, unsigned int substate, Task *parent);

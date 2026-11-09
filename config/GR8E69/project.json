@@ -2352,7 +2352,13 @@
     "gc_driver_mount.json",
     "gc_driver_header.json",
     "gc_driver_files.json",
-    "gc_driver_bio.json"
+    "gc_driver_bio.json",
+    "ai_ChoreoA.json",
+    "ai_ChoreoB.json",
+    "ai_ChoreoB2.json",
+    "ai_StateCtor.json",
+    "ai_StateA.json",
+    "ai_StateB.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

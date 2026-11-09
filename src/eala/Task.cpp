@@ -1,4 +1,4 @@
-// AI-assisted reconstruction of the task base in source/Character/Task.cpp; see docs/Animation.md.
+// AI-assisted reconstruction of the character task base; see docs/Animation.md. The source file name is unknown.
 #include "profile.h"
 #include "CharacterTask.h"
 namespace EALA {

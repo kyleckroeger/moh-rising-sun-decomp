@@ -649,3 +649,10 @@ whose compiler-generated symbol names cannot be spelled in source, so `operator 
 static initializer are not reconstructed yet. Both classes' destructors are also out: defining them emits their
 secondary `_vt.X.8ISubject` tables, which the unit manifests cannot own yet. `StateIterator::Set(unsigned int,
 float)` stays out too: the source form has its argument address loads one block later than the image.
+
+`Choreographer` runs a map from skeleton partition to context (a counted task pointer, the `EALA::Task` to run
+when that task sends a message, an enabled word and a float) and passes rotation, duration and cycle-end events to its
+`ChoreographerClient`. Its context stack is in an anonymous namespace, so `Current`, `EvalPose`, `SetState` and
+the string form of `SetAuthoredTransitionState` wait for the same reason as the pool allocators. `State` keeps a
+`Substate` pointer per index after a 40-byte header, a name map, and a counted loader pointer; the `State`
+methods here come from the image and member names are inferred. `Operation`'s virtual order comes from its table.
