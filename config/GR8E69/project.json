@@ -2331,7 +2331,9 @@
     "felistbox_cleanupcolumns.json",
     "shell_reset.json",
     "fereader_fepackagereader.json",
-    "fereader_gettypesize.json"
+    "fereader_gettypesize.json",
+    "skeletondata_bones.json",
+    "skeletondata_excluded.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

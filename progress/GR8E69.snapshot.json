@@ -687,6 +687,8 @@
       "src/eagl_anim/character_skeleton_index.cpp": "fa3707f3c5106b2f1b202ae677ffc4e30f84c6b9aa108703127ed8ef9f2e60c8",
       "src/eagl_anim/character_skeleton_joints.cpp": "bd57d0952890511072a290b0046119bb041dc276c48bd68cd0097c8670083f52",
       "src/eagl_anim/character_skeleton_pose.cpp": "0550123b62d3b2745d9ed264187bb6826d9a39836f1d9f61839bff45135d1788",
+      "src/eagl_anim/skeletondata_bones.cpp": "d87ecab0bac4ef9ff336c9777a6ba2b5c4f69c53bee1caf7277a0e9cfaab3d59",
+      "src/eagl_anim/skeletondata_excluded.cpp": "478299556a14a541805c487395cf87cdbd30cb6274e780878e45360754b28a55",
       "src/eagl_loading/ConstructorPool.cpp": "c13e2745ce7310d31ded543ab769e7dec4db69fa97b684e4916d3ed0b63ad5f1",
       "src/eagl_loading/DynamicLoaderConstruct.cpp": "e3f7a2625fc4f0f2e5db33ed0a61c54cacd12a9e6e72e1dd82240aa629ac8d68",
       "src/eagl_loading/DynamicLoaderGetAddr.cpp": "17ebbdac42a9b31c18407ecf06012d5cd4e95e0cd67f430a0e8c5a70d7c4749c",
@@ -4168,7 +4170,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "374614784658da5fe72bb7abf8c4f7aa1811f1fd36ecdd2de4efe39fc1e86c18",
+      "config/GR8E69/project.json": "cce70b9d31a47e96e277db129a8933439c62097643dde065a3e5df86ca01bc77",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -4834,6 +4836,8 @@
       "config/GR8E69/shell_push.json": "2d4fc2f3ed224436060e5d9ebe9f600f667f2501678bfe579655e13f42344760",
       "config/GR8E69/shell_reset.json": "d8c370097e1352d1d704e0e3fbe877f5e705e0ec8448253a4a26136ca360cc39",
       "config/GR8E69/shell_updateunplugged.json": "550dc905e337655814ce4b1c61e048ea4fb17446e2dcc0f8df344047f0933335",
+      "config/GR8E69/skeletondata_bones.json": "3ea3a008da6f397b22cb3adb067c328475b1f4822338e0be39c9d8f9e601f05a",
+      "config/GR8E69/skeletondata_excluded.json": "c7b00eadaf6727cfe941065e1bc61154df12622e5c92f1ada7e30a274487dc76",
       "config/GR8E69/skybox_class.json": "6382327bdfd3308c3364c6cd96a02b3c8d1e82af96f09447f12c14cac9db21ea",
       "config/GR8E69/skybox_dtor.json": "d67d7fc8b0aebb0429903e6dcdaa65bf32a5f1930b319afc4a4bf8063f1d5e6b",
       "config/GR8E69/sn-library-source.json": "606ef80cd17599d3b7c2833a01c483622529485e2455c15ac76c975ba20507dc",
@@ -6868,14 +6872,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1189960,
+    "matching_code_bytes": 1190048,
     "total_executable_code_bytes": 2492032,
-    "percent": 47.75059068262366,
+    "percent": 47.754121937439,
     "categories": {
-      "reconstructed_game": 797744,
+      "reconstructed_game": 797832,
       "restored_library": 392216
     },
-    "matching_functions": 6186
+    "matching_functions": 6188
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -8092,7 +8096,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "374614784658da5fe72bb7abf8c4f7aa1811f1fd36ecdd2de4efe39fc1e86c18",
+    "config/GR8E69/project.json": "cce70b9d31a47e96e277db129a8933439c62097643dde065a3e5df86ca01bc77",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -8758,6 +8762,8 @@
     "config/GR8E69/shell_push.json": "2d4fc2f3ed224436060e5d9ebe9f600f667f2501678bfe579655e13f42344760",
     "config/GR8E69/shell_reset.json": "d8c370097e1352d1d704e0e3fbe877f5e705e0ec8448253a4a26136ca360cc39",
     "config/GR8E69/shell_updateunplugged.json": "550dc905e337655814ce4b1c61e048ea4fb17446e2dcc0f8df344047f0933335",
+    "config/GR8E69/skeletondata_bones.json": "3ea3a008da6f397b22cb3adb067c328475b1f4822338e0be39c9d8f9e601f05a",
+    "config/GR8E69/skeletondata_excluded.json": "c7b00eadaf6727cfe941065e1bc61154df12622e5c92f1ada7e30a274487dc76",
     "config/GR8E69/skybox_class.json": "6382327bdfd3308c3364c6cd96a02b3c8d1e82af96f09447f12c14cac9db21ea",
     "config/GR8E69/skybox_dtor.json": "d67d7fc8b0aebb0429903e6dcdaa65bf32a5f1930b319afc4a4bf8063f1d5e6b",
     "config/GR8E69/sn-library-source.json": "606ef80cd17599d3b7c2833a01c483622529485e2455c15ac76c975ba20507dc",
@@ -10449,6 +10455,8 @@
     "src/eagl_anim/character_skeleton_index.cpp": "fa3707f3c5106b2f1b202ae677ffc4e30f84c6b9aa108703127ed8ef9f2e60c8",
     "src/eagl_anim/character_skeleton_joints.cpp": "bd57d0952890511072a290b0046119bb041dc276c48bd68cd0097c8670083f52",
     "src/eagl_anim/character_skeleton_pose.cpp": "0550123b62d3b2745d9ed264187bb6826d9a39836f1d9f61839bff45135d1788",
+    "src/eagl_anim/skeletondata_bones.cpp": "d87ecab0bac4ef9ff336c9777a6ba2b5c4f69c53bee1caf7277a0e9cfaab3d59",
+    "src/eagl_anim/skeletondata_excluded.cpp": "478299556a14a541805c487395cf87cdbd30cb6274e780878e45360754b28a55",
     "src/eagl_loading/ConstructorPool.cpp": "c13e2745ce7310d31ded543ab769e7dec4db69fa97b684e4916d3ed0b63ad5f1",
     "src/eagl_loading/DynamicLoaderConstruct.cpp": "e3f7a2625fc4f0f2e5db33ed0a61c54cacd12a9e6e72e1dd82240aa629ac8d68",
     "src/eagl_loading/DynamicLoaderGetAddr.cpp": "17ebbdac42a9b31c18407ecf06012d5cd4e95e0cd67f430a0e8c5a70d7c4749c",
@@ -57963,6 +57971,42 @@
       "discarded_functions": [],
       "object_sha256": "41c0a9c446fd05275fdb0cc7a7d2d3961e55db1f3d8aec5e7ca5961c0b30ce92",
       "linked_sha256": "1623356b22e4dd5204aa7dde37b3c65ec1edeafbf309d9f2fd03e81053727197"
+    },
+    {
+      "id": "skeletondata_bones",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 12,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "3d0c7c49fad6ca73ab84abab7ab41d4130ed3f5959d564089ae705c18e489dcd",
+      "linked_sha256": "8189113c07565e8aaeaf83e1b66b00351d36daeaff1c5513defe86242dc0460d"
+    },
+    {
+      "id": "skeletondata_excluded",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 76,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "78d5dcd1d4f4a641e119a72c06a7039fda6c26cd115fea95b9e33f886a5de0fe",
+      "linked_sha256": "7e3364d82fe3932fa07db14d4a397607d5ff295b3b12cd166f89e4e83eccbd28"
     }
   ],
   "code_map": {
@@ -62577,13 +62621,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80083c7c",
-            "size": 12,
-            "kind": "function",
-            "name": "GetBoneCount__CQ34EALA9Character12SkeletonData",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80083c88",
             "size": 244,
             "kind": "function",
@@ -62602,13 +62639,6 @@
             "size": 380,
             "kind": "function",
             "name": "GatherBvExcludedJoints__Q34EALA9Character12SkeletonData",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80084168",
-            "size": 76,
-            "kind": "function",
-            "name": "IsJointBvExcluded__Q34EALA9Character12SkeletonDatai",
             "evidence": "adjacent-compiler-markers"
           },
           {
