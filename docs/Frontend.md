@@ -185,3 +185,7 @@ Not yet exact: `CFengInterface::NotificationMessage` and `NotifySoundMessage`, w
 local to them: the alias store goes through a reference, as its inline body shows. `CMemoryCardPopup::OnPush` shares its empty string with the
 constructor across `OnUIEvent`, which needs a guarded static, and `Display` and `SetString` take a pointer the source spelling for which
 is unknown (`PCUw`), so they stay out.
+
+`ShellManager::handlers` maps packages to their handlers. Only the units that touch it include `ShellHandlerMap.h` first, which gives the member
+its real type; the rest see sixteen bytes, so they build without the container headers. `updateOnce` is named from `Process`, which runs one engine
+update and returns to the factory and loader while it is set.

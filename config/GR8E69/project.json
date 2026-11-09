@@ -2590,7 +2590,10 @@
     "keyboardpopup_name.json",
     "languagescreen_ctor.json",
     "languagescreen_tables.json",
-    "memcardpopup_events.json"
+    "memcardpopup_events.json",
+    "shell_shutdown_process.json",
+    "shell_package_events.json",
+    "shell_postdraw.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
