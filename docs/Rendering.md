@@ -558,3 +558,9 @@ surface's decal CRC from the collision's first contact. `Draw` submits `ExecuteD
 
 Not reconstructed: the singleton's accessors (the static has no recorded file name), the constructor and destructor (they
 need `ISceneNode`'s members), `Init`, `AcquireDecal`, `InitDecalFromCollision` and `ExecuteDraw`.
+
+## Character shadow
+
+`CCharacterShadow::InitProjector` creates the `npcshadow` projector once and clears its word at `+592`; on failure it
+clears the fields at `+16` and `+32`. `SetShadowCaster` stores the object and looks up its `JO_hip_L` and `JO_hip_R` joints.
+`AttachProjector` and `Draw` are not reconstructed.

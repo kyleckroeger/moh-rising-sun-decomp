@@ -2554,7 +2554,9 @@
     "projector_class.json",
     "projector_create.json",
     "decal_clear.json",
-    "decal_draw.json"
+    "decal_draw.json",
+    "shadow_projector.json",
+    "shadow_caster.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

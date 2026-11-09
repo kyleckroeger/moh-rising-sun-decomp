@@ -996,9 +996,11 @@
       "src/game/screen_setclear.cpp": "d1db021539edc57bb1519e4596aab8d380728cc7d63785d3446a80d48edfd416",
       "src/game/screen_tail.cpp": "f1a0401e50a6b75d185547ab60bcf96e3a4b68e64ef64a96c5cb4b579d3922ad",
       "src/game/screen_vsyncs.cpp": "39f4093a78453d2d9cbd31cce143ee637ec6131b77d84ab25ce1c4c1a86065c7",
-      "src/game/shadow_ctor.cpp": "c565b9212141464677adbc4db0ca08a5a73ceea41c3cbb1ab373abbd16c31ae6",
+      "src/game/shadow_caster.cpp": "a1de0711b914c1521adb5c12e13d17d3bfed4c7fecc06e1b2ae875a7590e1598",
+      "src/game/shadow_ctor.cpp": "7d4edd8274ceb04e75f09817a9f8a75c1897e7c17bc69940101890eda60cdb62",
       "src/game/shadow_enabled.cpp": "bb3b47c8e8ce85ab1f6cbfbd2f5a2410fcce5f462780575ec285f9c921ee2286",
       "src/game/shadow_init.cpp": "fb457ac54ce214332ec029a5eab39b7e9ad5ad33d3df0c22c2f407b102c7e4e4",
+      "src/game/shadow_projector.cpp": "edc0999ffe06dce84ac411695e22ab048da1bb3c0588b66c50e755878d9e5b25",
       "src/game/skybox_class.cpp": "838c453a03ec151b70f404c2067b990fd3671d434f29800d2872a536db5a4e7d",
       "src/game/skybox_dtor.cpp": "79cd2c149b6a96728b91d9c1cc9efad78acd5eb4b5a263517946e0818d940a36",
       "src/game/sprite_ctor.cpp": "aa94e157dcb92e33c29ee871e1f9ffcec9e7f09d5430a2b94654088a59ece6dc",
@@ -2872,7 +2874,7 @@
       "include/game/CameraShake.h": "9a35526b5b806abeb9b501b7d2864ab782436821078fb1cad73ab82b32d3f8d4",
       "include/game/Capsule.h": "332dd06329ac7dc3ac5fc01793549a41e2defbe70298018accd2ce79c9e3ce3b",
       "include/game/CharacterOperation.h": "db9b4121d4fa4d1f9b441b809721eab35c63326564bcb9e86719d042c3eb8ec8",
-      "include/game/CharacterShadow.h": "048ae3efc6fd6d3119f4c234f5bacd499c748c55b1573df386f686411e93a67a",
+      "include/game/CharacterShadow.h": "b1b990a3da0d2325e4b81a488f96ed5cfaea248799e3a66747bb941cffa37738",
       "include/game/CharacterSkeleton.h": "25c56293a6d9d28a67ea66878159dbe31efc306059bc3b842cd7ce5cd1efbc24",
       "include/game/CharacterTask.h": "87db0532c12360b7e0565d69dfcac6d28fa60dfa01510a42427cb9d0b292342b",
       "include/game/CharacterTasks.h": "a17411696abe72c5818dac0e5b39e6c70ffeb527c69ef9db4d404e93142263fa",
@@ -4602,7 +4604,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "c2749064a6621a91b9b10284f8ba934ea8ea51970e419a60a41bb9a0646c0b7f",
+      "config/GR8E69/project.json": "5a368669174572f13adfb6fe386fb8bda754da37d0f4d90aa14dfa23176e082c",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -5261,9 +5263,11 @@
       "config/GR8E69/search_node_direct.json": "ac5ff921f7600572a3d1ab08287d4caaaf0b53f84ea82838d3c6f90b2c69c15e",
       "config/GR8E69/search_node_lifetime.json": "8207ffd91031412745f3335a38448822501c7d085b4bd3227172eb07d1c3e198",
       "config/GR8E69/search_node_pool.json": "6a8af35f3358f3972bcb696813246c08eae6cce776901c7d17168c35c4493d76",
+      "config/GR8E69/shadow_caster.json": "b16eb848cad0726e5cff240e67aea08d7bc063997253eba40ed2d384fd167e94",
       "config/GR8E69/shadow_ctor.json": "eb6578130fce1291c6e416d50babce9804748315e7bfe35ae0b192f3489225ba",
       "config/GR8E69/shadow_enabled.json": "50baaa0d93b7fb1707e7c75ba80764ef3968e921bf7fd9601e39836905829363",
       "config/GR8E69/shadow_init.json": "d71042b90fb79cfce1ba7a46ff752d179976bdb0f7a7d69193bd31fd0699251a",
+      "config/GR8E69/shadow_projector.json": "88da900548322bbad2830917710aef82b2dae712df5251fb5504fbe83c031792",
       "config/GR8E69/shell_ListBoxCtor.json": "5d811734f4b1c80d60d616b8d6b82fd6130284b80bd3e0d1d6289592328285ee",
       "config/GR8E69/shell_ListBoxEdit.json": "1767f48d9dd2e2d808e753c2094d359e5dc9e69e86e29b2b2d29c906de5dd1a8",
       "config/GR8E69/shell_ListBoxRowDtor.json": "b35d5eba65baed0bd51982e24f438a8b6e35a2c072853f919f5fbf71a386ad81",
@@ -7336,14 +7340,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1315688,
+    "matching_code_bytes": 1315920,
     "total_executable_code_bytes": 2492032,
-    "percent": 52.7957907442601,
+    "percent": 52.805100416046024,
     "categories": {
-      "reconstructed_game": 923472,
+      "reconstructed_game": 923704,
       "restored_library": 392216
     },
-    "matching_functions": 6916
+    "matching_functions": 6918
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -8749,7 +8753,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "c2749064a6621a91b9b10284f8ba934ea8ea51970e419a60a41bb9a0646c0b7f",
+    "config/GR8E69/project.json": "5a368669174572f13adfb6fe386fb8bda754da37d0f4d90aa14dfa23176e082c",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -9408,9 +9412,11 @@
     "config/GR8E69/search_node_direct.json": "ac5ff921f7600572a3d1ab08287d4caaaf0b53f84ea82838d3c6f90b2c69c15e",
     "config/GR8E69/search_node_lifetime.json": "8207ffd91031412745f3335a38448822501c7d085b4bd3227172eb07d1c3e198",
     "config/GR8E69/search_node_pool.json": "6a8af35f3358f3972bcb696813246c08eae6cce776901c7d17168c35c4493d76",
+    "config/GR8E69/shadow_caster.json": "b16eb848cad0726e5cff240e67aea08d7bc063997253eba40ed2d384fd167e94",
     "config/GR8E69/shadow_ctor.json": "eb6578130fce1291c6e416d50babce9804748315e7bfe35ae0b192f3489225ba",
     "config/GR8E69/shadow_enabled.json": "50baaa0d93b7fb1707e7c75ba80764ef3968e921bf7fd9601e39836905829363",
     "config/GR8E69/shadow_init.json": "d71042b90fb79cfce1ba7a46ff752d179976bdb0f7a7d69193bd31fd0699251a",
+    "config/GR8E69/shadow_projector.json": "88da900548322bbad2830917710aef82b2dae712df5251fb5504fbe83c031792",
     "config/GR8E69/shell_ListBoxCtor.json": "5d811734f4b1c80d60d616b8d6b82fd6130284b80bd3e0d1d6289592328285ee",
     "config/GR8E69/shell_ListBoxEdit.json": "1767f48d9dd2e2d808e753c2094d359e5dc9e69e86e29b2b2d29c906de5dd1a8",
     "config/GR8E69/shell_ListBoxRowDtor.json": "b35d5eba65baed0bd51982e24f438a8b6e35a2c072853f919f5fbf71a386ad81",
@@ -10152,7 +10158,7 @@
     "include/game/CameraShake.h": "9a35526b5b806abeb9b501b7d2864ab782436821078fb1cad73ab82b32d3f8d4",
     "include/game/Capsule.h": "332dd06329ac7dc3ac5fc01793549a41e2defbe70298018accd2ce79c9e3ce3b",
     "include/game/CharacterOperation.h": "db9b4121d4fa4d1f9b441b809721eab35c63326564bcb9e86719d042c3eb8ec8",
-    "include/game/CharacterShadow.h": "048ae3efc6fd6d3119f4c234f5bacd499c748c55b1573df386f686411e93a67a",
+    "include/game/CharacterShadow.h": "b1b990a3da0d2325e4b81a488f96ed5cfaea248799e3a66747bb941cffa37738",
     "include/game/CharacterSkeleton.h": "25c56293a6d9d28a67ea66878159dbe31efc306059bc3b842cd7ce5cd1efbc24",
     "include/game/CharacterTask.h": "87db0532c12360b7e0565d69dfcac6d28fa60dfa01510a42427cb9d0b292342b",
     "include/game/CharacterTasks.h": "a17411696abe72c5818dac0e5b39e6c70ffeb527c69ef9db4d404e93142263fa",
@@ -11471,9 +11477,11 @@
     "src/game/screen_setclear.cpp": "d1db021539edc57bb1519e4596aab8d380728cc7d63785d3446a80d48edfd416",
     "src/game/screen_tail.cpp": "f1a0401e50a6b75d185547ab60bcf96e3a4b68e64ef64a96c5cb4b579d3922ad",
     "src/game/screen_vsyncs.cpp": "39f4093a78453d2d9cbd31cce143ee637ec6131b77d84ab25ce1c4c1a86065c7",
-    "src/game/shadow_ctor.cpp": "c565b9212141464677adbc4db0ca08a5a73ceea41c3cbb1ab373abbd16c31ae6",
+    "src/game/shadow_caster.cpp": "a1de0711b914c1521adb5c12e13d17d3bfed4c7fecc06e1b2ae875a7590e1598",
+    "src/game/shadow_ctor.cpp": "7d4edd8274ceb04e75f09817a9f8a75c1897e7c17bc69940101890eda60cdb62",
     "src/game/shadow_enabled.cpp": "bb3b47c8e8ce85ab1f6cbfbd2f5a2410fcce5f462780575ec285f9c921ee2286",
     "src/game/shadow_init.cpp": "fb457ac54ce214332ec029a5eab39b7e9ad5ad33d3df0c22c2f407b102c7e4e4",
+    "src/game/shadow_projector.cpp": "edc0999ffe06dce84ac411695e22ab048da1bb3c0588b66c50e755878d9e5b25",
     "src/game/skybox_class.cpp": "838c453a03ec151b70f404c2067b990fd3671d434f29800d2872a536db5a4e7d",
     "src/game/skybox_dtor.cpp": "79cd2c149b6a96728b91d9c1cc9efad78acd5eb4b5a263517946e0818d940a36",
     "src/game/sprite_ctor.cpp": "aa94e157dcb92e33c29ee871e1f9ffcec9e7f09d5430a2b94654088a59ece6dc",
@@ -62931,6 +62939,42 @@
       "discarded_functions": [],
       "object_sha256": "2b3152d812c44e73dd40cefdb3e7739a2c471e549e33a091c312c4a45ef58a04",
       "linked_sha256": "1d866f31479b055b3e372cd6c99360d8859d94a8f3a1394d84647e7020238d57"
+    },
+    {
+      "id": "shadow_projector",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 132,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "d9cc6c31f02d8ae97642dcd7ef57dbe78b066994f0747fac49e8b51b3d00c182",
+      "linked_sha256": "f96be9809caa27ecd78104879094ff5d7336dc6d7280229ee46a4143a45cb76e"
+    },
+    {
+      "id": "shadow_caster",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 100,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "305573195434320860cdf49e099cd36b8815af6eeb12a39b200d2c8ddbe60e56",
+      "linked_sha256": "07d3801ee579eb5bfa3a729e71d11a422bb30534c738b2e1b2c06af1d21716ec"
     }
   ],
   "code_map": {
@@ -65218,24 +65262,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80067964",
-            "size": 132,
-            "kind": "function",
-            "name": "InitProjector__16CCharacterShadow",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800679e8",
             "size": 812,
             "kind": "function",
             "name": "AttachProjector__16CCharacterShadow",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80067d14",
-            "size": 100,
-            "kind": "function",
-            "name": "SetShadowCaster__16CCharacterShadowP11CAnimObject",
             "evidence": "adjacent-compiler-markers"
           },
           {
