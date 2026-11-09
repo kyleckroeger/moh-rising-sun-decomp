@@ -858,13 +858,16 @@
       "src/frontend/fescript_pool.cpp": "462ba70b9980a98bfbecab1ffc5ee5b2e103e16ebd541daad3df72b0b5cb4fc8",
       "src/frontend/feslotpool.cpp": "16006d3616e75c42e460305edd0935c44f5ffaf272dd92127e442f24a7dc5405",
       "src/frontend/festring_copy.cpp": "43a6bad3a72f4854993b0cb2395f0b41cf19306d43fa72960efb2584f90c598f",
+      "src/frontend/handler_audioconfig.cpp": "8c8c6b912e79ff562c4982bf1e7c3521c373aec47e4e6cb1597b156837a62a74",
       "src/frontend/handler_cooptemplaunch.cpp": "ce40919b7a4144b358771779689238f6a676480873209b9dc529c37a48866189",
       "src/frontend/handler_difficulty.cpp": "ec067e290bc8c6808d94eea2e14b4dd3beb9d5c99d4ee04be8999645c35f6f62",
+      "src/frontend/handler_gameoptions.cpp": "521489aa89768f4eaae6e231aa5c4b163092edea3fec1fc063b39413290c335b",
       "src/frontend/handler_languagemenu.cpp": "85cff7599bf4497e492fa4eed3ae2708f3c4d4fd496b45c8f1eebf21ab3665c0",
       "src/frontend/handler_main.cpp": "a55baddde44cdbe6bc3f2267b93f2a14cb904843fca01b3a0b1e0a297735a42a",
       "src/frontend/handler_medalsoverlay.cpp": "41ab623d49a9fcc73ee8fb234c2f55aefed2863042c7a3193822c4cc058b29e1",
       "src/frontend/handler_mpjoin.cpp": "c17a9021899000dc1788ee8ce2692df91684ab4223656c9cbe9296f716b72a32",
       "src/frontend/handler_numplayers.cpp": "74f10a3a4faae4832e0243415fc36e37e357d648b0957a06ef735a61d910e7db",
+      "src/frontend/handler_pausepreferences.cpp": "9d227fdb3ecd734a9b9e069d5d5ce95c5d9d20e7e4ecc66a7dcdd73cd9261e56",
       "src/frontend/handler_quadrantgroup.cpp": "8443d712807646d503cd05a9fa489e5b8efcb36c22e5338e1f4ed7364dcb7726",
       "src/frontend/hash.cpp": "6d1834f84056ea091ae722973283ab6edc0b53f73938a4866d969db56d62d55b",
       "src/frontend/mc_getname.cpp": "117e60c8a600ab7d5eb1733d4c259ba7cf2c65a94b0ff58dd99ecc1a0ceb515e",
@@ -891,6 +894,7 @@
       "src/frontend/shell_push.cpp": "41af18cdf93a4eb2b21ae2620ec77a7ff9cc690f93699907faa8b433fac08c2e",
       "src/frontend/shell_reset.cpp": "3bca8761e976580f8f330ecf7fc3eeaaa9679cda21fea9c82dfd1c82081c9c6c",
       "src/frontend/shell_updateunplugged.cpp": "5dec5ac7b519a96f0eb0c3873ec45129c96689b2b79a3ab8b1ef42decd2bf078",
+      "src/frontend/shellfactory.cpp": "f4c69038da0135cd00e71ab28a1eaaecb63fba1e11d2a961dab071278e4d5b9d",
       "src/frontend/uppercase.cpp": "58d80513a4f76209e1895c6943d7e05837625be3bd2687efe32159afd23f70dd",
       "src/frontend/usermessages_access.cpp": "41716b6c646c0838ec302212e35f8ece4f43914f5a10cbdd6fec31ad50f4081a",
       "src/frontend/usermessages_lifetime.cpp": "250e5edf14476401ba9fd4c26cd2a8fb96303b302f127109a29647323be7b017",
@@ -2079,7 +2083,7 @@
       "src/shell/ListBoxScroll.cpp": "eb360d0e5118059ceb6f83a70f9fbc0ff7eb7a9f2bca13697ac904f328bb4bc4",
       "src/shell/MoviePlayerHeap.cpp": "febd0bd90633a0c962990afef60bd35e9f6288bd33b22c60039510d338647b22",
       "src/shell/MoviePlayerTail.cpp": "70e15d83c05ac1116563e0f59a56b9b1b1283c56eed681af3571da397ad35900",
-      "src/shell/VolumeKnobs.cpp": "1ea20143d6befc08abd7f5aa3a1dc5b6215af931487271d2db3832ee0e789f6f",
+      "src/shell/VolumeKnobs.cpp": "b4769c49e7a44cdcb2019e97ee5472c0189934d650844cc203d7692290b90f67",
       "src/shell/gamesettings_activatecheatnamed_beatthelevel.cpp": "5299be749a6d1e8052adf798501aae9945e58da4c5f5d765413dd19115d22ba2",
       "src/shell/gamesettings_activatecheatnamed_hugearms.cpp": "7cfb523e1b05e92df9fb6c89c91a273875607a5aca10cd0b22f36aa5f7163a51",
       "src/shell/gamesettings_add_mpplayerkilled.cpp": "f2ea9e5071db289b681d9ff774ba286b1014476de163a308129648d6b51e0ed9",
@@ -2903,8 +2907,8 @@
       "include/game/Fog.h": "30a37f01f3f665d1f9b3b0a5ef81ea098194595159c5ff794797541c6bf325c0",
       "include/game/Font.h": "1ea56ae770a2110bb30a33136d83be17e8acd2ab4bdcedc1e158ae172c5c52ce",
       "include/game/Frustum.h": "b20644e56866216aaa1770d07acf29e35a2990343f72aba0caf9c451f77a2016",
-      "include/game/GameSettings.h": "142bebdefa5d889f1b6cf3e495b9e8178a53eb3536a2708c42e36da9de44bd17",
-      "include/game/GameSettingsViews.h": "a6d5c2e791c7cc3ac2f6eb6a48657040afab504341288204796a51edf6fe97fd",
+      "include/game/GameSettings.h": "39a11099f90823df2b9b7d8b622e30ebee5eda04890b49da249af72ea3c1d46a",
+      "include/game/GameSettingsViews.h": "07d9ab4207c39820ef7b3dd33d1cd36943446048239a2bb5c9b69b580632bc36",
       "include/game/GameSoundEmitter.h": "573b3af975d31eb107bde129a24f57c5d70c9896f974319b2dcc4d06ce35ddaa",
       "include/game/GrenadeResponse.h": "a26075782a75877dd754799cb73d6fe55e2a6c6597676869bb956ba8cdb2bed4",
       "include/game/HeadsUpDisplay.h": "23f906aea051f1148504c63cb883c629affb72f857288563152b2e49ad89ff84",
@@ -2927,13 +2931,13 @@
       "include/game/Objectives.h": "54f9ed5dd4be862a546640fa7e495b07c0ac78788f6027aedba7a6c25034b5d5",
       "include/game/ObserverTypes.h": "687dfc07deb4adc23a1d0247270d6ab04c34b758bd88846bf5e4b6ef33e7cc1f",
       "include/game/OffsetPtr.h": "06d2e4c320890063bd6b210c1ddda4b7cefc28e7aa9a4f276e76c128c0a68499",
-      "include/game/PackageHandlers.h": "b7fce1bd657b9a83f98ec7d78aff5772ae050a1799c45b375ca09a5bb8676a58",
+      "include/game/PackageHandlers.h": "bd9d57ee80b9a5faee0b07bf0dfab510b3e6f88196e4b68510c9a4fcd4365c04",
       "include/game/ParticleClock.h": "7784d24bb307ac0a9e2b796c228584fe306f5781575650f1896038426c80dc0b",
       "include/game/ParticleDef.h": "3cfc6be658b04adb177616a7dec68bbf8c785ccd0a24dd847c44177f5bd3e53b",
       "include/game/ParticleRecipe.h": "ee622276d4add4f03da5a3540416be1d0284bd411d2735ed31c7999adfb7efeb",
       "include/game/PathTrack.h": "15fa2d9c336c67c1315921cef67cce813061a193dc51fac3417b482ddd345182",
       "include/game/PathxTrack.h": "f46f02824655f05c7a0c47d71481dfbe5c5845b6b73ae17d5f8f3453b5c4298a",
-      "include/game/PauseMenu.h": "d5eb24cc0a4ff00a237ce0013f7e349f18a1eb3e8fba544e46689d078860576a",
+      "include/game/PauseMenu.h": "8a5e3184251e24389b1554c6a9c46da8c7a0f2aff1ca028381d0e4aec4eafa31",
       "include/game/PlacementNew.h": "49819284bb2cc2ffb2039d459ce855bd5a233bcfff0a6412ffe0bda02cd616c5",
       "include/game/PopUpMessage.h": "3ba712308420d487fc901d235bd01e828a92eaff7fe9c095eadb933d05ba7737",
       "include/game/Projector.h": "a6fc2b3d7ae12076291f6d7e3e62051f47b47815c77d1344623c83282ca9cb63",
@@ -2958,7 +2962,7 @@
       "include/game/ScriptTimers.h": "a81f3399ff20908469a289229ed0f0aae2c28aa3a9889629e62049e8bb16705b",
       "include/game/ScriptedGag.h": "41ce2a7f909e292930c5279c0ec536596c3b6bc35d11bb27ad6be5d51b9a0235",
       "include/game/Shell.h": "03c36affd7c0f616996096b426e82b2efd08e39aecafbde166641edbd4ccd210",
-      "include/game/ShellManager.h": "2ee78a5ca3bb7309ba3357546e93e1425a36c7b5a13c8c94017056d904da8eeb",
+      "include/game/ShellManager.h": "990958ff3a43bafb9bf48cd4da78f250610159584b3badda730d7581dd568f3d",
       "include/game/SkyBox.h": "810947bbc2ecf7cb4d69dfa350c055b05d446c04b904abfadaf4828c7be01a55",
       "include/game/SndEAXA.h": "462f6c63008084b8cb5b525d5029b804e760f3859ba6e5676a4d36461906da13",
       "include/game/SndMicroTalk.h": "47d54f16635c2a64944419af8564ee38901f410b5dc9d139ed973fb87d8ff937",
@@ -2985,6 +2989,7 @@
       "include/game/VideoDriver.h": "dd21c14b75db031804f4dfd4afd30fcaf14e5211ed4c37079e3f6ff3e19ee668",
       "include/game/VolFrustum.h": "1578f0cdde5caf5f5f2640af9f68493e2a7cdd620962447c42a1bc241c9a6d0a",
       "include/game/Volume.h": "cda9e7de972fc28d73bf86418423a8b271c864d60bb53d1eba7d42744622db46",
+      "include/game/VolumeKnobs.h": "25f8261ac7da2d1a90603bb2baadf68ae7ea260658168dcedc25deed844a803e",
       "include/game/Weapon.h": "06c961fd954800c1d8766e2d17e71707a250f4de310b30d4c99182c3845d04b9",
       "include/game/WorldObject.h": "8bf6843a362f5e8fe835da2694838943402f9f5013bfb812dcd86ce9915fdde8",
       "include/game/WorldVolume.h": "9acfaf28c317912de14baef7ca50a3d80175ddc31dcf83cea18c80725e688318",
@@ -4075,13 +4080,16 @@
       "config/GR8E69/gchw_vd_draw.json": "8240cd2ce5d0a0f00cae88ddb2fbd1c1a198a12246488f9b6cebd10604e92e3b",
       "config/GR8E69/gchw_vd_setters.json": "34856555c8f331dcd604dd04eb40e58713689ec5a0bdc6c685507364dc3fbc70",
       "config/GR8E69/grenade_response_queries.json": "5932b489bfec46bf4c73dad2d1d3bc9faa7acf77d137fb97cac1fdea8d343ecc",
+      "config/GR8E69/handler_audioconfig.json": "ae8f2c679d0326ed1c60b81356a99f35c770b2dda6d6b21ec6440823bebfe5e5",
       "config/GR8E69/handler_cooptemplaunch.json": "fe8ba138204bb35cd15a511326e1018220c4c8ba511c3a7e49d588276478fe43",
       "config/GR8E69/handler_difficulty.json": "e3b1051479b962b466a7f66924efdcaa205604b827c6982c2b16731a4608e42e",
+      "config/GR8E69/handler_gameoptions.json": "ecd7330c596c7f37bf9a541d5a97e20ae40836d41898dc19d10a93c504adcec6",
       "config/GR8E69/handler_languagemenu.json": "4a9dc112b0d364ecd374e6b0f31a6a7b586f5b8d5bb4702f04ffc415dd418224",
       "config/GR8E69/handler_main.json": "50527a63797e95ccc9aa6a0af3702185cad410b340687a38050d7c1d660514bc",
       "config/GR8E69/handler_medalsoverlay.json": "d9d67384cfcc7ecb385cae1f0a498d2401e3af72a0abc0a672b7e70f8fd992a0",
       "config/GR8E69/handler_mpjoin.json": "1d82e2341a5f4475dc0835cb9c26dd64ac0c95551bc1479ef1db9740bc4283ea",
       "config/GR8E69/handler_numplayers.json": "8955700d3de34413c4628e1d74f5a6a40e3ee4f16be726db8c6d78f23e18905c",
+      "config/GR8E69/handler_pausepreferences.json": "8be0fded2f57d6dc4af1fac05b9efee59927add37bb4ff1e40c5cfd5b543ee90",
       "config/GR8E69/handler_quadrantgroup.json": "849da7a189927840d4331af5ab992e135823dc871c9dc517a3a4c0380d515f67",
       "config/GR8E69/hud_compass.json": "230bb48fb8e54f510b0920d41d8908fce954e3f35ce7aabab7606e82e83b90ae",
       "config/GR8E69/hud_edge.json": "0587540e62b102096fad2646d13861b723a48c51ddb6b770bf2dad53c7a736c4",
@@ -4482,7 +4490,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "cf7e218c82b2fa002c72c57d0f3339c14b7bc15b3231983cab234198c4270364",
+      "config/GR8E69/project.json": "6dbe30735796a3afbff534119e8d0120205b5d7602d3f81af366f767a59c577f",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -5164,6 +5172,7 @@
       "config/GR8E69/shell_push.json": "2d4fc2f3ed224436060e5d9ebe9f600f667f2501678bfe579655e13f42344760",
       "config/GR8E69/shell_reset.json": "d8c370097e1352d1d704e0e3fbe877f5e705e0ec8448253a4a26136ca360cc39",
       "config/GR8E69/shell_updateunplugged.json": "550dc905e337655814ce4b1c61e048ea4fb17446e2dcc0f8df344047f0933335",
+      "config/GR8E69/shellfactory.json": "f75cf598ccb6f0a7dfb57cad1d59d5889e4a6eb7d088c0875eeeb152c6915224",
       "config/GR8E69/skeletondata_attachpoints.json": "a1d2b0de5f0d694770a715cfbe711c43ee44376b6552ff823efd9b5c1e483d09",
       "config/GR8E69/skeletondata_bones.json": "3ea3a008da6f397b22cb3adb067c328475b1f4822338e0be39c9d8f9e601f05a",
       "config/GR8E69/skeletondata_excluded.json": "c7b00eadaf6727cfe941065e1bc61154df12622e5c92f1ada7e30a274487dc76",
@@ -7213,14 +7222,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1285408,
+    "matching_code_bytes": 1298616,
     "total_executable_code_bytes": 2492032,
-    "percent": 51.580718064615546,
+    "percent": 52.110727310082694,
     "categories": {
-      "reconstructed_game": 893192,
+      "reconstructed_game": 906400,
       "restored_library": 392216
     },
-    "matching_functions": 6793
+    "matching_functions": 6799
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -8163,13 +8172,16 @@
     "config/GR8E69/gchw_vd_draw.json": "8240cd2ce5d0a0f00cae88ddb2fbd1c1a198a12246488f9b6cebd10604e92e3b",
     "config/GR8E69/gchw_vd_setters.json": "34856555c8f331dcd604dd04eb40e58713689ec5a0bdc6c685507364dc3fbc70",
     "config/GR8E69/grenade_response_queries.json": "5932b489bfec46bf4c73dad2d1d3bc9faa7acf77d137fb97cac1fdea8d343ecc",
+    "config/GR8E69/handler_audioconfig.json": "ae8f2c679d0326ed1c60b81356a99f35c770b2dda6d6b21ec6440823bebfe5e5",
     "config/GR8E69/handler_cooptemplaunch.json": "fe8ba138204bb35cd15a511326e1018220c4c8ba511c3a7e49d588276478fe43",
     "config/GR8E69/handler_difficulty.json": "e3b1051479b962b466a7f66924efdcaa205604b827c6982c2b16731a4608e42e",
+    "config/GR8E69/handler_gameoptions.json": "ecd7330c596c7f37bf9a541d5a97e20ae40836d41898dc19d10a93c504adcec6",
     "config/GR8E69/handler_languagemenu.json": "4a9dc112b0d364ecd374e6b0f31a6a7b586f5b8d5bb4702f04ffc415dd418224",
     "config/GR8E69/handler_main.json": "50527a63797e95ccc9aa6a0af3702185cad410b340687a38050d7c1d660514bc",
     "config/GR8E69/handler_medalsoverlay.json": "d9d67384cfcc7ecb385cae1f0a498d2401e3af72a0abc0a672b7e70f8fd992a0",
     "config/GR8E69/handler_mpjoin.json": "1d82e2341a5f4475dc0835cb9c26dd64ac0c95551bc1479ef1db9740bc4283ea",
     "config/GR8E69/handler_numplayers.json": "8955700d3de34413c4628e1d74f5a6a40e3ee4f16be726db8c6d78f23e18905c",
+    "config/GR8E69/handler_pausepreferences.json": "8be0fded2f57d6dc4af1fac05b9efee59927add37bb4ff1e40c5cfd5b543ee90",
     "config/GR8E69/handler_quadrantgroup.json": "849da7a189927840d4331af5ab992e135823dc871c9dc517a3a4c0380d515f67",
     "config/GR8E69/hud_compass.json": "230bb48fb8e54f510b0920d41d8908fce954e3f35ce7aabab7606e82e83b90ae",
     "config/GR8E69/hud_edge.json": "0587540e62b102096fad2646d13861b723a48c51ddb6b770bf2dad53c7a736c4",
@@ -8570,7 +8582,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "cf7e218c82b2fa002c72c57d0f3339c14b7bc15b3231983cab234198c4270364",
+    "config/GR8E69/project.json": "6dbe30735796a3afbff534119e8d0120205b5d7602d3f81af366f767a59c577f",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -9252,6 +9264,7 @@
     "config/GR8E69/shell_push.json": "2d4fc2f3ed224436060e5d9ebe9f600f667f2501678bfe579655e13f42344760",
     "config/GR8E69/shell_reset.json": "d8c370097e1352d1d704e0e3fbe877f5e705e0ec8448253a4a26136ca360cc39",
     "config/GR8E69/shell_updateunplugged.json": "550dc905e337655814ce4b1c61e048ea4fb17446e2dcc0f8df344047f0933335",
+    "config/GR8E69/shellfactory.json": "f75cf598ccb6f0a7dfb57cad1d59d5889e4a6eb7d088c0875eeeb152c6915224",
     "config/GR8E69/skeletondata_attachpoints.json": "a1d2b0de5f0d694770a715cfbe711c43ee44376b6552ff823efd9b5c1e483d09",
     "config/GR8E69/skeletondata_bones.json": "3ea3a008da6f397b22cb3adb067c328475b1f4822338e0be39c9d8f9e601f05a",
     "config/GR8E69/skeletondata_excluded.json": "c7b00eadaf6727cfe941065e1bc61154df12622e5c92f1ada7e30a274487dc76",
@@ -10060,8 +10073,8 @@
     "include/game/Fog.h": "30a37f01f3f665d1f9b3b0a5ef81ea098194595159c5ff794797541c6bf325c0",
     "include/game/Font.h": "1ea56ae770a2110bb30a33136d83be17e8acd2ab4bdcedc1e158ae172c5c52ce",
     "include/game/Frustum.h": "b20644e56866216aaa1770d07acf29e35a2990343f72aba0caf9c451f77a2016",
-    "include/game/GameSettings.h": "142bebdefa5d889f1b6cf3e495b9e8178a53eb3536a2708c42e36da9de44bd17",
-    "include/game/GameSettingsViews.h": "a6d5c2e791c7cc3ac2f6eb6a48657040afab504341288204796a51edf6fe97fd",
+    "include/game/GameSettings.h": "39a11099f90823df2b9b7d8b622e30ebee5eda04890b49da249af72ea3c1d46a",
+    "include/game/GameSettingsViews.h": "07d9ab4207c39820ef7b3dd33d1cd36943446048239a2bb5c9b69b580632bc36",
     "include/game/GameSoundEmitter.h": "573b3af975d31eb107bde129a24f57c5d70c9896f974319b2dcc4d06ce35ddaa",
     "include/game/GrenadeResponse.h": "a26075782a75877dd754799cb73d6fe55e2a6c6597676869bb956ba8cdb2bed4",
     "include/game/HeadsUpDisplay.h": "23f906aea051f1148504c63cb883c629affb72f857288563152b2e49ad89ff84",
@@ -10084,13 +10097,13 @@
     "include/game/Objectives.h": "54f9ed5dd4be862a546640fa7e495b07c0ac78788f6027aedba7a6c25034b5d5",
     "include/game/ObserverTypes.h": "687dfc07deb4adc23a1d0247270d6ab04c34b758bd88846bf5e4b6ef33e7cc1f",
     "include/game/OffsetPtr.h": "06d2e4c320890063bd6b210c1ddda4b7cefc28e7aa9a4f276e76c128c0a68499",
-    "include/game/PackageHandlers.h": "b7fce1bd657b9a83f98ec7d78aff5772ae050a1799c45b375ca09a5bb8676a58",
+    "include/game/PackageHandlers.h": "bd9d57ee80b9a5faee0b07bf0dfab510b3e6f88196e4b68510c9a4fcd4365c04",
     "include/game/ParticleClock.h": "7784d24bb307ac0a9e2b796c228584fe306f5781575650f1896038426c80dc0b",
     "include/game/ParticleDef.h": "3cfc6be658b04adb177616a7dec68bbf8c785ccd0a24dd847c44177f5bd3e53b",
     "include/game/ParticleRecipe.h": "ee622276d4add4f03da5a3540416be1d0284bd411d2735ed31c7999adfb7efeb",
     "include/game/PathTrack.h": "15fa2d9c336c67c1315921cef67cce813061a193dc51fac3417b482ddd345182",
     "include/game/PathxTrack.h": "f46f02824655f05c7a0c47d71481dfbe5c5845b6b73ae17d5f8f3453b5c4298a",
-    "include/game/PauseMenu.h": "d5eb24cc0a4ff00a237ce0013f7e349f18a1eb3e8fba544e46689d078860576a",
+    "include/game/PauseMenu.h": "8a5e3184251e24389b1554c6a9c46da8c7a0f2aff1ca028381d0e4aec4eafa31",
     "include/game/PlacementNew.h": "49819284bb2cc2ffb2039d459ce855bd5a233bcfff0a6412ffe0bda02cd616c5",
     "include/game/PopUpMessage.h": "3ba712308420d487fc901d235bd01e828a92eaff7fe9c095eadb933d05ba7737",
     "include/game/Projector.h": "a6fc2b3d7ae12076291f6d7e3e62051f47b47815c77d1344623c83282ca9cb63",
@@ -10115,7 +10128,7 @@
     "include/game/ScriptTimers.h": "a81f3399ff20908469a289229ed0f0aae2c28aa3a9889629e62049e8bb16705b",
     "include/game/ScriptedGag.h": "41ce2a7f909e292930c5279c0ec536596c3b6bc35d11bb27ad6be5d51b9a0235",
     "include/game/Shell.h": "03c36affd7c0f616996096b426e82b2efd08e39aecafbde166641edbd4ccd210",
-    "include/game/ShellManager.h": "2ee78a5ca3bb7309ba3357546e93e1425a36c7b5a13c8c94017056d904da8eeb",
+    "include/game/ShellManager.h": "990958ff3a43bafb9bf48cd4da78f250610159584b3badda730d7581dd568f3d",
     "include/game/SkyBox.h": "810947bbc2ecf7cb4d69dfa350c055b05d446c04b904abfadaf4828c7be01a55",
     "include/game/SndEAXA.h": "462f6c63008084b8cb5b525d5029b804e760f3859ba6e5676a4d36461906da13",
     "include/game/SndMicroTalk.h": "47d54f16635c2a64944419af8564ee38901f410b5dc9d139ed973fb87d8ff937",
@@ -10142,6 +10155,7 @@
     "include/game/VideoDriver.h": "dd21c14b75db031804f4dfd4afd30fcaf14e5211ed4c37079e3f6ff3e19ee668",
     "include/game/VolFrustum.h": "1578f0cdde5caf5f5f2640af9f68493e2a7cdd620962447c42a1bc241c9a6d0a",
     "include/game/Volume.h": "cda9e7de972fc28d73bf86418423a8b271c864d60bb53d1eba7d42744622db46",
+    "include/game/VolumeKnobs.h": "25f8261ac7da2d1a90603bb2baadf68ae7ea260658168dcedc25deed844a803e",
     "include/game/Weapon.h": "06c961fd954800c1d8766e2d17e71707a250f4de310b30d4c99182c3845d04b9",
     "include/game/WorldObject.h": "8bf6843a362f5e8fe835da2694838943402f9f5013bfb812dcd86ce9915fdde8",
     "include/game/WorldVolume.h": "9acfaf28c317912de14baef7ca50a3d80175ddc31dcf83cea18c80725e688318",
@@ -11146,13 +11160,16 @@
     "src/frontend/fescript_pool.cpp": "462ba70b9980a98bfbecab1ffc5ee5b2e103e16ebd541daad3df72b0b5cb4fc8",
     "src/frontend/feslotpool.cpp": "16006d3616e75c42e460305edd0935c44f5ffaf272dd92127e442f24a7dc5405",
     "src/frontend/festring_copy.cpp": "43a6bad3a72f4854993b0cb2395f0b41cf19306d43fa72960efb2584f90c598f",
+    "src/frontend/handler_audioconfig.cpp": "8c8c6b912e79ff562c4982bf1e7c3521c373aec47e4e6cb1597b156837a62a74",
     "src/frontend/handler_cooptemplaunch.cpp": "ce40919b7a4144b358771779689238f6a676480873209b9dc529c37a48866189",
     "src/frontend/handler_difficulty.cpp": "ec067e290bc8c6808d94eea2e14b4dd3beb9d5c99d4ee04be8999645c35f6f62",
+    "src/frontend/handler_gameoptions.cpp": "521489aa89768f4eaae6e231aa5c4b163092edea3fec1fc063b39413290c335b",
     "src/frontend/handler_languagemenu.cpp": "85cff7599bf4497e492fa4eed3ae2708f3c4d4fd496b45c8f1eebf21ab3665c0",
     "src/frontend/handler_main.cpp": "a55baddde44cdbe6bc3f2267b93f2a14cb904843fca01b3a0b1e0a297735a42a",
     "src/frontend/handler_medalsoverlay.cpp": "41ab623d49a9fcc73ee8fb234c2f55aefed2863042c7a3193822c4cc058b29e1",
     "src/frontend/handler_mpjoin.cpp": "c17a9021899000dc1788ee8ce2692df91684ab4223656c9cbe9296f716b72a32",
     "src/frontend/handler_numplayers.cpp": "74f10a3a4faae4832e0243415fc36e37e357d648b0957a06ef735a61d910e7db",
+    "src/frontend/handler_pausepreferences.cpp": "9d227fdb3ecd734a9b9e069d5d5ce95c5d9d20e7e4ecc66a7dcdd73cd9261e56",
     "src/frontend/handler_quadrantgroup.cpp": "8443d712807646d503cd05a9fa489e5b8efcb36c22e5338e1f4ed7364dcb7726",
     "src/frontend/hash.cpp": "6d1834f84056ea091ae722973283ab6edc0b53f73938a4866d969db56d62d55b",
     "src/frontend/mc_getname.cpp": "117e60c8a600ab7d5eb1733d4c259ba7cf2c65a94b0ff58dd99ecc1a0ceb515e",
@@ -11179,6 +11196,7 @@
     "src/frontend/shell_push.cpp": "41af18cdf93a4eb2b21ae2620ec77a7ff9cc690f93699907faa8b433fac08c2e",
     "src/frontend/shell_reset.cpp": "3bca8761e976580f8f330ecf7fc3eeaaa9679cda21fea9c82dfd1c82081c9c6c",
     "src/frontend/shell_updateunplugged.cpp": "5dec5ac7b519a96f0eb0c3873ec45129c96689b2b79a3ab8b1ef42decd2bf078",
+    "src/frontend/shellfactory.cpp": "f4c69038da0135cd00e71ab28a1eaaecb63fba1e11d2a961dab071278e4d5b9d",
     "src/frontend/uppercase.cpp": "58d80513a4f76209e1895c6943d7e05837625be3bd2687efe32159afd23f70dd",
     "src/frontend/usermessages_access.cpp": "41716b6c646c0838ec302212e35f8ece4f43914f5a10cbdd6fec31ad50f4081a",
     "src/frontend/usermessages_lifetime.cpp": "250e5edf14476401ba9fd4c26cd2a8fb96303b302f127109a29647323be7b017",
@@ -12367,7 +12385,7 @@
     "src/shell/ListBoxScroll.cpp": "eb360d0e5118059ceb6f83a70f9fbc0ff7eb7a9f2bca13697ac904f328bb4bc4",
     "src/shell/MoviePlayerHeap.cpp": "febd0bd90633a0c962990afef60bd35e9f6288bd33b22c60039510d338647b22",
     "src/shell/MoviePlayerTail.cpp": "70e15d83c05ac1116563e0f59a56b9b1b1283c56eed681af3571da397ad35900",
-    "src/shell/VolumeKnobs.cpp": "1ea20143d6befc08abd7f5aa3a1dc5b6215af931487271d2db3832ee0e789f6f",
+    "src/shell/VolumeKnobs.cpp": "b4769c49e7a44cdcb2019e97ee5472c0189934d650844cc203d7692290b90f67",
     "src/shell/gamesettings_activatecheatnamed_beatthelevel.cpp": "5299be749a6d1e8052adf798501aae9945e58da4c5f5d765413dd19115d22ba2",
     "src/shell/gamesettings_activatecheatnamed_hugearms.cpp": "7cfb523e1b05e92df9fb6c89c91a273875607a5aca10cd0b22f36aa5f7163a51",
     "src/shell/gamesettings_add_mpplayerkilled.cpp": "f2ea9e5071db289b681d9ff774ba286b1014476de163a308129648d6b51e0ed9",
@@ -61619,6 +61637,78 @@
       "discarded_functions": [],
       "object_sha256": "4054c42bff69851242e07c2ebaf730198e94a862ce8c68a643ffaec912d04012",
       "linked_sha256": "3fe23249449f44265ac0c7d792d4af2b16027533a74b833fd416c957c908b179"
+    },
+    {
+      "id": "shellfactory",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 9904,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "a90a9377b7421765037bc36b888dc97d49c3abde0fc0fd8b047f9255a130ae7a",
+      "linked_sha256": "65e5e8c525ec304b124e41fcf9100f65946b7a4b18aa7f8d5c556c2478368320"
+    },
+    {
+      "id": "handler_audioconfig",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 1924,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "f27bb7db081f7dd86ee3a9c19139dd871d480bef99e23cfbade418776076ca63",
+      "linked_sha256": "0550dd7ca78fff48e497524eaff7cf168391d7ad6cc3c570dc35ba7d4302dc11"
+    },
+    {
+      "id": "handler_pausepreferences",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 656,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "376503cc468a8cf7076e92c580eba7b614b3063bea6ae0b265d83b8c5d0363c9",
+      "linked_sha256": "49c30c0ebd3f7c72beaafd2808710434bbae7c9602f6b0c72e15e454ff394381"
+    },
+    {
+      "id": "handler_gameoptions",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 724,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "f073d166d0f8dd7b1ef6041b34ea9fd5b79eef866f7b0a506a5b2bd7de43fd12",
+      "linked_sha256": "6265ebae26cd4c416abf0f61a9610a3b5d675725838e312e7f3e3a1b61a1e451"
     }
   ],
   "code_map": {
@@ -75279,20 +75369,6 @@
             "kind": "function",
             "name": "Process__12ShellFactory",
             "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801839c8",
-            "size": 9840,
-            "kind": "function",
-            "name": "CreatePackageHandler__12ShellFactoryPCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80186038",
-            "size": 64,
-            "kind": "function",
-            "name": "DestroyPackageHandler__12ShellFactoryP14PackageHandler",
-            "evidence": "adjacent-compiler-markers"
           }
         ],
         "marker_interval": [
@@ -75735,31 +75811,6 @@
         ]
       },
       {
-        "name": "Unmatched files/handlerAudioConfig.cpp [inferred file group]",
-        "file_record": 278,
-        "file_name": "handlerAudioConfig.cpp",
-        "ranges": [
-          {
-            "address": "0x8018ec3c",
-            "size": 1660,
-            "kind": "function",
-            "name": "HandleEvent__18HandlerAudioConfigUiP8FEObjectUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8018f2b8",
-            "size": 264,
-            "kind": "function",
-            "name": "Revert__18HandlerAudioConfig",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x8018ec3c",
-          "0x8018f3c0"
-        ]
-      },
-      {
         "name": "Unmatched files/handlerProfileSelect.cpp [inferred file group]",
         "file_record": 279,
         "file_name": "handlerProfileSelect.cpp",
@@ -75948,24 +75999,6 @@
         "marker_interval": [
           "0x8019124c",
           "0x80192230"
-        ]
-      },
-      {
-        "name": "Unmatched files/handlerGameOptions.cpp [inferred file group]",
-        "file_record": 284,
-        "file_name": "handlerGameOptions.cpp",
-        "ranges": [
-          {
-            "address": "0x80192230",
-            "size": 724,
-            "kind": "function",
-            "name": "HandleEvent__18HandlerGameOptionsUiP8FEObjectUl",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x80192230",
-          "0x80192504"
         ]
       },
       {
@@ -76400,24 +76433,6 @@
         "marker_interval": [
           "0x8019709c",
           "0x801975b4"
-        ]
-      },
-      {
-        "name": "Unmatched files/handlerPausePreferences.cpp [inferred file group]",
-        "file_record": 301,
-        "file_name": "handlerPausePreferences.cpp",
-        "ranges": [
-          {
-            "address": "0x801975b4",
-            "size": 656,
-            "kind": "function",
-            "name": "HandleEvent__23HandlerPausePreferencesUiP8FEObjectUl",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x801975b4",
-          "0x80197844"
         ]
       },
       {

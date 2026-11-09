@@ -138,3 +138,9 @@ and implicit destructors, which sit elsewhere in the image, stay external to the
 Verified: the message and object names and the control flow of the reconstructed handlers. Inferred: `buttonHashes`,
 `unknown_18c0`, the language table layout
 and `quadrantUsed` are named from use, and `quadrantUsed` is only tested for being clear.
+
+`ShellFactory::CreatePackageHandler` compares the package name against one line per screen; the DWI label on each
+allocation gives that line's number in `source/UserInterface/shellFactory.cpp`, which is why the macro takes it as an argument.
+Allocation sizes there are the evidence for the handler sizes in `PackageHandlers.h`; members with no reader stay `unknown_`.
+`VolumeKnobs.h`'s `CSliderVector` is a descriptive name for the twelve-byte vectors the factory's inline constructors zero.
+Not reconstructed: handlers whose methods use function-local statics with `.bss` guards, such as `HandleSoundEvent`.

@@ -2495,7 +2495,11 @@
     "ea_subtitle_display_access.json",
     "game_font_drawf.json",
     "game_font_justify.json",
-    "game_sprite_stq.json"
+    "game_sprite_stq.json",
+    "shellfactory.json",
+    "handler_audioconfig.json",
+    "handler_pausepreferences.json",
+    "handler_gameoptions.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

@@ -86,6 +86,7 @@ class ShellManager : public FEGameInterface {
     void MoveShellCamera();
     unsigned long GetCombinedJoyPadActiveMask() const;
     void GetMouseInfo(FEMouseInfo &);
+    void DoCoopUnjoin(FEPackage *, signed char);
     void PlayShellSound(EShellSoundType);
     void SetMovieName(int, char *);
     void PlayMovie(_ShellMoviePaths *, bool);
@@ -139,13 +140,15 @@ class ShellManager : public FEGameInterface {
     int unknown_18c0;                 // +0x18c0; set by "Start Online Multiplayer".
 
     CShellMovieSettings movies;       // +0x18c4
-    int unknown_3bc8;                 // +0x3bc8
+    int unknown_3bc8;                 // +0x3bc8; tested by HandlerMPWaiting::Init, set by the player-count menu.
     int controllerBad;                // +0x3bcc
     signed char badPort;              // +0x3bd0
     signed char activeControllers[4]; // +0x3bd1
     unsigned char unknown_3bd5[3];
     SCoopJoinInfo coopJoin[2];        // +0x3bd8
     int quadrantUsed[2];              // +0x3bf0; tested by HandlerQuadrantGroup::Init. Name inferred.
+    int unknown_3bf8[2];              // +0x3bf8; cleared together on leaving the outro; the historical movie is skipped while either is set.
+    int savedProfilesCRC;             // +0x3c00; HandlerGameOptions compares it with GetProfilesCRCValue. Name inferred.
 };
 extern ShellManager g_Shell;
 #endif

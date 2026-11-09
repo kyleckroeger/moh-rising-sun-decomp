@@ -3,8 +3,7 @@
 void SoundGetVolumes(float &, float &);
 void SoundSetVolumes(float, float);
 
-class FEObject;
-enum EVolumeKnob { VolumeKnobMusic, VolumeKnobSfx };
+#include "VolumeKnobs.h"
 enum EShellSoundType { ShellSoundUnknown6 = 6, ShellSoundUnknown7 = 7 };
 
 class ShellManager {
@@ -12,22 +11,6 @@ class ShellManager {
     void PlayShellSound(EShellSoundType);
 };
 extern ShellManager g_Shell;
-
-class CSlider {
-  public:
-    void Initialize(FEObject *);
-    void SetValue(float);
-    unsigned char unknown00[32];
-};
-
-class CVolumeKnobs {
-  public:
-    void Setup(EVolumeKnob, FEObject *);
-    void Increase(EVolumeKnob);
-    void Decrease(EVolumeKnob);
-    CSlider musicSlider;
-    CSlider sfxSlider; // +0x20
-};
 
 void CVolumeKnobs::Setup(EVolumeKnob knob, FEObject *object) {
     float sfx, music;

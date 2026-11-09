@@ -54,6 +54,8 @@ class CPauseMenu : public CUIObject {
     virtual void ProcessSoundEvent(unsigned int, unsigned int, FEObject *, FEPackage *);
     void PushSaveScreen();
     void BeginSaving();
+    void PlayHistoricalMovie();
+    void PlayLettersMovie();
     int UpdateUnplugged();
     int CheckCheatCodes();
     void Update(float);
