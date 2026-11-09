@@ -646,8 +646,7 @@ behavior and is kept.
 out-of-line copy is a separate weak function; `ResourceTypes.h` is a `#pragma interface` header so that users
 do not emit that copy. `StateIterator`'s pool allocator and its size live in the file's anonymous namespace,
 whose compiler-generated symbol names cannot be spelled in source, so `operator new`, `operator delete` and the
-static initializer are not reconstructed yet. Both classes' destructors are also out: defining them emits their
-secondary `_vt.X.8ISubject` tables, which the unit manifests cannot own yet. `StateIterator::Set(unsigned int,
+static initializer are not reconstructed yet. `StateIterator::Set(unsigned int,
 float)` stays out too: the source form has its argument address loads one block later than the image.
 
 `Choreographer` runs a map from skeleton partition to context (a counted task pointer, the `EALA::Task` to run
@@ -662,9 +661,8 @@ target substate once, either immediately (promoting the result into its parent) 
 `StateIterator::Set` of `blendFrames` thirtieths of a second. A `Message` sends one message to its parent and
 then holds its kept task, or the still pose once it is older than ten seconds. A `Sequence` runs up to sixteen
 tasks and promotes the last one when it is alone. A `Transition` keeps both tasks until its time runs out, then
-promotes the target; it forwards the target's events only during the final evaluation. Each destructor is out
-for the reason given above, and `operator new`, `operator delete` and the static initializers are out with the
-pool allocators. `Sentinel::EvalPose`, `Transition::Create`, `Transition::EvalPose` and `PerformBlend` are not
+promotes the target; it forwards the target's events only during the final evaluation. `operator new`, `operator delete` and the static initializers
+are out with the pool allocators. `Sentinel::EvalPose`, `Transition::Create`, `Transition::EvalPose` and `PerformBlend` are not
 reconstructed yet.
 
 `Operation` is the serialized tree a state's substates point at ([`CharacterOperation.h`](../include/game/CharacterOperation.h)).
@@ -677,6 +675,12 @@ written out of line here in that order, so their unit owns the strings. The head
 destructors, which the image holds in linkonce storage, out of these units. `MatrixBlendOperator::Eval` is not reconstructed:
 the source form schedules its stack argument one instruction earlier than the image. The word at `0x8029cadc`, between
 the script string and `GetTaskDuration`'s zero at `0x8029cae0`, has no reference in the image and no unit owns it.
+
+`CharacterTasks.h` and `CharacterBlends.h` are `#pragma interface` headers: a unit that defines a task's destructor, which is the class's key function, then emits neither its table nor the secondary `_vt.X.8ISubject` table. Those tables stay unowned, as they did before the destructors landed. Each destructor is empty in source; the base's inline destructor supplies the body.
+
+`LinearBlend` and `Playback` are the tasks the operations build. A `LinearBlend` holds up to four tasks, each with a range of a client value, and blends the two around the value; `PerformBlend` is not reconstructed (24 diffs: address operand order and scheduling). A `Playback` plays one cached animation a chosen number of loops, fires its opcodes as the time passes their frames, and tracks root motion through inverse quaternions. Its constructor, `EvalPose` and `GetTotalRootZAxisRotation` are not reconstructed: `EvalPose` is the quaternion math, and the constructor's double literal needs the literal `EvalPose` owns to complete the eight-byte `.rodata` unit.
+
+`Animation` is a counted handle on one animation of a bank, on a list of live handles. `Gameloop_LoadLevel_Fixup_Animation` loads the level's bank and sorts a table of `AnimID`s (name hash, index) from the bank's `S_0x%08x` names, which `Alloc` searches when no bank is given. The first `GetRootTransform` overload is not reconstructed: its null test on the skeleton data allocates one register differently. `PoolAllocator` is a first-fit free list with its links in the free blocks; the strings after `Dump`'s at `0x8029c850` have no remaining reference and no unit owns them.
 
 ## SkeletonData name lookups
 

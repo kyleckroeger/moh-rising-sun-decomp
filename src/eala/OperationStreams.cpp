@@ -30,8 +30,8 @@ Resource::Pointer<Task> LinearBlendOperator::Eval(Resource::Pointer<State> &stat
     tasks.reserve(count);
     for (int i = 0; i < count; i++) {
         LinearBlend::SubTaskInfo info;
-        info.field_00 = ranges[i].low;
-        info.field_04 = ranges[i].high;
+        info.low = ranges[i].low;
+        info.high = ranges[i].high;
         info.task = operands[i]->operation->Eval(state, substate, parent);
         tasks.push_back(info);
     }

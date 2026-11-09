@@ -2,9 +2,11 @@
 // Class and method names come from the symbol table; member names are inferred from their use.
 #ifndef MOH_CHARACTERTASKS_H
 #define MOH_CHARACTERTASKS_H
+#pragma interface
 #include "CharacterTask.h"
 namespace EALA {
 namespace Character {
+inline Task::~Task() {}
 // A task that redirects evaluation to another substate of its state.
 class Jump : public Task {
   public:
@@ -43,14 +45,46 @@ class Message : public Task {
     unsigned int unknown_3c;
     Resource::Pointer<Task> kept;  // +0x40
 };
-// Plays one animation of a state's bank. Only the entry points the operations call are modeled here.
+// Plays one animation of a state's bank some number of times, with its opcodes and root motion.
 class Playback : public Task {
   public:
-    Playback(Resource::Pointer<State> &state, unsigned int substate, Task *parent, unsigned int flags, const char *name,
-             float start, unsigned int animation);
+    void *operator new(unsigned int size);
+    void operator delete(void *p, unsigned int size);
     static Resource::Pointer<Playback> Create(Resource::Pointer<State> &state, unsigned int substate, Task *parent,
-                                              unsigned int flags, const char *name, float start, unsigned int animation);
+                                              unsigned int animation, const char *name, float start, unsigned int loops);
+    Playback(Resource::Pointer<State> &state, unsigned int substate, Task *parent, unsigned int animation,
+             const char *name, float start, unsigned int loops);
+    virtual ~Playback();
+    virtual int Busy();
+    virtual void EvalPose(float time, float *pose);
+    virtual float GetAnimDuration();
+    virtual COORD3 GetAnimTranslation();
+    virtual float GetTotalRootZAxisRotation();
+    virtual void Dump(unsigned int depth);
     void AssignOpcodes(unsigned int count, Opcode *opcodes);
+    void HandleOpcodes();
+    void CheckForPoseChange(Opcode &opcode);
+    Resource::Pointer<Animation> animation; // +0x34
+    float time;                 // +0x38
+    float unknown_3c;           // +0x3c
+    float duration;             // +0x40; the whole run, all loops.
+    float cycleDuration;        // +0x44
+    unsigned int loops;         // +0x48
+    unsigned int animationIndex; // +0x4c
+    const char *name;           // +0x50
+    COORD3 startTranslation;    // +0x54
+    COORD3 endTranslation;      // +0x60
+    COORD3 lastTranslation;     // +0x6c
+    COORD4 startRotation;       // +0x78
+    COORD4 endRotation;         // +0x88
+    COORD4 lastRotation;        // +0x98
+    COORD4 startInverse;        // +0xa8
+    COORD4 lastInverse;         // +0xb8
+    COORD4 rootDelta;           // +0xc8
+    unsigned int opcodeCount;   // +0xd8
+    Opcode *opcodes;            // +0xdc
+    float lastOpcodeTime;       // +0xe0
+    int opcodesStarted;         // +0xe4
 };
 // Runs up to sixteen tasks in order and promotes the last one into its parent when it is alone.
 class Sequence : public Task {

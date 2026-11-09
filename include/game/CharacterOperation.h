@@ -24,11 +24,6 @@ template <class T> inline Serialize::Any &operator<<(Serialize::Any &stream, T &
     stream.serialize(&value, sizeof(T), 1);
     return stream;
 }
-// Inferred: a length-prefixed string held in the file image; the stream relocates or restores the text.
-struct SerializedString {
-    char *text;
-    int length;
-};
 inline unsigned int RoundUp(const unsigned int &value, const unsigned int &alignment) {
     unsigned int rounded = value - 1;
     rounded += alignment;
@@ -46,7 +41,7 @@ struct SerializedBlock {
         this->size = RoundUp(this->size, align);
     }
 };
-inline Serialize::Any &operator<<(Serialize::Any &stream, SerializedString &string) {
+inline Serialize::Any &operator<<(Serialize::Any &stream, EALA::Character::SerializedString &string) {
     stream << string.length;
     SerializedBlock block(&string.text, string.text, string.length + 1, 4);
     if (stream.serialize_ptr(block.pointer, block.data)) {
@@ -79,6 +74,8 @@ inline void WriteScript(Serialize::Any &stream, const SerializedScriptBlock &blo
     }
 }
 Serialize::Any &operator<<(Serialize::Any &stream, EALA::Character::Opcode &opcode);
+Serialize::Any &operator<<(Serialize::Any &stream, EALA::Character::Substate &substate);
+Serialize::Any &operator<<(Serialize::Any &stream, EALA::Character::State &state);
 namespace EALA {
 namespace Character {
 class SimpleOperand;
@@ -110,9 +107,9 @@ class AnimationOperation : public Operation {
     virtual unsigned int SizeOf() const;
     virtual const char *ClassName() const;
     virtual Resource::Pointer<Task> Eval(Resource::Pointer<State> &state, unsigned int substate, Task *parent);
-    unsigned int firstAnimation;   // +0x04
-    unsigned int lastAnimation;    // +0x08
-    unsigned int flags;            // +0x0c
+    unsigned int minLoops;         // +0x04
+    unsigned int maxLoops;         // +0x08
+    unsigned int animation;        // +0x0c
     unsigned short opcodeCount;    // +0x10
     SerializedString name;         // +0x14
     Opcode opcodes[1];             // +0x1c; allocated by size_of for the real count.

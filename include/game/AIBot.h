@@ -157,6 +157,17 @@ class CBotObject {
     void BS_Enter_Goto();
     int BS_Goto();
     void BS_Enter_Combat();
+    int BS_Combat();
+    void SetStrafeTarget();
+    void StrafeEnemy();
+    int MoveToPeekPosition();
+    void UpdateCoverMovement();
+    void ThrowGrenade();
+    int CanThrowGrenade();
+    int AssistTeammate();
+    int GoalReached();
+    CVector3 GetFollowTeammatePos();
+    void CheckForNearbyPowerups();
     void BS_Enter_Retreat();
     void BS_Enter_Chase();
     int BS_Chase();
@@ -171,6 +182,9 @@ class CBotObject {
     int Respawn();
     void ClearBotData();
     void DropMPDumpObject();
+    int FindWeapon(CVector3 *where, CWeapon *weapon);
+    int FindHealth(CVector3 *where);
+    int FindAmmo(CVector3 *where);
     int RetreatForHealth();
     int RetreatForAmmo();
     int RetreatForWeapons();
@@ -211,7 +225,9 @@ class CBotObject {
     EnemyInfo enemyInfo[1]; // +0x1790; extent not established
     unsigned char unknown17e0[0x1a10 - 0x17e0];
     EnemyInfo *enemyInView; // +0x1a10; null when no enemy is tracked
-    unsigned char unknown1a14[0x1a20 - 0x1a14];
+    unsigned char unknown1a14[0x1a18 - 0x1a14];
+    int botId; // +0x1a18; printed by the combat state
+    unsigned char unknown1a1c[0x1a20 - 0x1a1c];
     CBotWeapon weapons[4]; // +0x1a20; four entries, from the loops over them
     CBotCharacter character; // +0x1ac0
     void *grenade; // +0x1b1c
@@ -225,7 +241,9 @@ class CBotObject {
     unsigned char unknown1b60[0x1b70 - 0x1b60];
     sCoverData cover;   // +0x1b70; filled by FindCover2.
     int coverPending;   // +0x1bc8; set when a chase goes to cover.
-    unsigned char unknown1bcc[0x1bd2 - 0x1bcc];
+    unsigned char unknown1bcc[0x1bd0 - 0x1bcc];
+    char crouchHabit; // +0x1bd0; 1 keeps the bot from choosing to crouch
+    unsigned char unknown1bd1[0x1bd2 - 0x1bd1];
     short pathStep; // +0x1bd2; -1 when a state starts a new path
     unsigned char unknown1bd4[0x1be0 - 0x1bd4];
     CVector3 threatPositions[5]; // +0x1be0; read by UpdateLookDir; extent from the count at +0x1c30
@@ -240,7 +258,8 @@ class CBotObject {
     int fireAtEnemy; // +0x1c68
     int lookAlongPath; // +0x1c6c
     int jump; // +0x1c70
-    unsigned char unknown1c74[0x1c7c - 0x1c74];
+    unsigned char unknown1c74[0x1c78 - 0x1c74];
+    int goalWalking; // +0x1c78; stops the goal state from idling
     int mmgIndex; // +0x1c7c; -1 for none
     int wantAmmo; // +0x1c80
     int lowAmmoWeaponType; // +0x1c84
@@ -256,14 +275,20 @@ class CBotObject {
     int currentCampingPoint; // +0x1ce0
     int crouching; // +0x1ce4; cleared with move state 2 and by BS_Exit_Camp
     int combatMode; // +0x1ce8; 8 on entering combat
-    unsigned char unknown1cec[0x1e34 - 0x1cec];
+    int combatPeekMode; // +0x1cec
+    float reactionTime; // +0x1cf0; multiplies the damage chase factor
+    int thinkCountdown; // +0x1cf4
+    unsigned char unknown1cf8[0x1e34 - 0x1cf8];
     int enemyOutOfSightFrames; // +0x1e34; compared with OUT_OF_SIGHT_DELAY
-    unsigned char unknown1e38[0x1e40 - 0x1e38];
+    CBotObject *followTarget; // +0x1e38; watched while following
+    unsigned char unknown1e3c[0x1e40 - 0x1e3c];
     CVector3 teamCentre; // +0x1e40
     float boredDelay; // +0x1e50
     unsigned char unknown1e54[0x1e60 - 0x1e54];
     CVector3 retreatFrom; // +0x1e60
-    unsigned char unknown1e70[0x1e8c - 0x1e70];
+    unsigned char unknown1e70[0x1e78 - 0x1e70];
+    int forceCoverMove; // +0x1e78
+    unsigned char unknown1e7c[0x1e8c - 0x1e7c];
     float lookTargetExpireTime; // +0x1e8c
     unsigned char unknown1e90[0x1e94 - 0x1e90];
     unsigned char playerIndex; // +0x1e94

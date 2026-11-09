@@ -96,6 +96,8 @@ is unused before assigning; that is what the target does.
 `WantToStrafe`, `ChaseDecision`, `DirectChase` and `CoverPointChase` share one unit because their literal pool holds a
 double that must sit on an eight-byte boundary.
 
+`WantToRetreat` builds a list of the empty weapon slots and then uses the random index as the slot directly; that is the target's behavior. Member names added for these functions are inferred from their use.
+
 ## Not reconstructed yet
 
 - `CAreaPathNode::LineEndsAtLinkEdge` and `GetNextNode`, `CAreaEdge::GetEdgeVector` and

@@ -13,11 +13,11 @@ unsigned int AnimationOperation::size_of(int opcodes) {
     return sizeof(AnimationOperation) + _STL::max(1, opcodes - 1) * sizeof(Opcode);
 }
 
-// Picks one animation of the inclusive range at random and plays it with the operation's opcodes.
+// Plays the animation a random number of times from the inclusive range, with the operation's opcodes.
 Resource::Pointer<Task> AnimationOperation::Eval(Resource::Pointer<State> &state, unsigned int substate, Task *parent) {
-    unsigned int range = lastAnimation - firstAnimation + 1;
-    unsigned int animation = firstAnimation + rand() % range;
-    Resource::Pointer<Playback> playback = Playback::Create(state, substate, parent, flags, name.text, 0.0f, animation);
+    unsigned int range = maxLoops - minLoops + 1;
+    unsigned int loops = minLoops + rand() % range;
+    Resource::Pointer<Playback> playback = Playback::Create(state, substate, parent, animation, name.text, 0.0f, loops);
     playback->AssignOpcodes(opcodeCount, opcodes);
     return playback;
 }
@@ -26,7 +26,7 @@ Resource::Pointer<Task> AnimationOperation::Eval(Resource::Pointer<State> &state
 } // namespace EALA
 
 Serialize::Any &operator<<(Serialize::Any &stream, EALA::Character::Opcode &opcode) {
-    stream << opcode.field_00 << opcode.field_02 << opcode.field_04 << opcode.field_06;
+    stream << opcode.frame << opcode.kind << opcode.argument << opcode.field_06;
     return stream;
 }
 
@@ -34,7 +34,7 @@ namespace EALA {
 namespace Character {
 
 void AnimationOperation::Serialize(Serialize::Any &stream) {
-    stream << firstAnimation << lastAnimation << flags;
+    stream << minLoops << maxLoops << animation;
     stream << name;
     stream << opcodeCount;
     for (unsigned int i = 0; i < opcodeCount; i++)

@@ -8,6 +8,7 @@
 #include <map>
 #include "EALAResource.h"
 #include "TargetTypes.h"
+#include "CharacterTaskBase.h"
 extern "C" int strcasecmp(const char *, const char *);
 struct COORD3;
 namespace EAGLAnim {
@@ -28,7 +29,10 @@ class State;
 class Skeleton;
 class Opcode {
   public:
-    short field_00, field_02, field_04, field_06; // Name inferred; the stream reads four shorts.
+    unsigned short frame;     // +0x00; compared with the frames a playback passes.
+    unsigned short kind;      // +0x02; 51217 sets the core pose.
+    unsigned short argument;  // +0x04
+    unsigned short field_06;  // +0x06
     unsigned char unknown_08[4];
     class Handler {
       public:
@@ -51,6 +55,7 @@ class Skeleton {
     };
     Resource::Pointer<Data> data; // +0x00
     void GetStillPose(float *pose);
+    void SetStillPose(const Partition *partition);
     Partition wholeBody; // +0x04; name inferred, GetBoneMask has no mask for it.
     EAGLAnim::Skeleton *GetAnimSkeleton() const { // Name inferred; the body is inlined in its callers.
         return data.IsValid() ? data->skeleton : 0;
@@ -133,70 +138,9 @@ class Choreographer : public Resource {
     ContextMap contexts;                     // +0x20
     Resource::Pointer<Resource> current;     // +0x30; compared with each context's task.
 };
-class Jump;
-class StateIterator;
-class Message;
-class Task : public Resource, public ISubject {
-  public:
-    Task(State *state, unsigned int substate, Task *parent);
-    virtual ~Task();
-    virtual int Busy();
-    virtual void Evaluate(float time, float *pose);
-    virtual void EvalPose(float time, float *pose);
-    virtual float GetAnimDuration();
-    virtual COORD3 GetAnimTranslation();
-    virtual float GetTotalRootZAxisRotation();
-    virtual void Dump(unsigned int depth) = 0;
-    virtual void HandleMessage();
-    virtual void HandleOpcode(Opcode &opcode);
-    virtual void HandlePose(unsigned int pose);
-    virtual void HandleRotation(float rotation);
-    virtual void HandleCycleEnd();
-    virtual void HandleAnimDuration(float duration);
-    virtual void Promote(Pointer<Task> &task);
-    virtual StateIterator *AsIterator();
-    virtual Message *AsMessage();
-    virtual Jump *AsJump();
-
-    State *GetState() const;
-    void Reparent(Task *parent);
-    void SetState(State *state);
-    void SetSubstate(unsigned int substate);
-    void SetCorePose(unsigned int pose);
-    unsigned int GetCorePose() const;
-    StateIterator *ParentIterator();
-    void DumpPrefix(unsigned int depth);
-
-    Pointer<State> state;        // +0x10
-    unsigned int substate;       // +0x14
-    WeakPtr<Task, 8> parent;     // +0x18
-    unsigned int corePose;       // +0x30
-};
-class MatrixBlendOperator;
-class MatrixBlend : public Task {
-  public:
-    struct SubTaskInfo {
-        float field_00, field_04;
-        Resource::Pointer<Task> task;
-    };
-    static Pointer<MatrixBlend> Create(Pointer<State> &state, unsigned int substate, Task *parent, const char *rowName,
-                                const char *columnName, MatrixBlendOperator *op, int count, SubTaskInfo *tasks);
-    MatrixBlend(Pointer<State> &state, unsigned int substate, Task *parent, const char *rowName, const char *columnName,
-                MatrixBlendOperator *op, int count, SubTaskInfo *tasks);
-};
-class LinearBlend : public Task {
-  public:
-    struct SubTaskInfo {
-        float field_00, field_04;
-        Resource::Pointer<Task> task;
-    };
-    static Pointer<LinearBlend> Create(Pointer<State> &state, unsigned int substate, Task *parent, const char *name, int count,
-                                SubTaskInfo *tasks);
-    LinearBlend(Pointer<State> &state, unsigned int substate, Task *parent, const char *name, int count,
-                SubTaskInfo *tasks);
-};
 } // namespace Character
 } // namespace EALA
+#include "CharacterBlends.h"
 struct StringCompare {
     bool operator()(const _STL::string &a, const _STL::string &b) const {
         return strcasecmp(a.c_str(), b.c_str()) < 0;
