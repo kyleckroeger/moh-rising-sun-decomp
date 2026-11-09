@@ -2520,7 +2520,10 @@
     "handler_loadslotselect_accept.json",
     "handler_passwordentry.json",
     "handler_levelmenu_ctor.json",
-    "lighting_AnimLightManager.json"
+    "lighting_AnimLightManager.json",
+    "handler_moviemenu_ctor.json",
+    "handler_customcontroller_ctor.json",
+    "handler_bonusoptions_ctor.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

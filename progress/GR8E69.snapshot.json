@@ -861,9 +861,11 @@
       "src/frontend/festring_copy.cpp": "43a6bad3a72f4854993b0cb2395f0b41cf19306d43fa72960efb2584f90c598f",
       "src/frontend/handler_audioconfig.cpp": "8c8c6b912e79ff562c4982bf1e7c3521c373aec47e4e6cb1597b156837a62a74",
       "src/frontend/handler_bonusoptions_cheats.cpp": "c37efa4c43f97b1ccd5543663a8879ccb26d9b4f8d7ee0871e11bd94e41c66f0",
+      "src/frontend/handler_bonusoptions_ctor.cpp": "1f58aa88ca497a902081a35d4500cbf2e42e51064ee72abfdbaef71dfb68be3e",
       "src/frontend/handler_controlleroptions.cpp": "5af09a841eecd3350a324736b2a5e45ad0f91ba8706b13e8420cd3d963c2bedd",
       "src/frontend/handler_coopgameoptions_init.cpp": "f026699b4a4887236e209514ba9f47be759fe7a6c2c1d1f624b750442a830272",
       "src/frontend/handler_cooptemplaunch.cpp": "ce40919b7a4144b358771779689238f6a676480873209b9dc529c37a48866189",
+      "src/frontend/handler_customcontroller_ctor.cpp": "7741dce5d17b2678847e083112a9cd087e97121cd120d32875ad519a493c2b20",
       "src/frontend/handler_difficulty.cpp": "ec067e290bc8c6808d94eea2e14b4dd3beb9d5c99d4ee04be8999645c35f6f62",
       "src/frontend/handler_gameoptions.cpp": "521489aa89768f4eaae6e231aa5c4b163092edea3fec1fc063b39413290c335b",
       "src/frontend/handler_languagemenu.cpp": "85cff7599bf4497e492fa4eed3ae2708f3c4d4fd496b45c8f1eebf21ab3665c0",
@@ -875,6 +877,7 @@
       "src/frontend/handler_main.cpp": "a55baddde44cdbe6bc3f2267b93f2a14cb904843fca01b3a0b1e0a297735a42a",
       "src/frontend/handler_mainmenu.cpp": "56c2062e52b033cbc906a982e7743b9f44a4d655d5e176908a50f33f1da1b66c",
       "src/frontend/handler_medalsoverlay.cpp": "41ab623d49a9fcc73ee8fb234c2f55aefed2863042c7a3193822c4cc058b29e1",
+      "src/frontend/handler_moviemenu_ctor.cpp": "c0fccb63d8d0df7593cab56ce6ca7f47f2d2462341be8bc757f6cc4180a47781",
       "src/frontend/handler_mpjoin.cpp": "c17a9021899000dc1788ee8ce2692df91684ab4223656c9cbe9296f716b72a32",
       "src/frontend/handler_mpwaiting.cpp": "de6ca948ebdef76db9e37efbd1c0a93feae4d536ec194ea2d0440c25bf774948",
       "src/frontend/handler_nameentry_init.cpp": "4edbf5fd809231240d8daa6b040bf01623de1fd9436253448ab687dc8206ef04",
@@ -4104,9 +4107,11 @@
       "config/GR8E69/grenade_response_queries.json": "5932b489bfec46bf4c73dad2d1d3bc9faa7acf77d137fb97cac1fdea8d343ecc",
       "config/GR8E69/handler_audioconfig.json": "ae8f2c679d0326ed1c60b81356a99f35c770b2dda6d6b21ec6440823bebfe5e5",
       "config/GR8E69/handler_bonusoptions_cheats.json": "839f98cf600ce5eacf244d1fa4c8af0c47c080dd2544846842d02a041c54f8fe",
+      "config/GR8E69/handler_bonusoptions_ctor.json": "77ddcb9bb1b08bc4bd78fdf2cb8992b52e34971a020f060ae6e8a9a1b87ef5c6",
       "config/GR8E69/handler_controlleroptions.json": "a8dc98d9e7328dd2e6118276f5267f6db7a71a4d38c801495d2b7813ceead953",
       "config/GR8E69/handler_coopgameoptions_init.json": "0bec8fb6f62a5fb3ef222680262f6653653b229c5f68ff6ace9fda31aaea3315",
       "config/GR8E69/handler_cooptemplaunch.json": "fe8ba138204bb35cd15a511326e1018220c4c8ba511c3a7e49d588276478fe43",
+      "config/GR8E69/handler_customcontroller_ctor.json": "f2080557b03aa32ac3d41070095214c2e8e951fecdf589f8b3c47f4e9c1adc0c",
       "config/GR8E69/handler_difficulty.json": "e3b1051479b962b466a7f66924efdcaa205604b827c6982c2b16731a4608e42e",
       "config/GR8E69/handler_gameoptions.json": "ecd7330c596c7f37bf9a541d5a97e20ae40836d41898dc19d10a93c504adcec6",
       "config/GR8E69/handler_languagemenu.json": "4a9dc112b0d364ecd374e6b0f31a6a7b586f5b8d5bb4702f04ffc415dd418224",
@@ -4118,6 +4123,7 @@
       "config/GR8E69/handler_main.json": "50527a63797e95ccc9aa6a0af3702185cad410b340687a38050d7c1d660514bc",
       "config/GR8E69/handler_mainmenu.json": "19721ad26b0ea36abea9cda9e915130bafd20d4c579a462018bfbc7352c89c4e",
       "config/GR8E69/handler_medalsoverlay.json": "d9d67384cfcc7ecb385cae1f0a498d2401e3af72a0abc0a672b7e70f8fd992a0",
+      "config/GR8E69/handler_moviemenu_ctor.json": "287634b7c151715fc350839084be9032ffd058bc1a126651af05b92d9b706fe2",
       "config/GR8E69/handler_mpjoin.json": "1d82e2341a5f4475dc0835cb9c26dd64ac0c95551bc1479ef1db9740bc4283ea",
       "config/GR8E69/handler_mpwaiting.json": "ac5a693cafa5d8dd77885652c1baababc93410a76fe86a61b7c5ecc4446e9f2a",
       "config/GR8E69/handler_nameentry_init.json": "c0d4230094f81502627de8274b9d5b6bc49bef6777db5bb30e2ee627c75535e7",
@@ -4532,7 +4538,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "6f8dff4a0afcdc2a0216156f27c7196322b91c2054a5486e0fb7567c8432a8eb",
+      "config/GR8E69/project.json": "c15a77455cbd477f29d68f13eb2525b4e795535d22844b06b33a7d9ce19b7270",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7264,14 +7270,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1307100,
+    "matching_code_bytes": 1307352,
     "total_executable_code_bytes": 2492032,
-    "percent": 52.4511723765987,
+    "percent": 52.46128460629719,
     "categories": {
-      "reconstructed_game": 914884,
+      "reconstructed_game": 915136,
       "restored_library": 392216
     },
-    "matching_functions": 6845
+    "matching_functions": 6848
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -8217,9 +8223,11 @@
     "config/GR8E69/grenade_response_queries.json": "5932b489bfec46bf4c73dad2d1d3bc9faa7acf77d137fb97cac1fdea8d343ecc",
     "config/GR8E69/handler_audioconfig.json": "ae8f2c679d0326ed1c60b81356a99f35c770b2dda6d6b21ec6440823bebfe5e5",
     "config/GR8E69/handler_bonusoptions_cheats.json": "839f98cf600ce5eacf244d1fa4c8af0c47c080dd2544846842d02a041c54f8fe",
+    "config/GR8E69/handler_bonusoptions_ctor.json": "77ddcb9bb1b08bc4bd78fdf2cb8992b52e34971a020f060ae6e8a9a1b87ef5c6",
     "config/GR8E69/handler_controlleroptions.json": "a8dc98d9e7328dd2e6118276f5267f6db7a71a4d38c801495d2b7813ceead953",
     "config/GR8E69/handler_coopgameoptions_init.json": "0bec8fb6f62a5fb3ef222680262f6653653b229c5f68ff6ace9fda31aaea3315",
     "config/GR8E69/handler_cooptemplaunch.json": "fe8ba138204bb35cd15a511326e1018220c4c8ba511c3a7e49d588276478fe43",
+    "config/GR8E69/handler_customcontroller_ctor.json": "f2080557b03aa32ac3d41070095214c2e8e951fecdf589f8b3c47f4e9c1adc0c",
     "config/GR8E69/handler_difficulty.json": "e3b1051479b962b466a7f66924efdcaa205604b827c6982c2b16731a4608e42e",
     "config/GR8E69/handler_gameoptions.json": "ecd7330c596c7f37bf9a541d5a97e20ae40836d41898dc19d10a93c504adcec6",
     "config/GR8E69/handler_languagemenu.json": "4a9dc112b0d364ecd374e6b0f31a6a7b586f5b8d5bb4702f04ffc415dd418224",
@@ -8231,6 +8239,7 @@
     "config/GR8E69/handler_main.json": "50527a63797e95ccc9aa6a0af3702185cad410b340687a38050d7c1d660514bc",
     "config/GR8E69/handler_mainmenu.json": "19721ad26b0ea36abea9cda9e915130bafd20d4c579a462018bfbc7352c89c4e",
     "config/GR8E69/handler_medalsoverlay.json": "d9d67384cfcc7ecb385cae1f0a498d2401e3af72a0abc0a672b7e70f8fd992a0",
+    "config/GR8E69/handler_moviemenu_ctor.json": "287634b7c151715fc350839084be9032ffd058bc1a126651af05b92d9b706fe2",
     "config/GR8E69/handler_mpjoin.json": "1d82e2341a5f4475dc0835cb9c26dd64ac0c95551bc1479ef1db9740bc4283ea",
     "config/GR8E69/handler_mpwaiting.json": "ac5a693cafa5d8dd77885652c1baababc93410a76fe86a61b7c5ecc4446e9f2a",
     "config/GR8E69/handler_nameentry_init.json": "c0d4230094f81502627de8274b9d5b6bc49bef6777db5bb30e2ee627c75535e7",
@@ -8645,7 +8654,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "6f8dff4a0afcdc2a0216156f27c7196322b91c2054a5486e0fb7567c8432a8eb",
+    "config/GR8E69/project.json": "c15a77455cbd477f29d68f13eb2525b4e795535d22844b06b33a7d9ce19b7270",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -11226,9 +11235,11 @@
     "src/frontend/festring_copy.cpp": "43a6bad3a72f4854993b0cb2395f0b41cf19306d43fa72960efb2584f90c598f",
     "src/frontend/handler_audioconfig.cpp": "8c8c6b912e79ff562c4982bf1e7c3521c373aec47e4e6cb1597b156837a62a74",
     "src/frontend/handler_bonusoptions_cheats.cpp": "c37efa4c43f97b1ccd5543663a8879ccb26d9b4f8d7ee0871e11bd94e41c66f0",
+    "src/frontend/handler_bonusoptions_ctor.cpp": "1f58aa88ca497a902081a35d4500cbf2e42e51064ee72abfdbaef71dfb68be3e",
     "src/frontend/handler_controlleroptions.cpp": "5af09a841eecd3350a324736b2a5e45ad0f91ba8706b13e8420cd3d963c2bedd",
     "src/frontend/handler_coopgameoptions_init.cpp": "f026699b4a4887236e209514ba9f47be759fe7a6c2c1d1f624b750442a830272",
     "src/frontend/handler_cooptemplaunch.cpp": "ce40919b7a4144b358771779689238f6a676480873209b9dc529c37a48866189",
+    "src/frontend/handler_customcontroller_ctor.cpp": "7741dce5d17b2678847e083112a9cd087e97121cd120d32875ad519a493c2b20",
     "src/frontend/handler_difficulty.cpp": "ec067e290bc8c6808d94eea2e14b4dd3beb9d5c99d4ee04be8999645c35f6f62",
     "src/frontend/handler_gameoptions.cpp": "521489aa89768f4eaae6e231aa5c4b163092edea3fec1fc063b39413290c335b",
     "src/frontend/handler_languagemenu.cpp": "85cff7599bf4497e492fa4eed3ae2708f3c4d4fd496b45c8f1eebf21ab3665c0",
@@ -11240,6 +11251,7 @@
     "src/frontend/handler_main.cpp": "a55baddde44cdbe6bc3f2267b93f2a14cb904843fca01b3a0b1e0a297735a42a",
     "src/frontend/handler_mainmenu.cpp": "56c2062e52b033cbc906a982e7743b9f44a4d655d5e176908a50f33f1da1b66c",
     "src/frontend/handler_medalsoverlay.cpp": "41ab623d49a9fcc73ee8fb234c2f55aefed2863042c7a3193822c4cc058b29e1",
+    "src/frontend/handler_moviemenu_ctor.cpp": "c0fccb63d8d0df7593cab56ce6ca7f47f2d2462341be8bc757f6cc4180a47781",
     "src/frontend/handler_mpjoin.cpp": "c17a9021899000dc1788ee8ce2692df91684ab4223656c9cbe9296f716b72a32",
     "src/frontend/handler_mpwaiting.cpp": "de6ca948ebdef76db9e37efbd1c0a93feae4d536ec194ea2d0440c25bf774948",
     "src/frontend/handler_nameentry_init.cpp": "4edbf5fd809231240d8daa6b040bf01623de1fd9436253448ab687dc8206ef04",
@@ -62171,6 +62183,60 @@
       "discarded_functions": [],
       "object_sha256": "e2a18ed5c381bede9179dfd9974fab77796baef5fcaa9d6401c8f0ddd5c8bad2",
       "linked_sha256": "01ae1fffdf6629c49937932f97afe2ef5e1567d57c5963557573ee9322607eb6"
+    },
+    {
+      "id": "handler_moviemenu_ctor",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 116,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "a8bedfc787ef3fd3fd2a96953474c40f5c6466b0b5bd00cda8e18045824bfd23",
+      "linked_sha256": "abdfa7e910fbc316cdb90add0e58fedf7d2d370d7310227bc1cf00a4b4f11482"
+    },
+    {
+      "id": "handler_customcontroller_ctor",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 20,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "38b7a6029399cd5138fa7f01351fde40d39fdcc9a8b33efacbe7d9d8bc43b492",
+      "linked_sha256": "24e941698e8a3fcc3a568bdba1d39068197ac2d01a604ab9fce8f4407de446a1"
+    },
+    {
+      "id": "handler_bonusoptions_ctor",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 116,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "bf45440095e0f18890e14f6e0e07759fe3fdf6365e8c4247e858cf5fbe631a0e",
+      "linked_sha256": "b1b7056363b7340a8cacc1ad45de94e736fa62f509e62a824dd2c71be6bf02e7"
     }
   ],
   "code_map": {
@@ -76289,13 +76355,6 @@
         "file_name": "handlerCustomController.cpp",
         "ranges": [
           {
-            "address": "0x8019124c",
-            "size": 20,
-            "kind": "function",
-            "name": "__23HandlerCustomController",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80191260",
             "size": 880,
             "kind": "function",
@@ -76412,13 +76471,6 @@
         "file_record": 288,
         "file_name": "handlerMovieMenu.cpp",
         "ranges": [
-          {
-            "address": "0x801931f4",
-            "size": 116,
-            "kind": "function",
-            "name": "__16HandlerMovieMenu",
-            "evidence": "adjacent-compiler-markers"
-          },
           {
             "address": "0x80193268",
             "size": 1596,
@@ -76590,13 +76642,6 @@
         "file_record": 295,
         "file_name": "handlerBonusOptions.cpp",
         "ranges": [
-          {
-            "address": "0x80194f50",
-            "size": 116,
-            "kind": "function",
-            "name": "__19HandlerBonusOptions",
-            "evidence": "adjacent-compiler-markers"
-          },
           {
             "address": "0x80194fc4",
             "size": 944,
