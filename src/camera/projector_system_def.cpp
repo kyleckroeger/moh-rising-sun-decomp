@@ -2,18 +2,8 @@
 #include "TARExtension.h"
 #include "Toilet.h"
 #include "EAGLMemory.h"
-// Member names are inferred; include/game-containers holds a storage-only view of this class for the map.
+#include "ProjectorSystemDef.h"
 void *TLT_LoadFromRepository(const char *, int *, bool *);
-class CProjectorSystemDef {
-  public:
-    LevelFileContentsStruct_ *resource;
-    char *file; // +4
-    EAGL::TAR *texture; // +8
-    CProjectorSystemDef();
-    ~CProjectorSystemDef();
-    CProjectorSystemDef(const CProjectorSystemDef &);
-    CProjectorSystemDef(LevelFileContentsStruct_ *);
-};
 // The TAR view declares no allocator; this is what its allocation compiles to.
 CProjectorSystemDef::CProjectorSystemDef() : resource(0), file(0), texture(0) {
 }

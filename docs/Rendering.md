@@ -476,8 +476,12 @@ Projectors live in a pool, `g_ProjectorList`, with the same five-word shape as t
 pool, linked through `+608`. [`Projector.h`](../include/game/Projector.h) holds the frustum at `+64`,
 the local-to-world matrix at `+368`, the projection matrix at `+432`, the radius at `+564` and four
 frustum parameters at `+568`. Names are inferred from use. `SetTMLocalToWorld` rebuilds the frustum
-from those parameters. `Create`, `InitClass`, `StateSetup`, `Attach` and the constructors
-are not reconstructed.
+from those parameters. `StateSetup`, `Attach` and the constructors are not reconstructed.
+
+`InitClass` allocates the pool of 16 and fills a private `_STL::map` from each type 16 level resource, keyed by the
+definition's first value; `Create` looks an id up there. `Create` constructs 608 bytes while the pool's stride is 624 with
+the link at `+608`, so the header places the link in a pool node outside the class. That node's shape is inferred; the
+allocation tag `source/system/freepool.h:38` suggests a pool template.
 
 `BeginUpdate` composes the attached node's transform with the attach matrix at `+560` and the offset at `+496`.
 

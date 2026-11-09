@@ -2550,7 +2550,9 @@
     "handler_customcontroller_keys.json",
     "handler_customcontroller_equal.json",
     "handler_mpglobal_init.json",
-    "handler_mpbots_validateskin.json"
+    "handler_mpbots_validateskin.json",
+    "projector_class.json",
+    "projector_create.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
