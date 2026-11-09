@@ -1265,6 +1265,7 @@
       "src/scene/AttachableObjectC.cpp": "4ba057f86eeeead5950370eb21bf7605d1bde0ff73ccc6b263b2d597cd40ea3f",
       "src/scene/AttachableObjectDetach.cpp": "848bbabd8f8c3a159cff387d0d797a766204e0c5fe9f9926a8bac53cfb142590",
       "src/scene/AttachableObjectUpdate.cpp": "717a2967860405f49ea24eec6f4fb30e2079b7b6411fbd49ee1dd14bcdda1a48",
+      "src/scene/GameObjectFactory.cpp": "2b83610a69352b75f2c89c2e0e595641508756c023570d2f3c3548cf76491fc2",
       "src/scene/HearingVolume.cpp": "59e119f5fa973a743d98951084f9c6d00a724b0fe2d4f1ef42782d22f7dc1e00",
       "src/scene/HearingVolumeCtor.cpp": "916f7119904114395d56b2e6b1613a0f83cc3e9454fb7e7cb70875a897663c85",
       "src/scene/HearingVolumeId.cpp": "c0541ceb9e4412264de4885574baaa1e3e8aed2dd44f85f41d013caf645d220e",
@@ -3911,7 +3912,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "f7050052ca9ba000ed5748a98914a3493fd42a17cc174f4c63e9ca6acc2382df",
+      "config/GR8E69/project.json": "f0b075a57c2f3a63a6d3a107e96f2d05abe117e89de532993690ad20fc1d0f09",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -4000,6 +4001,7 @@
       "config/GR8E69/scene_AttachableObjectC.json": "921a6e2635ca182465002db6373bc5f1ef5c82fb774db5befb51de4171c030f3",
       "config/GR8E69/scene_AttachableObjectDetach.json": "b6047e294a73ca1d2d3fb160f56b0f3ba205ed9f73e8a28a002217d51ec85beb",
       "config/GR8E69/scene_AttachableObjectUpdate.json": "22767829235bfc73e8bc59a7c6752a3471838a1bf9a7423bc1abc491b2329c4d",
+      "config/GR8E69/scene_GameObjectFactory.json": "2edf26b2e25a52b8c55fd926eb252664d4e02ab8cc3ac7820fbba0cdaa40c0c8",
       "config/GR8E69/scene_HearingVolume.json": "2bca1897fa954e489c3fa0c0a7baf11aa2c4b6d442b7989a540ba4c03659427b",
       "config/GR8E69/scene_HearingVolumeCtor.json": "32d1465ec83e30ff981a4982dcb99ed445dfff604e4865af5cf273571f30f576",
       "config/GR8E69/scene_HearingVolumeId.json": "6506685dbec15b0e6d32529f1d55f3927c23ef73a9d045089071c3286db5d5d7",
@@ -6591,14 +6593,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1135768,
+    "matching_code_bytes": 1136804,
     "total_executable_code_bytes": 2492032,
-    "percent": 45.575979762699674,
+    "percent": 45.617552262571266,
     "categories": {
-      "reconstructed_game": 743552,
+      "reconstructed_game": 744588,
       "restored_library": 392216
     },
-    "matching_functions": 5832
+    "matching_functions": 5841
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -7702,7 +7704,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "f7050052ca9ba000ed5748a98914a3493fd42a17cc174f4c63e9ca6acc2382df",
+    "config/GR8E69/project.json": "f0b075a57c2f3a63a6d3a107e96f2d05abe117e89de532993690ad20fc1d0f09",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7791,6 +7793,7 @@
     "config/GR8E69/scene_AttachableObjectC.json": "921a6e2635ca182465002db6373bc5f1ef5c82fb774db5befb51de4171c030f3",
     "config/GR8E69/scene_AttachableObjectDetach.json": "b6047e294a73ca1d2d3fb160f56b0f3ba205ed9f73e8a28a002217d51ec85beb",
     "config/GR8E69/scene_AttachableObjectUpdate.json": "22767829235bfc73e8bc59a7c6752a3471838a1bf9a7423bc1abc491b2329c4d",
+    "config/GR8E69/scene_GameObjectFactory.json": "2edf26b2e25a52b8c55fd926eb252664d4e02ab8cc3ac7820fbba0cdaa40c0c8",
     "config/GR8E69/scene_HearingVolume.json": "2bca1897fa954e489c3fa0c0a7baf11aa2c4b6d442b7989a540ba4c03659427b",
     "config/GR8E69/scene_HearingVolumeCtor.json": "32d1465ec83e30ff981a4982dcb99ed445dfff604e4865af5cf273571f30f576",
     "config/GR8E69/scene_HearingVolumeId.json": "6506685dbec15b0e6d32529f1d55f3927c23ef73a9d045089071c3286db5d5d7",
@@ -10606,6 +10609,7 @@
     "src/scene/AttachableObjectC.cpp": "4ba057f86eeeead5950370eb21bf7605d1bde0ff73ccc6b263b2d597cd40ea3f",
     "src/scene/AttachableObjectDetach.cpp": "848bbabd8f8c3a159cff387d0d797a766204e0c5fe9f9926a8bac53cfb142590",
     "src/scene/AttachableObjectUpdate.cpp": "717a2967860405f49ea24eec6f4fb30e2079b7b6411fbd49ee1dd14bcdda1a48",
+    "src/scene/GameObjectFactory.cpp": "2b83610a69352b75f2c89c2e0e595641508756c023570d2f3c3548cf76491fc2",
     "src/scene/HearingVolume.cpp": "59e119f5fa973a743d98951084f9c6d00a724b0fe2d4f1ef42782d22f7dc1e00",
     "src/scene/HearingVolumeCtor.cpp": "916f7119904114395d56b2e6b1613a0f83cc3e9454fb7e7cb70875a897663c85",
     "src/scene/HearingVolumeId.cpp": "c0541ceb9e4412264de4885574baaa1e3e8aed2dd44f85f41d013caf645d220e",
@@ -55004,6 +55008,24 @@
       "discarded_functions": [],
       "object_sha256": "7ad59d9afc4265c6985d188158b6afd2f7aff42c61bdd45e3fc2fb558f29f2b6",
       "linked_sha256": "0ce53bf859bab22648ad646a9ae3d95504942506ed6a5de14344f78bd47efcfb"
+    },
+    {
+      "id": "scene_GameObjectFactory",
+      "category": "reconstructed_game",
+      "functions": 9,
+      "code_bytes": 1036,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "fbda7ccf1918cda0496ebe6d9aef1e3474c30febc70344035f4972da95b4df3e",
+      "linked_sha256": "324fee82240ad293de9e57557fd65772e68e3bd67a1480c371340b8f716c6b62"
     }
   ],
   "code_map": {
@@ -64833,80 +64855,6 @@
         "marker_interval": [
           "0x800c9d34",
           "0x800ca358"
-        ]
-      },
-      {
-        "name": "Unmatched files/GameObjectFactory.cpp [inferred file group]",
-        "file_record": 139,
-        "file_name": "GameObjectFactory.cpp",
-        "ranges": [
-          {
-            "address": "0x800ca358",
-            "size": 44,
-            "kind": "function",
-            "name": "IGO_Destroy__11IGameObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ca384",
-            "size": 44,
-            "kind": "function",
-            "name": "__18CGameObjectFactory",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ca3b0",
-            "size": 176,
-            "kind": "function",
-            "name": "Init__18CGameObjectFactoryiif",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ca460",
-            "size": 52,
-            "kind": "function",
-            "name": "Reset__18CGameObjectFactory",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ca494",
-            "size": 72,
-            "kind": "function",
-            "name": "Shutdown__18CGameObjectFactory",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ca4dc",
-            "size": 104,
-            "kind": "function",
-            "name": "FreeGameObject__18CGameObjectFactoryP11IGameObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ca544",
-            "size": 132,
-            "kind": "function",
-            "name": "InitializePool__18CGameObjectFactory",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ca5c8",
-            "size": 156,
-            "kind": "function",
-            "name": "FreeAllObjects__18CGameObjectFactory",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ca664",
-            "size": 256,
-            "kind": "function",
-            "name": "CheckRecycleThreshold__18CGameObjectFactory",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x800ca358",
-          "0x800ca764"
         ]
       },
       {
