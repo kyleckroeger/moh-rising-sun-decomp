@@ -2210,7 +2210,10 @@
     "soundman_columns.json",
     "soundman_streams.json",
     "soundman_verify.json",
-    "soundman_remove.json"
+    "soundman_remove.json",
+    "scripted_gag.json",
+    "movie_player_heap.json",
+    "movie_player_tail.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

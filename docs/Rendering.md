@@ -502,3 +502,11 @@ Not reconstructed here: `SetShape`, `SetPerspective`, `BeginView`, `ClearViewPor
 `SetOrthographicScreenSpace`, `DeleteViewPort` and the file's static initializer.
 `SetOrthographicScreenSpace` compiles to the original instructions, but its literals start at an
 address that is not 8-aligned ahead of a double, so it cannot stand as its own section.
+
+## Movie player
+
+`CMoviePlayer` lives in the original `rcmpplayer.cpp`, alongside the `RCMPAlloc`
+hooks. Its heap setup and teardown, language column table, constructor, and `PlayMovie`
+are reconstructed. Member names are inferred from the code. `Play`, the no-argument
+`SetupSubtitle` and `GetSubtitle` are not yet: they share `.rodata` that starts with an
+empty string and the unreferenced `bad_alloc` string, and a double literal behind that.

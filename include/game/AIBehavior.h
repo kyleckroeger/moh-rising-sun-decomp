@@ -316,15 +316,6 @@ class CGrenadeResponseBehavior : public CBehavior { // Type 10.
     float heuristicScore; // +0x2c
 };
 
-// Static scripted-gag entry points.
-class CScriptedGag {
-  public:
-    static void RegisterGagAction(BSObject *, const char *, int);
-    static void UnregisterAllGagActions();
-    static void StartGag(BSObject *, const char *, int);
-    static void StartGag(BSObject *, unsigned int, int);
-};
-
 // A cover point; the script object's native trigger is one. Its first word holds the state
 // bits below; their names follow the accessors.
 class CCoverPoint {
