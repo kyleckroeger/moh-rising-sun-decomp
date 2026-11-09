@@ -1058,6 +1058,10 @@
       "src/matrix/vector.cpp": "3b10137c31cbb0c367c98b151c79e6f730d8308a23f48e4e17fb7f802c995a5a",
       "src/matrix/vector_dot.cpp": "cb4baa174ae4153fdd4a7f95d54642772e3dc8003ea1cd570932f3d8dad5029a",
       "src/memory/memstack.cpp": "e472593fd57e5103524803aa1e7575b48df0a39a12c3c0d23571762ef21d7a0e",
+      "src/memorycard/gc_driver_bio.cpp": "74d811024f98397854ad1718e5877d0d48580092235dd9e2fd040f8d8dfee0e2",
+      "src/memorycard/gc_driver_files.cpp": "f1831fe8c01ac1ba4d921852af4515a6056e14e4a0adb6722d601f36dd6864ff",
+      "src/memorycard/gc_driver_header.cpp": "d37293ecdd3e997c6b2d7e5e1d1f59f5007f2259c3ed1b40854675cc43492f17",
+      "src/memorycard/gc_driver_mount.cpp": "958b9c1f21bdc9cf45fbef2a3de9def9c151ac15f1664523bced8f2d5b2f012a",
       "src/newlib/COPYING.NEWLIB": "926114809b158088f2672ad7d05c60e72b3217edadbfd55ad3c1ba319b84f852",
       "src/newlib/NOTICE": "03cf2a4fe95fd7219fc9bf1e9967b9f29dceb614612006c4f7797c6b6889504c",
       "src/newlib/NOTICE.SN": "a3da43a64bc3abf524de4040183830a89bed291689a0a77dbe0cfaae247a45f8",
@@ -2782,6 +2786,7 @@
       "include/game/PropertyData.h": "952ae5ac78dc17e43053a7b905a8e58499a1faa3c7d0721269329f639095b22a",
       "include/game/PropertyReaders.h": "b071c0e9a64579b83d6d5955914a9a8b2357f7914fa2f21f6c8548f11463b54a",
       "include/game/Rcmp.h": "938e4965d3c2b0d0f48d815f17eaf162b3fb5b491ec3dfd4bcc5814197bfa6ee",
+      "include/game/RealmcDriver.h": "d910691ecd5949e36e335d3fbe4d467a24c422cb04b79792cf2b802c119720b1",
       "include/game/SceneCollisions.h": "2a1769143eeecf427cad1a013ebf02f6b0d2ee83e011b58e5c62cd141306cd64",
       "include/game/SceneNode.h": "e57802b8a891e60ae5642230d29fea224075a837267cac91413b2a7fae00a560",
       "include/game/SceneObjects.h": "dd045643eb65ae01140f6cc6dc439501905b8b2fd77c922601ac4cfdf6a7d870",
@@ -3820,6 +3825,10 @@
       "config/GR8E69/gamesettings_storesavedata.json": "68bcf8a72aae17e72fec10496050e30d4b10e178a215f5ab168c87718e6108a2",
       "config/GR8E69/gamesettings_validate.json": "112fdb9de71471339d701e4917ecb721e9e80836a2f5665f2bc98744ca5087eb",
       "config/GR8E69/gba_object_list.json": "e5a46ae430ee265e0eabfc4c50849f282c18d7714f44da7e9b7b3b2d731a99e9",
+      "config/GR8E69/gc_driver_bio.json": "dd6d0f52303993ea385659c8c3b5591c03cdd5ff1602909a0d593031bbae1ff2",
+      "config/GR8E69/gc_driver_files.json": "7773d29e452e749989c48c03e592251eccab420c14de923673f488a31fdfd926",
+      "config/GR8E69/gc_driver_header.json": "e6eccfa3091d77fd78db1a1461d1db2826bc9440744a6f7880cf4f80ae7c4c31",
+      "config/GR8E69/gc_driver_mount.json": "e1a60d4270e544c6aaea7fee8821047449bc0a48871c93118702150d3b550883",
       "config/GR8E69/gchw_vd_draw.json": "8240cd2ce5d0a0f00cae88ddb2fbd1c1a198a12246488f9b6cebd10604e92e3b",
       "config/GR8E69/gchw_vd_setters.json": "34856555c8f331dcd604dd04eb40e58713689ec5a0bdc6c685507364dc3fbc70",
       "config/GR8E69/grenade_response_queries.json": "5932b489bfec46bf4c73dad2d1d3bc9faa7acf77d137fb97cac1fdea8d343ecc",
@@ -4198,7 +4207,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "8ffecfb199728b2827e22c9ea841806ca6cbfe5a284c33bd806c41919ef7171b",
+      "config/GR8E69/project.json": "2b468e0a1753fa2d7890090effc5a0e3aeb3af261ee375affe0ca92c09d3fcfb",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -6904,14 +6913,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1195260,
+    "matching_code_bytes": 1200460,
     "total_executable_code_bytes": 2492032,
-    "percent": 47.96326852945709,
+    "percent": 48.17193358672762,
     "categories": {
-      "reconstructed_game": 803044,
+      "reconstructed_game": 808244,
       "restored_library": 392216
     },
-    "matching_functions": 6238
+    "matching_functions": 6267
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -7761,6 +7770,10 @@
     "config/GR8E69/gamesettings_storesavedata.json": "68bcf8a72aae17e72fec10496050e30d4b10e178a215f5ab168c87718e6108a2",
     "config/GR8E69/gamesettings_validate.json": "112fdb9de71471339d701e4917ecb721e9e80836a2f5665f2bc98744ca5087eb",
     "config/GR8E69/gba_object_list.json": "e5a46ae430ee265e0eabfc4c50849f282c18d7714f44da7e9b7b3b2d731a99e9",
+    "config/GR8E69/gc_driver_bio.json": "dd6d0f52303993ea385659c8c3b5591c03cdd5ff1602909a0d593031bbae1ff2",
+    "config/GR8E69/gc_driver_files.json": "7773d29e452e749989c48c03e592251eccab420c14de923673f488a31fdfd926",
+    "config/GR8E69/gc_driver_header.json": "e6eccfa3091d77fd78db1a1461d1db2826bc9440744a6f7880cf4f80ae7c4c31",
+    "config/GR8E69/gc_driver_mount.json": "e1a60d4270e544c6aaea7fee8821047449bc0a48871c93118702150d3b550883",
     "config/GR8E69/gchw_vd_draw.json": "8240cd2ce5d0a0f00cae88ddb2fbd1c1a198a12246488f9b6cebd10604e92e3b",
     "config/GR8E69/gchw_vd_setters.json": "34856555c8f331dcd604dd04eb40e58713689ec5a0bdc6c685507364dc3fbc70",
     "config/GR8E69/grenade_response_queries.json": "5932b489bfec46bf4c73dad2d1d3bc9faa7acf77d137fb97cac1fdea8d343ecc",
@@ -8139,7 +8152,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "8ffecfb199728b2827e22c9ea841806ca6cbfe5a284c33bd806c41919ef7171b",
+    "config/GR8E69/project.json": "2b468e0a1753fa2d7890090effc5a0e3aeb3af261ee375affe0ca92c09d3fcfb",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -9630,6 +9643,7 @@
     "include/game/PropertyData.h": "952ae5ac78dc17e43053a7b905a8e58499a1faa3c7d0721269329f639095b22a",
     "include/game/PropertyReaders.h": "b071c0e9a64579b83d6d5955914a9a8b2357f7914fa2f21f6c8548f11463b54a",
     "include/game/Rcmp.h": "938e4965d3c2b0d0f48d815f17eaf162b3fb5b491ec3dfd4bcc5814197bfa6ee",
+    "include/game/RealmcDriver.h": "d910691ecd5949e36e335d3fbe4d467a24c422cb04b79792cf2b802c119720b1",
     "include/game/SceneCollisions.h": "2a1769143eeecf427cad1a013ebf02f6b0d2ee83e011b58e5c62cd141306cd64",
     "include/game/SceneNode.h": "e57802b8a891e60ae5642230d29fea224075a837267cac91413b2a7fae00a560",
     "include/game/SceneObjects.h": "dd045643eb65ae01140f6cc6dc439501905b8b2fd77c922601ac4cfdf6a7d870",
@@ -10875,6 +10889,10 @@
     "src/matrix/vector.cpp": "3b10137c31cbb0c367c98b151c79e6f730d8308a23f48e4e17fb7f802c995a5a",
     "src/matrix/vector_dot.cpp": "cb4baa174ae4153fdd4a7f95d54642772e3dc8003ea1cd570932f3d8dad5029a",
     "src/memory/memstack.cpp": "e472593fd57e5103524803aa1e7575b48df0a39a12c3c0d23571762ef21d7a0e",
+    "src/memorycard/gc_driver_bio.cpp": "74d811024f98397854ad1718e5877d0d48580092235dd9e2fd040f8d8dfee0e2",
+    "src/memorycard/gc_driver_files.cpp": "f1831fe8c01ac1ba4d921852af4515a6056e14e4a0adb6722d601f36dd6864ff",
+    "src/memorycard/gc_driver_header.cpp": "d37293ecdd3e997c6b2d7e5e1d1f59f5007f2259c3ed1b40854675cc43492f17",
+    "src/memorycard/gc_driver_mount.cpp": "958b9c1f21bdc9cf45fbef2a3de9def9c151ac15f1664523bced8f2d5b2f012a",
     "src/newlib/COPYING.NEWLIB": "926114809b158088f2672ad7d05c60e72b3217edadbfd55ad3c1ba319b84f852",
     "src/newlib/NOTICE": "03cf2a4fe95fd7219fc9bf1e9967b9f29dceb614612006c4f7797c6b6889504c",
     "src/newlib/NOTICE.SN": "a3da43a64bc3abf524de4040183830a89bed291689a0a77dbe0cfaae247a45f8",
@@ -58341,6 +58359,82 @@
       "discarded_functions": [],
       "object_sha256": "536cce649bdd5f2603b0e3f3b79b7f52637ea08fe08f78c3f4c0c9bcdeedadeb",
       "linked_sha256": "f2aea0ffd48c7f99d0172e508b9b2597cd25866b656b4b9f3f0cbf39ef4b5f67"
+    },
+    {
+      "id": "gc_driver_mount",
+      "category": "reconstructed_game",
+      "functions": 9,
+      "code_bytes": 1308,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "c5aeedb03f52b7b4e292d8d9143a9caab9e48124dc5f05890efb8c6d7c2e8c87",
+      "linked_sha256": "2c96340f199094d85a320603a9bc5e1e4e0457d34aec23ae2727c08b55a77f8f"
+    },
+    {
+      "id": "gc_driver_header",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 776,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "2e7d3920ba437e335723a11fc7f7a82b44237afe6cf3b572ce356f8dc5f72c32",
+      "linked_sha256": "7aebb68c70a4530248e5a4f583654d891abd6ef16452ef11ba78cc888fa31eb6"
+    },
+    {
+      "id": "gc_driver_files",
+      "category": "reconstructed_game",
+      "functions": 10,
+      "code_bytes": 1976,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "d57a2defe566829b39713dc10ead24617c9cf762601a132c7ca66624e9a44613",
+      "linked_sha256": "554e2184f5d01c8ff5137e7c409fd54c3f46462eb6ebc6b9b3ef0478924a0a26"
+    },
+    {
+      "id": "gc_driver_bio",
+      "category": "reconstructed_game",
+      "functions": 7,
+      "code_bytes": 1140,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "18f1f4fc4801f23f09631c185f75f25a5a6dd96cb889c717588249325089ea1d",
+      "linked_sha256": "833cbbd2bec3c56f1dd13c946918adb1993d8be634fa0bbc131d92f3174fd42b"
     }
   ],
   "code_map": {
@@ -82488,69 +82582,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x802149e4",
-            "size": 256,
-            "kind": "function",
-            "name": "ConvertCardResult__Q26Realmc8GCDriveri",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80214ae4",
-            "size": 44,
-            "kind": "function",
-            "name": "FindFreeFileDescriptor__Q26Realmc8GCDriver",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80214b10",
-            "size": 8,
-            "kind": "function",
-            "name": "ConvertFileHandleToDescriptor__Q26Realmc8GCDriverPQ26Realmc18OpenFileDescriptor",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80214b18",
-            "size": 140,
-            "kind": "function",
-            "name": "CardExists__Q26Realmc8GCDriverRCQ26Realmc6CardID",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80214ba4",
-            "size": 128,
-            "kind": "function",
-            "name": "GetFileBlocks__Q26Realmc8GCDriverRCQ26Realmc6CardIDPCQ26Realmc8FileInfoPUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80214c24",
-            "size": 288,
-            "kind": "function",
-            "name": "GetSectorSize__Q26Realmc8GCDriverRCQ26Realmc6CardID",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80214d44",
-            "size": 12,
-            "kind": "function",
-            "name": "CardRemovalCallback__Q26Realmc8GCDriverll",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80214d50",
-            "size": 316,
-            "kind": "function",
-            "name": "Mount__Q26Realmc8GCDriverRCQ26Realmc6CardID",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80214e8c",
-            "size": 116,
-            "kind": "function",
-            "name": "Unmount__Q26Realmc8GCDriverRCQ26Realmc6CardID",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80214f00",
             "size": 588,
             "kind": "function",
@@ -82558,101 +82589,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8021514c",
-            "size": 700,
-            "kind": "function",
-            "name": "WriteHeaderData__Q26Realmc8GCDriverPQ26Realmc16GcFileDescriptor",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80215408",
-            "size": 28,
-            "kind": "function",
-            "name": "GetBannerSize__Q26Realmc8GCDriverPCQ26Realmc8FileInfo",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80215424",
-            "size": 48,
-            "kind": "function",
-            "name": "GetIconSize__Q26Realmc8GCDriverPCQ26Realmc8FileInfo",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80215454",
             "size": 468,
             "kind": "function",
             "name": "WriteFile__Q26Realmc8GCDriverPQ26Realmc18OpenFileDescriptorPviPi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80215628",
-            "size": 240,
-            "kind": "function",
-            "name": "FlushWriteBuffer__Q26Realmc8GCDriverPQ26Realmc18OpenFileDescriptor",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80215718",
-            "size": 548,
-            "kind": "function",
-            "name": "SetHeaderInfo__Q26Realmc8GCDriverPQ26Realmc16GcFileDescriptor",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8021593c",
-            "size": 440,
-            "kind": "function",
-            "name": "ReadFile__Q26Realmc8GCDriverPQ26Realmc18OpenFileDescriptorPviPi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80215af4",
-            "size": 244,
-            "kind": "function",
-            "name": "CloseFile__Q26Realmc8GCDriverPQ26Realmc18OpenFileDescriptor",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80215be8",
-            "size": 36,
-            "kind": "function",
-            "name": "GetOpenFileSize__Q26Realmc8GCDriverPQ26Realmc18OpenFileDescriptor",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80215c0c",
-            "size": 120,
-            "kind": "function",
-            "name": "GetFreeCardSpace__Q26Realmc8GCDriverRCQ26Realmc6CardIDPiT2",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80215c84",
-            "size": 156,
-            "kind": "function",
-            "name": "DeleteFile__Q26Realmc8GCDriverRCQ26Realmc6CardIDPCQ26Realmc8FileInfo",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80215d20",
-            "size": 100,
-            "kind": "function",
-            "name": "RenameFile__Q26Realmc8GCDriverRCQ26Realmc6CardIDPCQ26Realmc8FileInfoPCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80215d84",
-            "size": 84,
-            "kind": "function",
-            "name": "FormatCard__Q26Realmc8GCDriverRCQ26Realmc6CardID",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80215dd8",
-            "size": 8,
-            "kind": "function",
-            "name": "IsCardPresent__Q26Realmc8GCDriver",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -82667,55 +82607,6 @@
             "size": 224,
             "kind": "function",
             "name": "FindNext__Q26Realmc8GCDriver",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80215f3c",
-            "size": 288,
-            "kind": "function",
-            "name": "Seek__Q26Realmc8GCDriverPQ26Realmc18OpenFileDescriptoriQ26Realmc8SeekFrom",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8021605c",
-            "size": 112,
-            "kind": "function",
-            "name": "SetAttributes__Q26Realmc8GCDriverGQ26Realmc6CardIDPcQ26Realmc13FileAttribute",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x802160cc",
-            "size": 192,
-            "kind": "function",
-            "name": "FindFileNumber__Q26Realmc8GCDriverPcPi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8021618c",
-            "size": 80,
-            "kind": "function",
-            "name": "NGCSportsBioSeek__Q26Realmc8GCDriverPQ26Realmc16GcFileDescriptoriQ26Realmc8SeekFrom",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x802161dc",
-            "size": 176,
-            "kind": "function",
-            "name": "NGCSportsBioRead__Q26Realmc8GCDriverPQ26Realmc16GcFileDescriptorPviPi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8021628c",
-            "size": 196,
-            "kind": "function",
-            "name": "NGCSportsBioWrite__Q26Realmc8GCDriverPQ26Realmc16GcFileDescriptorPviPi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80216350",
-            "size": 96,
-            "kind": "function",
-            "name": "NGCSportsBioClose__Q26Realmc8GCDriverPQ26Realmc16GcFileDescriptor",
             "evidence": "adjacent-compiler-markers"
           },
           {
