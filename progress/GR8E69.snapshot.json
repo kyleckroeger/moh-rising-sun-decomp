@@ -868,7 +868,9 @@
       "src/frontend/handler_gameoptions.cpp": "521489aa89768f4eaae6e231aa5c4b163092edea3fec1fc063b39413290c335b",
       "src/frontend/handler_languagemenu.cpp": "85cff7599bf4497e492fa4eed3ae2708f3c4d4fd496b45c8f1eebf21ab3665c0",
       "src/frontend/handler_leaderboard_fill.cpp": "14cbc03582f7eb8066c6785114478d2ef4838e7653b5023f2e85086f94cb0440",
+      "src/frontend/handler_levelmenu_ctor.cpp": "11bc178f8b0dd710f440a98ae9beb801e7999aa8345fa34591802e7d977e49cd",
       "src/frontend/handler_loadgame.cpp": "d1edb124c0b755d05d6f0b5134db5f5dd56f6b8decd73838f45c2b2061116d86",
+      "src/frontend/handler_loadslotselect_accept.cpp": "69b9ea0069e4e1b4c9b3aaf427ad5edfe119b48165d1538e489b099173ef818c",
       "src/frontend/handler_loadslotselect_cancel.cpp": "b60f0dafb3e34901badc235803c3dd5a77f63c6f1f8b1c46db7ef481f8d96f8f",
       "src/frontend/handler_main.cpp": "a55baddde44cdbe6bc3f2267b93f2a14cb904843fca01b3a0b1e0a297735a42a",
       "src/frontend/handler_mainmenu.cpp": "56c2062e52b033cbc906a982e7743b9f44a4d655d5e176908a50f33f1da1b66c",
@@ -878,6 +880,7 @@
       "src/frontend/handler_nameentry_init.cpp": "4edbf5fd809231240d8daa6b040bf01623de1fd9436253448ab687dc8206ef04",
       "src/frontend/handler_nameentry_string.cpp": "b0290b40dc05e1a3f718883c12e0659168f7ebe106c54309fc584e92280762f0",
       "src/frontend/handler_numplayers.cpp": "74f10a3a4faae4832e0243415fc36e37e357d648b0957a06ef735a61d910e7db",
+      "src/frontend/handler_passwordentry.cpp": "5560f8d402dde88a13e9d1bf17ac1625bb368485c433500c373314b43072e2b9",
       "src/frontend/handler_pausepreferences.cpp": "9d227fdb3ecd734a9b9e069d5d5ce95c5d9d20e7e4ecc66a7dcdd73cd9261e56",
       "src/frontend/handler_quadrantgroup.cpp": "8443d712807646d503cd05a9fa489e5b8efcb36c22e5338e1f4ed7364dcb7726",
       "src/frontend/handler_saveslotbase.cpp": "f45e6e0c5e9508e59d5fe73b89139509de4d09e7a8660f1fe56467df166cbd8b",
@@ -4107,7 +4110,9 @@
       "config/GR8E69/handler_gameoptions.json": "ecd7330c596c7f37bf9a541d5a97e20ae40836d41898dc19d10a93c504adcec6",
       "config/GR8E69/handler_languagemenu.json": "4a9dc112b0d364ecd374e6b0f31a6a7b586f5b8d5bb4702f04ffc415dd418224",
       "config/GR8E69/handler_leaderboard_fill.json": "7f163fccebe41f629d4f8c8d2da2c676a6815e56262f0b1ab35e7186325a8114",
+      "config/GR8E69/handler_levelmenu_ctor.json": "1a0eb5dcd36b28f46f816cfb0a347c4698b5db5900cf4c4a2900707792040009",
       "config/GR8E69/handler_loadgame.json": "4ce9ca6f090bc615f61b1774cfc4599ec4a6244bf7a9ffc2b52315c6275838c3",
+      "config/GR8E69/handler_loadslotselect_accept.json": "56c1fab5479e6664166ec5b760dfb54b45f19e8daa21381ff1853d039955b8ee",
       "config/GR8E69/handler_loadslotselect_cancel.json": "18a8696365cad0b3722b761bf6134f42d1192f431783cf6f454ed8b45f5aa4ca",
       "config/GR8E69/handler_main.json": "50527a63797e95ccc9aa6a0af3702185cad410b340687a38050d7c1d660514bc",
       "config/GR8E69/handler_mainmenu.json": "19721ad26b0ea36abea9cda9e915130bafd20d4c579a462018bfbc7352c89c4e",
@@ -4117,6 +4122,7 @@
       "config/GR8E69/handler_nameentry_init.json": "c0d4230094f81502627de8274b9d5b6bc49bef6777db5bb30e2ee627c75535e7",
       "config/GR8E69/handler_nameentry_string.json": "b091511c899781ed9f471535e1364c1608acbdff35633cf7377ce3b79ff51189",
       "config/GR8E69/handler_numplayers.json": "8955700d3de34413c4628e1d74f5a6a40e3ee4f16be726db8c6d78f23e18905c",
+      "config/GR8E69/handler_passwordentry.json": "0efd3ae04b43be8327f990dcf1770a6fe2d22e71f66a1dd28552d73e0437fc30",
       "config/GR8E69/handler_pausepreferences.json": "8be0fded2f57d6dc4af1fac05b9efee59927add37bb4ff1e40c5cfd5b543ee90",
       "config/GR8E69/handler_quadrantgroup.json": "849da7a189927840d4331af5ab992e135823dc871c9dc517a3a4c0380d515f67",
       "config/GR8E69/handler_saveslotbase.json": "f2a6b8128b2c4b5dbdb68b1f4a16c5f1bd537bef193f1dff69e32a4cd3769ac7",
@@ -4524,7 +4530,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "15bce8f0f8335bdc6da61e985adc0c3cd44b89864f3ce30f3799b6e55912ad22",
+      "config/GR8E69/project.json": "0cb33e4468538899ffbe5160c75aac6e48a9504619516d527e547994173484b5",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7256,14 +7262,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1305296,
+    "matching_code_bytes": 1305844,
     "total_executable_code_bytes": 2492032,
-    "percent": 52.37878165288407,
+    "percent": 52.400771739688736,
     "categories": {
-      "reconstructed_game": 913080,
+      "reconstructed_game": 913628,
       "restored_library": 392216
     },
-    "matching_functions": 6835
+    "matching_functions": 6840
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -8216,7 +8222,9 @@
     "config/GR8E69/handler_gameoptions.json": "ecd7330c596c7f37bf9a541d5a97e20ae40836d41898dc19d10a93c504adcec6",
     "config/GR8E69/handler_languagemenu.json": "4a9dc112b0d364ecd374e6b0f31a6a7b586f5b8d5bb4702f04ffc415dd418224",
     "config/GR8E69/handler_leaderboard_fill.json": "7f163fccebe41f629d4f8c8d2da2c676a6815e56262f0b1ab35e7186325a8114",
+    "config/GR8E69/handler_levelmenu_ctor.json": "1a0eb5dcd36b28f46f816cfb0a347c4698b5db5900cf4c4a2900707792040009",
     "config/GR8E69/handler_loadgame.json": "4ce9ca6f090bc615f61b1774cfc4599ec4a6244bf7a9ffc2b52315c6275838c3",
+    "config/GR8E69/handler_loadslotselect_accept.json": "56c1fab5479e6664166ec5b760dfb54b45f19e8daa21381ff1853d039955b8ee",
     "config/GR8E69/handler_loadslotselect_cancel.json": "18a8696365cad0b3722b761bf6134f42d1192f431783cf6f454ed8b45f5aa4ca",
     "config/GR8E69/handler_main.json": "50527a63797e95ccc9aa6a0af3702185cad410b340687a38050d7c1d660514bc",
     "config/GR8E69/handler_mainmenu.json": "19721ad26b0ea36abea9cda9e915130bafd20d4c579a462018bfbc7352c89c4e",
@@ -8226,6 +8234,7 @@
     "config/GR8E69/handler_nameentry_init.json": "c0d4230094f81502627de8274b9d5b6bc49bef6777db5bb30e2ee627c75535e7",
     "config/GR8E69/handler_nameentry_string.json": "b091511c899781ed9f471535e1364c1608acbdff35633cf7377ce3b79ff51189",
     "config/GR8E69/handler_numplayers.json": "8955700d3de34413c4628e1d74f5a6a40e3ee4f16be726db8c6d78f23e18905c",
+    "config/GR8E69/handler_passwordentry.json": "0efd3ae04b43be8327f990dcf1770a6fe2d22e71f66a1dd28552d73e0437fc30",
     "config/GR8E69/handler_pausepreferences.json": "8be0fded2f57d6dc4af1fac05b9efee59927add37bb4ff1e40c5cfd5b543ee90",
     "config/GR8E69/handler_quadrantgroup.json": "849da7a189927840d4331af5ab992e135823dc871c9dc517a3a4c0380d515f67",
     "config/GR8E69/handler_saveslotbase.json": "f2a6b8128b2c4b5dbdb68b1f4a16c5f1bd537bef193f1dff69e32a4cd3769ac7",
@@ -8633,7 +8642,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "15bce8f0f8335bdc6da61e985adc0c3cd44b89864f3ce30f3799b6e55912ad22",
+    "config/GR8E69/project.json": "0cb33e4468538899ffbe5160c75aac6e48a9504619516d527e547994173484b5",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -11221,7 +11230,9 @@
     "src/frontend/handler_gameoptions.cpp": "521489aa89768f4eaae6e231aa5c4b163092edea3fec1fc063b39413290c335b",
     "src/frontend/handler_languagemenu.cpp": "85cff7599bf4497e492fa4eed3ae2708f3c4d4fd496b45c8f1eebf21ab3665c0",
     "src/frontend/handler_leaderboard_fill.cpp": "14cbc03582f7eb8066c6785114478d2ef4838e7653b5023f2e85086f94cb0440",
+    "src/frontend/handler_levelmenu_ctor.cpp": "11bc178f8b0dd710f440a98ae9beb801e7999aa8345fa34591802e7d977e49cd",
     "src/frontend/handler_loadgame.cpp": "d1edb124c0b755d05d6f0b5134db5f5dd56f6b8decd73838f45c2b2061116d86",
+    "src/frontend/handler_loadslotselect_accept.cpp": "69b9ea0069e4e1b4c9b3aaf427ad5edfe119b48165d1538e489b099173ef818c",
     "src/frontend/handler_loadslotselect_cancel.cpp": "b60f0dafb3e34901badc235803c3dd5a77f63c6f1f8b1c46db7ef481f8d96f8f",
     "src/frontend/handler_main.cpp": "a55baddde44cdbe6bc3f2267b93f2a14cb904843fca01b3a0b1e0a297735a42a",
     "src/frontend/handler_mainmenu.cpp": "56c2062e52b033cbc906a982e7743b9f44a4d655d5e176908a50f33f1da1b66c",
@@ -11231,6 +11242,7 @@
     "src/frontend/handler_nameentry_init.cpp": "4edbf5fd809231240d8daa6b040bf01623de1fd9436253448ab687dc8206ef04",
     "src/frontend/handler_nameentry_string.cpp": "b0290b40dc05e1a3f718883c12e0659168f7ebe106c54309fc584e92280762f0",
     "src/frontend/handler_numplayers.cpp": "74f10a3a4faae4832e0243415fc36e37e357d648b0957a06ef735a61d910e7db",
+    "src/frontend/handler_passwordentry.cpp": "5560f8d402dde88a13e9d1bf17ac1625bb368485c433500c373314b43072e2b9",
     "src/frontend/handler_pausepreferences.cpp": "9d227fdb3ecd734a9b9e069d5d5ce95c5d9d20e7e4ecc66a7dcdd73cd9261e56",
     "src/frontend/handler_quadrantgroup.cpp": "8443d712807646d503cd05a9fa489e5b8efcb36c22e5338e1f4ed7364dcb7726",
     "src/frontend/handler_saveslotbase.cpp": "f45e6e0c5e9508e59d5fe73b89139509de4d09e7a8660f1fe56467df166cbd8b",
@@ -62083,6 +62095,60 @@
       "discarded_functions": [],
       "object_sha256": "1744c0f2bf6741ef8df425e9e106c42f56171849663d9b4e6d9f731ec2ba4aee",
       "linked_sha256": "70ee19e70b5ef622bd0e67c64b6fbe39e114fe03b1cedbabd3eb7c134fea0fda"
+    },
+    {
+      "id": "handler_loadslotselect_accept",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 308,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "b62f4e26c5ab9466ad671ea9b8df4b855856f343afefdd5e914c360dc6825cbb",
+      "linked_sha256": "e61f18aa5a557f16538f9b03e436beadcaaf1a5a3215d5c45074030c654dd49a"
+    },
+    {
+      "id": "handler_passwordentry",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 212,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "3a9e2f705bad637b03f0009cae61cc94edebc8964d055f2e90abbfd018b9a0e0",
+      "linked_sha256": "cb1368e59e6d90221ac01625912b0e87bd275e3b02c8b4597a36b716a9ed6978"
+    },
+    {
+      "id": "handler_levelmenu_ctor",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 28,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "ab3e4458f70287fe578ea89bb0b0f723fbfa8c5e962c111b1255819e67690fa6",
+      "linked_sha256": "e259a5ea0bbadc55cbbc1d2714ffd034a70bf55abde2af5c6bb69106867c69d4"
     }
   ],
   "code_map": {
@@ -76317,13 +76383,6 @@
         "file_name": "handlerLevelMenu.cpp",
         "ranges": [
           {
-            "address": "0x80192504",
-            "size": 28,
-            "kind": "function",
-            "name": "__16HandlerLevelMenu",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80192520",
             "size": 1980,
             "kind": "function",
@@ -76832,56 +76891,6 @@
         "marker_interval": [
           "0x8019aa5c",
           "0x8019ac10"
-        ]
-      },
-      {
-        "name": "Unmatched files/handlerLoadSlotSelect.cpp [inferred file group]",
-        "file_record": 307,
-        "file_name": "handlerLoadSlotSelect.cpp",
-        "ranges": [
-          {
-            "address": "0x8019ac7c",
-            "size": 308,
-            "kind": "function",
-            "name": "OnAccept__21HandlerLoadSlotSelect",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x8019ac10",
-          "0x8019add0"
-        ]
-      },
-      {
-        "name": "Unmatched files/handlerPasswordEntry.cpp [inferred file group]",
-        "file_record": 308,
-        "file_name": "handlerPasswordEntry.cpp",
-        "ranges": [
-          {
-            "address": "0x8019add0",
-            "size": 196,
-            "kind": "function",
-            "name": "HandleEvent__20HandlerPasswordEntryUiP8FEObjectUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8019ae94",
-            "size": 8,
-            "kind": "function",
-            "name": "GetMyString__20HandlerPasswordEntry",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8019ae9c",
-            "size": 8,
-            "kind": "function",
-            "name": "GetStringLength__20HandlerPasswordEntry",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x8019add0",
-          "0x8019aea4"
         ]
       },
       {
