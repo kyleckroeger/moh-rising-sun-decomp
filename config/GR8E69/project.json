@@ -2486,7 +2486,13 @@
     "ai_OperationInlines.json",
     "volfrustum_transform.json",
     "volfrustum_box_sphere.json",
-    "meshparticle_update.json"
+    "meshparticle_update.json",
+    "ea_subtitle_array.json",
+    "ea_subtitle_array_count.json",
+    "ea_subtitle_setters.json",
+    "ea_subtitle_display.json",
+    "ea_subtitle_display_init.json",
+    "ea_subtitle_display_access.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

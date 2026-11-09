@@ -489,6 +489,12 @@
       "src/ea/stream_queuemem.cpp": "6f1c280637cd25d892f88786797a5e01d1dce4730a58facd038647778d727700",
       "src/ea/stream_requests.cpp": "628b813146037443b1dc351566560e95af6dd03fe3229049300c58462377ec8a",
       "src/ea/stream_tail.cpp": "58c0e9c270914591c50f73b55564a12dcf0961e895bd944c20bb6d9ee7fed546",
+      "src/ea/subtitle_array.cpp": "a4e72c6c1d9fdc5455f85b629f0261da7857dacce8346877a993172d22b7b240",
+      "src/ea/subtitle_array_count.cpp": "52cecdf1a349b8708791575c3b8c70ed76dee926000aa33206d9f590810bf7a5",
+      "src/ea/subtitle_display.cpp": "187fd373257b06c20be397e55e604465540b57a6034d353e856926dc267d9be6",
+      "src/ea/subtitle_display_access.cpp": "b393556ec76511ac382b9d17fe2f9e89620211e27451b9c340e494cfb55a83c8",
+      "src/ea/subtitle_display_init.cpp": "5770abe85a79eb4e2d4ac993505c841bc656fbaa846b6f12cc645a784f33ef18",
+      "src/ea/subtitle_setters.cpp": "d145c637b7f1226281b756ca4b9b5ad50537bc499e02d8666f11a8644d18769b",
       "src/ea/syncfile.cpp": "3df57d815e9d7e8ef396fdcf881e8e89ed7b7e77c762f80a3a18c0bf42ed09ba",
       "src/ea/systask.cpp": "064e88a22a3eb4ce2abeccd180f0df17d49e86028b44b3fc0a54e8cf7365d4bb",
       "src/ea/threads.cpp": "60e5e4a5f53edea6d305588d9860403c91e306524deff60d8efbdf2b7319d951",
@@ -3674,6 +3680,12 @@
       "config/GR8E69/ea_stream_queuemem.json": "7003884f83fe206169324dc1fb1e95631bbca431eb7987e030d05d188875554a",
       "config/GR8E69/ea_stream_requests.json": "a88bc79bf7b71880ac560f5bbbbd9303de73d63f7d3b0fb602dc7e09cb0a55db",
       "config/GR8E69/ea_stream_tail.json": "5e234eb8f01bf6b785c315e73355c1b557a2bf177ec08bdc4eb04c09be0c7a86",
+      "config/GR8E69/ea_subtitle_array.json": "5256f9c11f43389b30669e82b9a5b1c3dcfe01510b7e2164088602bcc2af475c",
+      "config/GR8E69/ea_subtitle_array_count.json": "97bd337d03fa77de6b95ecf9319092b16d5f828a89827b974e9fe54dd4ec7d2a",
+      "config/GR8E69/ea_subtitle_display.json": "1375ec9ecead1b0fdfe1737a09b3e81395d73bc90421bfd284d5481ed0615494",
+      "config/GR8E69/ea_subtitle_display_access.json": "2b0af8323e71dfb1b85358a1f61cd69840cba0f1f39127129c20f6d146ae9e51",
+      "config/GR8E69/ea_subtitle_display_init.json": "5a3690aa0bd1891ec2bc1085414b6169d77dae4dbdc48732b261117059b64ac1",
+      "config/GR8E69/ea_subtitle_setters.json": "60cc20fc2110f629b7e24c08529c96354260075c9eba6560dc338b99e8886352",
       "config/GR8E69/ea_syncfile.json": "5ad7e6a48ddd491ff43841235023597f0e85b8175ab705de2379f78c7ea3b886",
       "config/GR8E69/ea_systask.json": "141ec34b15f33585ca8126e62d8155683f6b747bb061d43d88ac144d23f18663",
       "config/GR8E69/ea_threads.json": "b334b5342f45164624e235b5721cf91d927372692207369e96d177e29430be3f",
@@ -4464,7 +4476,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "6b8d56a0d23cc5a236e7feae14180f1fc47c51d9807fafc0be0574ad1dc994fe",
+      "config/GR8E69/project.json": "f701d4748b58815a1f7155a52c8c7b395bc3fc6ccb8f8ec8a042e9521e9c450e",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7195,14 +7207,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1283644,
+    "matching_code_bytes": 1284816,
     "total_executable_code_bytes": 2492032,
-    "percent": 51.50993245672608,
+    "percent": 51.556962350403204,
     "categories": {
-      "reconstructed_game": 891428,
+      "reconstructed_game": 892600,
       "restored_library": 392216
     },
-    "matching_functions": 6762
+    "matching_functions": 6789
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -7753,6 +7765,12 @@
     "config/GR8E69/ea_stream_queuemem.json": "7003884f83fe206169324dc1fb1e95631bbca431eb7987e030d05d188875554a",
     "config/GR8E69/ea_stream_requests.json": "a88bc79bf7b71880ac560f5bbbbd9303de73d63f7d3b0fb602dc7e09cb0a55db",
     "config/GR8E69/ea_stream_tail.json": "5e234eb8f01bf6b785c315e73355c1b557a2bf177ec08bdc4eb04c09be0c7a86",
+    "config/GR8E69/ea_subtitle_array.json": "5256f9c11f43389b30669e82b9a5b1c3dcfe01510b7e2164088602bcc2af475c",
+    "config/GR8E69/ea_subtitle_array_count.json": "97bd337d03fa77de6b95ecf9319092b16d5f828a89827b974e9fe54dd4ec7d2a",
+    "config/GR8E69/ea_subtitle_display.json": "1375ec9ecead1b0fdfe1737a09b3e81395d73bc90421bfd284d5481ed0615494",
+    "config/GR8E69/ea_subtitle_display_access.json": "2b0af8323e71dfb1b85358a1f61cd69840cba0f1f39127129c20f6d146ae9e51",
+    "config/GR8E69/ea_subtitle_display_init.json": "5a3690aa0bd1891ec2bc1085414b6169d77dae4dbdc48732b261117059b64ac1",
+    "config/GR8E69/ea_subtitle_setters.json": "60cc20fc2110f629b7e24c08529c96354260075c9eba6560dc338b99e8886352",
     "config/GR8E69/ea_syncfile.json": "5ad7e6a48ddd491ff43841235023597f0e85b8175ab705de2379f78c7ea3b886",
     "config/GR8E69/ea_systask.json": "141ec34b15f33585ca8126e62d8155683f6b747bb061d43d88ac144d23f18663",
     "config/GR8E69/ea_threads.json": "b334b5342f45164624e235b5721cf91d927372692207369e96d177e29430be3f",
@@ -8543,7 +8561,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "6b8d56a0d23cc5a236e7feae14180f1fc47c51d9807fafc0be0574ad1dc994fe",
+    "config/GR8E69/project.json": "f701d4748b58815a1f7155a52c8c7b395bc3fc6ccb8f8ec8a042e9521e9c450e",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -10750,6 +10768,12 @@
     "src/ea/stream_queuemem.cpp": "6f1c280637cd25d892f88786797a5e01d1dce4730a58facd038647778d727700",
     "src/ea/stream_requests.cpp": "628b813146037443b1dc351566560e95af6dd03fe3229049300c58462377ec8a",
     "src/ea/stream_tail.cpp": "58c0e9c270914591c50f73b55564a12dcf0961e895bd944c20bb6d9ee7fed546",
+    "src/ea/subtitle_array.cpp": "a4e72c6c1d9fdc5455f85b629f0261da7857dacce8346877a993172d22b7b240",
+    "src/ea/subtitle_array_count.cpp": "52cecdf1a349b8708791575c3b8c70ed76dee926000aa33206d9f590810bf7a5",
+    "src/ea/subtitle_display.cpp": "187fd373257b06c20be397e55e604465540b57a6034d353e856926dc267d9be6",
+    "src/ea/subtitle_display_access.cpp": "b393556ec76511ac382b9d17fe2f9e89620211e27451b9c340e494cfb55a83c8",
+    "src/ea/subtitle_display_init.cpp": "5770abe85a79eb4e2d4ac993505c841bc656fbaa846b6f12cc645a784f33ef18",
+    "src/ea/subtitle_setters.cpp": "d145c637b7f1226281b756ca4b9b5ad50537bc499e02d8666f11a8644d18769b",
     "src/ea/syncfile.cpp": "3df57d815e9d7e8ef396fdcf881e8e89ed7b7e77c762f80a3a18c0bf42ed09ba",
     "src/ea/systask.cpp": "064e88a22a3eb4ce2abeccd180f0df17d49e86028b44b3fc0a54e8cf7365d4bb",
     "src/ea/threads.cpp": "60e5e4a5f53edea6d305588d9860403c91e306524deff60d8efbdf2b7319d951",
@@ -61415,6 +61439,120 @@
       "discarded_functions": [],
       "object_sha256": "5acaf03d4c2644e5a6f64e0f8b1ad6a8eff8af24e50bd353d0ff599077668c73",
       "linked_sha256": "1d6eab9a7502a0cf1965cc20731d8a24aa7b21c731dd511e74d63b29f8a250e3"
+    },
+    {
+      "id": "ea_subtitle_array",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 216,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "3c08c746cd436942bf58244f1f7f22cc780b30eb55ceda374e6161f57aa589e6",
+      "linked_sha256": "481a8c556d506a365e16126d163e4fd441f32b58e24536c28c2e3f46b44aa880"
+    },
+    {
+      "id": "ea_subtitle_array_count",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 8,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "918216c7459a3119626180fdcfa163eb793793955c1654d92bb68ee32f72a894",
+      "linked_sha256": "1e1b909bf11c90327be422118567bd3cdc47000b65bf33b225408ceecb19565d"
+    },
+    {
+      "id": "ea_subtitle_setters",
+      "category": "reconstructed_game",
+      "functions": 14,
+      "code_bytes": 208,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "bee4223243bb6a4e46da635eac33338b3b555f9b3c621c613d2d313710fe7fa0",
+      "linked_sha256": "b6ddeaafd19987beea9bc6660dfdf38e6153dbb7f121b14c71d8c62a114b31b3"
+    },
+    {
+      "id": "ea_subtitle_display",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 580,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "8ed5662670eb14048afa11fd009069ca67c34f1f769092755a1c15e3caa75c42",
+      "linked_sha256": "5e431a84f8af4bbbcc4583f9fa5b30d3203b73b5e09f9c0cf996056562c26b33"
+    },
+    {
+      "id": "ea_subtitle_display_init",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 108,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "cc4d0b2525ecb20207c3fc5db2c7315709c91898975b1c5b2ff2c8760e1444ca",
+      "linked_sha256": "9f7e05a2dbcda0f0da0237e99c86c644da707c3ebd723a6f0821ef16c6226162"
+    },
+    {
+      "id": "ea_subtitle_display_access",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 52,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "26af18feda361df27cf0ac5b74cd209339f3bfc7c9ed04b17fa299658d2f8ba8",
+      "linked_sha256": "9c2727064344910bcbf2d2c4781cc3178318fdfb51175011509d063cf3d3d992"
     }
   ],
   "code_map": {
@@ -78493,41 +78631,13 @@
         ]
       },
       {
-        "name": "Unknown file/.text @ 801b1278",
+        "name": "Unknown file/.text @ 801b1350",
         "ranges": [
-          {
-            "address": "0x801b1278",
-            "size": 20,
-            "kind": "function",
-            "name": "__Q24RCMP17AV_SUBTITLE_ARRAY",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801b128c",
-            "size": 160,
-            "kind": "function",
-            "name": "_._Q24RCMP17AV_SUBTITLE_ARRAY",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801b132c",
-            "size": 36,
-            "kind": "function",
-            "name": "GetSubtitle__Q24RCMP17AV_SUBTITLE_ARRAYUi",
-            "evidence": "unknown-file"
-          },
           {
             "address": "0x801b1350",
             "size": 148,
             "kind": "function",
             "name": "FindSubtitle__Q24RCMP17AV_SUBTITLE_ARRAYUi",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801b13e4",
-            "size": 8,
-            "kind": "function",
-            "name": "GetNumberOfSubtitle__Q24RCMP17AV_SUBTITLE_ARRAY",
             "evidence": "unknown-file"
           }
         ]
@@ -78582,104 +78692,6 @@
             "size": 2528,
             "kind": "function",
             "name": "Init__Q24RCMP17AV_SUBTITLE_ARRAYPvUi",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801b220c",
-            "size": 104,
-            "kind": "function",
-            "name": "__Q24RCMP11AV_SUBTITLE",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801b2274",
-            "size": 8,
-            "kind": "function",
-            "name": "SetPosX__Q24RCMP11AV_SUBTITLEi",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801b227c",
-            "size": 8,
-            "kind": "function",
-            "name": "SetPosY__Q24RCMP11AV_SUBTITLEi",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801b2284",
-            "size": 8,
-            "kind": "function",
-            "name": "SetWidth__Q24RCMP11AV_SUBTITLEUi",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801b228c",
-            "size": 8,
-            "kind": "function",
-            "name": "SetHeight__Q24RCMP11AV_SUBTITLEUi",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801b2294",
-            "size": 8,
-            "kind": "function",
-            "name": "SetStrID__Q24RCMP11AV_SUBTITLEUi",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801b229c",
-            "size": 8,
-            "kind": "function",
-            "name": "SetFrameNumber__Q24RCMP11AV_SUBTITLEUi",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801b22a4",
-            "size": 8,
-            "kind": "function",
-            "name": "SetJustifyX__Q24RCMP11AV_SUBTITLEQ34RCMP11AV_SUBTITLE12JUSTIFY_ENUM",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801b22ac",
-            "size": 8,
-            "kind": "function",
-            "name": "SetJustifyY__Q24RCMP11AV_SUBTITLEQ34RCMP11AV_SUBTITLE12JUSTIFY_ENUM",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801b22b4",
-            "size": 8,
-            "kind": "function",
-            "name": "SetShapeIndex__Q24RCMP11AV_SUBTITLEUi",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801b22bc",
-            "size": 8,
-            "kind": "function",
-            "name": "SetA__Q24RCMP11AV_SUBTITLEUi",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801b22c4",
-            "size": 8,
-            "kind": "function",
-            "name": "SetR__Q24RCMP11AV_SUBTITLEUi",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801b22cc",
-            "size": 8,
-            "kind": "function",
-            "name": "SetG__Q24RCMP11AV_SUBTITLEUi",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x801b22d4",
-            "size": 8,
-            "kind": "function",
-            "name": "SetB__Q24RCMP11AV_SUBTITLEUi",
             "evidence": "unknown-file"
           }
         ]
@@ -78740,41 +78752,6 @@
             "evidence": "local-file-symbol"
           },
           {
-            "address": "0x801b3460",
-            "size": 72,
-            "kind": "function",
-            "name": "__Q24RCMP11VD_SUBTITLE",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801b34a8",
-            "size": 72,
-            "kind": "function",
-            "name": "_._Q24RCMP11VD_SUBTITLE",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801b34f0",
-            "size": 140,
-            "kind": "function",
-            "name": "DeleteTars__Q24RCMP11VD_SUBTITLE",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801b357c",
-            "size": 160,
-            "kind": "function",
-            "name": "CreateTars__Q24RCMP11VD_SUBTITLE",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801b361c",
-            "size": 136,
-            "kind": "function",
-            "name": "DeleteWrappedStrings__Q24RCMP11VD_SUBTITLE",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x801b36a4",
             "size": 496,
             "kind": "function",
@@ -78782,38 +78759,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x801b3894",
-            "size": 108,
-            "kind": "function",
-            "name": "Init__Q24RCMP11VD_SUBTITLEPvbP4FONTT1PQ24RCMP17AV_SUBTITLE_ARRAY",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x801b3900",
             "size": 1724,
             "kind": "function",
             "name": "Draw__Q24RCMP11VD_SUBTITLEPQ24EAGL12DrawTexturedPQ24RCMP11AV_SUBTITLE",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801b3fbc",
-            "size": 20,
-            "kind": "function",
-            "name": "GetPos__Q24RCMP11VD_SUBTITLEPfT1",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801b3fd0",
-            "size": 12,
-            "kind": "function",
-            "name": "SetScale__Q24RCMP11VD_SUBTITLEff",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801b3fdc",
-            "size": 20,
-            "kind": "function",
-            "name": "GetScale__Q24RCMP11VD_SUBTITLEPfT1",
             "evidence": "adjacent-compiler-markers"
           }
         ],

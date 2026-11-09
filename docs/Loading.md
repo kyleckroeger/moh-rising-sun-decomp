@@ -156,6 +156,14 @@ run read in place, 4 for a chunk of at most 16 KB, 5 for finished. Verified: `QE
 record's member names and the state meanings. Not reconstructed yet: `StartNonAlignedAyncRead`, `AyncDVDCallback`,
 `ReadFileThreadFunc`, `readfile`, `initfiledev`.
 
+## Movie subtitles
+
+`RCMP::AV_SUBTITLE_ARRAY` holds the parsed subtitles, 52 bytes each, and `RCMP::VD_SUBTITLE` draws them with one `TAR` per
+shape in the subtitle shape file. The display's loops are unreduced, so its fragments build with `-fno-strength-reduce`;
+that describes the code, not necessarily the original setting. Verified: the array's construction, destruction and lookup, a subtitle's defaults and setters, and the display's `Init`,
+`DeleteTars`, `CreateTars` and accessors. Inferred: member names. Not reconstructed: `FindSubtitle` (four instructions of
+order), the subtitle script parser (`AV_SUBTITLE_ARRAY::Init` and its helpers), `CreateWrappedStrings`, `Draw`.
+
 ## MohLoader
 
 `MohLoader` and `MohLoaderGc` hold the console-side start-up state. `g_pPersistent` points to a
