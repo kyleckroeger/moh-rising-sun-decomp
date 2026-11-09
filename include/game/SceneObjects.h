@@ -812,8 +812,13 @@ class CHierObject : public CStaticObject {
 // Forwards to an owned animated object; the pointer is at +0xb40. Original class, member-only view.
 class CHierAnimObject : public CHierObject {
   public:
+    class StateDone;
     void Init(CHierObject *, int, int, int, CVector3 &, CAnimObject *);
-    void AttachAnimatedObject();
+    int AttachAnimatedObject();
+    int SetAnimationState(const char *, int);
+    int FindAttachNode(int, CMatrix *);
+    CAnimObject *AsAnimObject();
+    const CAnimObject *AsAnimObject() const;
     void CleanUp();
     void Draw(CDrawContext &);
     IVolume *GetWorldBoundingVolume(ISceneNode::EVolumeType) const;
@@ -822,6 +827,9 @@ class CHierAnimObject : public CHierObject {
     void OnCollision(const CCollision &);
     CVector3 GetWorldLinearVelocity() const;
     CAnimObject *animObject; // +0xb40
+    unsigned char unknown_b44[0xb50 - 0xb44];
+    CMatrix localTransform; // +0xb50
+    unsigned char doneState[12]; // +0xb90: a StateDone.
 };
 
 class TriggerObject;

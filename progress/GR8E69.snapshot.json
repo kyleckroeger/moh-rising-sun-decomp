@@ -1312,7 +1312,7 @@
       "src/scene/HearingVolumeCtor.cpp": "916f7119904114395d56b2e6b1613a0f83cc3e9454fb7e7cb70875a897663c85",
       "src/scene/HearingVolumeId.cpp": "c0541ceb9e4412264de4885574baaa1e3e8aed2dd44f85f41d013caf645d220e",
       "src/scene/HierAnimObjectA.cpp": "9283de5ba8b3bbbf79faa444b5cbd2c62ac8c35c30c4e16b5ecc716e10fb833a",
-      "src/scene/HierAnimObjectB.cpp": "d8b064cd3066c42bf07322989e993ab0ab51fa24246d5622adb2e802355f1efc",
+      "src/scene/HierAnimObjectB.cpp": "50066dbfad41c85521985b0ccd983519f0746f3bcff126420fb4973c3458dfab",
       "src/scene/HierObjectAnimCommit.cpp": "8f068b35ea12f9344d0f0af66b3e0814ba323e5b388f97a7ec159e0df633215a",
       "src/scene/HierObjectAnimMotion.cpp": "b50ddaca4211a9e46316c1d99d40895a26d47c597ab7322e5c520d6ef0e521f1",
       "src/scene/HierObjectAttached.cpp": "d3ee6d442f0ed6dd0cd5b32a7d8f6f989c727ba62c23a996159607836a577b92",
@@ -2701,7 +2701,7 @@
       "include/game/Rcmp.h": "938e4965d3c2b0d0f48d815f17eaf162b3fb5b491ec3dfd4bcc5814197bfa6ee",
       "include/game/SceneCollisions.h": "2a1769143eeecf427cad1a013ebf02f6b0d2ee83e011b58e5c62cd141306cd64",
       "include/game/SceneNode.h": "e57802b8a891e60ae5642230d29fea224075a837267cac91413b2a7fae00a560",
-      "include/game/SceneObjects.h": "29787d90c61f3df75ffc827c897ff58324d17ace2b78c6b300d067851e55b536",
+      "include/game/SceneObjects.h": "06603983fb1d7c56090ef3dc62e233454f922709947f3160813d9b936de780b8",
       "include/game/Screen.h": "86139c54ad8a9fdfa1e0842d665f4cd5699ac216901fab040218e8b7adc2c78a",
       "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
       "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
@@ -4147,7 +4147,7 @@
       "config/GR8E69/scene_HearingVolumeCtor.json": "32d1465ec83e30ff981a4982dcb99ed445dfff604e4865af5cf273571f30f576",
       "config/GR8E69/scene_HearingVolumeId.json": "6506685dbec15b0e6d32529f1d55f3927c23ef73a9d045089071c3286db5d5d7",
       "config/GR8E69/scene_HierAnimObjectA.json": "00ee093c8b03a969ce54c1512e76ff68d33b4d3d11ded5a29d221c4dd470ea7f",
-      "config/GR8E69/scene_HierAnimObjectB.json": "df33d0da021654a581a21e996765155a734679b84e6e104ff3208500ab1cc097",
+      "config/GR8E69/scene_HierAnimObjectB.json": "b61b28a4958bd99626fa815a3328474f8a4d2f8e563665e55a564e2d125e50ea",
       "config/GR8E69/scene_HierObjectAnimCommit.json": "ed6416626240be41842c198751e0bf5ec8d1812b0add732fab38f67d41b46db6",
       "config/GR8E69/scene_HierObjectAnimMotion.json": "bfe9da1c3c83bd41d259c8ecd20d394c47736fd2c5285a73f0ec705f626361ff",
       "config/GR8E69/scene_HierObjectAttached.json": "ca3af904048959576a81d88637bea66d84bdf9e2a85f7c4a0f368627d9aa7495",
@@ -6746,14 +6746,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1171536,
+    "matching_code_bytes": 1172016,
     "total_executable_code_bytes": 2492032,
-    "percent": 47.01127433355591,
+    "percent": 47.0305357234578,
     "categories": {
-      "reconstructed_game": 779320,
+      "reconstructed_game": 779800,
       "restored_library": 392216
     },
-    "matching_functions": 6034
+    "matching_functions": 6041
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -8013,7 +8013,7 @@
     "config/GR8E69/scene_HearingVolumeCtor.json": "32d1465ec83e30ff981a4982dcb99ed445dfff604e4865af5cf273571f30f576",
     "config/GR8E69/scene_HearingVolumeId.json": "6506685dbec15b0e6d32529f1d55f3927c23ef73a9d045089071c3286db5d5d7",
     "config/GR8E69/scene_HierAnimObjectA.json": "00ee093c8b03a969ce54c1512e76ff68d33b4d3d11ded5a29d221c4dd470ea7f",
-    "config/GR8E69/scene_HierAnimObjectB.json": "df33d0da021654a581a21e996765155a734679b84e6e104ff3208500ab1cc097",
+    "config/GR8E69/scene_HierAnimObjectB.json": "b61b28a4958bd99626fa815a3328474f8a4d2f8e563665e55a564e2d125e50ea",
     "config/GR8E69/scene_HierObjectAnimCommit.json": "ed6416626240be41842c198751e0bf5ec8d1812b0add732fab38f67d41b46db6",
     "config/GR8E69/scene_HierObjectAnimMotion.json": "bfe9da1c3c83bd41d259c8ecd20d394c47736fd2c5285a73f0ec705f626361ff",
     "config/GR8E69/scene_HierObjectAttached.json": "ca3af904048959576a81d88637bea66d84bdf9e2a85f7c4a0f368627d9aa7495",
@@ -9391,7 +9391,7 @@
     "include/game/Rcmp.h": "938e4965d3c2b0d0f48d815f17eaf162b3fb5b491ec3dfd4bcc5814197bfa6ee",
     "include/game/SceneCollisions.h": "2a1769143eeecf427cad1a013ebf02f6b0d2ee83e011b58e5c62cd141306cd64",
     "include/game/SceneNode.h": "e57802b8a891e60ae5642230d29fea224075a837267cac91413b2a7fae00a560",
-    "include/game/SceneObjects.h": "29787d90c61f3df75ffc827c897ff58324d17ace2b78c6b300d067851e55b536",
+    "include/game/SceneObjects.h": "06603983fb1d7c56090ef3dc62e233454f922709947f3160813d9b936de780b8",
     "include/game/Screen.h": "86139c54ad8a9fdfa1e0842d665f4cd5699ac216901fab040218e8b7adc2c78a",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
     "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
@@ -10888,7 +10888,7 @@
     "src/scene/HearingVolumeCtor.cpp": "916f7119904114395d56b2e6b1613a0f83cc3e9454fb7e7cb70875a897663c85",
     "src/scene/HearingVolumeId.cpp": "c0541ceb9e4412264de4885574baaa1e3e8aed2dd44f85f41d013caf645d220e",
     "src/scene/HierAnimObjectA.cpp": "9283de5ba8b3bbbf79faa444b5cbd2c62ac8c35c30c4e16b5ecc716e10fb833a",
-    "src/scene/HierAnimObjectB.cpp": "d8b064cd3066c42bf07322989e993ab0ab51fa24246d5622adb2e802355f1efc",
+    "src/scene/HierAnimObjectB.cpp": "50066dbfad41c85521985b0ccd983519f0746f3bcff126420fb4973c3458dfab",
     "src/scene/HierObjectAnimCommit.cpp": "8f068b35ea12f9344d0f0af66b3e0814ba323e5b388f97a7ec159e0df633215a",
     "src/scene/HierObjectAnimMotion.cpp": "b50ddaca4211a9e46316c1d99d40895a26d47c597ab7322e5c520d6ef0e521f1",
     "src/scene/HierObjectAttached.cpp": "d3ee6d442f0ed6dd0cd5b32a7d8f6f989c727ba62c23a996159607836a577b92",
@@ -43708,8 +43708,8 @@
     {
       "id": "scene_HierAnimObjectB",
       "category": "reconstructed_game",
-      "functions": 4,
-      "code_bytes": 584,
+      "functions": 11,
+      "code_bytes": 1064,
       "compiler_family": "ProDG",
       "compiler_version": "3.8.1",
       "compiler_flags": [
@@ -43720,8 +43720,8 @@
       ],
       "strip_unused": false,
       "discarded_functions": [],
-      "object_sha256": "2cecc1d866573137cd1bca1c2aaf5616e7d93758efabe3f52c63500b7a429a10",
-      "linked_sha256": "49cf21ad2a9cd8cfdfe26240f520fee72d24c2718b504a3f5b82a1cc35b23d70"
+      "object_sha256": "cbb4576fc683980c2c1614fe1de81b38ecd96a0a286babce00b36db805d887e5",
+      "linked_sha256": "d2679a06c25be3f897c84b2fdf353eb635b710fe56fd88977ef88b2a35d5ed79"
     },
     {
       "id": "scene_TankObjectInit",
@@ -66415,55 +66415,6 @@
             "size": 60,
             "kind": "function",
             "name": "_._15CHierAnimObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d33a8",
-            "size": 36,
-            "kind": "function",
-            "name": "__Q215CHierAnimObject9StateDone",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d33cc",
-            "size": 100,
-            "kind": "function",
-            "name": "Execute__Q215CHierAnimObject9StateDone",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d3430",
-            "size": 92,
-            "kind": "function",
-            "name": "SetAnimationState__15CHierAnimObjectPCci",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d348c",
-            "size": 100,
-            "kind": "function",
-            "name": "FindAttachNode__15CHierAnimObjectiP7CMatrix",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d34f0",
-            "size": 136,
-            "kind": "function",
-            "name": "AttachAnimatedObject__15CHierAnimObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d3578",
-            "size": 8,
-            "kind": "function",
-            "name": "AsAnimObject__15CHierAnimObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d3580",
-            "size": 8,
-            "kind": "function",
-            "name": "AsAnimObject__C15CHierAnimObject",
             "evidence": "adjacent-compiler-markers"
           }
         ],
