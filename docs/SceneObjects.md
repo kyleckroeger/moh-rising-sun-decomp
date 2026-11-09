@@ -166,6 +166,16 @@ then merges its identical body into state 8's. `SetUpperTranslation` is only an 
 `CStaticObject::ModifyMotionData` and `TranslateFromScript` share one unit because their literals
 are neighbors: the first ends four bytes short of an eight-byte boundary after its double.
 
+## Heads-up display updates
+
+`CHeadsUpDisplay::Update`, `UpdateCompass`, `UpdateAmmo`, `UpdateWeaponName` and
+`LetterboxTransition` share a unit because the last one's double closes a pool that starts at
+`UpdateCompass`. They take the file group's `-ffast-math` profile. Member names are inferred:
+the "last" counters hold the values `Update` saw on the previous frame, and any change restarts a
+panel's 4.5-tick timer. `lastHealth` is the first word of the player's script data; that this word
+is health is inferred. `case 1` in the letterbox switch has no body, which is what leaves the
+comparison tree's left side empty.
+
 ## Parked
 
 These still differ, with instruction differences in brackets; drafts are kept outside the

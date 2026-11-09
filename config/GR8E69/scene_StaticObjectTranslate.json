@@ -46,5 +46,7 @@
     "sqrtf": "0x80270538"
   },
   "discarded_functions": [],
-  "undefined_in_discarded_code": []
+  "undefined_in_discarded_code": [],
+  "original_file": "static_obj.cpp",
+  "original_file_index": 833
 }
