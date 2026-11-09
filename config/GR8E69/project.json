@@ -2343,7 +2343,12 @@
     "compartment_instance_loaders.json",
     "compartment_instance_type.json",
     "compartment_instance_model.json",
-    "compartment_primers.json"
+    "compartment_primers.json",
+    "ai_Task.json",
+    "ai_StateIteratorA.json",
+    "ai_StateIteratorSet.json",
+    "ai_StateIteratorB.json",
+    "ai_StateIteratorC.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

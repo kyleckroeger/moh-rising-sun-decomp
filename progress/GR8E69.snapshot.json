@@ -704,6 +704,11 @@
       "src/eagl_loading/SymbolPoolLifetime.cpp": "61de87b8cb1d6af3ea46e3b6fa3f65f9f989b46099529880c41659c3a664d1c3",
       "src/eagl_loading/SymbolPoolSearch.cpp": "5bf5c14f0ec9800b787fae8bf4d8cc8fe3d49859e6f4d604534ea1f8ac99360d",
       "src/eagl_loading/dlsym.cpp": "9cec232bcbba73d0c2109f30be340b337b39788c9be69369e21fd9823cffd1c9",
+      "src/eala/StateIteratorA.cpp": "b9241a9e4ae52b300754dd23096dc344a7fd7e322e8b116b570e7c4d6dccce02",
+      "src/eala/StateIteratorB.cpp": "0c651854dc24e79e29aada7da6658436b71ee05eb2d95e2a1f785fff7e786064",
+      "src/eala/StateIteratorC.cpp": "56f09eff412bbaaabc628bbfff2235d55a43defc38da6317976c005187b67313",
+      "src/eala/StateIteratorSet.cpp": "e1985fcbbab1401a70aa48a057d9bbc3b88222337bd3783576a7c26b0ff9ebde",
+      "src/eala/Task.cpp": "5a116bec92b6f4451bb6bc65beaa11ec0fed5b43cad538faeb04393bee73b688",
       "src/endian/scalar.cpp": "090834c02299042f5884d0302baa71af4a07fa67443cfe933d3fdd7405fdc146",
       "src/endian/short.cpp": "27ea58209e70d97588b380691fc1e414b1deb8259ec7b245c46d6af57df08fb9",
       "src/flexprop/FlexBool.cpp": "6babfd7c08477b15b2c42789d36dc38e62854c608a9506406b67baeb70463aef",
@@ -2662,6 +2667,8 @@
       "include/game/Capsule.h": "332dd06329ac7dc3ac5fc01793549a41e2defbe70298018accd2ce79c9e3ce3b",
       "include/game/CharacterShadow.h": "048ae3efc6fd6d3119f4c234f5bacd499c748c55b1573df386f686411e93a67a",
       "include/game/CharacterSkeleton.h": "809e263b95e355bb4f99f842724939f6ca8d1b612bdd55eaed0107da180eaef5",
+      "include/game/CharacterTask.h": "a42b2554059ebddb7f589174bbacd5f6fc17dd64d221b3711d32dba4ad42c023",
+      "include/game/CharacterTasks.h": "55321b7534efeaf0f8257858b5f421421fa869b98cc41620c488010556bc6d2d",
       "include/game/CollisionMath.h": "a9a8ee2674ee845e1549d3f906d34a2c02543fe5d4f8fbc40d42c4fdd0f22f2d",
       "include/game/CollisionProjection.h": "5efc5439936194866e0ee58e43061509d1252ca7ed70983b652f4919a3159332",
       "include/game/CollisionVolume.h": "26ba5d9a9865a0185f0e87db21b13faf3214b7e213201e825181412f0f9a5b7c",
@@ -2822,8 +2829,8 @@
       "include/game/WorldVolume.h": "9acfaf28c317912de14baef7ca50a3d80175ddc31dcf83cea18c80725e688318",
       "include/game-containers/AlgorithmTypes.h": "cd4a28c7c2eb6a6cb85477587065b64ff0e86ee9010ceed6df1637ca9fcffe14",
       "include/game-containers/ContainerTypes.h": "f6b7f0133646a5eb70ccc5df78ced025919dee88dcd81edc3f565d0b71dd407c",
-      "include/game-containers/ResourceTypes.h": "85904ef25745bb8f3903107f26b5b9a3a3017f106d0362086f5b9c602fdb0b27",
-      "include/game-containers/TargetTypes.h": "3ac99430c5eabe7c725b67a8b280b4ec55003d4bb6763dc1746023ced2fda08f",
+      "include/game-containers/ResourceTypes.h": "f9267bf87573fe8a312686838ea72daf9ff84092ec121ac0dbe3716b109957c0",
+      "include/game-containers/TargetTypes.h": "2c1eb2911c9bbfc217161fe5d274aad0633cd8d043a3ce2a7c0b5c561cebafe5",
       "include/newlib/_ansi.h": "98221b391010195de4e2824879860b7fe98a8f6bc8ab2c5eaa2a3b029b4f1ad4",
       "include/newlib/_syslist.h": "546b13e022a2e53bfad0138e9294d92210773c9a7a61ee2d4ffb152ed4a6396a",
       "include/newlib/ar.h": "d7aad21a7db658f45925014ea2ffd6cb7ba3d40fad05c9a00e77bfe912577ae3",
@@ -3170,7 +3177,12 @@
       "config/GR8E69/ai_PolemineBehavior.json": "e1649ae5303f1eb384dd28825a7fd97cb68efecf3b5251b60f4fdaff9413cbbc",
       "config/GR8E69/ai_RifleBehavior.json": "2dbc34c425e032263dc153292249b04c0f8f54bfbf6f7162823a4954dbc8faf4",
       "config/GR8E69/ai_ScriptedBehavior.json": "c0a89f04738609d34dcb7babfc4a42dac2dd54b5706f7f22ae953bb672ecaf17",
+      "config/GR8E69/ai_StateIteratorA.json": "fd65ed02193b67b4eca286481bf760b59e4364db5d1b85c7737cbd4667770900",
+      "config/GR8E69/ai_StateIteratorB.json": "cadfc26bc93899ec433c605d317bd5e1c9471dc7beb24002721af7163296020a",
+      "config/GR8E69/ai_StateIteratorC.json": "48ba6d4f0ca1d9bac2a558405a04e76105eaf53369142820c3a7fcf6619f752a",
+      "config/GR8E69/ai_StateIteratorSet.json": "463da4b8bb05fe55dfc9740b15d578f3be451f4f4b7664fb0d2a7fc983ecb19d",
       "config/GR8E69/ai_SwordBehavior.json": "f83d9ad360c79f28c46140ceab34e9c3b1db19a75f1b9ef0b5c248db3ee7dcfe",
+      "config/GR8E69/ai_Task.json": "bde8d553fabb111bfd98ceebc211bf80b6af5ca40aa2e29be004987685ef67dc",
       "config/GR8E69/ai_filter_clock.json": "f2034db8752a041debc3e5f86662b062dae08812cf71d3c95f66f339dbd705b1",
       "config/GR8E69/ai_filter_splines.json": "26b024e231fa1eb564b501c3108a8fb71d50e76cdc7ad97470e83b7b39b7fbde",
       "config/GR8E69/ai_locomotion_access.json": "a561dbd2e9dc1e3932ea24b9e503dd28adac5b45f786bacaa0dd26e3f5cc6154",
@@ -4186,7 +4198,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "05fb83ed79f6f0cb657cd1b2cb1ab70bda733d1b7461eeb0fa897ea1e802958c",
+      "config/GR8E69/project.json": "8ffecfb199728b2827e22c9ea841806ca6cbfe5a284c33bd806c41919ef7171b",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -6892,14 +6904,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1191500,
+    "matching_code_bytes": 1195260,
     "total_executable_code_bytes": 2492032,
-    "percent": 47.812387641892236,
+    "percent": 47.96326852945709,
     "categories": {
-      "reconstructed_game": 799284,
+      "reconstructed_game": 803044,
       "restored_library": 392216
     },
-    "matching_functions": 6200
+    "matching_functions": 6238
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -7106,7 +7118,12 @@
     "config/GR8E69/ai_PolemineBehavior.json": "e1649ae5303f1eb384dd28825a7fd97cb68efecf3b5251b60f4fdaff9413cbbc",
     "config/GR8E69/ai_RifleBehavior.json": "2dbc34c425e032263dc153292249b04c0f8f54bfbf6f7162823a4954dbc8faf4",
     "config/GR8E69/ai_ScriptedBehavior.json": "c0a89f04738609d34dcb7babfc4a42dac2dd54b5706f7f22ae953bb672ecaf17",
+    "config/GR8E69/ai_StateIteratorA.json": "fd65ed02193b67b4eca286481bf760b59e4364db5d1b85c7737cbd4667770900",
+    "config/GR8E69/ai_StateIteratorB.json": "cadfc26bc93899ec433c605d317bd5e1c9471dc7beb24002721af7163296020a",
+    "config/GR8E69/ai_StateIteratorC.json": "48ba6d4f0ca1d9bac2a558405a04e76105eaf53369142820c3a7fcf6619f752a",
+    "config/GR8E69/ai_StateIteratorSet.json": "463da4b8bb05fe55dfc9740b15d578f3be451f4f4b7664fb0d2a7fc983ecb19d",
     "config/GR8E69/ai_SwordBehavior.json": "f83d9ad360c79f28c46140ceab34e9c3b1db19a75f1b9ef0b5c248db3ee7dcfe",
+    "config/GR8E69/ai_Task.json": "bde8d553fabb111bfd98ceebc211bf80b6af5ca40aa2e29be004987685ef67dc",
     "config/GR8E69/ai_filter_clock.json": "f2034db8752a041debc3e5f86662b062dae08812cf71d3c95f66f339dbd705b1",
     "config/GR8E69/ai_filter_splines.json": "26b024e231fa1eb564b501c3108a8fb71d50e76cdc7ad97470e83b7b39b7fbde",
     "config/GR8E69/ai_locomotion_access.json": "a561dbd2e9dc1e3932ea24b9e503dd28adac5b45f786bacaa0dd26e3f5cc6154",
@@ -8122,7 +8139,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "05fb83ed79f6f0cb657cd1b2cb1ab70bda733d1b7461eeb0fa897ea1e802958c",
+    "config/GR8E69/project.json": "8ffecfb199728b2827e22c9ea841806ca6cbfe5a284c33bd806c41919ef7171b",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -9498,6 +9515,8 @@
     "include/game/Capsule.h": "332dd06329ac7dc3ac5fc01793549a41e2defbe70298018accd2ce79c9e3ce3b",
     "include/game/CharacterShadow.h": "048ae3efc6fd6d3119f4c234f5bacd499c748c55b1573df386f686411e93a67a",
     "include/game/CharacterSkeleton.h": "809e263b95e355bb4f99f842724939f6ca8d1b612bdd55eaed0107da180eaef5",
+    "include/game/CharacterTask.h": "a42b2554059ebddb7f589174bbacd5f6fc17dd64d221b3711d32dba4ad42c023",
+    "include/game/CharacterTasks.h": "55321b7534efeaf0f8257858b5f421421fa869b98cc41620c488010556bc6d2d",
     "include/game/CollisionMath.h": "a9a8ee2674ee845e1549d3f906d34a2c02543fe5d4f8fbc40d42c4fdd0f22f2d",
     "include/game/CollisionProjection.h": "5efc5439936194866e0ee58e43061509d1252ca7ed70983b652f4919a3159332",
     "include/game/CollisionVolume.h": "26ba5d9a9865a0185f0e87db21b13faf3214b7e213201e825181412f0f9a5b7c",
@@ -9658,8 +9677,8 @@
     "include/game/WorldVolume.h": "9acfaf28c317912de14baef7ca50a3d80175ddc31dcf83cea18c80725e688318",
     "include/game-containers/AlgorithmTypes.h": "cd4a28c7c2eb6a6cb85477587065b64ff0e86ee9010ceed6df1637ca9fcffe14",
     "include/game-containers/ContainerTypes.h": "f6b7f0133646a5eb70ccc5df78ced025919dee88dcd81edc3f565d0b71dd407c",
-    "include/game-containers/ResourceTypes.h": "85904ef25745bb8f3903107f26b5b9a3a3017f106d0362086f5b9c602fdb0b27",
-    "include/game-containers/TargetTypes.h": "3ac99430c5eabe7c725b67a8b280b4ec55003d4bb6763dc1746023ced2fda08f",
+    "include/game-containers/ResourceTypes.h": "f9267bf87573fe8a312686838ea72daf9ff84092ec121ac0dbe3716b109957c0",
+    "include/game-containers/TargetTypes.h": "2c1eb2911c9bbfc217161fe5d274aad0633cd8d043a3ce2a7c0b5c561cebafe5",
     "include/newlib/_ansi.h": "98221b391010195de4e2824879860b7fe98a8f6bc8ab2c5eaa2a3b029b4f1ad4",
     "include/newlib/_syslist.h": "546b13e022a2e53bfad0138e9294d92210773c9a7a61ee2d4ffb152ed4a6396a",
     "include/newlib/ar.h": "d7aad21a7db658f45925014ea2ffd6cb7ba3d40fad05c9a00e77bfe912577ae3",
@@ -10502,6 +10521,11 @@
     "src/eagl_loading/SymbolPoolLifetime.cpp": "61de87b8cb1d6af3ea46e3b6fa3f65f9f989b46099529880c41659c3a664d1c3",
     "src/eagl_loading/SymbolPoolSearch.cpp": "5bf5c14f0ec9800b787fae8bf4d8cc8fe3d49859e6f4d604534ea1f8ac99360d",
     "src/eagl_loading/dlsym.cpp": "9cec232bcbba73d0c2109f30be340b337b39788c9be69369e21fd9823cffd1c9",
+    "src/eala/StateIteratorA.cpp": "b9241a9e4ae52b300754dd23096dc344a7fd7e322e8b116b570e7c4d6dccce02",
+    "src/eala/StateIteratorB.cpp": "0c651854dc24e79e29aada7da6658436b71ee05eb2d95e2a1f785fff7e786064",
+    "src/eala/StateIteratorC.cpp": "56f09eff412bbaaabc628bbfff2235d55a43defc38da6317976c005187b67313",
+    "src/eala/StateIteratorSet.cpp": "e1985fcbbab1401a70aa48a057d9bbc3b88222337bd3783576a7c26b0ff9ebde",
+    "src/eala/Task.cpp": "5a116bec92b6f4451bb6bc65beaa11ec0fed5b43cad538faeb04393bee73b688",
     "src/endian/scalar.cpp": "090834c02299042f5884d0302baa71af4a07fa67443cfe933d3fdd7405fdc146",
     "src/endian/short.cpp": "27ea58209e70d97588b380691fc1e414b1deb8259ec7b245c46d6af57df08fb9",
     "src/flexprop/FlexBool.cpp": "6babfd7c08477b15b2c42789d36dc38e62854c608a9506406b67baeb70463aef",
@@ -58227,6 +58251,96 @@
       "discarded_functions": [],
       "object_sha256": "4dc636f778f5c3d23fc5e9f9274b8ca0e4c58e9a923ca5f292f9554f5326ff81",
       "linked_sha256": "517459171240ac514b792828e1bd4797a9d6b1c2a04d3db2c4728f0587ec8f35"
+    },
+    {
+      "id": "ai_Task",
+      "category": "reconstructed_game",
+      "functions": 25,
+      "code_bytes": 1660,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "ce8df138f84a6379cb5a73c8a5d29f56d082e1399b5fad0fcbecda688290265c",
+      "linked_sha256": "17e27439e54a795508963c503d518ee5db9e9c241f6a2768217b98f1eacaa652"
+    },
+    {
+      "id": "ai_StateIteratorA",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 372,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "18e4c61852d11b65bf1af12f21a875dcd3726cccad6500c2baa0ac67b979b05b",
+      "linked_sha256": "ebaaafdff800fe9221a9bec7919644f0042bc2a338ec102b0b52dd83d720d264"
+    },
+    {
+      "id": "ai_StateIteratorSet",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 80,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "2fdfd33621e313854e8e6bcfcfc45aceb52b88702d703da4c9f4b0c9607addb6",
+      "linked_sha256": "bc1350f9212f1614fb68826a18cb6f2f8fbe9b036536d4bc27f9d4275fcce904"
+    },
+    {
+      "id": "ai_StateIteratorB",
+      "category": "reconstructed_game",
+      "functions": 9,
+      "code_bytes": 1644,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "dc79a21eef587930ad4e439c3d4dcc7ba45e05196af4ebd9c51ade87a7f4c385",
+      "linked_sha256": "2f65749784d16361a3f9ccadce570e2fe50982a7dd9720b76c1a4c7c794d4125"
+    },
+    {
+      "id": "ai_StateIteratorC",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 4,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "536cce649bdd5f2603b0e3f3b79b7f52637ea08fe08f78c3f4c0c9bcdeedadeb",
+      "linked_sha256": "f2aea0ffd48c7f99d0172e508b9b2597cd25866b656b4b9f3f0cbf39ef4b5f67"
     }
   ],
   "code_map": {
@@ -62995,31 +63109,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800857d8",
-            "size": 104,
-            "kind": "function",
-            "name": "Alloc__Q34EALA9Character13StateIteratorRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4Task",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80085840",
-            "size": 268,
-            "kind": "function",
-            "name": "__Q34EALA9Character13StateIteratorRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4Task",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8008594c",
             "size": 268,
             "kind": "function",
             "name": "_._Q34EALA9Character13StateIterator",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80085a58",
-            "size": 80,
-            "kind": "function",
-            "name": "Set__Q34EALA9Character13StateIteratorRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUif",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -63030,81 +63123,11 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8008615c",
-            "size": 700,
-            "kind": "function",
-            "name": "EvalPose__Q34EALA9Character13StateIteratorfPf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80086418",
-            "size": 104,
-            "kind": "function",
-            "name": "HandleMessage__Q34EALA9Character13StateIterator",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80086480",
-            "size": 124,
-            "kind": "function",
-            "name": "HandleOpcode__Q34EALA9Character13StateIteratorRQ34EALA9Character6Opcode",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800864fc",
-            "size": 116,
-            "kind": "function",
-            "name": "HandlePose__Q34EALA9Character13StateIteratorUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80086570",
-            "size": 124,
-            "kind": "function",
-            "name": "HandleRotation__Q34EALA9Character13StateIteratorf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800865ec",
-            "size": 104,
-            "kind": "function",
-            "name": "HandleCycleEnd__Q34EALA9Character13StateIterator",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80086654",
-            "size": 124,
-            "kind": "function",
-            "name": "HandleAnimDuration__Q34EALA9Character13StateIteratorf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800866d0",
-            "size": 152,
-            "kind": "function",
-            "name": "Promote__Q34EALA9Character13StateIteratorRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character4Task",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80086768",
-            "size": 96,
-            "kind": "function",
-            "name": "Dump__Q34EALA9Character13StateIteratorUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800867c8",
             "size": 80,
             "kind": "function",
             "name": "__static_initialization_and_destruction_0",
             "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x80086818",
-            "size": 4,
-            "kind": "function",
-            "name": "AsIterator__Q34EALA9Character13StateIterator",
-            "evidence": "adjacent-compiler-markers"
           },
           {
             "address": "0x8008681c",
@@ -64793,183 +64816,8 @@
         ]
       },
       {
-        "name": "Unknown file/.text @ 8008f934",
+        "name": "Unknown file/.text @ 8008ffb0",
         "ranges": [
-          {
-            "address": "0x8008f934",
-            "size": 248,
-            "kind": "function",
-            "name": "__Q34EALA9Character4TaskPQ34EALA9Character5StateUiPQ34EALA9Character4Task",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8008fa2c",
-            "size": 8,
-            "kind": "function",
-            "name": "GetState__CQ34EALA9Character4Task",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8008fa34",
-            "size": 140,
-            "kind": "function",
-            "name": "Evaluate__Q34EALA9Character4TaskfPf",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8008fac0",
-            "size": 128,
-            "kind": "function",
-            "name": "Reparent__Q34EALA9Character4TaskPQ34EALA9Character4Task",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8008fb40",
-            "size": 12,
-            "kind": "function",
-            "name": "GetAnimDuration__Q34EALA9Character4Task",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8008fb4c",
-            "size": 64,
-            "kind": "function",
-            "name": "GetAnimTranslation__Q34EALA9Character4Task",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8008fb8c",
-            "size": 12,
-            "kind": "function",
-            "name": "GetTotalRootZAxisRotation__Q34EALA9Character4Task",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8008fb98",
-            "size": 208,
-            "kind": "function",
-            "name": "SetState__Q34EALA9Character4TaskPQ34EALA9Character5State",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8008fc68",
-            "size": 8,
-            "kind": "function",
-            "name": "SetSubstate__Q34EALA9Character4TaskUi",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8008fc70",
-            "size": 8,
-            "kind": "function",
-            "name": "SetCorePose__Q34EALA9Character4TaskUi",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8008fc78",
-            "size": 8,
-            "kind": "function",
-            "name": "GetCorePose__CQ34EALA9Character4Task",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8008fc80",
-            "size": 164,
-            "kind": "function",
-            "name": "ParentIterator__Q34EALA9Character4Task",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8008fd24",
-            "size": 156,
-            "kind": "function",
-            "name": "DumpPrefix__Q34EALA9Character4TaskUi",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8008fdc0",
-            "size": 72,
-            "kind": "function",
-            "name": "HandleMessage__Q34EALA9Character4Task",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8008fe08",
-            "size": 72,
-            "kind": "function",
-            "name": "HandleOpcode__Q34EALA9Character4TaskRQ34EALA9Character6Opcode",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8008fe50",
-            "size": 96,
-            "kind": "function",
-            "name": "HandlePose__Q34EALA9Character4TaskUi",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8008feb0",
-            "size": 72,
-            "kind": "function",
-            "name": "HandleRotation__Q34EALA9Character4Taskf",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8008fef8",
-            "size": 72,
-            "kind": "function",
-            "name": "HandleCycleEnd__Q34EALA9Character4Task",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8008ff40",
-            "size": 72,
-            "kind": "function",
-            "name": "HandleAnimDuration__Q34EALA9Character4Taskf",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8008ff88",
-            "size": 8,
-            "kind": "function",
-            "name": "Busy__Q34EALA9Character4Task",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8008ff90",
-            "size": 4,
-            "kind": "function",
-            "name": "EvalPose__Q34EALA9Character4TaskfPf",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8008ff94",
-            "size": 4,
-            "kind": "function",
-            "name": "Promote__Q34EALA9Character4TaskRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character4Task",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8008ff98",
-            "size": 8,
-            "kind": "function",
-            "name": "AsIterator__Q34EALA9Character4Task",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8008ffa0",
-            "size": 8,
-            "kind": "function",
-            "name": "AsMessage__Q34EALA9Character4Task",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8008ffa8",
-            "size": 8,
-            "kind": "function",
-            "name": "AsJump__Q34EALA9Character4Task",
-            "evidence": "unknown-file"
-          },
           {
             "address": "0x8008ffb0",
             "size": 180,
