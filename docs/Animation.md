@@ -656,3 +656,13 @@ when that task sends a message, an enabled word and a float) and passes rotation
 the string form of `SetAuthoredTransitionState` wait for the same reason as the pool allocators. `State` keeps a
 `Substate` pointer per index after a 40-byte header, a name map, and a counted loader pointer; the `State`
 methods here come from the image and member names are inferred. `Operation`'s virtual order comes from its table.
+
+`Jump`, `Message`, `Sentinel`, `Sequence` and `Transition` are the small task types. A `Jump` evaluates its
+target substate once, either immediately (promoting the result into its parent) or by a blended
+`StateIterator::Set` of `blendFrames` thirtieths of a second. A `Message` sends one message to its parent and
+then holds its kept task, or the still pose once it is older than ten seconds. A `Sequence` runs up to sixteen
+tasks and promotes the last one when it is alone. A `Transition` keeps both tasks until its time runs out, then
+promotes the target; it forwards the target's events only during the final evaluation. Each destructor is out
+for the reason given above, and `operator new`, `operator delete` and the static initializers are out with the
+pool allocators. `Sentinel::EvalPose`, `Transition::Create`, `Transition::EvalPose` and `PerformBlend` are not
+reconstructed yet.

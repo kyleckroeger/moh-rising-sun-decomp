@@ -2377,7 +2377,20 @@
     "mohlua_choice.json",
     "mohlua_init.json",
     "mohlua_queries.json",
-    "mohlua_calls.json"
+    "mohlua_calls.json",
+    "ai_JumpA.json",
+    "ai_JumpEval.json",
+    "ai_JumpDump.json",
+    "ai_JumpAs.json",
+    "ai_MessageA.json",
+    "ai_MessageAs.json",
+    "ai_SentinelA.json",
+    "ai_SentinelDump.json",
+    "ai_SentinelBusy.json",
+    "ai_SequenceA.json",
+    "ai_SequenceB.json",
+    "ai_TransitionCtor.json",
+    "ai_TransitionB.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

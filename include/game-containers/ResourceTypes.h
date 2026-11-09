@@ -11,6 +11,10 @@ extern "C" int strcasecmp(const char *, const char *);
 struct COORD3;
 namespace EAGLAnim {
 class BoneMask;
+class Skeleton {
+  public:
+    void GetStillPose(float *pose, const BoneMask *mask) const;
+};
 }
 namespace EALA {
 class EAGLLoader;
@@ -38,13 +42,21 @@ class Skeleton {
         int operator==(const Partition &other) const;
         const EAGLAnim::BoneMask *GetMask() const;
     };
-    unsigned char unresolved_00[4] __attribute__((aligned(4)));
+    struct Data {
+        unsigned char unknown_00[12];
+        EAGLAnim::Skeleton *skeleton; // +0x0c
+    };
+    Resource::Pointer<Data> data; // +0x00
+    void GetStillPose(float *pose);
     Partition wholeBody; // +0x04; name inferred, GetBoneMask has no mask for it.
+    EAGLAnim::Skeleton *GetAnimSkeleton() const { // Name inferred; the body is inlined in its callers.
+        return data.IsValid() ? data->skeleton : 0;
+    }
 };
 class ChoreographerClient {
   public:
     virtual void MoveTo(const COORD3 &position, float time);
-    virtual const Skeleton *GetSkeleton();
+    virtual Skeleton *GetSkeleton();
     virtual COORD3 GetPosition();
     virtual float GetRotation();
     virtual void SetPosition(const COORD3 &position);

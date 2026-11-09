@@ -708,6 +708,17 @@
       "src/eala/ChoreoA.cpp": "00d50cdde9b2cc668809cb4143741350e28469bd2af8169da121bc41b50b6996",
       "src/eala/ChoreoB.cpp": "69377bd69e08c92c80d5da306ca5d7c2a3a051f101766ac9d89f09049ae1093e",
       "src/eala/ChoreoB2.cpp": "9d17f47847aca1eaf37a1c0330e43351eae146cba9189cff0cbf91089670cf09",
+      "src/eala/JumpA.cpp": "e3311834309eb900be0b777d01a4a79d8671937c7e559e16b1ed8605e66908f9",
+      "src/eala/JumpAs.cpp": "856bf28387249e18767fd85515a2347802b28926623a73cd0c0121a50a2cfb32",
+      "src/eala/JumpDump.cpp": "e4caedea7a594c7a6f9fea8092335825c50f8e8c7ff779bfff8e0a527fbdf1d1",
+      "src/eala/JumpEval.cpp": "cebcf508fd3e4bd7150f67f475377d89fb6fba6ee6c7fad6027ed86c6a56d97c",
+      "src/eala/MessageA.cpp": "7997368bb2849f65dde5b4b7a55bda9940ccf5896246efaf63cf0fb7b7140fe1",
+      "src/eala/MessageAs.cpp": "9a4972c34b0d0d29dc9904431aad2b8f6ce0174473858746aa4b14dadec4d353",
+      "src/eala/SentinelA.cpp": "321da46140502c5c55bcd1ae8c75e53b77b87f322a0513d0c5181ec37f62d306",
+      "src/eala/SentinelBusy.cpp": "796fb3c616b855146a5d83d745a36ca98710649011557181d1ca3488562f7b6a",
+      "src/eala/SentinelDump.cpp": "f5cdf6cc60f70fe6cf5a88b5fe94065529d05e145c6411489b0defda28df23fa",
+      "src/eala/SequenceA.cpp": "8ab088e6df86e6026ae6b0b053b5f8a6b596e4a8a808e3ff8adeafc1e49486ec",
+      "src/eala/SequenceB.cpp": "4098f40c058332ca709d65d721eeac96d2c874a9592447cf16985a9b68acddf7",
       "src/eala/StateA.cpp": "3f4dd078f543c226669c8cfa69456333f427df1f94c8114b208bccb77d65eb45",
       "src/eala/StateB.cpp": "0f4edf2d8aca3e3c0810391ad30ec524629045dd6b371b125cbfcd060f125501",
       "src/eala/StateCtor.cpp": "8d1e03d56f3fd9ddc216c822407841fb50159f1bacad76dbccaf69ba87d45d7e",
@@ -716,6 +727,8 @@
       "src/eala/StateIteratorC.cpp": "56f09eff412bbaaabc628bbfff2235d55a43defc38da6317976c005187b67313",
       "src/eala/StateIteratorSet.cpp": "e1985fcbbab1401a70aa48a057d9bbc3b88222337bd3783576a7c26b0ff9ebde",
       "src/eala/Task.cpp": "0e0713ae42baefcd9fef06a5c88b680f9e3ebf88f68d950fa967e9fa7eeca138",
+      "src/eala/TransitionB.cpp": "9cd376528725a39c2de69913f92adc1a8ad4873de16b2b836745574c5c1edab4",
+      "src/eala/TransitionCtor.cpp": "9c5d6795f566ac6cbabbf3f71466013bbb0b0d3f338a6d082c2836d040313a98",
       "src/endian/scalar.cpp": "090834c02299042f5884d0302baa71af4a07fa67443cfe933d3fdd7405fdc146",
       "src/endian/short.cpp": "27ea58209e70d97588b380691fc1e414b1deb8259ec7b245c46d6af57df08fb9",
       "src/flexprop/FlexBool.cpp": "6babfd7c08477b15b2c42789d36dc38e62854c608a9506406b67baeb70463aef",
@@ -1882,7 +1895,7 @@
       "src/script/set_in_shadow.cpp": "02827b83d96c9ec6910d31191380f8d9b66e98e25aa17292b61316ad11120b5a",
       "src/script/set_japanese.cpp": "ad2b61cced1587ee3e6bfe04c07b2f9049cadb42b6af2e41e5f17d7e0a00e064",
       "src/script/set_jaw_motion.cpp": "2ffc60759945428d6236f3cc20f6ff52fac15ca8d98a5ea87ae91b30821e4039",
-      "src/script/set_location_target.cpp": "19d5e155395f510f1ef3d6744d18e927c1e0803b420e7e3c23b6a5ffc4256b38",
+      "src/script/set_location_target.cpp": "7b34702966aeb01a3b86edb4ee2b969d412fea8a79e2be688d41b22d77a16a05",
       "src/script/set_max_light_priority.cpp": "ace6521b8b11ce24c256ea07b5c06f999a7c72d86370a9b9dbc744951dd1328a",
       "src/script/set_mg_waypoint_flag.cpp": "164f655cd199e0ee8bde254ab0975d6ae107abe4db0006ff3dcd3fd5845b5081",
       "src/script/set_mmg_location.cpp": "0ca5d2e48867c1b737c6428c094cf30ca0f1f21f5dbcf060ff6591689a4bfee7",
@@ -2668,7 +2681,7 @@
       "include/game/AIMovement.h": "be6b180ea11f5f27a6b5fb27e3ae35288d2c22879ba23a2233dc1d233979674a",
       "include/game/AIPathSearch.h": "a2c7f9d5fabefa195ac22871f2ba2e6581e3109b134bc8c53bddb1ae373a3729",
       "include/game/AISplinePath.h": "66b1ac579e7a8a8c830780cf389deab3f16f0b7c9608cc9669ca9389464e112b",
-      "include/game/AITargeting.h": "e627d0bfbe67665b87bf089c456c1feded0163e8755fd60f994082d6c711b08f",
+      "include/game/AITargeting.h": "999202c4f902dda48774e00145d0edbe6ed8a35b82a3fb1d639257cf7effaa6b",
       "include/game/AnimShape.h": "eb3d8e24b295f937a6524701d5d87c8b8b4e052c8bbb2bafd8fb764c3318e87e",
       "include/game/AnimatedVolume.h": "527918576e64cf9296cbb9164eefaf3fc8b7a0f96894e342d2da9e847df4cf25",
       "include/game/AvPlayer.h": "ee5373fca262bf54fd66e19125fe4c512d5a3ff3ce27f97ea7d292b46204a6a1",
@@ -2697,7 +2710,7 @@
       "include/game/CharacterShadow.h": "048ae3efc6fd6d3119f4c234f5bacd499c748c55b1573df386f686411e93a67a",
       "include/game/CharacterSkeleton.h": "809e263b95e355bb4f99f842724939f6ca8d1b612bdd55eaed0107da180eaef5",
       "include/game/CharacterTask.h": "cf3983cfbe21d739a09c81773cdbb041e78ad64305f646d89702c7ce2ca7831c",
-      "include/game/CharacterTasks.h": "735fc748a4ad188eb9531f5bd4a09473c3d29d9bf5f00c4fee737648e243bd3e",
+      "include/game/CharacterTasks.h": "1a144e498c708365cdcbf04edfcf8339b252aaa7d0f05275693a364efcdaa15a",
       "include/game/CollisionMath.h": "a9a8ee2674ee845e1549d3f906d34a2c02543fe5d4f8fbc40d42c4fdd0f22f2d",
       "include/game/CollisionProjection.h": "5efc5439936194866e0ee58e43061509d1252ca7ed70983b652f4919a3159332",
       "include/game/CollisionVolume.h": "26ba5d9a9865a0185f0e87db21b13faf3214b7e213201e825181412f0f9a5b7c",
@@ -2791,6 +2804,7 @@
       "include/game/Light.h": "bec6001412a618bb57e2654bce1b5afbdb8f385dd150732cbd01bd897b24f003",
       "include/game/LightVolumeManager.h": "f86744d00d312738c23085d84d513fbd05c495194b97a10bf4cde2011dbaf958",
       "include/game/LinkedList.h": "e7b4b7ed5a4f76d2630b7a7f9433e8b92b34d63a0efbb47ad4a2d9ec918f5c92",
+      "include/game/LocationTargetInfo.h": "75bd41dde997f0961c4b85aa90f04c2627e540a09034104b9070eec5922e8868",
       "include/game/MPWeaponSet.h": "86bcb747bbed525dbf73844a22a156b74e8da90bd482fb541bc707e66cddae2c",
       "include/game/MathFun.h": "d92b6bc49451fbf1b8a55fa0859336cc7b6c7290c687133dda85c3e96d14f5da",
       "include/game/MemStack.h": "e96e48316cab4c90d5f0d26ae33db27bf681687e8f88544d20683150b4bb1606",
@@ -2860,9 +2874,9 @@
       "include/game/WorldObject.h": "8bf6843a362f5e8fe835da2694838943402f9f5013bfb812dcd86ce9915fdde8",
       "include/game/WorldVolume.h": "9acfaf28c317912de14baef7ca50a3d80175ddc31dcf83cea18c80725e688318",
       "include/game-containers/AlgorithmTypes.h": "cd4a28c7c2eb6a6cb85477587065b64ff0e86ee9010ceed6df1637ca9fcffe14",
-      "include/game-containers/ContainerTypes.h": "f6b7f0133646a5eb70ccc5df78ced025919dee88dcd81edc3f565d0b71dd407c",
+      "include/game-containers/ContainerTypes.h": "8ec1dc3ec2473365c9fd076bb18add5d75c8dcf780f8f9b0203191c17fc36882",
       "include/game-containers/EALAResource.h": "72b4979c6f030dd7e3a8b97f8b4b7f240a3a70ff0cb7ab4baa5fed6920f96fd5",
-      "include/game-containers/ResourceTypes.h": "9218eba9db2d62400de32fe0a412bfaf3992e8bb9bea7f8ca92543d3a057fbc6",
+      "include/game-containers/ResourceTypes.h": "4ace8e77a7864643517fa580a718037e07d64d05fcc115d2ba788ecc970ae02d",
       "include/game-containers/TargetTypes.h": "2c1eb2911c9bbfc217161fe5d274aad0633cd8d043a3ce2a7c0b5c561cebafe5",
       "include/newlib/_ansi.h": "98221b391010195de4e2824879860b7fe98a8f6bc8ab2c5eaa2a3b029b4f1ad4",
       "include/newlib/_syslist.h": "546b13e022a2e53bfad0138e9294d92210773c9a7a61ee2d4ffb152ed4a6396a",
@@ -3198,10 +3212,16 @@
       "config/GR8E69/ai_GrenadeResponseHead.json": "955aa841b54cfaf40476554d2d4229149abb168a3ea7d924c58b19271d20e8a3",
       "config/GR8E69/ai_GrenadeResponseStop.json": "52af69b403cdf3b7b106c165dec8c5a2c6e8953c2333e59d2a2e293f3a322a62",
       "config/GR8E69/ai_GrenadeResponseTail.json": "788311dfaf980101f47ea7a699463dee3ae1fe30c4dab14e7f1c4feebe41022b",
+      "config/GR8E69/ai_JumpA.json": "75bf5f9fa107ff38c95a49005e0619c678c9be31539fc43ab4f2d492c7ff45f9",
+      "config/GR8E69/ai_JumpAs.json": "ad229d001d799fe0e861474587ab04e29b3f1003dc4597aa3b2a0e5fcd144b10",
+      "config/GR8E69/ai_JumpDump.json": "283e44811907dd251e0902720188f25e14c479e8f1bf868d20ceba9acf314116",
+      "config/GR8E69/ai_JumpEval.json": "7e4833a35313ae5d6d7e6c3fe8c85f01e21cf6e1793476db02b243f4718e9cef",
       "config/GR8E69/ai_MMGBehaviorFlags.json": "a4afdfa10aff826cc636e3b622b910893f5285f86c060d59d257ec008d2e51ad",
       "config/GR8E69/ai_MMGBehaviorHead.json": "14f0a2dda33c3e7899219f3603a3dd0c5006f42ebee2612ce6a68f4528f3a629",
       "config/GR8E69/ai_MMGBehaviorStop.json": "7fab2b9a8c31fda9d9ce8c6cca14e78def4ba563d85b747625a73593bd8c197c",
       "config/GR8E69/ai_MMGBehaviorTail.json": "596f9ab0bf4ea7b937860c1c34e3c2ef736904c3a6a2f0fcba4a48c22c8c818d",
+      "config/GR8E69/ai_MessageA.json": "459185b21f4b6c542bb90baa6da9d9c095b47798c43475c60f5f25b1fdd50e8a",
+      "config/GR8E69/ai_MessageAs.json": "cb75a92d94dbcad0fbd4a4e8f57342928eb7af3be45068f6aefc6a24798cf28f",
       "config/GR8E69/ai_NullWeaponBehavior.json": "cf42b3058125a789f6b44c78b488755e338f60dccc9715e162d9b6220e0e6ffc",
       "config/GR8E69/ai_PathFindingUpdate.json": "2feb4f337b1fb1dd7e294b25b266b19bce8df8cc0d377ea9b1c769b54c63e394",
       "config/GR8E69/ai_PathSearchTrim.json": "750e09f71648ea84fb014fe142c9127c5e61171e7aefd06ff9f72e40199a8224",
@@ -3213,6 +3233,11 @@
       "config/GR8E69/ai_PolemineBehavior.json": "e1649ae5303f1eb384dd28825a7fd97cb68efecf3b5251b60f4fdaff9413cbbc",
       "config/GR8E69/ai_RifleBehavior.json": "2dbc34c425e032263dc153292249b04c0f8f54bfbf6f7162823a4954dbc8faf4",
       "config/GR8E69/ai_ScriptedBehavior.json": "c0a89f04738609d34dcb7babfc4a42dac2dd54b5706f7f22ae953bb672ecaf17",
+      "config/GR8E69/ai_SentinelA.json": "d3cb7451583a199882f4c9518d7581ed8a4b92bdba9a76ba23de03dd0a1091ec",
+      "config/GR8E69/ai_SentinelBusy.json": "5358ff076038da6814b7bd4c2e04adbb5f56d4acd572a1153f3a6ad7ca5b2f02",
+      "config/GR8E69/ai_SentinelDump.json": "7f12696d23d12c185521131cf9b6a6bd380ee90993c7c2407d590ba9347ff0e5",
+      "config/GR8E69/ai_SequenceA.json": "5b14095df925f3b12f63ebd45c3a863697e8a2952adbe3aa67204515c00b6b5a",
+      "config/GR8E69/ai_SequenceB.json": "663fbeecb89880f6d8922cce0aeecd0dc9fd761a5f5d5ea473c8f7b604b20109",
       "config/GR8E69/ai_StateA.json": "6feff2e9186876b1e591ca3c8f94469f63273cc8d7488078c084d200630ed1d5",
       "config/GR8E69/ai_StateB.json": "f917deb950d0f4b85ac8c1f6719ec6957c6c42b47c498a192a47c942feaad3c4",
       "config/GR8E69/ai_StateCtor.json": "bd9521cc96bd41aea77168e6ee3ccf7f0ee7913c07559906ae2a6f3bf8d5c00b",
@@ -3222,6 +3247,8 @@
       "config/GR8E69/ai_StateIteratorSet.json": "463da4b8bb05fe55dfc9740b15d578f3be451f4f4b7664fb0d2a7fc983ecb19d",
       "config/GR8E69/ai_SwordBehavior.json": "f83d9ad360c79f28c46140ceab34e9c3b1db19a75f1b9ef0b5c248db3ee7dcfe",
       "config/GR8E69/ai_Task.json": "bde8d553fabb111bfd98ceebc211bf80b6af5ca40aa2e29be004987685ef67dc",
+      "config/GR8E69/ai_TransitionB.json": "774a8ad9a5f4b664c444902468818f29b9a0f6975b028295f7a45072c16eedef",
+      "config/GR8E69/ai_TransitionCtor.json": "79153e2c8d9c9509fb15c8b6c08394ef2efe971ae82970400a73c9eb11c131af",
       "config/GR8E69/ai_filter_clock.json": "f2034db8752a041debc3e5f86662b062dae08812cf71d3c95f66f339dbd705b1",
       "config/GR8E69/ai_filter_splines.json": "26b024e231fa1eb564b501c3108a8fb71d50e76cdc7ad97470e83b7b39b7fbde",
       "config/GR8E69/ai_locomotion_access.json": "a561dbd2e9dc1e3932ea24b9e503dd28adac5b45f786bacaa0dd26e3f5cc6154",
@@ -4253,7 +4280,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "9faadafdecffd5b506891d812f1c031fb655f47873ec379e97a584911308fa3a",
+      "config/GR8E69/project.json": "bf0b4f4ebe32efebebff55e87a712756d7f5634c7492ed0cd96bda66f6baecb6",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -6966,14 +6993,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1215600,
+    "matching_code_bytes": 1220540,
     "total_executable_code_bytes": 2492032,
-    "percent": 48.7794699265499,
+    "percent": 48.97770173095691,
     "categories": {
-      "reconstructed_game": 823384,
+      "reconstructed_game": 828324,
       "restored_library": 392216
     },
-    "matching_functions": 6386
+    "matching_functions": 6422
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -7168,10 +7195,16 @@
     "config/GR8E69/ai_GrenadeResponseHead.json": "955aa841b54cfaf40476554d2d4229149abb168a3ea7d924c58b19271d20e8a3",
     "config/GR8E69/ai_GrenadeResponseStop.json": "52af69b403cdf3b7b106c165dec8c5a2c6e8953c2333e59d2a2e293f3a322a62",
     "config/GR8E69/ai_GrenadeResponseTail.json": "788311dfaf980101f47ea7a699463dee3ae1fe30c4dab14e7f1c4feebe41022b",
+    "config/GR8E69/ai_JumpA.json": "75bf5f9fa107ff38c95a49005e0619c678c9be31539fc43ab4f2d492c7ff45f9",
+    "config/GR8E69/ai_JumpAs.json": "ad229d001d799fe0e861474587ab04e29b3f1003dc4597aa3b2a0e5fcd144b10",
+    "config/GR8E69/ai_JumpDump.json": "283e44811907dd251e0902720188f25e14c479e8f1bf868d20ceba9acf314116",
+    "config/GR8E69/ai_JumpEval.json": "7e4833a35313ae5d6d7e6c3fe8c85f01e21cf6e1793476db02b243f4718e9cef",
     "config/GR8E69/ai_MMGBehaviorFlags.json": "a4afdfa10aff826cc636e3b622b910893f5285f86c060d59d257ec008d2e51ad",
     "config/GR8E69/ai_MMGBehaviorHead.json": "14f0a2dda33c3e7899219f3603a3dd0c5006f42ebee2612ce6a68f4528f3a629",
     "config/GR8E69/ai_MMGBehaviorStop.json": "7fab2b9a8c31fda9d9ce8c6cca14e78def4ba563d85b747625a73593bd8c197c",
     "config/GR8E69/ai_MMGBehaviorTail.json": "596f9ab0bf4ea7b937860c1c34e3c2ef736904c3a6a2f0fcba4a48c22c8c818d",
+    "config/GR8E69/ai_MessageA.json": "459185b21f4b6c542bb90baa6da9d9c095b47798c43475c60f5f25b1fdd50e8a",
+    "config/GR8E69/ai_MessageAs.json": "cb75a92d94dbcad0fbd4a4e8f57342928eb7af3be45068f6aefc6a24798cf28f",
     "config/GR8E69/ai_NullWeaponBehavior.json": "cf42b3058125a789f6b44c78b488755e338f60dccc9715e162d9b6220e0e6ffc",
     "config/GR8E69/ai_PathFindingUpdate.json": "2feb4f337b1fb1dd7e294b25b266b19bce8df8cc0d377ea9b1c769b54c63e394",
     "config/GR8E69/ai_PathSearchTrim.json": "750e09f71648ea84fb014fe142c9127c5e61171e7aefd06ff9f72e40199a8224",
@@ -7183,6 +7216,11 @@
     "config/GR8E69/ai_PolemineBehavior.json": "e1649ae5303f1eb384dd28825a7fd97cb68efecf3b5251b60f4fdaff9413cbbc",
     "config/GR8E69/ai_RifleBehavior.json": "2dbc34c425e032263dc153292249b04c0f8f54bfbf6f7162823a4954dbc8faf4",
     "config/GR8E69/ai_ScriptedBehavior.json": "c0a89f04738609d34dcb7babfc4a42dac2dd54b5706f7f22ae953bb672ecaf17",
+    "config/GR8E69/ai_SentinelA.json": "d3cb7451583a199882f4c9518d7581ed8a4b92bdba9a76ba23de03dd0a1091ec",
+    "config/GR8E69/ai_SentinelBusy.json": "5358ff076038da6814b7bd4c2e04adbb5f56d4acd572a1153f3a6ad7ca5b2f02",
+    "config/GR8E69/ai_SentinelDump.json": "7f12696d23d12c185521131cf9b6a6bd380ee90993c7c2407d590ba9347ff0e5",
+    "config/GR8E69/ai_SequenceA.json": "5b14095df925f3b12f63ebd45c3a863697e8a2952adbe3aa67204515c00b6b5a",
+    "config/GR8E69/ai_SequenceB.json": "663fbeecb89880f6d8922cce0aeecd0dc9fd761a5f5d5ea473c8f7b604b20109",
     "config/GR8E69/ai_StateA.json": "6feff2e9186876b1e591ca3c8f94469f63273cc8d7488078c084d200630ed1d5",
     "config/GR8E69/ai_StateB.json": "f917deb950d0f4b85ac8c1f6719ec6957c6c42b47c498a192a47c942feaad3c4",
     "config/GR8E69/ai_StateCtor.json": "bd9521cc96bd41aea77168e6ee3ccf7f0ee7913c07559906ae2a6f3bf8d5c00b",
@@ -7192,6 +7230,8 @@
     "config/GR8E69/ai_StateIteratorSet.json": "463da4b8bb05fe55dfc9740b15d578f3be451f4f4b7664fb0d2a7fc983ecb19d",
     "config/GR8E69/ai_SwordBehavior.json": "f83d9ad360c79f28c46140ceab34e9c3b1db19a75f1b9ef0b5c248db3ee7dcfe",
     "config/GR8E69/ai_Task.json": "bde8d553fabb111bfd98ceebc211bf80b6af5ca40aa2e29be004987685ef67dc",
+    "config/GR8E69/ai_TransitionB.json": "774a8ad9a5f4b664c444902468818f29b9a0f6975b028295f7a45072c16eedef",
+    "config/GR8E69/ai_TransitionCtor.json": "79153e2c8d9c9509fb15c8b6c08394ef2efe971ae82970400a73c9eb11c131af",
     "config/GR8E69/ai_filter_clock.json": "f2034db8752a041debc3e5f86662b062dae08812cf71d3c95f66f339dbd705b1",
     "config/GR8E69/ai_filter_splines.json": "26b024e231fa1eb564b501c3108a8fb71d50e76cdc7ad97470e83b7b39b7fbde",
     "config/GR8E69/ai_locomotion_access.json": "a561dbd2e9dc1e3932ea24b9e503dd28adac5b45f786bacaa0dd26e3f5cc6154",
@@ -8223,7 +8263,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "9faadafdecffd5b506891d812f1c031fb655f47873ec379e97a584911308fa3a",
+    "config/GR8E69/project.json": "bf0b4f4ebe32efebebff55e87a712756d7f5634c7492ed0cd96bda66f6baecb6",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -9578,7 +9618,7 @@
     "include/game/AIMovement.h": "be6b180ea11f5f27a6b5fb27e3ae35288d2c22879ba23a2233dc1d233979674a",
     "include/game/AIPathSearch.h": "a2c7f9d5fabefa195ac22871f2ba2e6581e3109b134bc8c53bddb1ae373a3729",
     "include/game/AISplinePath.h": "66b1ac579e7a8a8c830780cf389deab3f16f0b7c9608cc9669ca9389464e112b",
-    "include/game/AITargeting.h": "e627d0bfbe67665b87bf089c456c1feded0163e8755fd60f994082d6c711b08f",
+    "include/game/AITargeting.h": "999202c4f902dda48774e00145d0edbe6ed8a35b82a3fb1d639257cf7effaa6b",
     "include/game/AnimShape.h": "eb3d8e24b295f937a6524701d5d87c8b8b4e052c8bbb2bafd8fb764c3318e87e",
     "include/game/AnimatedVolume.h": "527918576e64cf9296cbb9164eefaf3fc8b7a0f96894e342d2da9e847df4cf25",
     "include/game/AvPlayer.h": "ee5373fca262bf54fd66e19125fe4c512d5a3ff3ce27f97ea7d292b46204a6a1",
@@ -9607,7 +9647,7 @@
     "include/game/CharacterShadow.h": "048ae3efc6fd6d3119f4c234f5bacd499c748c55b1573df386f686411e93a67a",
     "include/game/CharacterSkeleton.h": "809e263b95e355bb4f99f842724939f6ca8d1b612bdd55eaed0107da180eaef5",
     "include/game/CharacterTask.h": "cf3983cfbe21d739a09c81773cdbb041e78ad64305f646d89702c7ce2ca7831c",
-    "include/game/CharacterTasks.h": "735fc748a4ad188eb9531f5bd4a09473c3d29d9bf5f00c4fee737648e243bd3e",
+    "include/game/CharacterTasks.h": "1a144e498c708365cdcbf04edfcf8339b252aaa7d0f05275693a364efcdaa15a",
     "include/game/CollisionMath.h": "a9a8ee2674ee845e1549d3f906d34a2c02543fe5d4f8fbc40d42c4fdd0f22f2d",
     "include/game/CollisionProjection.h": "5efc5439936194866e0ee58e43061509d1252ca7ed70983b652f4919a3159332",
     "include/game/CollisionVolume.h": "26ba5d9a9865a0185f0e87db21b13faf3214b7e213201e825181412f0f9a5b7c",
@@ -9701,6 +9741,7 @@
     "include/game/Light.h": "bec6001412a618bb57e2654bce1b5afbdb8f385dd150732cbd01bd897b24f003",
     "include/game/LightVolumeManager.h": "f86744d00d312738c23085d84d513fbd05c495194b97a10bf4cde2011dbaf958",
     "include/game/LinkedList.h": "e7b4b7ed5a4f76d2630b7a7f9433e8b92b34d63a0efbb47ad4a2d9ec918f5c92",
+    "include/game/LocationTargetInfo.h": "75bd41dde997f0961c4b85aa90f04c2627e540a09034104b9070eec5922e8868",
     "include/game/MPWeaponSet.h": "86bcb747bbed525dbf73844a22a156b74e8da90bd482fb541bc707e66cddae2c",
     "include/game/MathFun.h": "d92b6bc49451fbf1b8a55fa0859336cc7b6c7290c687133dda85c3e96d14f5da",
     "include/game/MemStack.h": "e96e48316cab4c90d5f0d26ae33db27bf681687e8f88544d20683150b4bb1606",
@@ -9770,9 +9811,9 @@
     "include/game/WorldObject.h": "8bf6843a362f5e8fe835da2694838943402f9f5013bfb812dcd86ce9915fdde8",
     "include/game/WorldVolume.h": "9acfaf28c317912de14baef7ca50a3d80175ddc31dcf83cea18c80725e688318",
     "include/game-containers/AlgorithmTypes.h": "cd4a28c7c2eb6a6cb85477587065b64ff0e86ee9010ceed6df1637ca9fcffe14",
-    "include/game-containers/ContainerTypes.h": "f6b7f0133646a5eb70ccc5df78ced025919dee88dcd81edc3f565d0b71dd407c",
+    "include/game-containers/ContainerTypes.h": "8ec1dc3ec2473365c9fd076bb18add5d75c8dcf780f8f9b0203191c17fc36882",
     "include/game-containers/EALAResource.h": "72b4979c6f030dd7e3a8b97f8b4b7f240a3a70ff0cb7ab4baa5fed6920f96fd5",
-    "include/game-containers/ResourceTypes.h": "9218eba9db2d62400de32fe0a412bfaf3992e8bb9bea7f8ca92543d3a057fbc6",
+    "include/game-containers/ResourceTypes.h": "4ace8e77a7864643517fa580a718037e07d64d05fcc115d2ba788ecc970ae02d",
     "include/game-containers/TargetTypes.h": "2c1eb2911c9bbfc217161fe5d274aad0633cd8d043a3ce2a7c0b5c561cebafe5",
     "include/newlib/_ansi.h": "98221b391010195de4e2824879860b7fe98a8f6bc8ab2c5eaa2a3b029b4f1ad4",
     "include/newlib/_syslist.h": "546b13e022a2e53bfad0138e9294d92210773c9a7a61ee2d4ffb152ed4a6396a",
@@ -10620,6 +10661,17 @@
     "src/eala/ChoreoA.cpp": "00d50cdde9b2cc668809cb4143741350e28469bd2af8169da121bc41b50b6996",
     "src/eala/ChoreoB.cpp": "69377bd69e08c92c80d5da306ca5d7c2a3a051f101766ac9d89f09049ae1093e",
     "src/eala/ChoreoB2.cpp": "9d17f47847aca1eaf37a1c0330e43351eae146cba9189cff0cbf91089670cf09",
+    "src/eala/JumpA.cpp": "e3311834309eb900be0b777d01a4a79d8671937c7e559e16b1ed8605e66908f9",
+    "src/eala/JumpAs.cpp": "856bf28387249e18767fd85515a2347802b28926623a73cd0c0121a50a2cfb32",
+    "src/eala/JumpDump.cpp": "e4caedea7a594c7a6f9fea8092335825c50f8e8c7ff779bfff8e0a527fbdf1d1",
+    "src/eala/JumpEval.cpp": "cebcf508fd3e4bd7150f67f475377d89fb6fba6ee6c7fad6027ed86c6a56d97c",
+    "src/eala/MessageA.cpp": "7997368bb2849f65dde5b4b7a55bda9940ccf5896246efaf63cf0fb7b7140fe1",
+    "src/eala/MessageAs.cpp": "9a4972c34b0d0d29dc9904431aad2b8f6ce0174473858746aa4b14dadec4d353",
+    "src/eala/SentinelA.cpp": "321da46140502c5c55bcd1ae8c75e53b77b87f322a0513d0c5181ec37f62d306",
+    "src/eala/SentinelBusy.cpp": "796fb3c616b855146a5d83d745a36ca98710649011557181d1ca3488562f7b6a",
+    "src/eala/SentinelDump.cpp": "f5cdf6cc60f70fe6cf5a88b5fe94065529d05e145c6411489b0defda28df23fa",
+    "src/eala/SequenceA.cpp": "8ab088e6df86e6026ae6b0b053b5f8a6b596e4a8a808e3ff8adeafc1e49486ec",
+    "src/eala/SequenceB.cpp": "4098f40c058332ca709d65d721eeac96d2c874a9592447cf16985a9b68acddf7",
     "src/eala/StateA.cpp": "3f4dd078f543c226669c8cfa69456333f427df1f94c8114b208bccb77d65eb45",
     "src/eala/StateB.cpp": "0f4edf2d8aca3e3c0810391ad30ec524629045dd6b371b125cbfcd060f125501",
     "src/eala/StateCtor.cpp": "8d1e03d56f3fd9ddc216c822407841fb50159f1bacad76dbccaf69ba87d45d7e",
@@ -10628,6 +10680,8 @@
     "src/eala/StateIteratorC.cpp": "56f09eff412bbaaabc628bbfff2235d55a43defc38da6317976c005187b67313",
     "src/eala/StateIteratorSet.cpp": "e1985fcbbab1401a70aa48a057d9bbc3b88222337bd3783576a7c26b0ff9ebde",
     "src/eala/Task.cpp": "0e0713ae42baefcd9fef06a5c88b680f9e3ebf88f68d950fa967e9fa7eeca138",
+    "src/eala/TransitionB.cpp": "9cd376528725a39c2de69913f92adc1a8ad4873de16b2b836745574c5c1edab4",
+    "src/eala/TransitionCtor.cpp": "9c5d6795f566ac6cbabbf3f71466013bbb0b0d3f338a6d082c2836d040313a98",
     "src/endian/scalar.cpp": "090834c02299042f5884d0302baa71af4a07fa67443cfe933d3fdd7405fdc146",
     "src/endian/short.cpp": "27ea58209e70d97588b380691fc1e414b1deb8259ec7b245c46d6af57df08fb9",
     "src/flexprop/FlexBool.cpp": "6babfd7c08477b15b2c42789d36dc38e62854c608a9506406b67baeb70463aef",
@@ -11794,7 +11848,7 @@
     "src/script/set_in_shadow.cpp": "02827b83d96c9ec6910d31191380f8d9b66e98e25aa17292b61316ad11120b5a",
     "src/script/set_japanese.cpp": "ad2b61cced1587ee3e6bfe04c07b2f9049cadb42b6af2e41e5f17d7e0a00e064",
     "src/script/set_jaw_motion.cpp": "2ffc60759945428d6236f3cc20f6ff52fac15ca8d98a5ea87ae91b30821e4039",
-    "src/script/set_location_target.cpp": "19d5e155395f510f1ef3d6744d18e927c1e0803b420e7e3c23b6a5ffc4256b38",
+    "src/script/set_location_target.cpp": "7b34702966aeb01a3b86edb4ee2b969d412fea8a79e2be688d41b22d77a16a05",
     "src/script/set_max_light_priority.cpp": "ace6521b8b11ce24c256ea07b5c06f999a7c72d86370a9b9dbc744951dd1328a",
     "src/script/set_mg_waypoint_flag.cpp": "164f655cd199e0ee8bde254ab0975d6ae107abe4db0006ff3dcd3fd5845b5081",
     "src/script/set_mmg_location.cpp": "0ca5d2e48867c1b737c6428c094cf30ca0f1f21f5dbcf060ff6591689a4bfee7",
@@ -58991,6 +59045,240 @@
       "discarded_functions": [],
       "object_sha256": "ad15ad68de2ef3d4cbc9892bc77078c03373220efd075343e518bded46c37b46",
       "linked_sha256": "c9d997e4997acc1e1b695147f00e3dea5619746c7b26cb50ad7e48bbfc07f01e"
+    },
+    {
+      "id": "ai_JumpA",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 356,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "337c1fa0981f45d06428d06dcdefc3ae21eccd8d92f76278d6bb8a2b6d6ec0a9",
+      "linked_sha256": "8b052a292d8d0a460e03fbe76e1b1a757ea3c829f10ce1dc4f9221dc17bca00d"
+    },
+    {
+      "id": "ai_JumpEval",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 544,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "bb2a79d2f6dbe42e0eecde780b2b8e854e11426a21584440e7236d8283d835db",
+      "linked_sha256": "1f0397b3efa7477a567661d33a9e41c6a8d76f72f86cd068a5533a77766c9c22"
+    },
+    {
+      "id": "ai_JumpDump",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 156,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "3e93c6970677eaf5379ceebd6e554dafbf2120f62410a99c0904cd71c7c2c7da",
+      "linked_sha256": "e972f556e8553e30ad0bedaa898e72f915bccba76979c968359f51217eedf2f4"
+    },
+    {
+      "id": "ai_JumpAs",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 4,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "a8ffb6decb1ed4a5f89f90dd9a2ad43fbfa1eda7212f636cef1e72f71b22193c",
+      "linked_sha256": "465f5c09a7e0defeb2da9292e528a3f14bb3e20980c183e37580a4eb6d8cb76b"
+    },
+    {
+      "id": "ai_MessageA",
+      "category": "reconstructed_game",
+      "functions": 6,
+      "code_bytes": 720,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "1b04c2b182f6253faf3dd73a2c8d061db0e48289a5cf4f957801699b0a84ec0c",
+      "linked_sha256": "f31333c97c13425fc30ba028f6db73cb1da80efd9e0652f19e2c3bfc925a2bdb"
+    },
+    {
+      "id": "ai_MessageAs",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 4,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "d43f63492fbc0f96b87c2e5248095ce25529a5cf5f52f389ff056d31df1d347e",
+      "linked_sha256": "cd1246e0c6854ab83aa0c20f5a42fb068e327020ac22c9f88fe38343ef9ea6e8"
+    },
+    {
+      "id": "ai_SentinelA",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 180,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e30d89151d4f4d727936cdaa3e86c7178855665964f7ebc26dcc880d027e8e7d",
+      "linked_sha256": "403d05fd3223abc12ba334bbaac2917fa2858b9acd1e8db4d3b538ebcb6c8ef1"
+    },
+    {
+      "id": "ai_SentinelDump",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 48,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "d790925c0d4ee9785e74f60c24de6f492bd9e14c6e2cd2c5ee145d6163a10e68",
+      "linked_sha256": "2bc8ad8f462f263356f0ce1d8af4622a1f34210b0559aa51cbf66e8ffb82d1ee"
+    },
+    {
+      "id": "ai_SentinelBusy",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 8,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "94eed4136f8c141b279d824f48cba0279125aa10f25169334b54b19b06c41660",
+      "linked_sha256": "8707da51e23767c67a960b6fc148b18eaf5a2be32e63b9c7e5248b96589b01fe"
+    },
+    {
+      "id": "ai_SequenceA",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 116,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "db89467f1bfbe069cfbc80acb838f088162dcb7a9c2d5329acd499e75720cf01",
+      "linked_sha256": "98389a8ea1891a55bd57acc4e66f4c42e329b2079c51293a871f54afdff6dc1d"
+    },
+    {
+      "id": "ai_SequenceB",
+      "category": "reconstructed_game",
+      "functions": 8,
+      "code_bytes": 1476,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e5af03d34912a0f792b3f9e8055a6f13ffb96c0ec759f761aed7e1a1a2f13b4e",
+      "linked_sha256": "5b9b96f77ecc254065b73de276abcfe507dc6466fabb2bbfb27cdad05f85f4db"
+    },
+    {
+      "id": "ai_TransitionCtor",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 368,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "75584c22f3576a33c3a217d38086e95f7e0db3cfa0baf53975a0eec7695ad832",
+      "linked_sha256": "d8a90916c2ccf1233925040567e1bf3d3169de820f0e33c07de272019e62d4a4"
+    },
+    {
+      "id": "ai_TransitionB",
+      "category": "reconstructed_game",
+      "functions": 7,
+      "code_bytes": 960,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "498db01763fa49b06527423c6e2a8c63aecc0a31074529d5b765cd81dfd5d368",
+      "linked_sha256": "6eceb6d5bc31cd7ed329c8e6c16274fca40dabadbf1fea2bd21215df2d5ac22a"
     }
   ],
   "code_map": {
@@ -63562,60 +63850,11 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800871b4",
-            "size": 120,
-            "kind": "function",
-            "name": "Create__Q34EALA9Character4JumpRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4TaskUiUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008722c",
-            "size": 104,
-            "kind": "function",
-            "name": "__Q34EALA9Character4JumpRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4TaskUiUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80087294",
-            "size": 8,
-            "kind": "function",
-            "name": "Busy__Q34EALA9Character4Jump",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008729c",
-            "size": 124,
-            "kind": "function",
-            "name": "Assign__Q34EALA9Character4JumpRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character4Task",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80087318",
-            "size": 544,
-            "kind": "function",
-            "name": "EvalPose__Q34EALA9Character4JumpfPf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80087538",
-            "size": 156,
-            "kind": "function",
-            "name": "Dump__Q34EALA9Character4JumpUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800875d4",
             "size": 80,
             "kind": "function",
             "name": "__static_initialization_and_destruction_0",
             "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x80087624",
-            "size": 4,
-            "kind": "function",
-            "name": "AsJump__Q34EALA9Character4Jump",
-            "evidence": "adjacent-compiler-markers"
           },
           {
             "address": "0x80087628",
@@ -63745,60 +63984,11 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80088838",
-            "size": 104,
-            "kind": "function",
-            "name": "Create__Q34EALA9Character7MessageRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4Task",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800888a0",
-            "size": 100,
-            "kind": "function",
-            "name": "__Q34EALA9Character7MessageRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4Task",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80088904",
-            "size": 124,
-            "kind": "function",
-            "name": "Assign__Q34EALA9Character7MessageRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character4Task",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80088980",
-            "size": 8,
-            "kind": "function",
-            "name": "Busy__Q34EALA9Character7Message",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80088988",
-            "size": 264,
-            "kind": "function",
-            "name": "EvalPose__Q34EALA9Character7MessagefPf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80088a90",
-            "size": 120,
-            "kind": "function",
-            "name": "Dump__Q34EALA9Character7MessageUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80088b08",
             "size": 80,
             "kind": "function",
             "name": "__static_initialization_and_destruction_0",
             "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x80088b58",
-            "size": 4,
-            "kind": "function",
-            "name": "AsMessage__Q34EALA9Character7Message",
-            "evidence": "adjacent-compiler-markers"
           },
           {
             "address": "0x80088b5c",
@@ -64738,73 +64928,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8008db78",
-            "size": 116,
-            "kind": "function",
-            "name": "__Q34EALA9Character8SequenceRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4Task",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8008dbec",
             "size": 364,
             "kind": "function",
             "name": "_._Q34EALA9Character8Sequence",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008dd58",
-            "size": 104,
-            "kind": "function",
-            "name": "Create__Q34EALA9Character8SequenceRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4Task",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008ddc0",
-            "size": 216,
-            "kind": "function",
-            "name": "AddTask__Q34EALA9Character8SequenceGQ34EALA8Resourcet7Pointer1ZQ34EALA9Character4Task",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008de98",
-            "size": 424,
-            "kind": "function",
-            "name": "Pop__Q34EALA9Character8Sequence",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008e040",
-            "size": 196,
-            "kind": "function",
-            "name": "AttemptPromotion__Q34EALA9Character8Sequence",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008e104",
-            "size": 120,
-            "kind": "function",
-            "name": "Busy__Q34EALA9Character8Sequence",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008e17c",
-            "size": 124,
-            "kind": "function",
-            "name": "EvalPose__Q34EALA9Character8SequencefPf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008e1f8",
-            "size": 136,
-            "kind": "function",
-            "name": "Dump__Q34EALA9Character8SequenceUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008e280",
-            "size": 156,
-            "kind": "function",
-            "name": "Promote__Q34EALA9Character8SequenceRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character4Task",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -64847,31 +64974,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8008e3f0",
-            "size": 104,
-            "kind": "function",
-            "name": "Create__Q34EALA9Character8SentinelRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4Task",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008e458",
-            "size": 76,
-            "kind": "function",
-            "name": "__Q34EALA9Character8SentinelRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4Task",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8008e4a4",
             "size": 180,
             "kind": "function",
             "name": "EvalPose__Q34EALA9Character8SentinelfPf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008e558",
-            "size": 48,
-            "kind": "function",
-            "name": "Dump__Q34EALA9Character8SentinelUi",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -64880,13 +64986,6 @@
             "kind": "function",
             "name": "__static_initialization_and_destruction_0",
             "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x8008e5d8",
-            "size": 8,
-            "kind": "function",
-            "name": "Busy__Q34EALA9Character8Sentinel",
-            "evidence": "adjacent-compiler-markers"
           },
           {
             "address": "0x8008e5e0",
@@ -64935,20 +65034,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8008e84c",
-            "size": 340,
-            "kind": "function",
-            "name": "__Q34EALA9Character10TransitionPQ34EALA9Character4TaskGQ34EALA8Resourcet7Pointer1ZQ34EALA9Character4TaskT2f",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008e9a0",
-            "size": 28,
-            "kind": "function",
-            "name": "Busy__Q34EALA9Character10Transition",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8008e9bc",
             "size": 400,
             "kind": "function",
@@ -64960,55 +65045,6 @@
             "size": 836,
             "kind": "function",
             "name": "PerformBlend__Q34EALA9Character10TransitionffPf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008ee90",
-            "size": 244,
-            "kind": "function",
-            "name": "Dump__Q34EALA9Character10TransitionUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008ef84",
-            "size": 84,
-            "kind": "function",
-            "name": "HandleMessage__Q34EALA9Character10Transition",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008efd8",
-            "size": 108,
-            "kind": "function",
-            "name": "HandlePose__Q34EALA9Character10TransitionUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008f044",
-            "size": 84,
-            "kind": "function",
-            "name": "HandleRotation__Q34EALA9Character10Transitionf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008f098",
-            "size": 84,
-            "kind": "function",
-            "name": "HandleCycleEnd__Q34EALA9Character10Transition",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008f0ec",
-            "size": 84,
-            "kind": "function",
-            "name": "HandleAnimDuration__Q34EALA9Character10Transitionf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8008f140",
-            "size": 272,
-            "kind": "function",
-            "name": "Promote__Q34EALA9Character10TransitionRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character4Task",
             "evidence": "adjacent-compiler-markers"
           },
           {

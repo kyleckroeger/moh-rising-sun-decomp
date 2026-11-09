@@ -91,9 +91,7 @@ public:
     };
 };
 }
-struct _LocationTargetInfo {
-    unsigned char unresolved_00[12] __attribute__((aligned(4)));
-};
+#include "../game/LocationTargetInfo.h"
 struct BSObject;
 // Message registration/removal independently establish these fields; names are
 // descriptive. The final two bytes remain opaque and are not initialized there.
