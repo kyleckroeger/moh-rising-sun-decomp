@@ -167,3 +167,11 @@ The helpers `RotateVector` and `UpdateLocalVectors` are descriptive names; the o
 at `+192` and `+224`, and pool links at `+256` in `g_meshParticleSystemList`, which has the same five
 words as the procedural pool. Flag names are inferred from the accessors; `running` is inferred only
 from `Terminate` clearing it.
+
+## Mesh particle pool setup
+
+`MeshParticleSystem::Init` sizes its pool from level resource type 27, entry 110, with a minimum of ten systems
+of 272 bytes each, and tags the allocation `source/system/freepool.h:38`. Its pool logic is written as a local
+inline here; the header line suggests the original had a pool template. `Detach` in both particle classes clears
+the attached node and the attach matrix (`+220` and `+0x144`). `MeshParticleSystem::DeInit` is not reconstructed:
+its two saved registers are rotated.

@@ -2424,7 +2424,10 @@
     "fengine_loadpackage.json",
     "toilet_load_level.json",
     "toilet_load_pause.json",
-    "toilet_load_states.json"
+    "toilet_load_states.json",
+    "meshparticle_init.json",
+    "meshparticle_detach.json",
+    "particlesystem_detach.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

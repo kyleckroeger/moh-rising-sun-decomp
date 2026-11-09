@@ -1305,6 +1305,8 @@
       "src/particles/ParticleTerminate.cpp": "914c27ab4643765eb14a64408684a0cccd29b62d947e8746829c4f5077447da3",
       "src/particles/ParticleVelocity.cpp": "ea620216e51ba6219de1500b4a0f6db91dee7a87a57af227afba091f8f8b910c",
       "src/particles/meshparticle_alloc.cpp": "3a0906580ebebfb4ab4b6ab8df6a16c1d4954d5ac1aa1254ab84b1db2defadb7",
+      "src/particles/meshparticle_detach.cpp": "a6724ae3888bc9efd26ff44788192b3ff97751c972fd4f808564affdee6d2cfe",
+      "src/particles/meshparticle_init.cpp": "e4e6e02f26c4a0b864e4b47c7ae3822556f49cca0413e4f1a9dff6f58b6966b5",
       "src/particles/meshparticle_lifecycle.cpp": "1588b8228b8363d4e02895482812c083afc663c5082dc5790c22df8b9e593b0b",
       "src/particles/meshparticle_release.cpp": "908b004bd72a6a63407c9009c5412d109a1ae54d44273142c94d2fdd5f88cd59",
       "src/particles/meshparticle_shutdown.cpp": "e43066f24bf5effa30fca8cd7f7e2f87bc964f7254a918eff7060f1b248d3ad7",
@@ -1313,6 +1315,7 @@
       "src/particles/particledef_base_proc.cpp": "b5f399a06a1573451826715b0d5865c621d4b2cb31a99f8abf382950bdbbbf42",
       "src/particles/particledef_inlines.cpp": "fcfede5f3625c258c128793069e6c4dce8c40e8ba3103a3caafa44a87923865c",
       "src/particles/particledef_mesh.cpp": "91ad79c3c6ef969e95266bdc11617d9747913baf2fc93c124528341906a6e315",
+      "src/particles/particlesystem_detach.cpp": "5bf491465dd724a1999632df001b2f1d63b8ae631dee555380583013fdfbc697",
       "src/particles/particlesystem_event.cpp": "f2df934890f3786edc188ecda549b0d283f6e31b401f902a9454997949034333",
       "src/particles/particlesystem_executedraw.cpp": "b50a19ef2bf3cd263f0baca9b9fba7c410b2f48921a351417bbf6249c0e7a28e",
       "src/particles/particlesystem_fade.cpp": "b50d1a48f794f2c23c0c0cdb916d9b7cff629e8d4166dc9cf34385c7ac1bbcc3",
@@ -2855,7 +2858,7 @@
       "include/game/OffsetPtr.h": "06d2e4c320890063bd6b210c1ddda4b7cefc28e7aa9a4f276e76c128c0a68499",
       "include/game/ParticleClock.h": "7784d24bb307ac0a9e2b796c228584fe306f5781575650f1896038426c80dc0b",
       "include/game/ParticleDef.h": "3cfc6be658b04adb177616a7dec68bbf8c785ccd0a24dd847c44177f5bd3e53b",
-      "include/game/ParticleRecipe.h": "4d90b1113f2b2bb337559c32abcbf99c5a9a0418d3e404cc8ab814b6b7a64fea",
+      "include/game/ParticleRecipe.h": "7aeacf80a12942c130cbb7b60b13d469f0458aa1b8371855fdc1565885edba69",
       "include/game/PathTrack.h": "15fa2d9c336c67c1315921cef67cce813061a193dc51fac3417b482ddd345182",
       "include/game/PathxTrack.h": "f46f02824655f05c7a0c47d71481dfbe5c5845b6b73ae17d5f8f3453b5c4298a",
       "include/game/PauseMenu.h": "d5eb24cc0a4ff00a237ce0013f7e349f18a1eb3e8fba544e46689d078860576a",
@@ -4077,6 +4080,8 @@
       "config/GR8E69/mesh_update.json": "619d13465d30053774dac2c1b826958c65c73b3bdb8fd1a1d4f6a6f282208b55",
       "config/GR8E69/mesh_vis.json": "39470d819c852e973991545391bf6c3ce5025266ef99181c119aabce27cd8370",
       "config/GR8E69/meshparticle_alloc.json": "a5cc70fa4821566dbc31276abeb3f441d8d578dc483d39928e90f9f0c78e1896",
+      "config/GR8E69/meshparticle_detach.json": "b2674ec85940576813340f0a2085ca858d0d15c82208ec7202bc36d2edc761b1",
+      "config/GR8E69/meshparticle_init.json": "97ef4cf10257856523e098568ffe46be131d46802a41c81fb5b268e5c8aaa1ae",
       "config/GR8E69/meshparticle_lifecycle.json": "061d97e4b52a7542de426462383bb7eba308b3eda346ef7e4014273c15b00a4b",
       "config/GR8E69/meshparticle_release.json": "8b52e415b56637bd1105aec861e817851a5f320214bd1bc85b6a275c23cc7cf7",
       "config/GR8E69/meshparticle_shutdown.json": "afc77003199febc6686a50868dda0d295a0327e473a1b34ffd9bdfa24ec19366",
@@ -4261,6 +4266,7 @@
       "config/GR8E69/particledef_base_proc.json": "5b1486844d87abe74b300f034478842400f9a65b77cb5ade005b86423bfea260",
       "config/GR8E69/particledef_inlines.json": "da72065e03f93f9c76d9b70c96142339e543a2967ac5305ed5aaf142876a2332",
       "config/GR8E69/particledef_mesh.json": "134eb1f0a1f8c8460fdf4d9f1194516c73ff1740d61ddfb116b50b072c419770",
+      "config/GR8E69/particlesystem_detach.json": "c8db55c4c0571083694c6cd2ff70dc45cc5f512ee30ef545c57e1e28f11d8869",
       "config/GR8E69/particlesystem_event.json": "99b6fa31cf58a26854281fa74537930e69106f6bdb081f80ff6d82317a5ca642",
       "config/GR8E69/particlesystem_executedraw.json": "4b4c8071fd4ca1c24a69d8fe70b8266a4b0daea4d95aee78d954b4ed7cdb22c7",
       "config/GR8E69/particlesystem_fade.json": "44efb08287dd2c757a2a1bad6b5a454b358fc3dc3198557099506b249c1c1706",
@@ -4340,7 +4346,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "7b3f5c4004a79567fb6cf4695aa581c8ea08f3ecb87dad5eba271e23c278d368",
+      "config/GR8E69/project.json": "8718e175adc2503133fca7d986b1aeeee643ba61d4ff9bdb86bacc671d31f554",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7066,14 +7072,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1241380,
+    "matching_code_bytes": 1241792,
     "total_executable_code_bytes": 2492032,
-    "percent": 49.81396707586419,
+    "percent": 49.83049976886332,
     "categories": {
-      "reconstructed_game": 849164,
+      "reconstructed_game": 849576,
       "restored_library": 392216
     },
-    "matching_functions": 6525
+    "matching_functions": 6528
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -8094,6 +8100,8 @@
     "config/GR8E69/mesh_update.json": "619d13465d30053774dac2c1b826958c65c73b3bdb8fd1a1d4f6a6f282208b55",
     "config/GR8E69/mesh_vis.json": "39470d819c852e973991545391bf6c3ce5025266ef99181c119aabce27cd8370",
     "config/GR8E69/meshparticle_alloc.json": "a5cc70fa4821566dbc31276abeb3f441d8d578dc483d39928e90f9f0c78e1896",
+    "config/GR8E69/meshparticle_detach.json": "b2674ec85940576813340f0a2085ca858d0d15c82208ec7202bc36d2edc761b1",
+    "config/GR8E69/meshparticle_init.json": "97ef4cf10257856523e098568ffe46be131d46802a41c81fb5b268e5c8aaa1ae",
     "config/GR8E69/meshparticle_lifecycle.json": "061d97e4b52a7542de426462383bb7eba308b3eda346ef7e4014273c15b00a4b",
     "config/GR8E69/meshparticle_release.json": "8b52e415b56637bd1105aec861e817851a5f320214bd1bc85b6a275c23cc7cf7",
     "config/GR8E69/meshparticle_shutdown.json": "afc77003199febc6686a50868dda0d295a0327e473a1b34ffd9bdfa24ec19366",
@@ -8278,6 +8286,7 @@
     "config/GR8E69/particledef_base_proc.json": "5b1486844d87abe74b300f034478842400f9a65b77cb5ade005b86423bfea260",
     "config/GR8E69/particledef_inlines.json": "da72065e03f93f9c76d9b70c96142339e543a2967ac5305ed5aaf142876a2332",
     "config/GR8E69/particledef_mesh.json": "134eb1f0a1f8c8460fdf4d9f1194516c73ff1740d61ddfb116b50b072c419770",
+    "config/GR8E69/particlesystem_detach.json": "c8db55c4c0571083694c6cd2ff70dc45cc5f512ee30ef545c57e1e28f11d8869",
     "config/GR8E69/particlesystem_event.json": "99b6fa31cf58a26854281fa74537930e69106f6bdb081f80ff6d82317a5ca642",
     "config/GR8E69/particlesystem_executedraw.json": "4b4c8071fd4ca1c24a69d8fe70b8266a4b0daea4d95aee78d954b4ed7cdb22c7",
     "config/GR8E69/particlesystem_fade.json": "44efb08287dd2c757a2a1bad6b5a454b358fc3dc3198557099506b249c1c1706",
@@ -8357,7 +8366,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "7b3f5c4004a79567fb6cf4695aa581c8ea08f3ecb87dad5eba271e23c278d368",
+    "config/GR8E69/project.json": "8718e175adc2503133fca7d986b1aeeee643ba61d4ff9bdb86bacc671d31f554",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -9865,7 +9874,7 @@
     "include/game/OffsetPtr.h": "06d2e4c320890063bd6b210c1ddda4b7cefc28e7aa9a4f276e76c128c0a68499",
     "include/game/ParticleClock.h": "7784d24bb307ac0a9e2b796c228584fe306f5781575650f1896038426c80dc0b",
     "include/game/ParticleDef.h": "3cfc6be658b04adb177616a7dec68bbf8c785ccd0a24dd847c44177f5bd3e53b",
-    "include/game/ParticleRecipe.h": "4d90b1113f2b2bb337559c32abcbf99c5a9a0418d3e404cc8ab814b6b7a64fea",
+    "include/game/ParticleRecipe.h": "7aeacf80a12942c130cbb7b60b13d469f0458aa1b8371855fdc1565885edba69",
     "include/game/PathTrack.h": "15fa2d9c336c67c1315921cef67cce813061a193dc51fac3417b482ddd345182",
     "include/game/PathxTrack.h": "f46f02824655f05c7a0c47d71481dfbe5c5845b6b73ae17d5f8f3453b5c4298a",
     "include/game/PauseMenu.h": "d5eb24cc0a4ff00a237ce0013f7e349f18a1eb3e8fba544e46689d078860576a",
@@ -11370,6 +11379,8 @@
     "src/particles/ParticleTerminate.cpp": "914c27ab4643765eb14a64408684a0cccd29b62d947e8746829c4f5077447da3",
     "src/particles/ParticleVelocity.cpp": "ea620216e51ba6219de1500b4a0f6db91dee7a87a57af227afba091f8f8b910c",
     "src/particles/meshparticle_alloc.cpp": "3a0906580ebebfb4ab4b6ab8df6a16c1d4954d5ac1aa1254ab84b1db2defadb7",
+    "src/particles/meshparticle_detach.cpp": "a6724ae3888bc9efd26ff44788192b3ff97751c972fd4f808564affdee6d2cfe",
+    "src/particles/meshparticle_init.cpp": "e4e6e02f26c4a0b864e4b47c7ae3822556f49cca0413e4f1a9dff6f58b6966b5",
     "src/particles/meshparticle_lifecycle.cpp": "1588b8228b8363d4e02895482812c083afc663c5082dc5790c22df8b9e593b0b",
     "src/particles/meshparticle_release.cpp": "908b004bd72a6a63407c9009c5412d109a1ae54d44273142c94d2fdd5f88cd59",
     "src/particles/meshparticle_shutdown.cpp": "e43066f24bf5effa30fca8cd7f7e2f87bc964f7254a918eff7060f1b248d3ad7",
@@ -11378,6 +11389,7 @@
     "src/particles/particledef_base_proc.cpp": "b5f399a06a1573451826715b0d5865c621d4b2cb31a99f8abf382950bdbbbf42",
     "src/particles/particledef_inlines.cpp": "fcfede5f3625c258c128793069e6c4dce8c40e8ba3103a3caafa44a87923865c",
     "src/particles/particledef_mesh.cpp": "91ad79c3c6ef969e95266bdc11617d9747913baf2fc93c124528341906a6e315",
+    "src/particles/particlesystem_detach.cpp": "5bf491465dd724a1999632df001b2f1d63b8ae631dee555380583013fdfbc697",
     "src/particles/particlesystem_event.cpp": "f2df934890f3786edc188ecda549b0d283f6e31b401f902a9454997949034333",
     "src/particles/particlesystem_executedraw.cpp": "b50a19ef2bf3cd263f0baca9b9fba7c410b2f48921a351417bbf6249c0e7a28e",
     "src/particles/particlesystem_fade.cpp": "b50d1a48f794f2c23c0c0cdb916d9b7cff629e8d4166dc9cf34385c7ac1bbcc3",
@@ -60041,6 +60053,60 @@
       "discarded_functions": [],
       "object_sha256": "03283e4110ec97581181a9e06d63cb0f5db1a420cb59a46408f6b33978dfe897",
       "linked_sha256": "a81a6a84071d3bed34a9c55411fbf31d52afd029fb0680799e3c0c13168d2728"
+    },
+    {
+      "id": "meshparticle_init",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 260,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "5de12f0c5def7867b825c90f0293a8a3703ed572930534d176e6bf52a00df826",
+      "linked_sha256": "a945077dc867371512b8f6c3fb0552d963de180c9613d375beab06b782777612"
+    },
+    {
+      "id": "meshparticle_detach",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 76,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "c2be44ee93e419bd1b36a20b8d5faea2553c350de7ed8d25d4c2ace7c86e0f7e",
+      "linked_sha256": "62ff99614d092a66d20ac5644056138582d46ae3b3fd208f1aca206ca2d9a35a"
+    },
+    {
+      "id": "particlesystem_detach",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 76,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "9a0dd0eeb40fc6a1010543ef36fd0194549bfc79b8a74b8346231901df6bf30d",
+      "linked_sha256": "4d7ee9bc6e542e3eeffc1d98cb1959118419ee785cc3e40d8c2f15042e71320e"
     }
   ],
   "code_map": {
@@ -62081,13 +62147,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80062038",
-            "size": 76,
-            "kind": "function",
-            "name": "Detach__15CParticleSystem",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800621f0",
             "size": 848,
             "kind": "function",
@@ -62133,13 +62192,6 @@
         "file_record": 70,
         "file_name": "meshparticlesystem.cpp",
         "ranges": [
-          {
-            "address": "0x80064404",
-            "size": 260,
-            "kind": "function",
-            "name": "Init__18MeshParticleSystem",
-            "evidence": "adjacent-compiler-markers"
-          },
           {
             "address": "0x80064508",
             "size": 140,
@@ -62229,13 +62281,6 @@
             "size": 720,
             "kind": "function",
             "name": "Attach__18MeshParticleSystemR10ISceneNodeP7CMatrixUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800660b0",
-            "size": 76,
-            "kind": "function",
-            "name": "Detach__18MeshParticleSystem",
             "evidence": "adjacent-compiler-markers"
           },
           {

@@ -34,6 +34,7 @@ class MeshParticleSystem;
 // void placeholders; data members are not declared.
 class IParticleSystem : public IMovingSceneNode {
   public:
+    IParticleSystem();
     virtual void Init(CParticleDef *);
     virtual void Reload();
     virtual void DeActivate();
@@ -54,30 +55,46 @@ class IParticleSystem : public IMovingSceneNode {
     virtual MeshParticleSystem *AsMeshParticleSystem();
     virtual const MeshParticleSystem *AsMeshParticleSystem() const;
 };
+// A member matrix whose default construction runs the class-initialization check, in member order.
+struct CheckedMatrix : public CMatrix {
+    CheckedMatrix() {
+        if (!s_ClassInit)
+            InitClass();
+    }
+    CMatrix &operator=(const CMatrix &other) { return CMatrix::operator=(other); }
+};
 // Scoped view through the pool link. Storage after the 24-byte IObserver prefix
 // and before 0x90 belongs to unknown members of this class or its bases.
 // UseFade is the only virtual slot (108) this class adds.
 class CParticleSystem : public IParticleSystem {
   public:
-    unsigned char unknown_18[0x90 - 0x18];
-    CMatrix localToWorld;
+    unsigned char unknown_18[0x40 - 0x18];
+    // Five vectors the constructor default-constructs; the names are placeholders.
+    CVector3 vector40, vector50, vector60, vector70, vector80;
+    CheckedMatrix localToWorld;
     CVector3 initialVelocity;
     CVector3 acceleration;
     CVector3 particleAcceleration;
-    unsigned char unknown_100[0x40];
+    CheckedMatrix matrix100;   // +0x100; the name is a placeholder.
     CProcParticleDef *definition;
-    unsigned char unknown_144[12];
+    CMatrix *attachMatrix;      // +0x144
+    unsigned char unknown_148[8];
     float deactivationTicks;
     unsigned char unknown_154[12];
     unsigned int seed;
     float fadeInScale, fadeOutScale, fadeOutOffset; // +0x164: inferred from SetupAlphaFade.
     ParticleFlags flags;
     unsigned char unknown_174[12];
-    CParticleSystem *next;
+    CParticleSystem *next;      // +0x180
+    unsigned char unknown_184[400 - 388]; // The pool's stride is 400.
     virtual ~CParticleSystem();
     virtual void MarkForDestruction(int);
     virtual void Destroy();
+    CParticleSystem();
+    static void ResetSystem();
+    void Draw(CDrawContext &);
     static CParticleSystem *AllocSystem(int);
+    int Detach();
     static void ReleaseSystem(CParticleSystem *);
     void *operator new(unsigned int, void *);
     void operator delete(void *);
@@ -163,13 +180,18 @@ class MeshParticleSystem : public IParticleSystem {
     float center[3];            // +192
     unsigned char unknown_cc[216 - 204];
     CMeshParticleDef *definition; // +216
-    unsigned char unknown_dc[4];
+    CMatrix *attachMatrix;      // +220
     float radius;               // +224
     unsigned char unknown_e4[8];
     float deactivationTicks;    // +236
     MeshParticleFlags flags;    // +240
     unsigned char unknown_f4[12];
     MeshParticleSystem *next;   // +256
+    unsigned char unknown_104[272 - 260]; // The pool's stride is 272.
+    static void Init();
+    int Detach();
+    void Draw(CDrawContext &);
+    static void DrawParticles(CDrawContext &, void **);
     static MeshParticleSystem *AllocSystem(int);
     static void ReleaseSystem(MeshParticleSystem *);
     void Destroy();
