@@ -2397,7 +2397,11 @@
     "ai_AITargetOffset.json",
     "ai_AITargetSet.json",
     "ai_AITargetLocation.json",
-    "eagl_device_cmn.json"
+    "eagl_device_cmn.json",
+    "gc_interface_create.json",
+    "gc_interface_thread.json",
+    "gc_interface_messages.json",
+    "gc_interface_access.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

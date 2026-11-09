@@ -110,3 +110,11 @@ names, including those of `FileInfo` and `GcFileDescriptor`, are inferred from u
 `CARDSetIcon*` macros follow the SDK's `card.h`, whose headers do not build under ProDG here. Not reconstructed:
 the constructor and destructor, `OpenFile`, `WriteFile` (two saved registers rotated), `FindFirst`, `FindNext`,
 `NGCSportsBioCreate` (register rotation only) and `VerifyHeaderChecksum`.
+
+`Realmc::GCInterface` (`gc_interface.cpp`) owns the driver and a thread, `GCMCThread`, that dispatches the
+current task to its `UpdateTask*` function under `mMutex` and publishes `mTaskMsg` through `mpNewTaskMsg`. Its
+state is static members named by the symbol table, also `-G8`. The small-data members are `mReadFailed` through
+`mpNewTaskMsg`. The member names of `GCMessage`, `MessageTimer` and `TaskManager`, and `GCMessage::Reset`, are
+inferred; the code writes `Clear`'s fields inline where the constructor calls `Clear` out of line. Not
+reconstructed: the constructor (one extra saved register for the high half of `mFindResult`'s address),
+`GetMessage` and its `__tcf_0` (a function-local static with a destructor) and the file's static initializer.
