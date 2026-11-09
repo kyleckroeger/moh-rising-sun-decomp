@@ -461,8 +461,10 @@
       "src/ea/ipad_vbl.cpp": "66c3f6f31d5eb828019a9d019df2d806941430558437500d7702bf522559ff84",
       "src/ea/locatbig.cpp": "fa584699c71e3da3490236f9e528144d80adaae632b140dacfd593baaed752eb",
       "src/ea/locatbig_tail.cpp": "cb31096d1baa481ab45660bc3f49c446161462158dae382c55064958c3ed9f9a",
+      "src/ea/mad_codec_chunks.cpp": "91205fc17bd39b09d76d0e7212d044e9acd75c6461b23880da79d1b4eb864e4d",
       "src/ea/mad_codec_frames.cpp": "c128326b9e4ddc426b69fd89d522ee138dba59c3efb4727237cd1fd6b921e6db",
       "src/ea/mad_codec_getframe.cpp": "08fdbd5ca29f80ceaaa44843ba4244476d89cb26c62e2790c0d6daf56533aba2",
+      "src/ea/mad_frame.cpp": "83aac3a6662fab876eb4897b98978df58c3dad30731ded8999050d8326818446",
       "src/ea/memalloc.cpp": "1fb8d6c6965d9916235e6ee35c94a13b67f5d332f5f5adbf44ff3c8285f12e21",
       "src/ea/memblock.cpp": "9c22c07fb0234fb28e395fc44ebaa5d07b2ae93122bdbfb90b8e1b0da347e3ef",
       "src/ea/memclass.cpp": "196a92c247bbf907c1250a3e3090187e220b38ee4cc84b90ea8337dba4eca7ca",
@@ -3691,8 +3693,10 @@
       "config/GR8E69/ea_ipad_vbl.json": "7d6de802ef682882fd356ed8e55b56cdcb87e3eb6a834680c5b8c5a51a87f7a2",
       "config/GR8E69/ea_locatbig.json": "3d89332ca2423b134f8824282b22d2ecef215b3c58f819e83b0a7a01988cbef1",
       "config/GR8E69/ea_locatbig_tail.json": "97e626d1b280764969830c1170bbef289eb95eacd8e7c58cd7c7e9260b229f88",
+      "config/GR8E69/ea_mad_codec_chunks.json": "d1e966e3cfb36a0d9bdef58ac2662418c652c31f40cadee878e47734ebed7c9c",
       "config/GR8E69/ea_mad_codec_frames.json": "30bf144e108352de6b14e12ba9147d9b2ac3b2c0b72f3e901feb7596a914c381",
       "config/GR8E69/ea_mad_codec_getframe.json": "32923f15ee2b04c0b03734c7e0a4c45b82452dc983f442eee26c1ec90a44ab65",
+      "config/GR8E69/ea_mad_frame.json": "76533198d2537a423fb1b54a63f80bca06f9c08de7ff1fcac26403bd66132cc6",
       "config/GR8E69/ea_memalloc.json": "4030127de92d45cef89b8bcbc97b5dce59122c4f49a385ce0d6cf6f3ae6a25f0",
       "config/GR8E69/ea_memblock.json": "d8bcb16d5b7e3784e63c0f2de83e1e3741b9dc84d3673d81e08b98a95d0117a0",
       "config/GR8E69/ea_memclass.json": "8e117c8b801c31ab4ce641234870dbfe51a29f5cf82036b5e9e215b928bd18d4",
@@ -4547,7 +4551,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "b1fc70f5fffcc92c2db067b01c9497f281f91220885334918db3da8e0fb0c293",
+      "config/GR8E69/project.json": "2f83a4771ac71046ed0dc61b7e5323732108b951b77f2a2252aa3b4dd4d16eb7",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7279,14 +7283,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1308936,
+    "matching_code_bytes": 1309400,
     "total_executable_code_bytes": 2492032,
-    "percent": 52.524847192973446,
+    "percent": 52.543466536545274,
     "categories": {
-      "reconstructed_game": 916720,
+      "reconstructed_game": 917184,
       "restored_library": 392216
     },
-    "matching_functions": 6862
+    "matching_functions": 6869
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -7811,8 +7815,10 @@
     "config/GR8E69/ea_ipad_vbl.json": "7d6de802ef682882fd356ed8e55b56cdcb87e3eb6a834680c5b8c5a51a87f7a2",
     "config/GR8E69/ea_locatbig.json": "3d89332ca2423b134f8824282b22d2ecef215b3c58f819e83b0a7a01988cbef1",
     "config/GR8E69/ea_locatbig_tail.json": "97e626d1b280764969830c1170bbef289eb95eacd8e7c58cd7c7e9260b229f88",
+    "config/GR8E69/ea_mad_codec_chunks.json": "d1e966e3cfb36a0d9bdef58ac2662418c652c31f40cadee878e47734ebed7c9c",
     "config/GR8E69/ea_mad_codec_frames.json": "30bf144e108352de6b14e12ba9147d9b2ac3b2c0b72f3e901feb7596a914c381",
     "config/GR8E69/ea_mad_codec_getframe.json": "32923f15ee2b04c0b03734c7e0a4c45b82452dc983f442eee26c1ec90a44ab65",
+    "config/GR8E69/ea_mad_frame.json": "76533198d2537a423fb1b54a63f80bca06f9c08de7ff1fcac26403bd66132cc6",
     "config/GR8E69/ea_memalloc.json": "4030127de92d45cef89b8bcbc97b5dce59122c4f49a385ce0d6cf6f3ae6a25f0",
     "config/GR8E69/ea_memblock.json": "d8bcb16d5b7e3784e63c0f2de83e1e3741b9dc84d3673d81e08b98a95d0117a0",
     "config/GR8E69/ea_memclass.json": "8e117c8b801c31ab4ce641234870dbfe51a29f5cf82036b5e9e215b928bd18d4",
@@ -8667,7 +8673,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "b1fc70f5fffcc92c2db067b01c9497f281f91220885334918db3da8e0fb0c293",
+    "config/GR8E69/project.json": "2f83a4771ac71046ed0dc61b7e5323732108b951b77f2a2252aa3b4dd4d16eb7",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -10849,8 +10855,10 @@
     "src/ea/ipad_vbl.cpp": "66c3f6f31d5eb828019a9d019df2d806941430558437500d7702bf522559ff84",
     "src/ea/locatbig.cpp": "fa584699c71e3da3490236f9e528144d80adaae632b140dacfd593baaed752eb",
     "src/ea/locatbig_tail.cpp": "cb31096d1baa481ab45660bc3f49c446161462158dae382c55064958c3ed9f9a",
+    "src/ea/mad_codec_chunks.cpp": "91205fc17bd39b09d76d0e7212d044e9acd75c6461b23880da79d1b4eb864e4d",
     "src/ea/mad_codec_frames.cpp": "c128326b9e4ddc426b69fd89d522ee138dba59c3efb4727237cd1fd6b921e6db",
     "src/ea/mad_codec_getframe.cpp": "08fdbd5ca29f80ceaaa44843ba4244476d89cb26c62e2790c0d6daf56533aba2",
+    "src/ea/mad_frame.cpp": "83aac3a6662fab876eb4897b98978df58c3dad30731ded8999050d8326818446",
     "src/ea/memalloc.cpp": "1fb8d6c6965d9916235e6ee35c94a13b67f5d332f5f5adbf44ff3c8285f12e21",
     "src/ea/memblock.cpp": "9c22c07fb0234fb28e395fc44ebaa5d07b2ae93122bdbfb90b8e1b0da347e3ef",
     "src/ea/memclass.cpp": "196a92c247bbf907c1250a3e3090187e220b38ee4cc84b90ea8337dba4eca7ca",
@@ -62329,6 +62337,44 @@
       "discarded_functions": [],
       "object_sha256": "834961392947132269ac961a76cfbb1816c491bdc869a8cff79c76fd2071d46f",
       "linked_sha256": "7870ffc105e0cf930d4aa75b2a84e994deeef2b08b4fb2b003f963b0a57eb1cf"
+    },
+    {
+      "id": "ea_mad_frame",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 308,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "678d49fc3d416c6b062d8b4c91e93fb80dedf504c01e137379b4922e86b3f451",
+      "linked_sha256": "74eef20add1f501932d73d7d5ab157da617a88cd030c9a9a4f310bd0c36b7199"
+    },
+    {
+      "id": "ea_mad_codec_chunks",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 156,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "bc91c44de51c1232054f090d2058454b95620f1dc8997ec50b527a77a7195258",
+      "linked_sha256": "88c0279953f31e491cb251d2fd63f8f7023ea07ae110877a6e3230a7768079ec"
     }
   ],
   "code_map": {
@@ -85764,20 +85810,6 @@
             "evidence": "local-file-symbol"
           },
           {
-            "address": "0x80272f4c",
-            "size": 188,
-            "kind": "function",
-            "name": "__9MAD_FRAMEUiUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80273008",
-            "size": 120,
-            "kind": "function",
-            "name": "_._9MAD_FRAME",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80273080",
             "size": 88,
             "kind": "function",
@@ -85789,41 +85821,6 @@
             "size": 312,
             "kind": "function",
             "name": "_._18MAD_CODEC_INTERNAL",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80273210",
-            "size": 28,
-            "kind": "function",
-            "name": "Init__18MAD_CODEC_INTERNALPQ24RCMP7DECODERPQ24RCMP5CHUNK",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8027322c",
-            "size": 8,
-            "kind": "function",
-            "name": "GetCurrentFrameNumber__18MAD_CODEC_INTERNAL",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80273234",
-            "size": 8,
-            "kind": "function",
-            "name": "GetFrameRate__18MAD_CODEC_INTERNAL",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8027323c",
-            "size": 68,
-            "kind": "function",
-            "name": "GetNextChunk__18MAD_CODEC_INTERNALPPQ24RCMP5CHUNK",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80273280",
-            "size": 44,
-            "kind": "function",
-            "name": "ReleaseChunk__18MAD_CODEC_INTERNALPQ24RCMP5CHUNK",
             "evidence": "adjacent-compiler-markers"
           },
           {

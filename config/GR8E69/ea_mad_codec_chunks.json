@@ -1,0 +1,66 @@
+{
+  "id": "ea_mad_codec_chunks",
+  "source": "src/ea/mad_codec_chunks.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80273210",
+      "size": 156
+    }
+  ],
+  "functions": [
+    {
+      "name": "Init__18MAD_CODEC_INTERNALPQ24RCMP7DECODERPQ24RCMP5CHUNK",
+      "address": "0x80273210",
+      "size": 28,
+      "binding": 1
+    },
+    {
+      "name": "GetCurrentFrameNumber__18MAD_CODEC_INTERNAL",
+      "address": "0x8027322c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetFrameRate__18MAD_CODEC_INTERNAL",
+      "address": "0x80273234",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetNextChunk__18MAD_CODEC_INTERNALPPQ24RCMP5CHUNK",
+      "address": "0x8027323c",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "ReleaseChunk__18MAD_CODEC_INTERNALPQ24RCMP5CHUNK",
+      "address": "0x80273280",
+      "size": 44,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetChunk__Q24RCMP7DECODER": "0x801b10f8",
+    "ReleaseChunk__Q24RCMP7DECODERPQ24RCMP5CHUNK": "0x801b1150"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "rcmp_mad_codec.cpp",
+  "original_file_index": 5037
+}

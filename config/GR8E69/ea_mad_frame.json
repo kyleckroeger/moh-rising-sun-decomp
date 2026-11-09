@@ -1,0 +1,53 @@
+{
+  "id": "ea_mad_frame",
+  "source": "src/ea/mad_frame.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80272f4c",
+      "size": 308
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802c0544",
+      "size": 20
+    }
+  ],
+  "functions": [
+    {
+      "name": "__9MAD_FRAMEUiUi",
+      "address": "0x80272f4c",
+      "size": 188,
+      "binding": 1
+    },
+    {
+      "name": "_._9MAD_FRAME",
+      "address": "0x80273008",
+      "size": 120,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "MEM_fill": "0x8021866c",
+    "_4RCMP.rcmp_sys": "0x803fef20"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "rcmp_mad_codec.cpp",
+  "original_file_index": 5037
+}
