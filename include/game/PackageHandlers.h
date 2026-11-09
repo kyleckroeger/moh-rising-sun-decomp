@@ -6,8 +6,12 @@
 #include "FELocalizer.h"
 #include "MemoryCard.h"
 #include "VolumeKnobs.h"
+#include "PauseMenu.h"
+#include "FEngStrings.h"
 class ShellFactory {
   public:
+    ~ShellFactory();
+    int Process();
     PackageHandler *CreatePackageHandler(const char *);
     void DestroyPackageHandler(PackageHandler *);
 };
@@ -274,6 +278,8 @@ class HandlerCoopGameOptions : public PackageHandler {
     int Init(const char *);
     int HandleEvent(unsigned int, FEObject *, unsigned long);
     void SetOptionsProperties();
+    int ShowOption(const char **, unsigned int, unsigned int);
+    int GetNextEntryInSequence(int *, unsigned int, int, int);
     FEObject *mapNumberText; // +0x50
 };
 class HandlerLoadGame : public HandlerSaveSlotBase {
@@ -376,11 +382,31 @@ class HandlerPausePreferences : public PackageHandler {
   public:
     int HandleEvent(unsigned int, FEObject *, unsigned long);
 };
-class CSaveGamePopup {
+class FEString;
+class CSaveGamePopup : public CUIObject {
   public:
     static int IsBackgroundEnabled();
     static void EnableBackground();
     static void DisableBackground();
+    CSaveGamePopup(const char *);
+    virtual ~CSaveGamePopup();
+    void Update(float);
+    void Draw();
+    void ProcessUIEvent(unsigned int, unsigned int, FEObject *, FEPackage *);
+    void ProcessSoundEvent(unsigned int, unsigned int, FEObject *, FEPackage *);
+    virtual void OnUIEvent(unsigned int, FEObject *);
+    virtual void OnSoundEvent(unsigned int, FEObject *);
+    virtual void OnPush();
+    void Push();
+    void Pop();
+    void Wait();
+    void SetString(class FEString *, const wchar_t unsigned *, bool);
+    FEngine *engine;     // +0x04
+    unsigned char unknown_8[4];
+    FEPackage *package;  // +0x0c
+    unsigned char unknown_10[8];
+    int displayed;       // +0x18; Display sets it, OnPush clears it.
+    unsigned char unknown_1c[4];
 };
 class HandlerPauseOutro : public PackageHandler {
   public:

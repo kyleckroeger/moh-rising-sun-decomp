@@ -15,9 +15,9 @@ struct FEQuaternion {
 };
 struct FEObjData {
     unsigned long unknown_0[3];
-    long visible;       // +0xc
-    FEVector3 position; // +0x10
-    FEVector3 pivot;    // +0x1c
+    long visible;       // +0xc; also the alpha channel of the color at the start of this block.
+    FEVector3 pivot;    // +0x10
+    FEVector3 position; // +0x1c; CFengInterface::GenerateXformMatrix translates by it.
     FEQuaternion rotation; // +0x28
     FEVector3 scale;    // +0x38
 };

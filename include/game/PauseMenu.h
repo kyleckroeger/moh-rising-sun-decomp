@@ -17,6 +17,8 @@ class CUnplugged {
 class CUIObject {
   public:
     virtual ~CUIObject() {} // table at +0
+    virtual void Update(float);
+    virtual void Draw();
     virtual void ProcessUIEvent(unsigned int, unsigned int, FEObject *, FEPackage *);
     virtual void ProcessSoundEvent(unsigned int, unsigned int, FEObject *, FEPackage *);
 };

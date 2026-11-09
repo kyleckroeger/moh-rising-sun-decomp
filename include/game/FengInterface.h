@@ -2,23 +2,28 @@
 #ifndef GAME_FENG_INTERFACE_H
 #define GAME_FENG_INTERFACE_H
 #pragma interface
+#include "profile.h"
 #include "FEngMath.h"
 #include "FEngObjects.h"
-#include "FEColor.h"
-#include <stdio.h>
-#include <string.h>
+#include "PauseMenu.h"
+#include <map>
+// A set of UI objects. The tree and its helpers are symbols; the project has no <set>, so this is
+// the part of the STLport class these methods use.
+class CUIObjectSet {
+  public:
+    typedef _STL::_Rb_tree<CUIObject *, CUIObject *, _STL::_Identity<CUIObject *>, _STL::less<CUIObject *>,
+                           _STL::allocator<CUIObject *> > Tree;
+    typedef Tree::iterator iterator;
+    iterator begin() { return tree.begin(); }
+    iterator end() { return tree.end(); }
+    _STL::pair<iterator, bool> insert(CUIObject *const &object) {
+        _STL::pair<iterator, bool> result = tree.insert_unique(object);
+        return result;
+    }
+    Tree tree;
+};
 extern "C" void *DWI_alloc(const char *, int, int);
 struct ShapeFile;
-namespace EAGL {
-class Transform {
-  public:
-    float m[16];
-    void BuildIdentity();
-    void BuildScale(float, float, float, float);
-    void AppendTranslate(float, float, float);
-    void PostMult(const Transform &);
-};
-}
 class CSprite {
   public:
     void *operator new(unsigned int size, const char *label) { return DWI_alloc(label, size, 1024); }
@@ -33,54 +38,9 @@ class CFont {
     ~CFont();
     unsigned char unknown_0[20];
 };
-// Object kinds by what the render switch does with each. The names are inferred; the range is what
-// the switch's comparison tree shows: it leaves out the last value's test, so the type ends at 12.
-enum FEObjectKind {
-    FEObjectKindInvalid = -1,
-    FEObjectKindNone,
-    FEObjectKindImage,
-    FEObjectKindString,
-    FEObjectKindModel,
-    FEObjectKindList,
-    FEObjectKindGroup,
-    FEObjectKindCodeList,
-    FEObjectKindMovie,
-    FEObjectKindEffect,
-    FEObjectKindColoredImage,
-    FEObjectKindUnknown10,
-    FEObjectKindSimpleImage,
-    FEObjectKindCount
-};
 class FEImage;
 class FESimpleImage;
 class FEString;
-// A color as four floats from 0 to 1. Name inferred.
-struct SFengColor {
-    float a, r, g, b;
-    SFengColor() { b = g = r = a = 0.0f; }
-    void operator=(const FEColor &color) {
-        int red = color.r;
-        int green = color.g;
-        int blue = color.b;
-        int alpha = color.a;
-        r = red * (1.0f / 255.0f);
-        g = green * (1.0f / 255.0f);
-        b = blue * (1.0f / 255.0f);
-        a = alpha * (1.0f / 255.0f);
-    }
-    void operator*=(SFengColor other) {
-        a *= other.a;
-        r *= other.r;
-        g *= other.g;
-        b *= other.b;
-    }
-};
-// One object's drawing state, indexed by its render context number. Name inferred.
-struct SFengRenderContext {
-    EAGL::Transform transform;  // +0x00
-    SFengColor color;           // +0x40
-    unsigned char unknown_50[16];
-};
 class CFengInterface : public FEGameInterface {
   public:
     void SetBigFilePtr(char *);
@@ -104,6 +64,9 @@ class CFengInterface : public FEGameInterface {
     void RenderImage(FEImage *);
     void Render(FESimpleImage *);
     void RenderString(FEString *);
+    void NotificationMessage(unsigned long, FEObject *, unsigned long, unsigned long);
+    void NotifySoundMessage(unsigned long, FEObject *, unsigned long, unsigned long);
+    void RegisterUIObject(CUIObject *);
     void DebugMessageQueued(unsigned long, FEObject *, FEPackage *, FEObject *, unsigned long);
     void DebugMessageProcessed(unsigned long, FEObject *, FEObject *, FEPackage *, unsigned long);
     void GetMouseInfo(FEMouseInfo &);
@@ -114,5 +77,6 @@ class CFengInterface : public FEGameInterface {
     int lastStickX;                  // +0x1868; the stick's last value in GetJoyPadMask.
     int lastStickY;                  // +0x186c
     int unknown_1870;                // +0x1870; cleared by UnloadResources.
+    CUIObjectSet uiObjects; // +0x1874; objects told about each message.
 };
 #endif

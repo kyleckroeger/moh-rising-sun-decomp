@@ -2578,7 +2578,12 @@
     "ea_maddec.json",
     "ea_madidct_compute.json",
     "ea_fixedmult.json",
-    "ea_maddeca.json"
+    "ea_maddeca.json",
+    "fenginterface_resources.json",
+    "fenginterface_render.json",
+    "fenginterface_files.json",
+    "fenginterface_debug.json",
+    "fenginterface_stubs.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

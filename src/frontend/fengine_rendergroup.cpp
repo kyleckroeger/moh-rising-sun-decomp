@@ -13,17 +13,17 @@ void FEngine::RenderGroup(FEGroup *group, FEMatrix4 &parent, FEMatrix4 &viewMatr
     offset.x = offset.y = offset.z = 0.0f;
     if (data->visible && (executing || (long)group->flags >= 0)) {
         data->rotation.GetMatrix(&local);
-        const FEVector3 &position = data->position;
-        offset.x = position.x;
-        offset.y = position.y;
-        offset.z = position.z;
+        const FEVector3 &pivot = data->pivot;
+        offset.x = pivot.x;
+        offset.y = pivot.y;
+        offset.z = pivot.z;
         offset.x = -offset.x;
         offset.y = -offset.y;
         offset.z = -offset.z;
         FEMultMatrix(&corner, &local, &offset);
-        local.m[3][0] = corner.x + data->position.x + data->pivot.x;
-        local.m[3][1] = corner.y + data->position.y + data->pivot.y;
-        local.m[3][2] = corner.z + data->position.z + data->pivot.z;
+        local.m[3][0] = corner.x + data->pivot.x + data->position.x;
+        local.m[3][1] = corner.y + data->pivot.y + data->position.y;
+        local.m[3][2] = corner.z + data->pivot.z + data->position.z;
         FEMultMatrix(&world, &local, &parent);
         FEMultMatrix(&combined, &world, &viewMatrix);
         unsigned short context = ++renderContextCount;

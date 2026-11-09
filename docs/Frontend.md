@@ -169,3 +169,13 @@ is clear.
 `analogEquivalence` are symbols; the members of their entries (`SFunctionNames`, `SKeyName`, `SAnalogEquivalence`) are named from
 the lookups. `HandlerMPGameGlobalOptions` derives from `HandlerMPGameOptions`, since its `Init` calls that class's directly and its
 own member follows the base's 92 bytes.
+
+`CFengInterface` is the plain FEng game interface: its virtual table in the image names every `FEGameInterface` slot, so the base class
+in `ShellManager.h` now carries those names. `SFengRenderContext`, `SFengColor` and their members are inferred from
+`GenerateRenderContext` and `GetContextTransform`; the object's color bytes come in blue, green, red, alpha order. `uiObjects` is the
+tree its symbols name, wrapped in `CUIObjectSet` because the project has no `<set>`. `FEObjectKind` names the object types by what
+`RenderObject` does with each, and its range comes from that switch: the tree omits the test for the top value, which the compiler only
+does when an enum's range ends there. `FEObjData::pivot` and `position` were the wrong way round: `FEngine::RenderGroup` rotates about
+the first, and `GenerateXformMatrix` translates by the second.
+
+Not yet exact: `CFengInterface::NotificationMessage` and `NotifySoundMessage`, where the iterator's end stays in a register.

@@ -51,6 +51,7 @@ class FEngine {
     void RenderGroup(FEGroup *, FEMatrix4 &, FEMatrix4 &, unsigned short);
     void RenderObject(FEObject *, FEMatrix4 &, unsigned short);
     ~FEngine();
+    void Update(long);
     void ReleaseAll();
     FEPackage *PushPackage(const char *, unsigned char, unsigned long);
     void AddToIdleList(FEPackage *);

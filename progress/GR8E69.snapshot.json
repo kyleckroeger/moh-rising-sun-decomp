@@ -861,9 +861,14 @@
       "src/frontend/fengine_queuemessage.cpp": "a9ea960129c10504dd96ef9148519cee4e75f7d816ccfed443be938ca9934ec0",
       "src/frontend/fengine_recallpackagemarker.cpp": "e5b05c32666b67d70833448b224b8c49542fa96bbc83e6b0d5f6b644575952a3",
       "src/frontend/fengine_recordlastpackagebutton.cpp": "def967d88c4b012513e6cc2e0fc3eccd576394e000086eae084dd306c86e1719",
-      "src/frontend/fengine_rendergroup.cpp": "bb0582f42393673431ce3ca5a51692b06257655e3105713df56865bf41c7c832",
+      "src/frontend/fengine_rendergroup.cpp": "f134f5fef1b1b05c0249b1f03903a9957e816cf4b56216c14bbb0618f57d5b4d",
       "src/frontend/fengine_resetjoypad.cpp": "84fabc3c164ba48aaccdc0e354b3d45757c69a94368f07955ed12383c8aa93e8",
       "src/frontend/fengine_setnumjoypads.cpp": "19e87aa8be04927a7905d5ad4b46215d276cd267615e16505e670ad8f408e98c",
+      "src/frontend/fenginterface_debug.cpp": "c3673c472f858e446247f0cdd2dc9e4669fb45cdbd84d48675c71dc3a02816b4",
+      "src/frontend/fenginterface_files.cpp": "201bc4abc95231b8249457698ecee13042a119f526a23c4ff4550e158cfd4031",
+      "src/frontend/fenginterface_render.cpp": "6288309f4b6863e8663bcc6ac1fa3bda55d60eef718eab36f3e99a8d10ea6c2c",
+      "src/frontend/fenginterface_resources.cpp": "ea425ff35934b386bdfc76b50c8d3ca3cb791d10e0a024b211d1722fa9ef1ea1",
+      "src/frontend/fenginterface_stubs.cpp": "ed6b5581ac6fbb2c9ce691fe679caefa54e58a444ad056bf29f0351b2aa7232e",
       "src/frontend/fenode_fenode.cpp": "7e1b46eb6f1dc696e11efb1b23416808ea789d88417306cf7704b02aa8b4b3ce",
       "src/frontend/feobj_findscript.cpp": "2ce175736ebf456c961a9f787f0a4d0e332ea3cf1cf3f0ba8c8ff711ebb88257",
       "src/frontend/feobj_setcurrentscript.cpp": "73cfa9586980642accee98e5703ebbbabafdeff6a03de1ae5d63587beac804ad",
@@ -2978,12 +2983,13 @@
       "include/game/FESlotPool.h": "fe27a4a356873ad71d8f66bb85a594ef2170c08f3ce299ea30ed288e398e5bf6",
       "include/game/FEngElements.h": "18898b9a90dec3cb114ecb9d0b9b35b173c5dec91efac46ed7e322e815792584",
       "include/game/FEngLists.h": "dbe3d8953830b39d0e975fc5f96f49e5e04ec7f2794da837ca84a5377f272ed8",
-      "include/game/FEngMath.h": "163954fedde7102047d5769389d5f883224d9210403cc8527d411526ed7b4608",
+      "include/game/FEngMath.h": "08837dac15d8192b22f01bff9c19f568a120aa78e7e6eaafd779fb08e24f7730",
       "include/game/FEngObjects.h": "74e8cb7dc00d6a2c894bd36cc3750e646fa63c5fb1a6466d2d85ccfce93df419",
+      "include/game/FEngRender.h": "bbf8d26d60232501058aaef691c4ed99c71831a356bdf0922df4bc684739c361",
       "include/game/FEngStrings.h": "3fb38fb321893a9cc7e83396ced3500fb9dfbf859a210f4e470c2961e735cc86",
-      "include/game/FEngine.h": "12403097c5abb6cf27665e894a4a9ee9c2f158d5d06eac1caeb61a7210509491",
+      "include/game/FEngine.h": "3993ca265e3ce555aef5e1cd11b9f98e35e7fd23357a7ecc183e8c23677b0de0",
       "include/game/Fader.h": "5e6a829b80a545618de960a1fcb77e1c59c1ea1ba2f2e0fee87d54c2e7c73143",
-      "include/game/FengInterface.h": "c888636f7f94b13e49cca4d080eaad7da172bfe22f9d78e60aa58ad0c6bfb90a",
+      "include/game/FengInterface.h": "0908d5a0e484e813012a32985a8c23f98adfaf41d18cbdf52f58d25f8874a893",
       "include/game/Fiber.h": "86a5b88a4e003f050e9a365b1a5c582c8d0163426b18fff783e17a465ddbb045",
       "include/game/FlexProp.h": "d4b492f690451a27c03371aa71637f8b6a4109c07ed8ba55de69ae5f256414ff",
       "include/game/FlexPropDatabase.h": "e3bb33faf5cff3877d051efc3335ff33c373c9d228a7afcb8b2c16f4ee97c767",
@@ -2993,6 +2999,7 @@
       "include/game/GameSettings.h": "39a11099f90823df2b9b7d8b622e30ebee5eda04890b49da249af72ea3c1d46a",
       "include/game/GameSettingsViews.h": "07d9ab4207c39820ef7b3dd33d1cd36943446048239a2bb5c9b69b580632bc36",
       "include/game/GameSoundEmitter.h": "573b3af975d31eb107bde129a24f57c5d70c9896f974319b2dcc4d06ce35ddaa",
+      "include/game/GbaThread.h": "8cbfe0c31a39ec4405493403c427bc86948cfd32b4bd70934a594073707688b8",
       "include/game/GlareManager.h": "bfadb22d535c6b638365ed812a4d0b4ba6b5b48b35fefdaab9d47e52eabecba4",
       "include/game/GrenadeResponse.h": "a26075782a75877dd754799cb73d6fe55e2a6c6597676869bb956ba8cdb2bed4",
       "include/game/HeadsUpDisplay.h": "23f906aea051f1148504c63cb883c629affb72f857288563152b2e49ad89ff84",
@@ -3008,20 +3015,20 @@
       "include/game/MPWeaponSet.h": "86bcb747bbed525dbf73844a22a156b74e8da90bd482fb541bc707e66cddae2c",
       "include/game/MathFun.h": "d92b6bc49451fbf1b8a55fa0859336cc7b6c7290c687133dda85c3e96d14f5da",
       "include/game/MemStack.h": "e96e48316cab4c90d5f0d26ae33db27bf681687e8f88544d20683150b4bb1606",
-      "include/game/MemoryCard.h": "620f2960696a5702a2e351356231046bfe5e8faaf76a398effe66216ebf22b7d",
-      "include/game/MemoryCardDevice.h": "504e62bff7ae1c28f4d6207f45818a2c1597655fdcfd5336157bbc82b15c40cb",
+      "include/game/MemoryCard.h": "313518ee3f9efa7a2fee33976396fa1bbcea8b847ac16a2771ec32b7a8cc7a19",
+      "include/game/MemoryCardDevice.h": "1507f57217cd0d86cf9b7b2579d7528b4730081a5afc75e142f2b8eadc04936d",
       "include/game/MohLoader.h": "9149e28d430ae8e1c9ccab1b19b1b46307c3ac0c50ac5120675eeb2980bd10b4",
       "include/game/ObjCreate.h": "b6f8edb8c9b6eb61022293941d32ba7f9dea42d9ce5e7a29a0d3a8537d522db3",
       "include/game/Objectives.h": "54f9ed5dd4be862a546640fa7e495b07c0ac78788f6027aedba7a6c25034b5d5",
       "include/game/ObserverTypes.h": "687dfc07deb4adc23a1d0247270d6ab04c34b758bd88846bf5e4b6ef33e7cc1f",
       "include/game/OffsetPtr.h": "06d2e4c320890063bd6b210c1ddda4b7cefc28e7aa9a4f276e76c128c0a68499",
-      "include/game/PackageHandlers.h": "2e7b7225251260914c7af8e38a5aa8eb9a0a65e8e9628bd17d8ed77e6f38f726",
+      "include/game/PackageHandlers.h": "855eb21842135343f72cdffd2dad2b21de5e0f289df53d9724cf81db82413ca1",
       "include/game/ParticleClock.h": "7784d24bb307ac0a9e2b796c228584fe306f5781575650f1896038426c80dc0b",
       "include/game/ParticleDef.h": "3cfc6be658b04adb177616a7dec68bbf8c785ccd0a24dd847c44177f5bd3e53b",
       "include/game/ParticleRecipe.h": "ee622276d4add4f03da5a3540416be1d0284bd411d2735ed31c7999adfb7efeb",
       "include/game/PathTrack.h": "15fa2d9c336c67c1315921cef67cce813061a193dc51fac3417b482ddd345182",
       "include/game/PathxTrack.h": "f46f02824655f05c7a0c47d71481dfbe5c5845b6b73ae17d5f8f3453b5c4298a",
-      "include/game/PauseMenu.h": "8a5e3184251e24389b1554c6a9c46da8c7a0f2aff1ca028381d0e4aec4eafa31",
+      "include/game/PauseMenu.h": "c636016ccbb217a19db9f23fd24ddc8e22a0987386d9d8f3292f70a16ca9b4a8",
       "include/game/PlacementNew.h": "b94367764d566544e7fdde30e52e63f72fd2e5cb6e15d29592f7d08c212c3b76",
       "include/game/PopUpMessage.h": "3ba712308420d487fc901d235bd01e828a92eaff7fe9c095eadb933d05ba7737",
       "include/game/Projector.h": "69ca38e9d8882d1043533255bc4ba87e34bf9ac359cb758592d76c3546277e2d",
@@ -3033,6 +3040,7 @@
       "include/game/RealmcDriver.h": "a863e7bcac7ee35751845bd892f6af2ff0bc93c904807531c49a486d6e158bf6",
       "include/game/RealmcInterface.h": "d9983ce75038880db59ca6963d9d4c58c9598f9719bf9965f258d77376e8af96",
       "include/game/RealmcPublic.h": "90e9339fcc510af550e5213a18c87a56ed548f0b110fb5fe247de23145fbd7da",
+      "include/game/SaveGamePopups.h": "4a3d91659db8e1129bc0d80820e6c0f1a4b580347a4245c964f9f6a1f7a754c6",
       "include/game/SceneCollisions.h": "2a1769143eeecf427cad1a013ebf02f6b0d2ee83e011b58e5c62cd141306cd64",
       "include/game/SceneNode.h": "e57802b8a891e60ae5642230d29fea224075a837267cac91413b2a7fae00a560",
       "include/game/SceneObjects.h": "1dd50e238fb947b5bb222de8a62c60e1a0a0fd063e07fae3975c5d7b3d0b11f5",
@@ -3048,7 +3056,8 @@
       "include/game/ScriptTimers.h": "a81f3399ff20908469a289229ed0f0aae2c28aa3a9889629e62049e8bb16705b",
       "include/game/ScriptedGag.h": "41ce2a7f909e292930c5279c0ec536596c3b6bc35d11bb27ad6be5d51b9a0235",
       "include/game/Shell.h": "03c36affd7c0f616996096b426e82b2efd08e39aecafbde166641edbd4ccd210",
-      "include/game/ShellManager.h": "7236abe243611211bfdcc086056176815585623869adc9e45dd714cae11f660e",
+      "include/game/ShellHandlerMap.h": "e8c463d3e12d7036f32a47563b353e90b643bd83cd4fcdbda8bfaf592057efdf",
+      "include/game/ShellManager.h": "bb193d4e560d8931626f51e7f05a1493b1952e1f5d309ddfb09565a2eb5c9d57",
       "include/game/SkyBox.h": "810947bbc2ecf7cb4d69dfa350c055b05d446c04b904abfadaf4828c7be01a55",
       "include/game/SndEAXA.h": "462f6c63008084b8cb5b525d5029b804e760f3859ba6e5676a4d36461906da13",
       "include/game/SndMicroTalk.h": "47d54f16635c2a64944419af8564ee38901f410b5dc9d139ed973fb87d8ff937",
@@ -4083,6 +4092,11 @@
       "config/GR8E69/fengine_rendergroup.json": "3308e96b147bfc62cad743846c71ff8040b6a189710f5ce778ce722c3697394f",
       "config/GR8E69/fengine_resetjoypad.json": "8d56eaa52459d1d5bc5801b0e702de4c82764d9d1c7b7ce03235095acab8aff5",
       "config/GR8E69/fengine_setnumjoypads.json": "3bc91bb280e174297295cc0dd6cb298aa5f37c6606b8eef0bf4edf0ad5e5e690",
+      "config/GR8E69/fenginterface_debug.json": "7f4ff99b01301ce786202baa17a7565485c8ae95e46817051cf596416c20e001",
+      "config/GR8E69/fenginterface_files.json": "c573e41419d5c0ea82990c00c7001e3a3e88045cb4ef78c82f237f7d053ea2d9",
+      "config/GR8E69/fenginterface_render.json": "c1c9142827f8793a52a25a485dd3ca732c8f7254cbfedf54a1d79369d37fdb53",
+      "config/GR8E69/fenginterface_resources.json": "eab752594c515ed3a0c35ed9180f23a7e72ce401e41f4b4112e80ae638aee3e9",
+      "config/GR8E69/fenginterface_stubs.json": "8fe353b5872bb114e996ddd61aa80accfb9a5f9ece83accd3cfd9a07a8669617",
       "config/GR8E69/fenode_fenode.json": "1d0502cb6fcbe6f78e43a6259b583aa56a7d0bb9de6995fc4ce8744c97ec43d4",
       "config/GR8E69/feobj_findscript.json": "71e594bd52f4d216945586f4a748e966c3badf7ab8344225d9d270503d3a1e5a",
       "config/GR8E69/feobj_setcurrentscript.json": "0a319121daa6fa3a581409a88c5ce5cb74ddb8b75bf2ec3f3c3a4141a20cf665",
@@ -4653,7 +4667,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "02efa2c2a77776018166d0b03da32cec90293e52dfb22f062f49e315c3418848",
+      "config/GR8E69/project.json": "bbf41b49c57e7202d812ab0bbb1dfdd4fe9be165f70759c7f416533499fd6c78",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7389,14 +7403,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1331944,
+    "matching_code_bytes": 1334704,
     "total_executable_code_bytes": 2492032,
-    "percent": 53.4481098156043,
+    "percent": 53.558862807540194,
     "categories": {
-      "reconstructed_game": 939728,
+      "reconstructed_game": 942488,
       "restored_library": 392216
     },
-    "matching_functions": 6985
+    "matching_functions": 7007
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -8254,6 +8268,11 @@
     "config/GR8E69/fengine_rendergroup.json": "3308e96b147bfc62cad743846c71ff8040b6a189710f5ce778ce722c3697394f",
     "config/GR8E69/fengine_resetjoypad.json": "8d56eaa52459d1d5bc5801b0e702de4c82764d9d1c7b7ce03235095acab8aff5",
     "config/GR8E69/fengine_setnumjoypads.json": "3bc91bb280e174297295cc0dd6cb298aa5f37c6606b8eef0bf4edf0ad5e5e690",
+    "config/GR8E69/fenginterface_debug.json": "7f4ff99b01301ce786202baa17a7565485c8ae95e46817051cf596416c20e001",
+    "config/GR8E69/fenginterface_files.json": "c573e41419d5c0ea82990c00c7001e3a3e88045cb4ef78c82f237f7d053ea2d9",
+    "config/GR8E69/fenginterface_render.json": "c1c9142827f8793a52a25a485dd3ca732c8f7254cbfedf54a1d79369d37fdb53",
+    "config/GR8E69/fenginterface_resources.json": "eab752594c515ed3a0c35ed9180f23a7e72ce401e41f4b4112e80ae638aee3e9",
+    "config/GR8E69/fenginterface_stubs.json": "8fe353b5872bb114e996ddd61aa80accfb9a5f9ece83accd3cfd9a07a8669617",
     "config/GR8E69/fenode_fenode.json": "1d0502cb6fcbe6f78e43a6259b583aa56a7d0bb9de6995fc4ce8744c97ec43d4",
     "config/GR8E69/feobj_findscript.json": "71e594bd52f4d216945586f4a748e966c3badf7ab8344225d9d270503d3a1e5a",
     "config/GR8E69/feobj_setcurrentscript.json": "0a319121daa6fa3a581409a88c5ce5cb74ddb8b75bf2ec3f3c3a4141a20cf665",
@@ -8824,7 +8843,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "02efa2c2a77776018166d0b03da32cec90293e52dfb22f062f49e315c3418848",
+    "config/GR8E69/project.json": "bbf41b49c57e7202d812ab0bbb1dfdd4fe9be165f70759c7f416533499fd6c78",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -10311,12 +10330,13 @@
     "include/game/FESlotPool.h": "fe27a4a356873ad71d8f66bb85a594ef2170c08f3ce299ea30ed288e398e5bf6",
     "include/game/FEngElements.h": "18898b9a90dec3cb114ecb9d0b9b35b173c5dec91efac46ed7e322e815792584",
     "include/game/FEngLists.h": "dbe3d8953830b39d0e975fc5f96f49e5e04ec7f2794da837ca84a5377f272ed8",
-    "include/game/FEngMath.h": "163954fedde7102047d5769389d5f883224d9210403cc8527d411526ed7b4608",
+    "include/game/FEngMath.h": "08837dac15d8192b22f01bff9c19f568a120aa78e7e6eaafd779fb08e24f7730",
     "include/game/FEngObjects.h": "74e8cb7dc00d6a2c894bd36cc3750e646fa63c5fb1a6466d2d85ccfce93df419",
+    "include/game/FEngRender.h": "bbf8d26d60232501058aaef691c4ed99c71831a356bdf0922df4bc684739c361",
     "include/game/FEngStrings.h": "3fb38fb321893a9cc7e83396ced3500fb9dfbf859a210f4e470c2961e735cc86",
-    "include/game/FEngine.h": "12403097c5abb6cf27665e894a4a9ee9c2f158d5d06eac1caeb61a7210509491",
+    "include/game/FEngine.h": "3993ca265e3ce555aef5e1cd11b9f98e35e7fd23357a7ecc183e8c23677b0de0",
     "include/game/Fader.h": "5e6a829b80a545618de960a1fcb77e1c59c1ea1ba2f2e0fee87d54c2e7c73143",
-    "include/game/FengInterface.h": "c888636f7f94b13e49cca4d080eaad7da172bfe22f9d78e60aa58ad0c6bfb90a",
+    "include/game/FengInterface.h": "0908d5a0e484e813012a32985a8c23f98adfaf41d18cbdf52f58d25f8874a893",
     "include/game/Fiber.h": "86a5b88a4e003f050e9a365b1a5c582c8d0163426b18fff783e17a465ddbb045",
     "include/game/FlexProp.h": "d4b492f690451a27c03371aa71637f8b6a4109c07ed8ba55de69ae5f256414ff",
     "include/game/FlexPropDatabase.h": "e3bb33faf5cff3877d051efc3335ff33c373c9d228a7afcb8b2c16f4ee97c767",
@@ -10326,6 +10346,7 @@
     "include/game/GameSettings.h": "39a11099f90823df2b9b7d8b622e30ebee5eda04890b49da249af72ea3c1d46a",
     "include/game/GameSettingsViews.h": "07d9ab4207c39820ef7b3dd33d1cd36943446048239a2bb5c9b69b580632bc36",
     "include/game/GameSoundEmitter.h": "573b3af975d31eb107bde129a24f57c5d70c9896f974319b2dcc4d06ce35ddaa",
+    "include/game/GbaThread.h": "8cbfe0c31a39ec4405493403c427bc86948cfd32b4bd70934a594073707688b8",
     "include/game/GlareManager.h": "bfadb22d535c6b638365ed812a4d0b4ba6b5b48b35fefdaab9d47e52eabecba4",
     "include/game/GrenadeResponse.h": "a26075782a75877dd754799cb73d6fe55e2a6c6597676869bb956ba8cdb2bed4",
     "include/game/HeadsUpDisplay.h": "23f906aea051f1148504c63cb883c629affb72f857288563152b2e49ad89ff84",
@@ -10341,20 +10362,20 @@
     "include/game/MPWeaponSet.h": "86bcb747bbed525dbf73844a22a156b74e8da90bd482fb541bc707e66cddae2c",
     "include/game/MathFun.h": "d92b6bc49451fbf1b8a55fa0859336cc7b6c7290c687133dda85c3e96d14f5da",
     "include/game/MemStack.h": "e96e48316cab4c90d5f0d26ae33db27bf681687e8f88544d20683150b4bb1606",
-    "include/game/MemoryCard.h": "620f2960696a5702a2e351356231046bfe5e8faaf76a398effe66216ebf22b7d",
-    "include/game/MemoryCardDevice.h": "504e62bff7ae1c28f4d6207f45818a2c1597655fdcfd5336157bbc82b15c40cb",
+    "include/game/MemoryCard.h": "313518ee3f9efa7a2fee33976396fa1bbcea8b847ac16a2771ec32b7a8cc7a19",
+    "include/game/MemoryCardDevice.h": "1507f57217cd0d86cf9b7b2579d7528b4730081a5afc75e142f2b8eadc04936d",
     "include/game/MohLoader.h": "9149e28d430ae8e1c9ccab1b19b1b46307c3ac0c50ac5120675eeb2980bd10b4",
     "include/game/ObjCreate.h": "b6f8edb8c9b6eb61022293941d32ba7f9dea42d9ce5e7a29a0d3a8537d522db3",
     "include/game/Objectives.h": "54f9ed5dd4be862a546640fa7e495b07c0ac78788f6027aedba7a6c25034b5d5",
     "include/game/ObserverTypes.h": "687dfc07deb4adc23a1d0247270d6ab04c34b758bd88846bf5e4b6ef33e7cc1f",
     "include/game/OffsetPtr.h": "06d2e4c320890063bd6b210c1ddda4b7cefc28e7aa9a4f276e76c128c0a68499",
-    "include/game/PackageHandlers.h": "2e7b7225251260914c7af8e38a5aa8eb9a0a65e8e9628bd17d8ed77e6f38f726",
+    "include/game/PackageHandlers.h": "855eb21842135343f72cdffd2dad2b21de5e0f289df53d9724cf81db82413ca1",
     "include/game/ParticleClock.h": "7784d24bb307ac0a9e2b796c228584fe306f5781575650f1896038426c80dc0b",
     "include/game/ParticleDef.h": "3cfc6be658b04adb177616a7dec68bbf8c785ccd0a24dd847c44177f5bd3e53b",
     "include/game/ParticleRecipe.h": "ee622276d4add4f03da5a3540416be1d0284bd411d2735ed31c7999adfb7efeb",
     "include/game/PathTrack.h": "15fa2d9c336c67c1315921cef67cce813061a193dc51fac3417b482ddd345182",
     "include/game/PathxTrack.h": "f46f02824655f05c7a0c47d71481dfbe5c5845b6b73ae17d5f8f3453b5c4298a",
-    "include/game/PauseMenu.h": "8a5e3184251e24389b1554c6a9c46da8c7a0f2aff1ca028381d0e4aec4eafa31",
+    "include/game/PauseMenu.h": "c636016ccbb217a19db9f23fd24ddc8e22a0987386d9d8f3292f70a16ca9b4a8",
     "include/game/PlacementNew.h": "b94367764d566544e7fdde30e52e63f72fd2e5cb6e15d29592f7d08c212c3b76",
     "include/game/PopUpMessage.h": "3ba712308420d487fc901d235bd01e828a92eaff7fe9c095eadb933d05ba7737",
     "include/game/Projector.h": "69ca38e9d8882d1043533255bc4ba87e34bf9ac359cb758592d76c3546277e2d",
@@ -10366,6 +10387,7 @@
     "include/game/RealmcDriver.h": "a863e7bcac7ee35751845bd892f6af2ff0bc93c904807531c49a486d6e158bf6",
     "include/game/RealmcInterface.h": "d9983ce75038880db59ca6963d9d4c58c9598f9719bf9965f258d77376e8af96",
     "include/game/RealmcPublic.h": "90e9339fcc510af550e5213a18c87a56ed548f0b110fb5fe247de23145fbd7da",
+    "include/game/SaveGamePopups.h": "4a3d91659db8e1129bc0d80820e6c0f1a4b580347a4245c964f9f6a1f7a754c6",
     "include/game/SceneCollisions.h": "2a1769143eeecf427cad1a013ebf02f6b0d2ee83e011b58e5c62cd141306cd64",
     "include/game/SceneNode.h": "e57802b8a891e60ae5642230d29fea224075a837267cac91413b2a7fae00a560",
     "include/game/SceneObjects.h": "1dd50e238fb947b5bb222de8a62c60e1a0a0fd063e07fae3975c5d7b3d0b11f5",
@@ -10381,7 +10403,8 @@
     "include/game/ScriptTimers.h": "a81f3399ff20908469a289229ed0f0aae2c28aa3a9889629e62049e8bb16705b",
     "include/game/ScriptedGag.h": "41ce2a7f909e292930c5279c0ec536596c3b6bc35d11bb27ad6be5d51b9a0235",
     "include/game/Shell.h": "03c36affd7c0f616996096b426e82b2efd08e39aecafbde166641edbd4ccd210",
-    "include/game/ShellManager.h": "7236abe243611211bfdcc086056176815585623869adc9e45dd714cae11f660e",
+    "include/game/ShellHandlerMap.h": "e8c463d3e12d7036f32a47563b353e90b643bd83cd4fcdbda8bfaf592057efdf",
+    "include/game/ShellManager.h": "bb193d4e560d8931626f51e7f05a1493b1952e1f5d309ddfb09565a2eb5c9d57",
     "include/game/SkyBox.h": "810947bbc2ecf7cb4d69dfa350c055b05d446c04b904abfadaf4828c7be01a55",
     "include/game/SndEAXA.h": "462f6c63008084b8cb5b525d5029b804e760f3859ba6e5676a4d36461906da13",
     "include/game/SndMicroTalk.h": "47d54f16635c2a64944419af8564ee38901f410b5dc9d139ed973fb87d8ff937",
@@ -11418,9 +11441,14 @@
     "src/frontend/fengine_queuemessage.cpp": "a9ea960129c10504dd96ef9148519cee4e75f7d816ccfed443be938ca9934ec0",
     "src/frontend/fengine_recallpackagemarker.cpp": "e5b05c32666b67d70833448b224b8c49542fa96bbc83e6b0d5f6b644575952a3",
     "src/frontend/fengine_recordlastpackagebutton.cpp": "def967d88c4b012513e6cc2e0fc3eccd576394e000086eae084dd306c86e1719",
-    "src/frontend/fengine_rendergroup.cpp": "bb0582f42393673431ce3ca5a51692b06257655e3105713df56865bf41c7c832",
+    "src/frontend/fengine_rendergroup.cpp": "f134f5fef1b1b05c0249b1f03903a9957e816cf4b56216c14bbb0618f57d5b4d",
     "src/frontend/fengine_resetjoypad.cpp": "84fabc3c164ba48aaccdc0e354b3d45757c69a94368f07955ed12383c8aa93e8",
     "src/frontend/fengine_setnumjoypads.cpp": "19e87aa8be04927a7905d5ad4b46215d276cd267615e16505e670ad8f408e98c",
+    "src/frontend/fenginterface_debug.cpp": "c3673c472f858e446247f0cdd2dc9e4669fb45cdbd84d48675c71dc3a02816b4",
+    "src/frontend/fenginterface_files.cpp": "201bc4abc95231b8249457698ecee13042a119f526a23c4ff4550e158cfd4031",
+    "src/frontend/fenginterface_render.cpp": "6288309f4b6863e8663bcc6ac1fa3bda55d60eef718eab36f3e99a8d10ea6c2c",
+    "src/frontend/fenginterface_resources.cpp": "ea425ff35934b386bdfc76b50c8d3ca3cb791d10e0a024b211d1722fa9ef1ea1",
+    "src/frontend/fenginterface_stubs.cpp": "ed6b5581ac6fbb2c9ce691fe679caefa54e58a444ad056bf29f0351b2aa7232e",
     "src/frontend/fenode_fenode.cpp": "7e1b46eb6f1dc696e11efb1b23416808ea789d88417306cf7704b02aa8b4b3ce",
     "src/frontend/feobj_findscript.cpp": "2ce175736ebf456c961a9f787f0a4d0e332ea3cf1cf3f0ba8c8ff711ebb88257",
     "src/frontend/feobj_setcurrentscript.cpp": "73cfa9586980642accee98e5703ebbbabafdeff6a03de1ae5d63587beac804ad",
@@ -63479,6 +63507,96 @@
       "discarded_functions": [],
       "object_sha256": "99da39bd638edb9469af13494a9dd3649b3f0b1da660b2e2b3a4c7bd3b5f051d",
       "linked_sha256": "d9242b8889848dcb8ba21950b3685e8e90cb6cd23529198bcb4493a1e3bc8e33"
+    },
+    {
+      "id": "fenginterface_resources",
+      "category": "reconstructed_game",
+      "functions": 8,
+      "code_bytes": 848,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e71da1289c45cf8517c646a178fef74ed4ee88bf2f86481b4a63e66a472a0d4b",
+      "linked_sha256": "cd3cab1b88f540cf75fdb8ffe8b1e4426896c988be71e2b02cfd25fad94467f3"
+    },
+    {
+      "id": "fenginterface_render",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 1176,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "5a8400925f999f762b75911d3aab8ac6dabd5d92cba07198e936ab5c39cff3f7",
+      "linked_sha256": "2433cac6d6d3131ae316ee76ee4d90a707112f20ecd162f8b77bf8474e942ed8"
+    },
+    {
+      "id": "fenginterface_files",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 612,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "13f3f2c5933bbe00b4921f08297bd28b6c5646cf2d27f4faed25f0c06321d489",
+      "linked_sha256": "ca2abb019cce8f2002f663f556ae5dd160d2041cd8b8b06da6d798ce98f9f44b"
+    },
+    {
+      "id": "fenginterface_debug",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 112,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "f2bb275d1976ca3fb48ce25d12918e3579dc84ca183c3a3a56f033b480ac901c",
+      "linked_sha256": "a05072cb14df7ac3fe876288956e4d707cada55aa617f7014b18689865c7d00c"
+    },
+    {
+      "id": "fenginterface_stubs",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 12,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "75a17ca838f8bd1714bc1b114fcb8f0c4055292004d252323df80def1f9ff92c",
+      "linked_sha256": "44edd402da9342552b190b4c87d6e5a17f38f4478e59962d1cd6e3659dcc3a56"
     }
   ],
   "code_map": {
@@ -75896,97 +76014,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8017c7bc",
-            "size": 8,
-            "kind": "function",
-            "name": "SetBigFilePtr__14CFengInterfacePc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017c7c4",
-            "size": 304,
-            "kind": "function",
-            "name": "LoadResources__14CFengInterfaceP9FEPackagelP17FEResourceRequest",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017c8f4",
-            "size": 180,
-            "kind": "function",
-            "name": "UnloadResources__14CFengInterfaceP9FEPackagelP17FEResourceRequest",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017c9a8",
-            "size": 68,
-            "kind": "function",
-            "name": "GetPackageData__14CFengInterfacePCcPPUcRb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017c9ec",
-            "size": 272,
-            "kind": "function",
-            "name": "PackageWasLoaded__14CFengInterfaceP9FEPackage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017cafc",
-            "size": 8,
-            "kind": "function",
-            "name": "PackageWillUnload__14CFengInterfaceP9FEPackage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017cb04",
-            "size": 4,
-            "kind": "function",
-            "name": "BeginPackageRendering__14CFengInterfaceP9FEPackage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017cb08",
-            "size": 4,
-            "kind": "function",
-            "name": "EndPackageRendering__14CFengInterfaceP9FEPackage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017cb0c",
-            "size": 376,
-            "kind": "function",
-            "name": "GenerateRenderContext__14CFengInterfaceUsP8FEObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017cc84",
-            "size": 120,
-            "kind": "function",
-            "name": "GetContextTransform__14CFengInterfaceUsR9FEMatrix4",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017ccfc",
-            "size": 36,
-            "kind": "function",
-            "name": "GetViewTransformation__14CFengInterfaceP9FEMatrix4",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017cd20",
-            "size": 316,
-            "kind": "function",
-            "name": "RenderObject__14CFengInterfaceP8FEObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017ce5c",
-            "size": 328,
-            "kind": "function",
-            "name": "GetJoyPadMask__14CFengInterfaceUc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8017cfa4",
             "size": 160,
             "kind": "function",
@@ -75998,41 +76025,6 @@
             "size": 160,
             "kind": "function",
             "name": "NotifySoundMessage__14CFengInterfaceUlP8FEObjectUlUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017d0e4",
-            "size": 92,
-            "kind": "function",
-            "name": "RegisterUIObject__14CFengInterfaceP9CUIObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017d140",
-            "size": 100,
-            "kind": "function",
-            "name": "ReplaceFilenameExtension__14CFengInterfacePcT1",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017d1a4",
-            "size": 164,
-            "kind": "function",
-            "name": "LoadTexture__14CFengInterfaceP17FEResourceRequestPc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017d248",
-            "size": 128,
-            "kind": "function",
-            "name": "LoadFont__14CFengInterfaceP17FEResourceRequestPc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017d2c8",
-            "size": 128,
-            "kind": "function",
-            "name": "GenerateXformMatrix__14CFengInterfacePQ24EAGL9TransformP9FEObjDataUs",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -76057,38 +76049,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8017da5c",
-            "size": 52,
-            "kind": "function",
-            "name": "DebugMessageQueued__14CFengInterfaceUlP8FEObjectP9FEPackageT2Ul",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017da90",
-            "size": 60,
-            "kind": "function",
-            "name": "DebugMessageProcessed__14CFengInterfaceUlP8FEObjectT2P9FEPackageUl",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8017dacc",
             "size": 152,
             "kind": "function",
             "name": "_._14CFengInterface",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017db64",
-            "size": 8,
-            "kind": "function",
-            "name": "LocalizePackage__14CFengInterfaceP9FEPackage",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017db6c",
-            "size": 4,
-            "kind": "function",
-            "name": "GetMouseInfo__14CFengInterfaceR11FEMouseInfo",
             "evidence": "adjacent-compiler-markers"
           }
         ],
