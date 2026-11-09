@@ -95,6 +95,8 @@
       "src/ai/CoverpointStop.cpp": "dc653f0c31bb73de1262d064d5d3a34086c819d5e7afe1c51b3f664747234ac1",
       "src/ai/CoverpointStopWalk.cpp": "bd3f48363f1bc88ca688e477292e1d0ee776c1cb725c4e8ca0e807b559b30cec",
       "src/ai/CoverpointTail.cpp": "6fb11951571ebb7e0b7908a3be5c707933ad9af91fc6431e847aea3796d946f9",
+      "src/ai/FloodSearchAdd.cpp": "3a117d894b6846b788a5a0fe8ca57c7cda55e2977cfe5a1d872e8f61c91b0319",
+      "src/ai/FloodSearchExpand.cpp": "9fb4fd92d5d414591cb9280d55d0ac1e6b3c32011d08125f8f7536a920402329",
       "src/ai/GrenadeResponseHead.cpp": "a363f0224c6f432be08cc00243519c6f6ff4a67bd6a9813285090cb4ae761219",
       "src/ai/GrenadeResponseQueries.cpp": "c69240fd532d35c3cd178969bbafd94bb6c3202d155ba8437e716d4f7ee4b2c9",
       "src/ai/GrenadeResponseStop.cpp": "a5ee92798ed16429e1f0d4e0949674c0a43bbd67b7b7f9e3e6b6340d95561251",
@@ -766,7 +768,10 @@
       "src/game/font_setcolor.cpp": "732885f73107c33c308a7d324faee714a86aff80f40bdc94707aa90305335a81",
       "src/game/framecount.cpp": "7b76621f1a2f5b452b4ee73c31317598062c4e3c5a4b7693d71b5f1371ef7931",
       "src/game/idebug_msg.cpp": "f0ffa7cb1598e285b7800d2f98fe3e5d111219257969b8b838b54a32117abd71",
+      "src/game/input_any_device.cpp": "352511ab62d7aad2c422610ddbd42614da4e4106ad7e7b8f190093cb39aadaa8",
       "src/game/input_init.cpp": "92834b6924093f7ebc540f41b5eac7db9cfc3741eb2018ccbb066b14b2f5a952",
+      "src/game/input_manager_ctor.cpp": "341eb613cb7d737ba98214c49064f1f04b12dec150ab811fb49ac27ddfdc0895",
+      "src/game/input_master_block.cpp": "b0492aae3e360aa02008cb7a648ac4988f425906cde501d968a366690cfefe98",
       "src/game/input_ports.cpp": "c8e073d6d9e25381539ae8de570e54222add652af5b1400642cfc9159c14f36e",
       "src/game/input_state.cpp": "c875939ff44d67e321e0e286ebddc6e5880d2dc966559b8b2d9d23194da84de1",
       "src/game/input_tail.cpp": "3a03d39cf2824ead24e4e228c4b05c680c5b657609186cad161af73edb4987bf",
@@ -1264,6 +1269,8 @@
       "src/save/mc_g.cpp": "e639a05147fc56af84f8654a1a60c618fd32f0600b6ac95f8c5bd35211da4e75",
       "src/save/mc_h.cpp": "6d4ea2cd72568b3250cba3ce64dba6c3bae2ea478598f0df6c60cc4521015303",
       "src/scene/AnimObjFactoryConstructor.cpp": "74d86ee9bb07110eb11aa5361a683e4cd3164e50b3ce1b16a066cfcc8cebf9d8",
+      "src/scene/AnimObjFactoryLoad.cpp": "5dbf4979bcfc1422fbee8cdb835e64bbd28db48c48907cc64fe00064e44e89e9",
+      "src/scene/AnimObjFactoryLoadWeapon.cpp": "775fa75f4820802b1928d0045ac10cdfa69199621e800b15300a7690c532662b",
       "src/scene/AnimObjFactoryLoaders.cpp": "f9b6e94a774c14277579338ca9f3bec4a379df821271425a464b85ad96026e68",
       "src/scene/AnimObjFactoryRelease.cpp": "1ad8052e8d3c457fc715e1512e952e1d702e532f3b2b2c8fef14f67005750f7a",
       "src/scene/AnimObjFactoryReset.cpp": "02f7ce07d09dcff1319d008e7ab397b366ad1ef531ac4656f30ce0de598a3614",
@@ -1345,6 +1352,7 @@
       "src/scene/ObjCreateSubHier.cpp": "5c7724eb186d361c3d427a50c119cb4c74d7ebf3bbcb10b566f0e52126c59881",
       "src/scene/ObjCreateSubHierAnim.cpp": "a51a3f72286b25589865821f6edf9ecd6b48e8d207edd564119798e8bc1f5094",
       "src/scene/ObjCreateThrownDelete.cpp": "c3bc5990878ec599e3a9b3f88fffcfe8c9bc0b2a590a2565470019fabc8fcff8",
+      "src/scene/ObjectFade.cpp": "bfabac4efb757380b131adce094120d197fd931d0f8c05ca2b2554cf55a1a018",
       "src/scene/SceneNodeAxisDefaults.cpp": "2e62b6f3b3302ff27d6350acc7376566f9bc0cb72383e1f54fbd95b185f6cbf6",
       "src/scene/SceneNodeCentroid.cpp": "7899f0a92f618aa7efeb10ddc99112cdcd045c7bd512476fd59c316b3a449af7",
       "src/scene/SceneNodeDestructor.cpp": "56a6495fa5fd7f8fa0e267ea0c7e314d8cafc24ab743c986bf6a6d00f27c9ffa",
@@ -2693,7 +2701,7 @@
       "include/game/Rcmp.h": "938e4965d3c2b0d0f48d815f17eaf162b3fb5b491ec3dfd4bcc5814197bfa6ee",
       "include/game/SceneCollisions.h": "2a1769143eeecf427cad1a013ebf02f6b0d2ee83e011b58e5c62cd141306cd64",
       "include/game/SceneNode.h": "e57802b8a891e60ae5642230d29fea224075a837267cac91413b2a7fae00a560",
-      "include/game/SceneObjects.h": "2c4addea529e69c39009a4aea37d1b8af7ac2f71f94b85ba40e1e6720547b730",
+      "include/game/SceneObjects.h": "29787d90c61f3df75ffc827c897ff58324d17ace2b78c6b300d067851e55b536",
       "include/game/Screen.h": "86139c54ad8a9fdfa1e0842d665f4cd5699ac216901fab040218e8b7adc2c78a",
       "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
       "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
@@ -2705,7 +2713,7 @@
       "include/game/ScriptStartup.h": "ca298798406d593bc47296e17ca3c8778cde7e69bb465f05962cc05fc2eb40cc",
       "include/game/ScriptTimers.h": "a81f3399ff20908469a289229ed0f0aae2c28aa3a9889629e62049e8bb16705b",
       "include/game/ScriptedGag.h": "41ce2a7f909e292930c5279c0ec536596c3b6bc35d11bb27ad6be5d51b9a0235",
-      "include/game/Shell.h": "4368aeeaa2127f31c86496fbba71e284b54b8752c8ed69e0b6031b7b3e299b6e",
+      "include/game/Shell.h": "03c36affd7c0f616996096b426e82b2efd08e39aecafbde166641edbd4ccd210",
       "include/game/ShellManager.h": "e2923227eb223f506831fd2f15441e6251b3d419998fedeb7d5a32e7bcd1af04",
       "include/game/SkyBox.h": "810947bbc2ecf7cb4d69dfa350c055b05d446c04b904abfadaf4828c7be01a55",
       "include/game/SndEAXA.h": "462f6c63008084b8cb5b525d5029b804e760f3859ba6e5676a4d36461906da13",
@@ -2728,7 +2736,7 @@
       "include/game/TevStage.h": "47aaf3de5425dace0c30e2852896a9494f78ab4a4dcaad6be03d4aa4204d7466",
       "include/game/TevStageInlines.h": "03b19716c4d88b4eb2f3c74cdf2040ca0bb6c43e842d1eefc2c8bd148a278645",
       "include/game/Thrown.h": "62c70dfcb9ad0243eba5bdf633073bb2563d3fe2b4da6bdcae42452c547912db",
-      "include/game/Toilet.h": "a608aae7246153ba8ff8069a32a9080acb3d54ce06d1ce9f78ed5ccb94afacab",
+      "include/game/Toilet.h": "b27bc0400a4cbf1f67514badf4ef5b96d641221956758e0b6c709ef6bff761ac",
       "include/game/TriggerObject.h": "73e70d537a184c92ad5f8f0e10b773f5efe3306ce871a82852a3c41398f7418b",
       "include/game/VideoDriver.h": "dd21c14b75db031804f4dfd4afd30fcaf14e5211ed4c37079e3f6ff3e19ee668",
       "include/game/VolFrustum.h": "b60b3c36ce9c61c007d11037991c65de0a159749f1702d360fa98525e0c03072",
@@ -2738,7 +2746,7 @@
       "include/game/WorldVolume.h": "9acfaf28c317912de14baef7ca50a3d80175ddc31dcf83cea18c80725e688318",
       "include/game-containers/AlgorithmTypes.h": "cd4a28c7c2eb6a6cb85477587065b64ff0e86ee9010ceed6df1637ca9fcffe14",
       "include/game-containers/ContainerTypes.h": "f6b7f0133646a5eb70ccc5df78ced025919dee88dcd81edc3f565d0b71dd407c",
-      "include/game-containers/ResourceTypes.h": "6f63038334ba47ea545e0994a455fbd01b1fdb6aa3b6bf155de630e9ede05c68",
+      "include/game-containers/ResourceTypes.h": "85904ef25745bb8f3903107f26b5b9a3a3017f106d0362086f5b9c602fdb0b27",
       "include/game-containers/TargetTypes.h": "3ac99430c5eabe7c725b67a8b280b4ec55003d4bb6763dc1746023ced2fda08f",
       "include/newlib/_ansi.h": "98221b391010195de4e2824879860b7fe98a8f6bc8ab2c5eaa2a3b029b4f1ad4",
       "include/newlib/_syslist.h": "546b13e022a2e53bfad0138e9294d92210773c9a7a61ee2d4ffb152ed4a6396a",
@@ -3123,6 +3131,8 @@
       "config/GR8E69/ai_targeting_update.json": "a43d0b595f7aea069b47939e3555dbccc71ed0811278060a364b909b9c874f5f",
       "config/GR8E69/ambient_track.json": "a0e649c1f923a48f87645de3f5d54aadb4db1db43872d0a7376af7a7406ab4fd",
       "config/GR8E69/ambient_track_location.json": "12f454bd3ebed794c46407c0cd1a158fa22ad409d61b7847a70849566d7557bd",
+      "config/GR8E69/anim_factory_load.json": "a8acb5997b7f9521f24922446225fe46c054d909d8f3daef38b2dd408f4d9fba",
+      "config/GR8E69/anim_factory_load_weapon.json": "ab42276dae15dbe20348cca66752c1b34017b44cd293541634a93202dc4e7df6",
       "config/GR8E69/anim_light.json": "9ffbd37f12a017d9299881ad77528bd7b94bc35a5e4970c59fb96ce107610dfb",
       "config/GR8E69/anim_light_pools.json": "54a79d91ca35237884367a52d2b3a0995cb51ab3ad5909b62585b24c2efe1205",
       "config/GR8E69/animated_volume_head.json": "43990300d2d7b3a96e16a54bf506a9fab2f4c6fd44d83f2912b3eee522ff3d24",
@@ -3634,6 +3644,8 @@
       "config/GR8E69/flex_unload_properties.json": "6cd81f0594f54bf896f8a1a3faa50aefe6b88ce648559da7b2191558e27feb86",
       "config/GR8E69/flex_valid.json": "f36e2f140a940621dfe8d59efcd46dbc4e928ab73b129c434cb5e9dcc40f5916",
       "config/GR8E69/flexprop_matrix.json": "cf7d89aea80924588b0ce099751e6c9388001ab62afb04f7564e0b6d4ffaa082",
+      "config/GR8E69/flood_search_add.json": "46aa211322572b486162832e40c9dd68b4b37663b2897f396261add1e59fcad0",
+      "config/GR8E69/flood_search_expand.json": "f85ac4097a953ac76de5619b29a9a8171f0935337fe15f8fb6e125351d102f79",
       "config/GR8E69/font_attrs.json": "685c74a11db0521869d7343c4282a1aa5075dd2b85881de7142918457f5bd11b",
       "config/GR8E69/font_ctor.json": "845307706220c7756f2bdcb0fb7dfd49282418a1f80acefe7bf9f530da4071ab",
       "config/GR8E69/font_draw.json": "1f4db7878d67aa3f16bcf3b47cf62125c4df21bfbcbb4660676760f05d56340d",
@@ -3687,7 +3699,10 @@
       "config/GR8E69/hud_target.json": "d9f687a1c27ef9da7df78a6f0dc8770ea4d1e705f1e565b8549e85ff4f2a2ec3",
       "config/GR8E69/hud_update.json": "d27f4b4f31b44a3c72cf613683ed58b7068d4ba1c4f83a6f50716109acbae289",
       "config/GR8E69/idebug_msg.json": "16c0dcce743bd3b126556004c13231aa6e0843c77c928bdc22771526826b83ed",
+      "config/GR8E69/input_any_device.json": "d846dbcba65f4d6bf6f953a8740bdb25dcffefb944d7d84607a28588928be392",
       "config/GR8E69/input_init.json": "b6f5dc06d034cbacefd3e7578633720cbbe556f37fd31b197115ed2905dab52e",
+      "config/GR8E69/input_manager_ctor.json": "8e3feac49c5c70b7179df7c5ec0587a7e4ceb0c01f3f63ae828336489fec0602",
+      "config/GR8E69/input_master_block.json": "fe81b4ea8ab32b6cc8930c17ccb99743ebb494a46e12992be3c10f0d4bf452bd",
       "config/GR8E69/input_ports.json": "2b16d73f7a9887c3e15f921a976b7ab3fffab6ae531e541718f3e369f33c4d03",
       "config/GR8E69/input_state.json": "420fc11884e0574393bd77a9e86d7f519bc4b39edcddb5f0cfdae93512d65954",
       "config/GR8E69/input_tail.json": "3d3f4329dd48ec1b9f50a86813e372486c148d345cc51c9e84081d0e1d654a48",
@@ -3907,6 +3922,7 @@
       "config/GR8E69/newlib_wctomb_r.json": "fc59b588e63f3a1f302300e1257e93abec1acb4041e2ef289f02d12774f5ae70",
       "config/GR8E69/newlib_writer.json": "cf7eab1eebe3bf4b04912e61b9ce9a2c7c4191ebecc610aa267f69bdabe6512f",
       "config/GR8E69/newlib_wsetup.json": "61dd8c7f513073a2f4c355ee89bdcf2d300345cd74c632de1997cba9f3e84020",
+      "config/GR8E69/object_fade.json": "75ad938efd5ffa30a120759ddcd310ba00ab235665b58aff6bf9e419b2e27329",
       "config/GR8E69/objectives_init.json": "eca4ead9759ddbaaf645bd69577bf42e99bb26ad920173006f50ff703e18e887",
       "config/GR8E69/objectives_serialize.json": "4fba9fa4ce1cb980aef9ebf485c26c16d832be60ee7410d48b1fd7bb39bce962",
       "config/GR8E69/objectives_show.json": "6f555945147172984d179fd626392447493629055be0ce2ec5375fbba8951bf0",
@@ -4037,7 +4053,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "347917af862811975ac1b5a0500b0f918fb5374903a66147d6e172c986a5ef01",
+      "config/GR8E69/project.json": "cb025ff637b0a6141d28bc5327a22ec839fdd462bb1d64fe1019ef7de60db7d0",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -6730,14 +6746,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1168804,
+    "matching_code_bytes": 1171536,
     "total_executable_code_bytes": 2492032,
-    "percent": 46.90164492269762,
+    "percent": 47.01127433355591,
     "categories": {
-      "reconstructed_game": 776588,
+      "reconstructed_game": 779320,
       "restored_library": 392216
     },
-    "matching_functions": 6013
+    "matching_functions": 6034
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -6981,6 +6997,8 @@
     "config/GR8E69/ai_targeting_update.json": "a43d0b595f7aea069b47939e3555dbccc71ed0811278060a364b909b9c874f5f",
     "config/GR8E69/ambient_track.json": "a0e649c1f923a48f87645de3f5d54aadb4db1db43872d0a7376af7a7406ab4fd",
     "config/GR8E69/ambient_track_location.json": "12f454bd3ebed794c46407c0cd1a158fa22ad409d61b7847a70849566d7557bd",
+    "config/GR8E69/anim_factory_load.json": "a8acb5997b7f9521f24922446225fe46c054d909d8f3daef38b2dd408f4d9fba",
+    "config/GR8E69/anim_factory_load_weapon.json": "ab42276dae15dbe20348cca66752c1b34017b44cd293541634a93202dc4e7df6",
     "config/GR8E69/anim_light.json": "9ffbd37f12a017d9299881ad77528bd7b94bc35a5e4970c59fb96ce107610dfb",
     "config/GR8E69/anim_light_pools.json": "54a79d91ca35237884367a52d2b3a0995cb51ab3ad5909b62585b24c2efe1205",
     "config/GR8E69/animated_volume_head.json": "43990300d2d7b3a96e16a54bf506a9fab2f4c6fd44d83f2912b3eee522ff3d24",
@@ -7492,6 +7510,8 @@
     "config/GR8E69/flex_unload_properties.json": "6cd81f0594f54bf896f8a1a3faa50aefe6b88ce648559da7b2191558e27feb86",
     "config/GR8E69/flex_valid.json": "f36e2f140a940621dfe8d59efcd46dbc4e928ab73b129c434cb5e9dcc40f5916",
     "config/GR8E69/flexprop_matrix.json": "cf7d89aea80924588b0ce099751e6c9388001ab62afb04f7564e0b6d4ffaa082",
+    "config/GR8E69/flood_search_add.json": "46aa211322572b486162832e40c9dd68b4b37663b2897f396261add1e59fcad0",
+    "config/GR8E69/flood_search_expand.json": "f85ac4097a953ac76de5619b29a9a8171f0935337fe15f8fb6e125351d102f79",
     "config/GR8E69/font_attrs.json": "685c74a11db0521869d7343c4282a1aa5075dd2b85881de7142918457f5bd11b",
     "config/GR8E69/font_ctor.json": "845307706220c7756f2bdcb0fb7dfd49282418a1f80acefe7bf9f530da4071ab",
     "config/GR8E69/font_draw.json": "1f4db7878d67aa3f16bcf3b47cf62125c4df21bfbcbb4660676760f05d56340d",
@@ -7545,7 +7565,10 @@
     "config/GR8E69/hud_target.json": "d9f687a1c27ef9da7df78a6f0dc8770ea4d1e705f1e565b8549e85ff4f2a2ec3",
     "config/GR8E69/hud_update.json": "d27f4b4f31b44a3c72cf613683ed58b7068d4ba1c4f83a6f50716109acbae289",
     "config/GR8E69/idebug_msg.json": "16c0dcce743bd3b126556004c13231aa6e0843c77c928bdc22771526826b83ed",
+    "config/GR8E69/input_any_device.json": "d846dbcba65f4d6bf6f953a8740bdb25dcffefb944d7d84607a28588928be392",
     "config/GR8E69/input_init.json": "b6f5dc06d034cbacefd3e7578633720cbbe556f37fd31b197115ed2905dab52e",
+    "config/GR8E69/input_manager_ctor.json": "8e3feac49c5c70b7179df7c5ec0587a7e4ceb0c01f3f63ae828336489fec0602",
+    "config/GR8E69/input_master_block.json": "fe81b4ea8ab32b6cc8930c17ccb99743ebb494a46e12992be3c10f0d4bf452bd",
     "config/GR8E69/input_ports.json": "2b16d73f7a9887c3e15f921a976b7ab3fffab6ae531e541718f3e369f33c4d03",
     "config/GR8E69/input_state.json": "420fc11884e0574393bd77a9e86d7f519bc4b39edcddb5f0cfdae93512d65954",
     "config/GR8E69/input_tail.json": "3d3f4329dd48ec1b9f50a86813e372486c148d345cc51c9e84081d0e1d654a48",
@@ -7765,6 +7788,7 @@
     "config/GR8E69/newlib_wctomb_r.json": "fc59b588e63f3a1f302300e1257e93abec1acb4041e2ef289f02d12774f5ae70",
     "config/GR8E69/newlib_writer.json": "cf7eab1eebe3bf4b04912e61b9ce9a2c7c4191ebecc610aa267f69bdabe6512f",
     "config/GR8E69/newlib_wsetup.json": "61dd8c7f513073a2f4c355ee89bdcf2d300345cd74c632de1997cba9f3e84020",
+    "config/GR8E69/object_fade.json": "75ad938efd5ffa30a120759ddcd310ba00ab235665b58aff6bf9e419b2e27329",
     "config/GR8E69/objectives_init.json": "eca4ead9759ddbaaf645bd69577bf42e99bb26ad920173006f50ff703e18e887",
     "config/GR8E69/objectives_serialize.json": "4fba9fa4ce1cb980aef9ebf485c26c16d832be60ee7410d48b1fd7bb39bce962",
     "config/GR8E69/objectives_show.json": "6f555945147172984d179fd626392447493629055be0ce2ec5375fbba8951bf0",
@@ -7895,7 +7919,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "347917af862811975ac1b5a0500b0f918fb5374903a66147d6e172c986a5ef01",
+    "config/GR8E69/project.json": "cb025ff637b0a6141d28bc5327a22ec839fdd462bb1d64fe1019ef7de60db7d0",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -9367,7 +9391,7 @@
     "include/game/Rcmp.h": "938e4965d3c2b0d0f48d815f17eaf162b3fb5b491ec3dfd4bcc5814197bfa6ee",
     "include/game/SceneCollisions.h": "2a1769143eeecf427cad1a013ebf02f6b0d2ee83e011b58e5c62cd141306cd64",
     "include/game/SceneNode.h": "e57802b8a891e60ae5642230d29fea224075a837267cac91413b2a7fae00a560",
-    "include/game/SceneObjects.h": "2c4addea529e69c39009a4aea37d1b8af7ac2f71f94b85ba40e1e6720547b730",
+    "include/game/SceneObjects.h": "29787d90c61f3df75ffc827c897ff58324d17ace2b78c6b300d067851e55b536",
     "include/game/Screen.h": "86139c54ad8a9fdfa1e0842d665f4cd5699ac216901fab040218e8b7adc2c78a",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
     "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
@@ -9379,7 +9403,7 @@
     "include/game/ScriptStartup.h": "ca298798406d593bc47296e17ca3c8778cde7e69bb465f05962cc05fc2eb40cc",
     "include/game/ScriptTimers.h": "a81f3399ff20908469a289229ed0f0aae2c28aa3a9889629e62049e8bb16705b",
     "include/game/ScriptedGag.h": "41ce2a7f909e292930c5279c0ec536596c3b6bc35d11bb27ad6be5d51b9a0235",
-    "include/game/Shell.h": "4368aeeaa2127f31c86496fbba71e284b54b8752c8ed69e0b6031b7b3e299b6e",
+    "include/game/Shell.h": "03c36affd7c0f616996096b426e82b2efd08e39aecafbde166641edbd4ccd210",
     "include/game/ShellManager.h": "e2923227eb223f506831fd2f15441e6251b3d419998fedeb7d5a32e7bcd1af04",
     "include/game/SkyBox.h": "810947bbc2ecf7cb4d69dfa350c055b05d446c04b904abfadaf4828c7be01a55",
     "include/game/SndEAXA.h": "462f6c63008084b8cb5b525d5029b804e760f3859ba6e5676a4d36461906da13",
@@ -9402,7 +9426,7 @@
     "include/game/TevStage.h": "47aaf3de5425dace0c30e2852896a9494f78ab4a4dcaad6be03d4aa4204d7466",
     "include/game/TevStageInlines.h": "03b19716c4d88b4eb2f3c74cdf2040ca0bb6c43e842d1eefc2c8bd148a278645",
     "include/game/Thrown.h": "62c70dfcb9ad0243eba5bdf633073bb2563d3fe2b4da6bdcae42452c547912db",
-    "include/game/Toilet.h": "a608aae7246153ba8ff8069a32a9080acb3d54ce06d1ce9f78ed5ccb94afacab",
+    "include/game/Toilet.h": "b27bc0400a4cbf1f67514badf4ef5b96d641221956758e0b6c709ef6bff761ac",
     "include/game/TriggerObject.h": "73e70d537a184c92ad5f8f0e10b773f5efe3306ce871a82852a3c41398f7418b",
     "include/game/VideoDriver.h": "dd21c14b75db031804f4dfd4afd30fcaf14e5211ed4c37079e3f6ff3e19ee668",
     "include/game/VolFrustum.h": "b60b3c36ce9c61c007d11037991c65de0a159749f1702d360fa98525e0c03072",
@@ -9412,7 +9436,7 @@
     "include/game/WorldVolume.h": "9acfaf28c317912de14baef7ca50a3d80175ddc31dcf83cea18c80725e688318",
     "include/game-containers/AlgorithmTypes.h": "cd4a28c7c2eb6a6cb85477587065b64ff0e86ee9010ceed6df1637ca9fcffe14",
     "include/game-containers/ContainerTypes.h": "f6b7f0133646a5eb70ccc5df78ced025919dee88dcd81edc3f565d0b71dd407c",
-    "include/game-containers/ResourceTypes.h": "6f63038334ba47ea545e0994a455fbd01b1fdb6aa3b6bf155de630e9ede05c68",
+    "include/game-containers/ResourceTypes.h": "85904ef25745bb8f3903107f26b5b9a3a3017f106d0362086f5b9c602fdb0b27",
     "include/game-containers/TargetTypes.h": "3ac99430c5eabe7c725b67a8b280b4ec55003d4bb6763dc1746023ced2fda08f",
     "include/newlib/_ansi.h": "98221b391010195de4e2824879860b7fe98a8f6bc8ab2c5eaa2a3b029b4f1ad4",
     "include/newlib/_syslist.h": "546b13e022a2e53bfad0138e9294d92210773c9a7a61ee2d4ffb152ed4a6396a",
@@ -9647,6 +9671,8 @@
     "src/ai/CoverpointStop.cpp": "dc653f0c31bb73de1262d064d5d3a34086c819d5e7afe1c51b3f664747234ac1",
     "src/ai/CoverpointStopWalk.cpp": "bd3f48363f1bc88ca688e477292e1d0ee776c1cb725c4e8ca0e807b559b30cec",
     "src/ai/CoverpointTail.cpp": "6fb11951571ebb7e0b7908a3be5c707933ad9af91fc6431e847aea3796d946f9",
+    "src/ai/FloodSearchAdd.cpp": "3a117d894b6846b788a5a0fe8ca57c7cda55e2977cfe5a1d872e8f61c91b0319",
+    "src/ai/FloodSearchExpand.cpp": "9fb4fd92d5d414591cb9280d55d0ac1e6b3c32011d08125f8f7536a920402329",
     "src/ai/GrenadeResponseHead.cpp": "a363f0224c6f432be08cc00243519c6f6ff4a67bd6a9813285090cb4ae761219",
     "src/ai/GrenadeResponseQueries.cpp": "c69240fd532d35c3cd178969bbafd94bb6c3202d155ba8437e716d4f7ee4b2c9",
     "src/ai/GrenadeResponseStop.cpp": "a5ee92798ed16429e1f0d4e0949674c0a43bbd67b7b7f9e3e6b6340d95561251",
@@ -10318,7 +10344,10 @@
     "src/game/font_setcolor.cpp": "732885f73107c33c308a7d324faee714a86aff80f40bdc94707aa90305335a81",
     "src/game/framecount.cpp": "7b76621f1a2f5b452b4ee73c31317598062c4e3c5a4b7693d71b5f1371ef7931",
     "src/game/idebug_msg.cpp": "f0ffa7cb1598e285b7800d2f98fe3e5d111219257969b8b838b54a32117abd71",
+    "src/game/input_any_device.cpp": "352511ab62d7aad2c422610ddbd42614da4e4106ad7e7b8f190093cb39aadaa8",
     "src/game/input_init.cpp": "92834b6924093f7ebc540f41b5eac7db9cfc3741eb2018ccbb066b14b2f5a952",
+    "src/game/input_manager_ctor.cpp": "341eb613cb7d737ba98214c49064f1f04b12dec150ab811fb49ac27ddfdc0895",
+    "src/game/input_master_block.cpp": "b0492aae3e360aa02008cb7a648ac4988f425906cde501d968a366690cfefe98",
     "src/game/input_ports.cpp": "c8e073d6d9e25381539ae8de570e54222add652af5b1400642cfc9159c14f36e",
     "src/game/input_state.cpp": "c875939ff44d67e321e0e286ebddc6e5880d2dc966559b8b2d9d23194da84de1",
     "src/game/input_tail.cpp": "3a03d39cf2824ead24e4e228c4b05c680c5b657609186cad161af73edb4987bf",
@@ -10816,6 +10845,8 @@
     "src/save/mc_g.cpp": "e639a05147fc56af84f8654a1a60c618fd32f0600b6ac95f8c5bd35211da4e75",
     "src/save/mc_h.cpp": "6d4ea2cd72568b3250cba3ce64dba6c3bae2ea478598f0df6c60cc4521015303",
     "src/scene/AnimObjFactoryConstructor.cpp": "74d86ee9bb07110eb11aa5361a683e4cd3164e50b3ce1b16a066cfcc8cebf9d8",
+    "src/scene/AnimObjFactoryLoad.cpp": "5dbf4979bcfc1422fbee8cdb835e64bbd28db48c48907cc64fe00064e44e89e9",
+    "src/scene/AnimObjFactoryLoadWeapon.cpp": "775fa75f4820802b1928d0045ac10cdfa69199621e800b15300a7690c532662b",
     "src/scene/AnimObjFactoryLoaders.cpp": "f9b6e94a774c14277579338ca9f3bec4a379df821271425a464b85ad96026e68",
     "src/scene/AnimObjFactoryRelease.cpp": "1ad8052e8d3c457fc715e1512e952e1d702e532f3b2b2c8fef14f67005750f7a",
     "src/scene/AnimObjFactoryReset.cpp": "02f7ce07d09dcff1319d008e7ab397b366ad1ef531ac4656f30ce0de598a3614",
@@ -10897,6 +10928,7 @@
     "src/scene/ObjCreateSubHier.cpp": "5c7724eb186d361c3d427a50c119cb4c74d7ebf3bbcb10b566f0e52126c59881",
     "src/scene/ObjCreateSubHierAnim.cpp": "a51a3f72286b25589865821f6edf9ecd6b48e8d207edd564119798e8bc1f5094",
     "src/scene/ObjCreateThrownDelete.cpp": "c3bc5990878ec599e3a9b3f88fffcfe8c9bc0b2a590a2565470019fabc8fcff8",
+    "src/scene/ObjectFade.cpp": "bfabac4efb757380b131adce094120d197fd931d0f8c05ca2b2554cf55a1a018",
     "src/scene/SceneNodeAxisDefaults.cpp": "2e62b6f3b3302ff27d6350acc7376566f9bc0cb72383e1f54fbd95b185f6cbf6",
     "src/scene/SceneNodeCentroid.cpp": "7899f0a92f618aa7efeb10ddc99112cdcd045c7bd512476fd59c316b3a449af7",
     "src/scene/SceneNodeDestructor.cpp": "56a6495fa5fd7f8fa0e267ea0c7e314d8cafc24ab743c986bf6a6d00f27c9ffa",
@@ -56499,6 +56531,150 @@
       "discarded_functions": [],
       "object_sha256": "99aa37734ad06e70b2f74cb004eacec33953ab7f75ff6190c5160a85c15cb5d6",
       "linked_sha256": "8c951d2a05f648153cf05acf1661b871de8e9eb8153e2b27a85caf1738792d94"
+    },
+    {
+      "id": "anim_factory_load",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 1000,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "b5dd1000782b82beba7151f4078b2fca7cf3a010724d55aa2b68196a7f9ea00d",
+      "linked_sha256": "69704e8b2d26804cdd56c1dc0e548cf17d599f7646b54da72d59c4248e928259"
+    },
+    {
+      "id": "anim_factory_load_weapon",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 424,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "f7bee2d697cf95e6732439caa3fb4cf5b3d614c6d50714777454dede63f71201",
+      "linked_sha256": "57725fafe22cd1cccda4f61053963efad54c4409b95bf72cc555059f411af7f5"
+    },
+    {
+      "id": "input_any_device",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 168,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "632e407359f11fd654af379692483ae51c5acb2e62702e438f1e987310adbaff",
+      "linked_sha256": "7e734b5aa6196183a030e85d2cb2da54d0e12f059d098c7c2eaacd4a28bdb2ef"
+    },
+    {
+      "id": "input_master_block",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 120,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "8ed2d37c39c4700f03f3354badae158809b53dbccca30a267602a65e6ad10fc4",
+      "linked_sha256": "c66c6a0d00d7c9e14135c98cc4021e8de32f49d06c2d76b18da19c6ddcf19bd5"
+    },
+    {
+      "id": "input_manager_ctor",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 128,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "7015251fe42bbccb03fe6a256ad3e68dba0bd75e51dc9da0e2589bd0d108387e",
+      "linked_sha256": "4ea0fca2aac09d829a10e084f75f9765c0ae5c3c65500efd84aad2fe2f0033e6"
+    },
+    {
+      "id": "flood_search_add",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 152,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "f265cd5b212ad209d63fe9b86ad52b12b692c4f042ec0e6cb2c79d7fe6c89bc9",
+      "linked_sha256": "50979dcab7abf334107e9c61a88f35be2de96089a2073419fa9bb858e681f42b"
+    },
+    {
+      "id": "flood_search_expand",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 312,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "11217871c8b334645c32f2f74770be4458a6938e0339f77e569224d570b84213",
+      "linked_sha256": "5042c95354382311a8f7932a64479b97c0dec9ce8f87a2d3b54d3fafc9a3d75e"
+    },
+    {
+      "id": "object_fade",
+      "category": "reconstructed_game",
+      "functions": 8,
+      "code_bytes": 428,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "c02d54307b03f37fd2b1df38ddeb2abe73d49c132fc44209d4936d5057ee009a",
+      "linked_sha256": "80c932a1f980e43240f0b90573247da1633a4dd5ed1d08962c3a89a1d19f083f"
     }
   ],
   "code_map": {
@@ -60265,73 +60441,6 @@
         "marker_interval": [
           "0x8006afe4",
           "0x8006b2ec"
-        ]
-      },
-      {
-        "name": "Unmatched files/objectfade.cpp [inferred file group]",
-        "file_record": 80,
-        "file_name": "objectfade.cpp",
-        "ranges": [
-          {
-            "address": "0x8006c220",
-            "size": 12,
-            "kind": "function",
-            "name": "__18CObjectFadeManager",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8006c22c",
-            "size": 32,
-            "kind": "function",
-            "name": "StartFadeOut__18CObjectFadeManagerff",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8006c24c",
-            "size": 32,
-            "kind": "function",
-            "name": "StartFadeIn__18CObjectFadeManagerff",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8006c26c",
-            "size": 52,
-            "kind": "function",
-            "name": "AreFading__18CObjectFadeManager",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8006c2a0",
-            "size": 56,
-            "kind": "function",
-            "name": "HalfDone__18CObjectFadeManager",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8006c2d8",
-            "size": 60,
-            "kind": "function",
-            "name": "Update__18CObjectFadeManagerf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8006c314",
-            "size": 52,
-            "kind": "function",
-            "name": "GetShadowAlphaScale__18CObjectFadeManager",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8006c348",
-            "size": 132,
-            "kind": "function",
-            "name": "FadeValue__C18CObjectFadeManager",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x8006c220",
-          "0x8006c3cc"
         ]
       },
       {
@@ -64991,45 +65100,10 @@
         "file_name": "FloodSearch.cpp",
         "ranges": [
           {
-            "address": "0x8009f0d4",
-            "size": 112,
-            "kind": "function",
-            "name": "AddArea__12CFloodSearchs",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8009f144",
-            "size": 40,
-            "kind": "function",
-            "name": "RemoveArea__12CFloodSearch",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8009f16c",
             "size": 124,
             "kind": "function",
             "name": "AddConnectedAreas__12CFloodSearchs",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8009f1e8",
-            "size": 104,
-            "kind": "function",
-            "name": "ExpandList__12CFloodSearch",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8009f250",
-            "size": 108,
-            "kind": "function",
-            "name": "BeginSearch__12CFloodSearchsf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8009f2bc",
-            "size": 100,
-            "kind": "function",
-            "name": "GetNextArea__12CFloodSearchRs",
             "evidence": "adjacent-compiler-markers"
           }
         ],
@@ -66125,45 +66199,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800cae9c",
-            "size": 216,
-            "kind": "function",
-            "name": "LoadSkeleton__18CAnimObjectFactoryP24LevelFileContentsStruct_P11CAnimObjDef",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800caf74",
-            "size": 308,
-            "kind": "function",
-            "name": "LoadBody__18CAnimObjectFactoryP24LevelFileContentsStruct_P11CAnimObjDef",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800cb0a8",
-            "size": 316,
-            "kind": "function",
-            "name": "LoadHead__18CAnimObjectFactoryP24LevelFileContentsStruct_P11CAnimObjDef",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800cb1e4",
-            "size": 160,
-            "kind": "function",
-            "name": "LoadTextures__18CAnimObjectFactoryP24LevelFileContentsStruct_UiRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character4Mesh",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800cb284",
             "size": 564,
             "kind": "function",
             "name": "LoadCollisionData__18CAnimObjectFactoryP24LevelFileContentsStruct_P11CAnimObjDefb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800cb4b8",
-            "size": 424,
-            "kind": "function",
-            "name": "LoadPlayerWeapon__18CAnimObjectFactoryP24LevelFileContentsStruct_P11CAnimObjDef",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -66613,31 +66652,10 @@
         "file_name": "input.cpp",
         "ranges": [
           {
-            "address": "0x800d6870",
-            "size": 128,
-            "kind": "function",
-            "name": "__13CInputManager",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800d68fc",
             "size": 1448,
             "kind": "function",
             "name": "Update__13CInputManagerf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d6f50",
-            "size": 168,
-            "kind": "function",
-            "name": "GetInputAnyDevice__C13CInputManager",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d7118",
-            "size": 120,
-            "kind": "function",
-            "name": "SetMasterBlockVibrations__13CInputManagerbUc",
             "evidence": "adjacent-compiler-markers"
           },
           {

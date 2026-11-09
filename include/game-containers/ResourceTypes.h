@@ -27,6 +27,19 @@ class Resource {
             if (value)
                 reinterpret_cast<Resource *>(value)->Release();
         }
+        Pointer &operator=(const Pointer &other) {
+            if (value != other.value) {
+                T *previous = value;
+                value = other.value;
+                if (value)
+                    ++reinterpret_cast<Resource *>(value)->field_00;
+                if (previous)
+                    reinterpret_cast<Resource *>(previous)->Release();
+            }
+            return *this;
+        }
+        T *operator->() const { return value; }
+        operator T *() const { return value; }
     };
 };
 class EAGLLoader;

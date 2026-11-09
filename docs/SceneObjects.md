@@ -243,3 +243,11 @@ bits, motion gates, bounds, weapon allocation and sentinel handling.
 `pathScale` is now named `pathTurnSlowdown` in the scoped view; its offset remains
 `+0x110`. The historical partial measurements remain in Git history and the
 [batch notes](research/shortlist-partials.md). None is counted twice.
+
+## Animated object factory loaders
+
+`CAnimObjectFactory`'s loaders read tables from a `LevelFileContentsStruct_`: table 0 names the
+skeleton, 1 the body mesh, 3 the head mesh, and 21 the mesh parts to hide; `LoadTextures` binds a
+table of texture files to a mesh. A `CAnimObjDef` holds counted pointers to the skeleton, body and
+head at `+0x48`, `+0x4c` and `+0x50`. Verified: the loaders' code. Inferred: member names and what
+the table indices mean. `LoadCollisionData` is not reconstructed.

@@ -67,12 +67,19 @@ struct MotionFrame {
 // Method-only view; the storage it occupies in an object is not established.
 class CObjectFadeManager {
   public:
+    CObjectFadeManager();
     void StartFadeOut(float, float);
     void StartFadeIn(float, float);
     float FadeValue() const;
     int AreFading();
     void Update(float);
     int HalfDone();
+    float GetShadowAlphaScale();
+
+    int state;   // 0 idle, 1 fading in, 2 fading out.
+    float time;  // +0x04
+    float duration;
+    float delay; // +0x0c: fraction of the duration before the fade starts.
 };
 class CStaticObject {
   public:
@@ -252,8 +259,7 @@ class CStaticObject {
     unsigned char unknown_2ac[0x2b0 - 0x2ac];
     CVector3 attachedLightOffset; // +0x2b0
     CLightVolumeManager lightVolumes; // +0x2c0
-    CObjectFadeManager fade; // +0x2dc; sixteen bytes up to the next member.
-    unsigned char unknown_2dd[0x2ec - 0x2dd];
+    CObjectFadeManager fade; // +0x2dc
     float destructionTimer; // +0x2ec; meaning inferred from the MarkForDestruction call.
 };
 

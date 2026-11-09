@@ -2265,7 +2265,15 @@
     "eaxadecf_state.json",
     "mtdecf_bits.json",
     "mtdecf_filter.json",
-    "mtdecf_class.json"
+    "mtdecf_class.json",
+    "anim_factory_load.json",
+    "anim_factory_load_weapon.json",
+    "input_any_device.json",
+    "input_master_block.json",
+    "input_manager_ctor.json",
+    "flood_search_add.json",
+    "flood_search_expand.json",
+    "object_fade.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
