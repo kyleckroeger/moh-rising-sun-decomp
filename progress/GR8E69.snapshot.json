@@ -837,7 +837,7 @@
       "src/frontend/fengine_queuemessage.cpp": "a9ea960129c10504dd96ef9148519cee4e75f7d816ccfed443be938ca9934ec0",
       "src/frontend/fengine_recallpackagemarker.cpp": "e5b05c32666b67d70833448b224b8c49542fa96bbc83e6b0d5f6b644575952a3",
       "src/frontend/fengine_recordlastpackagebutton.cpp": "def967d88c4b012513e6cc2e0fc3eccd576394e000086eae084dd306c86e1719",
-      "src/frontend/fengine_rendergroup.cpp": "072aff9e45d924cbd08e23699220abc7152729ca45a87ada4d6448d438cc0b93",
+      "src/frontend/fengine_rendergroup.cpp": "bb0582f42393673431ce3ca5a51692b06257655e3105713df56865bf41c7c832",
       "src/frontend/fengine_resetjoypad.cpp": "84fabc3c164ba48aaccdc0e354b3d45757c69a94368f07955ed12383c8aa93e8",
       "src/frontend/fengine_setnumjoypads.cpp": "19e87aa8be04927a7905d5ad4b46215d276cd267615e16505e670ad8f408e98c",
       "src/frontend/fenode_fenode.cpp": "7e1b46eb6f1dc696e11efb1b23416808ea789d88417306cf7704b02aa8b4b3ce",
@@ -858,7 +858,7 @@
       "src/frontend/fereader_gettypesize.cpp": "d46d78e51c88c9dbfd3871272900a4462c016761b3497bd7c0824597220f34e8",
       "src/frontend/fereader_load.cpp": "aa3c11721ce87e146b09bed32d1c0c9a5043dfa9981696347941ad87cf9b8d65",
       "src/frontend/fereader_readheaderchunk.cpp": "c06f56c7c9ff48da4a75fc41e8c68b7c0cd1cfb0729e8493173ca9e6e297f44c",
-      "src/frontend/fereader_readlibraryrefschunk.cpp": "795fbeb083903debe9808997e5e488d1e1690bdf67bb24c530a4d0b9ee00610f",
+      "src/frontend/fereader_readlibraryrefschunk.cpp": "c91ae14235e56de6707cc5edab61c2d9a91f5169d56bc0f320f878eac8ee3194",
       "src/frontend/fereader_readmessageresponsetags.cpp": "1cd2762929e49c2fd894b4d0eb528e72f32a3ca637945e38465df86bfad4629e",
       "src/frontend/fereader_readobjecttags.cpp": "e1f768dd28508c2e8440115f047182ab22298c667ff6a7a398e4aacf689378a9",
       "src/frontend/fescript_init.cpp": "acca2ac0e2fdddac0893017f3bc8c3149a48f34039ca67c6c002a362b86e66e8",
@@ -875,6 +875,8 @@
       "src/frontend/handler_coopprofile_scan.cpp": "055656d8340d1a69f49d3e133e45cb75b45642fc8f4aa9016a4e0e9373bfdadd",
       "src/frontend/handler_cooptemplaunch.cpp": "ce40919b7a4144b358771779689238f6a676480873209b9dc529c37a48866189",
       "src/frontend/handler_customcontroller_ctor.cpp": "7741dce5d17b2678847e083112a9cd087e97121cd120d32875ad519a493c2b20",
+      "src/frontend/handler_customcontroller_equal.cpp": "3fde8152f339fdd768e2b0c6712fd81997127acb94e3d1c468f5898e8db999ae",
+      "src/frontend/handler_customcontroller_keys.cpp": "6462ff6b8605fb7218f7fb863eaad603aa8037981a9a9c8b2fb12253bedde40d",
       "src/frontend/handler_difficulty.cpp": "ec067e290bc8c6808d94eea2e14b4dd3beb9d5c99d4ee04be8999645c35f6f62",
       "src/frontend/handler_gameoptions.cpp": "521489aa89768f4eaae6e231aa5c4b163092edea3fec1fc063b39413290c335b",
       "src/frontend/handler_languagemenu.cpp": "85cff7599bf4497e492fa4eed3ae2708f3c4d4fd496b45c8f1eebf21ab3665c0",
@@ -887,6 +889,8 @@
       "src/frontend/handler_mainmenu.cpp": "56c2062e52b033cbc906a982e7743b9f44a4d655d5e176908a50f33f1da1b66c",
       "src/frontend/handler_medalsoverlay.cpp": "41ab623d49a9fcc73ee8fb234c2f55aefed2863042c7a3193822c4cc058b29e1",
       "src/frontend/handler_moviemenu_ctor.cpp": "c0fccb63d8d0df7593cab56ce6ca7f47f2d2462341be8bc757f6cc4180a47781",
+      "src/frontend/handler_mpbots_validateskin.cpp": "06937815b8984dc2529b8ecfccb09d442e912bdfb998fc9349766d909b509422",
+      "src/frontend/handler_mpglobal_init.cpp": "99bbc912f44d556327d186de9eb3cf65b08f9be2e54649568975d5f9b3d50734",
       "src/frontend/handler_mpjoin.cpp": "c17a9021899000dc1788ee8ce2692df91684ab4223656c9cbe9296f716b72a32",
       "src/frontend/handler_mpprofile_init.cpp": "caf5f9d7a68f3f63c01ecb2f3e750997b83ed97fbddbfa6578436b967b55893c",
       "src/frontend/handler_mpprofile_scan.cpp": "a9c7007d0ac1c3eadd70be38d848e9d0e9bfa0f19e238a9464d10552ef183628",
@@ -2942,12 +2946,13 @@
       "include/game/FEScript.h": "809bc59f557fad269510f1f8fc7b68d04f3a49fe674841ed46ceec7b84f8278e",
       "include/game/FESlotPool.h": "fe27a4a356873ad71d8f66bb85a594ef2170c08f3ce299ea30ed288e398e5bf6",
       "include/game/FEngElements.h": "18898b9a90dec3cb114ecb9d0b9b35b173c5dec91efac46ed7e322e815792584",
-      "include/game/FEngLists.h": "a9455fe7b5aef9e74cd7439541ec17d4b1c1b33f340abb3dd7d037957226f1c0",
-      "include/game/FEngMath.h": "a3c508c3d334618c63c8798a569d2dc2dab33f5ebdbd2ca0e956fdacca314a32",
+      "include/game/FEngLists.h": "dbe3d8953830b39d0e975fc5f96f49e5e04ec7f2794da837ca84a5377f272ed8",
+      "include/game/FEngMath.h": "163954fedde7102047d5769389d5f883224d9210403cc8527d411526ed7b4608",
       "include/game/FEngObjects.h": "74e8cb7dc00d6a2c894bd36cc3750e646fa63c5fb1a6466d2d85ccfce93df419",
       "include/game/FEngStrings.h": "3fb38fb321893a9cc7e83396ced3500fb9dfbf859a210f4e470c2961e735cc86",
       "include/game/FEngine.h": "12403097c5abb6cf27665e894a4a9ee9c2f158d5d06eac1caeb61a7210509491",
       "include/game/Fader.h": "5e6a829b80a545618de960a1fcb77e1c59c1ea1ba2f2e0fee87d54c2e7c73143",
+      "include/game/FengInterface.h": "c888636f7f94b13e49cca4d080eaad7da172bfe22f9d78e60aa58ad0c6bfb90a",
       "include/game/Fiber.h": "86a5b88a4e003f050e9a365b1a5c582c8d0163426b18fff783e17a465ddbb045",
       "include/game/FlexProp.h": "d4b492f690451a27c03371aa71637f8b6a4109c07ed8ba55de69ae5f256414ff",
       "include/game/FlexPropDatabase.h": "e3bb33faf5cff3877d051efc3335ff33c373c9d228a7afcb8b2c16f4ee97c767",
@@ -4149,6 +4154,8 @@
       "config/GR8E69/handler_coopprofile_scan.json": "a7cf650cf1a32662f5da0f63df74b4e60db46db06e854c81055d584f5fc218ac",
       "config/GR8E69/handler_cooptemplaunch.json": "fe8ba138204bb35cd15a511326e1018220c4c8ba511c3a7e49d588276478fe43",
       "config/GR8E69/handler_customcontroller_ctor.json": "f2080557b03aa32ac3d41070095214c2e8e951fecdf589f8b3c47f4e9c1adc0c",
+      "config/GR8E69/handler_customcontroller_equal.json": "06a23e5a0207fa85c35728201946a5c22c15b93993f59c4318b9246f98a3095f",
+      "config/GR8E69/handler_customcontroller_keys.json": "2dd358c0cd228c37ac050cf179cfb7c40c673592c63beb920b29e5f63a403b59",
       "config/GR8E69/handler_difficulty.json": "e3b1051479b962b466a7f66924efdcaa205604b827c6982c2b16731a4608e42e",
       "config/GR8E69/handler_gameoptions.json": "ecd7330c596c7f37bf9a541d5a97e20ae40836d41898dc19d10a93c504adcec6",
       "config/GR8E69/handler_languagemenu.json": "4a9dc112b0d364ecd374e6b0f31a6a7b586f5b8d5bb4702f04ffc415dd418224",
@@ -4161,6 +4168,8 @@
       "config/GR8E69/handler_mainmenu.json": "19721ad26b0ea36abea9cda9e915130bafd20d4c579a462018bfbc7352c89c4e",
       "config/GR8E69/handler_medalsoverlay.json": "d9d67384cfcc7ecb385cae1f0a498d2401e3af72a0abc0a672b7e70f8fd992a0",
       "config/GR8E69/handler_moviemenu_ctor.json": "287634b7c151715fc350839084be9032ffd058bc1a126651af05b92d9b706fe2",
+      "config/GR8E69/handler_mpbots_validateskin.json": "645f118a3a0f71ffb9e94b8a4ef4a13327e9d1a5f73a5d135f4e8564a7573e78",
+      "config/GR8E69/handler_mpglobal_init.json": "a30dffd6d73682c5556fbf1a5c5cf3df8b53ec5b1289e9e9af55d8872697b058",
       "config/GR8E69/handler_mpjoin.json": "1d82e2341a5f4475dc0835cb9c26dd64ac0c95551bc1479ef1db9740bc4283ea",
       "config/GR8E69/handler_mpprofile_init.json": "38c4696ddadeb2eb74cbce7827af2d0efa81f8d082b03fdd13116cca905c76ea",
       "config/GR8E69/handler_mpprofile_scan.json": "317aa6c0b0e86d2261465a2577dbdef3eaf8cd58677628271465f7f579f1c07f",
@@ -4585,7 +4594,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "0bca8e046c5470975c4202d23b32a099dec545373f175b7c1609c6c3fbb3fbae",
+      "config/GR8E69/project.json": "2d33915ddece2ee4ea30e90b3305d15a3eb93de58fe18797f9dadbe54b6388ee",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -7317,14 +7326,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1313032,
+    "matching_code_bytes": 1314100,
     "total_executable_code_bytes": 2492032,
-    "percent": 52.68921105346962,
+    "percent": 52.73206764600133,
     "categories": {
-      "reconstructed_game": 920816,
+      "reconstructed_game": 921884,
       "restored_library": 392216
     },
-    "matching_functions": 6899
+    "matching_functions": 6907
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -8288,6 +8297,8 @@
     "config/GR8E69/handler_coopprofile_scan.json": "a7cf650cf1a32662f5da0f63df74b4e60db46db06e854c81055d584f5fc218ac",
     "config/GR8E69/handler_cooptemplaunch.json": "fe8ba138204bb35cd15a511326e1018220c4c8ba511c3a7e49d588276478fe43",
     "config/GR8E69/handler_customcontroller_ctor.json": "f2080557b03aa32ac3d41070095214c2e8e951fecdf589f8b3c47f4e9c1adc0c",
+    "config/GR8E69/handler_customcontroller_equal.json": "06a23e5a0207fa85c35728201946a5c22c15b93993f59c4318b9246f98a3095f",
+    "config/GR8E69/handler_customcontroller_keys.json": "2dd358c0cd228c37ac050cf179cfb7c40c673592c63beb920b29e5f63a403b59",
     "config/GR8E69/handler_difficulty.json": "e3b1051479b962b466a7f66924efdcaa205604b827c6982c2b16731a4608e42e",
     "config/GR8E69/handler_gameoptions.json": "ecd7330c596c7f37bf9a541d5a97e20ae40836d41898dc19d10a93c504adcec6",
     "config/GR8E69/handler_languagemenu.json": "4a9dc112b0d364ecd374e6b0f31a6a7b586f5b8d5bb4702f04ffc415dd418224",
@@ -8300,6 +8311,8 @@
     "config/GR8E69/handler_mainmenu.json": "19721ad26b0ea36abea9cda9e915130bafd20d4c579a462018bfbc7352c89c4e",
     "config/GR8E69/handler_medalsoverlay.json": "d9d67384cfcc7ecb385cae1f0a498d2401e3af72a0abc0a672b7e70f8fd992a0",
     "config/GR8E69/handler_moviemenu_ctor.json": "287634b7c151715fc350839084be9032ffd058bc1a126651af05b92d9b706fe2",
+    "config/GR8E69/handler_mpbots_validateskin.json": "645f118a3a0f71ffb9e94b8a4ef4a13327e9d1a5f73a5d135f4e8564a7573e78",
+    "config/GR8E69/handler_mpglobal_init.json": "a30dffd6d73682c5556fbf1a5c5cf3df8b53ec5b1289e9e9af55d8872697b058",
     "config/GR8E69/handler_mpjoin.json": "1d82e2341a5f4475dc0835cb9c26dd64ac0c95551bc1479ef1db9740bc4283ea",
     "config/GR8E69/handler_mpprofile_init.json": "38c4696ddadeb2eb74cbce7827af2d0efa81f8d082b03fdd13116cca905c76ea",
     "config/GR8E69/handler_mpprofile_scan.json": "317aa6c0b0e86d2261465a2577dbdef3eaf8cd58677628271465f7f579f1c07f",
@@ -8724,7 +8737,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "0bca8e046c5470975c4202d23b32a099dec545373f175b7c1609c6c3fbb3fbae",
+    "config/GR8E69/project.json": "2d33915ddece2ee4ea30e90b3305d15a3eb93de58fe18797f9dadbe54b6388ee",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -10203,12 +10216,13 @@
     "include/game/FEScript.h": "809bc59f557fad269510f1f8fc7b68d04f3a49fe674841ed46ceec7b84f8278e",
     "include/game/FESlotPool.h": "fe27a4a356873ad71d8f66bb85a594ef2170c08f3ce299ea30ed288e398e5bf6",
     "include/game/FEngElements.h": "18898b9a90dec3cb114ecb9d0b9b35b173c5dec91efac46ed7e322e815792584",
-    "include/game/FEngLists.h": "a9455fe7b5aef9e74cd7439541ec17d4b1c1b33f340abb3dd7d037957226f1c0",
-    "include/game/FEngMath.h": "a3c508c3d334618c63c8798a569d2dc2dab33f5ebdbd2ca0e956fdacca314a32",
+    "include/game/FEngLists.h": "dbe3d8953830b39d0e975fc5f96f49e5e04ec7f2794da837ca84a5377f272ed8",
+    "include/game/FEngMath.h": "163954fedde7102047d5769389d5f883224d9210403cc8527d411526ed7b4608",
     "include/game/FEngObjects.h": "74e8cb7dc00d6a2c894bd36cc3750e646fa63c5fb1a6466d2d85ccfce93df419",
     "include/game/FEngStrings.h": "3fb38fb321893a9cc7e83396ced3500fb9dfbf859a210f4e470c2961e735cc86",
     "include/game/FEngine.h": "12403097c5abb6cf27665e894a4a9ee9c2f158d5d06eac1caeb61a7210509491",
     "include/game/Fader.h": "5e6a829b80a545618de960a1fcb77e1c59c1ea1ba2f2e0fee87d54c2e7c73143",
+    "include/game/FengInterface.h": "c888636f7f94b13e49cca4d080eaad7da172bfe22f9d78e60aa58ad0c6bfb90a",
     "include/game/Fiber.h": "86a5b88a4e003f050e9a365b1a5c582c8d0163426b18fff783e17a465ddbb045",
     "include/game/FlexProp.h": "d4b492f690451a27c03371aa71637f8b6a4109c07ed8ba55de69ae5f256414ff",
     "include/game/FlexPropDatabase.h": "e3bb33faf5cff3877d051efc3335ff33c373c9d228a7afcb8b2c16f4ee97c767",
@@ -11282,7 +11296,7 @@
     "src/frontend/fengine_queuemessage.cpp": "a9ea960129c10504dd96ef9148519cee4e75f7d816ccfed443be938ca9934ec0",
     "src/frontend/fengine_recallpackagemarker.cpp": "e5b05c32666b67d70833448b224b8c49542fa96bbc83e6b0d5f6b644575952a3",
     "src/frontend/fengine_recordlastpackagebutton.cpp": "def967d88c4b012513e6cc2e0fc3eccd576394e000086eae084dd306c86e1719",
-    "src/frontend/fengine_rendergroup.cpp": "072aff9e45d924cbd08e23699220abc7152729ca45a87ada4d6448d438cc0b93",
+    "src/frontend/fengine_rendergroup.cpp": "bb0582f42393673431ce3ca5a51692b06257655e3105713df56865bf41c7c832",
     "src/frontend/fengine_resetjoypad.cpp": "84fabc3c164ba48aaccdc0e354b3d45757c69a94368f07955ed12383c8aa93e8",
     "src/frontend/fengine_setnumjoypads.cpp": "19e87aa8be04927a7905d5ad4b46215d276cd267615e16505e670ad8f408e98c",
     "src/frontend/fenode_fenode.cpp": "7e1b46eb6f1dc696e11efb1b23416808ea789d88417306cf7704b02aa8b4b3ce",
@@ -11303,7 +11317,7 @@
     "src/frontend/fereader_gettypesize.cpp": "d46d78e51c88c9dbfd3871272900a4462c016761b3497bd7c0824597220f34e8",
     "src/frontend/fereader_load.cpp": "aa3c11721ce87e146b09bed32d1c0c9a5043dfa9981696347941ad87cf9b8d65",
     "src/frontend/fereader_readheaderchunk.cpp": "c06f56c7c9ff48da4a75fc41e8c68b7c0cd1cfb0729e8493173ca9e6e297f44c",
-    "src/frontend/fereader_readlibraryrefschunk.cpp": "795fbeb083903debe9808997e5e488d1e1690bdf67bb24c530a4d0b9ee00610f",
+    "src/frontend/fereader_readlibraryrefschunk.cpp": "c91ae14235e56de6707cc5edab61c2d9a91f5169d56bc0f320f878eac8ee3194",
     "src/frontend/fereader_readmessageresponsetags.cpp": "1cd2762929e49c2fd894b4d0eb528e72f32a3ca637945e38465df86bfad4629e",
     "src/frontend/fereader_readobjecttags.cpp": "e1f768dd28508c2e8440115f047182ab22298c667ff6a7a398e4aacf689378a9",
     "src/frontend/fescript_init.cpp": "acca2ac0e2fdddac0893017f3bc8c3149a48f34039ca67c6c002a362b86e66e8",
@@ -11320,6 +11334,8 @@
     "src/frontend/handler_coopprofile_scan.cpp": "055656d8340d1a69f49d3e133e45cb75b45642fc8f4aa9016a4e0e9373bfdadd",
     "src/frontend/handler_cooptemplaunch.cpp": "ce40919b7a4144b358771779689238f6a676480873209b9dc529c37a48866189",
     "src/frontend/handler_customcontroller_ctor.cpp": "7741dce5d17b2678847e083112a9cd087e97121cd120d32875ad519a493c2b20",
+    "src/frontend/handler_customcontroller_equal.cpp": "3fde8152f339fdd768e2b0c6712fd81997127acb94e3d1c468f5898e8db999ae",
+    "src/frontend/handler_customcontroller_keys.cpp": "6462ff6b8605fb7218f7fb863eaad603aa8037981a9a9c8b2fb12253bedde40d",
     "src/frontend/handler_difficulty.cpp": "ec067e290bc8c6808d94eea2e14b4dd3beb9d5c99d4ee04be8999645c35f6f62",
     "src/frontend/handler_gameoptions.cpp": "521489aa89768f4eaae6e231aa5c4b163092edea3fec1fc063b39413290c335b",
     "src/frontend/handler_languagemenu.cpp": "85cff7599bf4497e492fa4eed3ae2708f3c4d4fd496b45c8f1eebf21ab3665c0",
@@ -11332,6 +11348,8 @@
     "src/frontend/handler_mainmenu.cpp": "56c2062e52b033cbc906a982e7743b9f44a4d655d5e176908a50f33f1da1b66c",
     "src/frontend/handler_medalsoverlay.cpp": "41ab623d49a9fcc73ee8fb234c2f55aefed2863042c7a3193822c4cc058b29e1",
     "src/frontend/handler_moviemenu_ctor.cpp": "c0fccb63d8d0df7593cab56ce6ca7f47f2d2462341be8bc757f6cc4180a47781",
+    "src/frontend/handler_mpbots_validateskin.cpp": "06937815b8984dc2529b8ecfccb09d442e912bdfb998fc9349766d909b509422",
+    "src/frontend/handler_mpglobal_init.cpp": "99bbc912f44d556327d186de9eb3cf65b08f9be2e54649568975d5f9b3d50734",
     "src/frontend/handler_mpjoin.cpp": "c17a9021899000dc1788ee8ce2692df91684ab4223656c9cbe9296f716b72a32",
     "src/frontend/handler_mpprofile_init.cpp": "caf5f9d7a68f3f63c01ecb2f3e750997b83ed97fbddbfa6578436b967b55893c",
     "src/frontend/handler_mpprofile_scan.cpp": "a9c7007d0ac1c3eadd70be38d848e9d0e9bfa0f19e238a9464d10552ef183628",
@@ -62749,6 +62767,78 @@
       "discarded_functions": [],
       "object_sha256": "803517766b4280299c61761c7aa2bb7012058da58ac3c50878d90e5815c4f453",
       "linked_sha256": "62c2dcf73fc786b78eba33595067b4f22463f7eb91b39129229b3144138efea5"
+    },
+    {
+      "id": "handler_customcontroller_keys",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 508,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "c6872781674f1f050c383e0c4486df0f566b972cd3d2ad2d7bc4e6e1d79957c4",
+      "linked_sha256": "705a9b4a75df2b9a2aa8f092c416bfacb9cf0725581fb4cacda5e25ea4273d6c"
+    },
+    {
+      "id": "handler_customcontroller_equal",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 236,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "6b4d24832d8d7a39d4970626f833f686637e283de8a1afaffd3656da1b44cd19",
+      "linked_sha256": "79a67dbffaf6130d84ef3d047fd46a57d4859d98820260873edb19cec37d4062"
+    },
+    {
+      "id": "handler_mpglobal_init",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 180,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "840542232dfe95fe4272ae6ff2f76e561f122ac93f34e0d758290fbf52ca2908",
+      "linked_sha256": "10b7283140d302947786cb2a02b24b14da490dd231d6eb69df9370790e6bfda2"
+    },
+    {
+      "id": "handler_mpbots_validateskin",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 144,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "442aa6fc9324609b81f05fccd3835e30f399a9a26a9297c2447e73dc22fb914b",
+      "linked_sha256": "5c92f42d3c214f67efca6bf781ec1dcb0c81f85510b42430b44aa8743bd1c0b0"
     }
   ],
   "code_map": {
@@ -76539,13 +76629,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8018ca84",
-            "size": 180,
-            "kind": "function",
-            "name": "Init__26HandlerMPGameGlobalOptionsPCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8018cb38",
             "size": 584,
             "kind": "function",
@@ -76589,13 +76672,6 @@
             "size": 200,
             "kind": "function",
             "name": "IsSkinUnlocked__13HandlerMPBotsii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8018d618",
-            "size": 144,
-            "kind": "function",
-            "name": "ValidateSkin__13HandlerMPBotsPciP14PackageHandleri",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -76709,52 +76785,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80191b64",
-            "size": 184,
-            "kind": "function",
-            "name": "FindKeyIndex__23HandlerCustomControllers16EShellButtonType",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80191c1c",
-            "size": 100,
-            "kind": "function",
-            "name": "FindButtonIndex__23HandlerCustomControllerUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80191c80",
-            "size": 56,
-            "kind": "function",
-            "name": "GetNumKeyNames__23HandlerCustomController16EShellButtonType",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80191cb8",
-            "size": 8,
-            "kind": "function",
-            "name": "GetNumAssignableFunctions__23HandlerCustomController",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80191cc0",
-            "size": 160,
-            "kind": "function",
-            "name": "AssignToNextKeyIndex__23HandlerCustomControllerii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80191d60",
             "size": 996,
             "kind": "function",
             "name": "UpdateAllUIButtons__23HandlerCustomController",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80192144",
-            "size": 236,
-            "kind": "function",
-            "name": "AreButtonsEqual__23HandlerCustomControllerP14SFunctionNamesT1",
             "evidence": "adjacent-compiler-markers"
           }
         ],

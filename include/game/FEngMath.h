@@ -19,6 +19,7 @@ struct FEObjData {
     FEVector3 position; // +0x10
     FEVector3 pivot;    // +0x1c
     FEQuaternion rotation; // +0x28
+    FEVector3 scale;    // +0x38
 };
 void FEMultMatrix(FEMatrix4 *, const FEMatrix4 *, const FEMatrix4 *);
 void FEMultMatrix(FEVector3 *, const FEMatrix4 *, const FEVector3 *);

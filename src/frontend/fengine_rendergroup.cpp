@@ -27,7 +27,7 @@ void FEngine::RenderGroup(FEGroup *group, FEMatrix4 &parent, FEMatrix4 &viewMatr
         FEMultMatrix(&world, &local, &parent);
         FEMultMatrix(&combined, &world, &viewMatrix);
         unsigned short context = ++renderContextCount;
-        group->unknown_20 = parentContext;
+        group->renderContext = parentContext;
         game->GenerateRenderContext(context, group);
         for (FEObject *child = (FEObject *)group->childList.head; child; child = (FEObject *)child->next) {
             if (child->type == 5) RenderGroup((FEGroup *)child, world, viewMatrix, context);

@@ -2546,7 +2546,11 @@
     "handler_onlinekeyboard.json",
     "camera_global_color_modifier.json",
     "camera_global_color_scale.json",
-    "camera_global_color_defaults.json"
+    "camera_global_color_defaults.json",
+    "handler_customcontroller_keys.json",
+    "handler_customcontroller_equal.json",
+    "handler_mpglobal_init.json",
+    "handler_mpbots_validateskin.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

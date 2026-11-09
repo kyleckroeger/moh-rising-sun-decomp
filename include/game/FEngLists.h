@@ -103,7 +103,7 @@ class FEObject : public FEMinNode {
             unsigned int changed : 1;     // Set whenever text or script is replaced.
         };
     };
-    unsigned short unknown_20;    // +0x20
+    unsigned short renderContext; // +0x20; the render context this object draws into.
     unsigned short resourceIndex; // +0x22; 0xffff when the object uses no resource.
     void *resourceData;           // +0x24
     void *resourceHandle;         // +0x28
@@ -171,7 +171,7 @@ class FEPackage;
 struct FEResourceRequest {
     unsigned long id;       // +0x0
     char *name;             // +0x4; an offset into the names block in the file.
-    unsigned long unknown_8; // +0x8
+    unsigned long type;     // +0x8; 1 texture, 2 font, 3 model, 4 movie, 5 effect, by the loaders.
     unsigned long unknown_c; // +0xc
     void *handle; // +0x10; stored at +0x24 of the object.
     void *data;   // +0x14; stored at +0x28 of the object.

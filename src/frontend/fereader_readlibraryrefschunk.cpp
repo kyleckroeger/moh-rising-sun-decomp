@@ -45,7 +45,7 @@ int FEPackageReader::ReadResourceChunk() {
         for (unsigned long i = 0; i < count; i++) {
             package->resourceRequests[i].id = FESwap(in[0]);
             package->resourceRequests[i].name = (char *)FESwap(in[1]);
-            package->resourceRequests[i].unknown_8 = FESwap(in[2]);
+            package->resourceRequests[i].type = FESwap(in[2]);
             package->resourceRequests[i].unknown_c = FESwap(in[3]);
             package->resourceRequests[i].handle = (void *)FESwap(in[4]);
             package->resourceRequests[i].data = (void *)FESwap(in[5]);

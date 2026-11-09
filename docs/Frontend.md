@@ -164,3 +164,8 @@ at `+0x54`. Each `Execute` copies a file's name and size into a table of `SProfi
 `HandlerCoopProfile`'s copy leaves the terminator to the zeroed table. `HandlerProfileSelect` keeps its table in the object, the others
 in a static. `keyboardAllowsEmpty` in `ShellManager` is inferred from `HandlerOnlineKeyboard`, which rejects an empty string only while it
 is clear.
+
+`HandlerCustomController`'s `controllerFunctionNames`, `controllerKeyNames`, `analogKeyNames`, `analogStickNames` and
+`analogEquivalence` are symbols; the members of their entries (`SFunctionNames`, `SKeyName`, `SAnalogEquivalence`) are named from
+the lookups. `HandlerMPGameGlobalOptions` derives from `HandlerMPGameOptions`, since its `Init` calls that class's directly and its
+own member follows the base's 92 bytes.
