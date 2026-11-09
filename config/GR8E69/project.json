@@ -2523,7 +2523,8 @@
     "lighting_AnimLightManager.json",
     "handler_moviemenu_ctor.json",
     "handler_customcontroller_ctor.json",
-    "handler_bonusoptions_ctor.json"
+    "handler_bonusoptions_ctor.json",
+    "ea_mad_codec_getframe.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

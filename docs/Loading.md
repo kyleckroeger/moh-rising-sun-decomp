@@ -164,6 +164,14 @@ that describes the code, not necessarily the original setting. Verified: the arr
 `DeleteTars`, `CreateTars` and accessors. Inferred: member names. Not reconstructed: `FindSubtitle` (four instructions of
 order), the subtitle script parser (`AV_SUBTITLE_ARRAY::Init` and its helpers), `CreateWrappedStrings`, `Draw`.
 
+## MAD movie codec
+
+`rcmp_mad_codec.cpp` hands out frames from a free list to a used list, through a link inside each frame. `GetFrame`'s
+loop is unreduced, so the file's fragments build with `-fno-strength-reduce`; that describes the code, not necessarily the
+original setting. Verified: the frame's construction and destruction, chunk stepping, `CreateKorM`, `CreateE`,
+`ReleaseFrame` and `GetFrame`. Inferred: member names and what the chunk tags mean. Not reconstructed: `GetChunkType`,
+`DecodeChunk`, the class's constructor and destructor and `MAD_CODEC_create`.
+
 ## MohLoader
 
 `MohLoader` and `MohLoaderGc` hold the console-side start-up state. `g_pPersistent` points to a
