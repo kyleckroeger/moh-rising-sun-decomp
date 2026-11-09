@@ -511,6 +511,11 @@ the two sorted row tables. Their extents are inferred from their neighbors: 4096
 50 bus rows at `+0x80d4`. Names of members, header fields and `ESoundUberTask` enumerators are inferred
 from use; `UberFileHeader`, `ColumnMap`, `ESoundUberTask` and `BankMan` are symbol-table names.
 
+`BankMan` keeps 33 slots of bank handles, with -12 for an empty slot, and a matching array of
+header copies. `AddSoundBank` always fills slot 31. `GetBankHandle` walks slots 1 to 32 through the
+entry's mask at `+0xac`, skipping all but slots 31 and 32 while an asynchronous load is running, and
+counts each empty slot in the entry's signed byte at `+0xdc`. Member names are inferred.
+
 Observed quirks, kept as they are: `RemoveLevelStreamFile` passes the stream handle word where
 `FILESYS_delbigsync` takes a name, and `VerifyLevelBanks` builds its bank file names and never uses them.
 Not reconstructed: `SetSfxVol`, `ServiceStreams` and `PauseBankSounds` (they own the

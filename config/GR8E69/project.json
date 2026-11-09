@@ -2367,7 +2367,8 @@
     "shell_dompcontrollerchecks.json",
     "felocalizer_strings.json",
     "felocalizer_widetoescape.json",
-    "felocalizer_readnextstring.json"
+    "felocalizer_readnextstring.json",
+    "sound_BankMan.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
