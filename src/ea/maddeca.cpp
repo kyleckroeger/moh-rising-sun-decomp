@@ -66,7 +66,7 @@ extern "C" int madvlcdecode() {
         }
         discardbits(bits);
         position += entry >> 16 & 63;
-        int slot;
-        idctinput[slot = zigzag[position++]] = ((int)entry >> 22) * madquant[slot];
+        idctinput[zigzag[position]] = ((int)entry >> 22) * madquant[zigzag[position]];
+        ++position;
     }
 }
